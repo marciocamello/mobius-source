@@ -69,13 +69,9 @@ public class Q10732_AForeignLand extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int cond = qs.getCond();
-		int npcId = npc.getId();
-		String htmltext = null;
-		if (qs.isCompleted())
-		{
-			return "quest_completed.htm";
-		}
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
 		
 		switch (npcId)
 		{

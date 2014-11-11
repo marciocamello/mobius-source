@@ -98,11 +98,7 @@ public class Q10735_ASpecialPower extends Quest implements ScriptFile
 	{
 		final int cond = qs.getCond();
 		final int npcId = npc.getId();
-		String htmltext = null;
-		if (qs.isCompleted())
-		{
-			return "quest_completed.htm";
-		}
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
 		
 		switch (npcId)
 		{

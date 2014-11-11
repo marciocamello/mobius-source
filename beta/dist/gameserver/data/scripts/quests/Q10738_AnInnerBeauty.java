@@ -18,26 +18,23 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
- * @author: Krash
+ * @author blacksmoke
  */
-public class Q10737_GrakonsWarehouse extends Quest implements ScriptFile
+public class Q10738_AnInnerBeauty extends Quest implements ScriptFile
 {
-	// Npcs
 	private static final int Grakon = 33947;
-	private static final int Katalin = 33943;
-	private static final int Ayanthe = 33942;
-	// Items
-	private static final int Apprentice_Support_Box = 39520;
-	private static final int Apprentice_Adventurer_Staff = 7816;
-	private static final int Apprentice_Adventurer_Fists = 7819;
+	private static final int Evna = 33935;
+	private static final int GrakonsNote = 39521;
 	
-	public Q10737_GrakonsWarehouse()
+	public Q10738_AnInnerBeauty()
 	{
 		super(false);
-		addStartNpc(Katalin, Ayanthe);
-		addTalkId(Katalin, Ayanthe, Grakon);
-		addQuestItem(Apprentice_Support_Box);
+		addStartNpc(Grakon);
+		addTalkId(Grakon, Evna);
+		addQuestItem(GrakonsNote);
 		addLevelCheck(5, 20);
+		addClassCheck(182, 183);
+		addQuestCompletedCheck(Q10737_GrakonsWarehouse.class);
 	}
 	
 	@Override
@@ -47,38 +44,21 @@ public class Q10737_GrakonsWarehouse extends Quest implements ScriptFile
 		
 		switch (event)
 		{
-			case "quest_fighter_cont":
+			case "quest_ac":
 				qs.setState(STARTED);
+				qs.setCond(1);
 				qs.playSound(SOUND_ACCEPT);
-				qs.giveItems(Apprentice_Support_Box, 1);
-				htmltext = "33943-3.htm";
-				break;
-			
-			case "quest_wizard_cont":
-				qs.setState(STARTED);
-				qs.playSound(SOUND_ACCEPT);
-				qs.giveItems(Apprentice_Support_Box, 1);
-				htmltext = "33242-3.htm";
+				qs.giveItems(GrakonsNote, 1);
+				htmltext = "33947-4.htm";
 				break;
 			
 			case "qet_rev":
-				if (qs.getPlayer().getClassId().getId() == 182) // Ertheia Fighter
-				{
-					qs.giveItems(57, 11000);
-					qs.getPlayer().addExpAndSp(2650, 0);
-					qs.giveItems(Apprentice_Adventurer_Fists, 1);
-					htmltext = "33947-4.htm";
-				}
-				else if (qs.getPlayer().getClassId().getId() == 183) // Ertheia Wizard
-				{
-					qs.giveItems(57, 11000);
-					qs.getPlayer().addExpAndSp(2650, 0);
-					qs.giveItems(Apprentice_Adventurer_Staff, 1);
-					htmltext = "33947-8.htm";
-				}
-				qs.takeItems(Apprentice_Support_Box, 1);
-				qs.playSound(SOUND_FINISH);
+				qs.takeItems(GrakonsNote, 1);
+				htmltext = "33935-3.htm";
+				qs.giveItems(57, 12000);
+				qs.getPlayer().addExpAndSp(2625, 1);
 				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
 				break;
 		}
 		
@@ -95,30 +75,27 @@ public class Q10737_GrakonsWarehouse extends Quest implements ScriptFile
 		switch (npcId)
 		{
 			case Grakon:
-				if ((cond == 0) && (qs.getQuestItemsCount(Apprentice_Support_Box) > 0))
+				if (isAvailableFor(qs.getPlayer()))
 				{
-					if (qs.getPlayer().getClassId().getId() == 182) // Ertheia Fighter
+					if (cond == 0)
 					{
 						htmltext = "33947-1.htm";
 					}
-					else if (qs.getPlayer().getClassId().getId() == 183) // Ertheia Wizard
+					else if (cond == 1)
 					{
-						htmltext = "33947-5.htm";
+						htmltext = "33947-4.htm";
+					}
+					else
+					{
+						htmltext = "noqu.htm";
 					}
 				}
 				break;
 			
-			case Katalin:
-				if (cond == 0)
+			case Evna:
+				if (isAvailableFor(qs.getPlayer()) && (cond == 1))
 				{
-					htmltext = "33943-1.htm";
-				}
-				break;
-			
-			case Ayanthe:
-				if (cond == 0)
-				{
-					htmltext = "33942-1.htm";
+					htmltext = "33935-1.htm";
 				}
 				break;
 		}

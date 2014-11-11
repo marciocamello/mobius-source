@@ -82,7 +82,7 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
-		Player player = qs.getPlayer();
+		final Player player = qs.getPlayer();
 		List<Creature> target = new ArrayList<>();
 		target.add(player);
 		
@@ -137,16 +137,11 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int cond = qs.getCond();
-		int npcId = npc.getId();
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
 		boolean e_warrior = qs.getPlayer().getClassId().getId() == 182;
 		boolean e_wizard = qs.getPlayer().getClassId().getId() == 183;
-		
-		String htmltext = null;
-		if (qs.isCompleted())
-		{
-			return "quest_completed.htm";
-		}
 		
 		switch (npcId)
 		{

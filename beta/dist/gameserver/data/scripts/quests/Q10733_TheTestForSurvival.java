@@ -19,8 +19,7 @@ import lineage2.gameserver.network.serverpackets.TutorialShowHtml;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
- * @author blacksmoke
- * @Contribution: Krash
+ * @author blacksmoke, Krash
  */
 public class Q10733_TheTestForSurvival extends Quest implements ScriptFile
 {
@@ -85,13 +84,9 @@ public class Q10733_TheTestForSurvival extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int cond = qs.getCond();
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		if (qs.isCompleted())
-		{
-			return "quest_completed.htm";
-		}
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
 		
 		switch (npcId)
 		{
