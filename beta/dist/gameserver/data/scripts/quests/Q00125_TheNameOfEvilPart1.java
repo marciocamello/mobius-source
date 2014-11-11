@@ -21,13 +21,204 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00125_TheNameOfEvilPart1 extends Quest implements ScriptFile
 {
-	private final int Mushika = 32114;
-	private final int Karakawei = 32117;
-	private final int UluKaimu = 32119;
-	private final int BaluKaimu = 32120;
-	private final int ChutaKaimu = 32121;
-	private final int OrClaw = 8779;
-	private final int DienBone = 8780;
+	// Npcs
+	private static final int Mushika = 32114;
+	private static final int Karakawei = 32117;
+	private static final int UluKaimu = 32119;
+	private static final int BaluKaimu = 32120;
+	private static final int ChutaKaimu = 32121;
+	// Monsters
+	private static final int Ornithomimus = 22742;
+	private static final int Deinonychus = 22743;
+	private static final int Ornithomimus2 = 22744;
+	private static final int Deinonychus2 = 22745;
+	// Items
+	private static final int OrClaw = 8779;
+	private static final int DienBone = 8780;
+	
+	public Q00125_TheNameOfEvilPart1()
+	{
+		super(false);
+		addStartNpc(Mushika);
+		addTalkId(Karakawei, UluKaimu, BaluKaimu, ChutaKaimu);
+		addQuestItem(OrClaw, DienBone);
+		addKillId(Ornithomimus, Ornithomimus2, Deinonychus, Deinonychus2);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "32114-05.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "32114-07.htm":
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "32117-08.htm":
+				qs.setCond(3);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "32117-13.htm":
+				qs.setCond(5);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "stat1false":
+				htmltext = "32119-2.htm";
+				break;
+			
+			case "stat1true":
+				qs.setCond(6);
+				htmltext = "32119-1.htm";
+				break;
+			
+			case "stat2false":
+				htmltext = "32120-2.htm";
+				break;
+			
+			case "stat2true":
+				qs.setCond(7);
+				htmltext = "32120-1.htm";
+				break;
+			
+			case "stat3false":
+				htmltext = "32121-2.htm";
+				break;
+			
+			case "stat3true":
+				qs.giveItems(8781, 1);
+				qs.setCond(8);
+				htmltext = "32121-1.htm";
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		
+		switch (npcId)
+		{
+			case Mushika:
+				if (cond == 0)
+				{
+					QuestState meetQuest = qs.getPlayer().getQuestState(Q00124_MeetingTheElroki.class);
+					
+					if ((qs.getPlayer().getLevel() > 76) && (meetQuest != null) && meetQuest.isCompleted())
+					{
+						htmltext = "32114.htm";
+					}
+					else
+					{
+						htmltext = "32114-0.htm";
+						qs.exitCurrentQuest(true);
+					}
+				}
+				else if (cond == 1)
+				{
+					htmltext = "32114-05.htm";
+				}
+				else if (cond == 8)
+				{
+					htmltext = "32114-08.htm";
+					qs.addExpAndSp(898056, 1008100);
+					qs.playSound(SOUND_FINISH);
+					qs.setState(COMPLETED);
+					qs.exitCurrentQuest(false);
+				}
+				break;
+			
+			case Karakawei:
+				if (cond == 2)
+				{
+					htmltext = "32117.htm";
+				}
+				else if (cond == 3)
+				{
+					htmltext = "32117-09.htm";
+				}
+				else if (cond == 4)
+				{
+					qs.takeAllItems(DienBone);
+					qs.takeAllItems(OrClaw);
+					htmltext = "32117-1.htm";
+				}
+				break;
+			
+			case UluKaimu:
+				if (cond == 5)
+				{
+					htmltext = "32119.htm";
+				}
+				break;
+			
+			case BaluKaimu:
+				if (cond == 6)
+				{
+					htmltext = "32120.htm";
+				}
+				break;
+			
+			case ChutaKaimu:
+				if (cond == 7)
+				{
+					htmltext = "32121.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if (qs.getCond() == 3)
+		{
+			switch (npc.getId())
+			{
+				case Ornithomimus:
+				case Ornithomimus2:
+					if ((qs.getQuestItemsCount(OrClaw) < 2) && Rnd.chance(10 * Config.RATE_QUESTS_DROP))
+					{
+						qs.giveItems(OrClaw, 1);
+						qs.playSound(SOUND_MIDDLE);
+					}
+					break;
+				
+				case Deinonychus:
+				case Deinonychus2:
+					if ((qs.getQuestItemsCount(DienBone) < 2) && Rnd.chance(10 * Config.RATE_QUESTS_DROP))
+					{
+						qs.giveItems(DienBone, 1);
+						qs.playSound(SOUND_MIDDLE);
+					}
+					break;
+			}
+			
+			if ((qs.getQuestItemsCount(DienBone) >= 2) && (qs.getQuestItemsCount(OrClaw) >= 2))
+			{
+				qs.setCond(4);
+			}
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -42,181 +233,5 @@ public class Q00125_TheNameOfEvilPart1 extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00125_TheNameOfEvilPart1()
-	{
-		super(false);
-		addStartNpc(Mushika);
-		addTalkId(Karakawei);
-		addTalkId(UluKaimu);
-		addTalkId(BaluKaimu);
-		addTalkId(ChutaKaimu);
-		addQuestItem(OrClaw, DienBone);
-		addKillId(22742, 22743, 22744, 22745);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("32114-05.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("32114-07.htm"))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("32117-08.htm"))
-		{
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("32117-13.htm"))
-		{
-			st.setCond(5);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("stat1false"))
-		{
-			htmltext = "32119-2.htm";
-		}
-		else if (event.equalsIgnoreCase("stat1true"))
-		{
-			st.setCond(6);
-			htmltext = "32119-1.htm";
-		}
-		else if (event.equalsIgnoreCase("stat2false"))
-		{
-			htmltext = "32120-2.htm";
-		}
-		else if (event.equalsIgnoreCase("stat2true"))
-		{
-			st.setCond(7);
-			htmltext = "32120-1.htm";
-		}
-		else if (event.equalsIgnoreCase("stat3false"))
-		{
-			htmltext = "32121-2.htm";
-		}
-		else if (event.equalsIgnoreCase("stat3true"))
-		{
-			st.giveItems(8781, 1);
-			st.setCond(8);
-			htmltext = "32121-1.htm";
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (npcId == Mushika)
-		{
-			if (cond == 0)
-			{
-				QuestState meetQuest = st.getPlayer().getQuestState(Q00124_MeetingTheElroki.class);
-				
-				if ((st.getPlayer().getLevel() > 76) && (meetQuest != null) && meetQuest.isCompleted())
-				{
-					htmltext = "32114.htm";
-				}
-				else
-				{
-					htmltext = "32114-0.htm";
-					st.exitCurrentQuest(true);
-				}
-			}
-			else if (cond == 1)
-			{
-				htmltext = "32114-05.htm";
-			}
-			else if (cond == 8)
-			{
-				htmltext = "32114-08.htm";
-				st.addExpAndSp(898056, 1008100);
-				st.playSound(SOUND_FINISH);
-				st.setState(COMPLETED);
-				st.exitCurrentQuest(false);
-			}
-		}
-		else if (npcId == Karakawei)
-		{
-			if (cond == 2)
-			{
-				htmltext = "32117.htm";
-			}
-			else if (cond == 3)
-			{
-				htmltext = "32117-09.htm";
-			}
-			else if (cond == 4)
-			{
-				st.takeAllItems(DienBone);
-				st.takeAllItems(OrClaw);
-				htmltext = "32117-1.htm";
-			}
-		}
-		else if (npcId == UluKaimu)
-		{
-			if (cond == 5)
-			{
-				htmltext = "32119.htm";
-			}
-		}
-		else if (npcId == BaluKaimu)
-		{
-			if (cond == 6)
-			{
-				htmltext = "32120.htm";
-			}
-		}
-		else if (npcId == ChutaKaimu)
-		{
-			if (cond == 7)
-			{
-				htmltext = "32121.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		
-		if (st.getCond() == 3)
-		{
-			if (((npcId == 22744) || (npcId == 22742)) && (st.getQuestItemsCount(OrClaw) < 2) && Rnd.chance(10 * Config.RATE_QUESTS_DROP))
-			{
-				st.giveItems(OrClaw, 1);
-				st.playSound(SOUND_MIDDLE);
-			}
-			
-			if (((npcId == 22743) || (npcId == 22745)) && (st.getQuestItemsCount(DienBone) < 2) && Rnd.chance(10 * Config.RATE_QUESTS_DROP))
-			{
-				st.giveItems(DienBone, 1);
-				st.playSound(SOUND_MIDDLE);
-			}
-			
-			if ((st.getQuestItemsCount(DienBone) >= 2) && (st.getQuestItemsCount(OrClaw) >= 2))
-			{
-				st.setCond(4);
-			}
-		}
-		
-		return null;
 	}
 }

@@ -19,8 +19,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00137_TempleChampionPart1 extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int SYLVAIN = 30070;
+	// Item
 	private static final int FRAGMENT = 10340;
+	// Monsters
 	private static final int BadgeTempleExecutor = 10334;
 	private static final int BadgeTempleMissionary = 10339;
 	private final static int GraniteGolem = 20083;
@@ -29,6 +32,134 @@ public class Q00137_TempleChampionPart1 extends Quest implements ScriptFile
 	private final static int Strain = 20200;
 	private final static int Ghoul = 20201;
 	private final static int DeadSeeker = 20202;
+	
+	public Q00137_TempleChampionPart1()
+	{
+		super(false);
+		addStartNpc(SYLVAIN);
+		addKillId(GraniteGolem, HangmanTree, AmberBasilisk, Strain, Ghoul, DeadSeeker);
+		addQuestItem(FRAGMENT);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "sylvain_q0137_04.htm":
+				qs.takeItems(BadgeTempleExecutor, -1);
+				qs.takeItems(BadgeTempleMissionary, -1);
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.set("talk", "0");
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "sylvain_q0137_08.htm":
+				qs.set("talk", "1");
+				break;
+			
+			case "sylvain_q0137_10.htm":
+				qs.set("talk", "2");
+				break;
+			
+			case "sylvain_q0137_13.htm":
+				qs.unset("talk");
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "sylvain_q0137_24.htm":
+				qs.giveItems(ADENA_ID, 69146);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(false);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		
+		switch (cond)
+		{
+			case 0:
+				if ((qs.getPlayer().getLevel() >= 35) && (qs.getQuestItemsCount(BadgeTempleExecutor) > 0) && (qs.getQuestItemsCount(BadgeTempleMissionary) > 0))
+				{
+					htmltext = "sylvain_q0137_01.htm";
+				}
+				else
+				{
+					htmltext = "sylvain_q0137_03.htm";
+					qs.exitCurrentQuest(true);
+				}
+				break;
+			
+			case 1:
+				if (qs.getInt("talk") == 0)
+				{
+					htmltext = "sylvain_q0137_05.htm";
+				}
+				else if (qs.getInt("talk") == 1)
+				{
+					htmltext = "sylvain_q0137_08.htm";
+				}
+				else if (qs.getInt("talk") == 2)
+				{
+					htmltext = "sylvain_q0137_10.htm";
+				}
+				break;
+			
+			case 2:
+				htmltext = "sylvain_q0137_13.htm";
+				break;
+			
+			case 3:
+				if (qs.getQuestItemsCount(FRAGMENT) >= 30)
+				{
+					htmltext = "sylvain_q0137_15.htm";
+					qs.set("talk", "1");
+					qs.takeItems(FRAGMENT, -1);
+				}
+				else if (qs.getInt("talk") == 1)
+				{
+					htmltext = "sylvain_q0137_16.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if (qs.getCond() == 2)
+		{
+			if (qs.getQuestItemsCount(FRAGMENT) < 30)
+			{
+				qs.giveItems(FRAGMENT, 1);
+				
+				if (qs.getQuestItemsCount(FRAGMENT) >= 30)
+				{
+					qs.setCond(3);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				else
+				{
+					qs.playSound(SOUND_ITEMGET);
+				}
+			}
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -43,130 +174,5 @@ public class Q00137_TempleChampionPart1 extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00137_TempleChampionPart1()
-	{
-		super(false);
-		addStartNpc(SYLVAIN);
-		addKillId(GraniteGolem, HangmanTree, AmberBasilisk, Strain, Ghoul, DeadSeeker);
-		addQuestItem(FRAGMENT);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("sylvain_q0137_04.htm"))
-		{
-			st.takeItems(BadgeTempleExecutor, -1);
-			st.takeItems(BadgeTempleMissionary, -1);
-			st.setCond(1);
-			st.setState(STARTED);
-			st.set("talk", "0");
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("sylvain_q0137_08.htm"))
-		{
-			st.set("talk", "1");
-		}
-		else if (event.equalsIgnoreCase("sylvain_q0137_10.htm"))
-		{
-			st.set("talk", "2");
-		}
-		else if (event.equalsIgnoreCase("sylvain_q0137_13.htm"))
-		{
-			st.unset("talk");
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("sylvain_q0137_24.htm"))
-		{
-			st.giveItems(ADENA_ID, 69146);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(false);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (npcId == SYLVAIN)
-		{
-			if (cond == 0)
-			{
-				if ((st.getPlayer().getLevel() >= 35) && (st.getQuestItemsCount(BadgeTempleExecutor) > 0) && (st.getQuestItemsCount(BadgeTempleMissionary) > 0))
-				{
-					htmltext = "sylvain_q0137_01.htm";
-				}
-				else
-				{
-					htmltext = "sylvain_q0137_03.htm";
-					st.exitCurrentQuest(true);
-				}
-			}
-			else if (cond == 1)
-			{
-				if (st.getInt("talk") == 0)
-				{
-					htmltext = "sylvain_q0137_05.htm";
-				}
-				else if (st.getInt("talk") == 1)
-				{
-					htmltext = "sylvain_q0137_08.htm";
-				}
-				else if (st.getInt("talk") == 2)
-				{
-					htmltext = "sylvain_q0137_10.htm";
-				}
-			}
-			else if (cond == 2)
-			{
-				htmltext = "sylvain_q0137_13.htm";
-			}
-			else if ((cond == 3) && (st.getQuestItemsCount(FRAGMENT) >= 30))
-			{
-				htmltext = "sylvain_q0137_15.htm";
-				st.set("talk", "1");
-				st.takeItems(FRAGMENT, -1);
-			}
-			else if ((cond == 3) && (st.getInt("talk") == 1))
-			{
-				htmltext = "sylvain_q0137_16.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		if (st.getCond() == 2)
-		{
-			if (st.getQuestItemsCount(FRAGMENT) < 30)
-			{
-				st.giveItems(FRAGMENT, 1);
-				
-				if (st.getQuestItemsCount(FRAGMENT) >= 30)
-				{
-					st.setCond(3);
-					st.playSound(SOUND_MIDDLE);
-				}
-				else
-				{
-					st.playSound(SOUND_ITEMGET);
-				}
-			}
-		}
-		
-		return null;
 	}
 }

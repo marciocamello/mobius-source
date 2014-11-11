@@ -19,8 +19,85 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00122_OminousNews extends Quest implements ScriptFile
 {
-	final int MOIRA = 31979;
-	final int KARUDA = 32017;
+	// Npcs
+	private static final int MOIRA = 31979;
+	private static final int KARUDA = 32017;
+	
+	public Q00122_OminousNews()
+	{
+		super(false);
+		addStartNpc(MOIRA);
+		addTalkId(KARUDA);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "seer_moirase_q0122_0104.htm":
+				if (qs.getCond() == 0)
+				{
+					qs.setCond(1);
+					qs.setState(STARTED);
+					qs.playSound(SOUND_ACCEPT);
+				}
+				break;
+			
+			case "karuda_q0122_0201.htm":
+				if (qs.getCond() == 1)
+				{
+					qs.giveItems(ADENA_ID, 8923);
+					qs.addExpAndSp(45151, 2310);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(false);
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		
+		switch (npcId)
+		{
+			case MOIRA:
+				if (cond == 0)
+				{
+					if (qs.getPlayer().getLevel() >= 20)
+					{
+						htmltext = "seer_moirase_q0122_0101.htm";
+					}
+					else
+					{
+						htmltext = "seer_moirase_q0122_0103.htm";
+						qs.exitCurrentQuest(true);
+					}
+				}
+				else
+				{
+					htmltext = "seer_moirase_q0122_0104.htm";
+				}
+				break;
+			
+			case KARUDA:
+				if (cond == 1)
+				{
+					htmltext = "karuda_q0122_0101.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
 	
 	@Override
 	public void onLoad()
@@ -35,77 +112,5 @@ public class Q00122_OminousNews extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00122_OminousNews()
-	{
-		super(false);
-		addStartNpc(MOIRA);
-		addTalkId(KARUDA);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		int cond = st.getCond();
-		htmltext = event;
-		
-		if (htmltext.equalsIgnoreCase("seer_moirase_q0122_0104.htm") && (cond == 0))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (htmltext.equalsIgnoreCase("karuda_q0122_0201.htm"))
-		{
-			if (cond == 1)
-			{
-				st.giveItems(ADENA_ID, 8923);
-				st.addExpAndSp(45151, 2310);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(false);
-			}
-			else
-			{
-				htmltext = "noquest";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		int cond = st.getCond();
-		
-		if (npcId == MOIRA)
-		{
-			if (cond == 0)
-			{
-				if (st.getPlayer().getLevel() >= 20)
-				{
-					htmltext = "seer_moirase_q0122_0101.htm";
-				}
-				else
-				{
-					htmltext = "seer_moirase_q0122_0103.htm";
-					st.exitCurrentQuest(true);
-				}
-			}
-			else
-			{
-				htmltext = "seer_moirase_q0122_0104.htm";
-			}
-		}
-		else if ((npcId == KARUDA) && (cond == 1))
-		{
-			htmltext = "karuda_q0122_0101.htm";
-		}
-		
-		return htmltext;
 	}
 }

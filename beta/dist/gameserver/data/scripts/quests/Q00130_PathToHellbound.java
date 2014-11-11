@@ -20,9 +20,116 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00130_PathToHellbound extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int CASIAN = 30612;
 	private static final int GALATE = 32292;
+	// Item
 	private static final int CASIAN_BLUE_CRY = 12823;
+	
+	public Q00130_PathToHellbound()
+	{
+		super(false);
+		addStartNpc(CASIAN);
+		addTalkId(GALATE);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		final int cond = qs.getCond();
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "sage_kasian_q0130_05.htm":
+				if (cond == 0)
+				{
+					qs.setCond(1);
+					qs.setState(STARTED);
+					qs.playSound(SOUND_ACCEPT);
+				}
+				break;
+			
+			case "galate_q0130_03.htm":
+				if (cond == 1)
+				{
+					qs.setCond(2);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
+			
+			case "sage_kasian_q0130_08.htm":
+				if (cond == 2)
+				{
+					qs.setCond(3);
+					qs.playSound(SOUND_MIDDLE);
+					qs.giveItems(CASIAN_BLUE_CRY, 1);
+				}
+				break;
+			
+			case "galate_q0130_07.htm":
+				if (cond == 3)
+				{
+					qs.playSound(SOUND_FINISH);
+					qs.takeItems(CASIAN_BLUE_CRY, -1);
+					
+					if (HellboundManager.getHellboundLevel() == 0)
+					{
+						HellboundManager.getInstance().openHellbound();
+					}
+					
+					qs.exitCurrentQuest(false);
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		final int id = qs.getState();
+		
+		if (npcId == CASIAN)
+		{
+			if (cond == 0)
+			{
+				if (qs.getPlayer().getLevel() >= 78)
+				{
+					htmltext = "sage_kasian_q0130_01.htm";
+				}
+				else
+				{
+					htmltext = "sage_kasian_q0130_02.htm";
+					qs.exitCurrentQuest(true);
+				}
+			}
+			else if (cond == 2)
+			{
+				htmltext = "sage_kasian_q0130_07.htm";
+			}
+		}
+		else if (id == STARTED)
+		{
+			if (npcId == GALATE)
+			{
+				if (cond == 1)
+				{
+					htmltext = "galate_q0130_01.htm";
+				}
+				else if (cond == 3)
+				{
+					htmltext = "galate_q0130_05.htm";
+				}
+			}
+		}
+		
+		return htmltext;
+	}
 	
 	@Override
 	public void onLoad()
@@ -37,101 +144,5 @@ public class Q00130_PathToHellbound extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00130_PathToHellbound()
-	{
-		super(false);
-		addStartNpc(CASIAN);
-		addTalkId(GALATE);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		int cond = st.getCond();
-		String htmltext = event;
-		
-		if (event.equals("sage_kasian_q0130_05.htm") && (cond == 0))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		if (event.equals("galate_q0130_03.htm") && (cond == 1))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		if (event.equals("sage_kasian_q0130_08.htm") && (cond == 2))
-		{
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
-			st.giveItems(CASIAN_BLUE_CRY, 1);
-		}
-		
-		if (event.equals("galate_q0130_07.htm") && (cond == 3))
-		{
-			st.playSound(SOUND_FINISH);
-			st.takeItems(CASIAN_BLUE_CRY, -1);
-			
-			if (HellboundManager.getHellboundLevel() == 0)
-			{
-				HellboundManager.getInstance().openHellbound();
-			}
-			
-			st.exitCurrentQuest(false);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int id = st.getState();
-		int cond = st.getCond();
-		
-		if (npcId == CASIAN)
-		{
-			if (cond == 0)
-			{
-				if (st.getPlayer().getLevel() >= 78)
-				{
-					htmltext = "sage_kasian_q0130_01.htm";
-				}
-				else
-				{
-					htmltext = "sage_kasian_q0130_02.htm";
-					st.exitCurrentQuest(true);
-				}
-			}
-			
-			if (cond == 2)
-			{
-				htmltext = "sage_kasian_q0130_07.htm";
-			}
-		}
-		else if (id == STARTED)
-		{
-			if (npcId == GALATE)
-			{
-				if (cond == 1)
-				{
-					htmltext = "galate_q0130_01.htm";
-				}
-				
-				if (cond == 3)
-				{
-					htmltext = "galate_q0130_05.htm";
-				}
-			}
-		}
-		
-		return htmltext;
 	}
 }

@@ -19,9 +19,12 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00132_MatrasCuriosity extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int Matras = 32245;
+	// Monsters
 	private static final int Ranku = 25542;
 	private static final int Demon_Prince = 25540;
+	// Items
 	private static final int Rankus_Blueprint = 9800;
 	private static final int Demon_Princes_Blueprint = 9801;
 	private static final int Rough_Ore_of_Fire = 10521;
@@ -30,6 +33,132 @@ public class Q00132_MatrasCuriosity extends Quest implements ScriptFile
 	private static final int Rough_Ore_of_Wind = 10524;
 	private static final int Rough_Ore_of_Darkness = 10525;
 	private static final int Rough_Ore_of_Divinity = 10526;
+	
+	public Q00132_MatrasCuriosity()
+	{
+		super(PARTY_ALL);
+		addStartNpc(Matras);
+		addKillId(Ranku, Demon_Prince);
+		addQuestItem(Rankus_Blueprint, Demon_Princes_Blueprint);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "32245-02.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				String is_given = qs.getPlayer().getVar("q132_Rough_Ore_is_given");
+				if (is_given != null)
+				{
+					htmltext = "32245-02a.htm";
+				}
+				else
+				{
+					qs.giveItems(Rough_Ore_of_Fire, 1, false);
+					qs.giveItems(Rough_Ore_of_Water, 1, false);
+					qs.giveItems(Rough_Ore_of_Earth, 1, false);
+					qs.giveItems(Rough_Ore_of_Wind, 1, false);
+					qs.giveItems(Rough_Ore_of_Darkness, 1, false);
+					qs.giveItems(Rough_Ore_of_Divinity, 1, false);
+					qs.getPlayer().setVar("q132_Rough_Ore_is_given", "1", -1);
+				}
+				break;
+			
+			case "32245-04.htm":
+				qs.setCond(3);
+				qs.setState(STARTED);
+				qs.startQuestTimer("talk_timer", 10000);
+				break;
+			
+			case "talk_timer":
+				htmltext = "Matras wishes to talk to you.";
+				break;
+			
+			case "get_reward":
+				qs.playSound(SOUND_FINISH);
+				qs.addExpAndSp(5388330, 6048600);
+				qs.giveItems(ADENA_ID, 575545);
+				qs.exitCurrentQuest(false);
+				return null;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		
+		switch (cond)
+		{
+			case 0:
+				if (qs.getPlayer().getLevel() >= 78)
+				{
+					htmltext = "32245-01.htm";
+				}
+				break;
+			
+			case 1:
+				htmltext = "32245-02a.htm";
+				break;
+			
+			case 2:
+				if ((qs.getQuestItemsCount(Rankus_Blueprint) > 0) && (qs.getQuestItemsCount(Demon_Princes_Blueprint) > 0))
+				{
+					htmltext = "32245-03.htm";
+				}
+				break;
+			
+			case 3:
+				if (qs.isRunningQuestTimer("talk_timer"))
+				{
+					htmltext = "32245-04.htm";
+				}
+				else
+				{
+					htmltext = "32245-04a.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if (qs.getCond() == 1)
+		{
+			if ((npc.getId() == Ranku) && (qs.getQuestItemsCount(Rankus_Blueprint) < 1))
+			{
+				qs.playSound(SOUND_ITEMGET);
+				qs.playSound(SOUND_MIDDLE);
+				qs.giveItems(Rankus_Blueprint, 1, false);
+			}
+			else if ((npc.getId() == Demon_Prince) && (qs.getQuestItemsCount(Demon_Princes_Blueprint) < 1))
+			{
+				qs.playSound(SOUND_ITEMGET);
+				qs.playSound(SOUND_MIDDLE);
+				qs.giveItems(Demon_Princes_Blueprint, 1, false);
+			}
+			
+			if ((qs.getQuestItemsCount(Rankus_Blueprint) > 0) && (qs.getQuestItemsCount(Demon_Princes_Blueprint) > 0))
+			{
+				qs.setCond(2);
+				qs.setState(STARTED);
+			}
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -44,133 +173,5 @@ public class Q00132_MatrasCuriosity extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00132_MatrasCuriosity()
-	{
-		super(PARTY_ALL);
-		addStartNpc(Matras);
-		addKillId(Ranku);
-		addKillId(Demon_Prince);
-		addQuestItem(new int[]
-		{
-			Rankus_Blueprint,
-			Demon_Princes_Blueprint
-		});
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("32245-02.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-			String is_given = st.getPlayer().getVar("q132_Rough_Ore_is_given");
-			
-			if (is_given != null)
-			{
-				htmltext = "32245-02a.htm";
-			}
-			else
-			{
-				st.giveItems(Rough_Ore_of_Fire, 1, false);
-				st.giveItems(Rough_Ore_of_Water, 1, false);
-				st.giveItems(Rough_Ore_of_Earth, 1, false);
-				st.giveItems(Rough_Ore_of_Wind, 1, false);
-				st.giveItems(Rough_Ore_of_Darkness, 1, false);
-				st.giveItems(Rough_Ore_of_Divinity, 1, false);
-				st.getPlayer().setVar("q132_Rough_Ore_is_given", "1", -1);
-			}
-		}
-		else if (event.equalsIgnoreCase("32245-04.htm"))
-		{
-			st.setCond(3);
-			st.setState(STARTED);
-			st.startQuestTimer("talk_timer", 10000);
-		}
-		else if (event.equalsIgnoreCase("talk_timer"))
-		{
-			htmltext = "Matras wishes to talk to you.";
-		}
-		else if (event.equalsIgnoreCase("get_reward"))
-		{
-			st.playSound(SOUND_FINISH);
-			st.addExpAndSp(5388330, 6048600);
-			st.giveItems(ADENA_ID, 575545);
-			st.exitCurrentQuest(false);
-			return null;
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (npcId == Matras)
-		{
-			if ((cond < 1) && (st.getPlayer().getLevel() >= 78))
-			{
-				htmltext = "32245-01.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "32245-02a.htm";
-			}
-			else if ((cond == 2) && (st.getQuestItemsCount(Rankus_Blueprint) > 0) && (st.getQuestItemsCount(Demon_Princes_Blueprint) > 0))
-			{
-				htmltext = "32245-03.htm";
-			}
-			else if (cond == 3)
-			{
-				if (st.isRunningQuestTimer("talk_timer"))
-				{
-					htmltext = "32245-04.htm";
-				}
-				else
-				{
-					htmltext = "32245-04a.htm";
-				}
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		if (st.getCond() == 1)
-		{
-			if ((npc.getId() == Ranku) && (st.getQuestItemsCount(Rankus_Blueprint) < 1))
-			{
-				st.playSound(SOUND_ITEMGET);
-				st.playSound(SOUND_MIDDLE);
-				st.giveItems(Rankus_Blueprint, 1, false);
-			}
-			
-			if ((npc.getId() == Demon_Prince) && (st.getQuestItemsCount(Demon_Princes_Blueprint) < 1))
-			{
-				st.playSound(SOUND_ITEMGET);
-				st.playSound(SOUND_MIDDLE);
-				st.giveItems(Demon_Princes_Blueprint, 1, false);
-			}
-			
-			if ((st.getQuestItemsCount(Rankus_Blueprint) > 0) && (st.getQuestItemsCount(Demon_Princes_Blueprint) > 0))
-			{
-				st.setCond(2);
-				st.setState(STARTED);
-			}
-		}
-		
-		return null;
 	}
 }

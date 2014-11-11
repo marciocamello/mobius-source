@@ -19,8 +19,66 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00121_PavelTheGiant extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int NEWYEAR = 31961;
 	private static final int YUMI = 32041;
+	
+	public Q00121_PavelTheGiant()
+	{
+		super(false);
+		addStartNpc(NEWYEAR);
+		addTalkId(NEWYEAR, YUMI);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		if (event.equals("collecter_yumi_q0121_0201.htm"))
+		{
+			qs.playSound(SOUND_FINISH);
+			qs.addExpAndSp(1959460, 2039940);
+			qs.exitCurrentQuest(false);
+		}
+		
+		return event;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		
+		if ((qs.getState() == CREATED) && (npcId == NEWYEAR))
+		{
+			if (qs.getPlayer().getLevel() >= 70)
+			{
+				htmltext = "head_blacksmith_newyear_q0121_0101.htm";
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+			}
+			else
+			{
+				htmltext = "head_blacksmith_newyear_q0121_0103.htm";
+				qs.exitCurrentQuest(false);
+			}
+		}
+		else if (qs.getState() == STARTED)
+		{
+			if ((npcId == YUMI) && (cond == 1))
+			{
+				htmltext = "collecter_yumi_q0121_0101.htm";
+			}
+			else
+			{
+				htmltext = "head_blacksmith_newyear_q0121_0105.htm";
+			}
+		}
+		
+		return htmltext;
+	}
 	
 	@Override
 	public void onLoad()
@@ -35,63 +93,5 @@ public class Q00121_PavelTheGiant extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00121_PavelTheGiant()
-	{
-		super(false);
-		addStartNpc(NEWYEAR);
-		addTalkId(NEWYEAR, YUMI);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		if (event.equals("collecter_yumi_q0121_0201.htm"))
-		{
-			st.playSound(SOUND_FINISH);
-			st.addExpAndSp(1959460, 2039940);
-			st.exitCurrentQuest(false);
-		}
-		
-		return event;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int id = st.getState();
-		int cond = st.getCond();
-		
-		if ((id == CREATED) && (npcId == NEWYEAR))
-		{
-			if (st.getPlayer().getLevel() >= 70)
-			{
-				htmltext = "head_blacksmith_newyear_q0121_0101.htm";
-				st.setCond(1);
-				st.setState(STARTED);
-				st.playSound(SOUND_ACCEPT);
-			}
-			else
-			{
-				htmltext = "head_blacksmith_newyear_q0121_0103.htm";
-				st.exitCurrentQuest(false);
-			}
-		}
-		else if (id == STARTED)
-		{
-			if ((npcId == YUMI) && (cond == 1))
-			{
-				htmltext = "collecter_yumi_q0121_0101.htm";
-			}
-			else
-			{
-				htmltext = "head_blacksmith_newyear_q0121_0105.htm";
-			}
-		}
-		
-		return htmltext;
 	}
 }
