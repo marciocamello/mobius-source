@@ -20,19 +20,114 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00180_InfernalFlamesBurningInCrystalPrison extends Quest implements ScriptFile
 {
-	private static final int CON1 = 33044;
-	private static final int CON2 = 29213;
-	private static final int CON3 = 17591;
-	private static final int CON4 = 17527;
+	// Npc
+	private static final int FIOREN = 33044;
+	// Monster
+	private static final int BAYLOR = 29213;
+	// Items
+	private static final int MARK = 17591;
+	private static final int EAR = 17527;
 	
 	public Q00180_InfernalFlamesBurningInCrystalPrison()
 	{
 		super(false);
-		addStartNpc(CON1);
-		addTalkId(CON1);
-		addKillId(CON2);
-		addQuestItem(CON3);
+		addStartNpc(FIOREN);
+		addTalkId(FIOREN);
+		addKillId(BAYLOR);
+		addQuestItem(MARK);
 		addLevelCheck(97, 99);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		if (event.equals("33044-06.htm"))
+		{
+			qs.setState(STARTED);
+			qs.setCond(1);
+			qs.playSound(SOUND_ACCEPT);
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final Player player = qs.getPlayer();
+		
+		if (qs.getState() == CREATED)
+		{
+			if (player.getLevel() < 97)
+			{
+				htmltext = "33044-02.htm";
+				qs.exitCurrentQuest(true);
+			}
+			else
+			{
+				htmltext = "33044-01.htm";
+			}
+		}
+		else if (qs.getState() == STARTED)
+		{
+			if (cond == 1)
+			{
+				htmltext = "33044-07.htm";
+			}
+			else
+			{
+				if (cond == 2)
+				{
+					htmltext = "33044-08.htm";
+					qs.addExpAndSp(14000000, 6400000);
+					qs.giveItems(EAR, 1);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(false);
+				}
+			}
+		}
+		else if (qs.getState() == COMPLETED)
+		{
+			htmltext = "33044-03.htm";
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		final Player player = qs.getPlayer();
+		
+		if (qs.getCond() == 1)
+		{
+			if (player.getParty() == null)
+			{
+				qs.setCond(2);
+				qs.giveItems(MARK, 1);
+				qs.playSound(SOUND_MIDDLE);
+			}
+			else
+			{
+				for (Player pmember : player.getParty().getPartyMembers())
+				{
+					final QuestState pst = pmember.getQuestState("Q00180_InfernalFlamesBurningInCrystalPrison");
+					
+					if ((pst != null) && (pst.getCond() == 1))
+					{
+						pst.setCond(2);
+						pst.giveItems(MARK, 1);
+						pst.playSound(SOUND_MIDDLE);
+					}
+				}
+			}
+		}
+		
+		return null;
 	}
 	
 	@Override
@@ -48,108 +143,5 @@ public class Q00180_InfernalFlamesBurningInCrystalPrison extends Quest implement
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("33044-06.htm"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		Player player = st.getPlayer();
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (npcId == CON1)
-		{
-			if (st.getState() == CREATED)
-			{
-				if (player.getLevel() < 97)
-				{
-					htmltext = "33044-02.htm";
-					st.exitCurrentQuest(true);
-				}
-				else
-				{
-					htmltext = "33044-01.htm";
-				}
-			}
-			
-			if (st.getState() == STARTED)
-			{
-				if (cond == 1)
-				{
-					htmltext = "33044-07.htm";
-				}
-				else
-				{
-					if (cond == 2)
-					{
-						htmltext = "33044-08.htm";
-						st.addExpAndSp(14000000, 6400000);
-						st.giveItems(CON4, 1);
-						st.playSound(SOUND_FINISH);
-						st.exitCurrentQuest(false);
-					}
-				}
-			}
-			
-			if (st.getState() == COMPLETED)
-			{
-				htmltext = "33044-03.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		Player player = st.getPlayer();
-		
-		if (cond == 1)
-		{
-			if (npcId == CON2)
-			{
-				if (player.getParty() == null)
-				{
-					st.setCond(2);
-					st.giveItems(CON3, 1);
-					st.playSound(SOUND_MIDDLE);
-				}
-				else
-				{
-					for (Player pmember : player.getParty().getPartyMembers())
-					{
-						QuestState pst = pmember.getQuestState("Q00180_InfernalFlamesBurningInCrystalPrison");
-						
-						if ((pst != null) && (pst.getCond() == 1))
-						{
-							pst.setCond(2);
-							pst.giveItems(CON3, 1);
-							pst.playSound(SOUND_MIDDLE);
-						}
-					}
-				}
-			}
-		}
-		
-		return null;
 	}
 }

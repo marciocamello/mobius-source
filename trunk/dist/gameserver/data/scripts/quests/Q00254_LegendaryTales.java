@@ -24,8 +24,11 @@ import lineage2.gameserver.scripts.ScriptFile;
  */
 public class Q00254_LegendaryTales extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int Gilmore = 30754;
+	// Item
 	private static final int LargeBone = 17249;
+	// Monsters
 	private static final int[] raids =
 	{
 		25718,
@@ -46,75 +49,75 @@ public class Q00254_LegendaryTales extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("gilmore_q254_05.htm"))
+		if (event.equals("gilmore_q254_05.htm"))
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
+			qs.setState(STARTED);
+			qs.setCond(1);
+			qs.playSound(SOUND_ACCEPT);
 		}
 		else if (event.startsWith("gilmore_q254_20.htm"))
 		{
-			st.takeAllItems(LargeBone);
+			qs.takeAllItems(LargeBone);
 			StringTokenizer tokenizer = new StringTokenizer(event);
 			tokenizer.nextToken();
 			
 			switch (Integer.parseInt(tokenizer.nextToken()))
 			{
 				case 1:
-					st.giveItems(13467, 1);
+					qs.giveItems(13467, 1);
 					break;
 				
 				case 2:
-					st.giveItems(13462, 1);
+					qs.giveItems(13462, 1);
 					break;
 				
 				case 3:
-					st.giveItems(13464, 1);
+					qs.giveItems(13464, 1);
 					break;
 				
 				case 4:
-					st.giveItems(13461, 1);
+					qs.giveItems(13461, 1);
 					break;
 				
 				case 5:
-					st.giveItems(13465, 1);
+					qs.giveItems(13465, 1);
 					break;
 				
 				case 6:
-					st.giveItems(13463, 1);
+					qs.giveItems(13463, 1);
 					break;
 				
 				case 7:
-					st.giveItems(13460, 1);
+					qs.giveItems(13460, 1);
 					break;
 				
 				case 8:
-					st.giveItems(13466, 1);
+					qs.giveItems(13466, 1);
 					break;
 				
 				case 9:
-					st.giveItems(13459, 1);
+					qs.giveItems(13459, 1);
 					break;
 				
 				case 10:
-					st.giveItems(13457, 1);
+					qs.giveItems(13457, 1);
 					break;
 				
 				case 11:
-					st.giveItems(13458, 1);
+					qs.giveItems(13458, 1);
 					break;
 				
 				default:
 					break;
 			}
 			
-			st.playSound(SOUND_FINISH);
-			st.setState(COMPLETED);
-			st.exitCurrentQuest(false);
+			qs.playSound(SOUND_FINISH);
+			qs.setState(COMPLETED);
+			qs.exitCurrentQuest(false);
 			htmltext = "gilmore_q254_20.htm";
 		}
 		
@@ -122,28 +125,27 @@ public class Q00254_LegendaryTales extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int cond = st.getCond();
+		final int cond = qs.getCond();
 		
-		if (npc.getId() == Gilmore)
+		switch (cond)
 		{
-			if (cond == 0)
-			{
-				if (st.getPlayer().getLevel() >= 80)
+			case 0:
+				if (qs.getPlayer().getLevel() >= 80)
 				{
 					htmltext = "gilmore_q254_01.htm";
 				}
 				else
 				{
 					htmltext = "gilmore_q254_00.htm";
-					st.exitCurrentQuest(true);
+					qs.exitCurrentQuest(true);
 				}
-			}
-			else if (cond == 1)
-			{
-				if (st.getQuestItemsCount(LargeBone) >= 1)
+				break;
+			
+			case 1:
+				if (qs.getQuestItemsCount(LargeBone) >= 1)
 				{
 					htmltext = "gilmore_q254_10.htm";
 				}
@@ -151,22 +153,20 @@ public class Q00254_LegendaryTales extends Quest implements ScriptFile
 				{
 					htmltext = "gilmore_q254_05.htm";
 				}
-			}
-			else if (cond == 2)
-			{
+				break;
+			
+			case 2:
 				htmltext = "gilmore_q254_18.htm";
-			}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		
-		if (cond == 1)
+		if (qs.getCond() == 1)
 		{
 			int mask = 1;
 			int var = npc.getId();
@@ -181,17 +181,17 @@ public class Q00254_LegendaryTales extends Quest implements ScriptFile
 				mask = mask << 1;
 			}
 			
-			var = st.getInt("RaidsKilled");
+			var = qs.getInt("RaidsKilled");
 			
-			if ((var & mask) == 0) // этого босса еще не убивали
+			if ((var & mask) == 0)
 			{
 				var |= mask;
-				st.set("RaidsKilled", var);
-				st.giveItems(LargeBone, 1);
+				qs.set("RaidsKilled", var);
+				qs.giveItems(LargeBone, 1);
 				
-				if (st.getQuestItemsCount(LargeBone) >= 7)
+				if (qs.getQuestItemsCount(LargeBone) >= 7)
 				{
-					st.setCond(2);
+					qs.setCond(2);
 				}
 			}
 		}

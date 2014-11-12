@@ -34,42 +34,39 @@ public class Q00210_ObtainAWolfPet extends Quest implements ScriptFile
 	{
 		super(false);
 		addStartNpc(LUNDY);
-		addTalkId(LUNDY);
-		addTalkId(BELLA);
-		addTalkId(BRYNN);
-		addTalkId(SYDNIA);
+		addTalkId(LUNDY, BELLA, BRYNN, SYDNIA);
 		addLevelCheck(15, 99);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
 		switch (event)
 		{
 			case "quest_ac":
-				st.setState(STARTED);
-				st.setCond(1);
-				st.playSound(SOUND_ACCEPT);
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
 				htmltext = "0-3.htm";
 				break;
 			
 			case "1":
-				st.setState(STARTED);
-				st.setCond(2);
+				qs.setState(STARTED);
+				qs.setCond(2);
 				htmltext = "1-3.htm";
 				break;
 			
 			case "2":
-				st.setState(STARTED);
-				st.setCond(3);
+				qs.setState(STARTED);
+				qs.setCond(3);
 				htmltext = "2-2.htm";
 				break;
 			
 			case "3":
-				st.setState(STARTED);
-				st.setCond(4);
+				qs.setState(STARTED);
+				qs.setCond(4);
 				htmltext = "3-2.htm";
 				break;
 		}
@@ -78,20 +75,16 @@ public class Q00210_ObtainAWolfPet extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		String htmltext = "noquest";
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
 		
 		switch (npcId)
 		{
 			case LUNDY:
-				if (st.isCompleted())
-				{
-					htmltext = "Completed.htm";
-				}
-				else if ((cond == 0) && isAvailableFor(st.getPlayer()))
+				if ((cond == 0) && isAvailableFor(qs.getPlayer()))
 				{
 					htmltext = "0-1.htm";
 				}
@@ -102,40 +95,28 @@ public class Q00210_ObtainAWolfPet extends Quest implements ScriptFile
 				else if (cond == 4)
 				{
 					htmltext = "4.htm";
-					st.giveItems(WOLF_COLLAR, 1);
-					st.exitCurrentQuest(false);
-					st.playSound(SOUND_FINISH);
+					qs.giveItems(WOLF_COLLAR, 1);
+					qs.exitCurrentQuest(false);
+					qs.playSound(SOUND_FINISH);
 				}
 				break;
 			
 			case BELLA:
-				if (st.isCompleted())
-				{
-					htmltext = "Completed.htm";
-				}
-				else if (cond == 1)
+				if (cond == 1)
 				{
 					htmltext = "1-1.htm";
 				}
 				break;
 			
 			case BRYNN:
-				if (st.isCompleted())
-				{
-					htmltext = "Completed.htm";
-				}
-				else if (cond == 2)
+				if (cond == 2)
 				{
 					htmltext = "2-1.htm";
 				}
 				break;
 			
 			case SYDNIA:
-				if (st.isCompleted())
-				{
-					htmltext = "Completed.htm";
-				}
-				else if (cond == 3)
+				if (cond == 3)
 				{
 					htmltext = "3-1.htm";
 				}

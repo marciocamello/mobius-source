@@ -19,25 +19,13 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00146_TheZeroHour extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int KAHMAN = 31554;
+	// Items
 	private static final int STAKATO_QUEENS_FANG = 14859;
 	private static final int KAHMANS_SUPPLY_BOX = 14849;
+	// Monster
 	private static final int QUEEN_SHYEED_ID = 25671;
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
 	
 	public Q00146_TheZeroHour()
 	{
@@ -49,43 +37,48 @@ public class Q00146_TheZeroHour extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		int cond = st.getCond();
+		final int cond = qs.getCond();
 		String htmltext = event;
 		
-		if (event.equals("merc_kahmun_q0146_0103.htm") && (cond == 0))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		if (event.equals("reward") && (cond == 2))
-		{
-			htmltext = "merc_kahmun_q0146_0107.htm";
-			st.takeItems(STAKATO_QUEENS_FANG, -1);
-			st.giveItems(KAHMANS_SUPPLY_BOX, 1);
-			st.addExpAndSp(2850000, 3315000);
-			st.exitCurrentQuest(false);
+			case "merc_kahmun_q0146_0103.htm":
+				if (cond == 0)
+				{
+					qs.setCond(1);
+					qs.setState(STARTED);
+					qs.playSound(SOUND_ACCEPT);
+				}
+				break;
+			
+			case "reward":
+				if (cond == 2)
+				{
+					htmltext = "merc_kahmun_q0146_0107.htm";
+					qs.takeItems(STAKATO_QUEENS_FANG, -1);
+					qs.giveItems(KAHMANS_SUPPLY_BOX, 1);
+					qs.addExpAndSp(2850000, 3315000);
+					qs.exitCurrentQuest(false);
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		QuestState InSearchOfTheNest = st.getPlayer().getQuestState(Q00109_InSearchOfTheNest.class);
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final QuestState InSearchOfTheNest = qs.getPlayer().getQuestState(Q00109_InSearchOfTheNest.class);
 		
-		if (npcId == KAHMAN)
+		switch (cond)
 		{
-			if (cond == 0)
-			{
-				if (st.getPlayer().getLevel() >= 81)
+			case 0:
+				if (qs.getPlayer().getLevel() >= 81)
 				{
 					if ((InSearchOfTheNest != null) && InSearchOfTheNest.isCompleted())
 					{
@@ -100,29 +93,47 @@ public class Q00146_TheZeroHour extends Quest implements ScriptFile
 				{
 					htmltext = "merc_kahmun_q0146_0102.htm";
 				}
-			}
-			else if ((cond == 1) && (st.getQuestItemsCount(STAKATO_QUEENS_FANG) < 1))
-			{
-				htmltext = "merc_kahmun_q0146_0105.htm";
-			}
-			else if (cond == 2)
-			{
+				break;
+			
+			case 1:
+				if (qs.getQuestItemsCount(STAKATO_QUEENS_FANG) < 1)
+				{
+					htmltext = "merc_kahmun_q0146_0105.htm";
+				}
+				break;
+			
+			case 2:
 				htmltext = "merc_kahmun_q0146_0106.htm";
-			}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if (st.getState() == STARTED)
+		if (qs.getState() == STARTED)
 		{
-			st.setCond(2);
-			st.giveItems(STAKATO_QUEENS_FANG, 1);
+			qs.setCond(2);
+			qs.giveItems(STAKATO_QUEENS_FANG, 1);
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

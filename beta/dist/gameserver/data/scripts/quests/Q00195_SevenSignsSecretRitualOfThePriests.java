@@ -30,6 +30,7 @@ import ai.GuardofDawnStat;
 
 public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int ClaudiaAthebaldt = 31001;
 	private static final int John = 32576;
 	private static final int Raymond = 30289;
@@ -38,15 +39,17 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest implements 
 	private static final int PasswordEntryDevice = 32577;
 	private static final int IasonHeine = 30969;
 	private static final int BookShelf = 32580;
+	// Items
 	private static final int GuardsoftheDawnIdentityCard = 13822;
 	private static final int EmperorShunaimansContract = 13823;
+	// Others
 	private static final int door1 = 17240001;
 	private static final int door2 = 17240002;
 	private static final int door3 = 17240003;
 	private static final int door4 = 17240004;
 	private static final int door5 = 17240005;
 	private static final int door6 = 17240006;
-	private static final int izId = 111;
+	private static final int instanceId = 111;
 	private static final Location[][] guardsOfDawn1 =
 	{
 		{
@@ -353,249 +356,252 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest implements 
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		Player player = st.getPlayer();
 		String htmltext = event;
-		Reflection ref = player.getReflection();
+		final Player player = qs.getPlayer();
+		final Reflection ref = player.getReflection();
 		
-		if (event.equalsIgnoreCase("claudiaathebaldt_q195_2.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("john_q195_2.htm"))
-		{
-			st.setCond(2);
-			st.giveItems(GuardsoftheDawnIdentityCard, 1);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("raymond_q195_3.htm"))
-		{
-			if ((player.getTransformation() != 0) || player.isMounted())
-			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
-				return null;
-			}
+			case "claudiaathebaldt_q195_2.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
 			
-			st.playSound(SOUND_MIDDLE);
-			negateSpeedBuffs(player);
-			SkillTable.getInstance().getInfo(6204, 1).getEffects(player, player, false, false);
-			st.setCond(3);
-		}
-		else if (event.equalsIgnoreCase("transformagain"))
-		{
-			if ((player.getTransformation() != 0) || player.isMounted())
-			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
-				return null;
-			}
+			case "john_q195_2.htm":
+				qs.setCond(2);
+				qs.giveItems(GuardsoftheDawnIdentityCard, 1);
+				qs.playSound(SOUND_MIDDLE);
+				break;
 			
-			negateSpeedBuffs(player);
-			SkillTable.getInstance().getInfo(6204, 1).getEffects(player, player, false, false);
-			htmltext = "raymond_q195_4c.htm";
-		}
-		else if (event.equalsIgnoreCase("dispel"))
-		{
-			if (player.getTransformation() == 113)
-			{
-				player.setTransformation(0);
-				htmltext = "raymond_q195_4d.htm";
-			}
-			else
-			{
-				htmltext = "raymond_q195_4b.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("teleout"))
-		{
-			if (st.getQuestItemsCount(GuardsoftheDawnIdentityCard) > 0)
-			{
-				htmltext = "darknessofdawn_q195_1.htm";
-			}
-			else
-			{
-				htmltext = "darknessofdawn_q195_2.htm";
-			}
-			
-			if (ref != null)
-			{
-				ref.collapse();
-			}
-		}
-		else if (event.equalsIgnoreCase("telelater"))
-		{
-			return null;
-		}
-		else if (event.equalsIgnoreCase("open_door"))
-		{
-			if ((ref != null) && (player.getTransformation() == 113) && (st.getQuestItemsCount(GuardsoftheDawnIdentityCard) >= 1))
-			{
-				if (npc.getLoc().equals(new Location(-75695, 213537, -7128, 0)))
+			case "raymond_q195_3.htm":
+				if ((player.getTransformation() != 0) || player.isMounted())
 				{
-					ref.openDoor(door1);
-					ref.openDoor(door2);
-					player.sendPacket(new SystemMessage(SystemMessage.BY_USING_THE_INVISIBLE_SKILL_SNEAK_INTO_THE_DAWN_S_DOCUMENT_STORAGE));
-					player.sendPacket(new SystemMessage(SystemMessage.MALE_GUARDS_CAN_DETECT_THE_CONCEALMENT_BUT_THE_FEMALE_GUARDS_CANNOT));
-					player.sendPacket(new SystemMessage(SystemMessage.FEMALE_GUARDS_NOTICE_THE_DISGUISES_FROM_FAR_AWAY_BETTER_THAN_THE_MALE_GUARDS_DO_SO_BEWARE));
-					htmltext = "identityconfirmdevice_q195_1.htm";
+					player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
+					return null;
+				}
+				qs.playSound(SOUND_MIDDLE);
+				negateSpeedBuffs(player);
+				SkillTable.getInstance().getInfo(6204, 1).getEffects(player, player, false, false);
+				qs.setCond(3);
+				break;
+			
+			case "transformagain":
+				if ((player.getTransformation() != 0) || player.isMounted())
+				{
+					player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
+					return null;
+				}
+				negateSpeedBuffs(player);
+				SkillTable.getInstance().getInfo(6204, 1).getEffects(player, player, false, false);
+				htmltext = "raymond_q195_4c.htm";
+				break;
+			
+			case "dispel":
+				if (player.getTransformation() == 113)
+				{
+					player.setTransformation(0);
+					htmltext = "raymond_q195_4d.htm";
 				}
 				else
 				{
-					ref.openDoor(door3);
-					ref.openDoor(door4);
-					player.sendPacket(new SystemMessage(SystemMessage.THE_DOOR_IN_FRONT_OF_US_IS_THE_ENTRANCE_TO_THE_DAWN_S_DOCUMENT_STORAGE_APPROACH_TO_THE_CODE));
-					player.showQuestMovie(ExStartScenePlayer.SCENE_SSQ_RITUAL_OF_PRIEST);
-					htmltext = "identityconfirmdevice_q195_1.htm";
+					htmltext = "raymond_q195_4b.htm";
 				}
-			}
-			else
-			{
-				return "identityconfirmdevice_q195_2.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("false_code"))
-		{
-			htmltext = "passwordentrydevice_q195_2.htm";
-		}
-		else if (event.equalsIgnoreCase("correct_code"))
-		{
-			if (ref != null)
-			{
-				ref.openDoor(door5);
-				ref.openDoor(door6);
-			}
+				break;
 			
-			htmltext = "passwordentrydevice_q195_1.htm";
-		}
-		else if (event.equalsIgnoreCase("bookshelf_q195_2.htm"))
-		{
-			st.giveItems(EmperorShunaimansContract, 1);
-			st.playSound(SOUND_ITEMGET);
-		}
-		else if (event.equalsIgnoreCase("bookshelf_q195_3.htm"))
-		{
-			if ((ref != null) && !ref.isDefault())
-			{
-				ref.collapse();
-			}
-		}
-		else if (event.equalsIgnoreCase("raymond_q195_5.htm"))
-		{
-			player.setTransformation(0);
-			st.takeItems(GuardsoftheDawnIdentityCard, -1);
-			st.playSound(SOUND_ITEMGET);
-			st.setCond(4);
-		}
-		else if (event.equalsIgnoreCase("iasonheine_q195_2.htm"))
-		{
-			if (player.getBaseClassId() == player.getActiveClassId())
-			{
-				st.takeItems(EmperorShunaimansContract, -1);
-				st.addExpAndSp(10000000, 2500000);
-				st.setState(COMPLETED);
-				st.exitCurrentQuest(false);
-				st.playSound(SOUND_FINISH);
-			}
-			else
-			{
-				return "subclass_forbidden.htm";
-			}
+			case "teleout":
+				if (qs.getQuestItemsCount(GuardsoftheDawnIdentityCard) > 0)
+				{
+					htmltext = "darknessofdawn_q195_1.htm";
+				}
+				else
+				{
+					htmltext = "darknessofdawn_q195_2.htm";
+				}
+				if (ref != null)
+				{
+					ref.collapse();
+				}
+				break;
+			
+			case "telelater":
+				return null;
+				
+			case "open_door":
+				if ((ref != null) && (player.getTransformation() == 113) && (qs.getQuestItemsCount(GuardsoftheDawnIdentityCard) >= 1))
+				{
+					if (npc.getLoc().equals(new Location(-75695, 213537, -7128, 0)))
+					{
+						ref.openDoor(door1);
+						ref.openDoor(door2);
+						player.sendPacket(new SystemMessage(SystemMessage.BY_USING_THE_INVISIBLE_SKILL_SNEAK_INTO_THE_DAWN_S_DOCUMENT_STORAGE));
+						player.sendPacket(new SystemMessage(SystemMessage.MALE_GUARDS_CAN_DETECT_THE_CONCEALMENT_BUT_THE_FEMALE_GUARDS_CANNOT));
+						player.sendPacket(new SystemMessage(SystemMessage.FEMALE_GUARDS_NOTICE_THE_DISGUISES_FROM_FAR_AWAY_BETTER_THAN_THE_MALE_GUARDS_DO_SO_BEWARE));
+						htmltext = "identityconfirmdevice_q195_1.htm";
+					}
+					else
+					{
+						ref.openDoor(door3);
+						ref.openDoor(door4);
+						player.sendPacket(new SystemMessage(SystemMessage.THE_DOOR_IN_FRONT_OF_US_IS_THE_ENTRANCE_TO_THE_DAWN_S_DOCUMENT_STORAGE_APPROACH_TO_THE_CODE));
+						player.showQuestMovie(ExStartScenePlayer.SCENE_SSQ_RITUAL_OF_PRIEST);
+						htmltext = "identityconfirmdevice_q195_1.htm";
+					}
+				}
+				else
+				{
+					return "identityconfirmdevice_q195_2.htm";
+				}
+				break;
+			
+			case "false_code":
+				htmltext = "passwordentrydevice_q195_2.htm";
+				break;
+			
+			case "correct_code":
+				if (ref != null)
+				{
+					ref.openDoor(door5);
+					ref.openDoor(door6);
+				}
+				htmltext = "passwordentrydevice_q195_1.htm";
+				break;
+			
+			case "bookshelf_q195_2.htm":
+				qs.giveItems(EmperorShunaimansContract, 1);
+				qs.playSound(SOUND_ITEMGET);
+				break;
+			
+			case "bookshelf_q195_3.htm":
+				if ((ref != null) && !ref.isDefault())
+				{
+					ref.collapse();
+				}
+				break;
+			
+			case "raymond_q195_5.htm":
+				player.setTransformation(0);
+				qs.takeItems(GuardsoftheDawnIdentityCard, -1);
+				qs.playSound(SOUND_ITEMGET);
+				qs.setCond(4);
+				break;
+			
+			case "iasonheine_q195_2.htm":
+				if (player.getBaseClassId() == player.getActiveClassId())
+				{
+					qs.takeItems(EmperorShunaimansContract, -1);
+					qs.addExpAndSp(10000000, 2500000);
+					qs.setState(COMPLETED);
+					qs.exitCurrentQuest(false);
+					qs.playSound(SOUND_FINISH);
+				}
+				else
+				{
+					return "subclass_forbidden.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		Player player = st.getPlayer();
-		String htmltext = "noquest";
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int npcId = npc.getId();
+		final int cond = qs.getCond();
+		final Player player = qs.getPlayer();
 		
 		if (player.getBaseClassId() != player.getActiveClassId())
 		{
 			return "subclass_forbidden.htm";
 		}
 		
-		if (npcId == ClaudiaAthebaldt)
+		switch (npcId)
 		{
-			QuestState qs = player.getQuestState(Q00194_SevenSignsMammonsContract.class);
-			
-			if (cond == 0)
-			{
-				if ((player.getLevel() >= 79) && (qs != null) && qs.isCompleted())
+			case ClaudiaAthebaldt:
+				final QuestState state = player.getQuestState(Q00194_SevenSignsMammonsContract.class);
+				if (cond == 0)
 				{
-					htmltext = "claudiaathebaldt_q195_1.htm";
+					if ((player.getLevel() >= 79) && (state != null) && state.isCompleted())
+					{
+						htmltext = "claudiaathebaldt_q195_1.htm";
+					}
+					else
+					{
+						htmltext = "claudiaathebaldt_q195_0.htm";
+						qs.exitCurrentQuest(true);
+					}
 				}
 				else
 				{
-					htmltext = "claudiaathebaldt_q195_0.htm";
-					st.exitCurrentQuest(true);
+					htmltext = "claudiaathebaldt_q195_3.htm";
 				}
-			}
-			else
-			{
-				htmltext = "claudiaathebaldt_q195_3.htm";
-			}
-		}
-		else if (npcId == John)
-		{
-			if (cond == 1)
-			{
-				htmltext = "john_q195_1.htm";
-			}
-			else
-			{
-				htmltext = "john_q195_3.htm";
-			}
-		}
-		else if (npcId == Raymond)
-		{
-			if (cond == 2)
-			{
-				htmltext = "raymond_q195_1.htm";
-			}
-			else if ((cond == 3) && (st.getQuestItemsCount(EmperorShunaimansContract) >= 1))
-			{
-				htmltext = "raymond_q195_4.htm";
-			}
-			else if (cond == 3)
-			{
-				htmltext = "raymond_q195_4a.htm";
-			}
-			else if (cond == 4)
-			{
-				htmltext = "raymond_q195_5b.htm";
-			}
-		}
-		else if (npcId == LightofDawn)
-		{
-			if ((cond == 3) && (player.getTransformation() == 113))
-			{
-				enterInstance(player);
-				htmltext = "lightofdawn_q195_1.htm";
-			}
-			else
-			{
-				htmltext = "lightofdawn_q195_2.htm";
-			}
-		}
-		else if (npcId == BookShelf)
-		{
-			if ((cond == 3) && (player.getTransformation() == 113))
-			{
-				htmltext = "bookshelf_q195_1.htm";
-			}
-		}
-		else if (npcId == IasonHeine)
-		{
-			if ((cond == 4) && (st.getQuestItemsCount(EmperorShunaimansContract) > 0))
-			{
-				htmltext = "iasonheine_q195_1.htm";
-			}
+				break;
+			
+			case John:
+				if (cond == 1)
+				{
+					htmltext = "john_q195_1.htm";
+				}
+				else
+				{
+					htmltext = "john_q195_3.htm";
+				}
+				break;
+			
+			case Raymond:
+				switch (cond)
+				{
+					case 2:
+						htmltext = "raymond_q195_1.htm";
+						break;
+					
+					case 3:
+						if (qs.getQuestItemsCount(EmperorShunaimansContract) >= 1)
+						{
+							htmltext = "raymond_q195_4.htm";
+						}
+						else
+						{
+							htmltext = "raymond_q195_4a.htm";
+						}
+						break;
+					
+					case 4:
+						htmltext = "raymond_q195_5b.htm";
+						break;
+				}
+				break;
+			
+			case LightofDawn:
+				if ((cond == 3) && (player.getTransformation() == 113))
+				{
+					enterInstance(player);
+					htmltext = "lightofdawn_q195_1.htm";
+				}
+				else
+				{
+					htmltext = "lightofdawn_q195_2.htm";
+				}
+				break;
+			
+			case BookShelf:
+				if ((cond == 3) && (player.getTransformation() == 113))
+				{
+					htmltext = "bookshelf_q195_1.htm";
+				}
+				break;
+			
+			case IasonHeine:
+				if ((cond == 4) && (qs.getQuestItemsCount(EmperorShunaimansContract) > 0))
+				{
+					htmltext = "iasonheine_q195_1.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
@@ -603,18 +609,18 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest implements 
 	
 	private void enterInstance(Player player)
 	{
-		Reflection r = player.getActiveReflection();
+		final Reflection r = player.getActiveReflection();
 		
 		if (r != null)
 		{
-			if (player.canReenterInstance(izId))
+			if (player.canReenterInstance(instanceId))
 			{
 				player.teleToLocation(r.getTeleportLoc(), r);
 			}
 		}
-		else if (player.canEnterInstance(izId))
+		else if (player.canEnterInstance(instanceId))
 		{
-			Reflection newInstance = ReflectionUtils.enterReflection(player, izId);
+			Reflection newInstance = ReflectionUtils.enterReflection(player, instanceId);
 			synchronized (guardsOfDawn1)
 			{
 				for (Location spawn[] : guardsOfDawn1)

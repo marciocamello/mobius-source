@@ -28,15 +28,19 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00177_SplitDestiny extends Quest implements ScriptFile
 {
-	private static final int chanceGetItem = 30;
+	// Npcs
 	private static final int Hadel = 33344;
 	private static final int Ishuma = 32615;
+	// Items
 	private static final int questitem_01 = 17718;
 	private static final int questitem_02 = 17719;
 	private static final int questitem_03 = 17720;
 	private static final int questitem_04 = 17721;
+	// Monsters
 	private static final List<Integer> _Mobs1 = new ArrayList<>();
 	private static final List<Integer> _Mobs2 = new ArrayList<>();
+	// Other
+	private static final int chanceGetItem = 30;
 	
 	public Q00177_SplitDestiny()
 	{
@@ -53,8 +57,7 @@ public class Q00177_SplitDestiny extends Quest implements ScriptFile
 		_Mobs2.add(22259);
 		_Mobs2.add(22260);
 		addStartNpc(Hadel);
-		addTalkId(Hadel);
-		addTalkId(Ishuma);
+		addTalkId(Hadel, Ishuma);
 		addQuestItem(questitem_01, questitem_02, questitem_03, questitem_04);
 		addKillId(_Mobs1);
 		addKillId(_Mobs2);
@@ -63,235 +66,248 @@ public class Q00177_SplitDestiny extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("33344_03.htm"))
+		if (event.contains("SoulCrystal"))
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.set("subClassId", st.getPlayer().getActiveClassId());
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("33344_07.htm"))
-		{
-			st.takeAllItems(questitem_03);
-			st.setCond(4);
-		}
-		else if (event.equalsIgnoreCase("33344_10.htm"))
-		{
-			st.giveItems(questitem_03, 10);
-			st.setCond(7);
-		}
-		else if (event.equalsIgnoreCase("32615_03.htm"))
-		{
-			st.takeAllItems(questitem_03);
-			st.takeAllItems(questitem_04);
-			st.setCond(8);
-		}
-		else if (event.equalsIgnoreCase("33344_13.htm"))
-		{
-			st.takeAllItems(questitem_01);
-			st.takeAllItems(questitem_02);
-		}
-		else if (event.contains("SoulCrystal"))
-		{
-			st.giveItems(event.contains("Red") ? 10480 : event.contains("Blue") ? 10481 : 10482, 1);
-			st.giveItems(18168, 1);
-			st.addExpAndSp(175739575, 2886300);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(false);
-			st.getPlayer().getActiveSubClass().setType(SubClassType.DOUBLE_SUBCLASS);
-			st.getPlayer().sendPacket(new ExSubjobInfo(st.getPlayer(), true));
+			qs.giveItems(event.contains("Red") ? 10480 : event.contains("Blue") ? 10481 : 10482, 1);
+			qs.giveItems(18168, 1);
+			qs.addExpAndSp(175739575, 2886300);
+			qs.playSound(SOUND_FINISH);
+			qs.exitCurrentQuest(false);
+			qs.getPlayer().getActiveSubClass().setType(SubClassType.DOUBLE_SUBCLASS);
+			qs.getPlayer().sendPacket(new ExSubjobInfo(qs.getPlayer(), true));
 			htmltext = "33344_16.htm";
 		}
 		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		Player player = st.getPlayer();
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (npcId == Hadel)
+		switch (event)
 		{
-			if (!(st.getState() == Quest.COMPLETED))
-			{
-				if ((player.getActiveSubClass().isSub() && (cond == 0) && !player.getSubClassList().haveDualClass()) || ((cond > 0) && (player.getActiveSubClass().getClassId() == st.getInt("subClassId"))))
-				{
-					if (cond == 0)
-					{
-						if ((player.getLevel() >= 80) && ClassId.VALUES[player.getSubClassList().getBaseSubClass().getClassId()].isOfLevel(ClassLevel.Fourth) && ClassId.VALUES[player.getActiveSubClass().getClassId()].isOfLevel(ClassLevel.Third))
-						{
-							htmltext = "33344_01.htm";
-						}
-						else
-						{
-							htmltext = "33344_nosubclass.htm";
-						}
-					}
-					else if (cond == 1)
-					{
-						htmltext = "33344_04.htm";
-					}
-					else if (cond == 2)
-					{
-						htmltext = "33344_04.htm";
-					}
-					else if (cond == 3)
-					{
-						if (st.getQuestItemsCount(questitem_03) >= 10)
-						{
-							htmltext = "33344_05.htm";
-						}
-					}
-					else if (cond == 4)
-					{
-						htmltext = "33344_08.htm";
-					}
-					else if (cond == 5)
-					{
-						htmltext = "33344_08.htm";
-					}
-					else if (cond == 6)
-					{
-						if (st.getQuestItemsCount(questitem_04) >= 10)
-						{
-							htmltext = "33344_09.htm";
-						}
-					}
-					else if (cond == 7)
-					{
-						htmltext = "33344_11.htm";
-					}
-					else if (cond == 9)
-					{
-						if ((st.getQuestItemsCount(questitem_01) >= 2) && (st.getQuestItemsCount(questitem_02) >= 2))
-						{
-							htmltext = "33344_12.htm";
-						}
-						else
-						{
-							htmltext = "33344_14.htm";
-						}
-					}
-				}
-				else
-				{
-					htmltext = "33344_nosubclass.htm";
-				}
-			}
-			else
-			{
-				htmltext = "33344_completed.htm";
-			}
-		}
-		else if (npcId == Ishuma)
-		{
-			if (!(st.getState() == Quest.COMPLETED))
-			{
-				if (st.getInt("subClassId") == player.getClassId().getId())
-				{
-					if (cond == 7)
-					{
-						if ((st.getQuestItemsCount(questitem_03) >= 10) && (st.getQuestItemsCount(questitem_04) >= 10))
-						{
-							htmltext = "32615_01.htm";
-							st.setCond(8);
-						}
-					}
-					else if (cond == 8)
-					{
-						st.giveItems(questitem_01, 2);
-						st.giveItems(questitem_02, 2);
-						htmltext = "32615_04.htm";
-						st.setCond(9);
-					}
-					else if (cond == 9)
-					{
-						htmltext = "32615_05.htm";
-					}
-				}
-				else
-				{
-					htmltext = "no_subclass.htm";
-				}
-			}
-			else
-			{
-				htmltext = "32615_completed.htm";
-			}
+			case "33344_03.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.set("subClassId", qs.getPlayer().getActiveClassId());
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "33344_07.htm":
+				qs.takeAllItems(questitem_03);
+				qs.setCond(4);
+				break;
+			
+			case "33344_10.htm":
+				qs.giveItems(questitem_03, 10);
+				qs.setCond(7);
+				break;
+			
+			case "32615_03.htm":
+				qs.takeAllItems(questitem_03);
+				qs.takeAllItems(questitem_04);
+				qs.setCond(8);
+				break;
+			
+			case "33344_13.htm":
+				qs.takeAllItems(questitem_01);
+				qs.takeAllItems(questitem_02);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		int subclassId = st.getInt("subClassId");
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		final Player player = qs.getPlayer();
 		
-		if ((st.getPlayer().getActiveSubClass().getClassId() == subclassId) && (st.getState() == Quest.STARTED))
+		switch (npcId)
 		{
-			if ((cond == 1) && _Mobs1.contains(npcId) && Rnd.chance(chanceGetItem))
-			{
-				if (st.getQuestItemsCount(questitem_03) < 1)
+			case Hadel:
+				if (!(qs.getState() == Quest.COMPLETED))
 				{
-					st.giveItems(questitem_03, 1);
-					st.playSound(SOUND_MIDDLE);
-					st.setCond(2);
+					if ((player.getActiveSubClass().isSub() && (cond == 0) && !player.getSubClassList().haveDualClass()) || ((cond > 0) && (player.getActiveSubClass().getClassId() == qs.getInt("subClassId"))))
+					{
+						switch (cond)
+						{
+							case 0:
+								if ((player.getLevel() >= 80) && ClassId.VALUES[player.getSubClassList().getBaseSubClass().getClassId()].isOfLevel(ClassLevel.Fourth) && ClassId.VALUES[player.getActiveSubClass().getClassId()].isOfLevel(ClassLevel.Third))
+								{
+									htmltext = "33344_01.htm";
+								}
+								else
+								{
+									htmltext = "33344_nosubclass.htm";
+								}
+								break;
+							
+							case 1:
+								htmltext = "33344_04.htm";
+								break;
+							
+							case 2:
+								htmltext = "33344_04.htm";
+								break;
+							
+							case 3:
+								if (qs.getQuestItemsCount(questitem_03) >= 10)
+								{
+									htmltext = "33344_05.htm";
+								}
+								break;
+							
+							case 4:
+								htmltext = "33344_08.htm";
+								break;
+							
+							case 5:
+								htmltext = "33344_08.htm";
+								break;
+							
+							case 6:
+								if (qs.getQuestItemsCount(questitem_04) >= 10)
+								{
+									htmltext = "33344_09.htm";
+								}
+								break;
+							
+							case 7:
+								htmltext = "33344_11.htm";
+								break;
+							
+							case 9:
+								if ((qs.getQuestItemsCount(questitem_01) >= 2) && (qs.getQuestItemsCount(questitem_02) >= 2))
+								{
+									htmltext = "33344_12.htm";
+								}
+								else
+								{
+									htmltext = "33344_14.htm";
+								}
+								break;
+						}
+					}
+					else
+					{
+						htmltext = "33344_nosubclass.htm";
+					}
 				}
-			}
-			else if ((cond == 2) && _Mobs1.contains(npcId) && Rnd.chance(chanceGetItem))
-			{
-				if (st.getQuestItemsCount(questitem_03) < 10)
+				else
 				{
-					st.giveItems(questitem_03, 1);
-					st.playSound(SOUND_ITEMGET);
+					htmltext = "33344_completed.htm";
 				}
+				break;
+			
+			case Ishuma:
+				if (!(qs.getState() == Quest.COMPLETED))
+				{
+					if (qs.getInt("subClassId") == player.getClassId().getId())
+					{
+						if (cond == 7)
+						{
+							if ((qs.getQuestItemsCount(questitem_03) >= 10) && (qs.getQuestItemsCount(questitem_04) >= 10))
+							{
+								htmltext = "32615_01.htm";
+								qs.setCond(8);
+							}
+						}
+						else if (cond == 8)
+						{
+							qs.giveItems(questitem_01, 2);
+							qs.giveItems(questitem_02, 2);
+							htmltext = "32615_04.htm";
+							qs.setCond(9);
+						}
+						else if (cond == 9)
+						{
+							htmltext = "32615_05.htm";
+						}
+					}
+					else
+					{
+						htmltext = "no_subclass.htm";
+					}
+				}
+				else
+				{
+					htmltext = "32615_completed.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		final int npcId = npc.getId();
+		final int cond = qs.getCond();
+		final int subclassId = qs.getInt("subClassId");
+		
+		if ((qs.getPlayer().getActiveSubClass().getClassId() == subclassId) && (qs.getState() == Quest.STARTED))
+		{
+			switch (cond)
+			{
+				case 1:
+					if (_Mobs1.contains(npcId) && Rnd.chance(chanceGetItem) && (qs.getQuestItemsCount(questitem_03) < 1))
+					{
+						qs.giveItems(questitem_03, 1);
+						qs.playSound(SOUND_MIDDLE);
+						qs.setCond(2);
+					}
+					break;
 				
-				if (st.getQuestItemsCount(questitem_03) >= 10)
-				{
-					st.playSound(SOUND_MIDDLE);
-					st.setCond(3);
-				}
-			}
-			else if ((cond == 4) && _Mobs2.contains(npcId) && Rnd.chance(chanceGetItem))
-			{
-				if (st.getQuestItemsCount(questitem_04) < 1)
-				{
-					st.giveItems(questitem_04, 1);
-					st.playSound(SOUND_MIDDLE);
-					st.setCond(5);
-				}
-			}
-			else if ((cond == 5) && _Mobs2.contains(npcId) && Rnd.chance(chanceGetItem))
-			{
-				if (st.getQuestItemsCount(questitem_04) < 10)
-				{
-					st.giveItems(questitem_04, 1);
-					st.playSound(SOUND_ITEMGET);
-				}
+				case 2:
+					if (_Mobs1.contains(npcId) && Rnd.chance(chanceGetItem))
+					{
+						if (qs.getQuestItemsCount(questitem_03) < 10)
+						{
+							qs.giveItems(questitem_03, 1);
+							qs.playSound(SOUND_ITEMGET);
+						}
+						else if (qs.getQuestItemsCount(questitem_03) >= 10)
+						{
+							qs.playSound(SOUND_MIDDLE);
+							qs.setCond(3);
+						}
+					}
+					break;
 				
-				if (st.getQuestItemsCount(questitem_04) >= 10)
-				{
-					st.playSound(SOUND_MIDDLE);
-					st.setCond(6);
-				}
+				case 4:
+					if (_Mobs2.contains(npcId) && Rnd.chance(chanceGetItem) && (qs.getQuestItemsCount(questitem_04) < 1))
+					{
+						qs.giveItems(questitem_04, 1);
+						qs.playSound(SOUND_MIDDLE);
+						qs.setCond(5);
+					}
+					break;
+				
+				case 5:
+					if (_Mobs2.contains(npcId) && Rnd.chance(chanceGetItem))
+					{
+						if (qs.getQuestItemsCount(questitem_04) < 10)
+						{
+							qs.giveItems(questitem_04, 1);
+							qs.playSound(SOUND_ITEMGET);
+						}
+						else if (qs.getQuestItemsCount(questitem_04) >= 10)
+						{
+							qs.playSound(SOUND_MIDDLE);
+							qs.setCond(6);
+						}
+					}
+					break;
 			}
 		}
 		else
 		{
 			if (cond > 0)
 			{
-				st.getPlayer().sendMessage("You cannot obtain the quest items if you are in different subclass to which started the quest.");
+				qs.getPlayer().sendMessage("You cannot obtain the quest items if you are in different subclass to which started the quest.");
 			}
 		}
 		

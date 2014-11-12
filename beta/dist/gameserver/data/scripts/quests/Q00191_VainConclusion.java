@@ -20,11 +20,143 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00191_VainConclusion extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int Kusto = 30512;
 	private static final int Lorain = 30673;
 	private static final int Dorothy = 30970;
 	private static final int Shegfield = 30068;
+	// Item
 	private static final int Metal = 10371;
+	
+	public Q00191_VainConclusion()
+	{
+		super(false);
+		addTalkId(Kusto, Dorothy, Lorain, Shegfield);
+		addFirstTalkId(Dorothy);
+		addQuestItem(Metal);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "30970-03.htm":
+				qs.playSound(SOUND_ACCEPT);
+				qs.setCond(1);
+				qs.giveItems(Metal, 1);
+				break;
+			
+			case "30673-02.htm":
+				qs.playSound(SOUND_MIDDLE);
+				qs.setCond(2);
+				qs.takeItems(Metal, -1);
+				break;
+			
+			case "30068-03.htm":
+				qs.setCond(3);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "30512-02.htm":
+				qs.giveItems(ADENA_ID, 134292);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		
+		if (qs.getState() == STARTED)
+		{
+			switch (npcId)
+			{
+				case Dorothy:
+					if (cond == 0)
+					{
+						if (qs.getPlayer().getLevel() < 42)
+						{
+							htmltext = "30970-00.htm";
+						}
+						else
+						{
+							htmltext = "30970-01.htm";
+						}
+					}
+					else if (cond == 1)
+					{
+						htmltext = "30970-04.htm";
+					}
+					break;
+				
+				case Lorain:
+					switch (cond)
+					{
+						case 1:
+							htmltext = "30673-01.htm";
+							break;
+						
+						case 2:
+							htmltext = "30673-03.htm";
+							break;
+						
+						case 3:
+							htmltext = "30673-04.htm";
+							qs.setCond(4);
+							qs.playSound(SOUND_MIDDLE);
+							break;
+						
+						case 4:
+							htmltext = "30673-05.htm";
+							break;
+					}
+					break;
+				
+				case Shegfield:
+					if (cond == 2)
+					{
+						htmltext = "30068-01.htm";
+					}
+					else if (cond == 3)
+					{
+						htmltext = "30068-04.htm";
+					}
+					break;
+				
+				case Kusto:
+					if (cond == 4)
+					{
+						htmltext = "30512-01.htm";
+					}
+					break;
+			}
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onFirstTalk(NpcInstance npc, Player player)
+	{
+		final QuestState qs = player.getQuestState(Q00188_SealRemoval.class);
+		
+		if ((qs != null) && qs.isCompleted() && (player.getQuestState(getClass()) == null))
+		{
+			newQuestState(player, STARTED);
+		}
+		
+		return "";
+	}
 	
 	@Override
 	public void onLoad()
@@ -39,129 +171,5 @@ public class Q00191_VainConclusion extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00191_VainConclusion()
-	{
-		super(false);
-		addTalkId(Kusto, Dorothy, Lorain, Shegfield);
-		addFirstTalkId(Dorothy);
-		addQuestItem(Metal);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("30970-03.htm"))
-		{
-			st.playSound(SOUND_ACCEPT);
-			st.setCond(1);
-			st.giveItems(Metal, 1);
-		}
-		else if (event.equalsIgnoreCase("30673-02.htm"))
-		{
-			st.playSound(SOUND_MIDDLE);
-			st.setCond(2);
-			st.takeItems(Metal, -1);
-		}
-		else if (event.equalsIgnoreCase("30068-03.htm"))
-		{
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("30512-02.htm"))
-		{
-			st.giveItems(ADENA_ID, 134292);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (st.getState() == STARTED)
-		{
-			if (npcId == Dorothy)
-			{
-				if (cond == 0)
-				{
-					if (st.getPlayer().getLevel() < 42)
-					{
-						htmltext = "30970-00.htm";
-					}
-					else
-					{
-						htmltext = "30970-01.htm";
-					}
-				}
-				else if (cond == 1)
-				{
-					htmltext = "30970-04.htm";
-				}
-			}
-			else if (npcId == Lorain)
-			{
-				if (cond == 1)
-				{
-					htmltext = "30673-01.htm";
-				}
-				else if (cond == 2)
-				{
-					htmltext = "30673-03.htm";
-				}
-				else if (cond == 3)
-				{
-					htmltext = "30673-04.htm";
-					st.setCond(4);
-					st.playSound(SOUND_MIDDLE);
-				}
-				else if (cond == 4)
-				{
-					htmltext = "30673-05.htm";
-				}
-			}
-			else if (npcId == Shegfield)
-			{
-				if (cond == 2)
-				{
-					htmltext = "30068-01.htm";
-				}
-				else if (cond == 3)
-				{
-					htmltext = "30068-04.htm";
-				}
-			}
-			else if (npcId == Kusto)
-			{
-				if (cond == 4)
-				{
-					htmltext = "30512-01.htm";
-				}
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onFirstTalk(NpcInstance npc, Player player)
-	{
-		QuestState qs = player.getQuestState(Q00188_SealRemoval.class);
-		
-		if ((qs != null) && qs.isCompleted() && (player.getQuestState(getClass()) == null))
-		{
-			newQuestState(player, STARTED);
-		}
-		
-		return "";
 	}
 }

@@ -21,8 +21,11 @@ import lineage2.gameserver.utils.Util;
 
 public class Q00270_TheOneWhoEndsSilence extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int Greymore = 32757;
+	// Item
 	private static final int TatteredMonkClothes = 15526;
+	// Monsters
 	private static final int[] LowMobs =
 	{
 		22791,
@@ -48,606 +51,603 @@ public class Q00270_TheOneWhoEndsSilence extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("greymore_q270_03.htm"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("showrags"))
-		{
-			if (st.getQuestItemsCount(TatteredMonkClothes) < 1)
-			{
-				htmltext = "greymore_q270_05.htm";
-			}
-			else if (st.getQuestItemsCount(TatteredMonkClothes) < 100)
-			{
-				htmltext = "greymore_q270_06.htm";
-			}
-			else if (st.getQuestItemsCount(TatteredMonkClothes) >= 100)
-			{
-				htmltext = "greymore_q270_07.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("rags100"))
-		{
-			if (st.getQuestItemsCount(TatteredMonkClothes) >= 100)
-			{
-				st.takeItems(TatteredMonkClothes, 100);
-				
-				switch (Rnd.get(1, 21))
+			case "greymore_q270_03.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "showrags":
+				if (qs.getQuestItemsCount(TatteredMonkClothes) < 1)
 				{
-					case 1:
-						st.giveItems(10373, 1);
-						break;
-					
-					case 2:
-						st.giveItems(10374, 1);
-						break;
-					
-					case 3:
-						st.giveItems(10375, 1);
-						break;
-					
-					case 4:
-						st.giveItems(10376, 1);
-						break;
-					
-					case 5:
-						st.giveItems(10377, 1);
-						break;
-					
-					case 6:
-						st.giveItems(10378, 1);
-						break;
-					
-					case 7:
-						st.giveItems(10379, 1);
-						break;
-					
-					case 8:
-						st.giveItems(10380, 1);
-						break;
-					
-					case 9:
-						st.giveItems(10381, 1);
-						break;
-					
-					case 10:
-						st.giveItems(10397, 1);
-						break;
-					
-					case 11:
-						st.giveItems(10398, 1);
-						break;
-					
-					case 12:
-						st.giveItems(10399, 1);
-						break;
-					
-					case 13:
-						st.giveItems(10400, 1);
-						break;
-					
-					case 14:
-						st.giveItems(10401, 1);
-						break;
-					
-					case 15:
-						st.giveItems(10402, 1);
-						break;
-					
-					case 16:
-						st.giveItems(10403, 1);
-						break;
-					
-					case 17:
-						st.giveItems(10405, 1);
-						break;
-					
-					case 18:
-						st.giveItems(5593, 1);
-						break;
-					
-					case 19:
-						st.giveItems(5594, 1);
-						break;
-					
-					case 20:
-						st.giveItems(5595, 1);
-						break;
-					
-					case 21:
-						st.giveItems(9898, 1);
-						break;
+					htmltext = "greymore_q270_05.htm";
 				}
-				
-				htmltext = "greymore_q270_09.htm";
-			}
-			else
-			{
-				htmltext = "greymore_q270_08.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("rags200"))
-		{
-			if (st.getQuestItemsCount(TatteredMonkClothes) >= 200)
-			{
-				st.takeItems(TatteredMonkClothes, 200);
-				
-				switch (Rnd.get(1, 17))
+				else if (qs.getQuestItemsCount(TatteredMonkClothes) < 100)
 				{
-					case 1:
-						st.giveItems(10373, 1);
-						break;
-					
-					case 2:
-						st.giveItems(10374, 1);
-						break;
-					
-					case 3:
-						st.giveItems(10375, 1);
-						break;
-					
-					case 4:
-						st.giveItems(10376, 1);
-						break;
-					
-					case 5:
-						st.giveItems(10377, 1);
-						break;
-					
-					case 6:
-						st.giveItems(10378, 1);
-						break;
-					
-					case 7:
-						st.giveItems(10379, 1);
-						break;
-					
-					case 8:
-						st.giveItems(10380, 1);
-						break;
-					
-					case 9:
-						st.giveItems(10381, 1);
-						break;
-					
-					case 10:
-						st.giveItems(10397, 1);
-						break;
-					
-					case 11:
-						st.giveItems(10398, 1);
-						break;
-					
-					case 12:
-						st.giveItems(10399, 1);
-						break;
-					
-					case 13:
-						st.giveItems(10400, 1);
-						break;
-					
-					case 14:
-						st.giveItems(10401, 1);
-						break;
-					
-					case 15:
-						st.giveItems(10402, 1);
-						break;
-					
-					case 16:
-						st.giveItems(10403, 1);
-						break;
-					
-					case 17:
-						st.giveItems(10405, 1);
-						break;
+					htmltext = "greymore_q270_06.htm";
 				}
-				
-				switch (Rnd.get(1, 4))
+				else if (qs.getQuestItemsCount(TatteredMonkClothes) >= 100)
 				{
-					case 1:
-						st.giveItems(5593, 1);
-						break;
-					
-					case 2:
-						st.giveItems(5594, 1);
-						break;
-					
-					case 3:
-						st.giveItems(5595, 1);
-						break;
-					
-					case 4:
-						st.giveItems(9898, 1);
-						break;
+					htmltext = "greymore_q270_07.htm";
 				}
-				
-				htmltext = "greymore_q270_09.htm";
-			}
-			else
-			{
-				htmltext = "greymore_q270_08.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("rags300"))
-		{
-			if (st.getQuestItemsCount(TatteredMonkClothes) >= 300)
-			{
-				st.takeItems(TatteredMonkClothes, 300);
-				
-				switch (Rnd.get(1, 9))
+				break;
+			
+			case "rags100":
+				if (qs.getQuestItemsCount(TatteredMonkClothes) >= 100)
 				{
-					case 1:
-						st.giveItems(10373, 1);
-						break;
+					qs.takeItems(TatteredMonkClothes, 100);
 					
-					case 2:
-						st.giveItems(10374, 1);
-						break;
+					switch (Rnd.get(1, 21))
+					{
+						case 1:
+							qs.giveItems(10373, 1);
+							break;
+						
+						case 2:
+							qs.giveItems(10374, 1);
+							break;
+						
+						case 3:
+							qs.giveItems(10375, 1);
+							break;
+						
+						case 4:
+							qs.giveItems(10376, 1);
+							break;
+						
+						case 5:
+							qs.giveItems(10377, 1);
+							break;
+						
+						case 6:
+							qs.giveItems(10378, 1);
+							break;
+						
+						case 7:
+							qs.giveItems(10379, 1);
+							break;
+						
+						case 8:
+							qs.giveItems(10380, 1);
+							break;
+						
+						case 9:
+							qs.giveItems(10381, 1);
+							break;
+						
+						case 10:
+							qs.giveItems(10397, 1);
+							break;
+						
+						case 11:
+							qs.giveItems(10398, 1);
+							break;
+						
+						case 12:
+							qs.giveItems(10399, 1);
+							break;
+						
+						case 13:
+							qs.giveItems(10400, 1);
+							break;
+						
+						case 14:
+							qs.giveItems(10401, 1);
+							break;
+						
+						case 15:
+							qs.giveItems(10402, 1);
+							break;
+						
+						case 16:
+							qs.giveItems(10403, 1);
+							break;
+						
+						case 17:
+							qs.giveItems(10405, 1);
+							break;
+						
+						case 18:
+							qs.giveItems(5593, 1);
+							break;
+						
+						case 19:
+							qs.giveItems(5594, 1);
+							break;
+						
+						case 20:
+							qs.giveItems(5595, 1);
+							break;
+						
+						case 21:
+							qs.giveItems(9898, 1);
+							break;
+					}
 					
-					case 3:
-						st.giveItems(10375, 1);
-						break;
-					
-					case 4:
-						st.giveItems(10376, 1);
-						break;
-					
-					case 5:
-						st.giveItems(10377, 1);
-						break;
-					
-					case 6:
-						st.giveItems(10378, 1);
-						break;
-					
-					case 7:
-						st.giveItems(10379, 1);
-						break;
-					
-					case 8:
-						st.giveItems(10380, 1);
-						break;
-					
-					case 9:
-						st.giveItems(10381, 1);
-						break;
-				}
-				
-				switch (Rnd.get(10, 17))
-				{
-					case 10:
-						st.giveItems(10397, 1);
-						break;
-					
-					case 11:
-						st.giveItems(10398, 1);
-						break;
-					
-					case 12:
-						st.giveItems(10399, 1);
-						break;
-					
-					case 13:
-						st.giveItems(10400, 1);
-						break;
-					
-					case 14:
-						st.giveItems(10401, 1);
-						break;
-					
-					case 15:
-						st.giveItems(10402, 1);
-						break;
-					
-					case 16:
-						st.giveItems(10403, 1);
-						break;
-					
-					case 17:
-						st.giveItems(10405, 1);
-						break;
-				}
-				
-				switch (Rnd.get(1, 4))
-				{
-					case 1:
-						st.giveItems(5593, 1);
-						break;
-					
-					case 2:
-						st.giveItems(5594, 1);
-						break;
-					
-					case 3:
-						st.giveItems(5595, 1);
-						break;
-					
-					case 4:
-						st.giveItems(9898, 1);
-						break;
-				}
-				
-				htmltext = "greymore_q270_09.htm";
-			}
-			else
-			{
-				htmltext = "greymore_q270_08.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("rags400"))
-		{
-			if (st.getQuestItemsCount(TatteredMonkClothes) >= 400)
-			{
-				st.takeItems(TatteredMonkClothes, 400);
-				
-				switch (Rnd.get(1, 9))
-				{
-					case 1:
-						st.giveItems(10373, 1);
-						break;
-					
-					case 2:
-						st.giveItems(10374, 1);
-						break;
-					
-					case 3:
-						st.giveItems(10375, 1);
-						break;
-					
-					case 4:
-						st.giveItems(10376, 1);
-						break;
-					
-					case 5:
-						st.giveItems(10377, 1);
-						break;
-					
-					case 6:
-						st.giveItems(10378, 1);
-						break;
-					
-					case 7:
-						st.giveItems(10379, 1);
-						break;
-					
-					case 8:
-						st.giveItems(10380, 1);
-						break;
-					
-					case 9:
-						st.giveItems(10381, 1);
-						break;
-				}
-				
-				switch (Rnd.get(10, 17))
-				{
-					case 10:
-						st.giveItems(10397, 1);
-						break;
-					
-					case 11:
-						st.giveItems(10398, 1);
-						break;
-					
-					case 12:
-						st.giveItems(10399, 1);
-						break;
-					
-					case 13:
-						st.giveItems(10400, 1);
-						break;
-					
-					case 14:
-						st.giveItems(10401, 1);
-						break;
-					
-					case 15:
-						st.giveItems(10402, 1);
-						break;
-					
-					case 16:
-						st.giveItems(10403, 1);
-						break;
-					
-					case 17:
-						st.giveItems(10405, 1);
-						break;
-				}
-				
-				switch (Rnd.get(1, 4))
-				{
-					case 1:
-						st.giveItems(5593, 2);
-						break;
-					
-					case 2:
-						st.giveItems(5594, 2);
-						break;
-					
-					case 3:
-						st.giveItems(5595, 2);
-						break;
-					
-					case 4:
-						st.giveItems(9898, 2);
-						break;
-				}
-				
-				htmltext = "greymore_q270_09.htm";
-			}
-			else
-			{
-				htmltext = "greymore_q270_08.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("rags500"))
-		{
-			if (st.getQuestItemsCount(TatteredMonkClothes) >= 500)
-			{
-				st.takeItems(TatteredMonkClothes, 500);
-				
-				switch (Rnd.get(1, 9))
-				{
-					case 1:
-						st.giveItems(10373, 2);
-						break;
-					
-					case 2:
-						st.giveItems(10374, 2);
-						break;
-					
-					case 3:
-						st.giveItems(10375, 2);
-						break;
-					
-					case 4:
-						st.giveItems(10376, 2);
-						break;
-					
-					case 5:
-						st.giveItems(10377, 2);
-						break;
-					
-					case 6:
-						st.giveItems(10378, 2);
-						break;
-					
-					case 7:
-						st.giveItems(10379, 2);
-						break;
-					
-					case 8:
-						st.giveItems(10380, 2);
-						break;
-					
-					case 9:
-						st.giveItems(10381, 2);
-						break;
-				}
-				
-				switch (Rnd.get(10, 17))
-				{
-					case 10:
-						st.giveItems(10397, 2);
-						break;
-					
-					case 11:
-						st.giveItems(10398, 2);
-						break;
-					
-					case 12:
-						st.giveItems(10399, 2);
-						break;
-					
-					case 13:
-						st.giveItems(10400, 2);
-						break;
-					
-					case 14:
-						st.giveItems(10401, 2);
-						break;
-					
-					case 15:
-						st.giveItems(10402, 2);
-						break;
-					
-					case 16:
-						st.giveItems(10403, 2);
-						break;
-					
-					case 17:
-						st.giveItems(10405, 2);
-						break;
-				}
-				
-				switch (Rnd.get(1, 4))
-				{
-					case 1:
-						st.giveItems(5593, 1);
-						break;
-					
-					case 2:
-						st.giveItems(5594, 1);
-						break;
-					
-					case 3:
-						st.giveItems(5595, 1);
-						break;
-					
-					case 4:
-						st.giveItems(9898, 1);
-						break;
-				}
-				
-				htmltext = "greymore_q270_09.htm";
-			}
-			else
-			{
-				htmltext = "greymore_q270_08.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("quit"))
-		{
-			htmltext = "greymore_q270_10.htm";
-			st.exitCurrentQuest(true);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int cond = st.getCond();
-		
-		if (npc.getId() == Greymore)
-		{
-			if (cond == 0)
-			{
-				QuestState qs = st.getPlayer().getQuestState(Q10288_SecretMission.class);
-				
-				if ((st.getPlayer().getLevel() >= 82) && (qs != null) && qs.isCompleted())
-				{
-					htmltext = "greymore_q270_01.htm";
+					htmltext = "greymore_q270_09.htm";
 				}
 				else
 				{
-					htmltext = "greymore_q270_00.htm";
-					st.exitCurrentQuest(true);
+					htmltext = "greymore_q270_08.htm";
 				}
-			}
-			else if (cond == 1)
-			{
-				htmltext = "greymore_q270_04.htm";
-			}
+				break;
+			
+			case "rags200":
+				if (qs.getQuestItemsCount(TatteredMonkClothes) >= 200)
+				{
+					qs.takeItems(TatteredMonkClothes, 200);
+					
+					switch (Rnd.get(1, 17))
+					{
+						case 1:
+							qs.giveItems(10373, 1);
+							break;
+						
+						case 2:
+							qs.giveItems(10374, 1);
+							break;
+						
+						case 3:
+							qs.giveItems(10375, 1);
+							break;
+						
+						case 4:
+							qs.giveItems(10376, 1);
+							break;
+						
+						case 5:
+							qs.giveItems(10377, 1);
+							break;
+						
+						case 6:
+							qs.giveItems(10378, 1);
+							break;
+						
+						case 7:
+							qs.giveItems(10379, 1);
+							break;
+						
+						case 8:
+							qs.giveItems(10380, 1);
+							break;
+						
+						case 9:
+							qs.giveItems(10381, 1);
+							break;
+						
+						case 10:
+							qs.giveItems(10397, 1);
+							break;
+						
+						case 11:
+							qs.giveItems(10398, 1);
+							break;
+						
+						case 12:
+							qs.giveItems(10399, 1);
+							break;
+						
+						case 13:
+							qs.giveItems(10400, 1);
+							break;
+						
+						case 14:
+							qs.giveItems(10401, 1);
+							break;
+						
+						case 15:
+							qs.giveItems(10402, 1);
+							break;
+						
+						case 16:
+							qs.giveItems(10403, 1);
+							break;
+						
+						case 17:
+							qs.giveItems(10405, 1);
+							break;
+					}
+					
+					switch (Rnd.get(1, 4))
+					{
+						case 1:
+							qs.giveItems(5593, 1);
+							break;
+						
+						case 2:
+							qs.giveItems(5594, 1);
+							break;
+						
+						case 3:
+							qs.giveItems(5595, 1);
+							break;
+						
+						case 4:
+							qs.giveItems(9898, 1);
+							break;
+					}
+					
+					htmltext = "greymore_q270_09.htm";
+				}
+				else
+				{
+					htmltext = "greymore_q270_08.htm";
+				}
+				break;
+			
+			case "rags300":
+				if (qs.getQuestItemsCount(TatteredMonkClothes) >= 300)
+				{
+					qs.takeItems(TatteredMonkClothes, 300);
+					
+					switch (Rnd.get(1, 9))
+					{
+						case 1:
+							qs.giveItems(10373, 1);
+							break;
+						
+						case 2:
+							qs.giveItems(10374, 1);
+							break;
+						
+						case 3:
+							qs.giveItems(10375, 1);
+							break;
+						
+						case 4:
+							qs.giveItems(10376, 1);
+							break;
+						
+						case 5:
+							qs.giveItems(10377, 1);
+							break;
+						
+						case 6:
+							qs.giveItems(10378, 1);
+							break;
+						
+						case 7:
+							qs.giveItems(10379, 1);
+							break;
+						
+						case 8:
+							qs.giveItems(10380, 1);
+							break;
+						
+						case 9:
+							qs.giveItems(10381, 1);
+							break;
+					}
+					
+					switch (Rnd.get(10, 17))
+					{
+						case 10:
+							qs.giveItems(10397, 1);
+							break;
+						
+						case 11:
+							qs.giveItems(10398, 1);
+							break;
+						
+						case 12:
+							qs.giveItems(10399, 1);
+							break;
+						
+						case 13:
+							qs.giveItems(10400, 1);
+							break;
+						
+						case 14:
+							qs.giveItems(10401, 1);
+							break;
+						
+						case 15:
+							qs.giveItems(10402, 1);
+							break;
+						
+						case 16:
+							qs.giveItems(10403, 1);
+							break;
+						
+						case 17:
+							qs.giveItems(10405, 1);
+							break;
+					}
+					
+					switch (Rnd.get(1, 4))
+					{
+						case 1:
+							qs.giveItems(5593, 1);
+							break;
+						
+						case 2:
+							qs.giveItems(5594, 1);
+							break;
+						
+						case 3:
+							qs.giveItems(5595, 1);
+							break;
+						
+						case 4:
+							qs.giveItems(9898, 1);
+							break;
+					}
+					
+					htmltext = "greymore_q270_09.htm";
+				}
+				else
+				{
+					htmltext = "greymore_q270_08.htm";
+				}
+				break;
+			
+			case "rags400":
+				if (qs.getQuestItemsCount(TatteredMonkClothes) >= 400)
+				{
+					qs.takeItems(TatteredMonkClothes, 400);
+					
+					switch (Rnd.get(1, 9))
+					{
+						case 1:
+							qs.giveItems(10373, 1);
+							break;
+						
+						case 2:
+							qs.giveItems(10374, 1);
+							break;
+						
+						case 3:
+							qs.giveItems(10375, 1);
+							break;
+						
+						case 4:
+							qs.giveItems(10376, 1);
+							break;
+						
+						case 5:
+							qs.giveItems(10377, 1);
+							break;
+						
+						case 6:
+							qs.giveItems(10378, 1);
+							break;
+						
+						case 7:
+							qs.giveItems(10379, 1);
+							break;
+						
+						case 8:
+							qs.giveItems(10380, 1);
+							break;
+						
+						case 9:
+							qs.giveItems(10381, 1);
+							break;
+					}
+					
+					switch (Rnd.get(10, 17))
+					{
+						case 10:
+							qs.giveItems(10397, 1);
+							break;
+						
+						case 11:
+							qs.giveItems(10398, 1);
+							break;
+						
+						case 12:
+							qs.giveItems(10399, 1);
+							break;
+						
+						case 13:
+							qs.giveItems(10400, 1);
+							break;
+						
+						case 14:
+							qs.giveItems(10401, 1);
+							break;
+						
+						case 15:
+							qs.giveItems(10402, 1);
+							break;
+						
+						case 16:
+							qs.giveItems(10403, 1);
+							break;
+						
+						case 17:
+							qs.giveItems(10405, 1);
+							break;
+					}
+					
+					switch (Rnd.get(1, 4))
+					{
+						case 1:
+							qs.giveItems(5593, 2);
+							break;
+						
+						case 2:
+							qs.giveItems(5594, 2);
+							break;
+						
+						case 3:
+							qs.giveItems(5595, 2);
+							break;
+						
+						case 4:
+							qs.giveItems(9898, 2);
+							break;
+					}
+					
+					htmltext = "greymore_q270_09.htm";
+				}
+				else
+				{
+					htmltext = "greymore_q270_08.htm";
+				}
+				break;
+			
+			case "rags500":
+				if (qs.getQuestItemsCount(TatteredMonkClothes) >= 500)
+				{
+					qs.takeItems(TatteredMonkClothes, 500);
+					
+					switch (Rnd.get(1, 9))
+					{
+						case 1:
+							qs.giveItems(10373, 2);
+							break;
+						
+						case 2:
+							qs.giveItems(10374, 2);
+							break;
+						
+						case 3:
+							qs.giveItems(10375, 2);
+							break;
+						
+						case 4:
+							qs.giveItems(10376, 2);
+							break;
+						
+						case 5:
+							qs.giveItems(10377, 2);
+							break;
+						
+						case 6:
+							qs.giveItems(10378, 2);
+							break;
+						
+						case 7:
+							qs.giveItems(10379, 2);
+							break;
+						
+						case 8:
+							qs.giveItems(10380, 2);
+							break;
+						
+						case 9:
+							qs.giveItems(10381, 2);
+							break;
+					}
+					
+					switch (Rnd.get(10, 17))
+					{
+						case 10:
+							qs.giveItems(10397, 2);
+							break;
+						
+						case 11:
+							qs.giveItems(10398, 2);
+							break;
+						
+						case 12:
+							qs.giveItems(10399, 2);
+							break;
+						
+						case 13:
+							qs.giveItems(10400, 2);
+							break;
+						
+						case 14:
+							qs.giveItems(10401, 2);
+							break;
+						
+						case 15:
+							qs.giveItems(10402, 2);
+							break;
+						
+						case 16:
+							qs.giveItems(10403, 2);
+							break;
+						
+						case 17:
+							qs.giveItems(10405, 2);
+							break;
+					}
+					
+					switch (Rnd.get(1, 4))
+					{
+						case 1:
+							qs.giveItems(5593, 1);
+							break;
+						
+						case 2:
+							qs.giveItems(5594, 1);
+							break;
+						
+						case 3:
+							qs.giveItems(5595, 1);
+							break;
+						
+						case 4:
+							qs.giveItems(9898, 1);
+							break;
+					}
+					
+					htmltext = "greymore_q270_09.htm";
+				}
+				else
+				{
+					htmltext = "greymore_q270_08.htm";
+				}
+				break;
+			
+			case "quit":
+				htmltext = "greymore_q270_10.htm";
+				qs.exitCurrentQuest(true);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
 		
-		if (cond == 1)
+		if (cond == 0)
+		{
+			final QuestState state = qs.getPlayer().getQuestState(Q10288_SecretMission.class);
+			
+			if ((qs.getPlayer().getLevel() >= 82) && (state != null) && state.isCompleted())
+			{
+				htmltext = "greymore_q270_01.htm";
+			}
+			else
+			{
+				htmltext = "greymore_q270_00.htm";
+				qs.exitCurrentQuest(true);
+			}
+		}
+		else if (cond == 1)
+		{
+			htmltext = "greymore_q270_04.htm";
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if (qs.getCond() == 1)
 		{
 			if (Util.contains(LowMobs, npc.getId()) && Rnd.chance(40))
 			{
-				st.giveItems(TatteredMonkClothes, 1, true);
+				qs.giveItems(TatteredMonkClothes, 1, true);
 			}
 			else if (Util.contains(HighMobs, npc.getId()))
 			{
-				st.giveItems(TatteredMonkClothes, 1, true);
+				qs.giveItems(TatteredMonkClothes, 1, true);
 			}
 		}
 		

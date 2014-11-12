@@ -19,25 +19,13 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00238_SuccessFailureOfBusiness extends Quest implements ScriptFile
 {
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
+	// Npc
 	private static final int Helvetica = 32641;
+	// Monsters
 	private static final int BrazierOfPurity = 18806;
 	private static final int EvilSpirit = 22658;
 	private static final int GuardianSpirit = 22659;
+	// Items
 	private static final int VicinityOfTheFieldOfSilenceResearchCenter = 14865;
 	private static final int BrokenPieveOfMagicForce = 14867;
 	private static final int GuardianSpiritFragment = 14868;
@@ -51,106 +39,118 @@ public class Q00238_SuccessFailureOfBusiness extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("32641-03.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-		}
-		
-		if (event.equalsIgnoreCase("32641-06.htm"))
-		{
-			st.takeAllItems(BrokenPieveOfMagicForce);
-			st.setCond(3);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int id = st.getState();
-		int cond = st.getCond();
-		
-		if (npcId == Helvetica)
-		{
-			if (id == CREATED)
-			{
-				if ((st.getPlayer().getLevel() < 82) || !st.getPlayer().isQuestCompleted(Q00237_WindsOfChange.class))
-				{
-					st.exitCurrentQuest(true);
-					htmltext = "32641-00.htm";
-				}
-				else if (st.getQuestItemsCount(VicinityOfTheFieldOfSilenceResearchCenter) == 0)
-				{
-					htmltext = "32641-10.htm";
-				}
-				else
-				{
-					htmltext = "32641-01.htm";
-				}
-			}
-			else if (id == COMPLETED)
-			{
-				htmltext = "32641-09.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "32641-04.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "32641-05.htm";
-			}
-			else if (cond == 3)
-			{
-				htmltext = "32641-07.htm";
-			}
-			else if (cond == 4)
-			{
-				st.takeAllItems(VicinityOfTheFieldOfSilenceResearchCenter);
-				st.takeAllItems(GuardianSpiritFragment);
-				st.giveItems(ADENA_ID, 4498920);
-				st.addExpAndSp(21843270, 25080120);
-				st.setState(COMPLETED);
-				st.exitCurrentQuest(false);
-				htmltext = "32641-08.htm";
-			}
+			case "32641-03.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				break;
+			
+			case "32641-06.htm":
+				qs.takeAllItems(BrokenPieveOfMagicForce);
+				qs.setCond(3);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int id = qs.getState();
+		
+		if (id == CREATED)
+		{
+			if ((qs.getPlayer().getLevel() < 82) || !qs.getPlayer().isQuestCompleted(Q00237_WindsOfChange.class))
+			{
+				qs.exitCurrentQuest(true);
+				htmltext = "32641-00.htm";
+			}
+			else if (qs.getQuestItemsCount(VicinityOfTheFieldOfSilenceResearchCenter) == 0)
+			{
+				htmltext = "32641-10.htm";
+			}
+			else
+			{
+				htmltext = "32641-01.htm";
+			}
+		}
+		else if (id == COMPLETED)
+		{
+			htmltext = "32641-09.htm";
+		}
+		else if (cond == 1)
+		{
+			htmltext = "32641-04.htm";
+		}
+		else if (cond == 2)
+		{
+			htmltext = "32641-05.htm";
+		}
+		else if (cond == 3)
+		{
+			htmltext = "32641-07.htm";
+		}
+		else if (cond == 4)
+		{
+			qs.takeAllItems(VicinityOfTheFieldOfSilenceResearchCenter);
+			qs.takeAllItems(GuardianSpiritFragment);
+			qs.giveItems(ADENA_ID, 4498920);
+			qs.addExpAndSp(21843270, 25080120);
+			qs.setState(COMPLETED);
+			qs.exitCurrentQuest(false);
+			htmltext = "32641-08.htm";
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		final int cond = qs.getCond();
 		
 		if ((cond == 1) && (npc.getId() == BrazierOfPurity))
 		{
-			st.giveItems(BrokenPieveOfMagicForce, 1);
+			qs.giveItems(BrokenPieveOfMagicForce, 1);
 			
-			if (st.getQuestItemsCount(BrokenPieveOfMagicForce) >= 10)
+			if (qs.getQuestItemsCount(BrokenPieveOfMagicForce) >= 10)
 			{
-				st.setCond(2);
+				qs.setCond(2);
 			}
 		}
 		else if ((cond == 3) && ((npc.getId() == EvilSpirit) || (npc.getId() == GuardianSpirit)))
 		{
-			st.giveItems(GuardianSpiritFragment, 1);
+			qs.giveItems(GuardianSpiritFragment, 1);
 			
-			if (st.getQuestItemsCount(GuardianSpiritFragment) >= 20)
+			if (qs.getQuestItemsCount(GuardianSpiritFragment) >= 20)
 			{
-				st.setCond(4);
+				qs.setCond(4);
 			}
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

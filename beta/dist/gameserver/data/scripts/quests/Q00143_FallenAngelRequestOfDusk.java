@@ -20,27 +20,15 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00143_FallenAngelRequestOfDusk extends Quest implements ScriptFile
 {
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
+	// Npcs
 	private final static int NATOOLS = 30894;
 	private final static int TOBIAS = 30297;
 	private final static int CASIAN = 30612;
 	private final static int ROCK = 32368;
 	private final static int ANGEL = 32369;
+	// Monster
 	private final static int MonsterAngel = 27338;
+	// Items
 	private final static int SEALED_PATH = 10354;
 	private final static int PATH = 10355;
 	private final static int EMPTY_CRYSTAL = 10356;
@@ -55,177 +43,195 @@ public class Q00143_FallenAngelRequestOfDusk extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("start"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-			htmltext = "warehouse_chief_natools_q0143_01.htm";
-		}
-		else if (event.equalsIgnoreCase("warehouse_chief_natools_q0143_04.htm"))
-		{
-			st.setCond(2);
-			st.setState(STARTED);
-			st.playSound(SOUND_MIDDLE);
-			st.giveItems(SEALED_PATH, 1);
-		}
-		else if (event.equalsIgnoreCase("master_tobias_q0143_05.htm"))
-		{
-			st.setCond(3);
-			st.setState(STARTED);
-			st.unset("talk");
-			st.playSound(SOUND_MIDDLE);
-			st.giveItems(PATH, 1);
-			st.giveItems(EMPTY_CRYSTAL, 1);
-		}
-		else if (event.equalsIgnoreCase("sage_kasian_q0143_09.htm"))
-		{
-			st.setCond(4);
-			st.setState(STARTED);
-			st.unset("talk");
-			st.giveItems(MEDICINE, 1);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("stained_rock_q0143_05.htm"))
-		{
-			if (GameObjectsStorage.getByNpcId(MonsterAngel) != null)
-			{
-				htmltext = "stained_rock_q0143_03.htm";
-			}
-			else if (GameObjectsStorage.getByNpcId(ANGEL) != null)
-			{
-				htmltext = "stained_rock_q0143_04.htm";
-			}
-			else
-			{
-				st.addSpawn(ANGEL, 180000);
-				st.playSound(SOUND_MIDDLE);
-			}
-		}
-		else if (event.equalsIgnoreCase("q_fallen_angel_npc_q0143_14.htm"))
-		{
-			st.setCond(5);
-			st.setState(STARTED);
-			st.unset("talk");
-			st.takeItems(EMPTY_CRYSTAL, -1);
-			st.giveItems(MESSAGE, 1);
-			st.playSound(SOUND_MIDDLE);
-			NpcInstance n = GameObjectsStorage.getByNpcId(ANGEL);
+			case "start":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				htmltext = "warehouse_chief_natools_q0143_01.htm";
+				break;
 			
-			if (n != null)
-			{
-				n.deleteMe();
-			}
+			case "warehouse_chief_natools_q0143_04.htm":
+				qs.setCond(2);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_MIDDLE);
+				qs.giveItems(SEALED_PATH, 1);
+				break;
+			
+			case "master_tobias_q0143_05.htm":
+				qs.setCond(3);
+				qs.setState(STARTED);
+				qs.unset("talk");
+				qs.playSound(SOUND_MIDDLE);
+				qs.giveItems(PATH, 1);
+				qs.giveItems(EMPTY_CRYSTAL, 1);
+				break;
+			
+			case "sage_kasian_q0143_09.htm":
+				qs.setCond(4);
+				qs.setState(STARTED);
+				qs.unset("talk");
+				qs.giveItems(MEDICINE, 1);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "stained_rock_q0143_05.htm":
+				if (GameObjectsStorage.getByNpcId(MonsterAngel) != null)
+				{
+					htmltext = "stained_rock_q0143_03.htm";
+				}
+				else if (GameObjectsStorage.getByNpcId(ANGEL) != null)
+				{
+					htmltext = "stained_rock_q0143_04.htm";
+				}
+				else
+				{
+					qs.addSpawn(ANGEL, 180000);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
+			
+			case "q_fallen_angel_npc_q0143_14.htm":
+				qs.setCond(5);
+				qs.setState(STARTED);
+				qs.unset("talk");
+				qs.takeItems(EMPTY_CRYSTAL, -1);
+				qs.giveItems(MESSAGE, 1);
+				qs.playSound(SOUND_MIDDLE);
+				NpcInstance n = GameObjectsStorage.getByNpcId(ANGEL);
+				if (n != null)
+				{
+					n.deleteMe();
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
-		int cond = st.getCond();
-		int npcId = npc.getId();
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
 		
-		if (npcId == NATOOLS)
+		switch (npcId)
 		{
-			if ((cond == 1) || (st.isStarted() && (cond == 0)))
-			{
-				htmltext = "warehouse_chief_natools_q0143_01.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "warehouse_chief_natools_q0143_05.htm";
-			}
-		}
-		else if (npcId == TOBIAS)
-		{
-			if (cond == 2)
-			{
-				if (st.getInt("talk") == 1)
+			case NATOOLS:
+				if ((cond == 1) || (qs.isStarted() && (cond == 0)))
 				{
-					htmltext = "master_tobias_q0143_03.htm";
+					htmltext = "warehouse_chief_natools_q0143_01.htm";
+				}
+				else if (cond == 2)
+				{
+					htmltext = "warehouse_chief_natools_q0143_05.htm";
+				}
+				break;
+			
+			case TOBIAS:
+				if (cond == 2)
+				{
+					if (qs.getInt("talk") == 1)
+					{
+						htmltext = "master_tobias_q0143_03.htm";
+					}
+					else
+					{
+						htmltext = "master_tobias_q0143_02.htm";
+						qs.takeItems(SEALED_PATH, -1);
+						qs.set("talk", "1");
+					}
+				}
+				else if (cond == 3)
+				{
+					htmltext = "master_tobias_q0143_06.htm";
+				}
+				else if (cond == 5)
+				{
+					htmltext = "master_tobias_q0143_07.htm";
+					qs.playSound(SOUND_FINISH);
+					qs.giveItems(ADENA_ID, 89046);
+					qs.exitCurrentQuest(false);
+				}
+				break;
+			
+			case CASIAN:
+				if (cond == 3)
+				{
+					if (qs.getInt("talk") == 1)
+					{
+						htmltext = "sage_kasian_q0143_03.htm";
+					}
+					else
+					{
+						htmltext = "sage_kasian_q0143_02.htm";
+						qs.takeItems(PATH, -1);
+						qs.set("talk", "1");
+					}
+				}
+				else if (cond == 4)
+				{
+					htmltext = "sage_kasian_q0143_09.htm";
+				}
+				break;
+			
+			case ROCK:
+				if (cond <= 3)
+				{
+					htmltext = "stained_rock_q0143_01.htm";
+				}
+				else if (cond == 4)
+				{
+					htmltext = "stained_rock_q0143_02.htm";
 				}
 				else
 				{
-					htmltext = "master_tobias_q0143_02.htm";
-					st.takeItems(SEALED_PATH, -1);
-					st.set("talk", "1");
+					htmltext = "stained_rock_q0143_06.htm";
 				}
-			}
-			else if (cond == 3)
-			{
-				htmltext = "master_tobias_q0143_06.htm";
-			}
-			else if (cond == 5)
-			{
-				htmltext = "master_tobias_q0143_07.htm";
-				st.playSound(SOUND_FINISH);
-				st.giveItems(ADENA_ID, 89046);
-				st.exitCurrentQuest(false);
-			}
-		}
-		else if (npcId == CASIAN)
-		{
-			if (cond == 3)
-			{
-				if (st.getInt("talk") == 1)
+				break;
+			
+			case ANGEL:
+				if (cond == 4)
 				{
-					htmltext = "sage_kasian_q0143_03.htm";
+					if (qs.getInt("talk") == 1)
+					{
+						htmltext = "q_fallen_angel_npc_q0143_04.htm";
+					}
+					else
+					{
+						htmltext = "q_fallen_angel_npc_q0143_03.htm";
+						qs.takeItems(MEDICINE, -1);
+						qs.set("talk", "1");
+					}
 				}
-				else
+				else if (cond == 5)
 				{
-					htmltext = "sage_kasian_q0143_02.htm";
-					st.takeItems(PATH, -1);
-					st.set("talk", "1");
+					htmltext = "q_fallen_angel_npc_q0143_14.htm";
 				}
-			}
-			else if (cond == 4)
-			{
-				htmltext = "sage_kasian_q0143_09.htm";
-			}
-		}
-		else if (npcId == ROCK)
-		{
-			if (cond <= 3)
-			{
-				htmltext = "stained_rock_q0143_01.htm";
-			}
-			else if (cond == 4)
-			{
-				htmltext = "stained_rock_q0143_02.htm";
-			}
-			else
-			{
-				htmltext = "stained_rock_q0143_06.htm";
-			}
-		}
-		else if (npcId == ANGEL)
-		{
-			if (cond == 4)
-			{
-				if (st.getInt("talk") == 1)
-				{
-					htmltext = "q_fallen_angel_npc_q0143_04.htm";
-				}
-				else
-				{
-					htmltext = "q_fallen_angel_npc_q0143_03.htm";
-					st.takeItems(MEDICINE, -1);
-					st.set("talk", "1");
-				}
-			}
-		}
-		else if (cond == 5)
-		{
-			htmltext = "q_fallen_angel_npc_q0143_14.htm";
+				break;
 		}
 		
 		return htmltext;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }
