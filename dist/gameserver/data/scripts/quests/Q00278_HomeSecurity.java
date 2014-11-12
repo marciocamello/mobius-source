@@ -17,16 +17,18 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
-import lineage2.gameserver.utils.Util;
 
 public class Q00278_HomeSecurity extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int Tunatun = 31537;
+	// Monsters
 	private static final int[] FarmMonsters =
 	{
 		18905,
 		18906
 	};
+	// Item
 	private static final int SelMahumMane = 15531;
 	
 	public Q00278_HomeSecurity()
@@ -38,135 +40,130 @@ public class Q00278_HomeSecurity extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("tunatun_q278_03.htm"))
+		if (event.equals("tunatun_q278_03.htm"))
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
+			qs.setState(STARTED);
+			qs.setCond(1);
+			qs.playSound(SOUND_ACCEPT);
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
 		
-		if (npcId == Tunatun)
+		switch (cond)
 		{
-			if (cond == 0)
-			{
-				if (st.getPlayer().getLevel() >= 82)
+			case 0:
+				if (qs.getPlayer().getLevel() >= 82)
 				{
 					htmltext = "tunatun_q278_01.htm";
 				}
 				else
 				{
 					htmltext = "tunatun_q278_00.htm";
-					st.exitCurrentQuest(true);
+					qs.exitCurrentQuest(true);
 				}
-			}
-			else if (cond == 1)
-			{
+				break;
+			
+			case 1:
 				htmltext = "tunatun_q278_04.htm";
-			}
-			else if (cond == 2)
-			{
-				if (st.getQuestItemsCount(SelMahumMane) >= 300)
+				break;
+			
+			case 2:
+				if (qs.getQuestItemsCount(SelMahumMane) >= 300)
 				{
 					htmltext = "tunatun_q278_05.htm";
-					st.takeAllItems(SelMahumMane);
+					qs.takeAllItems(SelMahumMane);
 					
 					switch (Rnd.get(1, 13))
 					{
 						case 1:
-							st.giveItems(960, 1);
+							qs.giveItems(960, 1);
 							break;
 						
 						case 2:
-							st.giveItems(960, 2);
+							qs.giveItems(960, 2);
 							break;
 						
 						case 3:
-							st.giveItems(960, 3);
+							qs.giveItems(960, 3);
 							break;
 						
 						case 4:
-							st.giveItems(960, 4);
+							qs.giveItems(960, 4);
 							break;
 						
 						case 5:
-							st.giveItems(960, 5);
+							qs.giveItems(960, 5);
 							break;
 						
 						case 6:
-							st.giveItems(960, 6);
+							qs.giveItems(960, 6);
 							break;
 						
 						case 7:
-							st.giveItems(960, 7);
+							qs.giveItems(960, 7);
 							break;
 						
 						case 8:
-							st.giveItems(960, 8);
+							qs.giveItems(960, 8);
 							break;
 						
 						case 9:
-							st.giveItems(960, 9);
+							qs.giveItems(960, 9);
 							break;
 						
 						case 10:
-							st.giveItems(960, 10);
+							qs.giveItems(960, 10);
 							break;
 						
 						case 11:
-							st.giveItems(9553, 1);
+							qs.giveItems(9553, 1);
 							break;
 						
 						case 12:
-							st.giveItems(9553, 2);
+							qs.giveItems(9553, 2);
 							break;
 						
 						case 13:
-							st.giveItems(959, 1);
+							qs.giveItems(959, 1);
 							break;
 					}
 					
-					st.playSound(SOUND_FINISH);
-					st.exitCurrentQuest(true);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(true);
 				}
 				else
 				{
 					htmltext = "tunatun_q278_04.htm";
 				}
-			}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (cond == 1)
+		if (qs.getCond() == 1)
 		{
-			if (Util.contains(FarmMonsters, npcId) && (st.getQuestItemsCount(SelMahumMane) < 300))
+			if (qs.getQuestItemsCount(SelMahumMane) < 300)
 			{
-				st.giveItems(SelMahumMane, 1, true);
+				qs.giveItems(SelMahumMane, 1, true);
 				
-				if (st.getQuestItemsCount(SelMahumMane) >= 300)
+				if (qs.getQuestItemsCount(SelMahumMane) >= 300)
 				{
-					st.setCond(2);
+					qs.setCond(2);
 				}
 			}
 		}

@@ -21,11 +21,13 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00192_SevenSignsSeriesOfDoubt extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int CROOP = 30676;
 	private static final int HECTOR = 30197;
 	private static final int STAN = 30200;
 	private static final int CORPSE = 32568;
 	private static final int HOLLINT = 30191;
+	// Items
 	private static final int CROOP_INTRO = 13813;
 	private static final int JACOB_NECK = 13814;
 	private static final int CROOP_LETTER = 13815;
@@ -39,151 +41,152 @@ public class Q00192_SevenSignsSeriesOfDoubt extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		Player player = st.getPlayer();
+		final Player player = qs.getPlayer();
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("30676-03.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("8"))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-			player.showQuestMovie(ExStartScenePlayer.SCENE_SSQ_SUSPICIOUS_DEATH);
-			return "";
-		}
-		else if (event.equalsIgnoreCase("30197-03.htm"))
-		{
-			st.setCond(4);
-			st.takeItems(CROOP_INTRO, 1);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("30200-04.htm"))
-		{
-			st.setCond(5);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("32568-02.htm"))
-		{
-			st.setCond(6);
-			st.giveItems(JACOB_NECK, 1);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("30676-12.htm"))
-		{
-			st.setCond(7);
-			st.takeItems(JACOB_NECK, 1);
-			st.giveItems(CROOP_LETTER, 1);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("30191-03.htm"))
-		{
-			if (player.getLevel() < 79)
-			{
-				htmltext = "<html><body>Only characters who are <font color=\"LEVEL\">level 79</font> or higher may complete this quest.</body></html>";
-			}
-			else if (player.getBaseClassId() == player.getActiveClassId())
-			{
-				st.addExpAndSp(10000000, 2500000);
-				st.setState(COMPLETED);
-				st.exitCurrentQuest(false);
-				st.playSound(SOUND_FINISH);
-			}
-			else
-			{
-				return "subclass_forbidden.htm";
-			}
+			case "30676-03.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "8":
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				player.showQuestMovie(ExStartScenePlayer.SCENE_SSQ_SUSPICIOUS_DEATH);
+				return "";
+				
+			case "30197-03.htm":
+				qs.setCond(4);
+				qs.takeItems(CROOP_INTRO, 1);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "30200-04.htm":
+				qs.setCond(5);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "32568-02.htm":
+				qs.setCond(6);
+				qs.giveItems(JACOB_NECK, 1);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "30676-12.htm":
+				qs.setCond(7);
+				qs.takeItems(JACOB_NECK, 1);
+				qs.giveItems(CROOP_LETTER, 1);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "30191-03.htm":
+				if (player.getLevel() < 79)
+				{
+					htmltext = "<html><body>Only characters who are <font color=\"LEVEL\">level 79</font> or higher may complete this quest.</body></html>";
+				}
+				else if (player.getBaseClassId() == player.getActiveClassId())
+				{
+					qs.addExpAndSp(10000000, 2500000);
+					qs.setState(COMPLETED);
+					qs.exitCurrentQuest(false);
+					qs.playSound(SOUND_FINISH);
+				}
+				else
+				{
+					return "subclass_forbidden.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		int id = st.getState();
-		Player player = st.getPlayer();
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		final int id = qs.getState();
+		final Player player = qs.getPlayer();
 		
-		if (npcId == CROOP)
+		switch (npcId)
 		{
-			if ((id == CREATED) && (player.getLevel() >= 79))
-			{
-				htmltext = "30676-01.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "30676-04.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "30676-05.htm";
-				st.setCond(3);
-				st.playSound(SOUND_MIDDLE);
-				st.giveItems(CROOP_INTRO, 1);
-			}
-			else if ((cond >= 3) && (cond <= 5))
-			{
-				htmltext = "30676-06.htm";
-			}
-			else if (cond == 6)
-			{
-				htmltext = "30676-07.htm";
-			}
-			else if (id == COMPLETED)
-			{
-				htmltext = "30676-13.htm";
-			}
-			else if (player.getLevel() < 79)
-			{
-				htmltext = "30676-00.htm";
-				st.exitCurrentQuest(true);
-			}
-		}
-		else if (npcId == HECTOR)
-		{
-			if (cond == 3)
-			{
-				htmltext = "30197-01.htm";
-			}
+			case CROOP:
+				if ((id == CREATED) && (player.getLevel() >= 79))
+				{
+					htmltext = "30676-01.htm";
+				}
+				else if (cond == 1)
+				{
+					htmltext = "30676-04.htm";
+				}
+				else if (cond == 2)
+				{
+					htmltext = "30676-05.htm";
+					qs.setCond(3);
+					qs.playSound(SOUND_MIDDLE);
+					qs.giveItems(CROOP_INTRO, 1);
+				}
+				else if ((cond >= 3) && (cond <= 5))
+				{
+					htmltext = "30676-06.htm";
+				}
+				else if (cond == 6)
+				{
+					htmltext = "30676-07.htm";
+				}
+				else if (id == COMPLETED)
+				{
+					htmltext = "30676-13.htm";
+				}
+				else if (player.getLevel() < 79)
+				{
+					htmltext = "30676-00.htm";
+					qs.exitCurrentQuest(true);
+				}
+				break;
 			
-			if ((cond >= 4) && (cond <= 7))
-			{
-				htmltext = "30197-04.htm";
-			}
-		}
-		else if (npcId == STAN)
-		{
-			if (cond == 4)
-			{
-				htmltext = "30200-01.htm";
-			}
+			case HECTOR:
+				if (cond == 3)
+				{
+					htmltext = "30197-01.htm";
+				}
+				if ((cond >= 4) && (cond <= 7))
+				{
+					htmltext = "30197-04.htm";
+				}
+				break;
 			
-			if ((cond >= 5) && (cond <= 7))
-			{
-				htmltext = "30200-05.htm";
-			}
-		}
-		else if (npcId == CORPSE)
-		{
-			if (cond == 5)
-			{
-				htmltext = "32568-01.htm";
-			}
-		}
-		else if (npcId == HOLLINT)
-		{
-			if (cond == 7)
-			{
-				htmltext = "30191-01.htm";
-			}
+			case STAN:
+				if (cond == 4)
+				{
+					htmltext = "30200-01.htm";
+				}
+				if ((cond >= 5) && (cond <= 7))
+				{
+					htmltext = "30200-05.htm";
+				}
+				break;
+			
+			case CORPSE:
+				if (cond == 5)
+				{
+					htmltext = "32568-01.htm";
+				}
+				break;
+			
+			case HOLLINT:
+				if (cond == 7)
+				{
+					htmltext = "30191-01.htm";
+				}
+				break;
 		}
 		
 		return htmltext;

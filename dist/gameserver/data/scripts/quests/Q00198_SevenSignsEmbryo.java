@@ -26,14 +26,18 @@ import lineage2.gameserver.utils.ReflectionUtils;
 
 public class Q00198_SevenSignsEmbryo extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int Wood = 32593;
 	private static final int Franz = 32597;
 	private static final int Jaina = 32582;
+	// Monster
 	private static final int ShilensEvilThoughtsCapt = 27346;
+	// Items
 	private static final int PieceOfDoubt = 14355;
 	private static final int DawnsBracelet = 15312;
 	private static final int Adena = 57;
-	private static final int izId = 113;
+	// Others
+	private static final int instanceId = 113;
 	final Location setcloc = new Location(-23734, -9184, -5384, 0);
 	
 	public Q00198_SevenSignsEmbryo()
@@ -46,147 +50,142 @@ public class Q00198_SevenSignsEmbryo extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		Player player = st.getPlayer();
 		String htmltext = event;
+		final Player player = qs.getPlayer();
 		
-		if (event.equalsIgnoreCase("wood_q198_2.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("wood_q198_3.htm"))
-		{
-			enterInstance(player);
+			case "wood_q198_2.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
 			
-			if (st.get("embryo") != null)
-			{
-				st.unset("embryo");
-			}
-		}
-		else if (event.equalsIgnoreCase("franz_q198_3.htm"))
-		{
-			NpcInstance embryo = player.getReflection().addSpawnWithoutRespawn(ShilensEvilThoughtsCapt, setcloc, 0);
-			st.set("embryo", 1);
-			Functions.npcSay(npc, player.getName() + "! You should kill this monster! I'll try to help!");
-			Functions.npcSay(embryo, "This is not yours.");
-			embryo.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, player, 500);
-		}
-		else if (event.equalsIgnoreCase("wood_q198_8.htm"))
-		{
-			enterInstance(player);
-		}
-		else if (event.equalsIgnoreCase("franz_q198_5.htm"))
-		{
-			Functions.npcSay(npc, "We will be with you always...");
-			st.takeItems(PieceOfDoubt, -1);
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("jaina_q198_2.htm"))
-		{
-			player.getReflection().collapse();
+			case "wood_q198_3.htm":
+				enterInstance(player);
+				if (qs.get("embryo") != null)
+				{
+					qs.unset("embryo");
+				}
+				break;
+			
+			case "franz_q198_3.htm":
+				NpcInstance embryo = player.getReflection().addSpawnWithoutRespawn(ShilensEvilThoughtsCapt, setcloc, 0);
+				qs.set("embryo", 1);
+				Functions.npcSay(npc, player.getName() + "! You should kill this monster! I'll try to help!");
+				Functions.npcSay(embryo, "This is not yours.");
+				embryo.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, player, 500);
+				break;
+			
+			case "wood_q198_8.htm":
+				enterInstance(player);
+				break;
+			
+			case "franz_q198_5.htm":
+				Functions.npcSay(npc, "We will be with you always...");
+				qs.takeItems(PieceOfDoubt, -1);
+				qs.setCond(3);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "jaina_q198_2.htm":
+				player.getReflection().collapse();
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		Player player = st.getPlayer();
-		String htmltext = "noquest";
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int npcId = npc.getId();
+		final int cond = qs.getCond();
+		final Player player = qs.getPlayer();
 		
-		if (npcId == Wood)
+		switch (npcId)
 		{
-			QuestState qs = player.getQuestState(Q00197_SevenSignsTheSacredBookOfSeal.class);
+			case Wood:
+				final QuestState state = player.getQuestState(Q00197_SevenSignsTheSacredBookOfSeal.class);
+				if (cond == 0)
+				{
+					if ((player.getLevel() >= 79) && (state != null) && state.isCompleted())
+					{
+						htmltext = "wood_q198_1.htm";
+					}
+					else
+					{
+						htmltext = "wood_q198_0.htm";
+						qs.exitCurrentQuest(true);
+					}
+				}
+				else if ((cond == 1) || (cond == 2))
+				{
+					htmltext = "wood_q198_2a.htm";
+				}
+				else if (cond == 3)
+				{
+					if (player.getBaseClassId() == player.getActiveClassId())
+					{
+						qs.addExpAndSp(67500000, 15000000);
+						qs.giveItems(DawnsBracelet, 1);
+						qs.giveItems(Adena, 1500000);
+						qs.setState(COMPLETED);
+						qs.playSound(SOUND_FINISH);
+						qs.exitCurrentQuest(false);
+						htmltext = "wood_q198_4.htm";
+					}
+					else
+					{
+						htmltext = "subclass_forbidden.htm";
+					}
+				}
+				break;
 			
-			if (cond == 0)
-			{
-				if ((player.getLevel() >= 79) && (qs != null) && qs.isCompleted())
+			case Franz:
+				if (cond == 1)
 				{
-					htmltext = "wood_q198_1.htm";
+					if ((qs.get("embryo") == null) || (Integer.parseInt(qs.get("embryo")) != 1))
+					{
+						htmltext = "franz_q198_1.htm";
+					}
+					else
+					{
+						htmltext = "franz_q198_3a.htm";
+					}
+				}
+				else if (cond == 2)
+				{
+					htmltext = "franz_q198_4.htm";
 				}
 				else
 				{
-					htmltext = "wood_q198_0.htm";
-					st.exitCurrentQuest(true);
+					htmltext = "franz_q198_6.htm";
 				}
-			}
-			else if ((cond == 1) || (cond == 2))
-			{
-				htmltext = "wood_q198_2a.htm";
-			}
-			else if (cond == 3)
-			{
-				if (player.getBaseClassId() == player.getActiveClassId())
-				{
-					st.addExpAndSp(67500000, 15000000);
-					st.giveItems(DawnsBracelet, 1);
-					st.giveItems(Adena, 1500000);
-					st.setState(COMPLETED);
-					st.playSound(SOUND_FINISH);
-					st.exitCurrentQuest(false);
-					htmltext = "wood_q198_4.htm";
-				}
-				else
-				{
-					htmltext = "subclass_forbidden.htm";
-				}
-			}
-		}
-		else if (npcId == Franz)
-		{
-			if (cond == 1)
-			{
-				if ((st.get("embryo") == null) || (Integer.parseInt(st.get("embryo")) != 1))
-				{
-					htmltext = "franz_q198_1.htm";
-				}
-				else
-				{
-					htmltext = "franz_q198_3a.htm";
-				}
-			}
-			else if (cond == 2)
-			{
-				htmltext = "franz_q198_4.htm";
-			}
-			else
-			{
-				htmltext = "franz_q198_6.htm";
-			}
-		}
-		else if (npcId == Jaina)
-		{
-			htmltext = "jaina_q198_1.htm";
+				break;
+			
+			case Jaina:
+				htmltext = "jaina_q198_1.htm";
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		Player player = st.getPlayer();
+		final Player player = qs.getPlayer();
 		
-		if (player == null)
-		{
-			return null;
-		}
-		
-		if ((npcId == ShilensEvilThoughtsCapt) && (cond == 1))
+		if (qs.getCond() == 1)
 		{
 			Functions.npcSay(npc, player.getName() + ", I'm leaving now. But we shall meet again!");
-			st.set("embryo", 2);
-			st.setCond(2);
-			st.giveItems(PieceOfDoubt, 1);
+			qs.set("embryo", 2);
+			qs.setCond(2);
+			qs.giveItems(PieceOfDoubt, 1);
 			player.showQuestMovie(ExStartScenePlayer.SCENE_SSQ_EMBRYO);
 		}
 		
@@ -195,18 +194,18 @@ public class Q00198_SevenSignsEmbryo extends Quest implements ScriptFile
 	
 	private void enterInstance(Player player)
 	{
-		Reflection r = player.getActiveReflection();
+		final Reflection r = player.getActiveReflection();
 		
 		if (r != null)
 		{
-			if (player.canReenterInstance(izId))
+			if (player.canReenterInstance(instanceId))
 			{
 				player.teleToLocation(r.getTeleportLoc(), r);
 			}
 		}
-		else if (player.canEnterInstance(izId))
+		else if (player.canEnterInstance(instanceId))
 		{
-			ReflectionUtils.enterReflection(player, izId);
+			ReflectionUtils.enterReflection(player, instanceId);
 		}
 	}
 	

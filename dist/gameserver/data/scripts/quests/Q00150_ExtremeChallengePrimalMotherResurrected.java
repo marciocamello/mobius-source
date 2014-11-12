@@ -21,107 +21,107 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00150_ExtremeChallengePrimalMotherResurrected extends Quest implements ScriptFile
 {
-	private static final int _Rumiese = 33293;
-	private static final int _IstinaHard = 29196;
-	private static final int _topShilensMark = 17590;
-	private static final int _IstinaSoul = 34883;
+	// Npc
+	private static final int Rumiese = 33293;
+	// Monster
+	private static final int IstinaHard = 29196;
+	// Items
+	private static final int topShilensMark = 17590;
+	private static final int IstinaSoul = 34883;
 	
 	public Q00150_ExtremeChallengePrimalMotherResurrected()
 	{
 		super(false);
-		addStartNpc(_Rumiese);
-		addTalkId(_Rumiese);
-		addKillId(_IstinaHard);
-		addQuestItem(_topShilensMark);
+		addStartNpc(Rumiese);
+		addTalkId(Rumiese);
+		addKillId(IstinaHard);
+		addQuestItem(topShilensMark);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("33293-06.htm"))
+		if (event.equals("33293-06.htm"))
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.playSound(SOUND_ACCEPT);
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		Player player = st.getPlayer();
-		String htmlText = NO_QUEST_DIALOG;
-		int cond = st.getCond();
-		int id = st.getState();
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final Player player = qs.getPlayer();
 		
 		if (cond == 0)
 		{
 			if (player.getLevel() < 97)
 			{
-				st.exitCurrentQuest(true);
-				htmlText = "33293-02";
+				qs.exitCurrentQuest(true);
+				htmltext = "33293-02";
 			}
 			QuestState Rumiese = player.getQuestState(Q00149_PrimalMotherIstina.class);
-			if ((id == CREATED) && (Rumiese != null) && (Rumiese.getState() != COMPLETED))
+			if ((qs.getState() == CREATED) && (Rumiese != null) && (Rumiese.getState() != COMPLETED))
 			{
-				st.exitCurrentQuest(true);
-				htmlText = "33293-02.htm";
+				qs.exitCurrentQuest(true);
+				htmltext = "33293-02.htm";
 			}
 			else
 			{
-				htmlText = "33293-01.htm";
+				htmltext = "33293-01.htm";
 			}
 		}
+		else if (cond == 1)
+		{
+			htmltext = "33293-07.htm";
+		}
+		else if ((cond == 2) || (qs.getQuestItemsCount(topShilensMark) >= 1))
+		{
+			htmltext = "33293-08.htm";
+			qs.giveItems(IstinaSoul, 1);
+			qs.setState(COMPLETED);
+			qs.playSound(SOUND_FINISH);
+			qs.exitCurrentQuest(false);
+		}
 		
-		if (cond == 1)
-		{
-			htmlText = "33293-07.htm";
-		}
-		else if ((cond == 2) || (st.getQuestItemsCount(_topShilensMark) >= 1))
-		{
-			htmlText = "33293-08.htm";
-			st.giveItems(_IstinaSoul, 1);
-			st.setState(COMPLETED);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(false);
-		}
-		return htmlText;
+		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		Party party = st.getPlayer().getParty();
-		if (cond == 1)
+		final Party party = qs.getPlayer().getParty();
+		
+		if (qs.getCond() == 1)
 		{
-			if (npc.getId() == _IstinaHard)
+			if (party == null)
 			{
-				if (party == null)
+				qs.setCond(2);
+				qs.giveItems(topShilensMark, 1);
+				qs.playSound(SOUND_MIDDLE);
+			}
+			else
+			{
+				for (Player pmember : party.getPartyMembers())
 				{
-					st.setCond(2);
-					st.giveItems(_topShilensMark, 1);
-					st.playSound(SOUND_MIDDLE);
-				}
-				else
-				{
-					for (Player pmember : party.getPartyMembers())
+					final QuestState pst = pmember.getQuestState(Q00149_PrimalMotherIstina.class);
+					if ((pst != null) && (pst.getCond() == 1))
 					{
-						QuestState pst = pmember.getQuestState(Q00149_PrimalMotherIstina.class);
-						if ((pst != null) && (pst.getCond() == 1))
-						{
-							pst.setCond(2);
-							pst.giveItems(_topShilensMark, 1);
-							pst.playSound("SOUND_MIDDLE");
-						}
+						pst.setCond(2);
+						pst.giveItems(topShilensMark, 1);
+						pst.playSound("SOUND_MIDDLE");
 					}
 				}
 			}
 		}
+		
 		return null;
 	}
 	

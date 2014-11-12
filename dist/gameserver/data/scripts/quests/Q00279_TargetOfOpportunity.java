@@ -20,11 +20,14 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00279_TargetOfOpportunity extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int Jerian = 32302;
+	// Monsters
 	private static final int CosmicScout = 22373;
 	private static final int CosmicWatcher = 22374;
 	private static final int CosmicPriest = 22375;
 	private static final int CosmicLord = 22376;
+	// Items
 	private static final int SealComponentsPart1 = 15517;
 	private static final int SealComponentsPart2 = 15518;
 	private static final int SealComponentsPart3 = 15519;
@@ -39,90 +42,100 @@ public class Q00279_TargetOfOpportunity extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("jerian_q279_04.htm"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("jerian_q279_07.htm"))
-		{
-			st.takeAllItems(SealComponentsPart1, SealComponentsPart2, SealComponentsPart3, SealComponentsPart4);
-			st.giveItems(15515, 1);
-			st.giveItems(15516, 1);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(true);
+			case "jerian_q279_04.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "jerian_q279_07.htm":
+				qs.takeAllItems(SealComponentsPart1, SealComponentsPart2, SealComponentsPart3, SealComponentsPart4);
+				qs.giveItems(15515, 1);
+				qs.giveItems(15516, 1);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(true);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
 		
-		if (npcId == Jerian)
+		switch (qs.getCond())
 		{
-			if (cond == 0)
-			{
-				if (st.getPlayer().getLevel() >= 82)
+			case 0:
+				if (qs.getPlayer().getLevel() >= 82)
 				{
 					htmltext = "jerian_q279_01.htm";
 				}
 				else
 				{
 					htmltext = "jerian_q279_00.htm";
-					st.exitCurrentQuest(true);
+					qs.exitCurrentQuest(true);
 				}
-			}
-			else if (cond == 1)
-			{
+				break;
+			
+			case 1:
 				htmltext = "jerian_q279_05.htm";
-			}
-			else if (cond == 2)
-			{
+				break;
+			
+			case 2:
 				htmltext = "jerian_q279_06.htm";
-			}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (cond == 1)
+		if ((qs.getCond() == 1) && Rnd.chance(15))
 		{
-			if ((npcId == CosmicScout) && (st.getQuestItemsCount(SealComponentsPart1) < 1) && Rnd.chance(15))
+			switch (npc.getId())
 			{
-				st.giveItems(SealComponentsPart1, 1);
-			}
-			else if ((npcId == CosmicWatcher) && (st.getQuestItemsCount(SealComponentsPart2) < 1) && Rnd.chance(15))
-			{
-				st.giveItems(SealComponentsPart2, 1);
-			}
-			else if ((npcId == CosmicPriest) && (st.getQuestItemsCount(SealComponentsPart3) < 1) && Rnd.chance(15))
-			{
-				st.giveItems(SealComponentsPart3, 1);
-			}
-			else if ((npcId == CosmicLord) && (st.getQuestItemsCount(SealComponentsPart4) < 1) && Rnd.chance(15))
-			{
-				st.giveItems(SealComponentsPart4, 1);
+				case CosmicScout:
+					if (qs.getQuestItemsCount(SealComponentsPart1) < 1)
+					{
+						qs.giveItems(SealComponentsPart1, 1);
+					}
+					break;
+				
+				case CosmicWatcher:
+					if (qs.getQuestItemsCount(SealComponentsPart2) < 1)
+					{
+						qs.giveItems(SealComponentsPart2, 1);
+					}
+					break;
+				
+				case CosmicPriest:
+					if (qs.getQuestItemsCount(SealComponentsPart3) < 1)
+					{
+						qs.giveItems(SealComponentsPart3, 1);
+					}
+					break;
+				
+				case CosmicLord:
+					if (qs.getQuestItemsCount(SealComponentsPart4) < 1)
+					{
+						qs.giveItems(SealComponentsPart4, 1);
+					}
+					break;
 			}
 			
-			if ((st.getQuestItemsCount(SealComponentsPart1) >= 1) && (st.getQuestItemsCount(SealComponentsPart2) >= 1) && (st.getQuestItemsCount(SealComponentsPart3) >= 1) && (st.getQuestItemsCount(SealComponentsPart4) >= 1))
+			if ((qs.getQuestItemsCount(SealComponentsPart1) >= 1) && (qs.getQuestItemsCount(SealComponentsPart2) >= 1) && (qs.getQuestItemsCount(SealComponentsPart3) >= 1) && (qs.getQuestItemsCount(SealComponentsPart4) >= 1))
 			{
-				st.setCond(2);
+				qs.setCond(2);
 			}
 		}
 		

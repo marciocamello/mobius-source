@@ -21,101 +21,104 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00149_PrimalMotherIstina extends Quest implements ScriptFile
 {
-	private static final int _Rumiese = 33293;
-	private static final int _Istina = 29195;
-	private static final int _ShilensMark = 17589;
-	private static final int _IstinasBracelet = 19455;
-	private static final int _EnchantScrollArmor = 17527;
+	// Npc
+	private static final int Rumiese = 33293;
+	// Monster
+	private static final int Istina = 29195;
+	// Items
+	private static final int ShilensMark = 17589;
+	private static final int IstinasBracelet = 19455;
+	private static final int EnchantScrollArmor = 17527;
 	
 	public Q00149_PrimalMotherIstina()
 	{
 		super(false);
-		addStartNpc(_Rumiese);
-		addTalkId(_Rumiese);
-		addKillId(_Istina);
-		addQuestItem(_ShilensMark);
+		addStartNpc(Rumiese);
+		addTalkId(Rumiese);
+		addKillId(Istina);
+		addQuestItem(ShilensMark);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("33293-06.htm"))
+		if (event.equals("33293-06.htm"))
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.playSound(SOUND_ACCEPT);
 		}
+		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		Player player = st.getPlayer();
-		String htmlText = NO_QUEST_DIALOG;
-		int cond = st.getCond();
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final Player player = qs.getPlayer();
 		
 		if (cond == 0)
 		{
 			if (player.getLevel() < 90)
 			{
-				htmlText = "33293-02.htm";
-				st.exitCurrentQuest(true);
+				htmltext = "33293-02.htm";
+				qs.exitCurrentQuest(true);
 			}
 			else
 			{
-				htmlText = "33293-01.htm";
+				htmltext = "33293-01.htm";
 			}
 		}
-		if (cond == 1)
+		else if (cond == 1)
 		{
-			htmlText = "33293-07.htm";
+			htmltext = "33293-07.htm";
 		}
-		else if ((cond == 2) || (st.getQuestItemsCount(_ShilensMark) >= 1))
+		else if ((cond == 2) || (qs.getQuestItemsCount(ShilensMark) >= 1))
 		{
-			htmlText = "33293-08.htm";
-			st.addExpAndSp(833065000, 368800464);
-			st.giveItems(_IstinasBracelet, 1);
-			st.giveItems(_EnchantScrollArmor, 10);
-			st.setState(COMPLETED);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(false);
+			htmltext = "33293-08.htm";
+			qs.addExpAndSp(833065000, 368800464);
+			qs.giveItems(IstinasBracelet, 1);
+			qs.giveItems(EnchantScrollArmor, 10);
+			qs.setState(COMPLETED);
+			qs.playSound(SOUND_FINISH);
+			qs.exitCurrentQuest(false);
 		}
-		return htmlText;
+		
+		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		Party party = st.getPlayer().getParty();
-		if (cond == 1)
+		final Party party = qs.getPlayer().getParty();
+		
+		if (qs.getCond() == 1)
 		{
-			if (npc.getId() == _Istina)
+			if (party == null)
 			{
-				if (party == null)
+				qs.setCond(2);
+				qs.giveItems(ShilensMark, 1);
+				qs.playSound(SOUND_MIDDLE);
+			}
+			else
+			{
+				for (Player pmember : party.getPartyMembers())
 				{
-					st.setCond(2);
-					st.giveItems(_ShilensMark, 1);
-					st.playSound(SOUND_MIDDLE);
-				}
-				else
-				{
-					for (Player pmember : party.getPartyMembers())
+					final QuestState pst = pmember.getQuestState(Q00149_PrimalMotherIstina.class);
+					if ((pst != null) && (pst.getCond() == 1))
 					{
-						QuestState pst = pmember.getQuestState(Q00149_PrimalMotherIstina.class);
-						if ((pst != null) && (pst.getCond() == 1))
-						{
-							pst.setCond(2);
-							pst.giveItems(_ShilensMark, 1);
-							pst.playSound("SOUND_MIDDLE");
-						}
+						pst.setCond(2);
+						pst.giveItems(ShilensMark, 1);
+						pst.playSound("SOUND_MIDDLE");
 					}
 				}
 			}
 		}
+		
 		return null;
 	}
 	
