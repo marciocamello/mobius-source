@@ -167,171 +167,164 @@ public class Q00458_PerfectForm extends Quest implements ScriptFile
 	public Q00458_PerfectForm()
 	{
 		super(false);
+		addStartNpc(Kelleyia);
 		addKillNpcWithLog(1, KOOKABURA_VAR, COUNT, GrownKookabura);
 		addKillNpcWithLog(1, COUGAR_VAR, COUNT, GrownCougar);
 		addKillNpcWithLog(1, BUFFALO_VAR, COUNT, GrownBuffalo);
 		addKillNpcWithLog(1, GRENDEL_VAR, COUNT, GrownGrendel);
-		addStartNpc(Kelleyia);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("kelleyia_q458_05.htm"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("request_1stresults"))
-		{
-			switch (st.getInt("normaloverhits"))
-			{
-				case 1:
-					htmltext = "kelleyia_q458_08a.htm";
-					break;
-				
-				case 2:
-					htmltext = "kelleyia_q458_08b.htm";
-					break;
-				
-				case 3:
-					htmltext = "kelleyia_q458_08c.htm";
-					break;
-			}
-		}
-		else if (event.equalsIgnoreCase("request_2ndresults"))
-		{
-			switch (st.getInt("critoverhits"))
-			{
-				case 1:
-					htmltext = "kelleyia_q458_09a.htm";
-					break;
-				
-				case 2:
-					htmltext = "kelleyia_q458_09b.htm";
-					break;
-				
-				case 3:
-					htmltext = "kelleyia_q458_09c.htm";
-					break;
-			}
-		}
-		else if (event.equalsIgnoreCase("request_3rdresults"))
-		{
-			switch (st.getInt("contoverhits"))
-			{
-				case 1:
-					htmltext = "kelleyia_q458_10a.htm";
-					break;
-				
-				case 2:
-					htmltext = "kelleyia_q458_10b.htm";
-					break;
-				
-				case 3:
-					htmltext = "kelleyia_q458_10c.htm";
-					break;
-			}
-		}
-		else if (event.equalsIgnoreCase("request_reward"))
-		{
-			int[] reward;
+			case "kelleyia_q458_05.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
 			
-			switch (st.getInt("contoverhits"))
-			{
-				case 1:
-					reward = Rewards[0][Rnd.get(Rewards[0].length)];
-					st.giveItems(reward[0], reward[1]);
-					break;
-				
-				case 2:
-					reward = Rewards[1][Rnd.get(Rewards[1].length)];
-					st.giveItems(reward[0], reward[1]);
-					break;
-				
-				case 3:
-					reward = Rewards[2][Rnd.get(Rewards[2].length)];
-					st.giveItems(reward[0], reward[1]);
-					st.giveItems(15482, 10);
-					st.giveItems(15483, 10);
-					break;
-			}
+			case "request_1stresults":
+				switch (qs.getInt("normaloverhits"))
+				{
+					case 1:
+						htmltext = "kelleyia_q458_08a.htm";
+						break;
+					
+					case 2:
+						htmltext = "kelleyia_q458_08b.htm";
+						break;
+					
+					case 3:
+						htmltext = "kelleyia_q458_08c.htm";
+						break;
+				}
+				break;
 			
-			htmltext = "kelleyia_q458_11.htm";
-			st.unset(KOOKABURA_VAR);
-			st.unset(COUGAR_VAR);
-			st.unset(BUFFALO_VAR);
-			st.unset(GRENDEL_VAR);
-			st.unset("normaloverhits");
-			st.unset("critoverhits");
-			st.unset("contoverhits");
-			st.setState(COMPLETED);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(this);
+			case "request_2ndresults":
+				switch (qs.getInt("critoverhits"))
+				{
+					case 1:
+						htmltext = "kelleyia_q458_09a.htm";
+						break;
+					
+					case 2:
+						htmltext = "kelleyia_q458_09b.htm";
+						break;
+					
+					case 3:
+						htmltext = "kelleyia_q458_09c.htm";
+						break;
+				}
+				break;
+			
+			case "request_3rdresults":
+				switch (qs.getInt("contoverhits"))
+				{
+					case 1:
+						htmltext = "kelleyia_q458_10a.htm";
+						break;
+					
+					case 2:
+						htmltext = "kelleyia_q458_10b.htm";
+						break;
+					
+					case 3:
+						htmltext = "kelleyia_q458_10c.htm";
+						break;
+				}
+				break;
+			
+			case "request_reward":
+				int[] reward;
+				switch (qs.getInt("contoverhits"))
+				{
+					case 1:
+						reward = Rewards[0][Rnd.get(Rewards[0].length)];
+						qs.giveItems(reward[0], reward[1]);
+						break;
+					
+					case 2:
+						reward = Rewards[1][Rnd.get(Rewards[1].length)];
+						qs.giveItems(reward[0], reward[1]);
+						break;
+					
+					case 3:
+						reward = Rewards[2][Rnd.get(Rewards[2].length)];
+						qs.giveItems(reward[0], reward[1]);
+						qs.giveItems(15482, 10);
+						qs.giveItems(15483, 10);
+						break;
+				}
+				htmltext = "kelleyia_q458_11.htm";
+				qs.unset(KOOKABURA_VAR);
+				qs.unset(COUGAR_VAR);
+				qs.unset(BUFFALO_VAR);
+				qs.unset(GRENDEL_VAR);
+				qs.unset("normaloverhits");
+				qs.unset("critoverhits");
+				qs.unset("contoverhits");
+				qs.setState(COMPLETED);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(this);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
 		
-		if (npc.getId() == Kelleyia)
+		switch (qs.getState())
 		{
-			switch (st.getState())
-			{
-				case CREATED:
-					if (st.getPlayer().getLevel() >= 82)
+			case CREATED:
+				if (qs.getPlayer().getLevel() >= 82)
+				{
+					if (qs.isNowAvailableByTime())
 					{
-						if (st.isNowAvailableByTime())
-						{
-							htmltext = "kelleyia_q458_01.htm";
-						}
-						else
-						{
-							htmltext = "kelleyia_q458_00a.htm";
-						}
+						htmltext = "kelleyia_q458_01.htm";
 					}
 					else
 					{
-						htmltext = "kelleyia_q458_00.htm";
+						htmltext = "kelleyia_q458_00a.htm";
 					}
-					
-					break;
-				
-				case STARTED:
-					if (st.getCond() == 1)
-					{
-						htmltext = "kelleyia_q458_06.htm";
-					}
-					else if (st.getCond() == 2)
-					{
-						htmltext = "kelleyia_q458_07.htm";
-					}
-					
-					break;
-			}
+				}
+				else
+				{
+					htmltext = "kelleyia_q458_00.htm";
+				}
+				break;
+			
+			case STARTED:
+				if (qs.getCond() == 1)
+				{
+					htmltext = "kelleyia_q458_06.htm";
+				}
+				else if (qs.getCond() == 2)
+				{
+					htmltext = "kelleyia_q458_07.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		boolean doneCond = updateKill(npc, st);
-		
-		if (doneCond)
+		if (updateKill(npc, qs))
 		{
-			st.set("normaloverhits", Rnd.get(1, 3));
-			st.set("critoverhits", Rnd.get(1, 3));
-			st.set("contoverhits", Rnd.get(1, 3));
-			st.setCond(2);
+			qs.set("normaloverhits", Rnd.get(1, 3));
+			qs.set("critoverhits", Rnd.get(1, 3));
+			qs.set("contoverhits", Rnd.get(1, 3));
+			qs.setCond(2);
 		}
 		
 		return null;

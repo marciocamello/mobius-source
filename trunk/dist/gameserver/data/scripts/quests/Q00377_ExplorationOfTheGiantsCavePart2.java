@@ -20,21 +20,6 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest implements ScriptFile
 {
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	private static final int DROP_RATE = 20;
 	private static final int ANC_BOOK = 14847;
 	private static final int DICT2 = 5892;
@@ -77,99 +62,100 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest implements Scr
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("yes"))
+		switch (event)
 		{
-			htmltext = "Starting.htm";
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("0"))
-		{
-			htmltext = "ext_msg.htm";
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(true);
-		}
-		else if (event.equalsIgnoreCase("show"))
-		{
-			htmltext = "no_items.htm";
+			case "yes":
+				htmltext = "Starting.htm";
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
 			
-			for (int[] i : EXCHANGE)
-			{
-				long count = Long.MAX_VALUE;
-				
-				for (int j : i)
+			case "0":
+				htmltext = "ext_msg.htm";
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(true);
+				break;
+			
+			case "show":
+				htmltext = "no_items.htm";
+				for (int[] i : EXCHANGE)
 				{
-					count = Math.min(count, st.getQuestItemsCount(j));
-				}
-				
-				if (count > 0)
-				{
-					htmltext = "tnx4items.htm";
+					long count = Long.MAX_VALUE;
 					
 					for (int j : i)
 					{
-						st.takeItems(j, count);
+						count = Math.min(count, qs.getQuestItemsCount(j));
 					}
 					
-					for (int n = 0; n < count; n++)
+					if (count > 0)
 					{
-						int luck = Rnd.get(100);
-						int item = 0;
+						htmltext = "tnx4items.htm";
 						
-						if (luck > 75)
+						for (int j : i)
 						{
-							item = 5420;
-						}
-						else if (luck > 50)
-						{
-							item = 5422;
-						}
-						else if (luck > 25)
-						{
-							item = 5336;
-						}
-						else
-						{
-							item = 5338;
+							qs.takeItems(j, count);
 						}
 						
-						st.giveItems(item, 1);
+						for (int n = 0; n < count; n++)
+						{
+							int luck = Rnd.get(100);
+							int item = 0;
+							
+							if (luck > 75)
+							{
+								item = 5420;
+							}
+							else if (luck > 50)
+							{
+								item = 5422;
+							}
+							else if (luck > 25)
+							{
+								item = 5336;
+							}
+							else
+							{
+								item = 5338;
+							}
+							
+							qs.giveItems(item, 1);
+						}
 					}
 				}
-			}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int id = st.getState();
+		final int id = qs.getState();
 		
-		if (st.getQuestItemsCount(DICT2) == 0)
+		if (qs.getQuestItemsCount(DICT2) == 0)
 		{
-			st.exitCurrentQuest(true);
+			qs.exitCurrentQuest(true);
 		}
 		else if (id == CREATED)
 		{
 			htmltext = "start.htm";
 			
-			if (st.getPlayer().getLevel() < 75)
+			if (qs.getPlayer().getLevel() < 75)
 			{
-				st.exitCurrentQuest(true);
+				qs.exitCurrentQuest(true);
 				htmltext = "error_1.htm";
 			}
 		}
 		else if (id == STARTED)
 		{
-			if (st.getQuestItemsCount(ANC_BOOK) != 0)
+			if (qs.getQuestItemsCount(ANC_BOOK) != 0)
 			{
 				htmltext = "checkout.htm";
 			}
@@ -183,13 +169,28 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest implements Scr
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if (st.getCond() == 1)
+		if (qs.getCond() == 1)
 		{
-			st.rollAndGive(ANC_BOOK, 1, DROP_RATE);
+			qs.rollAndGive(ANC_BOOK, 1, DROP_RATE);
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

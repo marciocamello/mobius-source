@@ -12,7 +12,6 @@
  */
 package quests;
 
-import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
@@ -20,28 +19,14 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00493_KickingOutUnwelcomeGuests extends Quest implements ScriptFile
 {
-	// npc
+	// Npc
 	public static final int JORJINO = 33515;
+	// Others
 	public static final String A_LIST = "a_list";
 	public static final String B_LIST = "b_list";
 	public static final String C_LIST = "c_list";
 	public static final String D_LIST = "d_list";
 	public static final String E_LIST = "e_list";
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
 	
 	public Q00493_KickingOutUnwelcomeGuests()
 	{
@@ -57,85 +42,82 @@ public class Q00493_KickingOutUnwelcomeGuests extends Quest implements ScriptFil
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		if (event.equalsIgnoreCase("33515-4.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		if (event.equalsIgnoreCase("33515-6.htm"))
-		{
-			st.unset("cond");
-			st.addExpAndSp(560000000, 16000000);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(this);
+			case "33515-4.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "33515-6.htm":
+				qs.unset("cond");
+				qs.addExpAndSp(560000000, 16000000);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(this);
+				break;
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		Player player = st.getPlayer();
-		int npcId = npc.getId();
-		int state = st.getState();
-		int cond = st.getCond();
-		
-		if (npcId == JORJINO)
+		switch (qs.getState())
 		{
-			if (state == 1)
-			{
-				if (player.getLevel() < 95)
+			case 1:
+				if (qs.getPlayer().getLevel() < 95)
 				{
 					return "noquest";
 				}
-				
-				if (!st.isNowAvailable())
+				if (!qs.isNowAvailable())
 				{
 					return "noquest";
 				}
-				
 				return "33515.htm";
-			}
-			
-			if (state == 2)
-			{
-				if (cond == 2)
+				
+			case 2:
+				if (qs.getCond() == 2)
 				{
 					return "33515-5.htm";
 				}
-			}
+				break;
 		}
 		
 		return "noquest";
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		
-		if (cond != 1)
+		if ((qs.getCond() == 1) && updateKill(npc, qs))
 		{
-			return null;
-		}
-		
-		boolean doneKill = updateKill(npc, st);
-		
-		if (doneKill)
-		{
-			st.unset(A_LIST);
-			st.unset(B_LIST);
-			st.unset(C_LIST);
-			st.unset(D_LIST);
-			st.unset(E_LIST);
-			st.setCond(2);
+			qs.unset(A_LIST);
+			qs.unset(B_LIST);
+			qs.unset(C_LIST);
+			qs.unset(D_LIST);
+			qs.unset(E_LIST);
+			qs.setCond(2);
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

@@ -20,103 +20,89 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00357_WarehouseKeepersAmbition extends Quest implements ScriptFile
 {
-	private static final int DROPRATE = 50;
-	private static final int REWARD1 = 900;
-	private static final int REWARD2 = 10000;
+	// Npc
 	private static final int SILVA = 30686;
+	// Monsters
 	private static final int MOB1 = 20594;
 	private static final int MOB2 = 20595;
 	private static final int MOB3 = 20596;
 	private static final int MOB4 = 20597;
 	private static final int MOB5 = 20598;
+	// Items
 	private static final int JADE_CRYSTAL = 5867;
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
+	// Other
+	private static final int REWARD1 = 900;
+	private static final int REWARD2 = 10000;
+	private static final int DROPRATE = 50;
 	
 	public Q00357_WarehouseKeepersAmbition()
 	{
 		super(false);
 		addStartNpc(SILVA);
-		addKillId(MOB1);
-		addKillId(MOB2);
-		addKillId(MOB3);
-		addKillId(MOB4);
-		addKillId(MOB5);
+		addKillId(MOB1, MOB2, MOB3, MOB4, MOB5);
 		addQuestItem(JADE_CRYSTAL);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("warehouse_keeper_silva_q0357_04.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("warehouse_keeper_silva_q0357_08.htm"))
-		{
-			long count = st.getQuestItemsCount(JADE_CRYSTAL);
+			case "warehouse_keeper_silva_q0357_04.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
 			
-			if (count > 0)
-			{
-				long reward = count * REWARD1;
-				
-				if (count >= 100)
+			case "warehouse_keeper_silva_q0357_08.htm":
+				final long count = qs.getQuestItemsCount(JADE_CRYSTAL);
+				if (count > 0)
 				{
-					reward = reward + REWARD2;
+					long reward = count * REWARD1;
+					
+					if (count >= 100)
+					{
+						reward = reward + REWARD2;
+					}
+					
+					qs.takeItems(JADE_CRYSTAL, -1);
+					qs.giveItems(ADENA_ID, reward);
 				}
-				
-				st.takeItems(JADE_CRYSTAL, -1);
-				st.giveItems(ADENA_ID, reward);
-			}
-			else
-			{
-				htmltext = "warehouse_keeper_silva_q0357_06.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("warehouse_keeper_silva_q0357_11.htm"))
-		{
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(true);
+				else
+				{
+					htmltext = "warehouse_keeper_silva_q0357_06.htm";
+				}
+				break;
+			
+			case "warehouse_keeper_silva_q0357_11.htm":
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(true);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
-		int id = st.getState();
-		int cond = st.getCond();
-		long jade = st.getQuestItemsCount(JADE_CRYSTAL);
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int id = qs.getState();
+		final long jade = qs.getQuestItemsCount(JADE_CRYSTAL);
 		
 		if ((cond == 0) || (id == CREATED))
 		{
-			if (st.getPlayer().getLevel() >= 47)
+			if (qs.getPlayer().getLevel() >= 47)
 			{
 				htmltext = "warehouse_keeper_silva_q0357_02.htm";
 			}
 			else
 			{
 				htmltext = "warehouse_keeper_silva_q0357_01.htm";
-				st.exitCurrentQuest(true);
+				qs.exitCurrentQuest(true);
 			}
 		}
 		else if (jade == 0)
@@ -132,14 +118,29 @@ public class Q00357_WarehouseKeepersAmbition extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
 		if (Rnd.chance(DROPRATE))
 		{
-			st.giveItems(JADE_CRYSTAL, 1);
-			st.playSound(SOUND_ITEMGET);
+			qs.giveItems(JADE_CRYSTAL, 1);
+			qs.playSound(SOUND_ITEMGET);
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

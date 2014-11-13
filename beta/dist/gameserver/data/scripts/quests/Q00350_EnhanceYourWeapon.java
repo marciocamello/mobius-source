@@ -35,61 +35,14 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 
 public class Q00350_EnhanceYourWeapon extends Quest implements ScriptFile
 {
-	private static class PlayerResult
-	{
-		private final Player _player;
-		private SystemMsg _message;
-		
-		public PlayerResult(Player player)
-		{
-			_player = player;
-		}
-		
-		public Player getPlayer()
-		{
-			return _player;
-		}
-		
-		public SystemMsg getMessage()
-		{
-			return _message;
-		}
-		
-		public void setMessage(SystemMsg message)
-		{
-			_message = message;
-		}
-		
-		public void send()
-		{
-			if (_message != null)
-			{
-				_player.sendPacket(_message);
-			}
-		}
-	}
-	
-	private static final int RED_SOUL_CRYSTAL0_ID = 4629;
-	private static final int GREEN_SOUL_CRYSTAL0_ID = 4640;
-	private static final int BLUE_SOUL_CRYSTAL0_ID = 4651;
+	// Npcs
 	private static final int Jurek = 30115;
 	private static final int Gideon = 30194;
 	private static final int Winonin = 30856;
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
+	// Items
+	private static final int RED_SOUL_CRYSTAL0_ID = 4629;
+	private static final int GREEN_SOUL_CRYSTAL0_ID = 4640;
+	private static final int BLUE_SOUL_CRYSTAL0_ID = 4651;
 	
 	public Q00350_EnhanceYourWeapon()
 	{
@@ -108,46 +61,48 @@ public class Q00350_EnhanceYourWeapon extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		if (event.equalsIgnoreCase(Jurek + "-04.htm") || event.equalsIgnoreCase(Gideon + "-04.htm") || event.equalsIgnoreCase(Winonin + "-04.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		if (event.equalsIgnoreCase(Jurek + "-09.htm") || event.equalsIgnoreCase(Gideon + "-09.htm") || event.equalsIgnoreCase(Winonin + "-09.htm"))
-		{
-			st.giveItems(RED_SOUL_CRYSTAL0_ID, 1);
-		}
-		
-		if (event.equalsIgnoreCase(Jurek + "-10.htm") || event.equalsIgnoreCase(Gideon + "-10.htm") || event.equalsIgnoreCase(Winonin + "-10.htm"))
-		{
-			st.giveItems(GREEN_SOUL_CRYSTAL0_ID, 1);
-		}
-		
-		if (event.equalsIgnoreCase(Jurek + "-11.htm") || event.equalsIgnoreCase(Gideon + "-11.htm") || event.equalsIgnoreCase(Winonin + "-11.htm"))
-		{
-			st.giveItems(BLUE_SOUL_CRYSTAL0_ID, 1);
-		}
-		
-		if (event.equalsIgnoreCase("exit.htm"))
-		{
-			st.exitCurrentQuest(true);
+			case "30115-04.htm":
+			case "30194-04.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "30115-09.htm":
+			case "30194-09.htm":
+				qs.giveItems(RED_SOUL_CRYSTAL0_ID, 1);
+				break;
+			
+			case "30115-10.htm":
+			case "30194-10.htm":
+				qs.giveItems(GREEN_SOUL_CRYSTAL0_ID, 1);
+				break;
+			
+			case "30115-11.htm":
+			case "30194-11.htm":
+				qs.giveItems(BLUE_SOUL_CRYSTAL0_ID, 1);
+				break;
+			
+			case "exit.htm":
+				qs.exitCurrentQuest(true);
+				break;
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String npcId = str(npc.getId());
 		String htmltext = "noquest";
-		int id = st.getState();
+		final int id = qs.getState();
+		final int npcId = npc.getId();
 		
-		if ((st.getQuestItemsCount(RED_SOUL_CRYSTAL0_ID) == 0) && (st.getQuestItemsCount(GREEN_SOUL_CRYSTAL0_ID) == 0) && (st.getQuestItemsCount(BLUE_SOUL_CRYSTAL0_ID) == 0))
+		if ((qs.getQuestItemsCount(RED_SOUL_CRYSTAL0_ID) == 0) && (qs.getQuestItemsCount(GREEN_SOUL_CRYSTAL0_ID) == 0) && (qs.getQuestItemsCount(BLUE_SOUL_CRYSTAL0_ID) == 0))
 		{
 			if (id == CREATED)
 			{
@@ -162,8 +117,8 @@ public class Q00350_EnhanceYourWeapon extends Quest implements ScriptFile
 		{
 			if (id == CREATED)
 			{
-				st.setCond(1);
-				st.setState(STARTED);
+				qs.setCond(1);
+				qs.setState(STARTED);
 			}
 			
 			htmltext = npcId + "-03.htm";
@@ -175,7 +130,7 @@ public class Q00350_EnhanceYourWeapon extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		Player player = qs.getPlayer();
+		final Player player = qs.getPlayer();
 		
 		if ((player == null) || !npc.isMonster())
 		{
@@ -250,7 +205,6 @@ public class Q00350_EnhanceYourWeapon extends Quest implements ScriptFile
 						targets.add(temp.get(i));
 					}
 				}
-				
 				break;
 			
 			case PARTY_ONE:
@@ -265,7 +219,6 @@ public class Q00350_EnhanceYourWeapon extends Quest implements ScriptFile
 					int rnd = Rnd.get(memberSize);
 					targets = Collections.singletonList(players.get(rnd));
 				}
-				
 				break;
 			
 			default:
@@ -279,7 +232,7 @@ public class Q00350_EnhanceYourWeapon extends Quest implements ScriptFile
 				continue;
 			}
 			
-			Player targetPlayer = target.getPlayer();
+			final Player targetPlayer = target.getPlayer();
 			
 			if (info.isSkill() && !npc.isAbsorbed(targetPlayer))
 			{
@@ -293,7 +246,7 @@ public class Q00350_EnhanceYourWeapon extends Quest implements ScriptFile
 			
 			boolean resonation = false;
 			SoulCrystal soulCrystal = null;
-			ItemInstance[] items = targetPlayer.getInventory().getItems();
+			final ItemInstance[] items = targetPlayer.getInventory().getItems();
 			
 			for (ItemInstance item : items)
 			{
@@ -315,12 +268,7 @@ public class Q00350_EnhanceYourWeapon extends Quest implements ScriptFile
 				soulCrystal = crystal;
 			}
 			
-			if (resonation)
-			{
-				continue;
-			}
-			
-			if (soulCrystal == null)
+			if (resonation || (soulCrystal == null))
 			{
 				continue;
 			}
@@ -360,5 +308,54 @@ public class Q00350_EnhanceYourWeapon extends Quest implements ScriptFile
 				target.setMessage(SystemMsg.THE_SOUL_CRYSTAL_WAS_NOT_ABLE_TO_ABSORB_THE_SOUL);
 			}
 		}
+	}
+	
+	private static class PlayerResult
+	{
+		private final Player _player;
+		private SystemMsg _message;
+		
+		public PlayerResult(Player player)
+		{
+			_player = player;
+		}
+		
+		public Player getPlayer()
+		{
+			return _player;
+		}
+		
+		public SystemMsg getMessage()
+		{
+			return _message;
+		}
+		
+		public void setMessage(SystemMsg message)
+		{
+			_message = message;
+		}
+		
+		public void send()
+		{
+			if (_message != null)
+			{
+				_player.sendPacket(_message);
+			}
+		}
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

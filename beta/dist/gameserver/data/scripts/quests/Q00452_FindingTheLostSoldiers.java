@@ -20,8 +20,8 @@ import lineage2.gameserver.utils.Util;
 
 public class Q00452_FindingTheLostSoldiers extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int JAKAN = 32773;
-	private static final int TAG_ID = 15513;
 	private static final int[] SOLDIER_CORPSES =
 	{
 		32769,
@@ -29,21 +29,8 @@ public class Q00452_FindingTheLostSoldiers extends Quest implements ScriptFile
 		32771,
 		32772
 	};
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
+	// Item
+	private static final int TAG_ID = 15513;
 	
 	public Q00452_FindingTheLostSoldiers()
 	{
@@ -55,7 +42,7 @@ public class Q00452_FindingTheLostSoldiers extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		if (npc == null)
 		{
@@ -64,18 +51,18 @@ public class Q00452_FindingTheLostSoldiers extends Quest implements ScriptFile
 		
 		if (npc.getId() == JAKAN)
 		{
-			if (event.equalsIgnoreCase("32773-3.htm"))
+			if (event.equals("32773-3.htm"))
 			{
-				st.setState(STARTED);
-				st.setCond(1);
-				st.playSound(SOUND_ACCEPT);
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
 			}
 		}
-		else if (Util.contains(SOLDIER_CORPSES, npc.getId()) && (st.getCond() == 1))
+		else if (Util.contains(SOLDIER_CORPSES, npc.getId()) && (qs.getCond() == 1))
 		{
-			st.giveItems(TAG_ID, 1);
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
+			qs.giveItems(TAG_ID, 1);
+			qs.setCond(2);
+			qs.playSound(SOUND_MIDDLE);
 			npc.deleteMe();
 		}
 		
@@ -83,7 +70,7 @@ public class Q00452_FindingTheLostSoldiers extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
 		
@@ -94,12 +81,12 @@ public class Q00452_FindingTheLostSoldiers extends Quest implements ScriptFile
 		
 		if (npc.getId() == JAKAN)
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case CREATED:
-					if (st.getPlayer().getLevel() >= 84)
+					if (qs.getPlayer().getLevel() >= 84)
 					{
-						if (st.isNowAvailableByTime())
+						if (qs.isNowAvailableByTime())
 						{
 							htmltext = "32773-1.htm";
 						}
@@ -116,19 +103,19 @@ public class Q00452_FindingTheLostSoldiers extends Quest implements ScriptFile
 					break;
 				
 				case STARTED:
-					if (st.getCond() == 1)
+					if (qs.getCond() == 1)
 					{
 						htmltext = "32773-4.htm";
 					}
-					else if (st.getCond() == 2)
+					else if (qs.getCond() == 2)
 					{
 						htmltext = "32773-5.htm";
-						st.unset("cond");
-						st.takeItems(TAG_ID, 1);
-						st.giveItems(57, 95200);
-						st.addExpAndSp(435024, 50366);
-						st.playSound(SOUND_FINISH);
-						st.exitCurrentQuest(this);
+						qs.unset("cond");
+						qs.takeItems(TAG_ID, 1);
+						qs.giveItems(57, 95200);
+						qs.addExpAndSp(435024, 50366);
+						qs.playSound(SOUND_FINISH);
+						qs.exitCurrentQuest(this);
 					}
 					
 					break;
@@ -136,12 +123,27 @@ public class Q00452_FindingTheLostSoldiers extends Quest implements ScriptFile
 		}
 		else if (Util.contains(SOLDIER_CORPSES, npc.getId()))
 		{
-			if (st.getCond() == 1)
+			if (qs.getCond() == 1)
 			{
 				htmltext = "corpse-1.htm";
 			}
 		}
 		
 		return htmltext;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

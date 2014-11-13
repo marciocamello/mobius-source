@@ -149,38 +149,38 @@ public class Q00455_WingsOfSand extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("sepsoul_q455_05.htm"))
+		if (event.equals("sepsoul_q455_05.htm"))
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
+			qs.setState(STARTED);
+			qs.setCond(1);
+			qs.playSound(SOUND_ACCEPT);
 		}
 		else if (event.startsWith("sepsoul_q455_08.htm"))
 		{
-			st.takeAllItems(LargeDragon);
+			qs.takeAllItems(LargeDragon);
 			StringTokenizer tokenizer = new StringTokenizer(event);
 			tokenizer.nextToken();
 			
 			switch (Integer.parseInt(tokenizer.nextToken()))
 			{
 				case 1:
-					st.giveItems(reward_mats_w[Rnd.get(reward_mats_w.length)], Rnd.get(1, 2));
+					qs.giveItems(reward_mats_w[Rnd.get(reward_mats_w.length)], Rnd.get(1, 2));
 					break;
 				
 				case 2:
-					st.giveItems(reward_mats_a[Rnd.get(reward_mats_a.length)], Rnd.get(1, 2));
+					qs.giveItems(reward_mats_a[Rnd.get(reward_mats_a.length)], Rnd.get(1, 2));
 					break;
 				
 				case 3:
-					st.giveItems(reward_mats_acc[Rnd.get(reward_mats_acc.length)], Rnd.get(1, 2));
+					qs.giveItems(reward_mats_acc[Rnd.get(reward_mats_acc.length)], Rnd.get(1, 2));
 					break;
 				
 				case 4:
-					st.giveItems(reward_attr_crystal[Rnd.get(reward_attr_crystal.length)], 1);
+					qs.giveItems(reward_attr_crystal[Rnd.get(reward_attr_crystal.length)], 1);
 					break;
 				
 				default:
@@ -188,32 +188,32 @@ public class Q00455_WingsOfSand extends Quest implements ScriptFile
 			}
 			
 			htmltext = "sepsoul_q455_08.htm";
-			st.setState(COMPLETED);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(this);
+			qs.setState(COMPLETED);
+			qs.playSound(SOUND_FINISH);
+			qs.exitCurrentQuest(this);
 		}
 		else if (event.startsWith("sepsoul_q455_11.htm"))
 		{
-			st.takeAllItems(LargeDragon);
+			qs.takeAllItems(LargeDragon);
 			StringTokenizer tokenizer = new StringTokenizer(event);
 			tokenizer.nextToken();
 			
 			switch (Integer.parseInt(tokenizer.nextToken()))
 			{
 				case 1:
-					st.giveItems(reward_resipes_w[Rnd.get(reward_resipes_w.length)], 1);
+					qs.giveItems(reward_resipes_w[Rnd.get(reward_resipes_w.length)], 1);
 					break;
 				
 				case 2:
-					st.giveItems(reward_resipes_a[Rnd.get(reward_resipes_a.length)], 1);
+					qs.giveItems(reward_resipes_a[Rnd.get(reward_resipes_a.length)], 1);
 					break;
 				
 				case 3:
-					st.giveItems(reward_resipes_acc[Rnd.get(reward_resipes_acc.length)], 1);
+					qs.giveItems(reward_resipes_acc[Rnd.get(reward_resipes_acc.length)], 1);
 					break;
 				
 				case 4:
-					st.giveItems(reward_attr_crystal[Rnd.get(reward_attr_crystal.length)], 2);
+					qs.giveItems(reward_attr_crystal[Rnd.get(reward_attr_crystal.length)], 2);
 					break;
 				
 				default:
@@ -222,46 +222,45 @@ public class Q00455_WingsOfSand extends Quest implements ScriptFile
 			
 			if (Rnd.chance(25))
 			{
-				st.giveItems(reward_ench_scroll[Rnd.get(reward_ench_scroll.length)], 1);
+				qs.giveItems(reward_ench_scroll[Rnd.get(reward_ench_scroll.length)], 1);
 			}
 			
 			htmltext = "sepsoul_q455_11.htm";
-			st.setState(COMPLETED);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(this);
+			qs.setState(COMPLETED);
+			qs.playSound(SOUND_FINISH);
+			qs.exitCurrentQuest(this);
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int cond = st.getCond();
+		final int cond = qs.getCond();
 		
 		if (Util.contains(SeparatedSoul, npc.getId()))
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case CREATED:
-					if (st.isNowAvailableByTime())
+					if (qs.isNowAvailableByTime())
 					{
-						if (st.getPlayer().getLevel() >= 80)
+						if (qs.getPlayer().getLevel() >= 80)
 						{
 							htmltext = "sepsoul_q455_01.htm";
 						}
 						else
 						{
 							htmltext = "sepsoul_q455_00.htm";
-							st.exitCurrentQuest(true);
+							qs.exitCurrentQuest(true);
 						}
 					}
 					else
 					{
 						htmltext = "sepsoul_q455_00a.htm";
 					}
-					
 					break;
 				
 				case STARTED:
@@ -277,7 +276,6 @@ public class Q00455_WingsOfSand extends Quest implements ScriptFile
 					{
 						htmltext = "sepsoul_q455_10.htm";
 					}
-					
 					break;
 			}
 		}
@@ -286,18 +284,18 @@ public class Q00455_WingsOfSand extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
+		final int cond = qs.getCond();
 		
 		if (cond == 1)
 		{
-			st.giveItems(LargeDragon, 1);
-			st.setCond(2);
+			qs.giveItems(LargeDragon, 1);
+			qs.setCond(2);
 		}
 		else if (cond == 2)
 		{
-			st.setCond(3);
+			qs.setCond(3);
 		}
 		
 		return null;

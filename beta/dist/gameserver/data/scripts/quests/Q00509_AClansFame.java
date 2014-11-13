@@ -88,21 +88,6 @@ public class Q00509_AClansFame extends Quest implements ScriptFile
 		}
 	};
 	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public Q00509_AClansFame()
 	{
 		super(PARTY_ALL);
@@ -123,20 +108,19 @@ public class Q00509_AClansFame extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		int cond = st.getCond();
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("31331-0.htm") && (cond == 0))
+		if (event.equals("31331-0.htm") && (qs.getCond() == 0))
 		{
-			st.setCond(1);
-			st.setState(STARTED);
+			qs.setCond(1);
+			qs.setState(STARTED);
 		}
 		else if (Util.isNumber(event))
 		{
 			int evt = Integer.parseInt(event);
-			st.set("raid", event);
+			qs.set("raid", event);
 			htmltext = "31331-" + event + ".htm";
 			int x = RADAR[evt][0];
 			int y = RADAR[evt][1];
@@ -144,46 +128,46 @@ public class Q00509_AClansFame extends Quest implements ScriptFile
 			
 			if ((x + y + z) > 0)
 			{
-				st.addRadar(x, y, z);
+				qs.addRadar(x, y, z);
 			}
 			
-			st.playSound(SOUND_ACCEPT);
+			qs.playSound(SOUND_ACCEPT);
 		}
-		else if (event.equalsIgnoreCase("31331-6.htm"))
+		else if (event.equals("31331-6.htm"))
 		{
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(true);
+			qs.playSound(SOUND_FINISH);
+			qs.exitCurrentQuest(true);
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		Clan clan = st.getPlayer().getClan();
+		final Clan clan = qs.getPlayer().getClan();
 		
 		if (clan == null)
 		{
-			st.exitCurrentQuest(true);
+			qs.exitCurrentQuest(true);
 			htmltext = "31331-0a.htm";
 		}
-		else if (clan.getLeader().getPlayer() != st.getPlayer())
+		else if (clan.getLeader().getPlayer() != qs.getPlayer())
 		{
-			st.exitCurrentQuest(true);
+			qs.exitCurrentQuest(true);
 			htmltext = "31331-0a.htm";
 		}
 		else if (clan.getLevel() < 6)
 		{
-			st.exitCurrentQuest(true);
+			qs.exitCurrentQuest(true);
 			htmltext = "31331-0b.htm";
 		}
 		else
 		{
-			int cond = st.getCond();
-			int raid = st.getInt("raid");
-			int id = st.getState();
+			final int cond = qs.getCond();
+			final int raid = qs.getInt("raid");
+			final int id = qs.getState();
 			
 			if ((id == CREATED) && (cond == 0))
 			{
@@ -192,7 +176,7 @@ public class Q00509_AClansFame extends Quest implements ScriptFile
 			else if ((id == STARTED) && (cond == 1))
 			{
 				int item = REWARDS_LIST[raid][1];
-				long count = st.getQuestItemsCount(item);
+				long count = qs.getQuestItemsCount(item);
 				
 				if (count == 0)
 				{
@@ -202,8 +186,8 @@ public class Q00509_AClansFame extends Quest implements ScriptFile
 				{
 					htmltext = "31331-" + raid + "b.htm";
 					int increasedPoints = clan.incReputation(REWARDS_LIST[raid][2], true, "Q00509_AClansFame");
-					st.getPlayer().sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_SUCCESSFULLY_COMPLETED_A_CLAN_QUEST_S1_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION_SCORE).addNumber(increasedPoints));
-					st.takeItems(item, 1);
+					qs.getPlayer().sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_SUCCESSFULLY_COMPLETED_A_CLAN_QUEST_S1_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION_SCORE).addNumber(increasedPoints));
+					qs.takeItems(item, 1);
 				}
 			}
 		}
@@ -212,24 +196,24 @@ public class Q00509_AClansFame extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
 		QuestState id = null;
-		Clan clan = st.getPlayer().getClan();
+		final Clan clan = qs.getPlayer().getClan();
 		
 		if (clan == null)
 		{
 			return null;
 		}
 		
-		Player clan_leader = clan.getLeader().getPlayer();
+		final Player clan_leader = clan.getLeader().getPlayer();
 		
 		if (clan_leader == null)
 		{
 			return null;
 		}
 		
-		if (clan_leader.equals(st.getPlayer()) || (clan_leader.getDistance(npc) <= 1600))
+		if (clan_leader.equals(qs.getPlayer()) || (clan_leader.getDistance(npc) <= 1600))
 		{
 			id = clan_leader.getQuestState(getName());
 		}
@@ -239,19 +223,34 @@ public class Q00509_AClansFame extends Quest implements ScriptFile
 			return null;
 		}
 		
-		if ((st.getCond() == 1) && (st.getState() == STARTED))
+		if ((qs.getCond() == 1) && (qs.getState() == STARTED))
 		{
-			int raid = REWARDS_LIST[st.getInt("raid")][0];
-			int item = REWARDS_LIST[st.getInt("raid")][1];
+			int raid = REWARDS_LIST[qs.getInt("raid")][0];
+			int item = REWARDS_LIST[qs.getInt("raid")][1];
 			int npcId = npc.getId();
 			
-			if ((npcId == raid) && (st.getQuestItemsCount(item) == 0))
+			if ((npcId == raid) && (qs.getQuestItemsCount(item) == 0))
 			{
-				st.giveItems(item, 1);
-				st.playSound(SOUND_MIDDLE);
+				qs.giveItems(item, 1);
+				qs.playSound(SOUND_MIDDLE);
 			}
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

@@ -61,159 +61,77 @@ public class Q00421_LittleWingsBigAdventure extends Quest implements ScriptFile
 		super(false);
 		addStartNpc(Cronos);
 		addTalkId(Mimyu);
-		addKillId(Fairy_Tree_of_Wind);
-		addKillId(Fairy_Tree_of_Star);
-		addKillId(Fairy_Tree_of_Twilight);
-		addKillId(Fairy_Tree_of_Abyss);
-		addAttackId(Fairy_Tree_of_Wind);
-		addAttackId(Fairy_Tree_of_Star);
-		addAttackId(Fairy_Tree_of_Twilight);
-		addAttackId(Fairy_Tree_of_Abyss);
+		addKillId(Fairy_Tree_of_Wind, Fairy_Tree_of_Star, Fairy_Tree_of_Twilight, Fairy_Tree_of_Abyss);
+		addAttackId(Fairy_Tree_of_Wind, Fairy_Tree_of_Star, Fairy_Tree_of_Twilight, Fairy_Tree_of_Abyss);
 		addQuestItem(Fairy_Leaf);
 	}
 	
-	private static ItemInstance GetDragonflute(QuestState st)
-	{
-		List<ItemInstance> Dragonflutes = new ArrayList<>();
-		
-		for (ItemInstance item : st.getPlayer().getInventory().getItems())
-		{
-			if ((item != null) && ((item.getId() == Dragonflute_of_Wind) || (item.getId() == Dragonflute_of_Star) || (item.getId() == Dragonflute_of_Twilight)))
-			{
-				Dragonflutes.add(item);
-			}
-		}
-		
-		if (Dragonflutes.isEmpty())
-		{
-			return null;
-		}
-		
-		if (Dragonflutes.size() == 1)
-		{
-			return Dragonflutes.get(0);
-		}
-		
-		if (st.getState() == CREATED)
-		{
-			return null;
-		}
-		
-		int dragonflute_id = st.getInt("dragonflute");
-		
-		for (ItemInstance item : Dragonflutes)
-		{
-			if (item.getObjectId() == dragonflute_id)
-			{
-				return item;
-			}
-		}
-		
-		return null;
-	}
-	
-	private static boolean HatchlingSummoned(QuestState st, boolean CheckObjID)
-	{
-		Summon _pet = st.getPlayer().getSummonList().getPet();
-		
-		if (_pet == null)
-		{
-			return false;
-		}
-		
-		if (CheckObjID)
-		{
-			int dragonflute_id = st.getInt("dragonflute");
-			
-			if (dragonflute_id == 0)
-			{
-				return false;
-			}
-			
-			if (_pet.getControlItemObjId() != dragonflute_id)
-			{
-				return false;
-			}
-		}
-		
-		ItemInstance dragonflute = GetDragonflute(st);
-		
-		if (dragonflute == null)
-		{
-			return false;
-		}
-		
-		if (PetDataTable.getControlItemId(_pet.getId()) != dragonflute.getId())
-		{
-			return false;
-		}
-		
-		return true;
-	}
-	
-	private static boolean CheckTree(QuestState st, int Fairy_Tree_id)
-	{
-		return st.getInt(String.valueOf(Fairy_Tree_id)) == 1000000;
-	}
-	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		int _state = st.getState();
-		ItemInstance dragonflute = GetDragonflute(st);
-		int dragonflute_id = st.getInt("dragonflute");
-		int cond = st.getCond();
+		final int _state = qs.getState();
+		final ItemInstance dragonflute = GetDragonflute(qs);
+		final int dragonflute_id = qs.getInt("dragonflute");
 		
-		if (event.equalsIgnoreCase("30610_05.htm") && (_state == CREATED))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if ((event.equalsIgnoreCase("30747_03.htm") || event.equalsIgnoreCase("30747_04.htm")) && (_state == STARTED) && (cond == 1))
-		{
-			if (dragonflute == null)
-			{
-				return "noquest";
-			}
-			
-			if (dragonflute.getObjectId() != dragonflute_id)
-			{
-				if (Rnd.chance(10))
+			case "30610_05.htm":
+				if (_state == CREATED)
 				{
-					st.takeItems(dragonflute.getId(), 1);
-					st.playSound(SOUND_FINISH);
-					st.exitCurrentQuest(true);
+					qs.setState(STARTED);
+					qs.setCond(1);
+					qs.playSound(SOUND_ACCEPT);
 				}
-				
-				return "30747_00.htm";
-			}
+				break;
 			
-			if (!HatchlingSummoned(st, false))
-			{
-				return event.equalsIgnoreCase("30747_04.htm") ? "30747_04a.htm" : "30747_02.htm";
-			}
-			
-			if (event.equalsIgnoreCase("30747_04.htm"))
-			{
-				st.setCond(2);
-				st.takeItems(Fairy_Leaf, -1);
-				st.giveItems(Fairy_Leaf, 4);
-				st.playSound(SOUND_MIDDLE);
-			}
+			case "30747_03.htm":
+			case "30747_04.htm":
+				if ((_state == STARTED) && (qs.getCond() == 1))
+				{
+					if (dragonflute == null)
+					{
+						return "noquest";
+					}
+					
+					if (dragonflute.getObjectId() != dragonflute_id)
+					{
+						if (Rnd.chance(10))
+						{
+							qs.takeItems(dragonflute.getId(), 1);
+							qs.playSound(SOUND_FINISH);
+							qs.exitCurrentQuest(true);
+						}
+						
+						return "30747_00.htm";
+					}
+					
+					if (!HatchlingSummoned(qs, false))
+					{
+						return event.equals("30747_04.htm") ? "30747_04a.htm" : "30747_02.htm";
+					}
+					
+					if (event.equals("30747_04.htm"))
+					{
+						qs.setCond(2);
+						qs.takeItems(Fairy_Leaf, -1);
+						qs.giveItems(Fairy_Leaf, 4);
+						qs.playSound(SOUND_MIDDLE);
+					}
+				}
+				break;
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int _state = st.getState();
+		int _state = qs.getState();
 		int npcId = npc.getId();
-		int cond = st.getCond();
-		ItemInstance dragonflute = GetDragonflute(st);
-		int dragonflute_id = st.getInt("dragonflute");
+		int cond = qs.getCond();
+		ItemInstance dragonflute = GetDragonflute(qs);
+		int dragonflute_id = qs.getInt("dragonflute");
 		
 		if (_state == CREATED)
 		{
@@ -222,191 +140,164 @@ public class Q00421_LittleWingsBigAdventure extends Quest implements ScriptFile
 				return "noquest";
 			}
 			
-			if (st.getPlayer().getLevel() < 45)
+			if (qs.getPlayer().getLevel() < 45)
 			{
-				st.exitCurrentQuest(true);
+				qs.exitCurrentQuest(true);
 				return "30610_01.htm";
 			}
 			
 			if (dragonflute == null)
 			{
-				st.exitCurrentQuest(true);
+				qs.exitCurrentQuest(true);
 				return "30610_02.htm";
 			}
 			
 			if (dragonflute.getEnchantLevel() < 55)
 			{
-				st.exitCurrentQuest(true);
+				qs.exitCurrentQuest(true);
 				return "30610_03.htm";
 			}
 			
-			st.setCond(0);
-			st.set("dragonflute", String.valueOf(dragonflute.getObjectId()));
+			qs.setCond(0);
+			qs.set("dragonflute", String.valueOf(dragonflute.getObjectId()));
 			return "30610_04.htm";
 		}
-		
-		if (_state != STARTED)
+		else if (_state != STARTED)
 		{
 			return "noquest";
 		}
 		
-		if (npcId == Cronos)
+		switch (npcId)
 		{
-			if (dragonflute == null)
-			{
-				return "30610_02.htm";
-			}
-			
-			return dragonflute.getObjectId() == dragonflute_id ? "30610_07.htm" : "30610_06.htm";
-		}
-		
-		if (npcId == Mimyu)
-		{
-			if ((st.getQuestItemsCount(Dragon_Bugle_of_Wind) + st.getQuestItemsCount(Dragon_Bugle_of_Star) + st.getQuestItemsCount(Dragon_Bugle_of_Twilight)) > 0)
-			{
-				return "30747_00b.htm";
-			}
-			
-			if (dragonflute == null)
-			{
-				return "noquest";
-			}
-			
-			if (cond == 1)
-			{
-				return "30747_01.htm";
-			}
-			
-			if (cond == 2)
-			{
-				if (!HatchlingSummoned(st, false))
+			case Cronos:
+				if (dragonflute == null)
 				{
-					return "30747_09.htm";
+					return "30610_02.htm";
+				}
+				return dragonflute.getObjectId() == dragonflute_id ? "30610_07.htm" : "30610_06.htm";
+				
+			case Mimyu:
+				if ((qs.getQuestItemsCount(Dragon_Bugle_of_Wind) + qs.getQuestItemsCount(Dragon_Bugle_of_Star) + qs.getQuestItemsCount(Dragon_Bugle_of_Twilight)) > 0)
+				{
+					return "30747_00b.htm";
+				}
+				else if (dragonflute == null)
+				{
+					return "noquest";
 				}
 				
-				if (st.getQuestItemsCount(Fairy_Leaf) == 0)
+				switch (cond)
 				{
-					st.playSound(SOUND_FINISH);
-					st.exitCurrentQuest(true);
-					return "30747_11.htm";
+					case 1:
+						return "30747_01.htm";
+						
+					case 2:
+						if (!HatchlingSummoned(qs, false))
+						{
+							return "30747_09.htm";
+						}
+						if (qs.getQuestItemsCount(Fairy_Leaf) == 0)
+						{
+							qs.playSound(SOUND_FINISH);
+							qs.exitCurrentQuest(true);
+							return "30747_11.htm";
+						}
+						return "30747_10.htm";
+						
+					case 3:
+						if (dragonflute.getObjectId() != dragonflute_id)
+						{
+							return "30747_00a.htm";
+						}
+						else if (qs.getQuestItemsCount(Fairy_Leaf) > 0)
+						{
+							qs.playSound(SOUND_FINISH);
+							qs.exitCurrentQuest(true);
+							return "30747_11.htm";
+						}
+						else if (!(CheckTree(qs, Fairy_Tree_of_Wind) && CheckTree(qs, Fairy_Tree_of_Star) && CheckTree(qs, Fairy_Tree_of_Twilight) && CheckTree(qs, Fairy_Tree_of_Abyss)))
+						{
+							qs.playSound(SOUND_FINISH);
+							qs.exitCurrentQuest(true);
+							return "30747_11.htm";
+						}
+						else if (qs.getInt("welldone") == 0)
+						{
+							if (!HatchlingSummoned(qs, false))
+							{
+								return "30747_09.htm";
+							}
+							
+							qs.set("welldone", "1");
+							return "30747_12.htm";
+						}
+						else if (HatchlingSummoned(qs, false) || (qs.getPlayer().getSummonList() != null))
+						{
+							return "30747_13a.htm";
+						}
+						
+						dragonflute.setId((Dragon_Bugle_of_Wind + dragonflute.getId()) - Dragonflute_of_Wind);
+						dragonflute.setJdbcState(JdbcEntityState.UPDATED);
+						dragonflute.update();
+						// send packets
+						InventoryUpdate iu = new InventoryUpdate();
+						iu.addModifiedItem(dragonflute);
+						qs.getPlayer().sendPacket(iu);
+						qs.playSound(SOUND_FINISH);
+						qs.exitCurrentQuest(true);
+						return "30747_13.htm";
 				}
-				
-				return "30747_10.htm";
-			}
-			
-			if (cond == 3)
-			{
-				if (dragonflute.getObjectId() != dragonflute_id)
-				{
-					return "30747_00a.htm";
-				}
-				
-				if (st.getQuestItemsCount(Fairy_Leaf) > 0)
-				{
-					st.playSound(SOUND_FINISH);
-					st.exitCurrentQuest(true);
-					return "30747_11.htm";
-				}
-				
-				if (!(CheckTree(st, Fairy_Tree_of_Wind) && CheckTree(st, Fairy_Tree_of_Star) && CheckTree(st, Fairy_Tree_of_Twilight) && CheckTree(st, Fairy_Tree_of_Abyss)))
-				{
-					st.playSound(SOUND_FINISH);
-					st.exitCurrentQuest(true);
-					return "30747_11.htm";
-				}
-				
-				if (st.getInt("welldone") == 0)
-				{
-					if (!HatchlingSummoned(st, false))
-					{
-						return "30747_09.htm";
-					}
-					
-					st.set("welldone", "1");
-					return "30747_12.htm";
-				}
-				
-				if (HatchlingSummoned(st, false) || (st.getPlayer().getSummonList() != null))
-				{
-					return "30747_13a.htm";
-				}
-				
-				dragonflute.setId((Dragon_Bugle_of_Wind + dragonflute.getId()) - Dragonflute_of_Wind);
-				dragonflute.setJdbcState(JdbcEntityState.UPDATED);
-				dragonflute.update();
-				// send packets
-				InventoryUpdate iu = new InventoryUpdate();
-				iu.addModifiedItem(dragonflute);
-				st.getPlayer().sendPacket(iu);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(true);
-				return "30747_13.htm";
-			}
+				break;
 		}
 		
 		return "noquest";
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, QuestState st)
+	public String onAttack(NpcInstance npc, QuestState qs)
 	{
-		if ((st.getState() != STARTED) || (st.getCond() != 2) || !HatchlingSummoned(st, true) || (st.getQuestItemsCount(Fairy_Leaf) == 0))
+		if ((qs.getState() != STARTED) || (qs.getCond() != 2) || !HatchlingSummoned(qs, true) || (qs.getQuestItemsCount(Fairy_Leaf) == 0))
 		{
 			return null;
 		}
 		
-		String npcID = String.valueOf(npc.getId());
-		Integer attaked_times = st.getInt(npcID);
+		final String npcID = String.valueOf(npc.getId());
+		final Integer attaked_times = qs.getInt(npcID);
 		
-		if (CheckTree(st, npc.getId()))
+		if (CheckTree(qs, npc.getId()))
 		{
 			return null;
 		}
 		
 		if (attaked_times > Min_Fairy_Tree_Attaks)
 		{
-			st.set(npcID, "1000000");
+			qs.set(npcID, "1000000");
 			Functions.npcSay(npc, "Give me the leaf!");
-			st.takeItems(Fairy_Leaf, 1);
+			qs.takeItems(Fairy_Leaf, 1);
 			
-			if (CheckTree(st, Fairy_Tree_of_Wind) && CheckTree(st, Fairy_Tree_of_Star) && CheckTree(st, Fairy_Tree_of_Twilight) && CheckTree(st, Fairy_Tree_of_Abyss))
+			if (CheckTree(qs, Fairy_Tree_of_Wind) && CheckTree(qs, Fairy_Tree_of_Star) && CheckTree(qs, Fairy_Tree_of_Twilight) && CheckTree(qs, Fairy_Tree_of_Abyss))
 			{
-				st.setCond(3);
-				st.playSound(SOUND_MIDDLE);
+				qs.setCond(3);
+				qs.playSound(SOUND_MIDDLE);
 			}
 			else
 			{
-				st.playSound(SOUND_ITEMGET);
+				qs.playSound(SOUND_ITEMGET);
 			}
 		}
 		else
 		{
-			st.set(npcID, String.valueOf(attaked_times + 1));
+			qs.set(npcID, String.valueOf(attaked_times + 1));
 		}
 		
 		return null;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		ThreadPoolManager.getInstance().schedule(new GuardiansSpawner(npc, st, Rnd.get(15, 20)), 1000);
+		ThreadPoolManager.getInstance().schedule(new GuardiansSpawner(npc, qs, Rnd.get(15, 20)), 1000);
 		return null;
-	}
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
 	}
 	
 	public class GuardiansSpawner extends RunnableImpl
@@ -481,11 +372,11 @@ public class Q00421_LittleWingsBigAdventure extends Quest implements ScriptFile
 		
 		private void updateAgression()
 		{
-			Player _player = World.getPlayer(agressor);
+			final Player _player = World.getPlayer(agressor);
 			
 			if (_player != null)
 			{
-				if ((agressors_pet != null) && (_player.getSummonList().getPet() != null) && _player.getSummonList().getPet().getName().equalsIgnoreCase(agressors_pet))
+				if ((agressors_pet != null) && (_player.getSummonList().getPet() != null) && _player.getSummonList().getPet().getName().equals(agressors_pet))
 				{
 					AddAgression(_player.getSummonList().getPet(), 10);
 				}
@@ -521,5 +412,104 @@ public class Q00421_LittleWingsBigAdventure extends Quest implements ScriptFile
 			
 			_spawn.deleteAll();
 		}
+	}
+	
+	private static ItemInstance GetDragonflute(QuestState qs)
+	{
+		List<ItemInstance> Dragonflutes = new ArrayList<>();
+		
+		for (ItemInstance item : qs.getPlayer().getInventory().getItems())
+		{
+			if ((item != null) && ((item.getId() == Dragonflute_of_Wind) || (item.getId() == Dragonflute_of_Star) || (item.getId() == Dragonflute_of_Twilight)))
+			{
+				Dragonflutes.add(item);
+			}
+		}
+		
+		if (Dragonflutes.isEmpty())
+		{
+			return null;
+		}
+		
+		if (Dragonflutes.size() == 1)
+		{
+			return Dragonflutes.get(0);
+		}
+		
+		if (qs.getState() == CREATED)
+		{
+			return null;
+		}
+		
+		int dragonflute_id = qs.getInt("dragonflute");
+		
+		for (ItemInstance item : Dragonflutes)
+		{
+			if (item.getObjectId() == dragonflute_id)
+			{
+				return item;
+			}
+		}
+		
+		return null;
+	}
+	
+	private static boolean HatchlingSummoned(QuestState qs, boolean CheckObjID)
+	{
+		final Summon _pet = qs.getPlayer().getSummonList().getPet();
+		
+		if (_pet == null)
+		{
+			return false;
+		}
+		
+		if (CheckObjID)
+		{
+			int dragonflute_id = qs.getInt("dragonflute");
+			
+			if (dragonflute_id == 0)
+			{
+				return false;
+			}
+			
+			if (_pet.getControlItemObjId() != dragonflute_id)
+			{
+				return false;
+			}
+		}
+		
+		final ItemInstance dragonflute = GetDragonflute(qs);
+		
+		if (dragonflute == null)
+		{
+			return false;
+		}
+		
+		if (PetDataTable.getControlItemId(_pet.getId()) != dragonflute.getId())
+		{
+			return false;
+		}
+		
+		return true;
+	}
+	
+	private static boolean CheckTree(QuestState qs, int Fairy_Tree_id)
+	{
+		return qs.getInt(String.valueOf(Fairy_Tree_id)) == 1000000;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

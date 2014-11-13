@@ -21,10 +21,10 @@ import lineage2.gameserver.utils.Util;
 
 public class Q00467_TheOppressorAndTheOppressed extends Quest implements ScriptFile
 {
-	// npc
+	// Npcs
 	public static final int GUIDE = 33463;
 	public static final int DASMOND = 30855;
-	// mobs
+	// Monsters
 	private final int[] Mobs =
 	{
 		20650,
@@ -32,8 +32,101 @@ public class Q00467_TheOppressorAndTheOppressed extends Quest implements ScriptF
 		20647,
 		20649
 	};
-	// q items
+	// Items
 	public static final int CLEAR_CORE = 19488;
+	
+	public Q00467_TheOppressorAndTheOppressed()
+	{
+		super(true);
+		addStartNpc(GUIDE);
+		addTalkId(DASMOND);
+		addKillId(Mobs);
+		addQuestItem(CLEAR_CORE);
+		addLevelCheck(60, 64);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		qs.getPlayer();
+		
+		if (event.equals("33463-3.htm"))
+		{
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.playSound(SOUND_ACCEPT);
+		}
+		
+		return event;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		final int npcId = npc.getId();
+		final int state = qs.getState();
+		final int cond = qs.getCond();
+		
+		if (npcId == GUIDE)
+		{
+			if (state == 1)
+			{
+				if (!qs.isNowAvailableByTime())
+				{
+					return "33463-comp.htm";
+				}
+				
+				return "33463.htm";
+			}
+			else if (state == 2)
+			{
+				if (cond == 1)
+				{
+					return "33463-4.htm";
+				}
+			}
+		}
+		else if ((npcId == DASMOND) && (state == 2))
+		{
+			if (cond == 1)
+			{
+				return "30855-1.htm";
+			}
+			else if (cond == 2)
+			{
+				qs.giveItems(57, 194000);
+				qs.addExpAndSp(1879400, 1782000);
+				qs.takeItems(CLEAR_CORE, -1);
+				qs.unset("cond");
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(this);
+				return "30855.htm";
+			}
+		}
+		
+		return "noquest";
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if ((qs.getCond() != 1) || (npc == null))
+		{
+			return null;
+		}
+		
+		if (Util.contains(Mobs, npc.getId()) && Rnd.chance(50))
+		{
+			qs.giveItems(CLEAR_CORE, 1);
+		}
+		
+		if (qs.getQuestItemsCount(CLEAR_CORE) >= 30)
+		{
+			qs.setCond(2);
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -48,104 +141,5 @@ public class Q00467_TheOppressorAndTheOppressed extends Quest implements ScriptF
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00467_TheOppressorAndTheOppressed()
-	{
-		super(true);
-		addStartNpc(GUIDE);
-		addTalkId(DASMOND);
-		addKillId(Mobs);
-		addQuestItem(CLEAR_CORE);
-		addLevelCheck(60, 64);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		st.getPlayer();
-		
-		if (event.equalsIgnoreCase("33463-3.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		return event;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		st.getPlayer();
-		int npcId = npc.getId();
-		int state = st.getState();
-		int cond = st.getCond();
-		
-		if (npcId == GUIDE)
-		{
-			if (state == 1)
-			{
-				if (!st.isNowAvailableByTime())
-				{
-					return "33463-comp.htm";
-				}
-				
-				return "33463.htm";
-			}
-			
-			if (state == 2)
-			{
-				if (cond == 1)
-				{
-					return "33463-4.htm";
-				}
-			}
-		}
-		
-		if ((npcId == DASMOND) && (state == 2))
-		{
-			if (cond == 1)
-			{
-				return "30855-1.htm";
-			}
-			
-			if (cond == 2)
-			{
-				st.giveItems(57, 194000);
-				st.addExpAndSp(1879400, 1782000);
-				st.takeItems(CLEAR_CORE, -1);
-				st.unset("cond");
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(this);
-				return "30855.htm"; // no further html do here
-			}
-		}
-		
-		return "noquest";
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		
-		if ((cond != 1) || (npc == null))
-		{
-			return null;
-		}
-		
-		if (Util.contains(Mobs, npc.getId()) && Rnd.chance(50))
-		{
-			st.giveItems(CLEAR_CORE, 1);
-		}
-		
-		if (st.getQuestItemsCount(CLEAR_CORE) >= 30)
-		{
-			st.setCond(2);
-		}
-		
-		return null;
 	}
 }

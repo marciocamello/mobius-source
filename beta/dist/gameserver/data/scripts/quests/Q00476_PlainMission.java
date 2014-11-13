@@ -19,28 +19,14 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00476_PlainMission extends Quest implements ScriptFile
 {
-	// npc
+	// Npcs
 	public static final int GUIDE = 33463;
 	public static final int ANDREI = 31292;
+	// Others
 	public static final String A_LIST = "a_list";
 	public static final String B_LIST = "b_list";
 	public static final String C_LIST = "c_list";
 	public static final String D_LIST = "d_list";
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
 	
 	public Q00476_PlainMission()
 	{
@@ -55,68 +41,61 @@ public class Q00476_PlainMission extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		st.getPlayer();
-		
-		if (event.equalsIgnoreCase("33463-3.htm"))
+		if (event.equals("33463-3.htm"))
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.playSound(SOUND_ACCEPT);
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		st.getPlayer();
-		int npcId = npc.getId();
-		int state = st.getState();
-		int cond = st.getCond();
+		final int npcId = npc.getId();
+		final int state = qs.getState();
+		final int cond = qs.getCond();
 		
 		if (npcId == GUIDE)
 		{
 			if (state == 1)
 			{
-				if (!st.isNowAvailableByTime())
+				if (!qs.isNowAvailableByTime())
 				{
 					return "33463-comp.htm";
 				}
 				
 				return "33463.htm";
 			}
-			
-			if (state == 2)
+			else if (state == 2)
 			{
 				if (cond == 1)
 				{
 					return "33463-4.htm";
 				}
-				
-				if (cond == 2)
+				else if (cond == 2)
 				{
 					return "33463-5.htm";
 				}
 			}
 		}
-		
-		if ((npcId == ANDREI) && (state == 2))
+		else if ((npcId == ANDREI) && (state == 2))
 		{
 			if (cond == 1)
 			{
 				return "31292-1.htm";
 			}
-			
-			if (cond == 2)
+			else if (cond == 2)
 			{
-				st.giveItems(57, 142200);
-				st.addExpAndSp(4685175, 3376245);
-				st.unset("cond");
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(this);
+				qs.giveItems(57, 142200);
+				qs.addExpAndSp(4685175, 3376245);
+				qs.unset("cond");
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(this);
 				return "31292.htm"; // no further html do here
 			}
 		}
@@ -125,26 +104,37 @@ public class Q00476_PlainMission extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		
-		if ((cond != 1) || (npc == null))
+		if ((qs.getCond() != 1) || (npc == null))
 		{
 			return null;
 		}
 		
-		boolean doneKill = updateKill(npc, st);
-		
-		if (doneKill)
+		if (updateKill(npc, qs))
 		{
-			st.unset(A_LIST);
-			st.unset(B_LIST);
-			st.unset(C_LIST);
-			st.unset(D_LIST);
-			st.setCond(2);
+			qs.unset(A_LIST);
+			qs.unset(B_LIST);
+			qs.unset(C_LIST);
+			qs.unset(D_LIST);
+			qs.setCond(2);
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

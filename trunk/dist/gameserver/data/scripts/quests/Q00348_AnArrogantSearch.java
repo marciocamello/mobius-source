@@ -22,7 +22,6 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.RadarControl;
 import lineage2.gameserver.scripts.ScriptFile;
 
-//TODO UPDATE THE QUEST
 public class Q00348_AnArrogantSearch extends Quest implements ScriptFile
 {
 	private final static int ARK_GUARDIAN_ELBEROTH = 27182;
@@ -224,111 +223,89 @@ public class Q00348_AnArrogantSearch extends Quest implements ScriptFile
 		});
 	}
 	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public Q00348_AnArrogantSearch()
 	{
 		super(true);
 		addStartNpc(HANELLIN);
 		addTalkId(ARK_GUARDIANS_CORPSE);
-		
+		addQuestItem(HANELLINS_FIRST_LETTER, HANELLINS_SECOND_LETTER, HANELLINS_THIRD_LETTER, HANELLINS_WHITE_FLOWER, HANELLINS_RED_FLOWER, HANELLINS_YELLOW_FLOWER, BOOK_OF_SAINT, WHITE_FABRIC_1, BLOOD_OF_SAINT, BRANCH_OF_SAINT, WHITE_FABRIC_0, WHITE_FABRIC_2, FIRST_KEY_OF_ARK, SECOND_KEY_OF_ARK, THIRD_KEY_OF_ARK);
 		for (int i : ARK_OWNERS.keySet())
 		{
 			addTalkId(i);
 		}
-		
 		for (int i : ARKS.keySet())
 		{
 			addTalkId(i);
 		}
-		
 		for (int i : DROPS.keySet())
 		{
 			addKillId(i);
 		}
-		
-		addQuestItem(HANELLINS_FIRST_LETTER, HANELLINS_SECOND_LETTER, HANELLINS_THIRD_LETTER, HANELLINS_WHITE_FLOWER, HANELLINS_RED_FLOWER, HANELLINS_YELLOW_FLOWER, BOOK_OF_SAINT, WHITE_FABRIC_1, BLOOD_OF_SAINT, BRANCH_OF_SAINT, WHITE_FABRIC_0, WHITE_FABRIC_2, FIRST_KEY_OF_ARK, SECOND_KEY_OF_ARK, THIRD_KEY_OF_ARK);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equals("30864_02"))
+		switch (event)
 		{
-			st.setCond(2);
-			htmltext = "30864-03.htm";
-		}
-		else if (event.equals("30864_04a")) // work alone
-		{
-			st.setCond(4);
-			st.takeItems(SHELL_OF_MONSTERS, -1);
-			htmltext = "30864-04c.htm";
-			st.set("companions", "0");
-		}
-		else if (event.equals("30864_04b")) // work with friends
-		{
-			st.setCond(3);
-			st.set("companions", "1");
-			st.takeItems(SHELL_OF_MONSTERS, -1);
-			htmltext = "not yet implemented";
-			// todo: give flowers & handle the multiperson quest...
-		}
-		
-		if (event.equals("30864-09a.htm"))
-		{
-			st.setCond(29);
-			st.giveItems(WHITE_FABRIC_2, 10);
-		}
-		
-		if (event.equals("30864-10a.htm"))
-		{
-			if (st.getQuestItemsCount(WHITE_FABRIC_2) < 10)
-			{
-				st.giveItems(WHITE_FABRIC_2, 10 - st.getQuestItemsCount(WHITE_FABRIC_2));
-			}
+			case "30864_02":
+				qs.setCond(2);
+				htmltext = "30864-03.htm";
+				break;
 			
-			htmltext = "30864-10.htm";
-		}
-		
-		if (event.equals("30864-10b.htm"))
-		{
-			if (st.getQuestItemsCount(BLOODED_FABRIC) > 1)
-			{
-				long count = st.takeItems(BLOODED_FABRIC, -1);
-				st.giveItems(ADENA_ID, count * 5000, true);
+			case "30864_04a":
+				qs.setCond(4);
+				qs.takeItems(SHELL_OF_MONSTERS, -1);
+				htmltext = "30864-04c.htm";
+				qs.set("companions", "0");
+				break;
+			
+			case "30864_04b":
+				qs.setCond(3);
+				qs.set("companions", "1");
+				qs.takeItems(SHELL_OF_MONSTERS, -1);
+				htmltext = "not yet implemented"; // TODO: give flowers & handle the multiperson quest...
+				break;
+			
+			case "30864-09a.htm":
+				qs.setCond(29);
+				qs.giveItems(WHITE_FABRIC_2, 10);
+				break;
+			
+			case "30864-10a.htm":
+				if (qs.getQuestItemsCount(WHITE_FABRIC_2) < 10)
+				{
+					qs.giveItems(WHITE_FABRIC_2, 10 - qs.getQuestItemsCount(WHITE_FABRIC_2));
+				}
 				htmltext = "30864-10.htm";
-			}
-			else
-			{
-				htmltext = "30864-11.htm";
-			}
+				break;
+			
+			case "30864-10b.htm":
+				if (qs.getQuestItemsCount(BLOODED_FABRIC) > 1)
+				{
+					long count = qs.takeItems(BLOODED_FABRIC, -1);
+					qs.giveItems(ADENA_ID, count * 5000, true);
+					htmltext = "30864-10.htm";
+				}
+				else
+				{
+					htmltext = "30864-11.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		int id = st.getState();
-		int cond = st.getCond();
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		final int id = qs.getState();
 		
 		if (npcId == HANELLIN)
 		{
@@ -336,25 +313,25 @@ public class Q00348_AnArrogantSearch extends Quest implements ScriptFile
 			// if the quest was completed and the player still has a blooded fabric
 			// tell them the "secret" that they can use it in order to visit Baium.
 			{
-				if (st.getQuestItemsCount(BLOODED_FABRIC) >= 1)
+				if (qs.getQuestItemsCount(BLOODED_FABRIC) >= 1)
 				{
 					htmltext = "30864-Baium.htm";
-					st.exitCurrentQuest(true);
+					qs.exitCurrentQuest(true);
 				}
 				else
 				// else, start the quest normally
 				{
-					st.setCond(0);
+					qs.setCond(0);
 					
-					if (st.getPlayer().getLevel() < 60)
+					if (qs.getPlayer().getLevel() < 60)
 					{
 						htmltext = "30864-01.htm"; // not qualified
-						st.exitCurrentQuest(true);
+						qs.exitCurrentQuest(true);
 					}
 					else if (cond == 0)
 					{
-						st.setState(STARTED);
-						st.setCond(1);
+						qs.setState(STARTED);
+						qs.setCond(1);
 						htmltext = "30864-02.htm"; // Successful start: begin the dialog which will set cond=2
 					}
 				}
@@ -365,7 +342,7 @@ public class Q00348_AnArrogantSearch extends Quest implements ScriptFile
 				htmltext = "30864-02.htm"; // begin the dialog which will set cond=2
 			}
 			// Has returned before getting the powerstone
-			else if ((cond == 2) && (st.getQuestItemsCount(SHELL_OF_MONSTERS) == 0))
+			else if ((cond == 2) && (qs.getQuestItemsCount(SHELL_OF_MONSTERS) == 0))
 			{
 				htmltext = "30864-03a.htm"; // go get the titan's powerstone
 			}
@@ -375,69 +352,69 @@ public class Q00348_AnArrogantSearch extends Quest implements ScriptFile
 			}
 			else if (cond == 4)
 			{
-				st.setCond(5);
-				st.giveItems(HANELLINS_FIRST_LETTER, 1);
-				st.giveItems(HANELLINS_SECOND_LETTER, 1);
-				st.giveItems(HANELLINS_THIRD_LETTER, 1);
+				qs.setCond(5);
+				qs.giveItems(HANELLINS_FIRST_LETTER, 1);
+				qs.giveItems(HANELLINS_SECOND_LETTER, 1);
+				qs.giveItems(HANELLINS_THIRD_LETTER, 1);
 				htmltext = "30864-05.htm"; // Go get the 3 sacred relics
 			}
-			else if ((cond == 5) && ((st.getQuestItemsCount(BOOK_OF_SAINT) + st.getQuestItemsCount(BLOOD_OF_SAINT) + st.getQuestItemsCount(BRANCH_OF_SAINT)) < 3))
+			else if ((cond == 5) && ((qs.getQuestItemsCount(BOOK_OF_SAINT) + qs.getQuestItemsCount(BLOOD_OF_SAINT) + qs.getQuestItemsCount(BRANCH_OF_SAINT)) < 3))
 			{
 				htmltext = "30864-05.htm"; // Repeat: Go get the 3 sacred relics
 			}
 			else if (cond == 5)
 			{
 				htmltext = "30864-06.htm"; // All relics collected!...Get me antidotes & greater healing
-				st.takeItems(BOOK_OF_SAINT, -1);
-				st.takeItems(BLOOD_OF_SAINT, -1);
-				st.takeItems(BRANCH_OF_SAINT, -1);
-				st.setCond(22);
+				qs.takeItems(BOOK_OF_SAINT, -1);
+				qs.takeItems(BLOOD_OF_SAINT, -1);
+				qs.takeItems(BRANCH_OF_SAINT, -1);
+				qs.setCond(22);
 			}
-			else if ((cond == 22) && (st.getQuestItemsCount(ANTIDOTE) < 5) && (st.getQuestItemsCount(HEALING_POTION) < 1))
+			else if ((cond == 22) && (qs.getQuestItemsCount(ANTIDOTE) < 5) && (qs.getQuestItemsCount(HEALING_POTION) < 1))
 			{
 				htmltext = "30864-06a.htm"; // where are my antidotes & greater healing
 			}
 			else if (cond == 22)
 			{
-				st.takeItems(ANTIDOTE, 5);
-				st.takeItems(HEALING_POTION, 1);
+				qs.takeItems(ANTIDOTE, 5);
+				qs.takeItems(HEALING_POTION, 1);
 				
-				if (st.getInt("companions") == 0)
+				if (qs.getInt("companions") == 0)
 				{
-					st.setCond(25);
+					qs.setCond(25);
 					htmltext = "30864-07.htm"; // go get platinum tribe blood...
-					st.giveItems(WHITE_FABRIC_1, 1);
+					qs.giveItems(WHITE_FABRIC_1, 1);
 				}
 				else
 				{
-					st.setCond(23);
+					qs.setCond(23);
 					htmltext = "not implemented yet";
-					st.giveItems(WHITE_FABRIC_0, 3);
+					qs.giveItems(WHITE_FABRIC_0, 3);
 				}
 			}
-			else if ((cond == 25) && (st.getQuestItemsCount(BLOODED_FABRIC) < 1))
+			else if ((cond == 25) && (qs.getQuestItemsCount(BLOODED_FABRIC) < 1))
 			{
-				if (st.getQuestItemsCount(WHITE_FABRIC_1) < 1)
+				if (qs.getQuestItemsCount(WHITE_FABRIC_1) < 1)
 				{
-					st.giveItems(WHITE_FABRIC_1, 1);
+					qs.giveItems(WHITE_FABRIC_1, 1);
 				}
 				
 				htmltext = "30864-07a.htm";
 			}
-			else if ((cond == 26) && (st.getQuestItemsCount(BLOODED_FABRIC) < 1))
+			else if ((cond == 26) && (qs.getQuestItemsCount(BLOODED_FABRIC) < 1))
 			{
-				if (st.getQuestItemsCount(WHITE_FABRIC_2) < 1)
+				if (qs.getQuestItemsCount(WHITE_FABRIC_2) < 1)
 				{
-					st.giveItems(WHITE_FABRIC_2, 1);
+					qs.giveItems(WHITE_FABRIC_2, 1);
 				}
 				
 				htmltext = "30864-07a.htm";
 			}
-			else if (((cond == 25) && (st.getQuestItemsCount(BLOODED_FABRIC) > 0)) || (cond == 28))
+			else if (((cond == 25) && (qs.getQuestItemsCount(BLOODED_FABRIC) > 0)) || (cond == 28))
 			{
 				if (cond != 28)
 				{
-					st.setCond(28);
+					qs.setCond(28);
 				}
 				
 				htmltext = "30864-09.htm";
@@ -453,17 +430,17 @@ public class Q00348_AnArrogantSearch extends Quest implements ScriptFile
 			if (ARK_OWNERS.containsKey(npcId))
 			{
 				// first meeting...have the letter
-				if (st.getQuestItemsCount(ARK_OWNERS.get(npcId)[0]) == 1)
+				if (qs.getQuestItemsCount(ARK_OWNERS.get(npcId)[0]) == 1)
 				{
-					st.takeItems(ARK_OWNERS.get(npcId)[0], 1);
+					qs.takeItems(ARK_OWNERS.get(npcId)[0], 1);
 					htmltext = ARK_OWNERS_TEXT.get(npcId)[0];
-					st.getPlayer().sendPacket(new RadarControl(0, 1, ARK_OWNERS.get(npcId)[2], ARK_OWNERS.get(npcId)[3], ARK_OWNERS.get(npcId)[4]));
+					qs.getPlayer().sendPacket(new RadarControl(0, 1, ARK_OWNERS.get(npcId)[2], ARK_OWNERS.get(npcId)[3], ARK_OWNERS.get(npcId)[4]));
 				}
 				// do not have letter and do not have the item
-				else if (st.getQuestItemsCount(ARK_OWNERS.get(npcId)[1]) < 1)
+				else if (qs.getQuestItemsCount(ARK_OWNERS.get(npcId)[1]) < 1)
 				{
 					htmltext = ARK_OWNERS_TEXT.get(npcId)[1];
-					st.getPlayer().sendPacket(new RadarControl(0, 1, ARK_OWNERS.get(npcId)[2], ARK_OWNERS.get(npcId)[3], ARK_OWNERS.get(npcId)[4]));
+					qs.getPlayer().sendPacket(new RadarControl(0, 1, ARK_OWNERS.get(npcId)[2], ARK_OWNERS.get(npcId)[3], ARK_OWNERS.get(npcId)[4]));
 				}
 				else
 				// have the item (done)
@@ -474,17 +451,17 @@ public class Q00348_AnArrogantSearch extends Quest implements ScriptFile
 			else if (ARKS.containsKey(npcId))
 			{
 				// if you do not have the key (first meeting)
-				if (st.getQuestItemsCount(ARKS.get(npcId)[0]) == 0)
+				if (qs.getQuestItemsCount(ARKS.get(npcId)[0]) == 0)
 				{
 					if (ARKS.get(npcId)[1] != 0)
 					{
-						st.addSpawn(ARKS.get(npcId)[1], 120000);
+						qs.addSpawn(ARKS.get(npcId)[1], 120000);
 					}
 					
 					return ARKS_TEXT.get(npcId)[0];
 				}
 				// if the player already has openned the chest and has its content, show "chest empty"
-				else if (st.getQuestItemsCount(ARKS.get(npcId)[2]) == 1)
+				else if (qs.getQuestItemsCount(ARKS.get(npcId)[2]) == 1)
 				{
 					htmltext = ARKS_TEXT.get(npcId)[2];
 				}
@@ -492,21 +469,21 @@ public class Q00348_AnArrogantSearch extends Quest implements ScriptFile
 				// the player has the key and doesn't have the contents, give the contents
 				{
 					htmltext = ARKS_TEXT.get(npcId)[1];
-					st.takeItems(ARKS.get(npcId)[0], 1);
-					st.giveItems(ARKS.get(npcId)[2], 1);
+					qs.takeItems(ARKS.get(npcId)[0], 1);
+					qs.giveItems(ARKS.get(npcId)[2], 1);
 				}
 			}
 			else if (npcId == ARK_GUARDIANS_CORPSE)
 			// if you do not have the key (first meeting)
 			{
-				if ((st.getQuestItemsCount(FIRST_KEY_OF_ARK) == 0) && (st.getInt("angelKillerIsDefeated") == 0))
+				if ((qs.getQuestItemsCount(FIRST_KEY_OF_ARK) == 0) && (qs.getInt("angelKillerIsDefeated") == 0))
 				{
-					st.addSpawn(ANGEL_KILLER, 120000);
+					qs.addSpawn(ANGEL_KILLER, 120000);
 					htmltext = "30980-01.htm";
 				}
-				else if ((st.getQuestItemsCount(FIRST_KEY_OF_ARK) == 0) && (st.getInt("angelKillerIsDefeated") == 1))
+				else if ((qs.getQuestItemsCount(FIRST_KEY_OF_ARK) == 0) && (qs.getInt("angelKillerIsDefeated") == 1))
 				{
-					st.giveItems(FIRST_KEY_OF_ARK, 1);
+					qs.giveItems(FIRST_KEY_OF_ARK, 1);
 					htmltext = "30980-02.htm";
 				}
 				else
@@ -520,9 +497,9 @@ public class Q00348_AnArrogantSearch extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		Integer[] drop = DROPS.get(npcId);
 		
 		if (drop != null)
@@ -533,17 +510,17 @@ public class Q00348_AnArrogantSearch extends Quest implements ScriptFile
 			int chance = drop[3];
 			int take = drop[4];
 			
-			if ((st.getCond() >= cond) && (st.getQuestItemsCount(item) < max) && ((take == 0) || (st.getQuestItemsCount(take) > 0)) && Rnd.chance(chance))
+			if ((qs.getCond() >= cond) && (qs.getQuestItemsCount(item) < max) && ((take == 0) || (qs.getQuestItemsCount(take) > 0)) && Rnd.chance(chance))
 			{
-				st.giveItems(item, 1);
-				st.playSound(SOUND_ITEMGET);
+				qs.giveItems(item, 1);
+				qs.playSound(SOUND_ITEMGET);
 				
 				if (take != 0)
 				{
-					st.takeItems(take, 1);
+					qs.takeItems(take, 1);
 				}
 				
-				if ((BLOODED_FABRIC == item) && (st.getQuestItemsCount(BLOODED_FABRIC) >= 30))
+				if ((BLOODED_FABRIC == item) && (qs.getQuestItemsCount(BLOODED_FABRIC) >= 30))
 				{
 				}
 			}
@@ -551,9 +528,24 @@ public class Q00348_AnArrogantSearch extends Quest implements ScriptFile
 		
 		if (npcId == ANGEL_KILLER)
 		{
-			return "Ha, that was fun! If you wish to find the key, search the corpse";
+			return "Ha, that was fun! If you wish to find the key, search the corpse.";
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

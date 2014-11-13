@@ -86,116 +86,119 @@ public class Q00453_NotStrongEnoughAlone extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("klemis_q453_03.htm"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("bistakon"))
-		{
-			htmltext = "klemis_q453_05.htm";
-			st.setCond(2);
-		}
-		else if (event.equalsIgnoreCase("reptilicon"))
-		{
-			htmltext = "klemis_q453_06.htm";
-			st.setCond(3);
-		}
-		else if (event.equalsIgnoreCase("cokrakon"))
-		{
-			htmltext = "klemis_q453_07.htm";
-			st.setCond(4);
+			case "klemis_q453_03.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "bistakon":
+				htmltext = "klemis_q453_05.htm";
+				qs.setCond(2);
+				break;
+			
+			case "reptilicon":
+				htmltext = "klemis_q453_06.htm";
+				qs.setCond(3);
+				break;
+			
+			case "cokrakon":
+				htmltext = "klemis_q453_07.htm";
+				qs.setCond(4);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
 		
-		if (npcId == Klemis)
+		switch (npcId)
 		{
-			switch (st.getState())
-			{
-				case CREATED:
+			case Klemis:
+				switch (qs.getState())
 				{
-					QuestState qs = st.getPlayer().getQuestState(Q10282_ToTheSeedOfAnnihilation.class);
-					
-					if ((st.getPlayer().getLevel() >= 84) && (qs != null) && qs.isCompleted())
+					case CREATED:
 					{
-						if (st.isNowAvailableByTime())
+						QuestState state = qs.getPlayer().getQuestState(Q10282_ToTheSeedOfAnnihilation.class);
+						
+						if ((qs.getPlayer().getLevel() >= 84) && (state != null) && state.isCompleted())
 						{
-							htmltext = "klemis_q453_01.htm";
+							if (qs.isNowAvailableByTime())
+							{
+								htmltext = "klemis_q453_01.htm";
+							}
+							else
+							{
+								htmltext = "klemis_q453_00a.htm";
+							}
 						}
 						else
 						{
-							htmltext = "klemis_q453_00a.htm";
+							htmltext = "klemis_q453_00.htm";
 						}
+						
+						break;
 					}
-					else
+					case STARTED:
 					{
-						htmltext = "klemis_q453_00.htm";
+						switch (cond)
+						{
+							case 1:
+								htmltext = "klemis_q453_03.htm";
+								break;
+							
+							case 2:
+								htmltext = "klemis_q453_09.htm";
+								break;
+							
+							case 3:
+								htmltext = "klemis_q453_10.htm";
+								break;
+							
+							case 4:
+								htmltext = "klemis_q453_11.htm";
+								break;
+							
+							case 5:
+								htmltext = "klemis_q453_12.htm";
+								qs.giveItems(Rewards[Rnd.get(Rewards.length)], 1, false);
+								qs.setState(COMPLETED);
+								qs.playSound(SOUND_FINISH);
+								qs.exitCurrentQuest(this);
+								break;
+						}
+						
+						break;
 					}
-					
-					break;
 				}
-				
-				case STARTED:
-				{
-					if (cond == 1)
-					{
-						htmltext = "klemis_q453_03.htm";
-					}
-					else if (cond == 2)
-					{
-						htmltext = "klemis_q453_09.htm";
-					}
-					else if (cond == 3)
-					{
-						htmltext = "klemis_q453_10.htm";
-					}
-					else if (cond == 4)
-					{
-						htmltext = "klemis_q453_11.htm";
-					}
-					else if (cond == 5)
-					{
-						htmltext = "klemis_q453_12.htm";
-						st.giveItems(Rewards[Rnd.get(Rewards.length)], 1, false);
-						st.setState(COMPLETED);
-						st.playSound(SOUND_FINISH);
-						st.exitCurrentQuest(this);
-					}
-					
-					break;
-				}
-			}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		boolean doneKill = updateKill(npc, st);
-		
-		if (doneKill)
+		if (updateKill(npc, qs))
 		{
-			st.unset(A_MOBS);
-			st.unset(B_MOBS);
-			st.unset(C_MOBS);
-			st.unset(E_MOBS);
-			st.setCond(5);
+			qs.unset(A_MOBS);
+			qs.unset(B_MOBS);
+			qs.unset(C_MOBS);
+			qs.unset(E_MOBS);
+			qs.setCond(5);
 		}
 		
 		return null;

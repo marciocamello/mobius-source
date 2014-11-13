@@ -13,7 +13,6 @@
 package quests;
 
 import lineage2.commons.util.Rnd;
-import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
@@ -22,17 +21,21 @@ import lineage2.gameserver.utils.Util;
 
 public class Q00491_InNominePatris extends Quest implements ScriptFile
 {
-	private static final int chance = 50;
+	// Npc
+	private static final int Sirik = 33649;
+	// Item
 	private static final int Fragment = 34768;
-	private static final int[] mobstohunt =
+	// Monsters
+	private static final int[] Monsters =
 	{
 		23181,
 		23182,
 		23183,
 		23184
 	};
-	private static final int sirik = 33649;
-	private static final int[] classesav =
+	// Others
+	private static final int Chance = 50;
+	private static final int[] Classes =
 	{
 		88,
 		89,
@@ -72,6 +75,107 @@ public class Q00491_InNominePatris extends Quest implements ScriptFile
 		133
 	};
 	
+	public Q00491_InNominePatris()
+	{
+		super(PARTY_ONE);
+		addStartNpc(Sirik);
+		addTalkId(Sirik);
+		addKillId(Monsters);
+		addQuestItem(Fragment);
+		addLevelCheck(76, 81);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "quest_ac":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				htmltext = "0-4.htm";
+				break;
+			
+			case "qet_rev":
+				htmltext = "0-7.htm";
+				qs.takeAllItems(Fragment);
+				qs.exitCurrentQuest(this);
+				qs.playSound(SOUND_FINISH);
+				if (Rnd.chance(50))
+				{
+					qs.getPlayer().addExpAndSp(19000000, 21328000);
+				}
+				else
+				{
+					qs.getPlayer().addExpAndSp(14000000, 15171500);
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		
+		switch (qs.getCond())
+		{
+			case 0:
+				if (Util.contains(Classes, qs.getPlayer().getClassId().getId()))
+				{
+					if (isAvailableFor(qs.getPlayer()))
+					{
+						if (qs.isNowAvailableByTime())
+						{
+							htmltext = "start.htm";
+						}
+						else
+						{
+							htmltext = "0-c.htm";
+						}
+					}
+					else
+					{
+						htmltext = "0-nc.htm";
+					}
+				}
+				break;
+			
+			case 1:
+				htmltext = "0-5.htm";
+				break;
+			
+			case 2:
+				htmltext = "0-6.htm";
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if ((qs.getCond() == 1) && Util.contains(Monsters, npc.getId()) && (qs.getQuestItemsCount(Fragment) < 50))
+		{
+			qs.rollAndGive(Fragment, 1, Chance);
+			qs.playSound(SOUND_ITEMGET);
+		}
+		
+		if (qs.getQuestItemsCount(Fragment) >= 50)
+		{
+			qs.setCond(2);
+			qs.playSound(SOUND_MIDDLE);
+		}
+		
+		return null;
+	}
+	
 	@Override
 	public void onLoad()
 	{
@@ -85,110 +189,5 @@ public class Q00491_InNominePatris extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00491_InNominePatris()
-	{
-		super(PARTY_ONE);
-		addStartNpc(sirik);
-		addTalkId(sirik);
-		addKillId(mobstohunt);
-		addQuestItem(Fragment);
-		addLevelCheck(76, 81);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("quest_ac"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			htmltext = "0-4.htm";
-		}
-		
-		if (event.equalsIgnoreCase("qet_rev"))
-		{
-			htmltext = "0-7.htm";
-			st.takeAllItems(Fragment);
-			st.exitCurrentQuest(this);
-			st.playSound(SOUND_FINISH);
-			
-			if (Rnd.chance(50))
-			{
-				st.getPlayer().addExpAndSp(19000000, 21328000);
-			}
-			else
-			{
-				st.getPlayer().addExpAndSp(14000000, 15171500);
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		Player player = st.getPlayer();
-		int classid = player.getClassId().getId();
-		
-		if (npcId == sirik)
-		{
-			if ((cond == 0) && Util.contains(classesav, classid))
-			{
-				if (isAvailableFor(st.getPlayer()))
-				{
-					if (st.isNowAvailableByTime())
-					{
-						htmltext = "start.htm";
-					}
-					else
-					{
-						htmltext = "0-c.htm";
-					}
-				}
-				else
-				{
-					htmltext = "0-nc.htm";
-				}
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-5.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "0-6.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		
-		if ((st.getCond() == 1) && Util.contains(mobstohunt, npcId) && (st.getQuestItemsCount(Fragment) < 50))
-		{
-			st.rollAndGive(Fragment, 1, chance);
-			st.playSound(SOUND_ITEMGET);
-		}
-		
-		if (st.getQuestItemsCount(Fragment) >= 50)
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		return null;
 	}
 }

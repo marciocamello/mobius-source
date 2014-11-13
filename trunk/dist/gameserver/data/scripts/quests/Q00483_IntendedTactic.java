@@ -13,7 +13,6 @@
 package quests;
 
 import lineage2.commons.util.Rnd;
-import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
@@ -22,37 +21,154 @@ import lineage2.gameserver.utils.Util;
 
 public class Q00483_IntendedTactic extends Quest implements ScriptFile
 {
-	private static final int CON1 = 33357;
-	private static final int CON2 = 17736;
-	private static final int CON3 = 17737;
-	private static final int CON4 = 17624;
-	private static final int[] CON5 =
+	// Npc
+	private static final int ENDE = 33357;
+	// Items
+	private static final int LOYAL_SERVANTS_BLOOD = 17736;
+	private static final int TRUTHFUL_ONES_BLOOD = 17737;
+	private static final int TOKEN_OF_INSOLENCE = 17624;
+	// Monsters
+	private static final int[] MONSTERS1 =
 	{
 		23069,
 		23070,
-		23073,
 		23071,
 		23072,
+		23073,
 		23074,
 		23075
 	};
-	private static final int[] CON6 =
+	private static final int[] MONSTERS2 =
 	{
+		25809,
 		25811,
 		25812,
-		25815,
-		25809
+		25815
 	};
 	
 	public Q00483_IntendedTactic()
 	{
 		super(false);
-		addStartNpc(CON1);
-		addTalkId(CON1);
-		addKillId(CON5);
-		addKillId(CON6);
-		addQuestItem(CON3, CON2);
+		addStartNpc(ENDE);
+		addTalkId(ENDE);
+		addKillId(MONSTERS1);
+		addKillId(MONSTERS2);
+		addQuestItem(TRUTHFUL_ONES_BLOOD, LOYAL_SERVANTS_BLOOD);
 		addLevelCheck(48, 99);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		if (event.equals("33357-08.htm"))
+		{
+			qs.setState(STARTED);
+			qs.setCond(1);
+			qs.playSound(SOUND_ACCEPT);
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		
+		switch (qs.getState())
+		{
+			case CREATED:
+				if (qs.getPlayer().getLevel() >= 48)
+				{
+					htmltext = "33357-01.htm";
+				}
+				else
+				{
+					htmltext = "33357-02.htm";
+					qs.exitCurrentQuest(true);
+				}
+				break;
+			
+			case STARTED:
+				if (cond == 1)
+				{
+					htmltext = "33357-09.htm";
+				}
+				else
+				{
+					if (cond == 2)
+					{
+						if ((qs.getQuestItemsCount(LOYAL_SERVANTS_BLOOD) >= 10) && (qs.getQuestItemsCount(TRUTHFUL_ONES_BLOOD) >= 1))
+						{
+							htmltext = "33357-12.htm";
+							qs.addExpAndSp(1500000, 1250000);
+							qs.giveItems(TOKEN_OF_INSOLENCE, 1);
+							qs.exitCurrentQuest(false);
+						}
+						else
+						{
+							if (qs.getQuestItemsCount(LOYAL_SERVANTS_BLOOD) >= 10)
+							{
+								htmltext = "33357-11.htm";
+								qs.addExpAndSp(1500000, 1250000);
+								qs.exitCurrentQuest(false);
+							}
+						}
+					}
+				}
+				break;
+			
+			case COMPLETED:
+				htmltext = "33357-03.htm";
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		switch (qs.getCond())
+		{
+			case 1:
+				if ((Util.contains(MONSTERS1, npc.getId())) && (Rnd.chance(25)))
+				{
+					qs.giveItems(LOYAL_SERVANTS_BLOOD, 1);
+					qs.playSound("SOUND_ITEMGET");
+					
+					if (qs.getQuestItemsCount(LOYAL_SERVANTS_BLOOD) >= 10L)
+					{
+						qs.setCond(2);
+						qs.playSound("SOUND_MIDDLE");
+					}
+				}
+				else if (Util.contains(MONSTERS2, npc.getId()))
+				{
+					if (qs.getQuestItemsCount(TRUTHFUL_ONES_BLOOD) <= 0)
+					{
+						qs.giveItems(TRUTHFUL_ONES_BLOOD, 1);
+						qs.playSound("SOUND_ITEMGET");
+					}
+				}
+				break;
+			
+			case 2:
+				if (Util.contains(MONSTERS2, npc.getId()))
+				{
+					if (qs.getQuestItemsCount(TRUTHFUL_ONES_BLOOD) <= 0)
+					{
+						qs.giveItems(TRUTHFUL_ONES_BLOOD, 1);
+						qs.playSound("SOUND_ITEMGET");
+					}
+				}
+				break;
+		}
+		
+		return null;
 	}
 	
 	@Override
@@ -68,125 +184,5 @@ public class Q00483_IntendedTactic extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("33357-08.htm"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		Player player = st.getPlayer();
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (npcId == CON1)
-		{
-			if (st.getState() == CREATED)
-			{
-				if (player.getLevel() >= 48)
-				{
-					htmltext = "33357-01.htm";
-				}
-				else
-				{
-					htmltext = "33357-02.htm";
-					st.exitCurrentQuest(true);
-				}
-			}
-			
-			if (st.getState() == STARTED)
-			{
-				if (cond == 1)
-				{
-					htmltext = "33357-09.htm";
-				}
-				else
-				{
-					if (cond == 2)
-					{
-						if ((st.getQuestItemsCount(CON2) >= 10) && (st.getQuestItemsCount(CON3) >= 1))
-						{
-							htmltext = "33357-12.htm";
-							st.addExpAndSp(1500000, 1250000);
-							st.giveItems(CON4, 1);
-							st.exitCurrentQuest(false);
-						}
-						else
-						{
-							if (st.getQuestItemsCount(CON2) >= 10)
-							{
-								htmltext = "33357-11.htm";
-								st.addExpAndSp(1500000, 1250000);
-								st.exitCurrentQuest(false);
-							}
-						}
-					}
-				}
-			}
-			
-			if (st.getState() == COMPLETED)
-			{
-				htmltext = "33357-03.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		npc.getId();
-		int cond = st.getCond();
-		
-		if (cond == 1)
-		{
-			if ((Util.contains(CON5, npc.getId())) && (Rnd.chance(25)))
-			{
-				st.giveItems(CON2, 1);
-				st.playSound("SOUND_ITEMGET");
-				
-				if (st.getQuestItemsCount(CON2) >= 10L)
-				{
-					st.setCond(2);
-					st.playSound("SOUND_MIDDLE");
-				}
-			}
-			else if (Util.contains(CON6, npc.getId()))
-			{
-				if (st.getQuestItemsCount(CON3) <= 0)
-				{
-					st.giveItems(CON3, 1);
-					st.playSound("SOUND_ITEMGET");
-				}
-			}
-		}
-		else if (cond == 2)
-		{
-			if (Util.contains(CON6, npc.getId()))
-			{
-				if (st.getQuestItemsCount(CON3) <= 0)
-				{
-					st.giveItems(CON3, 1);
-					st.playSound("SOUND_ITEMGET");
-				}
-			}
-		}
-		
-		return null;
 	}
 }

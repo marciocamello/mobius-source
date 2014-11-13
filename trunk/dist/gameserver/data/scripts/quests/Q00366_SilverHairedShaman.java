@@ -20,13 +20,101 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00366_SilverHairedShaman extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int DIETER = 30111;
+	// Monsters
 	private static final int SAIRON = 20986;
 	private static final int SAIRONS_DOLL = 20987;
 	private static final int SAIRONS_PUPPET = 20988;
+	// Item
+	private static final int SAIRONS_SILVER_HAIR = 5874;
+	// Others
 	private static final int ADENA_PER_ONE = 500;
 	private static final int START_ADENA = 12070;
-	private static final int SAIRONS_SILVER_HAIR = 5874;
+	
+	public Q00366_SilverHairedShaman()
+	{
+		super(false);
+		addStartNpc(DIETER);
+		addKillId(SAIRON, SAIRONS_DOLL, SAIRONS_PUPPET);
+		addQuestItem(SAIRONS_SILVER_HAIR);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "30111-02.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "30111-quit.htm":
+				qs.takeItems(SAIRONS_SILVER_HAIR, -1);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(true);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		int cond = qs.getCond();
+		
+		if (qs.getState() == CREATED)
+		{
+			qs.setCond(0);
+		}
+		else
+		{
+			cond = qs.getCond();
+		}
+		
+		if (cond == 0)
+		{
+			if (qs.getPlayer().getLevel() >= 48)
+			{
+				htmltext = "30111-01.htm";
+			}
+			else
+			{
+				htmltext = "30111-00.htm";
+				qs.exitCurrentQuest(true);
+			}
+		}
+		else if ((cond == 1) && (qs.getQuestItemsCount(SAIRONS_SILVER_HAIR) == 0))
+		{
+			htmltext = "30111-03.htm";
+		}
+		else if ((cond == 1) && (qs.getQuestItemsCount(SAIRONS_SILVER_HAIR) >= 1))
+		{
+			qs.giveItems(ADENA_ID, ((qs.getQuestItemsCount(SAIRONS_SILVER_HAIR) * ADENA_PER_ONE) + START_ADENA));
+			qs.takeItems(SAIRONS_SILVER_HAIR, -1);
+			htmltext = "30111-have.htm";
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if ((qs.getCond() == 1) && Rnd.chance(66))
+		{
+			qs.giveItems(SAIRONS_SILVER_HAIR, 1);
+			qs.playSound(SOUND_MIDDLE);
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -41,96 +129,5 @@ public class Q00366_SilverHairedShaman extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00366_SilverHairedShaman()
-	{
-		super(false);
-		addStartNpc(DIETER);
-		addKillId(SAIRON);
-		addKillId(SAIRONS_DOLL);
-		addKillId(SAIRONS_PUPPET);
-		addQuestItem(SAIRONS_SILVER_HAIR);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("30111-02.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("30111-quit.htm"))
-		{
-			st.takeItems(SAIRONS_SILVER_HAIR, -1);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(true);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int id = st.getState();
-		int cond = st.getCond();
-		
-		if (id == CREATED)
-		{
-			st.setCond(0);
-		}
-		else
-		{
-			cond = st.getCond();
-		}
-		
-		if (npcId == 30111)
-		{
-			if (cond == 0)
-			{
-				if (st.getPlayer().getLevel() >= 48)
-				{
-					htmltext = "30111-01.htm";
-				}
-				else
-				{
-					htmltext = "30111-00.htm";
-					st.exitCurrentQuest(true);
-				}
-			}
-			else if ((cond == 1) && (st.getQuestItemsCount(SAIRONS_SILVER_HAIR) == 0))
-			{
-				htmltext = "30111-03.htm";
-			}
-			else if ((cond == 1) && (st.getQuestItemsCount(SAIRONS_SILVER_HAIR) >= 1))
-			{
-				st.giveItems(ADENA_ID, ((st.getQuestItemsCount(SAIRONS_SILVER_HAIR) * ADENA_PER_ONE) + START_ADENA));
-				st.takeItems(SAIRONS_SILVER_HAIR, -1);
-				htmltext = "30111-have.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		
-		if ((cond == 1) && Rnd.chance(66))
-		{
-			st.giveItems(SAIRONS_SILVER_HAIR, 1);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		return null;
 	}
 }

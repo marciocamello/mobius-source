@@ -324,6 +324,78 @@ public class Q00426_QuestForFishingShot extends Quest implements ScriptFile
 		21544
 	};
 	
+	public Q00426_QuestForFishingShot()
+	{
+		super(true);
+		
+		addStartNpc(31696, 31697, 31989, 32007, 32348);
+		for (int npcId = 31562; npcId <= 31579; npcId++)
+		{
+			addStartNpc(npcId);
+		}
+		
+		addKillId(MOBS);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "4.htm":
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				qs.setCond(1);
+				break;
+			
+			case "3.htm":
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(true);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		
+		if (qs.getState() == CREATED)
+		{
+			htmltext = "1.htm";
+		}
+		else if (qs.getCond() == 1)
+		{
+			htmltext = "2.htm";
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if (Rnd.chance(30))
+		{
+			if (Arrays.binarySearch(HMOBS, npc.getId()) >= 0)
+			{
+				qs.giveItems(SWEET_FLUID, Rnd.get(5) + 1);
+			}
+			else
+			{
+				qs.giveItems(SWEET_FLUID, Rnd.get(3) + 1);
+			}
+			
+			qs.playSound(SOUND_ITEMGET);
+		}
+		
+		return null;
+	}
+	
 	@Override
 	public void onLoad()
 	{
@@ -337,83 +409,5 @@ public class Q00426_QuestForFishingShot extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00426_QuestForFishingShot()
-	{
-		super(true);
-		
-		for (int npcId = 31562; npcId <= 31579; npcId++)
-		{
-			addStartNpc(npcId);
-		}
-		
-		addStartNpc(31696);
-		addStartNpc(31697);
-		addStartNpc(31989);
-		addStartNpc(32007);
-		addStartNpc(32348);
-		addKillId(MOBS);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("4.htm"))
-		{
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-			st.setCond(1);
-		}
-		else if (event.equalsIgnoreCase("3.htm"))
-		{
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(true);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int condition = st.getCond();
-		int id = st.getState();
-		
-		if (id == CREATED)
-		{
-			htmltext = "1.htm";
-		}
-		else if (condition == 1)
-		{
-			htmltext = "2.htm";
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		
-		if (Rnd.chance(30))
-		{
-			if (Arrays.binarySearch(HMOBS, npcId) >= 0)
-			{
-				st.giveItems(SWEET_FLUID, Rnd.get(5) + 1);
-			}
-			else
-			{
-				st.giveItems(SWEET_FLUID, Rnd.get(3) + 1);
-			}
-			
-			st.playSound(SOUND_ITEMGET);
-		}
-		
-		return null;
 	}
 }

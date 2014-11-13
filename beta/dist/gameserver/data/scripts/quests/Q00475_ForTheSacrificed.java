@@ -20,9 +20,13 @@ import lineage2.gameserver.utils.Util;
 
 public class Q00475_ForTheSacrificed extends Quest implements ScriptFile
 {
-	private static final int chance = 80;
-	private static final int ashsw = 19495;
-	private static final int[] mobstohunt =
+	// Npcs
+	private static final int ADVENT = 33463;
+	private static final int ROSS = 30858;
+	// Items
+	private static final int ASH = 19495;
+	// Monsters
+	private static final int[] MONSTERS =
 	{
 		20676,
 		20677,
@@ -36,8 +40,123 @@ public class Q00475_ForTheSacrificed extends Quest implements ScriptFile
 		21115,
 		21116
 	};
-	private static final int advent = 33463;
-	private static final int ross = 30858;
+	// Others
+	private static final int chance = 80;
+	
+	public Q00475_ForTheSacrificed()
+	{
+		super(PARTY_ONE);
+		addStartNpc(ADVENT);
+		addTalkId(ADVENT, ROSS);
+		addKillId(MONSTERS);
+		addQuestItem(ASH);
+		addLevelCheck(65, 69);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		if (event.equals("quest_ac"))
+		{
+			qs.setState(STARTED);
+			qs.setCond(1);
+			qs.playSound(SOUND_ACCEPT);
+			htmltext = "0-4.htm";
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		
+		switch (npc.getId())
+		{
+			case ADVENT:
+				if (cond == 0)
+				{
+					if (isAvailableFor(qs.getPlayer()))
+					{
+						if (qs.isNowAvailableByTime())
+						{
+							htmltext = "0-1.htm";
+						}
+						else
+						{
+							htmltext = "0-c.htm";
+						}
+					}
+					else
+					{
+						htmltext = TODO_FIND_HTML;
+					}
+				}
+				else if ((cond == 1) || (cond == 2))
+				{
+					htmltext = "0-5.htm";
+				}
+				break;
+			
+			case ROSS:
+				if (cond == 0)
+				{
+					if (isAvailableFor(qs.getPlayer()))
+					{
+						if (qs.isNowAvailableByTime())
+						{
+							htmltext = TODO_FIND_HTML;
+						}
+						else
+						{
+							htmltext = "1-c.htm";
+						}
+					}
+					else
+					{
+						htmltext = TODO_FIND_HTML;
+					}
+				}
+				else if (cond == 1)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 2)
+				{
+					htmltext = "1-1.htm";
+					qs.takeAllItems(ASH);
+					qs.exitCurrentQuest(this);
+					qs.playSound(SOUND_FINISH);
+					qs.getPlayer().addExpAndSp(3904500, 2813550);
+					qs.giveItems(57, 118500);
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if ((qs.getCond() == 1) && Util.contains(MONSTERS, npc.getId()) && (qs.getQuestItemsCount(ASH) < 30))
+		{
+			qs.rollAndGive(ASH, 1, chance);
+			qs.playSound(SOUND_ITEMGET);
+		}
+		
+		if (qs.getQuestItemsCount(ASH) >= 30)
+		{
+			qs.setCond(2);
+			qs.playSound(SOUND_MIDDLE);
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -52,122 +171,5 @@ public class Q00475_ForTheSacrificed extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00475_ForTheSacrificed()
-	{
-		super(PARTY_ONE);
-		addStartNpc(advent);
-		addTalkId(advent);
-		addTalkId(ross);
-		addKillId(mobstohunt);
-		addQuestItem(ashsw);
-		addLevelCheck(65, 69);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("quest_ac"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			htmltext = "0-4.htm";
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		
-		if (npcId == advent)
-		{
-			if (cond == 0)
-			{
-				if (isAvailableFor(st.getPlayer()))
-				{
-					if (st.isNowAvailableByTime())
-					{
-						htmltext = "0-1.htm";
-					}
-					else
-					{
-						htmltext = "0-c.htm";
-					}
-				}
-				else
-				{
-					htmltext = TODO_FIND_HTML;
-				}
-			}
-			else if ((cond == 1) || (cond == 2))
-			{
-				htmltext = "0-5.htm";
-			}
-		}
-		else if (npcId == ross)
-		{
-			if (cond == 0)
-			{
-				if (isAvailableFor(st.getPlayer()))
-				{
-					if (st.isNowAvailableByTime())
-					{
-						htmltext = TODO_FIND_HTML;
-					}
-					else
-					{
-						htmltext = "1-c.htm";
-					}
-				}
-				else
-				{
-					htmltext = TODO_FIND_HTML;
-				}
-			}
-			else if (cond == 1)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 2)
-			{
-				htmltext = "1-1.htm";
-				st.takeAllItems(ashsw);
-				st.exitCurrentQuest(this);
-				st.playSound(SOUND_FINISH);
-				st.getPlayer().addExpAndSp(3904500, 2813550);
-				st.giveItems(57, 118500);
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		
-		if ((st.getCond() == 1) && Util.contains(mobstohunt, npcId) && (st.getQuestItemsCount(ashsw) < 30))
-		{
-			st.rollAndGive(ashsw, 1, chance);
-			st.playSound(SOUND_ITEMGET);
-		}
-		
-		if (st.getQuestItemsCount(ashsw) >= 30)
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		return null;
 	}
 }

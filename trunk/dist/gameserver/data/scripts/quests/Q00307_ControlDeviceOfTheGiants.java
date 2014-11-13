@@ -22,12 +22,16 @@ import lineage2.gameserver.utils.Location;
 
 public class Q00307_ControlDeviceOfTheGiants extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int Droph = 32711;
+	// Monster
 	private static final int HekatonPrime = 25687;
+	// Items
 	private static final int DrophsSupportItems = 14850;
 	private static final int CaveExplorationText1Sheet = 14851;
 	private static final int CaveExplorationText2Sheet = 14852;
 	private static final int CaveExplorationText3Sheet = 14853;
+	// Others
 	private static final long HekatonPrimeRespawn = 12 * 3600 * 1000L;
 	private static final Location GorgolosLoc = new Location(186096, 61501, -4075, 0);
 	private static final Location LastTitanUtenusLoc = new Location(186730, 56456, -4555, 0);
@@ -43,78 +47,74 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("droph_q307_2.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-		}
-		else if (event.equalsIgnoreCase("loc1"))
-		{
-			htmltext = "droph_q307_2a_1.htm";
-			RadarControl rc = new RadarControl(0, 1, GorgolosLoc);
-			st.getPlayer().sendPacket(rc);
-		}
-		else if (event.equalsIgnoreCase("loc2"))
-		{
-			htmltext = "droph_q307_2a_2.htm";
-			RadarControl rc = new RadarControl(0, 1, LastTitanUtenusLoc);
-			st.getPlayer().sendPacket(rc);
-		}
-		else if (event.equalsIgnoreCase("loc3"))
-		{
-			htmltext = "droph_q307_2a_3.htm";
-			RadarControl rc = new RadarControl(0, 1, GiantMarpanakLoc);
-			st.getPlayer().sendPacket(rc);
-		}
-		else if (event.equalsIgnoreCase("summon_rb"))
-		{
-			if ((ServerVariables.getLong("HekatonPrimeRespawn", 0) < System.currentTimeMillis()) && (st.getQuestItemsCount(CaveExplorationText1Sheet) >= 1) && (st.getQuestItemsCount(CaveExplorationText2Sheet) >= 1) && (st.getQuestItemsCount(CaveExplorationText3Sheet) >= 1))
-			{
-				st.takeItems(CaveExplorationText1Sheet, 1);
-				st.takeItems(CaveExplorationText2Sheet, 1);
-				st.takeItems(CaveExplorationText3Sheet, 1);
-				ServerVariables.set("HekatonPrimeRespawn", System.currentTimeMillis() + HekatonPrimeRespawn);
-				NpcInstance boss = st.addSpawn(HekatonPrime, HekatonPrimeLoc.getX(), HekatonPrimeLoc.getY(), HekatonPrimeLoc.getZ(), HekatonPrimeLoc.getHeading(), 0, 0);
-				boss.getMinionList().spawnMinions();
-				htmltext = "droph_q307_3a.htm";
-			}
-			else
-			{
-				htmltext = "droph_q307_2b.htm";
-			}
+			case "droph_q307_2.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				break;
+			
+			case "loc1":
+				htmltext = "droph_q307_2a_1.htm";
+				qs.getPlayer().sendPacket(new RadarControl(0, 1, GorgolosLoc));
+				break;
+			
+			case "loc2":
+				htmltext = "droph_q307_2a_2.htm";
+				qs.getPlayer().sendPacket(new RadarControl(0, 1, LastTitanUtenusLoc));
+				break;
+			
+			case "loc3":
+				htmltext = "droph_q307_2a_3.htm";
+				qs.getPlayer().sendPacket(new RadarControl(0, 1, GiantMarpanakLoc));
+				break;
+			
+			case "summon_rb":
+				if ((ServerVariables.getLong("HekatonPrimeRespawn", 0) < System.currentTimeMillis()) && (qs.getQuestItemsCount(CaveExplorationText1Sheet) >= 1) && (qs.getQuestItemsCount(CaveExplorationText2Sheet) >= 1) && (qs.getQuestItemsCount(CaveExplorationText3Sheet) >= 1))
+				{
+					qs.takeItems(CaveExplorationText1Sheet, 1);
+					qs.takeItems(CaveExplorationText2Sheet, 1);
+					qs.takeItems(CaveExplorationText3Sheet, 1);
+					ServerVariables.set("HekatonPrimeRespawn", System.currentTimeMillis() + HekatonPrimeRespawn);
+					NpcInstance boss = qs.addSpawn(HekatonPrime, HekatonPrimeLoc.getX(), HekatonPrimeLoc.getY(), HekatonPrimeLoc.getZ(), HekatonPrimeLoc.getHeading(), 0, 0);
+					boss.getMinionList().spawnMinions();
+					htmltext = "droph_q307_3a.htm";
+				}
+				else
+				{
+					htmltext = "droph_q307_2b.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
 		
-		if (npcId == Droph)
+		switch (qs.getCond())
 		{
-			if (cond == 0)
-			{
-				if (st.getPlayer().getLevel() >= 79)
+			case 0:
+				if (qs.getPlayer().getLevel() >= 79)
 				{
 					htmltext = "droph_q307_1.htm";
 				}
 				else
 				{
 					htmltext = "droph_q307_0.htm";
-					st.exitCurrentQuest(true);
+					qs.exitCurrentQuest(true);
 				}
-			}
-			else if (cond == 1)
-			{
-				if ((st.getQuestItemsCount(CaveExplorationText1Sheet) >= 1) && (st.getQuestItemsCount(CaveExplorationText2Sheet) >= 1) && (st.getQuestItemsCount(CaveExplorationText3Sheet) >= 1))
+				break;
+			
+			case 1:
+				if ((qs.getQuestItemsCount(CaveExplorationText1Sheet) >= 1) && (qs.getQuestItemsCount(CaveExplorationText2Sheet) >= 1) && (qs.getQuestItemsCount(CaveExplorationText3Sheet) >= 1))
 				{
 					if (ServerVariables.getLong("HekatonPrimeRespawn", 0) < System.currentTimeMillis())
 					{
@@ -129,28 +129,25 @@ public class Q00307_ControlDeviceOfTheGiants extends Quest implements ScriptFile
 				{
 					htmltext = "droph_q307_2a.htm";
 				}
-			}
-			else if (cond == 2)
-			{
+				break;
+			
+			case 2:
 				htmltext = "droph_q307_5.htm";
-				st.giveItems(DrophsSupportItems, 1);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(true);
-			}
+				qs.giveItems(DrophsSupportItems, 1);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(true);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if ((cond == 1) && (npcId == HekatonPrime))
+		if (qs.getCond() == 1)
 		{
-			st.setCond(2);
+			qs.setCond(2);
 		}
 		
 		return null;

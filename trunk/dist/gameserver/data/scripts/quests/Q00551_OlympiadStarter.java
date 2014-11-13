@@ -21,7 +21,9 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00551_OlympiadStarter extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int OLYMPIAD_MANAGER = 31688;
+	// Items
 	private static final int MEDAL_OF_GLORY = 21874;
 	private static final int OLYMPIAD_CHEST = 32263;
 	private static final int OLYMPIAD_CERT1 = 17238;
@@ -37,45 +39,42 @@ public class Q00551_OlympiadStarter extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		
-		switch (npcId)
+		switch (npc.getId())
 		{
 			case OLYMPIAD_MANAGER:
-				Player player = st.getPlayer();
+				final Player player = qs.getPlayer();
 				
 				if (!player.isNoble() || (player.getLevel() < 75) || (player.getClassLevel() < 4))
 				{
 					return "olympiad_operator_q0551_08.htm";
 				}
-				
-				if (st.isCreated())
+				else if (qs.isCreated())
 				{
-					if (st.isNowAvailableByTime())
+					if (qs.isNowAvailableByTime())
 					{
 						return "olympiad_operator_q0551_01.htm";
 					}
 					
 					return "olympiad_operator_q0551_06.htm";
 				}
-				else if (st.isStarted())
+				else if (qs.isStarted())
 				{
-					if (st.getQuestItemsCount(OLYMPIAD_CERT1, OLYMPIAD_CERT2, OLYMPIAD_CERT3) == 0)
+					if (qs.getQuestItemsCount(OLYMPIAD_CERT1, OLYMPIAD_CERT2, OLYMPIAD_CERT3) == 0)
 					{
 						return "olympiad_operator_q0551_04.htm";
 					}
 					
-					if (st.getQuestItemsCount(OLYMPIAD_CERT3) > 0)
+					if (qs.getQuestItemsCount(OLYMPIAD_CERT3) > 0)
 					{
-						st.giveItems(OLYMPIAD_CHEST, 2);
-						st.giveItems(MEDAL_OF_GLORY, 5);
-						st.takeItems(OLYMPIAD_CERT1, -1);
-						st.takeItems(OLYMPIAD_CERT2, -1);
-						st.takeItems(OLYMPIAD_CERT3, -1);
-						st.playSound(SOUND_FINISH);
-						st.exitCurrentQuest(this);
+						qs.giveItems(OLYMPIAD_CHEST, 2);
+						qs.giveItems(MEDAL_OF_GLORY, 5);
+						qs.takeItems(OLYMPIAD_CERT1, -1);
+						qs.takeItems(OLYMPIAD_CERT2, -1);
+						qs.takeItems(OLYMPIAD_CERT3, -1);
+						qs.playSound(SOUND_FINISH);
+						qs.exitCurrentQuest(this);
 						return "olympiad_operator_q0551_07.htm";
 					}
 					
@@ -89,47 +88,49 @@ public class Q00551_OlympiadStarter extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		if (event.equalsIgnoreCase("olympiad_operator_q0551_03.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("olympiad_operator_q0551_07.htm"))
-		{
-			if (st.getQuestItemsCount(OLYMPIAD_CERT3) > 0)
-			{
-				st.giveItems(OLYMPIAD_CHEST, 2);
-				Player player = st.getPlayer();
-				player.setFame(player.getFame() + 10000, "quest olympiad");
-				st.takeItems(OLYMPIAD_CERT1, -1);
-				st.takeItems(OLYMPIAD_CERT2, -1);
-				st.takeItems(OLYMPIAD_CERT3, -1);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(this);
-			}
-			else if (st.getQuestItemsCount(OLYMPIAD_CERT2) > 0)
-			{
-				st.giveItems(OLYMPIAD_CHEST, 2);
-				Player player = st.getPlayer();
-				player.setFame(player.getFame() + 6000, "quest olympiad");
-				st.takeItems(OLYMPIAD_CERT1, -1);
-				st.takeItems(OLYMPIAD_CERT2, -1);
-				st.takeItems(OLYMPIAD_CERT3, -1);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(this);
-			}
-			else if (st.getQuestItemsCount(OLYMPIAD_CERT1) > 0)
-			{
-				st.giveItems(OLYMPIAD_CHEST, 1);
-				st.takeItems(OLYMPIAD_CERT1, -1);
-				st.takeItems(OLYMPIAD_CERT2, -1);
-				st.takeItems(OLYMPIAD_CERT3, -1);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(this);
-			}
+			case "olympiad_operator_q0551_03.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "olympiad_operator_q0551_07.htm":
+				if (qs.getQuestItemsCount(OLYMPIAD_CERT3) > 0)
+				{
+					qs.giveItems(OLYMPIAD_CHEST, 2);
+					Player player = qs.getPlayer();
+					player.setFame(player.getFame() + 10000, "quest olympiad");
+					qs.takeItems(OLYMPIAD_CERT1, -1);
+					qs.takeItems(OLYMPIAD_CERT2, -1);
+					qs.takeItems(OLYMPIAD_CERT3, -1);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(this);
+				}
+				else if (qs.getQuestItemsCount(OLYMPIAD_CERT2) > 0)
+				{
+					qs.giveItems(OLYMPIAD_CHEST, 2);
+					Player player = qs.getPlayer();
+					player.setFame(player.getFame() + 6000, "quest olympiad");
+					qs.takeItems(OLYMPIAD_CERT1, -1);
+					qs.takeItems(OLYMPIAD_CERT2, -1);
+					qs.takeItems(OLYMPIAD_CERT3, -1);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(this);
+				}
+				else if (qs.getQuestItemsCount(OLYMPIAD_CERT1) > 0)
+				{
+					qs.giveItems(OLYMPIAD_CHEST, 1);
+					qs.takeItems(OLYMPIAD_CERT1, -1);
+					qs.takeItems(OLYMPIAD_CERT2, -1);
+					qs.takeItems(OLYMPIAD_CERT3, -1);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(this);
+				}
+				break;
 		}
 		
 		return event;
@@ -140,7 +141,7 @@ public class Q00551_OlympiadStarter extends Quest implements ScriptFile
 	{
 		if (qs.getCond() == 1)
 		{
-			int count = qs.getInt("count") + 1;
+			final int count = qs.getInt("count") + 1;
 			qs.set("count", count);
 			
 			if (count == 3)

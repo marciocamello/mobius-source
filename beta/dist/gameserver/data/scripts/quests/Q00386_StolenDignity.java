@@ -337,41 +337,41 @@ public class Q00386_StolenDignity extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		if (event.equalsIgnoreCase("warehouse_keeper_romp_q0386_05.htm"))
+		if (event.equals("warehouse_keeper_romp_q0386_05.htm"))
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
+			qs.setState(STARTED);
+			qs.setCond(1);
+			qs.playSound(SOUND_ACCEPT);
 		}
-		else if (event.equalsIgnoreCase("warehouse_keeper_romp_q0386_08.htm"))
+		else if (event.equals("warehouse_keeper_romp_q0386_08.htm"))
 		{
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(true);
+			qs.playSound(SOUND_FINISH);
+			qs.exitCurrentQuest(true);
 		}
-		else if (event.equalsIgnoreCase("game"))
+		else if (event.equals("game"))
 		{
-			if (st.getQuestItemsCount(Stolen_Infernium_Ore) < Required_Stolen_Infernium_Ore)
+			if (qs.getQuestItemsCount(Stolen_Infernium_Ore) < Required_Stolen_Infernium_Ore)
 			{
 				return "warehouse_keeper_romp_q0386_11.htm";
 			}
 			
-			st.takeItems(Stolen_Infernium_Ore, Required_Stolen_Infernium_Ore);
-			int char_obj_id = st.getPlayer().getObjectId();
+			qs.takeItems(Stolen_Infernium_Ore, Required_Stolen_Infernium_Ore);
+			int char_obj_id = qs.getPlayer().getObjectId();
 			
 			if (bingos.containsKey(char_obj_id))
 			{
 				bingos.remove(char_obj_id);
 			}
 			
-			Bingo bingo = new Bingo(st);
+			Bingo bingo = new Bingo(qs);
 			bingos.put(char_obj_id, bingo);
 			return bingo.getDialog("");
 		}
 		else if (event.contains("choice-"))
 		{
-			int char_obj_id = st.getPlayer().getObjectId();
+			int char_obj_id = qs.getPlayer().getObjectId();
 			
 			if (!bingos.containsKey(char_obj_id))
 			{
@@ -386,26 +386,26 @@ public class Q00386_StolenDignity extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		if (st.getState() == CREATED)
+		if (qs.getState() == CREATED)
 		{
-			if (st.getPlayer().getLevel() < 58)
+			if (qs.getPlayer().getLevel() < 58)
 			{
-				st.exitCurrentQuest(true);
+				qs.exitCurrentQuest(true);
 				return "warehouse_keeper_romp_q0386_04.htm";
 			}
 			
 			return "warehouse_keeper_romp_q0386_01.htm";
 		}
 		
-		return st.getQuestItemsCount(Stolen_Infernium_Ore) < Required_Stolen_Infernium_Ore ? "warehouse_keeper_romp_q0386_06.htm" : "warehouse_keeper_romp_q0386_07.htm";
+		return qs.getQuestItemsCount(Stolen_Infernium_Ore) < Required_Stolen_Infernium_Ore ? "warehouse_keeper_romp_q0386_06.htm" : "warehouse_keeper_romp_q0386_07.htm";
 	}
 	
 	@Override
 	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		Integer _chance = dropchances.get(npc.getId());
+		final Integer _chance = dropchances.get(npc.getId());
 		
 		if (_chance != null)
 		{
@@ -413,21 +413,6 @@ public class Q00386_StolenDignity extends Quest implements ScriptFile
 		}
 		
 		return null;
-	}
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
 	}
 	
 	public static class Bingo extends quests.Bingo
@@ -469,5 +454,20 @@ public class Q00386_StolenDignity extends Quest implements ScriptFile
 			int[] r = rew[Rnd.get(rew.length)];
 			_qs.giveItems(r[0], r[1], false);
 		}
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

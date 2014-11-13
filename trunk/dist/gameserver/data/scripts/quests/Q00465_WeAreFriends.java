@@ -24,6 +24,7 @@ import lineage2.gameserver.utils.Location;
 public class Q00465_WeAreFriends extends Quest implements ScriptFile
 {
 	public static final int FEYA_STARTER = 32921;
+	public static final int FAIRY_CITIZEN = 32922;
 	public static final int COCON = 32919;
 	public static final int HUGE_COCON = 32920;
 	public static final int SIGN_OF_GRATITUDE = 17377;
@@ -33,92 +34,60 @@ public class Q00465_WeAreFriends extends Quest implements ScriptFile
 	{
 		super(true);
 		addStartNpc(FEYA_STARTER);
-		addTalkId(new int[]
-		{
-			32922
-		});
-		addFirstTalkId(new int[]
-		{
-			32922
-		});
-		addKillId(new int[]
-		{
-			COCON
-		});
-		addKillId(new int[]
-		{
-			HUGE_COCON
-		});
-		addQuestItem(new int[]
-		{
-			SIGN_OF_GRATITUDE
-		});
+		addTalkId(FAIRY_CITIZEN);
+		addFirstTalkId(FAIRY_CITIZEN);
+		addKillId(COCON, HUGE_COCON);
+		addQuestItem(SIGN_OF_GRATITUDE);
 		addLevelCheck(90, 99);
 	}
 	
 	@Override
-	public void onShutdown()
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		st.getPlayer();
+		qs.getPlayer();
 		
-		if (event.equalsIgnoreCase("32921-4.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(2);
-			st.playSound("ItemSound.quest_accept");
-		}
-		
-		if (event.equalsIgnoreCase("32922-4.htm"))
-		{
-			st.setCond(2);
-			st.giveItems(17377, 2L);
-			return "despawn_task";
-		}
-		
-		if (event.equalsIgnoreCase("despawn_task"))
-		{
-			if (npcFeya == null)
-			{
+			case "32921-4.htm":
+				qs.setCond(1);
+				qs.setState(2);
+				qs.playSound("ItemSound.quest_accept");
+				break;
+			
+			case "32922-4.htm":
+				qs.setCond(2);
+				qs.giveItems(17377, 2L);
+				return "despawn_task";
+				
+			case "despawn_task":
+				if (npcFeya == null)
+				{
+					return null;
+				}
+				qs.unset("q465feya");
+				npcFeya.deleteMe();
+				npcFeya = null;
 				return null;
-			}
-			
-			st.unset("q465feya");
-			npcFeya.deleteMe();
-			npcFeya = null;
-			return null;
-		}
-		
-		if (event.equalsIgnoreCase("32921-8.htm"))
-		{
-			st.takeItems(17377, 2L);
-			return "reward";
-		}
-		
-		if (event.equalsIgnoreCase("32921-10.htm"))
-		{
-			return "reward";
-		}
-		
-		if (event.equalsIgnoreCase("reward"))
-		{
-			st.giveItems(17378, 1L);
-			st.unset("cond");
-			st.playSound("ItemSound.quest_finish");
-			st.exitCurrentQuest(this);
-			
-			if (st.getQuestItemsCount(17377) > 0L)
-			{
-				st.giveItems(30384, 2L);
-				return "32921-10.htm";
-			}
-			
-			st.giveItems(30384, 4L);
-			return "32921-8.htm";
+				
+			case "32921-8.htm":
+				qs.takeItems(17377, 2L);
+				return "reward";
+				
+			case "32921-10.htm":
+				return "reward";
+				
+			case "reward":
+				qs.giveItems(17378, 1L);
+				qs.unset("cond");
+				qs.playSound("ItemSound.quest_finish");
+				qs.exitCurrentQuest(this);
+				if (qs.getQuestItemsCount(17377) > 0L)
+				{
+					qs.giveItems(30384, 2L);
+					return "32921-10.htm";
+				}
+				qs.giveItems(30384, 4L);
+				return "32921-8.htm";
 		}
 		
 		return event;
@@ -127,19 +96,17 @@ public class Q00465_WeAreFriends extends Quest implements ScriptFile
 	@Override
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
-		QuestState st = player.getQuestState(getClass());
+		final QuestState qs = player.getQuestState(getClass());
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return "32922.htm";
 		}
-		
-		if ((st.get("q465feya") != null) && (Integer.parseInt(st.get("q465feya")) != npc.getObjectId()))
+		else if ((qs.get("q465feya") != null) && (Integer.parseInt(qs.get("q465feya")) != npc.getObjectId()))
 		{
 			return "32922-1.htm";
 		}
-		
-		if (st.get("q465feya") == null)
+		else if (qs.get("q465feya") == null)
 		{
 			return "32922-1.htm";
 		}
@@ -148,12 +115,12 @@ public class Q00465_WeAreFriends extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		Player player = st.getPlayer();
-		int npcId = npc.getId();
-		int state = st.getState();
-		int cond = st.getCond();
+		final Player player = qs.getPlayer();
+		final int npcId = npc.getId();
+		final int state = qs.getState();
+		final int cond = qs.getCond();
 		
 		if (npcId == FEYA_STARTER)
 		{
@@ -163,28 +130,24 @@ public class Q00465_WeAreFriends extends Quest implements ScriptFile
 				{
 					return "32921-lvl.htm";
 				}
-				
-				if (!st.isNowAvailableByTime())
+				else if (!qs.isNowAvailableByTime())
 				{
 					return "32921-comp.htm";
 				}
-				
-				if (st.getPlayer().getLevel() < 90)
+				else if (qs.getPlayer().getLevel() < 90)
 				{
 					return "32921-lvl.htm";
 				}
 				
 				return "32921.htm";
 			}
-			
-			if (state == 2)
+			else if (state == 2)
 			{
 				if (cond == 1)
 				{
 					return "32921-5.htm";
 				}
-				
-				if (cond == 2)
+				else if (cond == 2)
 				{
 					return "32921-6.htm";
 				}
@@ -192,6 +155,24 @@ public class Q00465_WeAreFriends extends Quest implements ScriptFile
 		}
 		
 		return "noquest";
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if (qs.getPlayer() != null)
+		{
+			qs.getPlayer().sendMessage("We Are Friend... ok");
+		}
+		
+		if (Rnd.chance(5))
+		{
+			npcFeya = Functions.spawn(Location.findPointToStay(qs.getPlayer(), 50, 100), 32922);
+			qs.set("q465feya", "" + npcFeya.getObjectId() + "");
+			qs.startQuestTimer("despawn_task", 180000L);
+		}
+		
+		return null;
 	}
 	
 	@Override
@@ -205,20 +186,7 @@ public class Q00465_WeAreFriends extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public void onShutdown()
 	{
-		if (st.getPlayer() != null)
-		{
-			st.getPlayer().sendMessage("onKill We Are Friend... ok");
-		}
-		
-		if (Rnd.chance(5))
-		{
-			npcFeya = Functions.spawn(Location.findPointToStay(st.getPlayer(), 50, 100), 32922);
-			st.set("q465feya", "" + npcFeya.getObjectId() + "");
-			st.startQuestTimer("despawn_task", 180000L);
-		}
-		
-		return null;
 	}
 }

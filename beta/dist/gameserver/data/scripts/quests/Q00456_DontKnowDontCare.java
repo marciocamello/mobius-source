@@ -106,124 +106,116 @@ public class Q00456_DontKnowDontCare extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("sepsoul_q456_05.htm"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("take_essense"))
-		{
-			if (st.getCond() == 1)
-			{
-				switch (npc.getId())
+			case "sepsoul_q456_05.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "take_essense":
+				if (qs.getCond() == 1)
 				{
-					case DrakeLordCorpse:
-						if (st.getQuestItemsCount(DrakeLordsEssence) < 1)
-						{
-							st.giveItems(DrakeLordsEssence, 1);
-						}
+					switch (npc.getId())
+					{
+						case DrakeLordCorpse:
+							if (qs.getQuestItemsCount(DrakeLordsEssence) < 1)
+							{
+								qs.giveItems(DrakeLordsEssence, 1);
+							}
+							break;
 						
-						break;
-					
-					case BehemothLeaderCorpse:
-						if (st.getQuestItemsCount(BehemothLeadersEssence) < 1)
-						{
-							st.giveItems(BehemothLeadersEssence, 1);
-						}
+						case BehemothLeaderCorpse:
+							if (qs.getQuestItemsCount(BehemothLeadersEssence) < 1)
+							{
+								qs.giveItems(BehemothLeadersEssence, 1);
+							}
+							break;
 						
-						break;
-					
-					case DragonBeastCorpse:
-						if (st.getQuestItemsCount(DragonBeastsEssence) < 1)
-						{
-							st.giveItems(DragonBeastsEssence, 1);
-						}
+						case DragonBeastCorpse:
+							if (qs.getQuestItemsCount(DragonBeastsEssence) < 1)
+							{
+								qs.giveItems(DragonBeastsEssence, 1);
+							}
+							break;
 						
-						break;
+						default:
+							break;
+					}
 					
-					default:
-						break;
+					if ((qs.getQuestItemsCount(DrakeLordsEssence) > 0) && (qs.getQuestItemsCount(BehemothLeadersEssence) > 0) && (qs.getQuestItemsCount(DragonBeastsEssence) > 0))
+					{
+						qs.setCond(2);
+					}
 				}
+				return null;
 				
-				if ((st.getQuestItemsCount(DrakeLordsEssence) > 0) && (st.getQuestItemsCount(BehemothLeadersEssence) > 0) && (st.getQuestItemsCount(DragonBeastsEssence) > 0))
+			case "sepsoul_q456_08.htm":
+				qs.takeAllItems(DrakeLordsEssence);
+				qs.takeAllItems(BehemothLeadersEssence);
+				qs.takeAllItems(DragonBeastsEssence);
+				if (Rnd.chance(30))
 				{
-					st.setCond(2);
+					qs.giveItems(weapons[Rnd.get(weapons.length)], 1);
 				}
-			}
-			
-			return null;
-		}
-		else if (event.equalsIgnoreCase("sepsoul_q456_08.htm"))
-		{
-			st.takeAllItems(DrakeLordsEssence);
-			st.takeAllItems(BehemothLeadersEssence);
-			st.takeAllItems(DragonBeastsEssence);
-			
-			if (Rnd.chance(30))
-			{
-				st.giveItems(weapons[Rnd.get(weapons.length)], 1);
-			}
-			else if (Rnd.chance(50))
-			{
-				st.giveItems(armors[Rnd.get(armors.length)], 1);
-			}
-			else
-			{
-				st.giveItems(accessory[Rnd.get(accessory.length)], 1);
-			}
-			
-			if (Rnd.chance(30))
-			{
-				st.giveItems(scrolls[Rnd.get(scrolls.length)], 1);
-			}
-			
-			if (Rnd.chance(70))
-			{
-				st.giveItems(reward_attr_crystal[Rnd.get(reward_attr_crystal.length)], 1);
-			}
-			
-			st.giveItems(gemstone_s, 3);
-			st.setState(COMPLETED);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(this);
+				else if (Rnd.chance(50))
+				{
+					qs.giveItems(armors[Rnd.get(armors.length)], 1);
+				}
+				else
+				{
+					qs.giveItems(accessory[Rnd.get(accessory.length)], 1);
+				}
+				if (Rnd.chance(30))
+				{
+					qs.giveItems(scrolls[Rnd.get(scrolls.length)], 1);
+				}
+				if (Rnd.chance(70))
+				{
+					qs.giveItems(reward_attr_crystal[Rnd.get(reward_attr_crystal.length)], 1);
+				}
+				qs.giveItems(gemstone_s, 3);
+				qs.setState(COMPLETED);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(this);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int cond = st.getCond();
+		final int cond = qs.getCond();
 		
 		if (Util.contains(SeparatedSoul, npc.getId()))
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case CREATED:
-					if (st.isNowAvailableByTime())
+					if (qs.isNowAvailableByTime())
 					{
-						if (st.getPlayer().getLevel() >= 80)
+						if (qs.getPlayer().getLevel() >= 80)
 						{
 							htmltext = "sepsoul_q456_01.htm";
 						}
 						else
 						{
 							htmltext = "sepsoul_q456_00.htm";
-							st.exitCurrentQuest(true);
+							qs.exitCurrentQuest(true);
 						}
 					}
 					else
 					{
 						htmltext = "sepsoul_q456_00a.htm";
 					}
-					
 					break;
 				
 				case STARTED:
@@ -235,7 +227,6 @@ public class Q00456_DontKnowDontCare extends Quest implements ScriptFile
 					{
 						htmltext = "sepsoul_q456_07.htm";
 					}
-					
 					break;
 			}
 		}

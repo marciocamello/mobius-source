@@ -21,14 +21,14 @@ import lineage2.gameserver.utils.Util;
 
 public class Q00474_WaitingForTheSummer extends Quest implements ScriptFile
 {
-	// npc
+	// Npcs
 	private static final int GUIDE = 33463;
 	private static final int VISHOTSKY = 31981;
-	// q items
+	// Items
 	private static final int BUFFALO_MEAT = 19490;
 	private static final int URSUS_MEAT = 19491;
 	private static final int YETI_MIAT = 19492;
-	// mobs
+	// Monsters
 	private static final int[] BUFFALO =
 	{
 		22093,
@@ -45,21 +45,6 @@ public class Q00474_WaitingForTheSummer extends Quest implements ScriptFile
 		22098
 	};
 	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public Q00474_WaitingForTheSummer()
 	{
 		super(false);
@@ -73,41 +58,37 @@ public class Q00474_WaitingForTheSummer extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		st.getPlayer();
-		
-		if (event.equalsIgnoreCase("33463-3.htm"))
+		if (event.equals("33463-3.htm"))
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.playSound(SOUND_ACCEPT);
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		st.getPlayer();
-		int npcId = npc.getId();
-		int state = st.getState();
-		int cond = st.getCond();
+		final int npcId = npc.getId();
+		final int state = qs.getState();
+		final int cond = qs.getCond();
 		
 		if (npcId == GUIDE)
 		{
 			if (state == 1)
 			{
-				if (!st.isNowAvailableByTime())
+				if (!qs.isNowAvailableByTime())
 				{
 					return "33463-comp.htm";
 				}
 				
 				return "33463.htm";
 			}
-			
-			if (state == 2)
+			else if (state == 2)
 			{
 				if (cond == 1)
 				{
@@ -115,25 +96,23 @@ public class Q00474_WaitingForTheSummer extends Quest implements ScriptFile
 				}
 			}
 		}
-		
-		if ((npcId == VISHOTSKY) && (state == 2))
+		else if ((npcId == VISHOTSKY) && (state == 2))
 		{
 			if (cond == 1)
 			{
 				return "31981-1.htm";
 			}
-			
-			if (cond == 2)
+			else if (cond == 2)
 			{
-				st.giveItems(57, 194000);
-				st.addExpAndSp(1879400, 1782000);
-				st.takeItems(BUFFALO_MEAT, -1);
-				st.takeItems(URSUS_MEAT, -1);
-				st.takeItems(YETI_MIAT, -1);
-				st.unset("cond");
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(this);
-				return "31981.htm"; // no further html do here
+				qs.giveItems(57, 194000);
+				qs.addExpAndSp(1879400, 1782000);
+				qs.takeItems(BUFFALO_MEAT, -1);
+				qs.takeItems(URSUS_MEAT, -1);
+				qs.takeItems(YETI_MIAT, -1);
+				qs.unset("cond");
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(this);
+				return "31981.htm";
 			}
 		}
 		
@@ -141,42 +120,42 @@ public class Q00474_WaitingForTheSummer extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
+		final int npcId = npc.getId();
+		final int cond = qs.getCond();
 		
 		if ((cond == 1) && (Rnd.chance(50)))
 		{
 			if (Util.contains(YETI, npcId))
 			{
-				if (st.getQuestItemsCount(YETI_MIAT) < 30)
+				if (qs.getQuestItemsCount(YETI_MIAT) < 30)
 				{
-					st.giveItems(YETI_MIAT, 1);
-					st.playSound("ItemSound.quest_itemget");
+					qs.giveItems(YETI_MIAT, 1);
+					qs.playSound("ItemSound.quest_itemget");
 				}
 			}
 			else if (Util.contains(URSUS, npcId))
 			{
-				if (st.getQuestItemsCount(URSUS_MEAT) < 30)
+				if (qs.getQuestItemsCount(URSUS_MEAT) < 30)
 				{
-					st.giveItems(URSUS_MEAT, 1);
-					st.playSound("ItemSound.quest_itemget");
+					qs.giveItems(URSUS_MEAT, 1);
+					qs.playSound("ItemSound.quest_itemget");
 				}
 			}
 			else if (Util.contains(BUFFALO, npcId))
 			{
-				if (st.getQuestItemsCount(BUFFALO_MEAT) < 30)
+				if (qs.getQuestItemsCount(BUFFALO_MEAT) < 30)
 				{
-					st.giveItems(BUFFALO_MEAT, 1);
-					st.playSound("ItemSound.quest_itemget");
+					qs.giveItems(BUFFALO_MEAT, 1);
+					qs.playSound("ItemSound.quest_itemget");
 				}
 			}
 			
-			if ((st.getQuestItemsCount(YETI_MIAT) >= 30) && (st.getQuestItemsCount(URSUS_MEAT) >= 30) && (st.getQuestItemsCount(BUFFALO_MEAT) >= 30))
+			if ((qs.getQuestItemsCount(YETI_MIAT) >= 30) && (qs.getQuestItemsCount(URSUS_MEAT) >= 30) && (qs.getQuestItemsCount(BUFFALO_MEAT) >= 30))
 			{
-				st.setCond(2);
-				st.playSound("ItemSound.quest_middle");
+				qs.setCond(2);
+				qs.playSound("ItemSound.quest_middle");
 			}
 		}
 		
@@ -186,5 +165,20 @@ public class Q00474_WaitingForTheSummer extends Quest implements ScriptFile
 	public boolean isDailyQuest()
 	{
 		return true;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

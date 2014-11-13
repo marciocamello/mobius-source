@@ -32,99 +32,738 @@ import lineage2.gameserver.utils.Location;
 
 public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 {
-	private final int G_Let_Martien = 3866;
-	private final int Th_Wyrm_Eggs = 3842;
-	private final int Drake_Eggs = 3841;
-	private final int Bl_Wyrm_Eggs = 3840;
-	private final int Mi_Drake_Eggs = 3839;
-	private final int Brooch = 3843;
-	private final int Bl_Anvil_Coin = 3871;
-	private final int G_Let_Balthazar = 3867;
-	private final int Recipe_Spiteful_Soul_Energy = 14854;
-	private final int Spiteful_Soul_Energy = 14855;
-	private final int Spiteful_Soul_Vengeance = 14856;
-	private final int G_Let_Rodemai = 3868;
-	private final int Imp_Keys = 3847;
-	private final int Scepter_Judgement = 3869;
-	private final int Proof_Aspiration = 3870;
-	private final int[] EggList = new int[]
+	private static final int G_Let_Martien = 3866;
+	private static final int Th_Wyrm_Eggs = 3842;
+	private static final int Drake_Eggs = 3841;
+	private static final int Bl_Wyrm_Eggs = 3840;
+	private static final int Mi_Drake_Eggs = 3839;
+	private static final int Brooch = 3843;
+	private static final int Bl_Anvil_Coin = 3871;
+	private static final int G_Let_Balthazar = 3867;
+	private static final int Recipe_Spiteful_Soul_Energy = 14854;
+	private static final int Spiteful_Soul_Energy = 14855;
+	private static final int Spiteful_Soul_Vengeance = 14856;
+	private static final int G_Let_Rodemai = 3868;
+	private static final int Imp_Keys = 3847;
+	private static final int Scepter_Judgement = 3869;
+	private static final int Proof_Aspiration = 3870;
+	private static final int Gustaf = 30760;
+	private static final int Martien = 30645;
+	private static final int Athrea = 30758;
+	private static final int Kalis = 30759;
+	private static final int Fritz = 30761;
+	private static final int Lutz = 30762;
+	private static final int Kurtz = 30763;
+	private static final int Kusto = 30512;
+	private static final int Balthazar = 30764;
+	private static final int Rodemai = 30868;
+	private static final int Coffer = 30765;
+	private static final int Cleo = 30766;
+	private static final int ThunderWyrm1 = 20282;
+	private static final int ThunderWyrm2 = 20243;
+	private static final int Drake1 = 20137;
+	private static final int Drake2 = 20285;
+	private static final int BlitzWyrm = 27178;
+	private static final int SpitefulSoulLeader = 20974;
+	private static final int GraveGuard = 20668;
+	private static final int GraveKeymaster = 27179;
+	private static final int ImperialGravekeeper = 27181;
+	private static final int[] EggList = new int[]
 	{
 		Mi_Drake_Eggs,
 		Bl_Wyrm_Eggs,
 		Drake_Eggs,
 		Th_Wyrm_Eggs
 	};
-	private final int Gustaf = 30760;
-	private final int Martien = 30645;
-	private final int Athrea = 30758;
-	private final int Kalis = 30759;
-	private final int Fritz = 30761;
-	private final int Lutz = 30762;
-	private final int Kurtz = 30763;
-	private final int Kusto = 30512;
-	private final int Balthazar = 30764;
-	private final int Rodemai = 30868;
-	private final int Coffer = 30765;
-	private final int Cleo = 30766;
-	private final int ThunderWyrm1 = 20282;
-	private final int ThunderWyrm2 = 20243;
-	private final int Drake1 = 20137;
-	private final int Drake2 = 20285;
-	private final int BlitzWyrm = 27178;
-	private final int SpitefulSoulLeader = 20974;
-	private final int GraveGuard = 20668;
-	private final int GraveKeymaster = 27179;
-	private final int ImperialGravekeeper = 27181;
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
 	
 	public Q00503_PursuitOfClanAmbition()
 	{
 		super(PARTY_ALL);
 		addStartNpc(Gustaf);
-		addTalkId(Martien);
-		addTalkId(Athrea);
-		addTalkId(Kalis);
-		addTalkId(Fritz);
-		addTalkId(Lutz);
-		addTalkId(Kurtz);
-		addTalkId(Kusto);
-		addTalkId(Balthazar);
-		addTalkId(Rodemai);
-		addTalkId(Coffer);
-		addTalkId(Cleo);
+		addTalkId(Martien, Athrea, Kalis, Fritz, Lutz, Kurtz, Kusto, Balthazar, Rodemai, Coffer, Cleo);
 		addKillId(ThunderWyrm1, ThunderWyrm2, Drake1, Drake2, BlitzWyrm, SpitefulSoulLeader, GraveGuard, GraveKeymaster, ImperialGravekeeper);
 		addAttackId(ImperialGravekeeper);
-		
+		addQuestItem(Recipe_Spiteful_Soul_Energy, Spiteful_Soul_Energy, Spiteful_Soul_Vengeance);
 		for (int i = 3839; i <= 3848; i++)
 		{
 			addQuestItem(i);
 		}
-		
 		for (int i = 3866; i <= 3869; i++)
 		{
 			addQuestItem(i);
 		}
-		
-		addQuestItem(Recipe_Spiteful_Soul_Energy, Spiteful_Soul_Energy, Spiteful_Soul_Vengeance);
 	}
 	
-	public void suscribe_members(QuestState st)
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		int clan = st.getPlayer().getClan().getClanId();
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "30760-08.htm":
+				qs.giveItems(G_Let_Martien, 1);
+				qs.setCond(1);
+				qs.set("Fritz", "1");
+				qs.set("Lutz", "1");
+				qs.set("Kurtz", "1");
+				qs.set("ImpGraveKeeper", "1");
+				qs.setState(STARTED);
+				break;
+			
+			case "30760-12.htm":
+				qs.giveItems(G_Let_Balthazar, 1);
+				qs.setCond(4);
+				break;
+			
+			case "30760-16.htm":
+				qs.giveItems(G_Let_Rodemai, 1);
+				qs.setCond(7);
+				break;
+			
+			case "30760-20.htm":
+				exit503(true, qs);
+				break;
+			
+			case "30760-22.htm":
+				qs.setCond(13);
+				break;
+			
+			case "30760-23.htm":
+				exit503(true, qs);
+				break;
+			
+			case "30645-03.htm":
+				qs.takeItems(G_Let_Martien, -1);
+				qs.setCond(2);
+				suscribe_members(qs);
+				List<Player> members = qs.getPlayer().getClan().getOnlineMembers(qs.getPlayer().getObjectId());
+				for (Player player : members)
+				{
+					newQuestState(player, STARTED);
+				}
+				break;
+			
+			case "30763-03.htm":
+				if (qs.getInt("Kurtz") == 1)
+				{
+					htmltext = "30763-02.htm";
+					qs.giveItems(Mi_Drake_Eggs, 6);
+					qs.giveItems(Brooch, 1);
+					qs.set("Kurtz", "2");
+				}
+				break;
+			
+			case "30762-03.htm":
+				int lutz = qs.getInt("Lutz");
+				if (lutz == 1)
+				{
+					htmltext = "30762-02.htm";
+					qs.giveItems(Mi_Drake_Eggs, 4);
+					qs.giveItems(Bl_Wyrm_Eggs, 3);
+					qs.set("Lutz", "2");
+				}
+				qs.addSpawn(BlitzWyrm, npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), Location.getRandomHeading(), 300, 120000);
+				qs.addSpawn(BlitzWyrm, npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), Location.getRandomHeading(), 300, 120000);
+				break;
+			
+			case "30761-03.htm":
+				int fritz = qs.getInt("Fritz");
+				if (fritz == 1)
+				{
+					htmltext = "30761-02.htm";
+					qs.giveItems(Bl_Wyrm_Eggs, 3);
+					qs.set("Fritz", "2");
+				}
+				qs.addSpawn(BlitzWyrm, npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), Location.getRandomHeading(), 300, 120000);
+				qs.addSpawn(BlitzWyrm, npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), Location.getRandomHeading(), 300, 120000);
+				break;
+			
+			case "30512-03.htm":
+				qs.takeItems(Brooch, -1);
+				qs.giveItems(Bl_Anvil_Coin, 1);
+				qs.set("Kurtz", "3");
+				break;
+			
+			case "30764-03.htm":
+				qs.takeItems(G_Let_Balthazar, -1);
+				qs.setCond(5);
+				qs.set("Kurtz", "3");
+				break;
+			
+			case "30764-05.htm":
+				qs.takeItems(G_Let_Balthazar, -1);
+				qs.setCond(5);
+				break;
+			
+			case "30764-06.htm":
+				qs.takeItems(Bl_Anvil_Coin, -1);
+				qs.set("Kurtz", "4");
+				qs.giveItems(Recipe_Spiteful_Soul_Energy, 1);
+				break;
+			
+			case "30868-04.htm":
+				qs.takeItems(G_Let_Rodemai, -1);
+				qs.setCond(8);
+				break;
+			
+			case "30868-06a.htm":
+				qs.setCond(10);
+				break;
+			
+			case "30868-10.htm":
+				qs.setCond(12);
+				break;
+			
+			case "30766-04.htm":
+				qs.setCond(9);
+				NpcInstance n = qs.findTemplate(Cleo);
+				if (n != null)
+				{
+					Functions.npcSay(n, "Blood and Honour");
+				}
+				n = qs.findTemplate(Kalis);
+				if (n != null)
+				{
+					Functions.npcSay(n, "Ambition and Power");
+				}
+				n = qs.findTemplate(Athrea);
+				if (n != null)
+				{
+					Functions.npcSay(n, "War and Death");
+				}
+				break;
+			
+			case "30766-08.htm":
+				qs.takeItems(Scepter_Judgement, -1);
+				exit503(false, qs);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int npcId = npc.getId();
+		final int id = qs.getState();
+		final boolean isLeader = qs.getPlayer().isClanLeader();
+		
+		if ((id == CREATED) && (npcId == Gustaf))
+		{
+			if (qs.getPlayer().getClan() != null)
+			{
+				if (isLeader)
+				{
+					int clanLevel = qs.getPlayer().getClan().getLevel();
+					
+					if (qs.getQuestItemsCount(Proof_Aspiration) > 0)
+					{
+						htmltext = "30760-03.htm";
+						qs.exitCurrentQuest(true);
+					}
+					else if (clanLevel > 3)
+					{
+						htmltext = "30760-04.htm";
+					}
+					else
+					{
+						htmltext = "30760-02.htm";
+						qs.exitCurrentQuest(true);
+					}
+				}
+				else
+				{
+					htmltext = "30760-04t.htm";
+					qs.exitCurrentQuest(true);
+				}
+			}
+			else
+			{
+				htmltext = "30760-01.htm";
+				qs.exitCurrentQuest(true);
+			}
+			
+			return htmltext;
+		}
+		else if ((qs.getPlayer().getClan() != null) && (qs.getPlayer().getClan().getLevel() == 5))
+		{
+			return "completed";
+		}
+		else if (isLeader)
+		{
+			if (qs.getCond() == 0)
+			{
+				qs.setCond(1);
+			}
+			
+			if (qs.get("Kurtz") == null)
+			{
+				qs.set("Kurtz", "1");
+			}
+			
+			if (qs.get("Lutz") == null)
+			{
+				qs.set("Lutz", "1");
+			}
+			
+			if (qs.get("Fritz") == null)
+			{
+				qs.set("Fritz", "1");
+			}
+			
+			final int cond = qs.getCond();
+			final int kurtz = qs.getInt("Kurtz");
+			final int lutz = qs.getInt("Lutz");
+			final int fritz = qs.getInt("Fritz");
+			
+			switch (npcId)
+			{
+				case Gustaf:
+					switch (cond)
+					{
+						case 1:
+							htmltext = "30760-09.htm";
+							break;
+						
+						case 2:
+							htmltext = "30760-10.htm";
+							break;
+						
+						case 3:
+							htmltext = "30760-11.htm";
+							break;
+						
+						case 4:
+							htmltext = "30760-13.htm";
+							break;
+						
+						case 5:
+							htmltext = "30760-14.htm";
+							break;
+						
+						case 6:
+							htmltext = "30760-15.htm";
+							break;
+						
+						case 7:
+							htmltext = "30760-17.htm";
+							break;
+						
+						case 12:
+							htmltext = "30760-19.htm";
+							break;
+						
+						case 13:
+							htmltext = "30760-24.htm";
+							break;
+						
+						default:
+							htmltext = "30760-18.htm";
+							break;
+					}
+					break;
+				
+				case Martien:
+					if (cond == 1)
+					{
+						htmltext = "30645-02.htm";
+					}
+					else if (cond == 2)
+					{
+						if (checkEggs(qs) && (kurtz > 1) && (lutz > 1) && (fritz > 1))
+						{
+							htmltext = "30645-05.htm";
+							qs.setCond(3);
+							
+							for (int item : EggList)
+							{
+								qs.takeItems(item, -1);
+							}
+						}
+						else
+						{
+							htmltext = "30645-04.htm";
+						}
+					}
+					else if (cond == 3)
+					{
+						htmltext = "30645-07.htm";
+					}
+					else
+					{
+						htmltext = "30645-08.htm";
+					}
+					break;
+				
+				case Lutz:
+					if (cond == 2)
+					{
+						htmltext = "30762-01.htm";
+					}
+					break;
+				
+				case Kurtz:
+					if (cond == 2)
+					{
+						htmltext = "30763-01.htm";
+					}
+					break;
+				
+				case Fritz:
+					if (cond == 2)
+					{
+						htmltext = "30761-01.htm";
+					}
+					break;
+				
+				case Kusto:
+					if (kurtz == 1)
+					{
+						htmltext = "30512-01.htm";
+					}
+					else if (kurtz == 2)
+					{
+						htmltext = "30512-02.htm";
+					}
+					else
+					{
+						htmltext = "30512-04.htm";
+					}
+					break;
+				
+				case Balthazar:
+					if (cond == 4)
+					{
+						if (kurtz > 2)
+						{
+							htmltext = "30764-04.htm";
+						}
+						else
+						{
+							htmltext = "30764-02.htm";
+						}
+					}
+					else if (cond == 5)
+					{
+						if (qs.getQuestItemsCount(Spiteful_Soul_Energy) > 9)
+						{
+							htmltext = "30764-08.htm";
+							qs.takeItems(Spiteful_Soul_Energy, -1);
+							qs.takeItems(Brooch, -1);
+							qs.setCond(6);
+						}
+						else
+						{
+							htmltext = "30764-07.htm";
+						}
+					}
+					else if (cond == 6)
+					{
+						htmltext = "30764-09.htm";
+					}
+					break;
+				
+				case Rodemai:
+					switch (cond)
+					{
+						case 7:
+							htmltext = "30868-02.htm";
+							break;
+						
+						case 8:
+							htmltext = "30868-05.htm";
+							break;
+						
+						case 9:
+							htmltext = "30868-06.htm";
+							break;
+						
+						case 10:
+							htmltext = "30868-08.htm";
+							break;
+						
+						case 11:
+							htmltext = "30868-09.htm";
+							break;
+						
+						case 12:
+							htmltext = "30868-11.htm";
+							break;
+					}
+					break;
+				
+				case Cleo:
+					switch (cond)
+					{
+						case 8:
+							htmltext = "30766-02.htm";
+							break;
+						
+						case 9:
+							htmltext = "30766-05.htm";
+							break;
+						
+						case 10:
+							htmltext = "30766-06.htm";
+							break;
+						
+						case 11:
+						case 12:
+						case 13:
+							htmltext = "30766-07.htm";
+							break;
+					}
+					break;
+				
+				case Coffer:
+					if (qs.getCond() == 10)
+					{
+						if (qs.getQuestItemsCount(Imp_Keys) < 6)
+						{
+							htmltext = "30765-03a.htm";
+						}
+						else if (qs.getInt("ImpGraveKeeper") == 3)
+						{
+							htmltext = "30765-02.htm";
+							qs.setCond(11);
+							qs.takeItems(Imp_Keys, 6);
+							qs.giveItems(Scepter_Judgement, 1);
+						}
+						else
+						{
+							htmltext = "<html><head><body>(You and your Clan didn't kill the Imperial Gravekeeper by your own, do it try again.)</body></html>";
+						}
+					}
+					else
+					{
+						htmltext = "<html><head><body>(You already have the Scepter of Judgement.)</body></html>";
+					}
+					break;
+				
+				case Kalis:
+					htmltext = "30759-01.htm";
+					break;
+				
+				case Athrea:
+					htmltext = "30758-01.htm";
+					break;
+			}
+			
+			return htmltext;
+		}
+		else
+		{
+			final int cond = getLeaderVar(qs, "cond");
+			
+			switch (npcId)
+			{
+				case Martien:
+					if ((cond == 1) || (cond == 2) || (cond == 3))
+					{
+						htmltext = "30645-01.htm";
+					}
+					break;
+				
+				case Rodemai:
+					if ((cond == 9) || (cond == 10))
+					{
+						htmltext = "30868-07.htm";
+					}
+					else if (cond == 7)
+					{
+						htmltext = "30868-01.htm";
+					}
+					break;
+				
+				case Balthazar:
+					if (cond == 4)
+					{
+						htmltext = "30764-01.htm";
+					}
+					break;
+				
+				case Cleo:
+					if (cond == 8)
+					{
+						htmltext = "30766-01.htm";
+					}
+					break;
+				
+				case Kusto:
+					if ((cond > 2) && (cond < 6))
+					{
+						htmltext = "30512-01a.htm";
+					}
+					break;
+				
+				case Coffer:
+					if (cond == 10)
+					{
+						htmltext = "30765-01.htm";
+					}
+					break;
+				
+				case Gustaf:
+					switch (cond)
+					{
+						case 3:
+							htmltext = "30760-11t.htm";
+							break;
+						
+						case 4:
+							htmltext = "30760-15t.htm";
+							break;
+						
+						case 12:
+							htmltext = "30760-19t.htm";
+							break;
+						
+						case 13:
+							htmltext = "30766-24t.htm";
+							break;
+					}
+					break;
+			}
+			
+			return htmltext;
+		}
+	}
+	
+	@Override
+	public String onAttack(NpcInstance npc, QuestState qs)
+	{
+		if (((npc.getMaxHp() / 2) > npc.getCurrentHp()) && Rnd.chance(4))
+		{
+			final int ImpGraveKepperStat = getLeaderVar(qs, "ImpGraveKeeper");
+			
+			if (ImpGraveKepperStat == 1)
+			{
+				for (int i = 1; i <= 4; i++)
+				{
+					qs.addSpawn(27180, 120000);
+				}
+				
+				setLeaderVar(qs, "ImpGraveKeeper", "2");
+			}
+			else
+			{
+				List<Player> players = World.getAroundPlayers(npc, 900, 200);
+				
+				if (players.size() > 0)
+				{
+					Player player = players.get(Rnd.get(players.size()));
+					
+					if (player != null)
+					{
+						player.teleToLocation(185462, 20342, -3250);
+					}
+				}
+			}
+		}
+		
+		return null;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		final int npcId = npc.getId();
+		
+		switch (getLeaderVar(qs, "cond"))
+		{
+			case 2:
+				switch (npcId)
+				{
+					case ThunderWyrm1:
+						if (Rnd.chance(20))
+						{
+							giveItem(Th_Wyrm_Eggs, 10, qs);
+						}
+						break;
+					
+					case ThunderWyrm2:
+						if (Rnd.chance(15))
+						{
+							giveItem(Th_Wyrm_Eggs, 10, qs);
+						}
+						break;
+					
+					case Drake1:
+						if (Rnd.chance(20))
+						{
+							giveItem(Drake_Eggs, 10, qs);
+						}
+						break;
+					
+					case Drake2:
+						if (Rnd.chance(25))
+						{
+							giveItem(Drake_Eggs, 10, qs);
+						}
+						break;
+					
+					case BlitzWyrm:
+						giveItem(Bl_Wyrm_Eggs, 10, qs);
+						break;
+				}
+				
+				break;
+			
+			case 5:
+				if ((npcId == SpitefulSoulLeader) && Rnd.chance(25))
+				{
+					if (Rnd.chance(50))
+					{
+						if (getLeaderVar(qs, "Kurtz") < 4)
+						{
+							return null;
+						}
+						
+						giveItem(Spiteful_Soul_Vengeance, 40, qs);
+					}
+					else
+					{
+						giveItem(Spiteful_Soul_Energy, 10, qs);
+					}
+				}
+				break;
+			
+			case 10:
+				switch (npcId)
+				{
+					case GraveGuard:
+						if (Rnd.chance(15))
+						{
+							qs.addSpawn(GraveKeymaster, 120000);
+						}
+						break;
+					
+					case GraveKeymaster:
+						if (Rnd.chance(80))
+						{
+							giveItem(Imp_Keys, 6, qs);
+						}
+						break;
+					
+					case ImperialGravekeeper:
+						NpcInstance spawnedNpc = qs.addSpawn(Coffer, 120000);
+						Functions.npcSay(spawnedNpc, "Curse of the gods on the one that defiles the property of the empire!");
+						setLeaderVar(qs, "ImpGraveKeeper", "3");
+						break;
+				}
+				
+				break;
+		}
+		
+		return null;
+	}
+	
+	public void suscribe_members(QuestState qs)
+	{
+		final int clan = qs.getPlayer().getClan().getClanId();
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
@@ -161,9 +800,9 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 		
 	}
 	
-	public void offlineMemberExit(QuestState st)
+	public void offlineMemberExit(QuestState qs)
 	{
-		int clan = st.getPlayer().getClan().getClanId();
+		final int clan = qs.getPlayer().getClan().getClanId();
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
@@ -181,16 +820,16 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 		
 	}
 	
-	public Player getLeader(QuestState st)
+	public Player getLeader(QuestState qs)
 	{
-		Player player = st.getPlayer();
+		final Player player = qs.getPlayer();
 		
 		if (player == null)
 		{
 			return null;
 		}
 		
-		Clan clan = player.getClan();
+		final Clan clan = player.getClan();
 		
 		if (clan == null)
 		{
@@ -200,13 +839,13 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 		return clan.getLeader().getPlayer();
 	}
 	
-	public int getLeaderVar(QuestState st, String var)
+	public int getLeaderVar(QuestState qs, String var)
 	{
-		final boolean cond = "cond".equalsIgnoreCase(var);
+		final boolean cond = "cond".equals(var);
 		
 		try
 		{
-			Player leader = getLeader(st);
+			Player leader = getLeader(qs);
 			
 			if (leader != null)
 			{
@@ -223,14 +862,14 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 			return -1;
 		}
 		
-		Clan clan = st.getPlayer().getClan();
+		final Clan clan = qs.getPlayer().getClan();
 		
 		if (clan == null)
 		{
 			return -1;
 		}
 		
-		int leaderId = clan.getLeaderId();
+		final int leaderId = clan.getLeaderId();
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();)
 		{
@@ -273,20 +912,20 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 		
 	}
 	
-	public void setLeaderVar(QuestState st, String var, String value)
+	public void setLeaderVar(QuestState qs, String var, String value)
 	{
-		Clan clan = st.getPlayer().getClan();
+		final Clan clan = qs.getPlayer().getClan();
 		
 		if (clan == null)
 		{
 			return;
 		}
 		
-		Player leader = clan.getLeader().getPlayer();
+		final Player leader = clan.getLeader().getPlayer();
 		
 		if (leader != null)
 		{
-			if ("cond".equalsIgnoreCase(var))
+			if ("cond".equals(var))
 			{
 				leader.getQuestState(getName()).setCond(Integer.parseInt(value));
 			}
@@ -297,7 +936,7 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 		}
 		else
 		{
-			int leaderId = st.getPlayer().getClan().getLeaderId();
+			int leaderId = qs.getPlayer().getClan().getLeaderId();
 			
 			try (Connection con = DatabaseFactory.getInstance().getConnection();)
 			{
@@ -317,13 +956,13 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 		}
 	}
 	
-	public boolean checkEggs(QuestState st)
+	public boolean checkEggs(QuestState qs)
 	{
 		int count = 0;
 		
 		for (int item : EggList)
 		{
-			if (st.getQuestItemsCount(item) > 9)
+			if (qs.getQuestItemsCount(item) > 9)
 			{
 				count += 1;
 			}
@@ -332,16 +971,16 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 		return count > 3;
 	}
 	
-	public void giveItem(int item, long maxcount, QuestState st)
+	public void giveItem(int item, long maxcount, QuestState qs)
 	{
-		Player player = st.getPlayer();
+		final Player player = qs.getPlayer();
 		
 		if (player == null)
 		{
 			return;
 		}
 		
-		Player leader = getLeader(st);
+		final Player leader = getLeader(qs);
 		
 		if (leader == null)
 		{
@@ -353,53 +992,53 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 			return;
 		}
 		
-		QuestState qs = leader.getQuestState(getClass());
+		final QuestState state = leader.getQuestState(getClass());
 		
-		if (qs == null)
+		if (state == null)
 		{
 			return;
 		}
 		
-		long count = qs.getQuestItemsCount(item);
+		final long count = state.getQuestItemsCount(item);
 		
 		if (count < maxcount)
 		{
-			qs.giveItems(item, 1);
+			state.giveItems(item, 1);
 			
 			if (count == (maxcount - 1))
 			{
-				qs.playSound(SOUND_MIDDLE);
+				state.playSound(SOUND_MIDDLE);
 			}
 			else
 			{
-				qs.playSound(SOUND_ITEMGET);
+				state.playSound(SOUND_ITEMGET);
 			}
 		}
 	}
 	
-	public String exit503(boolean completed, QuestState st)
+	public String exit503(boolean completed, QuestState qs)
 	{
 		if (completed)
 		{
-			st.giveItems(Proof_Aspiration, 1);
-			st.addExpAndSp(0, 250000);
-			st.unset("cond");
-			st.unset("Fritz");
-			st.unset("Lutz");
-			st.unset("Kurtz");
-			st.unset("ImpGraveKeeper");
-			st.exitCurrentQuest(false);
+			qs.giveItems(Proof_Aspiration, 1);
+			qs.addExpAndSp(0, 250000);
+			qs.unset("cond");
+			qs.unset("Fritz");
+			qs.unset("Lutz");
+			qs.unset("Kurtz");
+			qs.unset("ImpGraveKeeper");
+			qs.exitCurrentQuest(false);
 		}
 		else
 		{
-			st.exitCurrentQuest(true);
+			qs.exitCurrentQuest(true);
 		}
 		
-		st.takeItems(Scepter_Judgement, -1);
+		qs.takeItems(Scepter_Judgement, -1);
 		
 		try
 		{
-			List<Player> members = st.getPlayer().getClan().getOnlineMembers(0);
+			final List<Player> members = qs.getPlayer().getClan().getOnlineMembers(0);
 			
 			for (Player player : members)
 			{
@@ -408,15 +1047,15 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 					continue;
 				}
 				
-				QuestState qs = player.getQuestState(getName());
+				final QuestState state = player.getQuestState(getName());
 				
-				if (qs != null)
+				if (state != null)
 				{
-					qs.exitCurrentQuest(true);
+					state.exitCurrentQuest(true);
 				}
 			}
 			
-			offlineMemberExit(st);
+			offlineMemberExit(qs);
 		}
 		catch (Exception e)
 		{
@@ -427,650 +1066,18 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public void onLoad()
 	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("30760-08.htm"))
-		{
-			st.giveItems(G_Let_Martien, 1);
-			st.setCond(1);
-			st.set("Fritz", "1");
-			st.set("Lutz", "1");
-			st.set("Kurtz", "1");
-			st.set("ImpGraveKeeper", "1");
-			st.setState(STARTED);
-		}
-		else if (event.equalsIgnoreCase("30760-12.htm"))
-		{
-			st.giveItems(G_Let_Balthazar, 1);
-			st.setCond(4);
-		}
-		else if (event.equalsIgnoreCase("30760-16.htm"))
-		{
-			st.giveItems(G_Let_Rodemai, 1);
-			st.setCond(7);
-		}
-		else if (event.equalsIgnoreCase("30760-20.htm"))
-		{
-			exit503(true, st);
-		}
-		else if (event.equalsIgnoreCase("30760-22.htm"))
-		{
-			st.setCond(13);
-		}
-		else if (event.equalsIgnoreCase("30760-23.htm"))
-		{
-			exit503(true, st);
-		}
-		else if (event.equalsIgnoreCase("30645-03.htm"))
-		{
-			st.takeItems(G_Let_Martien, -1);
-			st.setCond(2);
-			suscribe_members(st);
-			List<Player> members = st.getPlayer().getClan().getOnlineMembers(st.getPlayer().getObjectId());
-			
-			for (Player player : members)
-			{
-				newQuestState(player, STARTED);
-			}
-		}
-		else if (event.equalsIgnoreCase("30763-03.htm"))
-		{
-			if (st.getInt("Kurtz") == 1)
-			{
-				htmltext = "30763-02.htm";
-				st.giveItems(Mi_Drake_Eggs, 6);
-				st.giveItems(Brooch, 1);
-				st.set("Kurtz", "2");
-			}
-		}
-		else if (event.equalsIgnoreCase("30762-03.htm"))
-		{
-			int lutz = st.getInt("Lutz");
-			
-			if (lutz == 1)
-			{
-				htmltext = "30762-02.htm";
-				st.giveItems(Mi_Drake_Eggs, 4);
-				st.giveItems(Bl_Wyrm_Eggs, 3);
-				st.set("Lutz", "2");
-			}
-			
-			st.addSpawn(BlitzWyrm, npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), Location.getRandomHeading(), 300, 120000);
-			st.addSpawn(BlitzWyrm, npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), Location.getRandomHeading(), 300, 120000);
-		}
-		else if (event.equalsIgnoreCase("30761-03.htm"))
-		{
-			int fritz = st.getInt("Fritz");
-			
-			if (fritz == 1)
-			{
-				htmltext = "30761-02.htm";
-				st.giveItems(Bl_Wyrm_Eggs, 3);
-				st.set("Fritz", "2");
-			}
-			
-			st.addSpawn(BlitzWyrm, npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), Location.getRandomHeading(), 300, 120000);
-			st.addSpawn(BlitzWyrm, npc.getLoc().getX(), npc.getLoc().getY(), npc.getLoc().getZ(), Location.getRandomHeading(), 300, 120000);
-		}
-		else if (event.equalsIgnoreCase("30512-03.htm"))
-		{
-			st.takeItems(Brooch, -1);
-			st.giveItems(Bl_Anvil_Coin, 1);
-			st.set("Kurtz", "3");
-		}
-		else if (event.equalsIgnoreCase("30764-03.htm"))
-		{
-			st.takeItems(G_Let_Balthazar, -1);
-			st.setCond(5);
-			st.set("Kurtz", "3");
-		}
-		else if (event.equalsIgnoreCase("30764-05.htm"))
-		{
-			st.takeItems(G_Let_Balthazar, -1);
-			st.setCond(5);
-		}
-		else if (event.equalsIgnoreCase("30764-06.htm"))
-		{
-			st.takeItems(Bl_Anvil_Coin, -1);
-			st.set("Kurtz", "4");
-			st.giveItems(Recipe_Spiteful_Soul_Energy, 1);
-		}
-		else if (event.equalsIgnoreCase("30868-04.htm"))
-		{
-			st.takeItems(G_Let_Rodemai, -1);
-			st.setCond(8);
-		}
-		else if (event.equalsIgnoreCase("30868-06a.htm"))
-		{
-			st.setCond(10);
-		}
-		else if (event.equalsIgnoreCase("30868-10.htm"))
-		{
-			st.setCond(12);
-		}
-		else if (event.equalsIgnoreCase("30766-04.htm"))
-		{
-			st.setCond(9);
-			NpcInstance n = st.findTemplate(Cleo);
-			
-			if (n != null)
-			{
-				Functions.npcSay(n, "Blood and Honour");
-			}
-			
-			n = st.findTemplate(Kalis);
-			
-			if (n != null)
-			{
-				Functions.npcSay(n, "Ambition and Power");
-			}
-			
-			n = st.findTemplate(Athrea);
-			
-			if (n != null)
-			{
-				Functions.npcSay(n, "War and Death");
-			}
-		}
-		else if (event.equalsIgnoreCase("30766-08.htm"))
-		{
-			st.takeItems(Scepter_Judgement, -1);
-			exit503(false, st);
-		}
-		
-		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public void onReload()
 	{
-		int npcId = npc.getId();
-		int id = st.getState();
-		String htmltext = "noquest";
-		boolean isLeader = st.getPlayer().isClanLeader();
-		
-		if ((id == CREATED) && (npcId == Gustaf))
-		{
-			if (st.getPlayer().getClan() != null)
-			{
-				if (isLeader)
-				{
-					int clanLevel = st.getPlayer().getClan().getLevel();
-					
-					if (st.getQuestItemsCount(Proof_Aspiration) > 0)
-					{
-						htmltext = "30760-03.htm";
-						st.exitCurrentQuest(true);
-					}
-					else if (clanLevel > 3)
-					{
-						htmltext = "30760-04.htm";
-					}
-					else
-					{
-						htmltext = "30760-02.htm";
-						st.exitCurrentQuest(true);
-					}
-				}
-				else
-				{
-					htmltext = "30760-04t.htm";
-					st.exitCurrentQuest(true);
-				}
-			}
-			else
-			{
-				htmltext = "30760-01.htm";
-				st.exitCurrentQuest(true);
-			}
-			
-			return htmltext;
-		}
-		else if ((st.getPlayer().getClan() != null) && (st.getPlayer().getClan().getLevel() == 5))
-		{
-			return "completed";
-		}
-		else if (isLeader)
-		{
-			if (st.getCond() == 0)
-			{
-				st.setCond(1);
-			}
-			
-			if (st.get("Kurtz") == null)
-			{
-				st.set("Kurtz", "1");
-			}
-			
-			if (st.get("Lutz") == null)
-			{
-				st.set("Lutz", "1");
-			}
-			
-			if (st.get("Fritz") == null)
-			{
-				st.set("Fritz", "1");
-			}
-			
-			int cond = st.getCond();
-			int kurtz = st.getInt("Kurtz");
-			int lutz = st.getInt("Lutz");
-			int fritz = st.getInt("Fritz");
-			
-			if (npcId == Gustaf)
-			{
-				if (cond == 1)
-				{
-					htmltext = "30760-09.htm";
-				}
-				else if (cond == 2)
-				{
-					htmltext = "30760-10.htm";
-				}
-				else if (cond == 3)
-				{
-					htmltext = "30760-11.htm";
-				}
-				else if (cond == 4)
-				{
-					htmltext = "30760-13.htm";
-				}
-				else if (cond == 5)
-				{
-					htmltext = "30760-14.htm";
-				}
-				else if (cond == 6)
-				{
-					htmltext = "30760-15.htm";
-				}
-				else if (cond == 7)
-				{
-					htmltext = "30760-17.htm";
-				}
-				else if (cond == 12)
-				{
-					htmltext = "30760-19.htm";
-				}
-				else if (cond == 13)
-				{
-					htmltext = "30760-24.htm";
-				}
-				else
-				{
-					htmltext = "30760-18.htm";
-				}
-			}
-			else if (npcId == Martien)
-			{
-				if (cond == 1)
-				{
-					htmltext = "30645-02.htm";
-				}
-				else if (cond == 2)
-				{
-					if (checkEggs(st) && (kurtz > 1) && (lutz > 1) && (fritz > 1))
-					{
-						htmltext = "30645-05.htm";
-						st.setCond(3);
-						
-						for (int item : EggList)
-						{
-							st.takeItems(item, -1);
-						}
-					}
-					else
-					{
-						htmltext = "30645-04.htm";
-					}
-				}
-				else if (cond == 3)
-				{
-					htmltext = "30645-07.htm";
-				}
-				else
-				{
-					htmltext = "30645-08.htm";
-				}
-			}
-			else if ((npcId == Lutz) && (cond == 2))
-			{
-				htmltext = "30762-01.htm";
-			}
-			else if ((npcId == Kurtz) && (cond == 2))
-			{
-				htmltext = "30763-01.htm";
-			}
-			else if ((npcId == Fritz) && (cond == 2))
-			{
-				htmltext = "30761-01.htm";
-			}
-			else if (npcId == Kusto)
-			{
-				if (kurtz == 1)
-				{
-					htmltext = "30512-01.htm";
-				}
-				else if (kurtz == 2)
-				{
-					htmltext = "30512-02.htm";
-				}
-				else
-				{
-					htmltext = "30512-04.htm";
-				}
-			}
-			else if (npcId == Balthazar)
-			{
-				if (cond == 4)
-				{
-					if (kurtz > 2)
-					{
-						htmltext = "30764-04.htm";
-					}
-					else
-					{
-						htmltext = "30764-02.htm";
-					}
-				}
-				else if (cond == 5)
-				{
-					if (st.getQuestItemsCount(Spiteful_Soul_Energy) > 9)
-					{
-						htmltext = "30764-08.htm";
-						st.takeItems(Spiteful_Soul_Energy, -1);
-						st.takeItems(Brooch, -1);
-						st.setCond(6);
-					}
-					else
-					{
-						htmltext = "30764-07.htm";
-					}
-				}
-				else if (cond == 6)
-				{
-					htmltext = "30764-09.htm";
-				}
-			}
-			else if (npcId == Rodemai)
-			{
-				if (cond == 7)
-				{
-					htmltext = "30868-02.htm";
-				}
-				else if (cond == 8)
-				{
-					htmltext = "30868-05.htm";
-				}
-				else if (cond == 9)
-				{
-					htmltext = "30868-06.htm";
-				}
-				else if (cond == 10)
-				{
-					htmltext = "30868-08.htm";
-				}
-				else if (cond == 11)
-				{
-					htmltext = "30868-09.htm";
-				}
-				else if (cond == 12)
-				{
-					htmltext = "30868-11.htm";
-				}
-			}
-			else if (npcId == Cleo)
-			{
-				if (cond == 8)
-				{
-					htmltext = "30766-02.htm";
-				}
-				else if (cond == 9)
-				{
-					htmltext = "30766-05.htm";
-				}
-				else if (cond == 10)
-				{
-					htmltext = "30766-06.htm";
-				}
-				else if ((cond == 11) || (cond == 12) || (cond == 13))
-				{
-					htmltext = "30766-07.htm";
-				}
-			}
-			else if (npcId == Coffer)
-			{
-				if (st.getCond() == 10)
-				{
-					if (st.getQuestItemsCount(Imp_Keys) < 6)
-					{
-						htmltext = "30765-03a.htm";
-					}
-					else if (st.getInt("ImpGraveKeeper") == 3)
-					{
-						htmltext = "30765-02.htm";
-						st.setCond(11);
-						st.takeItems(Imp_Keys, 6);
-						st.giveItems(Scepter_Judgement, 1);
-					}
-					else
-					{
-						htmltext = "<html><head><body>(You and your Clan didn't kill the Imperial Gravekeeper by your own, do it try again.)</body></html>";
-					}
-				}
-				else
-				{
-					htmltext = "<html><head><body>(You already have the Scepter of Judgement.)</body></html>";
-				}
-			}
-			else if (npcId == Kalis)
-			{
-				htmltext = "30759-01.htm";
-			}
-			else if (npcId == Athrea)
-			{
-				htmltext = "30758-01.htm";
-			}
-			
-			return htmltext;
-		}
-		else
-		{
-			int cond = getLeaderVar(st, "cond");
-			
-			if ((npcId == Martien) && ((cond == 1) || (cond == 2) || (cond == 3)))
-			{
-				htmltext = "30645-01.htm";
-			}
-			else if (npcId == Rodemai)
-			{
-				if ((cond == 9) || (cond == 10))
-				{
-					htmltext = "30868-07.htm";
-				}
-				else if (cond == 7)
-				{
-					htmltext = "30868-01.htm";
-				}
-			}
-			else if ((npcId == Balthazar) && (cond == 4))
-			{
-				htmltext = "30764-01.htm";
-			}
-			else if ((npcId == Cleo) && (cond == 8))
-			{
-				htmltext = "30766-01.htm";
-			}
-			else if ((npcId == Kusto) && (cond > 2) && (cond < 6))
-			{
-				htmltext = "30512-01a.htm";
-			}
-			else if ((npcId == Coffer) && (cond == 10))
-			{
-				htmltext = "30765-01.htm";
-			}
-			else if (npcId == Gustaf)
-			{
-				if (cond == 3)
-				{
-					htmltext = "30760-11t.htm";
-				}
-				else if (cond == 4)
-				{
-					htmltext = "30760-15t.htm";
-				}
-				else if (cond == 12)
-				{
-					htmltext = "30760-19t.htm";
-				}
-				else if (cond == 13)
-				{
-					htmltext = "30766-24t.htm";
-				}
-			}
-			
-			return htmltext;
-		}
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, QuestState st)
+	public void onShutdown()
 	{
-		if ((npc.getMaxHp() / 2) > npc.getCurrentHp())
-		{
-			if (Rnd.chance(4))
-			{
-				int ImpGraveKepperStat = getLeaderVar(st, "ImpGraveKeeper");
-				
-				if (ImpGraveKepperStat == 1)
-				{
-					for (int i = 1; i <= 4; i++)
-					{
-						st.addSpawn(27180, 120000);
-					}
-					
-					setLeaderVar(st, "ImpGraveKeeper", "2");
-				}
-				else
-				{
-					List<Player> players = World.getAroundPlayers(npc, 900, 200);
-					
-					if (players.size() > 0)
-					{
-						Player player = players.get(Rnd.get(players.size()));
-						
-						if (player != null)
-						{
-							player.teleToLocation(185462, 20342, -3250);
-						}
-					}
-				}
-			}
-		}
-		
-		return null;
 	}
 	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		int cond = getLeaderVar(st, "cond");
-		
-		switch (cond)
-		{
-			case 2:
-				switch (npcId)
-				{
-					case ThunderWyrm1:
-						if (Rnd.chance(20))
-						{
-							giveItem(Th_Wyrm_Eggs, 10, st);
-						}
-						
-						break;
-					
-					case ThunderWyrm2:
-						if (Rnd.chance(15))
-						{
-							giveItem(Th_Wyrm_Eggs, 10, st);
-						}
-						
-						break;
-					
-					case Drake1:
-						if (Rnd.chance(20))
-						{
-							giveItem(Drake_Eggs, 10, st);
-						}
-						
-						break;
-					
-					case Drake2:
-						if (Rnd.chance(25))
-						{
-							giveItem(Drake_Eggs, 10, st);
-						}
-						
-						break;
-					
-					case BlitzWyrm:
-						giveItem(Bl_Wyrm_Eggs, 10, st);
-						break;
-				}
-				
-				break;
-			
-			case 5:
-				if ((npcId == SpitefulSoulLeader) && Rnd.chance(25))
-				{
-					if (Rnd.chance(50))
-					{
-						if (getLeaderVar(st, "Kurtz") < 4)
-						{
-							return null;
-						}
-						
-						giveItem(Spiteful_Soul_Vengeance, 40, st);
-					}
-					else
-					{
-						giveItem(Spiteful_Soul_Energy, 10, st);
-					}
-				}
-				
-				break;
-			
-			case 10:
-				switch (npcId)
-				{
-					case GraveGuard:
-						if (Rnd.chance(15))
-						{
-							st.addSpawn(GraveKeymaster, 120000);
-						}
-						
-						break;
-					
-					case GraveKeymaster:
-						if (Rnd.chance(80))
-						{
-							giveItem(Imp_Keys, 6, st);
-						}
-						
-						break;
-					
-					case ImperialGravekeeper:
-						NpcInstance spawnedNpc = st.addSpawn(Coffer, 120000);
-						Functions.npcSay(spawnedNpc, "Curse of the gods on the one that defiles the property of the empire!");
-						setLeaderVar(st, "ImpGraveKeeper", "3");
-						break;
-				}
-				
-				break;
-		}
-		
-		return null;
-	}
 }

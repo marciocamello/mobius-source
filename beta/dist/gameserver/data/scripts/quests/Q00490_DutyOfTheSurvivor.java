@@ -22,10 +22,13 @@ import lineage2.gameserver.utils.Util;
 
 public class Q00490_DutyOfTheSurvivor extends Quest implements ScriptFile
 {
-	// npc
-	public static final int VOLODOS = 30137;
-	// mobs
-	public static final int[] mobs =
+	// Npc
+	public static final int Volodos = 30137;
+	// Items
+	private static final int Zhelch = 34059;
+	private static final int Blood = 34060;
+	// Monsters
+	public static final int[] Monsters =
 	{
 		23162,
 		23163,
@@ -40,8 +43,102 @@ public class Q00490_DutyOfTheSurvivor extends Quest implements ScriptFile
 		23172,
 		23173
 	};
-	private static final int Zhelch = 34059;
-	private static final int Blood = 34060;
+	
+	public Q00490_DutyOfTheSurvivor()
+	{
+		super(true);
+		addStartNpc(Volodos);
+		addTalkId(Volodos);
+		addKillId(Monsters);
+		addQuestItem(Zhelch, Blood);
+		addLevelCheck(85, 89);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		if (event.equals("30137-6.htm"))
+		{
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.playSound(SOUND_ACCEPT);
+		}
+		
+		return event;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		final int cond = qs.getCond();
+		final Player player = qs.getPlayer();
+		
+		switch (qs.getState())
+		{
+			case 1:
+				if ((player.getLevel() < 85) || (player.getLevel() > 89))
+				{
+					return "30137-lvl.htm";
+				}
+				if (!qs.isNowAvailable())
+				{
+					return "30137-comp.htm";
+				}
+				return "30137.htm";
+				
+			case 2:
+				if (cond == 1)
+				{
+					return "30137-7.htm";
+				}
+				if (cond == 2)
+				{
+					qs.giveItems(57, 505062);
+					qs.addExpAndSp(145557000, 58119840);
+					qs.unset("cond");
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(this);
+					return "30137-9.htm";
+				}
+				break;
+		}
+		
+		return "noquest";
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if ((qs.getCond() != 1) || (npc == null))
+		{
+			return null;
+		}
+		
+		if (Util.contains(Monsters, npc.getId()))
+		{
+			if (Rnd.chance(10))
+			{
+				if (Rnd.chance(50))
+				{
+					if (qs.getQuestItemsCount(Zhelch) < 20)
+					{
+						qs.giveItems(Zhelch, 1);
+					}
+				}
+				else if (qs.getQuestItemsCount(Blood) < 20)
+				{
+					qs.giveItems(Blood, 1);
+				}
+				
+				if ((qs.getQuestItemsCount(Zhelch) >= 20) && (qs.getQuestItemsCount(Blood) >= 20))
+				{
+					qs.setCond(2);
+				}
+			}
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -56,112 +153,5 @@ public class Q00490_DutyOfTheSurvivor extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00490_DutyOfTheSurvivor()
-	{
-		super(true);
-		addStartNpc(VOLODOS);
-		addTalkId(VOLODOS);
-		addKillId(mobs);
-		addLevelCheck(85, 89);
-		addQuestItem(Zhelch);
-		addQuestItem(Blood);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		if (event.equalsIgnoreCase("30137-6.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		return event;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		Player player = st.getPlayer();
-		int npcId = npc.getId();
-		int state = st.getState();
-		int cond = st.getCond();
-		
-		if (npcId == VOLODOS)
-		{
-			if (state == 1)
-			{
-				if ((player.getLevel() < 85) || (player.getLevel() > 89))
-				{
-					return "30137-lvl.htm";
-				}
-				
-				if (!st.isNowAvailable())
-				{
-					return "30137-comp.htm";
-				}
-				
-				return "30137.htm";
-			}
-			
-			if (state == 2)
-			{
-				if (cond == 1)
-				{
-					return "30137-7.htm";
-				}
-				
-				if (cond == 2)
-				{
-					st.giveItems(57, 505062);
-					st.addExpAndSp(145557000, 58119840);
-					st.unset("cond");
-					st.playSound(SOUND_FINISH);
-					st.exitCurrentQuest(this);
-					return "30137-9.htm";
-				}
-			}
-		}
-		
-		return "noquest";
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		
-		if ((cond != 1) || (npc == null))
-		{
-			return null;
-		}
-		
-		if (Util.contains(mobs, npc.getId()))
-		{
-			if (Rnd.chance(10))
-			{
-				if (Rnd.chance(50))
-				{
-					if (st.getQuestItemsCount(Zhelch) < 20)
-					{
-						st.giveItems(Zhelch, 1);
-					}
-				}
-				else if (st.getQuestItemsCount(Blood) < 20)
-				{
-					st.giveItems(Blood, 1);
-				}
-				
-				if ((st.getQuestItemsCount(Zhelch) >= 20) && (st.getQuestItemsCount(Blood) >= 20))
-				{
-					st.setCond(2);
-				}
-			}
-		}
-		
-		return null;
 	}
 }

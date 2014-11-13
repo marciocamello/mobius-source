@@ -21,9 +21,13 @@ import lineage2.gameserver.utils.Util;
 
 public class Q00477_BloodFromTheWall extends Quest implements ScriptFile
 {
+	// Npcs
 	public static final int GUIDE = 33463;
 	public static final int JASTIN = 31282;
-	private final int[] Mobs =
+	// Item
+	public static final int BLOOD_TEARS = 19496;
+	// Monsters
+	private final int[] MONSTERS =
 	{
 		21294,
 		21295,
@@ -41,98 +45,100 @@ public class Q00477_BloodFromTheWall extends Quest implements ScriptFile
 		21312,
 		21313
 	};
-	public static final int BLOOD_TEARS = 19496;
 	
 	public Q00477_BloodFromTheWall()
 	{
 		super(true);
-		addStartNpc(33463);
-		addTalkId(new int[]
-		{
-			31282
-		});
-		addKillId(Mobs);
-		addQuestItem(new int[]
-		{
-			19496
-		});
+		addStartNpc(GUIDE);
+		addTalkId(JASTIN);
+		addKillId(MONSTERS);
+		addQuestItem(BLOOD_TEARS);
 		addLevelCheck(70, 74);
 	}
 	
 	@Override
-	public void onShutdown()
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		st.getPlayer();
-		
-		if (event.equalsIgnoreCase("33463-3.htm"))
+		if (event.equals("33463-3.htm"))
 		{
-			st.setCond(1);
-			st.setState(2);
-			st.playSound("ItemSound.quest_accept");
+			qs.setCond(1);
+			qs.setState(2);
+			qs.playSound("ItemSound.quest_accept");
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		st.getPlayer();
-		int npcId = npc.getId();
-		int state = st.getState();
-		int cond = st.getCond();
+		final int npcId = npc.getId();
+		final int state = qs.getState();
+		final int cond = qs.getCond();
 		
-		if (npcId == 33463)
+		if (npcId == GUIDE)
 		{
 			if (state == 1)
 			{
-				if (!st.isNowAvailableByTime())
+				if (!qs.isNowAvailableByTime())
 				{
 					return "33463-comp.htm";
 				}
 				
 				return "33463.htm";
 			}
-			
-			if (state == 2)
+			else if (state == 2)
 			{
 				if (cond == 1)
 				{
 					return "33463-4.htm";
 				}
-				
-				if (cond == 2)
+				else if (cond == 2)
 				{
 					return "33463-5.htm";
 				}
 			}
 		}
-		
-		if ((npcId == 31282) && (state == 2))
+		else if ((npcId == JASTIN) && (state == 2))
 		{
 			if (cond == 1)
 			{
 				return "31282-1.htm";
 			}
-			
-			if (cond == 2)
+			else if (cond == 2)
 			{
-				st.giveItems(57, 334560L);
-				st.addExpAndSp(8534700L, 8523390L);
-				st.takeItems(19496, -1L);
-				st.unset("cond");
-				st.playSound("ItemSound.quest_finish");
-				st.exitCurrentQuest(this);
+				qs.giveItems(57, 334560L);
+				qs.addExpAndSp(8534700L, 8523390L);
+				qs.takeItems(BLOOD_TEARS, -1L);
+				qs.unset("cond");
+				qs.playSound("ItemSound.quest_finish");
+				qs.exitCurrentQuest(this);
 				return "31282.htm";
 			}
 		}
 		
 		return "noquest";
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if ((qs.getCond() != 1) || (npc == null))
+		{
+			return null;
+		}
+		
+		if ((Util.contains(MONSTERS, npc.getId())) && (Rnd.chance(50)))
+		{
+			qs.giveItems(BLOOD_TEARS, 1L);
+		}
+		
+		if (qs.getQuestItemsCount(BLOOD_TEARS) >= 45L)
+		{
+			qs.setCond(2);
+		}
+		
+		return null;
 	}
 	
 	@Override
@@ -146,25 +152,7 @@ public class Q00477_BloodFromTheWall extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public void onShutdown()
 	{
-		int cond = st.getCond();
-		
-		if ((cond != 1) || (npc == null))
-		{
-			return null;
-		}
-		
-		if ((Util.contains(Mobs, npc.getId())) && (Rnd.chance(50)))
-		{
-			st.giveItems(19496, 1L);
-		}
-		
-		if (st.getQuestItemsCount(19496) >= 45L)
-		{
-			st.setCond(2);
-		}
-		
-		return null;
 	}
 }

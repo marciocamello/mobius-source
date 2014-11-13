@@ -20,10 +20,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00460_PreciousResearchMaterial extends Quest implements ScriptFile
 {
-	
-	private static final int NPC_AMER = 33092;
-	private static final int NPC_FILAR = 30535;
-	private static final int ITEM_TEREDOR_EGG_FRAGMENT = 17735;
+	// Npcs
+	private static final int AMER = 33092;
+	private static final int FILAR = 30535;
+	// Items
+	private static final int TEREDOR_EGG_FRAGMENT = 17735;
 	private static final int[] MOB_EGGS =
 	{
 		18997,
@@ -34,94 +35,92 @@ public class Q00460_PreciousResearchMaterial extends Quest implements ScriptFile
 	public Q00460_PreciousResearchMaterial()
 	{
 		super(PARTY_ALL);
-		addStartNpc(NPC_AMER);
-		addTalkId(NPC_FILAR);
+		addStartNpc(AMER);
+		addTalkId(FILAR);
 		addKillId(MOB_EGGS);
-		
-		addQuestItem(ITEM_TEREDOR_EGG_FRAGMENT);
-		
+		addQuestItem(TEREDOR_EGG_FRAGMENT);
 		addLevelCheck(85, 99);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("30535-01.htm"))
+		if (event.equals("30535-01.htm"))
 		{
-			st.playSound(SOUND_FINISH);
-			st.takeAllItems(ITEM_TEREDOR_EGG_FRAGMENT);
-			st.giveItems(REWARD_PROOF_OF_FIDELITY, 2);
-			st.exitCurrentQuest(this);
+			qs.playSound(SOUND_FINISH);
+			qs.takeAllItems(TEREDOR_EGG_FRAGMENT);
+			qs.giveItems(REWARD_PROOF_OF_FIDELITY, 2);
+			qs.exitCurrentQuest(this);
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
 		
-		if (npc.getId() == NPC_AMER)
+		switch (npc.getId())
 		{
-			if (st.getPlayer().getLevel() < 85)
-			{
-				return htmltext = "You level is not correct!";
-			}
+			case AMER:
+				if (qs.getPlayer().getLevel() < 85)
+				{
+					return htmltext = "You level is not correct!";
+				}
+				switch (qs.getState())
+				{
+					case COMPLETED:
+						htmltext = "completed";
+						break;
+					
+					case CREATED:
+						if (isAvailableFor(qs.getPlayer()))
+						{
+							htmltext = "33092-00.htm";
+							qs.setState(STARTED);
+							qs.playSound(SOUND_ACCEPT);
+							qs.setCond(1);
+						}
+						else
+						{
+							htmltext = "daily";
+						}
+						break;
+					
+					case STARTED:
+						if (qs.getCond() == 1)
+						{
+							htmltext = "33092-00.htm";
+						}
+						break;
+				}
+				break;
 			
-			switch (st.getState())
-			{
-				case COMPLETED:
-					htmltext = "completed";
-					break;
-				
-				case CREATED:
-					if (isAvailableFor(st.getPlayer()))
-					{
-						htmltext = "33092-00.htm";
-						st.setState(STARTED);
-						st.playSound(SOUND_ACCEPT);
-						st.setCond(1);
-					}
-					else
-					{
-						htmltext = "daily";
-					}
-					break;
-				
-				case STARTED:
-					if (st.getCond() == 1)
-					{
-						htmltext = "33092-00.htm";
-					}
-					break;
-			}
-			
-		}
-		else if (npc.getId() == NPC_FILAR)
-		{
-			if (st.isStarted() && (st.getCond() == 2))
-			{
-				htmltext = "30535-00.htm";
-			}
+			case FILAR:
+				if (qs.isStarted() && (qs.getCond() == 2))
+				{
+					htmltext = "30535-00.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if ((st.getCond() == 1) && Rnd.chance(50))
+		if ((qs.getCond() == 1) && Rnd.chance(50))
 		{
-			st.giveItems(ITEM_TEREDOR_EGG_FRAGMENT, 1);
-			st.playSound(SOUND_ITEMGET);
-			if (st.getQuestItemsCount(ITEM_TEREDOR_EGG_FRAGMENT) >= 20)
+			qs.giveItems(TEREDOR_EGG_FRAGMENT, 1);
+			qs.playSound(SOUND_ITEMGET);
+			if (qs.getQuestItemsCount(TEREDOR_EGG_FRAGMENT) >= 20)
 			{
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				qs.setCond(2);
 			}
 		}
 		

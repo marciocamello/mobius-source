@@ -682,21 +682,6 @@ public class Q00373_SupplierOfReagents extends Quest implements ScriptFile
 		}
 	};
 	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public Q00373_SupplierOfReagents()
 	{
 		super(true);
@@ -709,19 +694,324 @@ public class Q00373_SupplierOfReagents extends Quest implements ScriptFile
 		}
 	}
 	
-	public String render_urn(QuestState st, String[] page)
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		if (event.equals("30166-4.htm"))
+		{
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.set("ingredient", "0");
+			qs.set("catalyst", "0");
+			qs.set("i_qty", "0");
+			qs.set("c_qty", "0");
+			qs.set("temp", "0");
+			qs.set("mixing", "0");
+			qs.giveItems(6317, 1);
+			qs.giveItems(5904, 1);
+			qs.playSound("ItemSound.quest_accept");
+		}
+		else if (event.equals("30166-5.htm"))
+		{
+			qs.exitCurrentQuest(true);
+			qs.playSound("ItemSound.quest_finish");
+		}
+		else if (event.equals("urn"))
+		{
+			htmltext = render_urn(qs, null);
+		}
+		else if ((event.length() > 0) && (event.charAt(0) == 'U'))
+		{
+			String[] s_event = event.split("_");
+			
+			if (s_event[1].equals("M"))
+			{
+				if (s_event[2].equals("Insert"))
+				{
+					if (qs.getQuestItemsCount(MIXING_STONE1) != 0)
+					{
+						qs.takeItems(MIXING_STONE1, -1);
+						qs.set("mixing", "1");
+						htmltext = "31149-2.htm";
+					}
+					else
+					{
+						htmltext = "You don't have a mixing stone.";
+					}
+				}
+				else if (s_event[2].equals("Retrieve"))
+				{
+					if (qs.getInt("mixing") != 0)
+					{
+						qs.set("mixing", "0");
+						qs.set("temp", "0");
+						qs.giveItems(MIXING_STONE1, 1);
+						
+						if ((qs.getInt("ingredient") > 0) || (qs.getInt("catalyst") > 0))
+						{
+							htmltext = "31149-2c.htm";
+						}
+						else
+						{
+							htmltext = "31149-2a.htm";
+						}
+					}
+					else
+					{
+						htmltext = "31149-2b.htm";
+					}
+				}
+			}
+			else if (s_event[2].equals("Insert"))
+			{
+				htmltext = render_urn(qs, s_event);
+			}
+			else if (s_event[2].equals("Retrieve"))
+			{
+				int item = 0;
+				int qty = 0;
+				
+				if (s_event[1].equals("I"))
+				{
+					item = qs.getInt("ingredient");
+					qty = qs.getInt("i_qty");
+					qs.set("ingredient", "0");
+					qs.set("i_qty", "0");
+				}
+				else if (s_event[1].equals("C"))
+				{
+					item = qs.getInt("catalyst");
+					qty = qs.getInt("c_qty");
+					qs.set("catalyst", "0");
+					qs.set("c_qty", "0");
+				}
+				
+				if ((item > 0) && (qty > 0))
+				{
+					qs.giveItems(item, qty);
+					htmltext = "31149-3a.htm";
+				}
+				else
+				{
+					htmltext = "31149-3b.htm";
+				}
+			}
+		}
+		else if ((event.length() > 0) && (event.charAt(0) == 'x'))
+		{
+			String[] s_event = event.split("_");
+			int qty = Integer.valueOf(s_event[1]);
+			String dst = s_event[2];
+			int item = Integer.valueOf(s_event[3]);
+			String dest;
+			String count;
+			
+			if (qty == 2)
+			{
+				qty = 10;
+			}
+			else
+			{
+				qty = 1;
+			}
+			
+			if (qs.getQuestItemsCount(item) >= qty)
+			{
+				if (dst.equals("I"))
+				{
+					dest = "ingredient";
+					count = "i_qty";
+				}
+				else
+				{
+					dest = "catalyst";
+					count = "c_qty";
+				}
+				
+				qs.takeItems(item, qty);
+				qs.set(dest, String.valueOf(item));
+				qs.set(count, String.valueOf(qty));
+				htmltext = "31149-4a.htm";
+			}
+			else
+			{
+				htmltext = "31149-4b.htm";
+			}
+		}
+		else if (event.startsWith("tmp"))
+		{
+			qs.set("temp", event.split("_")[1]);
+			htmltext = "31149-5a.htm";
+		}
+		else if (event.equals("31149-6.htm"))
+		{
+			if (qs.getInt("mixing") > 0)
+			{
+				int temp = qs.getInt("temp");
+				
+				if (temp != 0)
+				{
+					int ingredient = qs.getInt("ingredient");
+					int catalyst = qs.getInt("catalyst");
+					int iq = qs.getInt("i_qty");
+					int cq = qs.getInt("c_qty");
+					qs.set("ingredient", "0");
+					qs.set("i_qty", "0");
+					qs.set("catalyst", "0");
+					qs.set("c_qty", "0");
+					qs.set("temp", "0");
+					int item = 0;
+					
+					for (int[] element : FORMULAS)
+					{
+						if (((ingredient == element[1]) && (catalyst == element[3]) && (iq == element[2]) && (cq == element[4])) || ((ingredient == element[3]) && (catalyst == element[1]) && (iq == element[4]) && (cq == element[2])))
+						{
+							item = element[0];
+							break;
+						}
+					}
+					
+					if ((item == PURE_SILVER) && (temp != 1))
+					{
+						return "31149-7c.htm";
+					}
+					
+					if (item == MIMIRS_ELIXIR)
+					{
+						if (temp == 3)
+						{
+							if (qs.getQuestItemsCount(BLOOD_FIRE) > 0)
+							{
+								qs.takeItems(BLOOD_FIRE, 1);
+							}
+							else
+							{
+								return "31149-7a.htm";
+							}
+						}
+						else
+						{
+							return "31149-7b.htm";
+						}
+					}
+					
+					if (item > 0)
+					{
+						int chance = 0;
+						int qty = 0;
+						
+						for (int[] element : TEMPERATURE)
+						{
+							if (element[0] == temp)
+							{
+								chance = element[1];
+								qty = element[2];
+							}
+						}
+						
+						if (item == MIMIRS_ELIXIR)
+						{
+							chance = 100;
+							qty = 1;
+						}
+						
+						if (Rnd.chance(chance))
+						{
+							qs.giveItems(item, qty);
+						}
+						else
+						{
+							htmltext = "31149-6c.htm";
+						}
+					}
+					else
+					{
+						htmltext = "31149-6d.htm";
+					}
+				}
+				else
+				{
+					htmltext = "31149-6b.htm";
+				}
+			}
+			else
+			{
+				htmltext = "31149-6a.htm";
+			}
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		
+		switch (npc.getId())
+		{
+			case WESLEY:
+				if (cond == 0)
+				{
+					if (qs.getPlayer().getLevel() < 57)
+					{
+						qs.exitCurrentQuest(true);
+						htmltext = "30166-2.htm";
+					}
+					else
+					{
+						htmltext = "30166-1.htm";
+					}
+				}
+				else
+				{
+					htmltext = "30166-3.htm";
+				}
+				break;
+			
+			case URN:
+				if (cond == 1)
+				{
+					htmltext = render_urn(qs, null);
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		final int npcId = npc.getId();
+		
+		for (int[] i : DROPLIST_COND)
+		{
+			if (npcId == i[2])
+			{
+				qs.rollAndGive(i[4], i[7], i[6]);
+			}
+		}
+		
+		return null;
+	}
+	
+	public String render_urn(QuestState qs, String[] page)
 	{
 		String html = "noquest";
-		int stone = st.getInt("mixing");
-		int ingredient = st.getInt("ingredient");
-		int catalyst = st.getInt("catalyst");
+		final int stone = qs.getInt("mixing");
+		final int ingredient = qs.getInt("ingredient");
+		final int catalyst = qs.getInt("catalyst");
 		
 		if (page == null)
 		{
 			html = "<html>" + "<body>Alchemists Mixing Urn:" + "<br><table border=0 width=300><tr>" + "<tr><td width=50%>" + "<a action=\"bypass -h Quest Q00373_SupplierOfReagents U_M_MACT\">MACT Mixing Stone</a></td><td></td></tr>" + "<tr><td><a action=\"bypass -h Quest Q00373_SupplierOfReagents U_I_IACT\">IACT Ingredients</a></td><td>(current: INGR)</td></tr>" + "<tr><td><a action=\"bypass -h Quest Q00373_SupplierOfReagents U_C_CACT\">CACT Catalyst</a></td><td>(current: CATA)</td></tr>" + "<tr><td><a action=\"bypass -h Quest Q00373_SupplierOfReagents 31149-5.htm\">Select Temperature</a></td>" + "<td>(current: TEMP)</td></tr><tr><td><a action=\"bypass -h Quest Q00373_SupplierOfReagents 31149-6.htm\">Mix Ingredients</a></td><td></td></tr></table></body></html>";
-			int ingr = st.getInt("ingredient");
-			int cata = st.getInt("catalyst");
-			String temp = st.get("temp");
+			int ingr = qs.getInt("ingredient");
+			int cata = qs.getInt("catalyst");
+			String temp = qs.get("temp");
 			String r_ingr = "";
 			
 			if (ingr != 0)
@@ -730,7 +1020,7 @@ public class Q00373_SupplierOfReagents extends Quest implements ScriptFile
 				{
 					if ((Integer) element[0] == ingr)
 					{
-						r_ingr = element[2] + "x" + st.get("i_qty");
+						r_ingr = element[2] + "x" + qs.get("i_qty");
 					}
 				}
 			}
@@ -747,7 +1037,7 @@ public class Q00373_SupplierOfReagents extends Quest implements ScriptFile
 				{
 					if ((Integer) element[0] == cata)
 					{
-						r_cata = element[2] + "x" + st.get("c_qty");
+						r_cata = element[2] + "x" + qs.get("c_qty");
 					}
 				}
 			}
@@ -797,7 +1087,7 @@ public class Q00373_SupplierOfReagents extends Quest implements ScriptFile
 				
 				if (((item >= 6011) && (item <= 6031)) || ((item >= 6320) && (item <= 6321)))
 				{
-					if (st.getQuestItemsCount(item) > 0)
+					if (qs.getQuestItemsCount(item) > 0)
 					{
 						amt += 1;
 						html += "<tr><td height=45><img src=icon." + element[1] + " height=32 width=32></td><td width=180>" + element[2] + "</td><td><button value=X1 action=\"bypass -h Quest Q00373_SupplierOfReagents x_1_" + page[1] + "_" + str(item) + "\" width=40 height=15 fore=sek.cbui92><button value=X10 action=\"bypass -h Quest Q00373_SupplierOfReagents x_2_" + page[1] + "_" + str(item) + "\" width=40 height=15 fore=sek.cbui92></td></tr>";
@@ -816,303 +1106,17 @@ public class Q00373_SupplierOfReagents extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public void onLoad()
 	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("30166-4.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.set("ingredient", "0");
-			st.set("catalyst", "0");
-			st.set("i_qty", "0");
-			st.set("c_qty", "0");
-			st.set("temp", "0");
-			st.set("mixing", "0");
-			st.giveItems(6317, 1);
-			st.giveItems(5904, 1);
-			st.playSound("ItemSound.quest_accept");
-		}
-		else if (event.equalsIgnoreCase("30166-5.htm"))
-		{
-			st.exitCurrentQuest(true);
-			st.playSound("ItemSound.quest_finish");
-		}
-		else if (event.equalsIgnoreCase("urn"))
-		{
-			htmltext = render_urn(st, null);
-		}
-		else if ((event.length() > 0) && (event.charAt(0) == 'U'))
-		{
-			String[] s_event = event.split("_");
-			
-			if (s_event[1].equals("M"))
-			{
-				if (s_event[2].equals("Insert"))
-				{
-					if (st.getQuestItemsCount(MIXING_STONE1) != 0)
-					{
-						st.takeItems(MIXING_STONE1, -1);
-						st.set("mixing", "1");
-						htmltext = "31149-2.htm";
-					}
-					else
-					{
-						htmltext = "You don't have a mixing stone.";
-					}
-				}
-				else if (s_event[2].equals("Retrieve"))
-				{
-					if (st.getInt("mixing") != 0)
-					{
-						st.set("mixing", "0");
-						st.set("temp", "0");
-						st.giveItems(MIXING_STONE1, 1);
-						
-						if ((st.getInt("ingredient") > 0) || (st.getInt("catalyst") > 0))
-						{
-							htmltext = "31149-2c.htm";
-						}
-						else
-						{
-							htmltext = "31149-2a.htm";
-						}
-					}
-					else
-					{
-						htmltext = "31149-2b.htm";
-					}
-				}
-			}
-			else if (s_event[2].equals("Insert"))
-			{
-				htmltext = render_urn(st, s_event);
-			}
-			else if (s_event[2].equals("Retrieve"))
-			{
-				int item = 0;
-				int qty = 0;
-				
-				if (s_event[1].equals("I"))
-				{
-					item = st.getInt("ingredient");
-					qty = st.getInt("i_qty");
-					st.set("ingredient", "0");
-					st.set("i_qty", "0");
-				}
-				else if (s_event[1].equals("C"))
-				{
-					item = st.getInt("catalyst");
-					qty = st.getInt("c_qty");
-					st.set("catalyst", "0");
-					st.set("c_qty", "0");
-				}
-				
-				if ((item > 0) && (qty > 0))
-				{
-					st.giveItems(item, qty);
-					htmltext = "31149-3a.htm";
-				}
-				else
-				{
-					htmltext = "31149-3b.htm";
-				}
-			}
-		}
-		else if ((event.length() > 0) && (event.charAt(0) == 'x'))
-		{
-			String[] s_event = event.split("_");
-			int qty = Integer.valueOf(s_event[1]);
-			String dst = s_event[2];
-			int item = Integer.valueOf(s_event[3]);
-			String dest;
-			String count;
-			
-			if (qty == 2)
-			{
-				qty = 10;
-			}
-			else
-			{
-				qty = 1;
-			}
-			
-			if (st.getQuestItemsCount(item) >= qty)
-			{
-				if (dst.equals("I"))
-				{
-					dest = "ingredient";
-					count = "i_qty";
-				}
-				else
-				{
-					dest = "catalyst";
-					count = "c_qty";
-				}
-				
-				st.takeItems(item, qty);
-				st.set(dest, String.valueOf(item));
-				st.set(count, String.valueOf(qty));
-				htmltext = "31149-4a.htm";
-			}
-			else
-			{
-				htmltext = "31149-4b.htm";
-			}
-		}
-		else if (event.startsWith("tmp"))
-		{
-			st.set("temp", event.split("_")[1]);
-			htmltext = "31149-5a.htm";
-		}
-		else if (event.equalsIgnoreCase("31149-6.htm"))
-		{
-			if (st.getInt("mixing") > 0)
-			{
-				int temp = st.getInt("temp");
-				
-				if (temp != 0)
-				{
-					int ingredient = st.getInt("ingredient");
-					int catalyst = st.getInt("catalyst");
-					int iq = st.getInt("i_qty");
-					int cq = st.getInt("c_qty");
-					st.set("ingredient", "0");
-					st.set("i_qty", "0");
-					st.set("catalyst", "0");
-					st.set("c_qty", "0");
-					st.set("temp", "0");
-					int item = 0;
-					
-					for (int[] element : FORMULAS)
-					{
-						if (((ingredient == element[1]) && (catalyst == element[3]) && (iq == element[2]) && (cq == element[4])) || ((ingredient == element[3]) && (catalyst == element[1]) && (iq == element[4]) && (cq == element[2])))
-						{
-							item = element[0];
-							break;
-						}
-					}
-					
-					if ((item == PURE_SILVER) && (temp != 1))
-					{
-						return "31149-7c.htm";
-					}
-					
-					if (item == MIMIRS_ELIXIR)
-					{
-						if (temp == 3)
-						{
-							if (st.getQuestItemsCount(BLOOD_FIRE) > 0)
-							{
-								st.takeItems(BLOOD_FIRE, 1);
-							}
-							else
-							{
-								return "31149-7a.htm";
-							}
-						}
-						else
-						{
-							return "31149-7b.htm";
-						}
-					}
-					
-					if (item > 0)
-					{
-						int chance = 0;
-						int qty = 0;
-						
-						for (int[] element : TEMPERATURE)
-						{
-							if (element[0] == temp)
-							{
-								chance = element[1];
-								qty = element[2];
-							}
-						}
-						
-						if (item == MIMIRS_ELIXIR)
-						{
-							chance = 100;
-							qty = 1;
-						}
-						
-						if (Rnd.chance(chance))
-						{
-							st.giveItems(item, qty);
-						}
-						else
-						{
-							htmltext = "31149-6c.htm";
-						}
-					}
-					else
-					{
-						htmltext = "31149-6d.htm";
-					}
-				}
-				else
-				{
-					htmltext = "31149-6b.htm";
-				}
-			}
-			else
-			{
-				htmltext = "31149-6a.htm";
-			}
-		}
-		
-		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public void onReload()
 	{
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		int cond = st.getCond();
-		
-		if (npcId == WESLEY)
-		{
-			if (cond == 0)
-			{
-				if (st.getPlayer().getLevel() < 57)
-				{
-					st.exitCurrentQuest(true);
-					htmltext = "30166-2.htm";
-				}
-				else
-				{
-					htmltext = "30166-1.htm";
-				}
-			}
-			else
-			{
-				htmltext = "30166-3.htm";
-			}
-		}
-		else if ((npcId == URN) && (cond == 1))
-		{
-			htmltext = render_urn(st, null);
-		}
-		
-		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public void onShutdown()
 	{
-		int npcId = npc.getId();
-		
-		for (int[] i : DROPLIST_COND)
-		{
-			if (npcId == i[2])
-			{
-				st.rollAndGive(i[4], i[7], i[6]);
-			}
-		}
-		
-		return null;
 	}
 }

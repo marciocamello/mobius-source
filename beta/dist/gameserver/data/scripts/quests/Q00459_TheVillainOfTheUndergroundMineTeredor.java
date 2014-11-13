@@ -19,99 +19,99 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00459_TheVillainOfTheUndergroundMineTeredor extends Quest implements ScriptFile
 {
-	private static final int NPC_FILAUR = 30535;
-	private static final int MOB_HENCHMAN = 25785; // Teredor
-	private static final int ITEM_PROOF_OF_FIDELITY = 19450;
+	// Npc
+	private static final int FILAUR = 30535;
+	// Monster
+	private static final int TEREDOR = 25785;
+	// Item
+	private static final int PROOF_OF_FIDELITY = 19450;
 	
 	public Q00459_TheVillainOfTheUndergroundMineTeredor()
 	{
 		super(PARTY_ALL);
-		addStartNpc(NPC_FILAUR);
-		addKillId(MOB_HENCHMAN);
+		addStartNpc(FILAUR);
+		addKillId(TEREDOR);
 		addLevelCheck(85, 99);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("30535-04.htm"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("30535-07.htm"))
-		{
-			st.giveItems(ITEM_PROOF_OF_FIDELITY, 20);
-			st.playSound("ItemSound.quest_finish");
-			st.exitCurrentQuest(this);
+			case "30535-04.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "30535-07.htm":
+				qs.giveItems(PROOF_OF_FIDELITY, 20);
+				qs.playSound("ItemSound.quest_finish");
+				qs.exitCurrentQuest(this);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
 		
-		if (npc.getId() == NPC_FILAUR)
+		switch (qs.getState())
 		{
-			switch (st.getState())
-			{
-				default:
-					break;
-				
-				case COMPLETED:
-					htmltext = "completed";
-					break;
-				
-				case CREATED:
-					if (st.getPlayer().getLevel() >= 85)
+			default:
+				break;
+			
+			case COMPLETED:
+				htmltext = "completed";
+				break;
+			
+			case CREATED:
+				if (qs.getPlayer().getLevel() >= 85)
+				{
+					if (isAvailableFor(qs.getPlayer()))
 					{
-						if (isAvailableFor(st.getPlayer()))
-						{
-							htmltext = "30535-00.htm";
-						}
-						else
-						{
-							htmltext = "daily";
-						}
+						htmltext = "30535-00.htm";
 					}
 					else
 					{
-						htmltext = ""; // low level;
+						htmltext = "daily";
 					}
-					
+				}
+				else
+				{
+					htmltext = ""; // low level;
+				}
+				break;
+			
+			case STARTED:
+				if (qs.getCond() == 1)
+				{
+					htmltext = "30535-05.htm";
 					break;
+				}
 				
-				case STARTED:
-					if (st.getCond() == 1)
-					{
-						htmltext = "30535-05.htm";
-						break;
-					}
-					
-					if (st.getCond() == 2)
-					{
-						htmltext = "30535-06.htm";
-					}
-					
-					break;
-			}
+				if (qs.getCond() == 2)
+				{
+					htmltext = "30535-06.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if ((npc.getId() == MOB_HENCHMAN) && (st.getCond() == 1))
+		if (qs.getCond() == 1)
 		{
-			st.setCond(2);
+			qs.setCond(2);
 		}
 		
 		return null;

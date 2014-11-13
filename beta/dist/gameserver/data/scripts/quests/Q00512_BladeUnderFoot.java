@@ -80,50 +80,48 @@ public class Q00512_BladeUnderFoot extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		if (event.equalsIgnoreCase("gludio_prison_keeper_q0512_03.htm") || event.equalsIgnoreCase("gludio_prison_keeper_q0512_05.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("exit"))
-		{
-			st.exitCurrentQuest(true);
-			return null;
-		}
-		else if (event.equalsIgnoreCase("enter"))
-		{
-			if ((st.getState() == CREATED) || !check(st.getPlayer()))
-			{
-				return "gludio_prison_keeper_q0512_01a.htm";
-			}
+			case "gludio_prison_keeper_q0512_03.htm":
+			case "gludio_prison_keeper_q0512_05.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
 			
-			return enterPrison(st.getPlayer());
+			case "exit":
+				qs.exitCurrentQuest(true);
+				return null;
+				
+			case "enter":
+				if ((qs.getState() == CREATED) || !check(qs.getPlayer()))
+				{
+					return "gludio_prison_keeper_q0512_01a.htm";
+				}
+				return enterPrison(qs.getPlayer());
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		if (!check(st.getPlayer()))
+		if (!check(qs.getPlayer()))
 		{
 			return "gludio_prison_keeper_q0512_01a.htm";
 		}
-		
-		if (st.getState() == CREATED)
+		else if (qs.getState() == CREATED)
 		{
 			return "gludio_prison_keeper_q0512_01.htm";
 		}
-		
-		if (st.getQuestItemsCount(FragmentOfTheDungeonLeaderMark) > 0)
+		else if (qs.getQuestItemsCount(FragmentOfTheDungeonLeaderMark) > 0)
 		{
-			st.giveItems(KnightsEpaulette, st.getQuestItemsCount(FragmentOfTheDungeonLeaderMark));
-			st.takeItems(FragmentOfTheDungeonLeaderMark, -1);
-			st.playSound(SOUND_FINISH);
+			qs.giveItems(KnightsEpaulette, qs.getQuestItemsCount(FragmentOfTheDungeonLeaderMark));
+			qs.takeItems(FragmentOfTheDungeonLeaderMark, -1);
+			qs.playSound(SOUND_FINISH);
 			return "gludio_prison_keeper_q0512_08.htm";
 		}
 		
@@ -131,7 +129,7 @@ public class Q00512_BladeUnderFoot extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
 		for (Prison prison : _prisons.values())
 		{
@@ -155,39 +153,37 @@ public class Q00512_BladeUnderFoot extends Quest implements ScriptFile
 					case BeautifulAtrielle:
 					case NagenTheTomboy:
 					case JaxTheDestroyer:
-						Party party = st.getPlayer().getParty();
+						Party party = qs.getPlayer().getParty();
 						
 						if (party != null)
 						{
 							for (Player member : party.getPartyMembers())
 							{
-								QuestState qs = member.getQuestState(getClass());
+								final QuestState state = member.getQuestState(getClass());
 								
-								if ((qs != null) && qs.isStarted())
+								if ((state != null) && state.isStarted())
 								{
-									qs.giveItems(FragmentOfTheDungeonLeaderMark, RewardMarksCount / party.getMemberCount());
-									qs.playSound(SOUND_ITEMGET);
-									qs.getPlayer().sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(5));
+									state.giveItems(FragmentOfTheDungeonLeaderMark, RewardMarksCount / party.getMemberCount());
+									state.playSound(SOUND_ITEMGET);
+									state.getPlayer().sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(5));
 								}
 							}
 						}
 						else
 						{
-							st.giveItems(FragmentOfTheDungeonLeaderMark, RewardMarksCount);
-							st.playSound(SOUND_ITEMGET);
-							st.getPlayer().sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(5));
+							qs.giveItems(FragmentOfTheDungeonLeaderMark, RewardMarksCount);
+							qs.playSound(SOUND_ITEMGET);
+							qs.getPlayer().sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(5));
 						}
 						
-						Reflection r = ReflectionManager.getInstance().get(prison.getReflectionId());
+						final Reflection r = ReflectionManager.getInstance().get(prison.getReflectionId());
 						
 						if (r != null)
 						{
 							r.startCollapseTimer(300000);
 						}
-						
 						break;
 				}
-				
 				break;
 			}
 		}
@@ -197,14 +193,14 @@ public class Q00512_BladeUnderFoot extends Quest implements ScriptFile
 	
 	private boolean check(Player player)
 	{
-		Castle castle = ResidenceHolder.getInstance().getResidenceByObject(Castle.class, player);
+		final Castle castle = ResidenceHolder.getInstance().getResidenceByObject(Castle.class, player);
 		
 		if (castle == null)
 		{
 			return false;
 		}
 		
-		Clan clan = player.getClan();
+		final Clan clan = player.getClan();
 		
 		if (clan == null)
 		{
@@ -221,21 +217,20 @@ public class Q00512_BladeUnderFoot extends Quest implements ScriptFile
 	
 	private String enterPrison(Player player)
 	{
-		Castle castle = ResidenceHolder.getInstance().getResidenceByObject(Castle.class, player);
+		final Castle castle = ResidenceHolder.getInstance().getResidenceByObject(Castle.class, player);
 		
 		if ((castle == null) || (castle.getOwner() != player.getClan()))
 		{
 			return "gludio_prison_keeper_q0512_01a.htm";
 		}
-		
-		if (!areMembersSameClan(player))
+		else if (!areMembersSameClan(player))
 		{
 			return "gludio_prison_keeper_q0512_01a.htm";
 		}
 		
 		if (player.canEnterInstance(INSTANCE_ZONE_ID))
 		{
-			InstantZone iz = InstantZoneHolder.getInstance().getInstantZone(INSTANCE_ZONE_ID);
+			final InstantZone iz = InstantZoneHolder.getInstance().getInstantZone(INSTANCE_ZONE_ID);
 			Prison prison = null;
 			
 			if (!_prisons.isEmpty())
@@ -275,6 +270,24 @@ public class Q00512_BladeUnderFoot extends Quest implements ScriptFile
 		}
 		
 		return null;
+	}
+	
+	private boolean areMembersSameClan(Player player)
+	{
+		if (player.getParty() == null)
+		{
+			return true;
+		}
+		
+		for (Player p : player.getParty().getPartyMembers())
+		{
+			if (p.getClan() != player.getClan())
+			{
+				return false;
+			}
+		}
+		
+		return true;
 	}
 	
 	private class Prison
@@ -334,24 +347,6 @@ public class Q00512_BladeUnderFoot extends Quest implements ScriptFile
 		{
 			return (System.currentTimeMillis() - _lastEnter) < (4 * 60 * 60 * 1000L);
 		}
-	}
-	
-	private boolean areMembersSameClan(Player player)
-	{
-		if (player.getParty() == null)
-		{
-			return true;
-		}
-		
-		for (Player p : player.getParty().getPartyMembers())
-		{
-			if (p.getClan() != player.getClan())
-			{
-				return false;
-			}
-		}
-		
-		return true;
 	}
 	
 	@Override

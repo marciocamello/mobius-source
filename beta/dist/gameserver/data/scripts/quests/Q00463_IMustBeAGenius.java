@@ -24,24 +24,12 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00463_IMustBeAGenius extends Quest implements ScriptFile
 {
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
+	// Npc
 	private static final int GUTENHAGEN = 32069;
+	// Items
 	private static final int CORPSE_LOG = 15510;
 	private static final int COLLECTION = 15511;
+	// Monsters
 	private static final int[] MOBS =
 	{
 		22801,
@@ -66,21 +54,18 @@ public class Q00463_IMustBeAGenius extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
-		st.getPlayer();
 		
-		if (npc.getId() == GUTENHAGEN)
+		switch (event)
 		{
-			if (event.equalsIgnoreCase("collecter_gutenhagen_q0463_05.htm"))
-			{
-				st.playSound(SOUND_ACCEPT);
-				st.setState(STARTED);
-				st.setCond(1);
+			case "collecter_gutenhagen_q0463_05.htm":
+				qs.playSound(SOUND_ACCEPT);
+				qs.setState(STARTED);
+				qs.setCond(1);
 				int _number = Rnd.get(500, 600);
-				st.set("number", String.valueOf(_number));
-				
+				qs.set("number", String.valueOf(_number));
 				for (int _mob : MOBS)
 				{
 					int _rand = Rnd.get(-2, 4);
@@ -90,172 +75,177 @@ public class Q00463_IMustBeAGenius extends Quest implements ScriptFile
 						_rand = 5;
 					}
 					
-					st.set(String.valueOf(_mob), String.valueOf(_rand));
+					qs.set(String.valueOf(_mob), String.valueOf(_rand));
 				}
-				
-				st.set(String.valueOf(MOBS[Rnd.get(0, MOBS.length - 1)]), String.valueOf(Rnd.get(1, 100)));
-				htmltext = HtmCache.getInstance().getNotNull("quests/Q00463_IMustBeAGenius/" + event, st.getPlayer());
+				qs.set(String.valueOf(MOBS[Rnd.get(0, MOBS.length - 1)]), String.valueOf(Rnd.get(1, 100)));
+				htmltext = HtmCache.getInstance().getNotNull("quests/Q00463_IMustBeAGenius/" + event, qs.getPlayer());
 				htmltext = htmltext.replace("%num%", String.valueOf(_number));
-			}
-			else if (event.equalsIgnoreCase("collecter_gutenhagen_q0463_07.htm"))
-			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/Q00463_IMustBeAGenius/" + event, st.getPlayer());
-				htmltext = htmltext.replace("%num%", st.get("number"));
-			}
-			else if (event.equalsIgnoreCase("reward"))
-			{
-				int diff = st.getInt("number") - 500;
-				
+				break;
+			
+			case "collecter_gutenhagen_q0463_07.htm":
+				htmltext = HtmCache.getInstance().getNotNull("quests/Q00463_IMustBeAGenius/" + event, qs.getPlayer());
+				htmltext = htmltext.replace("%num%", qs.get("number"));
+				break;
+			
+			case "reward":
+				int diff = qs.getInt("number") - 500;
 				if (diff == 0)
 				{
-					st.addExpAndSp(198725, 15892);
+					qs.addExpAndSp(198725, 15892);
 					htmltext = "collecter_gutenhagen_q0463_09.htm";
 				}
 				else if ((diff >= 1) && (diff < 5))
 				{
-					st.addExpAndSp(278216, 22249);
+					qs.addExpAndSp(278216, 22249);
 					htmltext = "collecter_gutenhagen_q0463_10.htm";
 				}
 				else if ((diff >= 5) && (diff < 10))
 				{
-					st.addExpAndSp(317961, 25427);
+					qs.addExpAndSp(317961, 25427);
 					htmltext = "collecter_gutenhagen_q0463_11.htm";
 				}
 				else if ((diff >= 10) && (diff < 25))
 				{
-					st.addExpAndSp(357706, 28606);
+					qs.addExpAndSp(357706, 28606);
 					htmltext = "collecter_gutenhagen_q0463_11.htm";
 				}
 				else if ((diff >= 25) && (diff < 40))
 				{
-					st.addExpAndSp(397451, 31784);
+					qs.addExpAndSp(397451, 31784);
 					htmltext = "collecter_gutenhagen_q0463_12.htm";
 				}
 				else if ((diff >= 40) && (diff < 60))
 				{
-					st.addExpAndSp(596176, 47677);
+					qs.addExpAndSp(596176, 47677);
 					htmltext = "collecter_gutenhagen_q0463_13.htm";
 				}
 				else if ((diff >= 60) && (diff < 72))
 				{
-					st.addExpAndSp(715411, 57212);
+					qs.addExpAndSp(715411, 57212);
 					htmltext = "collecter_gutenhagen_q0463_14.htm";
 				}
 				else if ((diff >= 72) && (diff < 81))
 				{
-					st.addExpAndSp(794901, 63569);
+					qs.addExpAndSp(794901, 63569);
 					htmltext = "collecter_gutenhagen_q0463_14.htm";
 				}
 				else if ((diff >= 81) && (diff < 89))
 				{
-					st.addExpAndSp(914137, 73104);
+					qs.addExpAndSp(914137, 73104);
 					htmltext = "collecter_gutenhagen_q0463_15.htm";
 				}
 				else
 				{
-					st.addExpAndSp(1192352, 95353);
+					qs.addExpAndSp(1192352, 95353);
 					htmltext = "collecter_gutenhagen_q0463_15.htm";
 				}
-				
-				st.unset("cond");
-				st.unset("number");
-				
+				qs.unset("cond");
+				qs.unset("number");
 				for (int _mob : MOBS)
 				{
-					st.unset(String.valueOf(_mob));
+					qs.unset(String.valueOf(_mob));
 				}
-				
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(this);
-			}
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(this);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		Player player = st.getPlayer();
+		final Player player = qs.getPlayer();
 		
-		if (npc.getId() == GUTENHAGEN)
+		switch (qs.getState())
 		{
-			switch (st.getState())
-			{
-				case CREATED:
-					if (player.getLevel() >= 70)
+			case CREATED:
+				if (player.getLevel() >= 70)
+				{
+					if (qs.isNowAvailableByTime())
 					{
-						if (st.isNowAvailableByTime())
-						{
-							htmltext = "collecter_gutenhagen_q0463_01.htm";
-						}
-						else
-						{
-							htmltext = "collecter_gutenhagen_q0463_03.htm";
-						}
+						htmltext = "collecter_gutenhagen_q0463_01.htm";
 					}
 					else
 					{
-						htmltext = "collecter_gutenhagen_q0463_02.htm";
+						htmltext = "collecter_gutenhagen_q0463_03.htm";
 					}
-					
-					break;
-				
-				case STARTED:
-					if (st.getCond() == 1)
+				}
+				else
+				{
+					htmltext = "collecter_gutenhagen_q0463_02.htm";
+				}
+				break;
+			
+			case STARTED:
+				if (qs.getCond() == 1)
+				{
+					htmltext = "collecter_gutenhagen_q0463_06.htm";
+				}
+				else if (qs.getCond() == 2)
+				{
+					if (qs.getQuestItemsCount(COLLECTION) > 0)
 					{
-						htmltext = "collecter_gutenhagen_q0463_06.htm";
+						qs.takeItems(COLLECTION, -1);
+						htmltext = "collecter_gutenhagen_q0463_08.htm";
 					}
-					else if (st.getCond() == 2)
+					else
 					{
-						if (st.getQuestItemsCount(COLLECTION) > 0)
-						{
-							st.takeItems(COLLECTION, -1);
-							htmltext = "collecter_gutenhagen_q0463_08.htm";
-						}
-						else
-						{
-							htmltext = "collecter_gutenhagen_q0463_08a.htm";
-						}
+						htmltext = "collecter_gutenhagen_q0463_08a.htm";
 					}
-					
-					break;
-			}
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if ((st.getState() == STARTED) && (st.getCond() == 1))
+		if ((qs.getState() == STARTED) && (qs.getCond() == 1))
 		{
-			int _day_number = st.getInt("number");
-			int _number = st.getInt(String.valueOf(npc.getId()));
+			int _day_number = qs.getInt("number");
+			int _number = qs.getInt(String.valueOf(npc.getId()));
 			
 			if (_number > 0)
 			{
-				st.giveItems(CORPSE_LOG, _number);
-				st.playSound(SOUND_ITEMGET);
-				Functions.npcSay(npc, NpcString.ATT__ATTACK__S1__RO__ROGUE__S2, st.getPlayer().getName(), String.valueOf(_number));
+				qs.giveItems(CORPSE_LOG, _number);
+				qs.playSound(SOUND_ITEMGET);
+				Functions.npcSay(npc, NpcString.ATT__ATTACK__S1__RO__ROGUE__S2, qs.getPlayer().getName(), String.valueOf(_number));
 			}
-			else if ((_number < 0) && ((st.getQuestItemsCount(CORPSE_LOG) + _number) > 0))
+			else if ((_number < 0) && ((qs.getQuestItemsCount(CORPSE_LOG) + _number) > 0))
 			{
-				st.takeItems(CORPSE_LOG, Math.abs(_number));
-				st.playSound(SOUND_ITEMGET);
-				Functions.npcSay(npc, NpcString.ATT__ATTACK__S1__RO__ROGUE__S2, st.getPlayer().getName(), String.valueOf(_number));
+				qs.takeItems(CORPSE_LOG, Math.abs(_number));
+				qs.playSound(SOUND_ITEMGET);
+				Functions.npcSay(npc, NpcString.ATT__ATTACK__S1__RO__ROGUE__S2, qs.getPlayer().getName(), String.valueOf(_number));
 			}
 			
-			if (st.getQuestItemsCount(CORPSE_LOG) >= _day_number)
+			if (qs.getQuestItemsCount(CORPSE_LOG) >= _day_number)
 			{
-				st.takeItems(CORPSE_LOG, -1);
-				st.giveItems(COLLECTION, 1);
-				st.setCond(2);
+				qs.takeItems(CORPSE_LOG, -1);
+				qs.giveItems(COLLECTION, 1);
+				qs.setCond(2);
 			}
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

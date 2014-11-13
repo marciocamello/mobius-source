@@ -23,18 +23,107 @@ import lineage2.gameserver.utils.Util;
 
 public class Q00492_TombRaiders extends Quest implements ScriptFile
 {
-	// npc
+	// Npc
 	public static final int ZENIA = 32140;
-	// mobs
-	private static final int[] Mobs =
+	// Item
+	public static final int ANCIENT_REL = 34769;
+	// Monsters
+	private static final int[] MONSTERS =
 	{
 		23193,
 		23194,
 		23195,
 		23196
 	};
-	// q items
-	public static final int ANCIENT_REL = 34769;
+	
+	public Q00492_TombRaiders()
+	{
+		super(true);
+		addStartNpc(ZENIA);
+		addKillId(MONSTERS);
+		addQuestItem(ANCIENT_REL);
+		addLevelCheck(80, 100);
+		addClassLevelCheck(4);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		if (event.equals("32140-5.htm"))
+		{
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.playSound(SOUND_ACCEPT);
+		}
+		
+		return event;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		final Player player = qs.getPlayer();
+		final int state = qs.getState();
+		final int cond = qs.getCond();
+		
+		if (player.getLevel() < 80)
+		{
+			return "32140-lvl.htm";
+		}
+		else if (!player.getClassId().isOfLevel(ClassLevel.Second))
+		{
+			return "32140-class.htm";
+		}
+		
+		if (state == 1)
+		{
+			if (!qs.isNowAvailable())
+			{
+				return "32140-comp.htm";
+			}
+			
+			return "32140.htm";
+		}
+		else if (state == 2)
+		{
+			if (cond == 1)
+			{
+				return "32140-6.htm";
+			}
+			else if (cond == 2)
+			{
+				qs.addExpAndSp(9009000, 8997060);
+				qs.takeItems(ANCIENT_REL, -1);
+				qs.unset("cond");
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(this);
+				return "32140-7.htm";
+			}
+		}
+		
+		return "noquest";
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if ((qs.getCond() != 1) || (npc == null))
+		{
+			return null;
+		}
+		
+		if (Util.contains(MONSTERS, npc.getId()) && Rnd.chance(25))
+		{
+			qs.giveItems(ANCIENT_REL, 1);
+		}
+		
+		if (qs.getQuestItemsCount(ANCIENT_REL) >= 50)
+		{
+			qs.setCond(2);
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -49,103 +138,5 @@ public class Q00492_TombRaiders extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00492_TombRaiders()
-	{
-		super(true);
-		addStartNpc(ZENIA);
-		addKillId(Mobs);
-		addQuestItem(ANCIENT_REL);
-		addLevelCheck(80, 100);
-		addClassLevelCheck(4);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		if (event.equalsIgnoreCase("32140-5.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		return event;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		Player player = st.getPlayer();
-		int npcId = npc.getId();
-		int state = st.getState();
-		int cond = st.getCond();
-		
-		if (npcId == ZENIA)
-		{
-			if (player.getLevel() < 80)
-			{
-				return "32140-lvl.htm";
-			}
-			
-			if (!player.getClassId().isOfLevel(ClassLevel.Second))
-			{
-				return "32140-class.htm";
-			}
-			
-			if (state == 1)
-			{
-				if (!st.isNowAvailable())
-				{
-					return "32140-comp.htm";
-				}
-				
-				return "32140.htm";
-			}
-			
-			if (state == 2)
-			{
-				if (cond == 1)
-				{
-					return "32140-6.htm";
-				}
-				
-				if (cond == 2)
-				{
-					st.addExpAndSp(9009000, 8997060); // Unknown!!!!!
-					st.takeItems(ANCIENT_REL, -1);
-					st.unset("cond");
-					st.playSound(SOUND_FINISH);
-					st.exitCurrentQuest(this);
-					return "32140-7.htm";
-				}
-			}
-		}
-		
-		return "noquest";
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		
-		if ((cond != 1) || (npc == null))
-		{
-			return null;
-		}
-		
-		if (Util.contains(Mobs, npc.getId()) && Rnd.chance(25))
-		{
-			st.giveItems(ANCIENT_REL, 1);
-		}
-		
-		if (st.getQuestItemsCount(ANCIENT_REL) >= 50)
-		{
-			st.setCond(2);
-		}
-		
-		return null;
 	}
 }
