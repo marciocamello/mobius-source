@@ -17059,11 +17059,13 @@
 	</recipe>
 	<recipe id="1147" name="Recipe: Immortal Belt (60%)" level="10" mp_consume="246" success_rate="60" item_id="32292" is_dwarven="false">
 		<materials>
-			<item id="32304" count="1"/>
-			<item id="19308" count="1"/>
-			<item id="19314" count="3"/>
-			<item id="19313" count="1"/>
-			<item id="17371" count="1"/>
+			<item id="32304" count="10"/>
+			<item id="36519" count="1"/>
+			<item id="36524" count="1"/>
+			<item id="36539" count="1"/>
+			<item id="36564" count="1"/>
+			<item id="19440" count="1"/>
+			<item id="17371" count="7"/>
 		</materials>
 		<products>
 			<item id="19470" count="1" chance="100"/>
@@ -17071,10 +17073,9 @@
 	</recipe>
 	<recipe id="1148" name="Recipe: Immortal Bracelet (60%)" level="10" mp_consume="246" success_rate="60" item_id="32293" is_dwarven="false">
 		<materials>
-			<item id="32305" count="1"/>
-			<item id="19314" count="5"/>
-			<item id="19313" count="3"/>
-			<item id="17371" count="3"/>
+			<item id="32305" count="10"/>
+			<item id="19440" count="2"/>
+			<item id="17371" count="69"/>
 		</materials>
 		<products>
 			<item id="19471" count="1" chance="100"/>
@@ -17082,11 +17083,12 @@
 	</recipe>
 	<recipe id="1149" name="Recipe: Immortal Shirt (60%)" level="10" mp_consume="246" success_rate="60" item_id="32294" is_dwarven="false">
 		<materials>
-			<item id="32306" count="1"/>
-			<item id="19308" count="2"/>
-			<item id="19314" count="5"/>
-			<item id="19313" count="3"/>
-			<item id="17371" count="1"/>
+			<item id="32306" count="10"/>
+			<item id="36529" count="2"/>
+			<item id="36534" count="1"/>
+			<item id="36564" count="1"/>
+			<item id="19440" count="1"/>
+			<item id="17371" count="13"/>
 		</materials>
 		<products>
 			<item id="19472" count="1" chance="100"/>
@@ -17094,11 +17096,13 @@
 	</recipe>
 	<recipe id="1150" name="Recipe: Twilight Belt (60%)" level="10" mp_consume="246" success_rate="60" item_id="32295" is_dwarven="false">
 		<materials>
-			<item id="32307" count="1"/>
-			<item id="19308" count="5"/>
-			<item id="19314" count="7"/>
-			<item id="19313" count="3"/>
-			<item id="17371" count="2"/>
+			<item id="32307" count="10"/>
+			<item id="36519" count="2"/>
+			<item id="36524" count="1"/>
+			<item id="36539" count="1"/>
+			<item id="36564" count="1"/>
+			<item id="19440" count="1"/>
+			<item id="17371" count="20"/>
 		</materials>
 		<products>
 			<item id="19473" count="1" chance="100"/>
@@ -17106,10 +17110,13 @@
 	</recipe>
 	<recipe id="1151" name="Recipe: Twilight Bracelet (60%)" level="10" mp_consume="246" success_rate="60" item_id="32296" is_dwarven="false">
 		<materials>
-			<item id="32308" count="1"/>
-			<item id="19314" count="5"/>
-			<item id="19313" count="3"/>
-			<item id="17371" count="3"/>
+			<item id="32308" count="10"/>
+			<item id="36519" count="2"/>
+			<item id="36524" count="1"/>
+			<item id="36559" count="1"/>
+			<item id="36564" count="1"/>
+			<item id="19440" count="2"/>
+			<item id="17371" count="38"/>
 		</materials>
 		<products>
 			<item id="19474" count="1" chance="100"/>
@@ -17117,11 +17124,12 @@
 	</recipe>
 	<recipe id="1152" name="Recipe: Twilight Shirt (60%)" level="10" mp_consume="246" success_rate="60" item_id="32297" is_dwarven="false">
 		<materials>
-			<item id="32309" count="1"/>
-			<item id="19308" count="6"/>
-			<item id="19314" count="15"/>
-			<item id="19313" count="8"/>
-			<item id="17371" count="2"/>
+			<item id="32309" count="10"/>
+			<item id="36529" count="5"/>
+			<item id="36534" count="1"/>
+			<item id="36564" count="1"/>
+			<item id="19440" count="2"/>
+			<item id="17371" count="39"/>
 		</materials>
 		<products>
 			<item id="19475" count="1" chance="100"/>
@@ -17129,11 +17137,13 @@
 	</recipe>
 	<recipe id="1153" name="Recipe: Seraph Belt (60%)" level="10" mp_consume="246" success_rate="60" item_id="32298" is_dwarven="false">
 		<materials>
-			<item id="32310" count="1"/>
-			<item id="19517" count="4"/>
-			<item id="19314" count="8"/>
-			<item id="19313" count="4"/>
-			<item id="17371" count="3"/>
+			<item id="32310" count="10"/>
+			<item id="36519" count="4"/>
+			<item id="36524" count="1"/>
+			<item id="36539" count="1"/>
+			<item id="36564" count="1"/>
+			<item id="19440" count="2"/>
+			<item id="17371" count="44"/>
 		</materials>
 		<products>
 			<item id="19476" count="1" chance="100"/>
@@ -17141,10 +17151,13 @@
 	</recipe>
 	<recipe id="1154" name="Recipe: Seraph Bracelet (60%)" level="10" mp_consume="246" success_rate="60" item_id="32299" is_dwarven="false">
 		<materials>
-			<item id="32311" count="1"/>
-			<item id="19314" count="5"/>
-			<item id="19313" count="3"/>
-			<item id="17371" count="3"/>
+			<item id="32311" count="10"/>
+			<item id="36519" count="2"/>
+			<item id="36524" count="1"/>
+			<item id="36559" count="1"/>
+			<item id="36564" count="1"/>
+			<item id="19440" count="2"/>
+			<item id="17371" count="40"/>
 		</materials>
 		<products>
 			<item id="19477" count="1" chance="100"/>
@@ -17152,11 +17165,12 @@
 	</recipe>
 	<recipe id="1155" name="Recipe: Seraph Shirt (60%)" level="10" mp_consume="246" success_rate="60" item_id="32300" is_dwarven="false">
 		<materials>
-			<item id="32312" count="1"/>
-			<item id="19517" count="6"/>
-			<item id="19314" count="22"/>
-			<item id="19313" count="15"/>
-			<item id="17371" count="3"/>
+			<item id="32312" count="10"/>
+			<item id="36529" count="11"/>
+			<item id="36534" count="3"/>
+			<item id="36564" count="1"/>
+			<item id="19440" count="3"/>
+			<item id="17371" count="88"/>
 		</materials>
 		<products>
 			<item id="19478" count="1" chance="100"/>
@@ -17164,11 +17178,13 @@
 	</recipe>
 	<recipe id="1156" name="Recipe: Eternal Belt (60%)" level="10" mp_consume="246" success_rate="60" item_id="32301" is_dwarven="false">
 		<materials>
-			<item id="32313" count="1"/>
-			<item id="19521" count="4"/>
-			<item id="19314" count="24"/>
-			<item id="19313" count="13"/>
-			<item id="17371" count="1"/>
+			<item id="32313" count="10"/>
+			<item id="36519" count="9"/>
+			<item id="36524" count="2"/>
+			<item id="36539" count="3"/>
+			<item id="36564" count="1"/>
+			<item id="19440" count="4"/>
+			<item id="17371" count="114"/>
 		</materials>
 		<products>
 			<item id="19479" count="1" chance="100"/>
@@ -17176,10 +17192,13 @@
 	</recipe>
 	<recipe id="1157" name="Recipe: Eternal Bracelet (60%)" level="10" mp_consume="246" success_rate="60" item_id="32302" is_dwarven="false">
 		<materials>
-			<item id="32314" count="1"/>
-			<item id="19314" count="5"/>
-			<item id="19313" count="3"/>
-			<item id="17371" count="3"/>
+			<item id="32314" count="10"/>
+			<item id="36519" count="2"/>
+			<item id="36524" count="1"/>
+			<item id="36559" count="1"/>
+			<item id="36564" count="1"/>
+			<item id="19440" count="2"/>
+			<item id="17371" count="42"/>
 		</materials>
 		<products>
 			<item id="19480" count="1" chance="100"/>
@@ -17187,11 +17206,12 @@
 	</recipe>
 	<recipe id="1158" name="Recipe: Eternal Shirt (60%)" level="10" mp_consume="246" success_rate="60" item_id="32303" is_dwarven="false">
 		<materials>
-			<item id="32315" count="1"/>
-			<item id="19521" count="8"/>
-			<item id="19314" count="40"/>
-			<item id="19313" count="30"/>
-			<item id="17371" count="1"/>
+			<item id="32315" count="10"/>
+			<item id="36529" count="28"/>
+			<item id="36534" count="6"/>
+			<item id="36564" count="1"/>
+			<item id="19440" count="8"/>
+			<item id="17371" count="228"/>
 		</materials>
 		<products>
 			<item id="19481" count="1" chance="100"/>
@@ -17236,8 +17256,8 @@
 	</recipe>
 	<recipe id="1163" item_id="34841" name="Recipe: Soulshot (R-grade) Compressed Package" mp_consume="540" level="11" is_dwarven="false" success_rate="100">
 		<materials>
-			<item id="17754" count="300"/>
-			<item id="34837" count="2"/>
+			<item id="3031" count="750"/>
+			<item id="17371" count="2"/>
 		</materials>
 		<products>
 			<item id="34838" count="300" chance="100"/>
@@ -17265,10 +17285,12 @@
 		<materials>
 			<item id="35420" count="1"/>
 			<item id="35296" count="10"/>
-			<item id="34990" count="141276"/>
-			<item id="19310" count="3045"/>
-			<item id="17371" count="2826"/>
-			<item id="19440" count="235"/>
+			<item id="36524" count="54"/>
+			<item id="36544" count="25"/>
+			<item id="36549" count="22"/>
+			<item id="36564" count="16"/>
+			<item id="19440" count="69"/>
+			<item id="17371" count="3768"/>
 		</materials>
 		<products>
 			<item id="17382" count="1" chance="98"/>
@@ -17279,10 +17301,12 @@
 		<materials>
 			<item id="35421" count="1"/>
 			<item id="35297" count="10"/>
-			<item id="34990" count="141276"/>
-			<item id="19310" count="3045"/>
-			<item id="17371" count="2826"/>
-			<item id="19440" count="235"/>
+			<item id="36524" count="54"/>
+			<item id="36544" count="25"/>
+			<item id="36549" count="22"/>
+			<item id="36564" count="16"/>
+			<item id="19440" count="69"/>
+			<item id="17371" count="3768"/>
 		</materials>
 		<products>
 			<item id="17383" count="1" chance="98"/>
@@ -17293,10 +17317,12 @@
 		<materials>
 			<item id="35422" count="1"/>
 			<item id="35298" count="10"/>
-			<item id="34990" count="141276"/>
-			<item id="19310" count="3045"/>
-			<item id="17371" count="2826"/>
-			<item id="19440" count="235"/>
+			<item id="36524" count="54"/>
+			<item id="36544" count="25"/>
+			<item id="36549" count="22"/>
+			<item id="36564" count="16"/>
+			<item id="19440" count="69"/>
+			<item id="17371" count="3768"/>
 		</materials>
 		<products>
 			<item id="17384" count="1" chance="98"/>
@@ -17307,10 +17333,12 @@
 		<materials>
 			<item id="35423" count="1"/>
 			<item id="35299" count="10"/>
-			<item id="34990" count="141276"/>
-			<item id="19310" count="3045"/>
-			<item id="17371" count="2826"/>
-			<item id="19440" count="235"/>
+			<item id="36524" count="54"/>
+			<item id="36544" count="25"/>
+			<item id="36549" count="22"/>
+			<item id="36564" count="16"/>
+			<item id="19440" count="69"/>
+			<item id="17371" count="3768"/>
 		</materials>
 		<products>
 			<item id="17385" count="1" chance="98"/>
@@ -17321,10 +17349,12 @@
 		<materials>
 			<item id="35424" count="1"/>
 			<item id="35300" count="10"/>
-			<item id="34990" count="141276"/>
-			<item id="19310" count="3045"/>
-			<item id="17371" count="2826"/>
-			<item id="19440" count="235"/>
+			<item id="36524" count="54"/>
+			<item id="36544" count="25"/>
+			<item id="36549" count="22"/>
+			<item id="36564" count="16"/>
+			<item id="19440" count="69"/>
+			<item id="17371" count="3768"/>
 		</materials>
 		<products>
 			<item id="17386" count="1" chance="98"/>
@@ -17335,10 +17365,12 @@
 		<materials>
 			<item id="35425" count="1"/>
 			<item id="35301" count="10"/>
-			<item id="34990" count="141276"/>
-			<item id="19310" count="3045"/>
-			<item id="17371" count="2826"/>
-			<item id="19440" count="235"/>
+			<item id="36524" count="54"/>
+			<item id="36544" count="25"/>
+			<item id="36549" count="22"/>
+			<item id="36564" count="16"/>
+			<item id="19440" count="69"/>
+			<item id="17371" count="3768"/>
 		</materials>
 		<products>
 			<item id="17387" count="1" chance="98"/>
@@ -17349,10 +17381,12 @@
 		<materials>
 			<item id="35426" count="1"/>
 			<item id="35302" count="10"/>
-			<item id="34990" count="141276"/>
-			<item id="19310" count="3045"/>
-			<item id="17371" count="2826"/>
-			<item id="19440" count="235"/>
+			<item id="36524" count="54"/>
+			<item id="36544" count="25"/>
+			<item id="36549" count="22"/>
+			<item id="36564" count="16"/>
+			<item id="19440" count="69"/>
+			<item id="17371" count="3768"/>
 		</materials>
 		<products>
 			<item id="17388" count="1" chance="98"/>
@@ -17363,10 +17397,12 @@
 		<materials>
 			<item id="35427" count="1"/>
 			<item id="35303" count="10"/>
-			<item id="34990" count="141276"/>
-			<item id="19310" count="3045"/>
-			<item id="17371" count="2826"/>
-			<item id="19440" count="235"/>
+			<item id="36524" count="54"/>
+			<item id="36544" count="25"/>
+			<item id="36549" count="22"/>
+			<item id="36564" count="16"/>
+			<item id="19440" count="69"/>
+			<item id="17371" count="3768"/>
 		</materials>
 		<products>
 			<item id="17389" count="1" chance="98"/>
@@ -17377,10 +17413,12 @@
 		<materials>
 			<item id="35428" count="1"/>
 			<item id="35304" count="10"/>
-			<item id="34990" count="141276"/>
-			<item id="19310" count="3045"/>
-			<item id="17371" count="2826"/>
-			<item id="19440" count="235"/>
+			<item id="36524" count="54"/>
+			<item id="36544" count="25"/>
+			<item id="36549" count="22"/>
+			<item id="36564" count="16"/>
+			<item id="19440" count="69"/>
+			<item id="17371" count="3768"/>
 		</materials>
 		<products>
 			<item id="17390" count="1" chance="98"/>
@@ -17391,10 +17429,12 @@
 		<materials>
 			<item id="35429" count="1"/>
 			<item id="35305" count="10"/>
-			<item id="34990" count="141276"/>
-			<item id="19310" count="3045"/>
-			<item id="17371" count="2826"/>
-			<item id="19440" count="235"/>
+			<item id="36524" count="54"/>
+			<item id="36544" count="25"/>
+			<item id="36549" count="22"/>
+			<item id="36564" count="16"/>
+			<item id="19440" count="69"/>
+			<item id="17371" count="3768"/>
 		</materials>
 		<products>
 			<item id="17391" count="1" chance="98"/>
@@ -17405,10 +17445,12 @@
 		<materials>
 			<item id="35430" count="1"/>
 			<item id="35306" count="10"/>
-			<item id="34990" count="141276"/>
-			<item id="19310" count="3045"/>
-			<item id="17371" count="2826"/>
-			<item id="19440" count="235"/>
+			<item id="36524" count="54"/>
+			<item id="36544" count="25"/>
+			<item id="36549" count="22"/>
+			<item id="36564" count="16"/>
+			<item id="19440" count="69"/>
+			<item id="17371" count="3768"/>
 		</materials>
 		<products>
 			<item id="17392" count="1" chance="98"/>
@@ -17419,10 +17461,12 @@
 		<materials>
 			<item id="35431" count="1"/>
 			<item id="35307" count="10"/>
-			<item id="34991" count="43117"/>
-			<item id="19310" count="372"/>
-			<item id="17371" count="345"/>
-			<item id="19440" count="29"/>
+			<item id="36524" count="7"/>
+			<item id="36544" count="4"/>
+			<item id="36554" count="3"/>
+			<item id="36564" count="2"/>
+			<item id="19440" count="9"/>
+			<item id="17371" count="460"/>
 		</materials>
 		<products>
 			<item id="17396" count="1" chance="98"/>
@@ -17433,10 +17477,12 @@
 		<materials>
 			<item id="35432" count="1"/>
 			<item id="35308" count="10"/>
-			<item id="34991" count="114978"/>
-			<item id="19310" count="991"/>
-			<item id="17371" count="920"/>
-			<item id="19440" count="77"/>
+			<item id="36524" count="18"/>
+			<item id="36544" count="9"/>
+			<item id="36554" count="7"/>
+			<item id="36564" count="6"/>
+			<item id="19440" count="23"/>
+			<item id="17371" count="1227"/>
 		</materials>
 		<products>
 			<item id="17397" count="1" chance="98"/>
@@ -17447,10 +17493,12 @@
 		<materials>
 			<item id="35433" count="1"/>
 			<item id="35309" count="10"/>
-			<item id="34991" count="71861"/>
-			<item id="19310" count="619"/>
-			<item id="17371" count="575"/>
-			<item id="19440" count="48"/>
+			<item id="36524" count="11"/>
+			<item id="36544" count="6"/>
+			<item id="36554" count="4"/>
+			<item id="36564" count="4"/>
+			<item id="19440" count="15"/>
+			<item id="17371" count="767"/>
 		</materials>
 		<products>
 			<item id="17398" count="1" chance="98"/>
@@ -17461,10 +17509,12 @@
 		<materials>
 			<item id="35434" count="1"/>
 			<item id="35310" count="10"/>
-			<item id="34991" count="28744"/>
-			<item id="19310" count="248"/>
-			<item id="17371" count="230"/>
-			<item id="19440" count="19"/>
+			<item id="36524" count="5"/>
+			<item id="36544" count="3"/>
+			<item id="36554" count="2"/>
+			<item id="36564" count="2"/>
+			<item id="19440" count="6"/>
+			<item id="17371" count="307"/>
 		</materials>
 		<products>
 			<item id="17399" count="1" chance="98"/>
@@ -17475,10 +17525,12 @@
 		<materials>
 			<item id="35435" count="1"/>
 			<item id="35311" count="10"/>
-			<item id="34991" count="28744"/>
-			<item id="19310" count="248"/>
-			<item id="17371" count="230"/>
-			<item id="19440" count="19"/>
+			<item id="36524" count="5"/>
+			<item id="36544" count="3"/>
+			<item id="36554" count="2"/>
+			<item id="36564" count="2"/>
+			<item id="19440" count="6"/>
+			<item id="17371" count="307"/>
 		</materials>
 		<products>
 			<item id="17400" count="1" chance="98"/>
@@ -17489,10 +17541,12 @@
 		<materials>
 			<item id="35436" count="1"/>
 			<item id="35312" count="10"/>
-			<item id="34991" count="28744"/>
-			<item id="19310" count="248"/>
-			<item id="17371" count="230"/>
-			<item id="19440" count="19"/>
+			<item id="36524" count="5"/>
+			<item id="36544" count="3"/>
+			<item id="36554" count="2"/>
+			<item id="36564" count="2"/>
+			<item id="19440" count="6"/>
+			<item id="17371" count="307"/>
 		</materials>
 		<products>
 			<item id="17401" count="1" chance="98"/>
@@ -17503,10 +17557,12 @@
 		<materials>
 			<item id="35437" count="1"/>
 			<item id="35313" count="10"/>
-			<item id="34991" count="43117"/>
-			<item id="19310" count="372"/>
-			<item id="17371" count="345"/>
-			<item id="19440" count="29"/>
+			<item id="36519" count="17"/>
+			<item id="36539" count="5"/>
+			<item id="36554" count="3"/>
+			<item id="36564" count="2"/>
+			<item id="19440" count="9"/>
+			<item id="17371" count="460"/>
 		</materials>
 		<products>
 			<item id="17402" count="1" chance="98"/>
@@ -17517,10 +17573,12 @@
 		<materials>
 			<item id="35438" count="1"/>
 			<item id="35314" count="10"/>
-			<item id="34991" count="114978"/>
-			<item id="19310" count="991"/>
-			<item id="17371" count="920"/>
-			<item id="19440" count="77"/>
+			<item id="36519" count="46"/>
+			<item id="36539" count="12"/>
+			<item id="36554" count="7"/>
+			<item id="36564" count="6"/>
+			<item id="19440" count="23"/>
+			<item id="17371" count="1227"/>
 		</materials>
 		<products>
 			<item id="17403" count="1" chance="98"/>
@@ -17531,10 +17589,12 @@
 		<materials>
 			<item id="35439" count="1"/>
 			<item id="35315" count="10"/>
-			<item id="34991" count="71861"/>
-			<item id="19310" count="619"/>
-			<item id="17371" count="575"/>
-			<item id="19440" count="48"/>
+			<item id="36519" count="29"/>
+			<item id="36539" count="8"/>
+			<item id="36554" count="4"/>
+			<item id="36564" count="4"/>
+			<item id="19440" count="15"/>
+			<item id="17371" count="767"/>
 		</materials>
 		<products>
 			<item id="17404" count="1" chance="98"/>
@@ -17545,10 +17605,12 @@
 		<materials>
 			<item id="35440" count="1"/>
 			<item id="35316" count="10"/>
-			<item id="34991" count="28744"/>
-			<item id="19310" count="248"/>
-			<item id="17371" count="230"/>
-			<item id="19440" count="19"/>
+			<item id="36519" count="12"/>
+			<item id="36539" count="3"/>
+			<item id="36554" count="2"/>
+			<item id="36564" count="2"/>
+			<item id="19440" count="6"/>
+			<item id="17371" count="307"/>
 		</materials>
 		<products>
 			<item id="17405" count="1" chance="98"/>
@@ -17559,10 +17621,12 @@
 		<materials>
 			<item id="35441" count="1"/>
 			<item id="35317" count="10"/>
-			<item id="34991" count="28744"/>
-			<item id="19310" count="248"/>
-			<item id="17371" count="230"/>
-			<item id="19440" count="19"/>
+			<item id="36519" count="12"/>
+			<item id="36539" count="3"/>
+			<item id="36554" count="2"/>
+			<item id="36564" count="2"/>
+			<item id="19440" count="6"/>
+			<item id="17371" count="307"/>
 		</materials>
 		<products>
 			<item id="17406" count="1" chance="98"/>
@@ -17573,10 +17637,12 @@
 		<materials>
 			<item id="35442" count="1"/>
 			<item id="35318" count="10"/>
-			<item id="34991" count="43117"/>
-			<item id="19310" count="372"/>
-			<item id="17371" count="345"/>
-			<item id="19440" count="29"/>
+			<item id="36529" count="19"/>
+			<item id="36534" count="6"/>
+			<item id="36554" count="3"/>
+			<item id="36564" count="2"/>
+			<item id="19440" count="9"/>
+			<item id="17371" count="460"/>
 		</materials>
 		<products>
 			<item id="17407" count="1" chance="98"/>
@@ -17587,10 +17653,12 @@
 		<materials>
 			<item id="35443" count="1"/>
 			<item id="35319" count="10"/>
-			<item id="34991" count="114978"/>
-			<item id="19310" count="991"/>
-			<item id="17371" count="920"/>
-			<item id="19440" count="77"/>
+			<item id="36529" count="50"/>
+			<item id="36534" count="16"/>
+			<item id="36554" count="7"/>
+			<item id="36564" count="6"/>
+			<item id="19440" count="23"/>
+			<item id="17371" count="1227"/>
 		</materials>
 		<products>
 			<item id="17408" count="1" chance="98"/>
@@ -17601,10 +17669,12 @@
 		<materials>
 			<item id="35444" count="1"/>
 			<item id="35320" count="10"/>
-			<item id="34991" count="71861"/>
-			<item id="19310" count="619"/>
-			<item id="17371" count="575"/>
-			<item id="19440" count="48"/>
+			<item id="36529" count="31"/>
+			<item id="36534" count="10"/>
+			<item id="36554" count="4"/>
+			<item id="36564" count="4"/>
+			<item id="19440" count="15"/>
+			<item id="17371" count="767"/>
 		</materials>
 		<products>
 			<item id="17409" count="1" chance="98"/>
@@ -17615,10 +17685,12 @@
 		<materials>
 			<item id="35445" count="1"/>
 			<item id="35321" count="10"/>
-			<item id="34991" count="28744"/>
-			<item id="19310" count="248"/>
-			<item id="17371" count="230"/>
-			<item id="19440" count="19"/>
+			<item id="36529" count="13"/>
+			<item id="36534" count="4"/>
+			<item id="36554" count="2"/>
+			<item id="36564" count="2"/>
+			<item id="19440" count="6"/>
+			<item id="17371" count="307"/>
 		</materials>
 		<products>
 			<item id="17410" count="1" chance="98"/>
@@ -17629,10 +17701,12 @@
 		<materials>
 			<item id="35446" count="1"/>
 			<item id="35322" count="10"/>
-			<item id="34991" count="28744"/>
-			<item id="19310" count="248"/>
-			<item id="17371" count="230"/>
-			<item id="19440" count="19"/>
+			<item id="36529" count="13"/>
+			<item id="36534" count="4"/>
+			<item id="36554" count="2"/>
+			<item id="36564" count="2"/>
+			<item id="19440" count="6"/>
+			<item id="17371" count="307"/>
 		</materials>
 		<products>
 			<item id="17411" count="1" chance="98"/>
@@ -17643,10 +17717,12 @@
 		<materials>
 			<item id="35447" count="1"/>
 			<item id="35323" count="10"/>
-			<item id="34991" count="28744"/>
-			<item id="19310" count="248"/>
-			<item id="17371" count="230"/>
-			<item id="19440" count="19"/>
+			<item id="36519" count="12"/>
+			<item id="36539" count="3"/>
+			<item id="36554" count="2"/>
+			<item id="36564" count="2"/>
+			<item id="19440" count="6"/>
+			<item id="17371" count="307"/>
 		</materials>
 		<products>
 			<item id="17412" count="1" chance="98"/>
@@ -17657,10 +17733,11 @@
 		<materials>
 			<item id="35448" count="1"/>
 			<item id="35324" count="10"/>
-			<item id="34992" count="37429"/>
-			<item id="19310" count="323"/>
-			<item id="17371" count="299"/>
-			<item id="19440" count="25"/>
+			<item id="36524" count="12"/>
+			<item id="36559" count="7"/>
+			<item id="36564" count="2"/>
+			<item id="19440" count="8"/>
+			<item id="17371" count="400"/>
 		</materials>
 		<products>
 			<item id="17413" count="1" chance="98"/>
@@ -17671,10 +17748,11 @@
 		<materials>
 			<item id="35449" count="1"/>
 			<item id="35325" count="10"/>
-			<item id="34992" count="28072"/>
-			<item id="19310" count="242"/>
-			<item id="17371" count="225"/>
-			<item id="19440" count="19"/>
+			<item id="36524" count="9"/>
+			<item id="36559" count="6"/>
+			<item id="36564" count="2"/>
+			<item id="19440" count="6"/>
+			<item id="17371" count="300"/>
 		</materials>
 		<products>
 			<item id="17414" count="1" chance="98"/>
@@ -17685,10 +17763,11 @@
 		<materials>
 			<item id="35450" count="1"/>
 			<item id="35326" count="10"/>
-			<item id="34992" count="18714"/>
-			<item id="19310" count="161"/>
-			<item id="17371" count="150"/>
-			<item id="19440" count="12"/>
+			<item id="36524" count="6"/>
+			<item id="36559" count="4"/>
+			<item id="36564" count="1"/>
+			<item id="19440" count="4"/>
+			<item id="17371" count="200"/>
 		</materials>
 		<products>
 			<item id="17415" count="1" chance="98"/>
@@ -17699,10 +17778,12 @@
 		<materials>
 			<item id="35451" count="1"/>
 			<item id="35327" count="10"/>
-			<item id="34990" count="311318"/>
-			<item id="19310" count="6709"/>
-			<item id="17371" count="6226"/>
-			<item id="19440" count="519"/>
+			<item id="36524" count="117"/>
+			<item id="36544" count="55"/>
+			<item id="36549" count="47"/>
+			<item id="36564" count="35"/>
+			<item id="19440" count="152"/>
+			<item id="17371" count="8302"/>
 		</materials>
 		<products>
 			<item id="17416" count="1" chance="98"/>
@@ -17713,10 +17794,12 @@
 		<materials>
 			<item id="35452" count="1"/>
 			<item id="35328" count="10"/>
-			<item id="34990" count="311318"/>
-			<item id="19310" count="6709"/>
-			<item id="17371" count="6226"/>
-			<item id="19440" count="519"/>
+			<item id="36524" count="117"/>
+			<item id="36544" count="55"/>
+			<item id="36549" count="47"/>
+			<item id="36564" count="35"/>
+			<item id="19440" count="152"/>
+			<item id="17371" count="8302"/>
 		</materials>
 		<products>
 			<item id="17417" count="1" chance="98"/>
@@ -17727,10 +17810,12 @@
 		<materials>
 			<item id="35453" count="1"/>
 			<item id="35329" count="10"/>
-			<item id="34990" count="311318"/>
-			<item id="19310" count="6709"/>
-			<item id="17371" count="6226"/>
-			<item id="19440" count="519"/>
+			<item id="36524" count="117"/>
+			<item id="36544" count="55"/>
+			<item id="36549" count="47"/>
+			<item id="36564" count="35"/>
+			<item id="19440" count="152"/>
+			<item id="17371" count="8302"/>
 		</materials>
 		<products>
 			<item id="17418" count="1" chance="98"/>
@@ -17741,10 +17826,12 @@
 		<materials>
 			<item id="35454" count="1"/>
 			<item id="35330" count="10"/>
-			<item id="34990" count="311318"/>
-			<item id="19310" count="6709"/>
-			<item id="17371" count="6226"/>
-			<item id="19440" count="519"/>
+			<item id="36524" count="117"/>
+			<item id="36544" count="55"/>
+			<item id="36549" count="47"/>
+			<item id="36564" count="35"/>
+			<item id="19440" count="152"/>
+			<item id="17371" count="8302"/>
 		</materials>
 		<products>
 			<item id="17419" count="1" chance="98"/>
@@ -17755,10 +17842,12 @@
 		<materials>
 			<item id="35455" count="1"/>
 			<item id="35331" count="10"/>
-			<item id="34990" count="311318"/>
-			<item id="19310" count="6709"/>
-			<item id="17371" count="6226"/>
-			<item id="19440" count="519"/>
+			<item id="36524" count="117"/>
+			<item id="36544" count="55"/>
+			<item id="36549" count="47"/>
+			<item id="36564" count="35"/>
+			<item id="19440" count="152"/>
+			<item id="17371" count="8302"/>
 		</materials>
 		<products>
 			<item id="17420" count="1" chance="98"/>
@@ -17769,10 +17858,12 @@
 		<materials>
 			<item id="35456" count="1"/>
 			<item id="35332" count="10"/>
-			<item id="34990" count="311318"/>
-			<item id="19310" count="6709"/>
-			<item id="17371" count="6226"/>
-			<item id="19440" count="519"/>
+			<item id="36524" count="117"/>
+			<item id="36544" count="55"/>
+			<item id="36549" count="47"/>
+			<item id="36564" count="35"/>
+			<item id="19440" count="152"/>
+			<item id="17371" count="8302"/>
 		</materials>
 		<products>
 			<item id="17421" count="1" chance="98"/>
@@ -17783,10 +17874,12 @@
 		<materials>
 			<item id="35457" count="1"/>
 			<item id="35333" count="10"/>
-			<item id="34990" count="311318"/>
-			<item id="19310" count="6709"/>
-			<item id="17371" count="6226"/>
-			<item id="19440" count="519"/>
+			<item id="36524" count="117"/>
+			<item id="36544" count="55"/>
+			<item id="36549" count="47"/>
+			<item id="36564" count="35"/>
+			<item id="19440" count="152"/>
+			<item id="17371" count="8302"/>
 		</materials>
 		<products>
 			<item id="17422" count="1" chance="98"/>
@@ -17797,10 +17890,12 @@
 		<materials>
 			<item id="35458" count="1"/>
 			<item id="35334" count="10"/>
-			<item id="34990" count="311318"/>
-			<item id="19310" count="6709"/>
-			<item id="17371" count="6226"/>
-			<item id="19440" count="519"/>
+			<item id="36524" count="117"/>
+			<item id="36544" count="55"/>
+			<item id="36549" count="47"/>
+			<item id="36564" count="35"/>
+			<item id="19440" count="152"/>
+			<item id="17371" count="8302"/>
 		</materials>
 		<products>
 			<item id="17423" count="1" chance="98"/>
@@ -17811,10 +17906,12 @@
 		<materials>
 			<item id="35459" count="1"/>
 			<item id="35335" count="10"/>
-			<item id="34990" count="311318"/>
-			<item id="19310" count="6709"/>
-			<item id="17371" count="6226"/>
-			<item id="19440" count="519"/>
+			<item id="36524" count="117"/>
+			<item id="36544" count="55"/>
+			<item id="36549" count="47"/>
+			<item id="36564" count="35"/>
+			<item id="19440" count="152"/>
+			<item id="17371" count="8302"/>
 		</materials>
 		<products>
 			<item id="17424" count="1" chance="98"/>
@@ -17825,10 +17922,12 @@
 		<materials>
 			<item id="35460" count="1"/>
 			<item id="35336" count="10"/>
-			<item id="34990" count="311318"/>
-			<item id="19310" count="6709"/>
-			<item id="17371" count="6226"/>
-			<item id="19440" count="519"/>
+			<item id="36524" count="117"/>
+			<item id="36544" count="55"/>
+			<item id="36549" count="47"/>
+			<item id="36564" count="35"/>
+			<item id="19440" count="152"/>
+			<item id="17371" count="8302"/>
 		</materials>
 		<products>
 			<item id="17425" count="1" chance="98"/>
@@ -17839,10 +17938,12 @@
 		<materials>
 			<item id="35461" count="1"/>
 			<item id="35337" count="10"/>
-			<item id="34990" count="311318"/>
-			<item id="19310" count="6709"/>
-			<item id="17371" count="6226"/>
-			<item id="19440" count="519"/>
+			<item id="36524" count="117"/>
+			<item id="36544" count="55"/>
+			<item id="36549" count="47"/>
+			<item id="36564" count="35"/>
+			<item id="19440" count="152"/>
+			<item id="17371" count="8302"/>
 		</materials>
 		<products>
 			<item id="17426" count="1" chance="98"/>
@@ -17853,10 +17954,12 @@
 		<materials>
 			<item id="35462" count="1"/>
 			<item id="35338" count="10"/>
-			<item id="34991" count="95013"/>
-			<item id="19310" count="819"/>
-			<item id="17371" count="760"/>
-			<item id="19440" count="63"/>
+			<item id="36524" count="15"/>
+			<item id="36544" count="7"/>
+			<item id="36554" count="6"/>
+			<item id="36564" count="5"/>
+			<item id="19440" count="19"/>
+			<item id="17371" count="1014"/>
 		</materials>
 		<products>
 			<item id="17430" count="1" chance="98"/>
@@ -17867,10 +17970,12 @@
 		<materials>
 			<item id="35463" count="1"/>
 			<item id="35339" count="10"/>
-			<item id="34991" count="253367"/>
-			<item id="19310" count="2184"/>
-			<item id="17371" count="2027"/>
-			<item id="19440" count="169"/>
+			<item id="36524" count="39"/>
+			<item id="36544" count="18"/>
+			<item id="36554" count="14"/>
+			<item id="36564" count="12"/>
+			<item id="19440" count="50"/>
+			<item id="17371" count="2703"/>
 		</materials>
 		<products>
 			<item id="17431" count="1" chance="98"/>
@@ -17881,10 +17986,12 @@
 		<materials>
 			<item id="35464" count="1"/>
 			<item id="35340" count="10"/>
-			<item id="34991" count="158354"/>
-			<item id="19310" count="1365"/>
-			<item id="17371" count="1267"/>
-			<item id="19440" count="106"/>
+			<item id="36524" count="24"/>
+			<item id="36544" count="12"/>
+			<item id="36554" count="9"/>
+			<item id="36564" count="7"/>
+			<item id="19440" count="31"/>
+			<item id="17371" count="1690"/>
 		</materials>
 		<products>
 			<item id="17432" count="1" chance="98"/>
@@ -17895,10 +18002,12 @@
 		<materials>
 			<item id="35465" count="1"/>
 			<item id="35341" count="10"/>
-			<item id="34991" count="63342"/>
-			<item id="19310" count="546"/>
-			<item id="17371" count="507"/>
-			<item id="19440" count="42"/>
+			<item id="36524" count="10"/>
+			<item id="36544" count="5"/>
+			<item id="36554" count="4"/>
+			<item id="36564" count="3"/>
+			<item id="19440" count="13"/>
+			<item id="17371" count="676"/>
 		</materials>
 		<products>
 			<item id="17433" count="1" chance="98"/>
@@ -17909,10 +18018,12 @@
 		<materials>
 			<item id="35466" count="1"/>
 			<item id="35342" count="10"/>
-			<item id="34991" count="63342"/>
-			<item id="19310" count="546"/>
-			<item id="17371" count="507"/>
-			<item id="19440" count="42"/>
+			<item id="36524" count="10"/>
+			<item id="36544" count="5"/>
+			<item id="36554" count="4"/>
+			<item id="36564" count="3"/>
+			<item id="19440" count="13"/>
+			<item id="17371" count="676"/>
 		</materials>
 		<products>
 			<item id="17434" count="1" chance="98"/>
@@ -17923,10 +18034,12 @@
 		<materials>
 			<item id="35467" count="1"/>
 			<item id="35343" count="10"/>
-			<item id="34991" count="63342"/>
-			<item id="19310" count="546"/>
-			<item id="17371" count="507"/>
-			<item id="19440" count="42"/>
+			<item id="36524" count="10"/>
+			<item id="36544" count="5"/>
+			<item id="36554" count="4"/>
+			<item id="36564" count="3"/>
+			<item id="19440" count="13"/>
+			<item id="17371" count="676"/>
 		</materials>
 		<products>
 			<item id="17435" count="1" chance="98"/>
@@ -17937,10 +18050,12 @@
 		<materials>
 			<item id="35468" count="1"/>
 			<item id="35344" count="10"/>
-			<item id="34991" count="95013"/>
-			<item id="19310" count="819"/>
-			<item id="17371" count="760"/>
-			<item id="19440" count="63"/>
+			<item id="36519" count="38"/>
+			<item id="36539" count="10"/>
+			<item id="36554" count="6"/>
+			<item id="36564" count="5"/>
+			<item id="19440" count="19"/>
+			<item id="17371" count="1014"/>
 		</materials>
 		<products>
 			<item id="17436" count="1" chance="98"/>
@@ -17951,10 +18066,12 @@
 		<materials>
 			<item id="35469" count="1"/>
 			<item id="35345" count="10"/>
-			<item id="34991" count="253367"/>
-			<item id="19310" count="2184"/>
-			<item id="17371" count="2027"/>
-			<item id="19440" count="169"/>
+			<item id="36519" count="100"/>
+			<item id="36539" count="25"/>
+			<item id="36554" count="14"/>
+			<item id="36564" count="12"/>
+			<item id="19440" count="50"/>
+			<item id="17371" count="2703"/>
 		</materials>
 		<products>
 			<item id="17437" count="1" chance="98"/>
@@ -17965,10 +18082,12 @@
 		<materials>
 			<item id="35470" count="1"/>
 			<item id="35346" count="10"/>
-			<item id="34991" count="158354"/>
-			<item id="19310" count="1365"/>
-			<item id="17371" count="1267"/>
-			<item id="19440" count="106"/>
+			<item id="36519" count="63"/>
+			<item id="36539" count="16"/>
+			<item id="36554" count="9"/>
+			<item id="36564" count="7"/>
+			<item id="19440" count="31"/>
+			<item id="17371" count="1690"/>
 		</materials>
 		<products>
 			<item id="17438" count="1" chance="98"/>
@@ -17979,10 +18098,12 @@
 		<materials>
 			<item id="35471" count="1"/>
 			<item id="35347" count="10"/>
-			<item id="34991" count="63342"/>
-			<item id="19310" count="546"/>
-			<item id="17371" count="507"/>
-			<item id="19440" count="42"/>
+			<item id="36519" count="25"/>
+			<item id="36539" count="7"/>
+			<item id="36554" count="4"/>
+			<item id="36564" count="3"/>
+			<item id="19440" count="13"/>
+			<item id="17371" count="676"/>
 		</materials>
 		<products>
 			<item id="17439" count="1" chance="98"/>
@@ -17993,10 +18114,12 @@
 		<materials>
 			<item id="35472" count="1"/>
 			<item id="35348" count="10"/>
-			<item id="34991" count="63342"/>
-			<item id="19310" count="546"/>
-			<item id="17371" count="507"/>
-			<item id="19440" count="42"/>
+			<item id="36519" count="25"/>
+			<item id="36539" count="7"/>
+			<item id="36554" count="4"/>
+			<item id="36564" count="3"/>
+			<item id="19440" count="13"/>
+			<item id="17371" count="676"/>
 		</materials>
 		<products>
 			<item id="17440" count="1" chance="98"/>
@@ -18007,10 +18130,12 @@
 		<materials>
 			<item id="35473" count="1"/>
 			<item id="35349" count="10"/>
-			<item id="34991" count="95013"/>
-			<item id="19310" count="819"/>
-			<item id="17371" count="760"/>
-			<item id="19440" count="63"/>
+			<item id="36529" count="41"/>
+			<item id="36534" count="13"/>
+			<item id="36554" count="6"/>
+			<item id="36564" count="5"/>
+			<item id="19440" count="19"/>
+			<item id="17371" count="1014"/>
 		</materials>
 		<products>
 			<item id="17441" count="1" chance="98"/>
@@ -18021,10 +18146,12 @@
 		<materials>
 			<item id="35474" count="1"/>
 			<item id="35350" count="10"/>
-			<item id="34991" count="253367"/>
-			<item id="19310" count="2184"/>
-			<item id="17371" count="2027"/>
-			<item id="19440" count="169"/>
+			<item id="36529" count="109"/>
+			<item id="36534" count="34"/>
+			<item id="36554" count="14"/>
+			<item id="36564" count="12"/>
+			<item id="19440" count="50"/>
+			<item id="17371" count="2703"/>
 		</materials>
 		<products>
 			<item id="17442" count="1" chance="98"/>
@@ -18035,10 +18162,12 @@
 		<materials>
 			<item id="35475" count="1"/>
 			<item id="35351" count="10"/>
-			<item id="34991" count="158354"/>
-			<item id="19310" count="1365"/>
-			<item id="17371" count="1267"/>
-			<item id="19440" count="106"/>
+			<item id="36529" count="68"/>
+			<item id="36534" count="21"/>
+			<item id="36554" count="9"/>
+			<item id="36564" count="7"/>
+			<item id="19440" count="31"/>
+			<item id="17371" count="1690"/>
 		</materials>
 		<products>
 			<item id="17443" count="1" chance="98"/>
@@ -18049,10 +18178,12 @@
 		<materials>
 			<item id="35476" count="1"/>
 			<item id="35352" count="10"/>
-			<item id="34991" count="63342"/>
-			<item id="19310" count="546"/>
-			<item id="17371" count="507"/>
-			<item id="19440" count="42"/>
+			<item id="36529" count="28"/>
+			<item id="36534" count="9"/>
+			<item id="36554" count="4"/>
+			<item id="36564" count="3"/>
+			<item id="19440" count="13"/>
+			<item id="17371" count="676"/>
 		</materials>
 		<products>
 			<item id="17444" count="1" chance="98"/>
@@ -18063,10 +18194,12 @@
 		<materials>
 			<item id="35477" count="1"/>
 			<item id="35353" count="10"/>
-			<item id="34991" count="63342"/>
-			<item id="19310" count="546"/>
-			<item id="17371" count="507"/>
-			<item id="19440" count="42"/>
+			<item id="36529" count="28"/>
+			<item id="36534" count="9"/>
+			<item id="36554" count="4"/>
+			<item id="36564" count="3"/>
+			<item id="19440" count="13"/>
+			<item id="17371" count="676"/>
 		</materials>
 		<products>
 			<item id="17445" count="1" chance="98"/>
@@ -18077,10 +18210,12 @@
 		<materials>
 			<item id="35478" count="1"/>
 			<item id="35354" count="10"/>
-			<item id="34991" count="63342"/>
-			<item id="19310" count="546"/>
-			<item id="17371" count="507"/>
-			<item id="19440" count="42"/>
+			<item id="36519" count="25"/>
+			<item id="36539" count="7"/>
+			<item id="36554" count="4"/>
+			<item id="36564" count="3"/>
+			<item id="19440" count="13"/>
+			<item id="17371" count="676"/>
 		</materials>
 		<products>
 			<item id="17446" count="1" chance="98"/>
@@ -18091,10 +18226,11 @@
 		<materials>
 			<item id="35479" count="1"/>
 			<item id="35355" count="10"/>
-			<item id="34992" count="82479"/>
-			<item id="19310" count="711"/>
-			<item id="17371" count="660"/>
-			<item id="19440" count="55"/>
+			<item id="36524" count="25"/>
+			<item id="36559" count="15"/>
+			<item id="36564" count="4"/>
+			<item id="19440" count="17"/>
+			<item id="17371" count="880"/>
 		</materials>
 		<products>
 			<item id="17447" count="1" chance="98"/>
@@ -18105,10 +18241,11 @@
 		<materials>
 			<item id="35480" count="1"/>
 			<item id="35356" count="10"/>
-			<item id="34992" count="61859"/>
-			<item id="19310" count="533"/>
-			<item id="17371" count="495"/>
-			<item id="19440" count="41"/>
+			<item id="36524" count="19"/>
+			<item id="36559" count="12"/>
+			<item id="36564" count="3"/>
+			<item id="19440" count="13"/>
+			<item id="17371" count="660"/>
 		</materials>
 		<products>
 			<item id="17448" count="1" chance="98"/>
@@ -18119,10 +18256,11 @@
 		<materials>
 			<item id="35481" count="1"/>
 			<item id="35357" count="10"/>
-			<item id="34992" count="41240"/>
-			<item id="19310" count="356"/>
-			<item id="17371" count="330"/>
-			<item id="19440" count="27"/>
+			<item id="36524" count="13"/>
+			<item id="36559" count="8"/>
+			<item id="36564" count="2"/>
+			<item id="19440" count="9"/>
+			<item id="17371" count="440"/>
 		</materials>
 		<products>
 			<item id="17449" count="1" chance="98"/>
@@ -19891,7 +20029,7 @@
 			<item id="18029" count="1" chance="1"/>
 		</products>
 	</recipe>
-	<recipe id="4057" name="Recipe: Twilight Sigil (60%)" level="12" mp_consume="264" success_rate="60" item_id="36790" is_dwarven="true">
+	<recipe id="4058" name="Recipe: Twilight Sigil (60%)" level="12" mp_consume="264" success_rate="60" item_id="36790" is_dwarven="true">
 		<materials>
 			<item id="36790" count="1"/>
 			<item id="36852" count="10"/>
@@ -19907,7 +20045,7 @@
 			<item id="18030" count="1" chance="1"/>
 		</products>
 	</recipe>
-	<recipe id="4058" name="Recipe: Twilight Necklace (60%)" level="12" mp_consume="264" success_rate="60" item_id="36791" is_dwarven="true">
+	<recipe id="4059" name="Recipe: Twilight Necklace (60%)" level="12" mp_consume="264" success_rate="60" item_id="36791" is_dwarven="true">
 		<materials>
 			<item id="36791" count="1"/>
 			<item id="36853" count="10"/>
@@ -19922,7 +20060,7 @@
 			<item id="18031" count="1" chance="1"/>
 		</products>
 	</recipe>
-	<recipe id="4059" name="Recipe: Twilight Earing (60%)" level="12" mp_consume="264" success_rate="60" item_id="36792" is_dwarven="true">
+	<recipe id="4060" name="Recipe: Twilight Earing (60%)" level="12" mp_consume="264" success_rate="60" item_id="36792" is_dwarven="true">
 		<materials>
 			<item id="36792" count="1"/>
 			<item id="36854" count="10"/>
@@ -19937,7 +20075,7 @@
 			<item id="18032" count="1" chance="1"/>
 		</products>
 	</recipe>
-	<recipe id="4060" name="Recipe: Twilight Ring (60%)" level="12" mp_consume="264" success_rate="60" item_id="36793" is_dwarven="true">
+	<recipe id="4061" name="Recipe: Twilight Ring (60%)" level="12" mp_consume="264" success_rate="60" item_id="36793" is_dwarven="true">
 		<materials>
 			<item id="36793" count="1"/>
 			<item id="36855" count="10"/>
@@ -19950,6 +20088,416 @@
 		<products>
 			<item id="17357" count="1" chance="99"/>
 			<item id="18033" count="1" chance="1"/>
+		</products>
+	</recipe>
+	<recipe id="4062" name="Recipe: leather lv1" level="6" mp_consume="60" success_rate="100" item_id="36856" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36517" count="1"/>
+		</materials>
+		<products>
+			<item id="36516" count="50" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4063" name="Recipe: leather lv2" level="8" mp_consume="210" success_rate="100" item_id="36857" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36518" count="1"/>
+		</materials>
+		<products>
+			<item id="36517" count="5" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4064" name="Recipe: leather lv2" level="6" mp_consume="60" success_rate="100" item_id="36858" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36516" count="51"/>
+		</materials>
+		<products>
+			<item id="36517" count="1" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4065" name="Recipe: leather lv3" level="11" mp_consume="258" success_rate="100" item_id="36859" is_dwarven="true">
+		<materials>
+			<item id="19315" count="3"/>
+			<item id="36519" count="1"/>
+		</materials>
+		<products>
+			<item id="36518" count="10" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4066" name="Recipe: leather lv3" level="11" mp_consume="201" success_rate="100" item_id="36860" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36517" count="6"/>
+		</materials>
+		<products>
+			<item id="36518" count="1" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4067" name="Recipe: leather lv4" level="14" mp_consume="276" success_rate="100" item_id="36861" is_dwarven="true">
+		<materials>
+			<item id="19315" count="52"/>
+			<item id="36520" count="1"/>
+		</materials>
+		<products>
+			<item id="36519" count="17" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4068" name="Recipe: leather lv4" level="11" mp_consume="258" success_rate="100" item_id="36862" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36518" count="11"/>
+		</materials>
+		<products>
+			<item id="36519" count="1" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4069" name="Recipe: leather lv5" level="14" mp_consume="276" success_rate="100" item_id="36863" is_dwarven="true">
+		<materials>
+			<item id="19315" count="11"/>
+			<item id="36519" count="18"/>
+		</materials>
+		<products>
+			<item id="36520" count="1" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4070" name="Recipe: Metal lv1" level="6" mp_consume="60" success_rate="100" item_id="36864" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36522" count="1"/>
+		</materials>
+		<products>
+			<item id="36521" count="50" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4071" name="Recipe: Metal lv2" level="8" mp_consume="210" success_rate="100" item_id="36865" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36523" count="1"/>
+		</materials>
+		<products>
+			<item id="36521" count="5" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4072" name="Recipe: Metal lv2" level="6" mp_consume="60" success_rate="100" item_id="36866" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36521" count="51"/>
+		</materials>
+		<products>
+			<item id="36522" count="1" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4073" name="Recipe: Metal lv3" level="11" mp_consume="60" success_rate="100" item_id="36867" is_dwarven="true">
+		<materials>
+			<item id="19315" count="8"/>
+			<item id="36524" count="1"/>
+		</materials>
+		<products>
+			<item id="36523" count="10" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4074" name="Recipe: Metal lv3" level="8" mp_consume="258" success_rate="100" item_id="36868" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36522" count="6"/>
+		</materials>
+		<products>
+			<item id="36523" count="1" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4075" name="Recipe: Metal lv4" level="14" mp_consume="276" success_rate="100" item_id="36869" is_dwarven="true">
+		<materials>
+			<item id="19315" count="135"/>
+			<item id="36525" count="1"/>
+		</materials>
+		<products>
+			<item id="36524" count="17" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4076" name="Recipe: Metal lv4" level="11" mp_consume="258" success_rate="100" item_id="36870" is_dwarven="true">
+		<materials>
+			<item id="19315" count="2"/>
+			<item id="36523" count="11"/>
+		</materials>
+		<products>
+			<item id="36524" count="11" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4077" name="Recipe: Metal lv5" level="11" mp_consume="276" success_rate="100" item_id="36871" is_dwarven="true">
+		<materials>
+			<item id="19315" count="27"/>
+			<item id="36524" count="18"/>
+		</materials>
+		<products>
+			<item id="36524" count="1" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4078" name="Recipe: Fibre Lv1" level="6" mp_consume="60" success_rate="100" item_id="36872" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36527" count="1"/>
+		</materials>
+		<products>
+			<item id="36526" count="50" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4079" name="Recipe: Fibre Lv2" level="8" mp_consume="201" success_rate="100" item_id="36873" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36528" count="1"/>
+		</materials>
+		<products>
+			<item id="36527" count="5" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4080" name="Recipe: Fibre Lv2" level="6" mp_consume="60" success_rate="100" item_id="36874" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36526" count="51"/>
+		</materials>
+		<products>
+			<item id="36527" count="1" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4081" name="Recipe: Fibre Lv3" level="11" mp_consume="258" success_rate="100" item_id="36875" is_dwarven="true">
+		<materials>
+			<item id="19315" count="3"/>
+			<item id="36529" count="1"/>
+		</materials>
+		<products>
+			<item id="36528" count="10" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4082" name="Recipe: Fibre Lv3" level="8" mp_consume="201" success_rate="100" item_id="36876" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36527" count="6"/>
+		</materials>
+		<products>
+			<item id="36528" count="1" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4083" name="Recipe: Fibre Lv4" level="14" mp_consume="276" success_rate="100" item_id="36877" is_dwarven="true">
+		<materials>
+			<item id="19315" count="48"/>
+			<item id="36530" count="1"/>
+		</materials>
+		<products>
+			<item id="36529" count="17" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4084" name="Recipe: Fibre Lv4" level="14" mp_consume="258" success_rate="100" item_id="36878" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36529" count="11"/>
+		</materials>
+		<products>
+			<item id="36528" count="10" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4085" name="Recipe: Fibre Lv5" level="14" mp_consume="276" success_rate="100" item_id="36879" is_dwarven="true">
+		<materials>
+			<item id="19315" count="10"/>
+			<item id="36529" count="18"/>
+		</materials>
+		<products>
+			<item id="36530" count="10" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4086" name="Recipe: strap Lv1" level="6" mp_consume="60" success_rate="100" item_id="36880" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36529" count="1"/>
+		</materials>
+		<products>
+			<item id="36531" count="50" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4087" name="Recipe: strap Lv2" level="8" mp_consume="201" success_rate="100" item_id="36881" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36529" count="1"/>
+		</materials>
+		<products>
+			<item id="36532" count="5" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4088" name="Recipe: strap Lv2" level="6" mp_consume="60" success_rate="100" item_id="36882" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36529" count="51"/>
+		</materials>
+		<products>
+			<item id="36532" count="1" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4089" name="Recipe: strap Lv3" level="11" mp_consume="258" success_rate="100" item_id="36883" is_dwarven="true">
+		<materials>
+			<item id="19315" count="9"/>
+			<item id="36529" count="1"/>
+		</materials>
+		<products>
+			<item id="36533" count="10" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4090" name="Recipe: strap Lv3" level="8" mp_consume="201" success_rate="100" item_id="36884" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36529" count="6"/>
+		</materials>
+		<products>
+			<item id="36533" count="1" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4091" name="Recipe: strap Lv4" level="14" mp_consume="276" success_rate="100" item_id="36885" is_dwarven="true">
+		<materials>
+			<item id="19315" count="156"/>
+			<item id="36529" count="1"/>
+		</materials>
+		<products>
+			<item id="36534" count="10" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4092" name="Recipe: strap Lv4" level="11" mp_consume="258" success_rate="100" item_id="36886" is_dwarven="true">
+		<materials>
+			<item id="19315" count="2"/>
+			<item id="36529" count="11"/>
+		</materials>
+		<products>
+			<item id="36534" count="10" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4093" name="Recipe: strap Lv5" level="14" mp_consume="276" success_rate="100" item_id="36887" is_dwarven="true">
+		<materials>
+			<item id="19315" count="32"/>
+			<item id="36529" count="18"/>
+		</materials>
+		<products>
+			<item id="36535" count="18" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4094" name="Recipe: Leather strap Lv1" level="6" mp_consume="60" success_rate="100" item_id="36888" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36537" count="1"/>
+		</materials>
+		<products>
+			<item id="36536" count="50" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4095" name="Recipe: Leatherstrap Lv1 combi" level="6" mp_consume="20" success_rate="100" item_id="36889" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36531" count="1"/>
+			<item id="36516" count="1"/>
+		</materials>
+		<products>
+			<item id="36536" count="1" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4096" name="Recipe: Leather strap Lv2" level="8" mp_consume="201" success_rate="100" item_id="36890" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36538" count="1"/>
+		</materials>
+		<products>
+			<item id="36537" count="5" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4097" name="Recipe: Leather strap Lv2 " level="8" mp_consume="60" success_rate="100" item_id="36891" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36536" count="51"/>
+		</materials>
+		<products>
+			<item id="36537" count="5" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4098" name="Recipe: Leatherstrap Lv2 combi" level="8" mp_consume="60" success_rate="100" item_id="36892" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36532" count="1"/>
+			<item id="36517" count="1"/>
+		</materials>
+		<products>
+			<item id="36537" count="1" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4099" name="Recipe: Leather strap Lv3 " level="11" mp_consume="258" success_rate="100" item_id="36893" is_dwarven="true">
+		<materials>
+			<item id="19315" count="12"/>
+			<item id="36539" count="1"/>
+		</materials>
+		<products>
+			<item id="36538" count="10" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4100" name="Recipe: Leather strap Lv3 " level="8" mp_consume="201" success_rate="100" item_id="36894" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36537" count="6"/>
+		</materials>
+		<products>
+			<item id="36538" count="10" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4101" name="Recipe: Leatherstrap Lv3 combi" level="8" mp_consume="201" success_rate="100" item_id="36895" is_dwarven="true">
+		<materials>
+			<item id="19315" count="1"/>
+			<item id="36533" count="1"/>
+			<item id="36518" count="1"/>
+		</materials>
+		<products>
+			<item id="36538" count="1" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4102" name="Recipe: Leather strap Lv4 " level="14" mp_consume="276" success_rate="100" item_id="36896" is_dwarven="true">
+		<materials>
+			<item id="19315" count="207"/>
+			<item id="36540" count="1"/>
+		</materials>
+		<products>
+			<item id="36539" count="17" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4103" name="Recipe: Leather strap Lv4 " level="11" mp_consume="258" success_rate="100" item_id="36897" is_dwarven="true">
+		<materials>
+			<item id="19315" count="3"/>
+			<item id="36538" count="11"/>
+		</materials>
+		<products>
+			<item id="36539" count="1" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4104" name="Recipe: Leather strap Lv4 combi " level="11" mp_consume="258" success_rate="100" item_id="36898" is_dwarven="true">
+		<materials>
+			<item id="19315" count="12"/>
+			<item id="36534" count="1"/>
+			<item id="36519" count="1"/>
+		</materials>
+		<products>
+			<item id="36539" count="1" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4105" name="Recipe: Leather strap Lv5 " level="14" mp_consume="276" success_rate="100" item_id="36899" is_dwarven="true">
+		<materials>
+			<item id="19315" count="42"/>
+			<item id="36539" count="18"/>
+		</materials>
+		<products>
+			<item id="36539" count="1" chance="100"/>
+		</products>
+	</recipe>
+	<recipe id="4106" name="Recipe: Leather strap Lv5 " level="14" mp_consume="276" success_rate="100" item_id="36899" is_dwarven="true">
+		<materials>
+			<item id="19315" count="207"/>
+			<item id="36535" count="1"/>
+			<item id="36520" count="1"/>
+		</materials>
+		<products>
+			<item id="36539" count="1" chance="100"/>
 		</products>
 	</recipe>
 </list>
