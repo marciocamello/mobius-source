@@ -68,7 +68,11 @@ public class Q00020_BringUpWithLove extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		String htmltext = "noquest";
+		if (qs.isCompleted())
+		{
+			return "completed";
+		}
 		final int cond = qs.getCond();
 		
 		switch (qs.getState())

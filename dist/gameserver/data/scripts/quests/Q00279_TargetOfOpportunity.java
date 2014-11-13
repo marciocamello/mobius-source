@@ -69,7 +69,11 @@ public class Q00279_TargetOfOpportunity extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		String htmltext = "noquest";
+		if (qs.isCompleted())
+		{
+			return "completed";
+		}
 		
 		switch (qs.getCond())
 		{
