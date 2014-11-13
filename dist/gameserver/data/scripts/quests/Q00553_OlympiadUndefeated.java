@@ -38,45 +38,41 @@ public class Q00553_OlympiadUndefeated extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		
-		switch (npcId)
+		switch (npc.getId())
 		{
 			case OLYMPIAD_MANAGER:
-				Player player = st.getPlayer();
+				final Player player = qs.getPlayer();
 				
 				if (!player.isNoble() || (player.getLevel() < 75) || (player.getClassLevel() < 4))
 				{
 					return "olympiad_operator_q0553_08.htm";
 				}
-				
-				if (st.isCreated())
+				else if (qs.isCreated())
 				{
-					if (st.isNowAvailableByTime())
+					if (qs.isNowAvailableByTime())
 					{
 						return "olympiad_operator_q0553_01.htm";
 					}
 					
 					return "olympiad_operator_q0553_06.htm";
 				}
-				else if (st.isStarted())
+				else if (qs.isStarted())
 				{
-					if (st.getQuestItemsCount(WINS_CONFIRMATION1, WINS_CONFIRMATION2, WINS_CONFIRMATION3) == 0)
+					if (qs.getQuestItemsCount(WINS_CONFIRMATION1, WINS_CONFIRMATION2, WINS_CONFIRMATION3) == 0)
 					{
 						return "olympiad_operator_q0553_04.htm";
 					}
-					
-					if (st.getQuestItemsCount(WINS_CONFIRMATION3) > 0)
+					else if (qs.getQuestItemsCount(WINS_CONFIRMATION3) > 0)
 					{
-						st.giveItems(OLYMPIAD_CHEST, 6);
-						st.giveItems(MEDAL_OF_GLORY, 5);
-						st.takeItems(WINS_CONFIRMATION1, -1);
-						st.takeItems(WINS_CONFIRMATION2, -1);
-						st.takeItems(WINS_CONFIRMATION3, -1);
-						st.playSound(SOUND_FINISH);
-						st.exitCurrentQuest(this);
+						qs.giveItems(OLYMPIAD_CHEST, 6);
+						qs.giveItems(MEDAL_OF_GLORY, 5);
+						qs.takeItems(WINS_CONFIRMATION1, -1);
+						qs.takeItems(WINS_CONFIRMATION2, -1);
+						qs.takeItems(WINS_CONFIRMATION3, -1);
+						qs.playSound(SOUND_FINISH);
+						qs.exitCurrentQuest(this);
 						return "olympiad_operator_q0553_07.htm";
 					}
 					
@@ -90,48 +86,49 @@ public class Q00553_OlympiadUndefeated extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		if (event.equalsIgnoreCase("olympiad_operator_q0553_03.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		if (event.equalsIgnoreCase("olympiad_operator_q0553_07.htm"))
-		{
-			if (st.getQuestItemsCount(WINS_CONFIRMATION3) > 0)
-			{
-				st.giveItems(OLYMPIAD_CHEST, 6);
-				Player player = st.getPlayer();
-				player.setFame(player.getFame() + 20000, "quest olympiad");
-				st.takeItems(WINS_CONFIRMATION1, -1);
-				st.takeItems(WINS_CONFIRMATION2, -1);
-				st.takeItems(WINS_CONFIRMATION3, -1);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(this);
-			}
-			else if (st.getQuestItemsCount(WINS_CONFIRMATION2) > 0)
-			{
-				st.giveItems(OLYMPIAD_CHEST, 3);
-				Player player = st.getPlayer();
-				player.setFame(player.getFame() + 10000, "quest olympiad");
-				st.takeItems(WINS_CONFIRMATION1, -1);
-				st.takeItems(WINS_CONFIRMATION2, -1);
-				st.takeItems(WINS_CONFIRMATION3, -1);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(this);
-			}
-			else if (st.getQuestItemsCount(WINS_CONFIRMATION1) > 0)
-			{
-				st.giveItems(OLYMPIAD_CHEST, 1);
-				st.takeItems(WINS_CONFIRMATION1, -1);
-				st.takeItems(WINS_CONFIRMATION2, -1);
-				st.takeItems(WINS_CONFIRMATION3, -1);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(this);
-			}
+			case "olympiad_operator_q0553_03.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "olympiad_operator_q0553_07.htm":
+				if (qs.getQuestItemsCount(WINS_CONFIRMATION3) > 0)
+				{
+					qs.giveItems(OLYMPIAD_CHEST, 6);
+					Player player = qs.getPlayer();
+					player.setFame(player.getFame() + 20000, "quest olympiad");
+					qs.takeItems(WINS_CONFIRMATION1, -1);
+					qs.takeItems(WINS_CONFIRMATION2, -1);
+					qs.takeItems(WINS_CONFIRMATION3, -1);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(this);
+				}
+				else if (qs.getQuestItemsCount(WINS_CONFIRMATION2) > 0)
+				{
+					qs.giveItems(OLYMPIAD_CHEST, 3);
+					Player player = qs.getPlayer();
+					player.setFame(player.getFame() + 10000, "quest olympiad");
+					qs.takeItems(WINS_CONFIRMATION1, -1);
+					qs.takeItems(WINS_CONFIRMATION2, -1);
+					qs.takeItems(WINS_CONFIRMATION3, -1);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(this);
+				}
+				else if (qs.getQuestItemsCount(WINS_CONFIRMATION1) > 0)
+				{
+					qs.giveItems(OLYMPIAD_CHEST, 1);
+					qs.takeItems(WINS_CONFIRMATION1, -1);
+					qs.takeItems(WINS_CONFIRMATION2, -1);
+					qs.takeItems(WINS_CONFIRMATION3, -1);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(this);
+				}
+				break;
 		}
 		
 		return event;
@@ -143,7 +140,7 @@ public class Q00553_OlympiadUndefeated extends Quest implements ScriptFile
 		if (qs.getCond() == 1)
 		{
 			int count = qs.getInt("count");
-			OlympiadTeam winner = og.getWinnerTeam();
+			final OlympiadTeam winner = og.getWinnerTeam();
 			
 			if ((winner != null) && winner.contains(qs.getPlayer().getObjectId()))
 			{

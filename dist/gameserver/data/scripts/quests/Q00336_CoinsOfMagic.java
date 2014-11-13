@@ -20,21 +20,6 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00336_CoinsOfMagic extends Quest implements ScriptFile
 {
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	private static final int COIN_DIAGRAM = 3811;
 	private static final int KALDIS_COIN = 3812;
 	private static final int MEMBERSHIP_1 = 3813;
@@ -246,7 +231,7 @@ public class Q00336_CoinsOfMagic extends Quest implements ScriptFile
 			SILVER_UNICORN
 		},
 	};
-	private static final int[] UNKNOWN =
+	private static final int[] MONSTERS =
 	{
 		GraveLich,
 		DoomServant,
@@ -278,94 +263,74 @@ public class Q00336_CoinsOfMagic extends Quest implements ScriptFile
 	{
 		super(true);
 		addStartNpc(SORINT);
-		addTalkId(new int[]
-		{
-			SORINT,
-			BERNARD,
-			PAGE,
-			HAGGER,
-			STAN,
-			RALFORD,
-			FERRIS,
-			COLLOB,
-			PANO,
-			DUNING,
-			LORAIN
-		});
-		
+		addTalkId(SORINT, BERNARD, PAGE, HAGGER, STAN, RALFORD, FERRIS, COLLOB, PANO, DUNING, LORAIN);
+		addQuestItem(COIN_DIAGRAM, KALDIS_COIN, MEMBERSHIP_1, MEMBERSHIP_2, MEMBERSHIP_3);
+		addKillId(HaritLizardmanMatriarch, HaritLizardmanShaman);
+		addKillId(MONSTERS);
 		for (int mob[] : DROPLIST)
 		{
 			addKillId(mob[0]);
 		}
-		
-		addKillId(UNKNOWN);
-		addKillId(HaritLizardmanMatriarch);
-		addKillId(HaritLizardmanShaman);
-		addQuestItem(new int[]
-		{
-			COIN_DIAGRAM,
-			KALDIS_COIN,
-			MEMBERSHIP_1,
-			MEMBERSHIP_2,
-			MEMBERSHIP_3
-		});
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
-		int cond = st.getCond();
+		final int cond = qs.getCond();
 		
-		if (event.equalsIgnoreCase("30702-06.htm"))
+		switch (event)
 		{
-			if (cond < 7)
-			{
-				st.setCond(7);
-				st.playSound(SOUND_ACCEPT);
-			}
-		}
-		else if (event.equalsIgnoreCase("30232-22.htm"))
-		{
-			if (cond < 6)
-			{
-				st.setCond(6);
-			}
-		}
-		else if (event.equalsIgnoreCase("30232-23.htm"))
-		{
-			if (cond < 5)
-			{
-				st.setCond(5);
-			}
-		}
-		else if (event.equalsIgnoreCase("30702-02.htm"))
-		{
-			st.setCond(2);
-		}
-		else if (event.equalsIgnoreCase("30232-05.htm"))
-		{
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-			st.giveItems(COIN_DIAGRAM, 1);
-			st.setCond(1);
-		}
-		else if (event.equalsIgnoreCase("30232-04.htm") || event.equalsIgnoreCase("30232-18a.htm"))
-		{
-			st.exitCurrentQuest(true);
-			st.playSound(SOUND_GIVEUP);
-		}
-		else if (event.equalsIgnoreCase("raise"))
-		{
-			htmltext = promote(st);
+			case "30702-06.htm":
+				if (cond < 7)
+				{
+					qs.setCond(7);
+					qs.playSound(SOUND_ACCEPT);
+				}
+				break;
+			
+			case "30232-22.htm":
+				if (cond < 6)
+				{
+					qs.setCond(6);
+				}
+				break;
+			
+			case "30232-23.htm":
+				if (cond < 5)
+				{
+					qs.setCond(5);
+				}
+				break;
+			
+			case "30702-02.htm":
+				qs.setCond(2);
+				break;
+			
+			case "30232-05.htm":
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				qs.giveItems(COIN_DIAGRAM, 1);
+				qs.setCond(1);
+				break;
+			
+			case "30232-04.htm":
+			case "30232-18a.htm":
+				qs.exitCurrentQuest(true);
+				qs.playSound(SOUND_GIVEUP);
+				break;
+			
+			case "raise":
+				htmltext = promote(qs);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
-	private String promote(QuestState st)
+	private String promote(QuestState qs)
 	{
-		int grade = st.getInt("grade");
+		final int grade = qs.getInt("grade");
 		String html;
 		
 		if (grade == 1)
@@ -378,7 +343,7 @@ public class Q00336_CoinsOfMagic extends Quest implements ScriptFile
 			
 			for (int i : PROMOTE[grade])
 			{
-				if (st.getQuestItemsCount(i) > 0)
+				if (qs.getQuestItemsCount(i) > 0)
 				{
 					h += 1;
 				}
@@ -388,24 +353,24 @@ public class Q00336_CoinsOfMagic extends Quest implements ScriptFile
 			{
 				for (int i : PROMOTE[grade])
 				{
-					st.takeItems(i, 1);
+					qs.takeItems(i, 1);
 				}
 				
 				html = "30232-" + str(19 - grade) + ".htm";
-				st.takeItems(3812 + grade, -1);
-				st.giveItems(3811 + grade, 1);
-				st.set("grade", str(grade - 1));
+				qs.takeItems(3812 + grade, -1);
+				qs.giveItems(3811 + grade, 1);
+				qs.set("grade", str(grade - 1));
 				
 				if (grade == 3)
 				{
-					st.setCond(9);
+					qs.setCond(9);
 				}
 				else if (grade == 2)
 				{
-					st.setCond(11);
+					qs.setCond(11);
 				}
 				
-				st.playSound(SOUND_FANFARE_MIDDLE);
+				qs.playSound(SOUND_FANFARE_MIDDLE);
 			}
 			else
 			{
@@ -413,11 +378,11 @@ public class Q00336_CoinsOfMagic extends Quest implements ScriptFile
 				
 				if (grade == 3)
 				{
-					st.setCond(8);
+					qs.setCond(8);
 				}
 				else if (grade == 2)
 				{
-					st.setCond(9);
+					qs.setCond(9);
 				}
 			}
 		}
@@ -426,97 +391,99 @@ public class Q00336_CoinsOfMagic extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int id = st.getState();
-		int grade = st.getInt("grade");
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int npcId = npc.getId();
+		final int id = qs.getState();
+		final int grade = qs.getInt("grade");
 		
-		if (npcId == SORINT)
+		switch (npcId)
 		{
-			if (id == CREATED)
-			{
-				if (st.getPlayer().getLevel() < 40)
+			case SORINT:
+				if (id == CREATED)
 				{
-					htmltext = "30232-01.htm";
-					st.exitCurrentQuest(true);
+					if (qs.getPlayer().getLevel() < 40)
+					{
+						htmltext = "30232-01.htm";
+						qs.exitCurrentQuest(true);
+					}
+					else
+					{
+						htmltext = "30232-02.htm";
+					}
 				}
-				else
+				else if (qs.getQuestItemsCount(COIN_DIAGRAM) > 0)
 				{
-					htmltext = "30232-02.htm";
+					if (qs.getQuestItemsCount(KALDIS_COIN) > 0)
+					{
+						qs.takeItems(KALDIS_COIN, -1);
+						qs.takeItems(COIN_DIAGRAM, -1);
+						qs.giveItems(MEMBERSHIP_3, 1);
+						qs.set("grade", "3");
+						qs.setCond(4);
+						qs.playSound(SOUND_FANFARE_MIDDLE);
+						htmltext = "30232-07.htm";
+					}
+					else
+					{
+						htmltext = "30232-06.htm";
+					}
 				}
-			}
-			else if (st.getQuestItemsCount(COIN_DIAGRAM) > 0)
-			{
-				if (st.getQuestItemsCount(KALDIS_COIN) > 0)
+				else if (grade == 3)
 				{
-					st.takeItems(KALDIS_COIN, -1);
-					st.takeItems(COIN_DIAGRAM, -1);
-					st.giveItems(MEMBERSHIP_3, 1);
-					st.set("grade", "3");
-					st.setCond(4);
-					st.playSound(SOUND_FANFARE_MIDDLE);
-					htmltext = "30232-07.htm";
+					htmltext = "30232-12.htm";
 				}
-				else
+				else if (grade == 2)
 				{
-					htmltext = "30232-06.htm";
+					htmltext = "30232-11.htm";
 				}
-			}
-			else if (grade == 3)
-			{
-				htmltext = "30232-12.htm";
-			}
-			else if (grade == 2)
-			{
-				htmltext = "30232-11.htm";
-			}
-			else if (grade == 1)
-			{
-				htmltext = "30232-10.htm";
-			}
-		}
-		else if (npcId == BERNARD)
-		{
-			if ((st.getQuestItemsCount(COIN_DIAGRAM) > 0) && (grade == 0))
-			{
-				htmltext = "30702-01.htm";
-			}
-			else if (grade == 3)
-			{
-				htmltext = "30702-05.htm";
-			}
-		}
-		else
-		{
-			for (int e[] : EXCHANGE_LEVEL)
-			{
-				if ((npcId == e[0]) && (grade <= e[1]))
+				else if (grade == 1)
 				{
-					htmltext = npcId + "-01.htm";
+					htmltext = "30232-10.htm";
 				}
-			}
+				break;
+			
+			case BERNARD:
+				if ((qs.getQuestItemsCount(COIN_DIAGRAM) > 0) && (grade == 0))
+				{
+					htmltext = "30702-01.htm";
+				}
+				else if (grade == 3)
+				{
+					htmltext = "30702-05.htm";
+				}
+				break;
+			
+			default:
+				for (int e[] : EXCHANGE_LEVEL)
+				{
+					if ((npcId == e[0]) && (grade <= e[1]))
+					{
+						htmltext = npcId + "-01.htm";
+					}
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		int grade = st.getInt("grade");
-		int chance = (npc.getLevel() + (grade * 3)) - 20;
-		int npcId = npc.getId();
+		final int cond = qs.getCond();
+		final int grade = qs.getInt("grade");
+		final int chance = (npc.getLevel() + (grade * 3)) - 20;
+		final int npcId = npc.getId();
 		
 		if ((npcId == HaritLizardmanMatriarch) || (npcId == HaritLizardmanShaman))
 		{
 			if (cond == 2)
 			{
-				if (st.rollAndGive(KALDIS_COIN, 1, 1, 1, 10 * npc.getTemplate().rateHp))
+				if (qs.rollAndGive(KALDIS_COIN, 1, 1, 1, 10 * npc.getTemplate().rateHp))
 				{
-					st.setCond(3);
+					qs.setCond(3);
 				}
 			}
 			
@@ -527,20 +494,35 @@ public class Q00336_CoinsOfMagic extends Quest implements ScriptFile
 		{
 			if (e[0] == npcId)
 			{
-				st.rollAndGive(e[1], 1, chance);
+				qs.rollAndGive(e[1], 1, chance);
 				return null;
 			}
 		}
 		
-		for (int u : UNKNOWN)
+		for (int u : MONSTERS)
 		{
 			if (u == npcId)
 			{
-				st.rollAndGive(BASIC_COINS[Rnd.get(BASIC_COINS.length)], 1, chance * npc.getTemplate().rateHp);
+				qs.rollAndGive(BASIC_COINS[Rnd.get(BASIC_COINS.length)], 1, chance * npc.getTemplate().rateHp);
 				return null;
 			}
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

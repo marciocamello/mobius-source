@@ -113,21 +113,6 @@ public class Q00508_AClansReputation extends Quest implements ScriptFile
 		},
 	};
 	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public Q00508_AClansReputation()
 	{
 		super(PARTY_ALL);
@@ -148,20 +133,19 @@ public class Q00508_AClansReputation extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		int cond = st.getCond();
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("30868-0.htm") && (cond == 0))
+		if (event.equals("30868-0.htm") && (qs.getCond() == 0))
 		{
-			st.setCond(1);
-			st.setState(STARTED);
+			qs.setCond(1);
+			qs.setState(STARTED);
 		}
 		else if (Util.isNumber(event))
 		{
 			int evt = Integer.parseInt(event);
-			st.set("raid", event);
+			qs.set("raid", event);
 			htmltext = "30868-" + event + ".htm";
 			int x = RADAR[evt][0];
 			int y = RADAR[evt][1];
@@ -169,46 +153,46 @@ public class Q00508_AClansReputation extends Quest implements ScriptFile
 			
 			if ((x + y + z) > 0)
 			{
-				st.addRadar(x, y, z);
+				qs.addRadar(x, y, z);
 			}
 			
-			st.playSound(SOUND_ACCEPT);
+			qs.playSound(SOUND_ACCEPT);
 		}
-		else if (event.equalsIgnoreCase("30868-7.htm"))
+		else if (event.equals("30868-7.htm"))
 		{
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(true);
+			qs.playSound(SOUND_FINISH);
+			qs.exitCurrentQuest(true);
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		Clan clan = st.getPlayer().getClan();
+		final Clan clan = qs.getPlayer().getClan();
 		
 		if (clan == null)
 		{
-			st.exitCurrentQuest(true);
+			qs.exitCurrentQuest(true);
 			htmltext = "30868-0a.htm";
 		}
-		else if (clan.getLeader().getPlayer() != st.getPlayer())
+		else if (clan.getLeader().getPlayer() != qs.getPlayer())
 		{
-			st.exitCurrentQuest(true);
+			qs.exitCurrentQuest(true);
 			htmltext = "30868-0a.htm";
 		}
 		else if (clan.getLevel() < 5)
 		{
-			st.exitCurrentQuest(true);
+			qs.exitCurrentQuest(true);
 			htmltext = "30868-0b.htm";
 		}
 		else
 		{
-			int cond = st.getCond();
-			int raid = st.getInt("raid");
-			int id = st.getState();
+			final int cond = qs.getCond();
+			final int raid = qs.getInt("raid");
+			final int id = qs.getState();
 			
 			if ((id == CREATED) && (cond == 0))
 			{
@@ -217,7 +201,7 @@ public class Q00508_AClansReputation extends Quest implements ScriptFile
 			else if ((id == STARTED) && (cond == 1))
 			{
 				int item = REWARDS_LIST[raid][1];
-				long count = st.getQuestItemsCount(item);
+				long count = qs.getQuestItemsCount(item);
 				
 				if (count == 0)
 				{
@@ -227,8 +211,8 @@ public class Q00508_AClansReputation extends Quest implements ScriptFile
 				{
 					htmltext = "30868-" + raid + "b.htm";
 					int increasedPoints = clan.incReputation(REWARDS_LIST[raid][2], true, "Q00508_AClansReputation");
-					st.getPlayer().sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_SUCCESSFULLY_COMPLETED_A_CLAN_QUEST_S1_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION_SCORE).addNumber(increasedPoints));
-					st.takeItems(item, 1);
+					qs.getPlayer().sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_SUCCESSFULLY_COMPLETED_A_CLAN_QUEST_S1_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION_SCORE).addNumber(increasedPoints));
+					qs.takeItems(item, 1);
 				}
 			}
 		}
@@ -237,13 +221,13 @@ public class Q00508_AClansReputation extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
 		Player clan_leader;
 		
 		try
 		{
-			clan_leader = st.getPlayer().getClan().getLeader().getPlayer();
+			clan_leader = qs.getPlayer().getClan().getLeader().getPlayer();
 		}
 		catch (Exception E)
 		{
@@ -255,27 +239,42 @@ public class Q00508_AClansReputation extends Quest implements ScriptFile
 			return null;
 		}
 		
-		if (!st.getPlayer().equals(clan_leader) && (clan_leader.getDistance(npc) > Config.ALT_PARTY_DISTRIBUTION_RANGE))
+		if (!qs.getPlayer().equals(clan_leader) && (clan_leader.getDistance(npc) > Config.ALT_PARTY_DISTRIBUTION_RANGE))
 		{
 			return null;
 		}
 		
-		QuestState qs = clan_leader.getQuestState(getName());
+		final QuestState state = clan_leader.getQuestState(getName());
 		
-		if ((qs == null) || !qs.isStarted() || (qs.getCond() != 1))
+		if ((state == null) || !state.isStarted() || (state.getCond() != 1))
 		{
 			return null;
 		}
 		
-		int raid = REWARDS_LIST[st.getInt("raid")][0];
-		int item = REWARDS_LIST[st.getInt("raid")][1];
+		final int raid = REWARDS_LIST[qs.getInt("raid")][0];
+		final int item = REWARDS_LIST[qs.getInt("raid")][1];
 		
-		if ((npc.getId() == raid) && (st.getQuestItemsCount(item) == 0))
+		if ((npc.getId() == raid) && (qs.getQuestItemsCount(item) == 0))
 		{
-			st.giveItems(item, 1);
-			st.playSound(SOUND_MIDDLE);
+			qs.giveItems(item, 1);
+			qs.playSound(SOUND_MIDDLE);
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

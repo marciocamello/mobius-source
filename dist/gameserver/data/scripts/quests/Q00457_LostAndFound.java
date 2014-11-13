@@ -25,30 +25,29 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00457_LostAndFound extends Quest implements ScriptFile
 {
+	// Npcs
+	private static final int Gumiel = 32759;
+	private static final int Follow = 32764;
+	// Other
 	private ScheduledFuture<?> _followTask;
 	
 	public Q00457_LostAndFound()
 	{
 		super(true);
-		addStartNpc(32759);
+		addStartNpc(Gumiel);
 	}
 	
 	@Override
-	public void onShutdown()
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		Player player = st.getPlayer();
+		final Player player = qs.getPlayer();
 		
-		if (event.equalsIgnoreCase("lost_villager_q0457_06.htm"))
+		if (event.equals("lost_villager_q0457_06.htm"))
 		{
-			st.setCond(1);
-			st.setState(2);
-			st.playSound("ItemSound.quest_accept");
-			npc.setFollowTarget(st.getPlayer());
+			qs.setCond(1);
+			qs.setState(2);
+			qs.playSound("ItemSound.quest_accept");
+			npc.setFollowTarget(qs.getPlayer());
 			
 			if (_followTask != null)
 			{
@@ -56,86 +55,68 @@ public class Q00457_LostAndFound extends Quest implements ScriptFile
 				_followTask = null;
 			}
 			
-			_followTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Follow(npc, player, st), 0L, 1000L);
+			_followTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new Follow(npc, player, qs), 0L, 1000L);
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		Player player = st.getPlayer();
-		int npcId = npc.getId();
-		int state = st.getState();
-		int cond = st.getCond();
+		final Player player = qs.getPlayer();
+		final int state = qs.getState();
+		final int cond = qs.getCond();
 		
-		if (npcId == 32759)
+		switch (state)
 		{
-			if (state == 1)
-			{
+			case 1:
 				if ((npc.getFollowTarget() != null) && (npc.getFollowTarget() != player))
 				{
 					return "lost_villager_q0457_01a.htm";
 				}
-				
-				if (st.getPlayer().getLevel() >= 82)
+				else if (qs.getPlayer().getLevel() >= 82)
 				{
-					if (st.isNowAvailableByTime())
+					if (qs.isNowAvailableByTime())
 					{
 						return "lost_villager_q0457_01.htm";
 					}
 					
 					return "lost_villager_q0457_02.htm";
 				}
-				
 				return "lost_villager_q0457_03.htm";
-			}
-			
-			if (state == 2)
-			{
+				
+			case 2:
 				if ((npc.getFollowTarget() != null) && (npc.getFollowTarget() != player))
 				{
 					return "lost_villager_q0457_01a.htm";
 				}
-				
-				if (cond == 1)
+				else if (cond == 1)
 				{
 					return "lost_villager_q0457_08.htm";
 				}
-				
-				if (cond == 2)
+				else if (cond == 2)
 				{
 					npc.deleteMe();
-					st.giveItems(15716, 1L);
-					st.unset("cond");
-					st.playSound("ItemSound.quest_finish");
-					st.exitCurrentQuest(this);
+					qs.giveItems(15716, 1L);
+					qs.unset("cond");
+					qs.playSound("ItemSound.quest_finish");
+					qs.exitCurrentQuest(this);
 					return "lost_villager_q0457_09.htm";
 				}
-			}
+				break;
 		}
 		
 		return "noquest";
 	}
 	
-	@Override
-	public void onLoad()
+	void checkInRadius(int id, QuestState qs, NpcInstance npc)
 	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	void checkInRadius(int id, QuestState st, NpcInstance npc)
-	{
-		NpcInstance quest0457 = GameObjectsStorage.getByNpcId(id);
+		final NpcInstance quest0457 = GameObjectsStorage.getByNpcId(id);
 		
 		if (npc.getRealDistance3D(quest0457) <= 150.0D)
 		{
-			st.setCond(2);
+			qs.setCond(2);
 			
 			if (_followTask != null)
 			{
@@ -150,21 +131,36 @@ public class Q00457_LostAndFound extends Quest implements ScriptFile
 	private class Follow implements Runnable
 	{
 		private final NpcInstance _npc;
-		private final Player player;
-		private final QuestState st;
+		private final Player _player;
+		private final QuestState _qs;
 		
-		Follow(NpcInstance npc, Player pl, QuestState _st)
+		Follow(NpcInstance npc, Player player, QuestState qs)
 		{
 			_npc = npc;
-			player = pl;
-			st = _st;
+			_player = player;
+			_qs = qs;
 		}
 		
 		@Override
 		public void run()
 		{
-			_npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player, Integer.valueOf(150));
-			checkInRadius(32764, st, _npc);
+			_npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, _player, Integer.valueOf(150));
+			checkInRadius(Follow, _qs, _npc);
 		}
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

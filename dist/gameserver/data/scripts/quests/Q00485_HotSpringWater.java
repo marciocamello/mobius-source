@@ -21,11 +21,13 @@ import lineage2.gameserver.utils.Util;
 
 public class Q00485_HotSpringWater extends Quest implements ScriptFile
 {
-	// npc
+	// Npcs
 	public static final int GUIDE = 33463;
 	public static final int VALDEMOR = 30844;
-	// mobs
-	private final static int[] Mobs =
+	// Items
+	public static final int WATER = 19497;
+	// Monsters
+	private final static int[] MONSTERS =
 	{
 		21314,
 		21315,
@@ -38,8 +40,107 @@ public class Q00485_HotSpringWater extends Quest implements ScriptFile
 		21322,
 		21323
 	};
-	// q items
-	public static final int WATER = 19497;
+	
+	public Q00485_HotSpringWater()
+	{
+		super(true);
+		addStartNpc(GUIDE);
+		addTalkId(VALDEMOR);
+		addKillId(MONSTERS);
+		addQuestItem(WATER);
+		addLevelCheck(70, 74);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		if (event.equals("33463-3.htm"))
+		{
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.playSound(SOUND_ACCEPT);
+		}
+		
+		return event;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		int state = qs.getState();
+		int cond = qs.getCond();
+		
+		switch (npc.getId())
+		{
+			case GUIDE:
+				if (state == 1)
+				{
+					if (!qs.isNowAvailableByTime())
+					{
+						return "33463-comp.htm";
+					}
+					
+					return "33463.htm";
+				}
+				else if (state == 2)
+				{
+					if (cond == 1)
+					{
+						return "33463-4.htm";
+					}
+					
+					if (cond == 2)
+					{
+						return "33463-5.htm";
+					}
+				}
+				break;
+			
+			case VALDEMOR:
+				if (state == 2)
+				{
+					if (cond == 1)
+					{
+						return "30844-1.htm";
+					}
+					else if (cond == 2)
+					{
+						qs.addExpAndSp(9483000, 9470430);
+						qs.takeItems(WATER, -1);
+						qs.giveItems(57, 371745);
+						qs.unset("cond");
+						qs.playSound(SOUND_FINISH);
+						qs.exitCurrentQuest(this);
+						return "30844.htm";
+					}
+				}
+				break;
+		}
+		
+		return "noquest";
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if ((qs.getCond() != 1) || (npc == null))
+		{
+			return null;
+		}
+		
+		if (Util.contains(MONSTERS, npc.getId()) && Rnd.chance(50))
+		{
+			qs.giveItems(WATER, 1);
+			qs.playSound(SOUND_MIDDLE);
+		}
+		
+		if (qs.getQuestItemsCount(WATER) >= 40)
+		{
+			qs.setCond(2);
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -54,108 +155,5 @@ public class Q00485_HotSpringWater extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00485_HotSpringWater()
-	{
-		super(true);
-		addStartNpc(GUIDE);
-		addTalkId(VALDEMOR);
-		addKillId(Mobs);
-		addQuestItem(WATER);
-		addLevelCheck(70, 74);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		st.getPlayer();
-		
-		if (event.equalsIgnoreCase("33463-3.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		return event;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		st.getPlayer();
-		int npcId = npc.getId();
-		int state = st.getState();
-		int cond = st.getCond();
-		
-		if (npcId == GUIDE)
-		{
-			if (state == 1)
-			{
-				if (!st.isNowAvailableByTime())
-				{
-					return "33463-comp.htm";
-				}
-				
-				return "33463.htm";
-			}
-			else if (state == 2)
-			{
-				if (cond == 1)
-				{
-					return "33463-4.htm";
-				}
-				
-				if (cond == 2)
-				{
-					return "33463-5.htm";
-				}
-			}
-		}
-		
-		if ((npcId == VALDEMOR) && (state == 2))
-		{
-			if (cond == 1)
-			{
-				return "30844-1.htm";
-			}
-			else if (cond == 2)
-			{
-				st.addExpAndSp(9483000, 9470430);
-				st.takeItems(WATER, -1);
-				st.giveItems(57, 371745);
-				st.unset("cond");
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(this);
-				return "30844.htm"; // no further html do here
-			}
-		}
-		
-		return "noquest";
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		
-		if ((cond != 1) || (npc == null))
-		{
-			return null;
-		}
-		
-		if (Util.contains(Mobs, npc.getId()) && Rnd.chance(50))
-		{
-			st.giveItems(WATER, 1);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		if (st.getQuestItemsCount(WATER) >= 40)
-		{
-			st.setCond(2);
-		}
-		
-		return null;
 	}
 }

@@ -22,17 +22,115 @@ import gnu.trove.map.hash.TIntIntHashMap;
 
 public class Q00472_ChallengeSteamCorridor extends Quest implements ScriptFile
 {
-	private static final int CON1 = 33044;
-	private static final int CON2 = 25797;
-	private static final int CON3 = 30387;
+	// Npc
+	private static final int FIOREN = 33044;
+	// Monster
+	private static final int KECHI = 25797;
+	// Item
+	private static final int CERTIFICATE_OF_HELL = 30387;
 	
 	public Q00472_ChallengeSteamCorridor()
 	{
 		super(false);
-		addStartNpc(CON1);
-		addTalkId(CON1);
-		addKillId(CON2);
+		addStartNpc(FIOREN);
+		addTalkId(FIOREN);
+		addKillId(KECHI);
 		addLevelCheck(97, 99);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (htmltext)
+		{
+			case "33044-04.htm":
+				qs.setState(STARTED);
+				break;
+			
+			case "33044-07.htm":
+				qs.playSound(SOUND_FINISH);
+				qs.giveItems(CERTIFICATE_OF_HELL, 10);
+				qs.exitCurrentQuest(false);
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final Player player = qs.getPlayer();
+		final int cond = qs.getCond();
+		
+		if (player.getLevel() < 97)
+		{
+			qs.exitCurrentQuest(true);
+			return "33044-02.htm";
+		}
+		else if (qs.getState() == CREATED)
+		{
+			htmltext = "33044-01.htm";
+		}
+		else if (qs.getState() == STARTED)
+		{
+			if (cond == 1)
+			{
+				htmltext = "33044-05.htm";
+			}
+			else
+			{
+				htmltext = "33044-06.htm";
+			}
+		}
+		else if (qs.getState() == COMPLETED)
+		{
+			htmltext = "33044-08.htm";
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		final Player player = qs.getPlayer();
+		
+		if ((npc.getId() == KECHI) && (qs.getCond() == 1))
+		{
+			TIntIntHashMap moblist = new TIntIntHashMap();
+			moblist.put(KECHI, 1);
+			
+			if (player.getParty() != null)
+			{
+				for (Player partyMember : player.getParty().getPartyMembers())
+				{
+					QuestState pst = partyMember.getQuestState("Q00472_ChallengeSteamCorridor");
+					
+					if ((pst != null) && (pst.isStarted()))
+					{
+						pst.setCond(2);
+						pst.playSound(SOUND_MIDDLE);
+						partyMember.sendPacket(new ExQuestNpcLogList(qs));
+					}
+				}
+			}
+			else
+			{
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				player.sendPacket(new ExQuestNpcLogList(qs));
+			}
+		}
+		
+		return null;
+	}
+	
+	public boolean isDailyQuest()
+	{
+		return true;
 	}
 	
 	@Override
@@ -48,129 +146,5 @@ public class Q00472_ChallengeSteamCorridor extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		String str = event;
-		int i = -1;
-		
-		switch (str.hashCode())
-		{
-			case -659506668:
-				if (!str.equals("33044-04.htm"))
-				{
-					break;
-				}
-				
-				i = 0;
-				break;
-			
-			case -656736105:
-				if (!str.equals("33044-07.htm"))
-				{
-					break;
-				}
-				
-				i = 1;
-		}
-		
-		switch (i)
-		{
-			case 0:
-				st.setState(STARTED);
-				break;
-			
-			case 1:
-				st.playSound(SOUND_FINISH);
-				st.giveItems(CON3, 10);
-				st.exitCurrentQuest(false);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		Player player = st.getPlayer();
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (npcId == CON1)
-		{
-			if (player.getLevel() < 97)
-			{
-				st.exitCurrentQuest(true);
-				return "33044-02.htm";
-			}
-			
-			if (st.getState() == CREATED)
-			{
-				htmltext = "33044-01.htm";
-			}
-			else if (st.getState() == STARTED)
-			{
-				if (cond == 1)
-				{
-					htmltext = "33044-05.htm";
-				}
-				else
-				{
-					htmltext = "33044-06.htm";
-				}
-			}
-			else if (st.getState() == COMPLETED)
-			{
-				htmltext = "33044-08.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		npc.getId();
-		st.getCond();
-		Player player = st.getPlayer();
-		
-		if ((npc.getId() == CON2) && (st.getCond() == 1))
-		{
-			TIntIntHashMap moblist = new TIntIntHashMap();
-			moblist.put(CON2, 1);
-			
-			if (player.getParty() != null)
-			{
-				for (Player partyMember : player.getParty().getPartyMembers())
-				{
-					QuestState pst = partyMember.getQuestState("Q00472_ChallengeSteamCorridor");
-					
-					if ((pst != null) && (pst.isStarted()))
-					{
-						pst.setCond(2);
-						pst.playSound(SOUND_MIDDLE);
-						partyMember.sendPacket(new ExQuestNpcLogList(st));
-					}
-				}
-			}
-			else
-			{
-				st.setCond(2);
-				st.playSound(SOUND_MIDDLE);
-				player.sendPacket(new ExQuestNpcLogList(st));
-			}
-		}
-		
-		return null;
-	}
-	
-	public boolean isDailyQuest()
-	{
-		return true;
 	}
 }

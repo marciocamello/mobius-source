@@ -19,22 +19,9 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00310_OnlyWhatRemains extends Quest implements ScriptFile
 {
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
+	// Npc
 	private static final int KINTAIJIN = 32640;
+	// Monsters
 	private static final int[] MOBS =
 	{
 		22617,
@@ -42,6 +29,7 @@ public class Q00310_OnlyWhatRemains extends Quest implements ScriptFile
 		22625,
 		22626
 	};
+	// Items
 	private static final int DIRTYBEAD = 14880;
 	private static final int ACCELERATOR = 14832;
 	private static final int JEWEL = 14835;
@@ -56,26 +44,26 @@ public class Q00310_OnlyWhatRemains extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("32640-3.htm"))
+		if (event.equals("32640-3.htm"))
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.playSound(SOUND_ACCEPT);
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
-		int id = st.getState();
-		int cond = st.getCond();
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int id = qs.getState();
 		
 		if (id == COMPLETED)
 		{
@@ -83,16 +71,16 @@ public class Q00310_OnlyWhatRemains extends Quest implements ScriptFile
 		}
 		else if (id == CREATED)
 		{
-			QuestState ImTheOnlyOneYouCanTrust = st.getPlayer().getQuestState(Q00240_ImTheOnlyOneYouCanTrust.class);
+			QuestState ImTheOnlyOneYouCanTrust = qs.getPlayer().getQuestState(Q00240_ImTheOnlyOneYouCanTrust.class);
 			
-			if ((st.getPlayer().getLevel() >= 81) && (ImTheOnlyOneYouCanTrust != null) && ImTheOnlyOneYouCanTrust.isCompleted())
+			if ((qs.getPlayer().getLevel() >= 81) && (ImTheOnlyOneYouCanTrust != null) && ImTheOnlyOneYouCanTrust.isCompleted())
 			{
 				htmltext = "32640-1.htm";
 			}
 			else
 			{
 				htmltext = "32640-0.htm";
-				st.exitCurrentQuest(true);
+				qs.exitCurrentQuest(true);
 			}
 		}
 		else if (cond == 1)
@@ -101,11 +89,11 @@ public class Q00310_OnlyWhatRemains extends Quest implements ScriptFile
 		}
 		else if (cond == 2)
 		{
-			st.takeItems(DIRTYBEAD, 500);
-			st.giveItems(ACCELERATOR, 1);
-			st.giveItems(JEWEL, 1);
-			st.exitCurrentQuest(true);
-			st.playSound(SOUND_FINISH);
+			qs.takeItems(DIRTYBEAD, 500);
+			qs.giveItems(ACCELERATOR, 1);
+			qs.giveItems(JEWEL, 1);
+			qs.exitCurrentQuest(true);
+			qs.playSound(SOUND_FINISH);
 			htmltext = "32640-9.htm";
 		}
 		
@@ -113,23 +101,38 @@ public class Q00310_OnlyWhatRemains extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if (st.getCond() == 1)
+		if (qs.getCond() == 1)
 		{
-			st.giveItems(DIRTYBEAD, 1);
+			qs.giveItems(DIRTYBEAD, 1);
 			
-			if (st.getQuestItemsCount(DIRTYBEAD) >= 500)
+			if (qs.getQuestItemsCount(DIRTYBEAD) >= 500)
 			{
-				st.setCond(2);
-				st.playSound(SOUND_MIDDLE);
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
 			}
 			else
 			{
-				st.playSound(SOUND_ITEMGET);
+				qs.playSound(SOUND_ITEMGET);
 			}
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

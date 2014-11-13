@@ -20,21 +20,6 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00376_ExplorationOfTheGiantsCavePart1 extends Quest implements ScriptFile
 {
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	private static final int DROP_RATE = 3;
 	private static final int DROP_RATE_BOOK = 1;
 	private static final int ANCIENT_PARCHMENT = 14841;
@@ -112,143 +97,161 @@ public class Q00376_ExplorationOfTheGiantsCavePart1 extends Quest implements Scr
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
-		int cond = st.getCond();
+		final int cond = qs.getCond();
 		
-		if (event.equalsIgnoreCase("yes"))
+		switch (event)
 		{
-			htmltext = "Starting.htm";
-			st.setState(STARTED);
-			st.setCond(1);
-			st.giveItems(DICT1, 1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("no"))
-		{
-			htmltext = "ext_msg.htm";
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(true);
-		}
-		else if (event.equalsIgnoreCase("show"))
-		{
-			htmltext = "no_items.htm";
+			case "yes":
+				htmltext = "Starting.htm";
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.giveItems(DICT1, 1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
 			
-			for (int i = 0; i < EXCHANGE.length; i = i + 2)
-			{
-				long count = Long.MAX_VALUE;
-				
-				for (int j : EXCHANGE[i])
+			case "no":
+				htmltext = "ext_msg.htm";
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(true);
+				break;
+			
+			case "show":
+				htmltext = "no_items.htm";
+				for (int i = 0; i < EXCHANGE.length; i = i + 2)
 				{
-					count = Math.min(count, st.getQuestItemsCount(j));
-				}
-				
-				if (count >= 1)
-				{
-					htmltext = "tnx4items.htm";
+					long count = Long.MAX_VALUE;
 					
 					for (int j : EXCHANGE[i])
 					{
-						st.takeItems(j, count);
+						count = Math.min(count, qs.getQuestItemsCount(j));
 					}
 					
-					for (int l = 0; l < count; l++)
+					if (count >= 1)
 					{
-						int item = EXCHANGE[i + 1][Rnd.get(EXCHANGE[i + 1].length)];
-						st.giveItems(item, 1);
+						htmltext = "tnx4items.htm";
+						
+						for (int j : EXCHANGE[i])
+						{
+							qs.takeItems(j, count);
+						}
+						
+						for (int l = 0; l < count; l++)
+						{
+							int item = EXCHANGE[i + 1][Rnd.get(EXCHANGE[i + 1].length)];
+							qs.giveItems(item, 1);
+						}
 					}
 				}
-			}
-		}
-		else if (event.equalsIgnoreCase("myst"))
-		{
-			if (st.getQuestItemsCount(MST_BK) > 0)
-			{
-				if (cond == 1)
+				break;
+			
+			case "myst":
+				if (qs.getQuestItemsCount(MST_BK) > 0)
 				{
-					st.setState(STARTED);
-					st.setCond(2);
-					htmltext = "go_part2.htm";
+					if (cond == 1)
+					{
+						qs.setState(STARTED);
+						qs.setCond(2);
+						htmltext = "go_part2.htm";
+					}
+					else if (cond == 2)
+					{
+						htmltext = "gogogo_2.htm";
+					}
 				}
-				else if (cond == 2)
+				else
 				{
-					htmltext = "gogogo_2.htm";
+					htmltext = "no_part2.htm";
 				}
-			}
-			else
-			{
-				htmltext = "no_part2.htm";
-			}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int id = st.getState();
-		int cond = st.getCond();
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		final int id = qs.getState();
 		
-		if (npcId == HR_SOBLING)
+		switch (npcId)
 		{
-			if (id == CREATED)
-			{
-				if (st.getPlayer().getLevel() < 75)
+			case HR_SOBLING:
+				if (id == CREATED)
 				{
-					st.exitCurrentQuest(true);
-					htmltext = "error_1.htm";
+					if (qs.getPlayer().getLevel() < 75)
+					{
+						qs.exitCurrentQuest(true);
+						htmltext = "error_1.htm";
+					}
+					else
+					{
+						htmltext = "start.htm";
+					}
 				}
-				else
+				else if (id == STARTED)
 				{
-					htmltext = "start.htm";
+					if (qs.getQuestItemsCount(ANCIENT_PARCHMENT) != 0)
+					{
+						htmltext = "checkout2.htm";
+					}
+					else
+					{
+						htmltext = "checkout.htm";
+					}
 				}
-			}
-			else if (id == STARTED)
-			{
-				if (st.getQuestItemsCount(ANCIENT_PARCHMENT) != 0)
+				break;
+			
+			case WF_CLIFF:
+				if ((cond == 2) & (qs.getQuestItemsCount(MST_BK) > 0))
 				{
-					htmltext = "checkout2.htm";
+					htmltext = "ok_part2.htm";
+					qs.takeItems(MST_BK, -1);
+					qs.giveItems(DICT2, 1);
+					qs.setCond(3);
+					qs.playSound(SOUND_MIDDLE);
 				}
-				else
-				{
-					htmltext = "checkout.htm";
-				}
-			}
-		}
-		else if (npcId == WF_CLIFF)
-		{
-			if ((cond == 2) & (st.getQuestItemsCount(MST_BK) > 0))
-			{
-				htmltext = "ok_part2.htm";
-				st.takeItems(MST_BK, -1);
-				st.giveItems(DICT2, 1);
-				st.setCond(3);
-				st.playSound(SOUND_MIDDLE);
-			}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
+		final int cond = qs.getCond();
 		
 		if (cond > 0)
 		{
-			st.rollAndGive(ANCIENT_PARCHMENT, 1, 1, DROP_RATE);
+			qs.rollAndGive(ANCIENT_PARCHMENT, 1, 1, DROP_RATE);
 			
 			if (cond == 1)
 			{
-				st.rollAndGive(MST_BK, 1, 1, 1, DROP_RATE_BOOK);
+				qs.rollAndGive(MST_BK, 1, 1, 1, DROP_RATE_BOOK);
 			}
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

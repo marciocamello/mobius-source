@@ -247,90 +247,92 @@ public class Q00454_CompletelyLost extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		if (event.equalsIgnoreCase("wounded_soldier_q454_02.htm"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("wounded_soldier_q454_03.htm"))
-		{
-			if (seeSoldier(npc, st.getPlayer()) == null)
-			{
-				npc.setFollowTarget(st.getPlayer());
-				npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, st.getPlayer(), Config.FOLLOW_RANGE);
-			}
+			case "wounded_soldier_q454_02.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "wounded_soldier_q454_03.htm":
+				if (seeSoldier(npc, qs.getPlayer()) == null)
+				{
+					npc.setFollowTarget(qs.getPlayer());
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, qs.getPlayer(), Config.FOLLOW_RANGE);
+				}
+				break;
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
 		
-		if (npc.getId() == WoundedSoldier)
+		switch (npc.getId())
 		{
-			switch (st.getState())
-			{
-				case CREATED:
-					if (st.isNowAvailableByTime())
-					{
-						if (st.getPlayer().getLevel() >= 84)
+			case WoundedSoldier:
+				switch (qs.getState())
+				{
+					case CREATED:
+						if (qs.isNowAvailableByTime())
 						{
-							htmltext = "wounded_soldier_q454_01.htm";
+							if (qs.getPlayer().getLevel() >= 84)
+							{
+								htmltext = "wounded_soldier_q454_01.htm";
+							}
+							else
+							{
+								htmltext = "wounded_soldier_q454_00.htm";
+								qs.exitCurrentQuest(true);
+							}
 						}
 						else
 						{
-							htmltext = "wounded_soldier_q454_00.htm";
-							st.exitCurrentQuest(true);
+							htmltext = "wounded_soldier_q454_00a.htm";
 						}
+						break;
+					
+					case STARTED:
+						if (qs.getCond() == 1)
+						{
+							htmltext = "wounded_soldier_q454_04.htm";
+							
+							if (seeSoldier(npc, qs.getPlayer()) == null)
+							{
+								npc.setFollowTarget(qs.getPlayer());
+								npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, qs.getPlayer(), Config.FOLLOW_RANGE);
+							}
+						}
+						break;
+				}
+				break;
+			
+			case Ermian:
+				if (qs.getCond() == 1)
+				{
+					if (seeSoldier(npc, qs.getPlayer()) != null)
+					{
+						htmltext = "ermian_q454_01.htm";
+						NpcInstance soldier = seeSoldier(npc, qs.getPlayer());
+						soldier.doDie(null);
+						soldier.endDecayTask();
+						giveReward(qs);
+						qs.setState(COMPLETED);
+						qs.playSound(SOUND_FINISH);
+						qs.exitCurrentQuest(this);
 					}
 					else
 					{
-						htmltext = "wounded_soldier_q454_00a.htm";
+						htmltext = "ermian_q454_02.htm";
 					}
-					
-					break;
-				
-				case STARTED:
-					if (st.getCond() == 1)
-					{
-						htmltext = "wounded_soldier_q454_04.htm";
-						
-						if (seeSoldier(npc, st.getPlayer()) == null)
-						{
-							npc.setFollowTarget(st.getPlayer());
-							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, st.getPlayer(), Config.FOLLOW_RANGE);
-						}
-					}
-					
-					break;
-			}
-		}
-		else if (npc.getId() == Ermian)
-		{
-			if (st.getCond() == 1)
-			{
-				if (seeSoldier(npc, st.getPlayer()) != null)
-				{
-					htmltext = "ermian_q454_01.htm";
-					NpcInstance soldier = seeSoldier(npc, st.getPlayer());
-					soldier.doDie(null);
-					soldier.endDecayTask();
-					giveReward(st);
-					st.setState(COMPLETED);
-					st.playSound(SOUND_FINISH);
-					st.exitCurrentQuest(this);
 				}
-				else
-				{
-					htmltext = "ermian_q454_02.htm";
-				}
-			}
+				break;
 		}
 		
 		return htmltext;
@@ -338,7 +340,7 @@ public class Q00454_CompletelyLost extends Quest implements ScriptFile
 	
 	private NpcInstance seeSoldier(NpcInstance npc, Player player)
 	{
-		List<NpcInstance> around = npc.getAroundNpc(Config.FOLLOW_RANGE * 2, 300);
+		final List<NpcInstance> around = npc.getAroundNpc(Config.FOLLOW_RANGE * 2, 300);
 		
 		if ((around != null) && !around.isEmpty())
 		{
@@ -357,12 +359,10 @@ public class Q00454_CompletelyLost extends Quest implements ScriptFile
 		return null;
 	}
 	
-	private void giveReward(QuestState st)
+	private void giveReward(QuestState qs)
 	{
-		int row = Rnd.get(rewards.length);
-		int id = rewards[row][0];
-		int count = rewards[row][1];
-		st.giveItems(id, count);
+		final int row = Rnd.get(rewards.length);
+		qs.giveItems(rewards[row][0], rewards[row][1]);
 	}
 	
 	@Override

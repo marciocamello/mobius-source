@@ -22,10 +22,10 @@ public class Q00352_HelpRoodRaiseANewPet extends Quest implements ScriptFile
 {
 	// NPCs
 	private static int Rood = 31067;
-	// Mobs
+	// Monsters
 	private static int Lienrik = 20786;
 	private static int Lienrik_Lad = 20787;
-	// Quest Items
+	// Items
 	private static int LIENRIK_EGG1 = 5860;
 	private static int LIENRIK_EGG2 = 5861;
 	// Chances
@@ -36,63 +36,59 @@ public class Q00352_HelpRoodRaiseANewPet extends Quest implements ScriptFile
 	{
 		super(false);
 		addStartNpc(Rood);
-		addKillId(Lienrik);
-		addKillId(Lienrik_Lad);
-		addQuestItem(LIENRIK_EGG1);
-		addQuestItem(LIENRIK_EGG2);
+		addKillId(Lienrik, Lienrik_Lad);
+		addQuestItem(LIENRIK_EGG1, LIENRIK_EGG2);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		int _state = st.getState();
-		if (event.equalsIgnoreCase("31067-04.htm") && (_state == CREATED))
+		final int _state = qs.getState();
+		
+		if (event.equals("31067-04.htm") && (_state == CREATED))
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
+			qs.setState(STARTED);
+			qs.setCond(1);
+			qs.playSound(SOUND_ACCEPT);
 		}
-		else if (event.equalsIgnoreCase("31067-09.htm") && (_state == STARTED))
+		else if (event.equals("31067-09.htm") && (_state == STARTED))
 		{
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(true);
+			qs.playSound(SOUND_FINISH);
+			qs.exitCurrentQuest(true);
 		}
+		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		if (npc.getId() != Rood)
-		{
-			return htmltext;
-		}
-		int _state = st.getState();
+		final int _state = qs.getState();
 		
 		if (_state == CREATED)
 		{
-			if (st.getPlayer().getLevel() < 39)
+			if (qs.getPlayer().getLevel() < 39)
 			{
 				htmltext = "31067-00.htm";
-				st.exitCurrentQuest(true);
+				qs.exitCurrentQuest(true);
 			}
 			else
 			{
 				htmltext = "31067-01.htm";
-				st.setCond(0);
+				qs.setCond(0);
 			}
 		}
 		else if (_state == STARTED)
 		{
-			long reward = (st.getQuestItemsCount(LIENRIK_EGG1) * 209) + (st.getQuestItemsCount(LIENRIK_EGG2) * 2050);
+			long reward = (qs.getQuestItemsCount(LIENRIK_EGG1) * 209) + (qs.getQuestItemsCount(LIENRIK_EGG2) * 2050);
 			if (reward > 0)
 			{
 				htmltext = "31067-08.htm";
-				st.takeItems(LIENRIK_EGG1, -1);
-				st.takeItems(LIENRIK_EGG2, -1);
-				st.giveItems(ADENA_ID, reward);
-				st.playSound(SOUND_MIDDLE);
+				qs.takeItems(LIENRIK_EGG1, -1);
+				qs.takeItems(LIENRIK_EGG2, -1);
+				qs.giveItems(ADENA_ID, reward);
+				qs.playSound(SOUND_MIDDLE);
 			}
 			else
 			{
@@ -121,6 +117,7 @@ public class Q00352_HelpRoodRaiseANewPet extends Quest implements ScriptFile
 			qs.giveItems(LIENRIK_EGG2, 1);
 			qs.playSound(SOUND_ITEMGET);
 		}
+		
 		return null;
 	}
 	

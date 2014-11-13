@@ -204,6 +204,395 @@ public class Q00337_AudienceWithTheLandDragon extends Quest implements ScriptFil
 		},
 	};
 	
+	public Q00337_AudienceWithTheLandDragon()
+	{
+		super(false);
+		addStartNpc(GABRIELLE);
+		addTalkId(MOKE, HELTON, CHAKIRIS, KAIENA, GILMORE, THEODRIC, KENDRA, ORVEN);
+		addKillId(BLOOD_QUEEN, MARSH_STALKER, MARSH_DRAKE, SACRIFICE_OF_THE_SACRIFICED, HARIT_LIZARDMAN_SHAMAN, HARIT_LIZARDMAN_MATRIARCH, HARIT_LIZARDMAN_ZEALOT, HAMRUT, KRANROT, ABYSSAL_JEWEL_1, ABYSSAL_JEWEL_2, CAVE_KEEPER, CAVE_MAIDEN, ABYSSAL_JEWEL_3, JEWEL_GUARDIAN_MARA, JEWEL_GUARDIAN_MUSFEL, JEWEL_GUARDIAN_PYTON);
+		addAttackId(ABYSSAL_JEWEL_1, ABYSSAL_JEWEL_2, ABYSSAL_JEWEL_3);
+		addQuestItem(FEATHER_OF_GABRIELLE_ID, HERALD_OF_SLAYER_ID, STALKER_HORN_ID, DRAKE_TALON_ID, REMAINS_OF_SACRIFICED_ID, TOTEM_OF_LAND_DRAGON_ID, HAMRUT_LEG_ID, KRANROT_SKIN_ID, MARA_FANG_ID, FIRST_ABYSS_FRAGMENT_ID, MUSFEL_FANG_ID, SECOND_ABYSS_FRAGMENT_ID, THIRD_ABYSS_FRAGMENT_ID, MARK_OF_WATCHMAN_ID);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "1":
+				qs.set("step", "1");
+				qs.setCond(1);
+				qs.set("guard", "0");
+				qs.setState(STARTED);
+				qs.giveItems(FEATHER_OF_GABRIELLE_ID, 1);
+				htmltext = "30753-02.htm";
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "2":
+				qs.set("step", "2");
+				htmltext = "30720-02.htm";
+				break;
+			
+			case "4":
+				qs.set("step", "4");
+				htmltext = "30857-02.htm";
+				break;
+			
+			case "6":
+				qs.set("step", "6");
+				htmltext = "30851-02.htm";
+				break;
+			
+			case "8":
+				qs.set("step", "8");
+				htmltext = "30705-02.htm";
+				break;
+			
+			case "10":
+				qs.takeItems(MARK_OF_WATCHMAN_ID, -1);
+				qs.set("step", "10");
+				qs.setCond(2);
+				htmltext = "30753-05.htm";
+				break;
+			
+			case "11":
+				qs.set("step", "11");
+				htmltext = "30498-02.htm";
+				break;
+			
+			case "13":
+				qs.set("step", "13");
+				htmltext = "30678-02.htm";
+				break;
+			
+			case "15":
+				qs.set("step", "15");
+				qs.setCond(3);
+				htmltext = "30753-06.htm";
+				qs.takeItems(MARK_OF_WATCHMAN_ID, -1);
+				qs.takeItems(FEATHER_OF_GABRIELLE_ID, -1);
+				qs.giveItems(HERALD_OF_SLAYER_ID, 1);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "16":
+				qs.set("step", "16");
+				qs.setCond(4);
+				htmltext = "30754-02.htm";
+				qs.takeItems(HERALD_OF_SLAYER_ID, -1);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		final int step = qs.getInt("step");
+		
+		switch (npcId)
+		{
+			case GABRIELLE:
+				if (cond == 0)
+				{
+					if (qs.getPlayer().getLevel() < 50)
+					{
+						htmltext = "30753-00.htm";
+						qs.exitCurrentQuest(true);
+					}
+					else
+					{
+						htmltext = "30753-01.htm";
+					}
+				}
+				else if (step < 9)
+				{
+					htmltext = "30753-02.htm";
+				}
+				else if (step == 9)
+				{
+					htmltext = "30753-03.htm";
+				}
+				else if ((step > 9) && (step < 14))
+				{
+					htmltext = "30753-05.htm";
+				}
+				else if (step == 14)
+				{
+					htmltext = "30753-04.htm";
+				}
+				else if (step > 14)
+				{
+					htmltext = "30753-06.htm";
+				}
+				break;
+			
+			case KAIENA:
+				if ((cond == 1) && (step < 4))
+				{
+					if ((qs.getQuestItemsCount(STALKER_HORN_ID) < 1) && (qs.getQuestItemsCount(DRAKE_TALON_ID) < 1) && (step == 1))
+					{
+						htmltext = "30720-01.htm";
+					}
+					else if ((qs.getQuestItemsCount(STALKER_HORN_ID) > 0) && (qs.getQuestItemsCount(DRAKE_TALON_ID) > 0))
+					{
+						htmltext = "30720-03.htm";
+						qs.takeItems(STALKER_HORN_ID, -1);
+						qs.takeItems(DRAKE_TALON_ID, -1);
+						qs.giveItems(MARK_OF_WATCHMAN_ID, 1);
+						qs.set("step", "3");
+						qs.playSound(SOUND_MIDDLE);
+					}
+					else if (step == 2)
+					{
+						htmltext = "30720-02.htm";
+					}
+					else if (step == 3)
+					{
+						htmltext = "30720-03.htm";
+					}
+				}
+				break;
+			
+			case ORVEN:
+				if ((cond == 1) && (step > 2) && (step < 6))
+				{
+					if ((qs.getQuestItemsCount(REMAINS_OF_SACRIFICED_ID) < 1) && (step == 3))
+					{
+						htmltext = "30857-01.htm";
+					}
+					else if (qs.getQuestItemsCount(REMAINS_OF_SACRIFICED_ID) > 0)
+					{
+						htmltext = "30857-03.htm";
+						qs.takeItems(REMAINS_OF_SACRIFICED_ID, -1);
+						qs.giveItems(MARK_OF_WATCHMAN_ID, 1);
+						qs.set("step", "5");
+						qs.playSound(SOUND_MIDDLE);
+					}
+					else if (step == 4)
+					{
+						htmltext = "30857-02.htm";
+					}
+					else if (step == 5)
+					{
+						htmltext = "30857-03.htm";
+					}
+				}
+				break;
+			
+			case KENDRA:
+				if ((cond == 1) && (step > 4) && (step < 8))
+				{
+					if ((qs.getQuestItemsCount(TOTEM_OF_LAND_DRAGON_ID) < 1) && (step == 5))
+					{
+						htmltext = "30851-01.htm";
+					}
+					else if (qs.getQuestItemsCount(TOTEM_OF_LAND_DRAGON_ID) > 0)
+					{
+						htmltext = "30851-03.htm";
+						qs.takeItems(TOTEM_OF_LAND_DRAGON_ID, -1);
+						qs.giveItems(MARK_OF_WATCHMAN_ID, 1);
+						qs.set("step", "7");
+						qs.playSound(SOUND_MIDDLE);
+					}
+					else if (step == 6)
+					{
+						htmltext = "30851-02.htm";
+					}
+					else if (step == 7)
+					{
+						htmltext = "30851-03.htm";
+					}
+				}
+				break;
+			
+			case CHAKIRIS:
+				if ((cond == 1) && (step > 6) && (step < 10))
+				{
+					if ((qs.getQuestItemsCount(HAMRUT_LEG_ID) < 1) && (qs.getQuestItemsCount(KRANROT_SKIN_ID) < 1) && (step == 7))
+					{
+						htmltext = "30705-01.htm";
+					}
+					else if ((qs.getQuestItemsCount(HAMRUT_LEG_ID) > 0) && (qs.getQuestItemsCount(KRANROT_SKIN_ID) > 0))
+					{
+						htmltext = "30705-03.htm";
+						qs.takeItems(HAMRUT_LEG_ID, -1);
+						qs.takeItems(KRANROT_SKIN_ID, -1);
+						qs.giveItems(MARK_OF_WATCHMAN_ID, 1);
+						qs.set("step", "9");
+						qs.playSound(SOUND_MIDDLE);
+					}
+					else if (step == 8)
+					{
+						htmltext = "30705-02.htm";
+					}
+					else if (step == 9)
+					{
+						htmltext = "30705-03.htm";
+					}
+				}
+				break;
+			
+			case MOKE:
+				if ((cond == 2) && (step < 13))
+				{
+					if ((qs.getQuestItemsCount(MARA_FANG_ID) < 1) && (qs.getQuestItemsCount(FIRST_ABYSS_FRAGMENT_ID) < 1) && (step == 10))
+					{
+						htmltext = "30498-01.htm";
+					}
+					else if ((qs.getQuestItemsCount(MARA_FANG_ID) > 0) && (qs.getQuestItemsCount(FIRST_ABYSS_FRAGMENT_ID) > 0))
+					{
+						htmltext = "30498-03.htm";
+						qs.takeItems(MARA_FANG_ID, -1);
+						qs.takeItems(FIRST_ABYSS_FRAGMENT_ID, -1);
+						qs.giveItems(MARK_OF_WATCHMAN_ID, 1);
+						qs.set("step", "12");
+						qs.playSound(SOUND_MIDDLE);
+					}
+					else if (step == 11)
+					{
+						htmltext = "30498-02.htm";
+					}
+					else if (step == 12)
+					{
+						htmltext = "30498-03.htm";
+					}
+				}
+				break;
+			
+			case HELTON:
+				if ((cond == 2) && (step > 11) && (step < 15))
+				{
+					if ((qs.getQuestItemsCount(MUSFEL_FANG_ID) < 1) && (qs.getQuestItemsCount(SECOND_ABYSS_FRAGMENT_ID) < 1) && (step == 12))
+					{
+						htmltext = "30678-01.htm";
+					}
+					else if ((qs.getQuestItemsCount(MUSFEL_FANG_ID) > 0) && (qs.getQuestItemsCount(SECOND_ABYSS_FRAGMENT_ID) > 0))
+					{
+						htmltext = "30678-03.htm";
+						qs.takeItems(MUSFEL_FANG_ID, -1);
+						qs.takeItems(SECOND_ABYSS_FRAGMENT_ID, -1);
+						qs.giveItems(MARK_OF_WATCHMAN_ID, 1);
+						qs.set("step", "14");
+						qs.playSound(SOUND_MIDDLE);
+					}
+					else if (step == 13)
+					{
+						htmltext = "30678-02.htm";
+					}
+					else if (step == 14)
+					{
+						htmltext = "30678-03.htm";
+					}
+				}
+				break;
+			
+			case GILMORE:
+				if (step < 17)
+				{
+					if ((qs.getQuestItemsCount(HERALD_OF_SLAYER_ID) > 0) && (cond == 3))
+					{
+						htmltext = "30754-01.htm";
+					}
+					else if (cond == 4)
+					{
+						htmltext = "30754-02.htm";
+					}
+				}
+				break;
+			
+			case THEODRIC:
+				if ((cond == 4) && (step == 16))
+				{
+					if (qs.getQuestItemsCount(THIRD_ABYSS_FRAGMENT_ID) < 1)
+					{
+						htmltext = "30755-02.htm";
+					}
+					else
+					{
+						htmltext = "30755-01.htm";
+						qs.takeItems(THIRD_ABYSS_FRAGMENT_ID, -1);
+						qs.unset("step");
+						qs.unset("cond");
+						qs.unset("guard");
+						qs.exitCurrentQuest(true);
+						qs.giveItems(PORTAL_STONE_ID, 1);
+						qs.playSound(SOUND_FINISH);
+					}
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onAttack(NpcInstance npc, QuestState qs)
+	{
+		final int npcId = npc.getId();
+		final int step = qs.getInt("step");
+		
+		for (int[] element : SPAWNLIST)
+		{
+			if ((npcId == element[1]) && (step == element[0]) && (npc.getCurrentHpPercents() < 50) && (qs.getInt("guard") == 0))
+			{
+				for (int j = 0; j < element[3]; j++)
+				{
+					qs.addSpawn(element[2]);
+				}
+				
+				qs.playSound(SOUND_BEFORE_BATTLE);
+				qs.set("guard", "1");
+			}
+		}
+		
+		return null;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		final int npcId = npc.getId();
+		final int step = qs.getInt("step");
+		
+		for (int[] element : DROPLIST)
+		{
+			if ((npcId == element[1]) && (step == element[0]) && (qs.getQuestItemsCount(element[2]) < element[3]) && Rnd.chance(element[4]))
+			{
+				qs.giveItems(element[2], element[5]);
+				qs.playSound(SOUND_ITEMGET);
+			}
+		}
+		
+		for (int[] element : SPAWNLIST)
+		{
+			if ((step == element[0]) && (npcId == element[1]) && Rnd.chance(50) && (qs.getInt("guard") == 0))
+			{
+				for (int j = 0; j < element[3]; j++)
+				{
+					qs.addSpawn(element[2]);
+				}
+				
+				qs.playSound(SOUND_BEFORE_BATTLE);
+			}
+			
+			if ((step == element[0]) && (npcId == element[1]) && (qs.getInt("guard") == 1))
+			{
+				qs.set("guard", "0");
+			}
+		}
+		
+		return null;
+	}
+	
 	@Override
 	public void onLoad()
 	{
@@ -217,407 +606,5 @@ public class Q00337_AudienceWithTheLandDragon extends Quest implements ScriptFil
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00337_AudienceWithTheLandDragon()
-	{
-		super(false);
-		addStartNpc(GABRIELLE);
-		addTalkId(MOKE);
-		addTalkId(HELTON);
-		addTalkId(CHAKIRIS);
-		addTalkId(KAIENA);
-		addTalkId(GILMORE);
-		addTalkId(THEODRIC);
-		addTalkId(KENDRA);
-		addTalkId(ORVEN);
-		addKillId(BLOOD_QUEEN);
-		addKillId(MARSH_STALKER);
-		addKillId(MARSH_DRAKE);
-		addKillId(SACRIFICE_OF_THE_SACRIFICED);
-		addKillId(HARIT_LIZARDMAN_SHAMAN);
-		addKillId(HARIT_LIZARDMAN_MATRIARCH);
-		addKillId(HARIT_LIZARDMAN_ZEALOT);
-		addKillId(HAMRUT);
-		addKillId(KRANROT);
-		addKillId(ABYSSAL_JEWEL_1);
-		addKillId(ABYSSAL_JEWEL_2);
-		addKillId(CAVE_KEEPER);
-		addKillId(CAVE_MAIDEN);
-		addKillId(ABYSSAL_JEWEL_3);
-		addKillId(JEWEL_GUARDIAN_MARA);
-		addKillId(JEWEL_GUARDIAN_MUSFEL);
-		addKillId(JEWEL_GUARDIAN_PYTON);
-		addAttackId(ABYSSAL_JEWEL_1);
-		addAttackId(ABYSSAL_JEWEL_2);
-		addAttackId(ABYSSAL_JEWEL_3);
-		addQuestItem(new int[]
-		{
-			FEATHER_OF_GABRIELLE_ID,
-			HERALD_OF_SLAYER_ID,
-			STALKER_HORN_ID,
-			DRAKE_TALON_ID,
-			REMAINS_OF_SACRIFICED_ID,
-			TOTEM_OF_LAND_DRAGON_ID,
-			HAMRUT_LEG_ID,
-			KRANROT_SKIN_ID,
-			MARA_FANG_ID,
-			FIRST_ABYSS_FRAGMENT_ID,
-			MUSFEL_FANG_ID,
-			SECOND_ABYSS_FRAGMENT_ID,
-			THIRD_ABYSS_FRAGMENT_ID,
-			MARK_OF_WATCHMAN_ID
-		});
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("1"))
-		{
-			st.set("step", "1");
-			st.setCond(1);
-			st.set("guard", "0");
-			st.setState(STARTED);
-			st.giveItems(FEATHER_OF_GABRIELLE_ID, 1);
-			htmltext = "30753-02.htm";
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("2"))
-		{
-			st.set("step", "2");
-			htmltext = "30720-02.htm";
-		}
-		else if (event.equalsIgnoreCase("4"))
-		{
-			st.set("step", "4");
-			htmltext = "30857-02.htm";
-		}
-		else if (event.equalsIgnoreCase("6"))
-		{
-			st.set("step", "6");
-			htmltext = "30851-02.htm";
-		}
-		else if (event.equalsIgnoreCase("8"))
-		{
-			st.set("step", "8");
-			htmltext = "30705-02.htm";
-		}
-		else if (event.equalsIgnoreCase("10"))
-		{
-			st.takeItems(MARK_OF_WATCHMAN_ID, -1);
-			st.set("step", "10");
-			st.setCond(2);
-			htmltext = "30753-05.htm";
-		}
-		else if (event.equalsIgnoreCase("11"))
-		{
-			st.set("step", "11");
-			htmltext = "30498-02.htm";
-		}
-		else if (event.equalsIgnoreCase("13"))
-		{
-			st.set("step", "13");
-			htmltext = "30678-02.htm";
-		}
-		else if (event.equalsIgnoreCase("15"))
-		{
-			st.set("step", "15");
-			st.setCond(3);
-			htmltext = "30753-06.htm";
-			st.takeItems(MARK_OF_WATCHMAN_ID, -1);
-			st.takeItems(FEATHER_OF_GABRIELLE_ID, -1);
-			st.giveItems(HERALD_OF_SLAYER_ID, 1);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("16"))
-		{
-			st.set("step", "16");
-			st.setCond(4);
-			htmltext = "30754-02.htm";
-			st.takeItems(HERALD_OF_SLAYER_ID, -1);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int step = st.getInt("step");
-		int cond = st.getCond();
-		
-		if (npcId == GABRIELLE)
-		{
-			if (cond == 0)
-			{
-				if (st.getPlayer().getLevel() < 50)
-				{
-					htmltext = "30753-00.htm";
-					st.exitCurrentQuest(true);
-				}
-				else
-				{
-					htmltext = "30753-01.htm";
-				}
-			}
-			else if (step < 9)
-			{
-				htmltext = "30753-02.htm";
-			}
-			else if (step == 9)
-			{
-				htmltext = "30753-03.htm";
-			}
-			else if ((step > 9) && (step < 14))
-			{
-				htmltext = "30753-05.htm";
-			}
-			else if (step == 14)
-			{
-				htmltext = "30753-04.htm";
-			}
-			else if (step > 14)
-			{
-				htmltext = "30753-06.htm";
-			}
-		}
-		else if ((npcId == KAIENA) && (cond == 1) && (step < 4))
-		{
-			if ((st.getQuestItemsCount(STALKER_HORN_ID) < 1) && (st.getQuestItemsCount(DRAKE_TALON_ID) < 1) && (step == 1))
-			{
-				htmltext = "30720-01.htm";
-			}
-			else if ((st.getQuestItemsCount(STALKER_HORN_ID) > 0) && (st.getQuestItemsCount(DRAKE_TALON_ID) > 0))
-			{
-				htmltext = "30720-03.htm";
-				st.takeItems(STALKER_HORN_ID, -1);
-				st.takeItems(DRAKE_TALON_ID, -1);
-				st.giveItems(MARK_OF_WATCHMAN_ID, 1);
-				st.set("step", "3");
-				st.playSound(SOUND_MIDDLE);
-			}
-			else if (step == 2)
-			{
-				htmltext = "30720-02.htm";
-			}
-			else if (step == 3)
-			{
-				htmltext = "30720-03.htm";
-			}
-		}
-		else if ((npcId == ORVEN) && (cond == 1) && (step > 2) && (step < 6))
-		{
-			if ((st.getQuestItemsCount(REMAINS_OF_SACRIFICED_ID) < 1) && (step == 3))
-			{
-				htmltext = "30857-01.htm";
-			}
-			else if (st.getQuestItemsCount(REMAINS_OF_SACRIFICED_ID) > 0)
-			{
-				htmltext = "30857-03.htm";
-				st.takeItems(REMAINS_OF_SACRIFICED_ID, -1);
-				st.giveItems(MARK_OF_WATCHMAN_ID, 1);
-				st.set("step", "5");
-				st.playSound(SOUND_MIDDLE);
-			}
-			else if (step == 4)
-			{
-				htmltext = "30857-02.htm";
-			}
-			else if (step == 5)
-			{
-				htmltext = "30857-03.htm";
-			}
-		}
-		else if ((npcId == KENDRA) && (cond == 1) && (step > 4) && (step < 8))
-		{
-			if ((st.getQuestItemsCount(TOTEM_OF_LAND_DRAGON_ID) < 1) && (step == 5))
-			{
-				htmltext = "30851-01.htm";
-			}
-			else if (st.getQuestItemsCount(TOTEM_OF_LAND_DRAGON_ID) > 0)
-			{
-				htmltext = "30851-03.htm";
-				st.takeItems(TOTEM_OF_LAND_DRAGON_ID, -1);
-				st.giveItems(MARK_OF_WATCHMAN_ID, 1);
-				st.set("step", "7");
-				st.playSound(SOUND_MIDDLE);
-			}
-			else if (step == 6)
-			{
-				htmltext = "30851-02.htm";
-			}
-			else if (step == 7)
-			{
-				htmltext = "30851-03.htm";
-			}
-		}
-		else if ((npcId == CHAKIRIS) && (cond == 1) && (step > 6) && (step < 10))
-		{
-			if ((st.getQuestItemsCount(HAMRUT_LEG_ID) < 1) && (st.getQuestItemsCount(KRANROT_SKIN_ID) < 1) && (step == 7))
-			{
-				htmltext = "30705-01.htm";
-			}
-			else if ((st.getQuestItemsCount(HAMRUT_LEG_ID) > 0) && (st.getQuestItemsCount(KRANROT_SKIN_ID) > 0))
-			{
-				htmltext = "30705-03.htm";
-				st.takeItems(HAMRUT_LEG_ID, -1);
-				st.takeItems(KRANROT_SKIN_ID, -1);
-				st.giveItems(MARK_OF_WATCHMAN_ID, 1);
-				st.set("step", "9");
-				st.playSound(SOUND_MIDDLE);
-			}
-			else if (step == 8)
-			{
-				htmltext = "30705-02.htm";
-			}
-			else if (step == 9)
-			{
-				htmltext = "30705-03.htm";
-			}
-		}
-		else if ((npcId == MOKE) && (cond == 2) && (step < 13))
-		{
-			if ((st.getQuestItemsCount(MARA_FANG_ID) < 1) && (st.getQuestItemsCount(FIRST_ABYSS_FRAGMENT_ID) < 1) && (step == 10))
-			{
-				htmltext = "30498-01.htm";
-			}
-			else if ((st.getQuestItemsCount(MARA_FANG_ID) > 0) && (st.getQuestItemsCount(FIRST_ABYSS_FRAGMENT_ID) > 0))
-			{
-				htmltext = "30498-03.htm";
-				st.takeItems(MARA_FANG_ID, -1);
-				st.takeItems(FIRST_ABYSS_FRAGMENT_ID, -1);
-				st.giveItems(MARK_OF_WATCHMAN_ID, 1);
-				st.set("step", "12");
-				st.playSound(SOUND_MIDDLE);
-			}
-			else if (step == 11)
-			{
-				htmltext = "30498-02.htm";
-			}
-			else if (step == 12)
-			{
-				htmltext = "30498-03.htm";
-			}
-		}
-		else if ((npcId == HELTON) && (cond == 2) && (step > 11) && (step < 15))
-		{
-			if ((st.getQuestItemsCount(MUSFEL_FANG_ID) < 1) && (st.getQuestItemsCount(SECOND_ABYSS_FRAGMENT_ID) < 1) && (step == 12))
-			{
-				htmltext = "30678-01.htm";
-			}
-			else if ((st.getQuestItemsCount(MUSFEL_FANG_ID) > 0) && (st.getQuestItemsCount(SECOND_ABYSS_FRAGMENT_ID) > 0))
-			{
-				htmltext = "30678-03.htm";
-				st.takeItems(MUSFEL_FANG_ID, -1);
-				st.takeItems(SECOND_ABYSS_FRAGMENT_ID, -1);
-				st.giveItems(MARK_OF_WATCHMAN_ID, 1);
-				st.set("step", "14");
-				st.playSound(SOUND_MIDDLE);
-			}
-			else if (step == 13)
-			{
-				htmltext = "30678-02.htm";
-			}
-			else if (step == 14)
-			{
-				htmltext = "30678-03.htm";
-			}
-		}
-		else if ((npcId == GILMORE) && (step < 17))
-		{
-			if ((st.getQuestItemsCount(HERALD_OF_SLAYER_ID) > 0) && (cond == 3))
-			{
-				htmltext = "30754-01.htm";
-			}
-			else if (cond == 4)
-			{
-				htmltext = "30754-02.htm";
-			}
-		}
-		else if ((npcId == THEODRIC) && (cond == 4) && (step == 16))
-		{
-			if (st.getQuestItemsCount(THIRD_ABYSS_FRAGMENT_ID) < 1)
-			{
-				htmltext = "30755-02.htm";
-			}
-			else
-			{
-				htmltext = "30755-01.htm";
-				st.takeItems(THIRD_ABYSS_FRAGMENT_ID, -1);
-				st.unset("step");
-				st.unset("cond");
-				st.unset("guard");
-				st.exitCurrentQuest(true);
-				st.giveItems(PORTAL_STONE_ID, 1);
-				st.playSound(SOUND_FINISH);
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onAttack(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		int step = st.getInt("step");
-		
-		for (int[] element : SPAWNLIST)
-		{
-			if ((npcId == element[1]) && (step == element[0]) && (npc.getCurrentHpPercents() < 50) && (st.getInt("guard") == 0))
-			{
-				for (int j = 0; j < element[3]; j++)
-				{
-					st.addSpawn(element[2]);
-				}
-				
-				st.playSound(SOUND_BEFORE_BATTLE);
-				st.set("guard", "1");
-			}
-		}
-		
-		return null;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		int step = st.getInt("step");
-		
-		for (int[] element : DROPLIST)
-		{
-			if ((npcId == element[1]) && (step == element[0]) && (st.getQuestItemsCount(element[2]) < element[3]) && Rnd.chance(element[4]))
-			{
-				st.giveItems(element[2], element[5]);
-				st.playSound(SOUND_ITEMGET);
-			}
-		}
-		
-		for (int[] element : SPAWNLIST)
-		{
-			if ((step == element[0]) && (npcId == element[1]) && Rnd.chance(50) && (st.getInt("guard") == 0))
-			{
-				for (int j = 0; j < element[3]; j++)
-				{
-					st.addSpawn(element[2]);
-				}
-				
-				st.playSound(SOUND_BEFORE_BATTLE);
-			}
-			
-			if ((step == element[0]) && (npcId == element[1]) && (st.getInt("guard") == 1))
-			{
-				st.set("guard", "0");
-			}
-		}
-		
-		return null;
 	}
 }

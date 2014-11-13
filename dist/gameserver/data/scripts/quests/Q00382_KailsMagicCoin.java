@@ -24,8 +24,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00382_KailsMagicCoin extends Quest implements ScriptFile
 {
-	private static final int ROYAL_MEMBERSHIP = 5898;
+	// Npc
 	private static final int VERGARA = 30687;
+	// Item
+	private static final int ROYAL_MEMBERSHIP = 5898;
+	// Monsters
 	private static final Map<Integer, int[]> MOBS = new HashMap<>();
 	static
 	{
@@ -49,21 +52,6 @@ public class Q00382_KailsMagicCoin extends Quest implements ScriptFile
 		});
 	}
 	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public Q00382_KailsMagicCoin()
 	{
 		super(false);
@@ -76,43 +64,45 @@ public class Q00382_KailsMagicCoin extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("head_blacksmith_vergara_q0382_03.htm"))
+		switch (event)
 		{
-			if ((st.getPlayer().getLevel() >= 55) && (st.getQuestItemsCount(ROYAL_MEMBERSHIP) > 0))
-			{
-				st.setCond(1);
-				st.setState(STARTED);
-				st.playSound(SOUND_ACCEPT);
-			}
-			else
-			{
-				htmltext = "head_blacksmith_vergara_q0382_01.htm";
-				st.exitCurrentQuest(true);
-			}
-		}
-		else if (event.equalsIgnoreCase("list"))
-		{
-			MultiSellHolder.getInstance().SeparateAndSend(382, st.getPlayer(), 0);
-			htmltext = null;
+			case "head_blacksmith_vergara_q0382_03.htm":
+				if ((qs.getPlayer().getLevel() >= 55) && (qs.getQuestItemsCount(ROYAL_MEMBERSHIP) > 0))
+				{
+					qs.setCond(1);
+					qs.setState(STARTED);
+					qs.playSound(SOUND_ACCEPT);
+				}
+				else
+				{
+					htmltext = "head_blacksmith_vergara_q0382_01.htm";
+					qs.exitCurrentQuest(true);
+				}
+				break;
+			
+			case "list":
+				MultiSellHolder.getInstance().SeparateAndSend(382, qs.getPlayer(), 0);
+				htmltext = null;
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
-		int cond = st.getCond();
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int cond = qs.getCond();
 		
-		if ((st.getQuestItemsCount(ROYAL_MEMBERSHIP) == 0) || (st.getPlayer().getLevel() < 55))
+		if ((qs.getQuestItemsCount(ROYAL_MEMBERSHIP) == 0) || (qs.getPlayer().getLevel() < 55))
 		{
 			htmltext = "head_blacksmith_vergara_q0382_01.htm";
-			st.exitCurrentQuest(true);
+			qs.exitCurrentQuest(true);
 		}
 		else if (cond == 0)
 		{
@@ -127,15 +117,31 @@ public class Q00382_KailsMagicCoin extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if ((st.getState() != STARTED) || (st.getQuestItemsCount(ROYAL_MEMBERSHIP) == 0))
+		if ((qs.getState() != STARTED) || (qs.getQuestItemsCount(ROYAL_MEMBERSHIP) == 0))
 		{
 			return null;
 		}
 		
-		int[] droplist = MOBS.get(npc.getId());
-		st.rollAndGive(droplist[Rnd.get(droplist.length)], 1, 10);
+		final int[] droplist = MOBS.get(npc.getId());
+		qs.rollAndGive(droplist[Rnd.get(droplist.length)], 1, 10);
+		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

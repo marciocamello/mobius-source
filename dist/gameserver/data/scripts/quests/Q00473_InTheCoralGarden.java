@@ -20,10 +20,91 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00473_InTheCoralGarden extends Quest implements ScriptFile
 {
-	// npc
+	// Npc
 	public static final int FIOREN = 33044;
-	// mobs
+	// Monster
 	public static final int MICHAEL = 25799;
+	// Item
+	public static final int PROOF = 30387;
+	
+	public Q00473_InTheCoralGarden()
+	{
+		super(true);
+		addStartNpc(FIOREN);
+		addKillId(MICHAEL);
+		addLevelCheck(97, 100);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		switch (event)
+		{
+			case "33044-3.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "33044-6.htm":
+				qs.giveItems(PROOF, 10);
+				qs.unset("cond");
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(this);
+				break;
+		}
+		
+		return event;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		final Player player = qs.getPlayer();
+		final int cond = qs.getCond();
+		
+		switch (qs.getState())
+		{
+			case 1:
+				if (player.getLevel() < 97)
+				{
+					return "33044-lvl.htm";
+				}
+				else if (!qs.isNowAvailable())
+				{
+					return "33044-comp.htm";
+				}
+				else if (player.getLevel() < 97)
+				{
+					return "33044-lvl.htm";
+				}
+				return "33044.htm";
+				
+			case 2:
+				if (cond == 1)
+				{
+					return "33044-4.htm";
+				}
+				else if (cond == 2)
+				{
+					return "33044-5.htm";
+				}
+				break;
+		}
+		
+		return "noquest";
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if (qs.getCond() == 1)
+		{
+			qs.setCond(2);
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -38,95 +119,5 @@ public class Q00473_InTheCoralGarden extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00473_InTheCoralGarden()
-	{
-		super(true);
-		addStartNpc(FIOREN);
-		addKillId(MICHAEL);
-		addLevelCheck(97, 100);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		if (event.equalsIgnoreCase("33044-3.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		if (event.equalsIgnoreCase("33044-6.htm"))
-		{
-			st.giveItems(30387, 10); // hell proof
-			st.unset("cond");
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(this);
-		}
-		
-		return event;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		Player player = st.getPlayer();
-		int npcId = npc.getId();
-		int state = st.getState();
-		int cond = st.getCond();
-		
-		if (npcId == FIOREN)
-		{
-			if (state == 1)
-			{
-				if (player.getLevel() < 97)
-				{
-					return "33044-lvl.htm";
-				}
-				
-				if (!st.isNowAvailable())
-				{
-					return "33044-comp.htm";
-				}
-				
-				if (player.getLevel() < 97)
-				{
-					return "33044-lvl.htm";
-				}
-				
-				return "33044.htm";
-			}
-			
-			if (state == 2)
-			{
-				if (cond == 1)
-				{
-					return "33044-4.htm";
-				}
-				
-				if (cond == 2)
-				{
-					return "33044-5.htm";
-				}
-			}
-		}
-		
-		return "noquest";
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		
-		if ((cond != 1) || (npc == null))
-		{
-			return null;
-		}
-		
-		st.setCond(2);
-		return null;
 	}
 }

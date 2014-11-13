@@ -23,11 +23,13 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00372_LegacyOfInsolence extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int HOLLY = 30839;
 	private static final int WALDERAL = 30844;
 	private static final int DESMOND = 30855;
 	private static final int PATRIN = 30929;
 	private static final int CLAUDIA = 31001;
+	// Monsters
 	private static final int CORRUPT_SAGE = 20817;
 	private static final int ERIN_EDIUNCE = 20821;
 	private static final int HALLATE_INSP = 20825;
@@ -35,10 +37,12 @@ public class Q00372_LegacyOfInsolence extends Quest implements ScriptFile
 	private static final int PLATINUM_PRE = 21069;
 	private static final int MESSENGER_A1 = 21062;
 	private static final int MESSENGER_A2 = 21063;
+	// Items
 	private static final int Ancient_Red_Papyrus = 5966;
 	private static final int Ancient_Blue_Papyrus = 5967;
 	private static final int Ancient_Black_Papyrus = 5968;
 	private static final int Ancient_White_Papyrus = 5969;
+	// Others
 	private static final int[] Revelation_of_the_Seals_Range =
 	{
 		5972,
@@ -92,17 +96,8 @@ public class Q00372_LegacyOfInsolence extends Quest implements ScriptFile
 	{
 		super(true);
 		addStartNpc(WALDERAL);
-		addTalkId(HOLLY);
-		addTalkId(DESMOND);
-		addTalkId(PATRIN);
-		addTalkId(CLAUDIA);
-		addKillId(CORRUPT_SAGE);
-		addKillId(ERIN_EDIUNCE);
-		addKillId(HALLATE_INSP);
-		addKillId(PLATINUM_OVL);
-		addKillId(PLATINUM_PRE);
-		addKillId(MESSENGER_A1);
-		addKillId(MESSENGER_A2);
+		addTalkId(HOLLY, DESMOND, PATRIN, CLAUDIA);
+		addKillId(CORRUPT_SAGE, ERIN_EDIUNCE, HALLATE_INSP, PLATINUM_OVL, PLATINUM_PRE, MESSENGER_A1, MESSENGER_A2);
 		DROPLIST.put(CORRUPT_SAGE, new int[]
 		{
 			Ancient_Red_Papyrus,
@@ -140,118 +135,67 @@ public class Q00372_LegacyOfInsolence extends Quest implements ScriptFile
 		});
 	}
 	
-	private static void giveRecipe(QuestState st, int recipe_id)
-	{
-		st.giveItems(recipe_id, 1);
-	}
-	
-	private static boolean check_and_reward(QuestState st, int[] items_range, int[] reward)
-	{
-		for (int item_id = items_range[0]; item_id <= items_range[1]; item_id++)
-		{
-			if (st.getQuestItemsCount(item_id) < 1)
-			{
-				return false;
-			}
-		}
-		
-		for (int item_id = items_range[0]; item_id <= items_range[1]; item_id++)
-		{
-			st.takeItems(item_id, 1);
-		}
-		
-		if (Rnd.chance(Three_Recipes_Reward_Chance))
-		{
-			for (int reward_item_id : reward)
-			{
-				giveRecipe(st, reward_item_id);
-			}
-			
-			st.playSound(SOUND_JACKPOT);
-		}
-		else if (Rnd.chance(Two_Recipes_Reward_Chance))
-		{
-			int ignore_reward_id = reward[Rnd.get(reward.length)];
-			
-			for (int reward_item_id : reward)
-			{
-				if (reward_item_id != ignore_reward_id)
-				{
-					giveRecipe(st, reward_item_id);
-				}
-			}
-			
-			st.playSound(SOUND_JACKPOT);
-		}
-		else if (Rnd.chance(Adena4k_Reward_Chance))
-		{
-			st.giveItems(ADENA_ID, 4000, false);
-		}
-		else
-		{
-			giveRecipe(st, reward[Rnd.get(reward.length)]);
-		}
-		
-		return true;
-	}
-	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
-		int _state = st.getState();
+		final int _state = qs.getState();
 		
 		if (_state == CREATED)
 		{
-			if (event.equalsIgnoreCase("30844-6.htm"))
+			switch (event)
 			{
-				st.setState(STARTED);
-				st.setCond(1);
-				st.playSound(SOUND_ACCEPT);
-			}
-			else if (event.equalsIgnoreCase("30844-9.htm"))
-			{
-				st.setCond(2);
-			}
-			else if (event.equalsIgnoreCase("30844-7.htm"))
-			{
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(true);
+				case "30844-6.htm":
+					qs.setState(STARTED);
+					qs.setCond(1);
+					qs.playSound(SOUND_ACCEPT);
+					break;
+				
+				case "30844-9.htm":
+					qs.setCond(2);
+					break;
+				
+				case "30844-7.htm":
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(true);
+					break;
 			}
 		}
 		else if (_state == STARTED)
 		{
-			if (event.equalsIgnoreCase("30839-exchange"))
+			switch (event)
 			{
-				htmltext = check_and_reward(st, Imperial_Genealogy_Range, Reward_Dark_Crystal) ? "30839-2.htm" : "30839-3.htm";
-			}
-			else if (event.equalsIgnoreCase("30855-exchange"))
-			{
-				htmltext = check_and_reward(st, Revelation_of_the_Seals_Range, Reward_Majestic) ? "30855-2.htm" : "30855-3.htm";
-			}
-			else if (event.equalsIgnoreCase("30929-exchange"))
-			{
-				htmltext = check_and_reward(st, Ancient_Epic_Chapter_Range, Reward_Tallum) ? "30839-2.htm" : "30839-3.htm";
-			}
-			else if (event.equalsIgnoreCase("31001-exchange"))
-			{
-				htmltext = check_and_reward(st, Revelation_of_the_Seals_Range, Reward_Nightmare) ? "30839-2.htm" : "30839-3.htm";
-			}
-			else if (event.equalsIgnoreCase("30844-DarkCrystal"))
-			{
-				htmltext = check_and_reward(st, Blueprint_Tower_of_Insolence_Range, Reward_Dark_Crystal) ? "30844-11.htm" : "30844-12.htm";
-			}
-			else if (event.equalsIgnoreCase("30844-Tallum"))
-			{
-				htmltext = check_and_reward(st, Blueprint_Tower_of_Insolence_Range, Reward_Tallum) ? "30844-11.htm" : "30844-12.htm";
-			}
-			else if (event.equalsIgnoreCase("30844-Nightmare"))
-			{
-				htmltext = check_and_reward(st, Blueprint_Tower_of_Insolence_Range, Reward_Nightmare) ? "30844-11.htm" : "30844-12.htm";
-			}
-			else if (event.equalsIgnoreCase("30844-Majestic"))
-			{
-				htmltext = check_and_reward(st, Blueprint_Tower_of_Insolence_Range, Reward_Majestic) ? "30844-11.htm" : "30844-12.htm";
+				case "30839-exchange":
+					htmltext = check_and_reward(qs, Imperial_Genealogy_Range, Reward_Dark_Crystal) ? "30839-2.htm" : "30839-3.htm";
+					break;
+				
+				case "30855-exchange":
+					htmltext = check_and_reward(qs, Revelation_of_the_Seals_Range, Reward_Majestic) ? "30855-2.htm" : "30855-3.htm";
+					break;
+				
+				case "30929-exchange":
+					htmltext = check_and_reward(qs, Ancient_Epic_Chapter_Range, Reward_Tallum) ? "30839-2.htm" : "30839-3.htm";
+					break;
+				
+				case "31001-exchange":
+					htmltext = check_and_reward(qs, Revelation_of_the_Seals_Range, Reward_Nightmare) ? "30839-2.htm" : "30839-3.htm";
+					break;
+				
+				case "30844-DarkCrystal":
+					htmltext = check_and_reward(qs, Blueprint_Tower_of_Insolence_Range, Reward_Dark_Crystal) ? "30844-11.htm" : "30844-12.htm";
+					break;
+				
+				case "30844-Tallum":
+					htmltext = check_and_reward(qs, Blueprint_Tower_of_Insolence_Range, Reward_Tallum) ? "30844-11.htm" : "30844-12.htm";
+					break;
+				
+				case "30844-Nightmare":
+					htmltext = check_and_reward(qs, Blueprint_Tower_of_Insolence_Range, Reward_Nightmare) ? "30844-11.htm" : "30844-12.htm";
+					break;
+				
+				case "30844-Majestic":
+					htmltext = check_and_reward(qs, Blueprint_Tower_of_Insolence_Range, Reward_Majestic) ? "30844-11.htm" : "30844-12.htm";
+					break;
 			}
 		}
 		
@@ -259,11 +203,11 @@ public class Q00372_LegacyOfInsolence extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
-		int _state = st.getState();
-		int npcId = npc.getId();
+		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		final int npcId = npc.getId();
+		final int _state = qs.getState();
 		
 		if (_state == CREATED)
 		{
@@ -271,15 +215,14 @@ public class Q00372_LegacyOfInsolence extends Quest implements ScriptFile
 			{
 				return htmltext;
 			}
-			
-			if (st.getPlayer().getLevel() >= 59)
+			else if (qs.getPlayer().getLevel() >= 59)
 			{
 				htmltext = "30844-4.htm";
 			}
 			else
 			{
 				htmltext = "30844-5.htm";
-				st.exitCurrentQuest(true);
+				qs.exitCurrentQuest(true);
 			}
 		}
 		else if (_state == STARTED)
@@ -298,7 +241,7 @@ public class Q00372_LegacyOfInsolence extends Quest implements ScriptFile
 			return null;
 		}
 		
-		int[] drop = DROPLIST.get(npc.getId());
+		final int[] drop = DROPLIST.get(npc.getId());
 		
 		if (drop == null)
 		{
@@ -307,6 +250,56 @@ public class Q00372_LegacyOfInsolence extends Quest implements ScriptFile
 		
 		qs.rollAndGive(drop[0], 1, drop[1]);
 		return null;
+	}
+	
+	private static boolean check_and_reward(QuestState qs, int[] items_range, int[] reward)
+	{
+		for (int item_id = items_range[0]; item_id <= items_range[1]; item_id++)
+		{
+			if (qs.getQuestItemsCount(item_id) < 1)
+			{
+				return false;
+			}
+		}
+		
+		for (int item_id = items_range[0]; item_id <= items_range[1]; item_id++)
+		{
+			qs.takeItems(item_id, 1);
+		}
+		
+		if (Rnd.chance(Three_Recipes_Reward_Chance))
+		{
+			for (int reward_item_id : reward)
+			{
+				qs.giveItems(reward_item_id, 1);
+			}
+			
+			qs.playSound(SOUND_JACKPOT);
+		}
+		else if (Rnd.chance(Two_Recipes_Reward_Chance))
+		{
+			int ignore_reward_id = reward[Rnd.get(reward.length)];
+			
+			for (int reward_item_id : reward)
+			{
+				if (reward_item_id != ignore_reward_id)
+				{
+					qs.giveItems(reward_item_id, 1);
+				}
+			}
+			
+			qs.playSound(SOUND_JACKPOT);
+		}
+		else if (Rnd.chance(Adena4k_Reward_Chance))
+		{
+			qs.giveItems(ADENA_ID, 4000, false);
+		}
+		else
+		{
+			qs.giveItems(reward[Rnd.get(reward.length)], 1);
+		}
+		
+		return true;
 	}
 	
 	@Override
