@@ -204,8 +204,7 @@ public class CharInfo extends L2GameServerPacket
 			writeC(0);
 			writeC(0);
 			writeH(0);
-			// writeS(_activeChar.getTitle());
-			writeS("");
+			writeS(_activeChar.getTitle());
 			if ((template.getLHandId() > 0) || (template.getRHandId() > 0) || (template.getChestId() > 0))
 			{
 				writeH(68);
@@ -279,11 +278,6 @@ public class CharInfo extends L2GameServerPacket
 			writeH(0x00); // TODO: Second Effect 2
 			
 			writeC(_activeChar.getTalismanCount());
-			
-			// for (int slot : PAPERDOLL_ORDER)
-			// {
-			// writeD(_activeChar.getInventory().getPaperdollItemId(slot));
-			// }
 			
 			writeD(0); // Visible Weapon
 			writeD(0); // Visible Shield [Sigil]

@@ -111,7 +111,7 @@ public class UserInfo extends L2GameServerPacket
 	private final int _uiv2;
 	private final int _uiv3;
 	private final int _structType;
-	private final int _builderLvl;
+	private final int _canUseAdminCmd;
 	private final int _weaponEnchantGlow;
 	private final int _armorEnchantGlow;
 	private final int _showHairAccessory;
@@ -196,7 +196,7 @@ public class UserInfo extends L2GameServerPacket
 		_uiv2 = uiv2;
 		_uiv3 = uiv3;
 		_structType = 23;
-		_builderLvl = player.isGM() ? 1 : 0; // fix for using //admin command
+		_canUseAdminCmd = player.isGM() ? 1 : 0; // fix for using //admin command
 		
 		if (player.getTransformationName() != null)
 		{
@@ -431,7 +431,7 @@ public class UserInfo extends L2GameServerPacket
 			writeH(_appearanceBlockSize); // blockSize
 			writeH(_name.length() + 1);
 			writeS(_name);
-			writeC(_builderLvl);
+			writeC(_canUseAdminCmd);
 			writeC(_race);
 			writeC(_sex);
 			writeD(_baseClassId);
@@ -670,7 +670,7 @@ public class UserInfo extends L2GameServerPacket
 		if ((_uiv1 & CharacterMasksUI1.APPEARANCE) == CharacterMasksUI1.APPEARANCE)
 		{
 			_appearanceBlockSize = (_name.length() * 2) + 14 + 2 + _blockSize;
-			_fullBlockSize += _appearanceBlockSize;
+			_fullBlockSize += _appearanceBlockSize - 2;
 		}
 		
 		if ((_uiv1 & CharacterMasksUI1.BASE_STATS) == CharacterMasksUI1.BASE_STATS)
@@ -754,7 +754,7 @@ public class UserInfo extends L2GameServerPacket
 		if ((_uiv2 & CharacterMasksUI2.PLEDGE_INFO) == CharacterMasksUI2.PLEDGE_INFO)
 		{
 			_pledgeInfoBlockSize = (_clanName.length() * 2) + 30 + 2 + _blockSize;
-			_fullBlockSize += _pledgeInfoBlockSize;
+			_fullBlockSize += _pledgeInfoBlockSize - 2;
 		}
 		
 		if ((_uiv3 & CharacterMasksUI3.STATS) == CharacterMasksUI3.STATS)
