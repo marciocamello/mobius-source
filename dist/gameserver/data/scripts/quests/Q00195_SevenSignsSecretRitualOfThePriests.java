@@ -510,11 +510,11 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest implements 
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
 		if (qs.isCompleted())
 		{
 			return "completed";
 		}
+		String htmltext = "noquest";
 		final int npcId = npc.getId();
 		final int cond = qs.getCond();
 		final Player player = qs.getPlayer();
