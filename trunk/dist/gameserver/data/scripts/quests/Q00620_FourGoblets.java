@@ -23,21 +23,6 @@ import bosses.FourSepulchersManager;
 
 public class Q00620_FourGoblets extends Quest implements ScriptFile
 {
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	private static final int NAMELESS_SPIRIT = 31453;
 	private static final int GHOST_OF_WIGOTH_1 = 31452;
 	private static final int GHOST_OF_WIGOTH_2 = 31454;
@@ -86,71 +71,70 @@ public class Q00620_FourGoblets extends Quest implements ScriptFile
 		}
 	}
 	
-	private static String onOpenBoxes(QuestState st, String count)
+	private static String onOpenBoxes(QuestState qs, String count)
 	{
 		try
 		{
-			return new OpenSealedBox(st, Integer.parseInt(count)).apply();
+			return new OpenSealedBox(qs, Integer.parseInt(count)).apply();
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
-			return "Dont try to cheat with me!";
+			return "Don't try to cheat with me!";
 		}
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		Player player = st.getPlayer();
-		int cond = st.getCond();
+		final Player player = qs.getPlayer();
+		final int cond = qs.getCond();
 		
-		if (event.equalsIgnoreCase("Enter"))
+		if (event.equals("Enter"))
 		{
 			FourSepulchersManager.tryEntry(npc, player);
 			return null;
 		}
-		
-		if (event.equalsIgnoreCase("accept"))
+		else if (event.equals("accept"))
 		{
 			if (cond == 0)
 			{
-				if (st.getPlayer().getLevel() >= 74)
+				if (qs.getPlayer().getLevel() >= 74)
 				{
-					st.setState(STARTED);
-					st.playSound(SOUND_ACCEPT);
-					st.setCond(1);
+					qs.setState(STARTED);
+					qs.playSound(SOUND_ACCEPT);
+					qs.setCond(1);
 					return "31453-13.htm";
 				}
 				
-				st.exitCurrentQuest(true);
+				qs.exitCurrentQuest(true);
 				return "31453-12.htm";
 			}
 		}
 		else if (event.startsWith("openBoxes "))
 		{
-			return onOpenBoxes(st, event.replace("openBoxes ", "").trim());
+			return onOpenBoxes(qs, event.replace("openBoxes ", "").trim());
 		}
-		else if (event.equalsIgnoreCase("12"))
+		else if (event.equals("12"))
 		{
-			if (!st.checkQuestItemsCount(GOBLETS))
+			if (!qs.checkQuestItemsCount(GOBLETS))
 			{
 				return "31453-14.htm";
 			}
 			
-			st.takeAllItems(GOBLETS);
-			st.giveItems(ANTIQUE_BROOCH, 1);
-			st.setCond(2);
-			st.playSound(SOUND_FINISH);
+			qs.takeAllItems(GOBLETS);
+			qs.giveItems(ANTIQUE_BROOCH, 1);
+			qs.setCond(2);
+			qs.playSound(SOUND_FINISH);
 			return "31453-16.htm";
 		}
-		else if (event.equalsIgnoreCase("13"))
+		else if (event.equals("13"))
 		{
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(true);
+			qs.playSound(SOUND_FINISH);
+			qs.exitCurrentQuest(true);
 			return "31453-18.htm";
 		}
-		else if (event.equalsIgnoreCase("14"))
+		else if (event.equals("14"))
 		{
 			if (cond == 2)
 			{
@@ -159,80 +143,80 @@ public class Q00620_FourGoblets extends Quest implements ScriptFile
 			
 			return "31453-13.htm";
 		}
-		else if (event.equalsIgnoreCase("15"))
+		else if (event.equals("15"))
 		{
-			if (st.getQuestItemsCount(ANTIQUE_BROOCH) >= 1)
+			if (qs.getQuestItemsCount(ANTIQUE_BROOCH) >= 1)
 			{
-				st.getPlayer().teleToLocation(178298, -84574, -7216);
+				qs.getPlayer().teleToLocation(178298, -84574, -7216);
 				return null;
 			}
 			
-			if (st.getQuestItemsCount(GRAVE_PASS) >= 1)
+			if (qs.getQuestItemsCount(GRAVE_PASS) >= 1)
 			{
-				st.takeItems(GRAVE_PASS, 1);
-				st.getPlayer().teleToLocation(178298, -84574, -7216);
+				qs.takeItems(GRAVE_PASS, 1);
+				qs.getPlayer().teleToLocation(178298, -84574, -7216);
 				return null;
 			}
 			
 			return "" + str(npc.getId()) + "-0.htm";
 		}
-		else if (event.equalsIgnoreCase("16"))
+		else if (event.equals("16"))
 		{
-			if (st.getQuestItemsCount(ANTIQUE_BROOCH) >= 1)
+			if (qs.getQuestItemsCount(ANTIQUE_BROOCH) >= 1)
 			{
-				st.getPlayer().teleToLocation(186942, -75602, -2834);
+				qs.getPlayer().teleToLocation(186942, -75602, -2834);
 				return null;
 			}
 			
-			if (st.getQuestItemsCount(GRAVE_PASS) >= 1)
+			if (qs.getQuestItemsCount(GRAVE_PASS) >= 1)
 			{
-				st.takeItems(GRAVE_PASS, 1);
-				st.getPlayer().teleToLocation(186942, -75602, -2834);
+				qs.takeItems(GRAVE_PASS, 1);
+				qs.getPlayer().teleToLocation(186942, -75602, -2834);
 				return null;
 			}
 			
 			return "" + str(npc.getId()) + "-0.htm";
 		}
-		else if (event.equalsIgnoreCase("17"))
+		else if (event.equals("17"))
 		{
-			if (st.getQuestItemsCount(ANTIQUE_BROOCH) >= 1)
+			if (qs.getQuestItemsCount(ANTIQUE_BROOCH) >= 1)
 			{
-				st.getPlayer().teleToLocation(169590, -90218, -2914);
+				qs.getPlayer().teleToLocation(169590, -90218, -2914);
 			}
 			else
 			{
-				st.takeItems(GRAVE_PASS, 1);
-				st.getPlayer().teleToLocation(169590, -90218, -2914);
+				qs.takeItems(GRAVE_PASS, 1);
+				qs.getPlayer().teleToLocation(169590, -90218, -2914);
 			}
 			
 			return "31452-6.htm";
 		}
-		else if (event.equalsIgnoreCase("18"))
+		else if (event.equals("18"))
 		{
-			if (st.getSumQuestItemsCount(GOBLETS) < 3)
+			if (qs.getSumQuestItemsCount(GOBLETS) < 3)
 			{
 				return "31452-3.htm";
 			}
 			
-			if (st.getSumQuestItemsCount(GOBLETS) == 3)
+			if (qs.getSumQuestItemsCount(GOBLETS) == 3)
 			{
 				return "31452-4.htm";
 			}
 			
-			if (st.getSumQuestItemsCount(GOBLETS) >= 4)
+			if (qs.getSumQuestItemsCount(GOBLETS) >= 4)
 			{
 				return "31452-5.htm";
 			}
 		}
-		else if (event.equalsIgnoreCase("19"))
+		else if (event.equals("19"))
 		{
-			return new OpenSealedBox(st, 1).apply();
+			return new OpenSealedBox(qs, 1).apply();
 		}
 		else if (event.startsWith("19 "))
 		{
-			return onOpenBoxes(st, event.replaceFirst("19 ", ""));
+			return onOpenBoxes(qs, event.replaceFirst("19 ", ""));
 		}
-		else if (event.equalsIgnoreCase("11"))
+		else if (event.equals("11"))
 		{
 			return "<html><body><a action=\"bypass -h Quest Q00620_FourGoblets 19\">\"Please open a box.\"</a><br><a action=\"bypass -h Quest Q00620_FourGoblets 19 5\">\"Please open 5 boxes.\"</a><br><a action=\"bypass -h Quest Q00620_FourGoblets 19 10\">\"Please open 10 boxes.\"</a><br><a action=\"bypass -h Quest Q00620_FourGoblets 19 50\">\"Please open 50 boxes.\"</a><br></body></html>";
 		}
@@ -251,8 +235,8 @@ public class Q00620_FourGoblets extends Quest implements ScriptFile
 			
 			if (Util.contains(RCP_REWARDS, id))
 			{
-				st.takeItems(RELIC, 1000);
-				st.giveItems(id, 1);
+				qs.takeItems(RELIC, 1000);
+				qs.giveItems(id, 1);
 				return "31454-17.htm";
 			}
 		}
@@ -261,162 +245,179 @@ public class Q00620_FourGoblets extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int id = st.getState();
-		int cond = st.getCond();
+		final int npcId = npc.getId();
+		final int id = qs.getState();
+		final int cond = qs.getCond();
 		
 		if (id == CREATED)
 		{
-			st.setCond(0);
+			qs.setCond(0);
 		}
 		
-		if (npcId == NAMELESS_SPIRIT)
+		switch (npcId)
 		{
-			if (cond == 0)
-			{
-				if (st.getPlayer().getLevel() >= 74)
+			case NAMELESS_SPIRIT:
+				if (cond == 0)
 				{
-					htmltext = "31453-1.htm";
-				}
-				else
-				{
-					htmltext = "31453-12.htm";
-					st.exitCurrentQuest(true);
-				}
-			}
-			else if (cond == 1)
-			{
-				if (st.checkQuestItemsCount(GOBLETS))
-				{
-					htmltext = "31453-15.htm";
-				}
-				else
-				{
-					htmltext = "31453-14.htm";
-				}
-			}
-			else if (cond == 2)
-			{
-				htmltext = "31453-17.htm";
-			}
-		}
-		else if (npcId == GHOST_OF_WIGOTH_1)
-		{
-			if (cond == 2)
-			{
-				htmltext = "31452-2.htm";
-			}
-			else if (cond == 1)
-			{
-				if (st.getSumQuestItemsCount(GOBLETS) == 1)
-				{
-					htmltext = "31452-1.htm";
-				}
-				else if (st.getSumQuestItemsCount(GOBLETS) > 1)
-				{
-					htmltext = "31452-2.htm";
-				}
-			}
-		}
-		else if (npcId == GHOST_OF_WIGOTH_2)
-		{
-			if (st.getQuestItemsCount(RELIC) >= 1000)
-			{
-				if (st.getQuestItemsCount(Sealed_Box) >= 1)
-				{
-					if (st.checkQuestItemsCount(GOBLETS))
+					if (qs.getPlayer().getLevel() >= 74)
 					{
-						htmltext = "31454-4.htm";
-					}
-					else if (st.checkQuestItemsCount(GOBLETS))
-					{
-						htmltext = "31454-8.htm";
+						htmltext = "31453-1.htm";
 					}
 					else
 					{
-						htmltext = "31454-12.htm";
+						htmltext = "31453-12.htm";
+						qs.exitCurrentQuest(true);
 					}
 				}
-				else if (st.checkQuestItemsCount(GOBLETS))
+				else if (cond == 1)
 				{
-					htmltext = "31454-3.htm";
+					if (qs.checkQuestItemsCount(GOBLETS))
+					{
+						htmltext = "31453-15.htm";
+					}
+					else
+					{
+						htmltext = "31453-14.htm";
+					}
 				}
-				else if (st.getSumQuestItemsCount(GOBLETS) > 1)
+				else if (cond == 2)
 				{
-					htmltext = "31454-7.htm";
+					htmltext = "31453-17.htm";
+				}
+				break;
+			
+			case GHOST_OF_WIGOTH_1:
+				if (cond == 2)
+				{
+					htmltext = "31452-2.htm";
+				}
+				else if (cond == 1)
+				{
+					if (qs.getSumQuestItemsCount(GOBLETS) == 1)
+					{
+						htmltext = "31452-1.htm";
+					}
+					else if (qs.getSumQuestItemsCount(GOBLETS) > 1)
+					{
+						htmltext = "31452-2.htm";
+					}
+				}
+				break;
+			
+			case GHOST_OF_WIGOTH_2:
+				if (qs.getQuestItemsCount(RELIC) >= 1000)
+				{
+					if (qs.getQuestItemsCount(Sealed_Box) >= 1)
+					{
+						if (qs.checkQuestItemsCount(GOBLETS))
+						{
+							htmltext = "31454-4.htm";
+						}
+						else if (qs.checkQuestItemsCount(GOBLETS))
+						{
+							htmltext = "31454-8.htm";
+						}
+						else
+						{
+							htmltext = "31454-12.htm";
+						}
+					}
+					else if (qs.checkQuestItemsCount(GOBLETS))
+					{
+						htmltext = "31454-3.htm";
+					}
+					else if (qs.getSumQuestItemsCount(GOBLETS) > 1)
+					{
+						htmltext = "31454-7.htm";
+					}
+					else
+					{
+						htmltext = "31454-11.htm";
+					}
+				}
+				else if (qs.getQuestItemsCount(Sealed_Box) >= 1)
+				{
+					if (qs.checkQuestItemsCount(GOBLETS))
+					{
+						htmltext = "31454-2.htm";
+					}
+					else if (qs.getSumQuestItemsCount(GOBLETS) > 1)
+					{
+						htmltext = "31454-6.htm";
+					}
+					else
+					{
+						htmltext = "31454-10.htm";
+					}
+				}
+				else if (qs.checkQuestItemsCount(GOBLETS))
+				{
+					htmltext = "31454-1.htm";
+				}
+				else if (qs.getSumQuestItemsCount(GOBLETS) > 1)
+				{
+					htmltext = "31454-5.htm";
 				}
 				else
 				{
-					htmltext = "31454-11.htm";
+					htmltext = "31454-9.htm";
 				}
-			}
-			else if (st.getQuestItemsCount(Sealed_Box) >= 1)
-			{
-				if (st.checkQuestItemsCount(GOBLETS))
-				{
-					htmltext = "31454-2.htm";
-				}
-				else if (st.getSumQuestItemsCount(GOBLETS) > 1)
-				{
-					htmltext = "31454-6.htm";
-				}
-				else
-				{
-					htmltext = "31454-10.htm";
-				}
-			}
-			else if (st.checkQuestItemsCount(GOBLETS))
-			{
-				htmltext = "31454-1.htm";
-			}
-			else if (st.getSumQuestItemsCount(GOBLETS) > 1)
-			{
-				htmltext = "31454-5.htm";
-			}
-			else
-			{
-				htmltext = "31454-9.htm";
-			}
-		}
-		else if (npcId == CONQ_SM)
-		{
-			htmltext = "31921-E.htm";
-		}
-		else if (npcId == EMPER_SM)
-		{
-			htmltext = "31922-E.htm";
-		}
-		else if (npcId == SAGES_SM)
-		{
-			htmltext = "31923-E.htm";
-		}
-		else if (npcId == JUDGE_SM)
-		{
-			htmltext = "31924-E.htm";
-		}
-		else if (npcId == GHOST_CHAMBERLAIN_1)
-		{
-			htmltext = "31919-1.htm";
+				break;
+			
+			case CONQ_SM:
+				htmltext = "31921-E.htm";
+				break;
+			
+			case EMPER_SM:
+				htmltext = "31922-E.htm";
+				break;
+			
+			case SAGES_SM:
+				htmltext = "31923-E.htm";
+				break;
+			
+			case JUDGE_SM:
+				htmltext = "31924-E.htm";
+				break;
+			
+			case GHOST_CHAMBERLAIN_1:
+				htmltext = "31919-1.htm";
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
+		final int npcId = npc.getId();
+		final int cond = qs.getCond();
 		
 		if (((cond == 1) || (cond == 2)) && (npcId >= 18120) && (npcId <= 18256) && Rnd.chance(30))
 		{
-			st.giveItems(Sealed_Box, 1);
-			st.playSound(SOUND_ITEMGET);
+			qs.giveItems(Sealed_Box, 1);
+			qs.playSound(SOUND_ITEMGET);
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

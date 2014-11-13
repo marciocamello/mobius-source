@@ -138,6 +138,112 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest implements ScriptFile
 		}
 	};
 	
+	public Q00631_DeliciousTopChoiceMeat()
+	{
+		super(false);
+		addStartNpc(TUNATUN);
+		addTalkId(TUNATUN);
+		addQuestItem(PRIME_MEAT);
+		
+		for (int i : MOB_LIST)
+		{
+			addKillId(i);
+		}
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "beast_herder_tunatun_q0631_0104.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "beast_herder_tunatun_q0631_0201.htm":
+				if (qs.getQuestItemsCount(PRIME_MEAT) >= 120)
+				{
+					qs.takeItems(PRIME_MEAT, -1);
+					int[] reward = REWARDS[Rnd.get(0, REWARDS.length - 1)];
+					int count = Rnd.get(reward[1], reward[2]);
+					qs.giveItems(reward[0], Math.round(count * qs.getRateQuestsReward()));
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(true);
+				}
+				else
+				{
+					htmltext = "beast_herder_tunatun_q0631_0202.htm";
+					qs.setCond(1);
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		
+		if (cond < 1)
+		{
+			if (qs.getPlayer().getLevel() < 82)
+			{
+				htmltext = "beast_herder_tunatun_q0631_0103.htm";
+				qs.exitCurrentQuest(true);
+			}
+			else
+			{
+				htmltext = "beast_herder_tunatun_q0631_0101.htm";
+			}
+		}
+		else if (cond == 1)
+		{
+			htmltext = "beast_herder_tunatun_q0631_0106.htm";
+		}
+		else if (cond == 2)
+		{
+			if (qs.getQuestItemsCount(PRIME_MEAT) < 120)
+			{
+				htmltext = "beast_herder_tunatun_q0631_0106.htm";
+				qs.setCond(1);
+			}
+			else
+			{
+				htmltext = "beast_herder_tunatun_q0631_0105.htm";
+			}
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if ((qs.getCond() == 1) && Rnd.chance(MEAT_DROP_CHANCE))
+		{
+			qs.giveItems(PRIME_MEAT, 1, true);
+			
+			if (qs.getQuestItemsCount(PRIME_MEAT) < 120)
+			{
+				qs.playSound(SOUND_ITEMGET);
+			}
+			else
+			{
+				qs.playSound(SOUND_MIDDLE);
+				qs.setCond(2);
+			}
+		}
+		
+		return null;
+	}
+	
 	@Override
 	public void onLoad()
 	{
@@ -151,110 +257,5 @@ public class Q00631_DeliciousTopChoiceMeat extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00631_DeliciousTopChoiceMeat()
-	{
-		super(false);
-		addStartNpc(TUNATUN);
-		addTalkId(TUNATUN);
-		
-		for (int i : MOB_LIST)
-		{
-			addKillId(i);
-		}
-		
-		addQuestItem(PRIME_MEAT);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("beast_herder_tunatun_q0631_0104.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("beast_herder_tunatun_q0631_0201.htm"))
-		{
-			if (st.getQuestItemsCount(PRIME_MEAT) >= 120)
-			{
-				st.takeItems(PRIME_MEAT, -1);
-				int[] reward = REWARDS[Rnd.get(0, REWARDS.length - 1)];
-				int count = Rnd.get(reward[1], reward[2]);
-				st.giveItems(reward[0], Math.round(count * st.getRateQuestsReward()));
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(true);
-			}
-			else
-			{
-				htmltext = "beast_herder_tunatun_q0631_0202.htm";
-				st.setCond(1);
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int cond = st.getCond();
-		
-		if (cond < 1)
-		{
-			if (st.getPlayer().getLevel() < 82)
-			{
-				htmltext = "beast_herder_tunatun_q0631_0103.htm";
-				st.exitCurrentQuest(true);
-			}
-			else
-			{
-				htmltext = "beast_herder_tunatun_q0631_0101.htm";
-			}
-		}
-		else if (cond == 1)
-		{
-			htmltext = "beast_herder_tunatun_q0631_0106.htm";
-		}
-		else if (cond == 2)
-		{
-			if (st.getQuestItemsCount(PRIME_MEAT) < 120)
-			{
-				htmltext = "beast_herder_tunatun_q0631_0106.htm";
-				st.setCond(1);
-			}
-			else
-			{
-				htmltext = "beast_herder_tunatun_q0631_0105.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		if ((st.getCond() == 1) && Rnd.chance(MEAT_DROP_CHANCE))
-		{
-			st.giveItems(PRIME_MEAT, 1, true);
-			
-			if (st.getQuestItemsCount(PRIME_MEAT) < 120)
-			{
-				st.playSound(SOUND_ITEMGET);
-			}
-			else
-			{
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(2);
-			}
-		}
-		
-		return null;
 	}
 }

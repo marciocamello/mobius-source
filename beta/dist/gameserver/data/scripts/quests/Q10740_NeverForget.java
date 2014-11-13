@@ -74,13 +74,13 @@ public class Q10740_NeverForget extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		final int cond = qs.getCond();
-		final int npcId = npc.getId();
-		String htmltext = "noquest";
 		if (qs.isCompleted())
 		{
 			return "completed";
 		}
+		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
 		
 		switch (npcId)
 		{

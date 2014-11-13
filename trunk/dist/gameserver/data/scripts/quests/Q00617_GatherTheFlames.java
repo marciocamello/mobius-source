@@ -124,6 +124,122 @@ public class Q00617_GatherTheFlames extends Quest implements ScriptFile
 		6899
 	};
 	
+	public Q00617_GatherTheFlames()
+	{
+		super(true);
+		addStartNpc(VULCAN, HILDA);
+		
+		for (int[] element : DROPLIST)
+		{
+			addKillId(element[0]);
+		}
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "warsmith_vulcan_q0617_03.htm":
+				if (qs.getPlayer().getLevel() < 74)
+				{
+					return "warsmith_vulcan_q0617_02.htm";
+				}
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				qs.setCond(1);
+				break;
+			
+			case "blacksmith_hilda_q0617_03.htm":
+				if (qs.getPlayer().getLevel() < 74)
+				{
+					return "blacksmith_hilda_q0617_02.htm";
+				}
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				qs.setCond(1);
+				break;
+			
+			case "warsmith_vulcan_q0617_08.htm":
+				qs.playSound(SOUND_FINISH);
+				qs.takeItems(TORCH, -1);
+				qs.exitCurrentQuest(true);
+				break;
+			
+			case "warsmith_vulcan_q0617_07.htm":
+				if (qs.getQuestItemsCount(TORCH) < 1000)
+				{
+					return "warsmith_vulcan_q0617_05.htm";
+				}
+				qs.takeItems(TORCH, 1000);
+				qs.giveItems(Recipes[Rnd.get(Recipes.length)], 1);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int npcId = npc.getId();
+		final int cond = qs.getCond();
+		
+		switch (npcId)
+		{
+			case VULCAN:
+				if (cond == 0)
+				{
+					if (qs.getPlayer().getLevel() < 74)
+					{
+						htmltext = "warsmith_vulcan_q0617_02.htm";
+						qs.exitCurrentQuest(true);
+					}
+					else
+					{
+						htmltext = "warsmith_vulcan_q0617_01.htm";
+					}
+				}
+				else
+				{
+					htmltext = qs.getQuestItemsCount(TORCH) < 1000 ? "warsmith_vulcan_q0617_05.htm" : "warsmith_vulcan_q0617_04.htm";
+				}
+				break;
+			
+			case HILDA:
+				if (cond < 1)
+				{
+					htmltext = qs.getPlayer().getLevel() < 74 ? "blacksmith_hilda_q0617_02.htm" : "blacksmith_hilda_q0617_01.htm";
+				}
+				else
+				{
+					htmltext = "blacksmith_hilda_q0617_04.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		for (int[] element : DROPLIST)
+		{
+			if (npc.getId() == element[0])
+			{
+				qs.rollAndGive(TORCH, 1, element[1]);
+				return null;
+			}
+		}
+		
+		return null;
+	}
+	
 	@Override
 	public void onLoad()
 	{
@@ -137,121 +253,5 @@ public class Q00617_GatherTheFlames extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00617_GatherTheFlames()
-	{
-		super(true);
-		addStartNpc(VULCAN);
-		addStartNpc(HILDA);
-		
-		for (int[] element : DROPLIST)
-		{
-			addKillId(element[0]);
-		}
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("warsmith_vulcan_q0617_03.htm"))
-		{
-			if (st.getPlayer().getLevel() < 74)
-			{
-				return "warsmith_vulcan_q0617_02.htm";
-			}
-			
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-			st.setCond(1);
-		}
-		else if (event.equalsIgnoreCase("blacksmith_hilda_q0617_03.htm"))
-		{
-			if (st.getPlayer().getLevel() < 74)
-			{
-				return "blacksmith_hilda_q0617_02.htm";
-			}
-			
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-			st.setCond(1);
-		}
-		else if (event.equalsIgnoreCase("warsmith_vulcan_q0617_08.htm"))
-		{
-			st.playSound(SOUND_FINISH);
-			st.takeItems(TORCH, -1);
-			st.exitCurrentQuest(true);
-		}
-		else if (event.equalsIgnoreCase("warsmith_vulcan_q0617_07.htm"))
-		{
-			if (st.getQuestItemsCount(TORCH) < 1000)
-			{
-				return "warsmith_vulcan_q0617_05.htm";
-			}
-			
-			st.takeItems(TORCH, 1000);
-			st.giveItems(Recipes[Rnd.get(Recipes.length)], 1);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (npcId == VULCAN)
-		{
-			if (cond == 0)
-			{
-				if (st.getPlayer().getLevel() < 74)
-				{
-					htmltext = "warsmith_vulcan_q0617_02.htm";
-					st.exitCurrentQuest(true);
-				}
-				else
-				{
-					htmltext = "warsmith_vulcan_q0617_01.htm";
-				}
-			}
-			else
-			{
-				htmltext = st.getQuestItemsCount(TORCH) < 1000 ? "warsmith_vulcan_q0617_05.htm" : "warsmith_vulcan_q0617_04.htm";
-			}
-		}
-		else if (npcId == HILDA)
-		{
-			if (cond < 1)
-			{
-				htmltext = st.getPlayer().getLevel() < 74 ? "blacksmith_hilda_q0617_02.htm" : "blacksmith_hilda_q0617_01.htm";
-			}
-			else
-			{
-				htmltext = "blacksmith_hilda_q0617_04.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		for (int[] element : DROPLIST)
-		{
-			if (npc.getId() == element[0])
-			{
-				st.rollAndGive(TORCH, 1, element[1]);
-				return null;
-			}
-		}
-		
-		return null;
 	}
 }

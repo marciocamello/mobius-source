@@ -20,8 +20,107 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00626_ADarkTwilight extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int Hierarch = 31517;
+	// Item
 	private static final int BloodOfSaint = 7169;
+	
+	public Q00626_ADarkTwilight()
+	{
+		super(true);
+		addStartNpc(Hierarch);
+		addQuestItem(BloodOfSaint);
+		
+		for (int npcId = 21520; npcId <= 21542; npcId++)
+		{
+			addKillId(npcId);
+		}
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "dark_presbyter_q0626_0104.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "dark_presbyter_q0626_0201.htm":
+				if (qs.getQuestItemsCount(BloodOfSaint) < 300)
+				{
+					htmltext = "dark_presbyter_q0626_0203.htm";
+				}
+				break;
+			
+			case "rew_exp":
+				qs.takeItems(BloodOfSaint, -1);
+				qs.addExpAndSp(162773, 12500);
+				htmltext = "dark_presbyter_q0626_0202.htm";
+				qs.exitCurrentQuest(true);
+				break;
+			
+			case "rew_adena":
+				qs.takeItems(BloodOfSaint, -1);
+				qs.giveItems(ADENA_ID, 100000, true);
+				htmltext = "dark_presbyter_q0626_0202.htm";
+				qs.exitCurrentQuest(true);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		
+		switch (qs.getCond())
+		{
+			case 0:
+				if (qs.getPlayer().getLevel() < 60)
+				{
+					htmltext = "dark_presbyter_q0626_0103.htm";
+					qs.exitCurrentQuest(true);
+				}
+				else
+				{
+					htmltext = "dark_presbyter_q0626_0101.htm";
+				}
+				break;
+			
+			case 1:
+				htmltext = "dark_presbyter_q0626_0106.htm";
+				break;
+			
+			case 2:
+				htmltext = "dark_presbyter_q0626_0105.htm";
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if ((qs.getCond() == 1) && Rnd.chance(70))
+		{
+			qs.giveItems(BloodOfSaint, 1);
+			
+			if (qs.getQuestItemsCount(BloodOfSaint) == 300)
+			{
+				qs.setCond(2);
+			}
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -36,104 +135,5 @@ public class Q00626_ADarkTwilight extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00626_ADarkTwilight()
-	{
-		super(true);
-		addStartNpc(Hierarch);
-		
-		for (int npcId = 21520; npcId <= 21542; npcId++)
-		{
-			addKillId(npcId);
-		}
-		
-		addQuestItem(BloodOfSaint);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("dark_presbyter_q0626_0104.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("dark_presbyter_q0626_0201.htm"))
-		{
-			if (st.getQuestItemsCount(BloodOfSaint) < 300)
-			{
-				htmltext = "dark_presbyter_q0626_0203.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("rew_exp"))
-		{
-			st.takeItems(BloodOfSaint, -1);
-			st.addExpAndSp(162773, 12500);
-			htmltext = "dark_presbyter_q0626_0202.htm";
-			st.exitCurrentQuest(true);
-		}
-		else if (event.equalsIgnoreCase("rew_adena"))
-		{
-			st.takeItems(BloodOfSaint, -1);
-			st.giveItems(ADENA_ID, 100000, true);
-			htmltext = "dark_presbyter_q0626_0202.htm";
-			st.exitCurrentQuest(true);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		
-		if (npcId == Hierarch)
-		{
-			if (cond == 0)
-			{
-				if (st.getPlayer().getLevel() < 60)
-				{
-					htmltext = "dark_presbyter_q0626_0103.htm";
-					st.exitCurrentQuest(true);
-				}
-				else
-				{
-					htmltext = "dark_presbyter_q0626_0101.htm";
-				}
-			}
-			else if (cond == 1)
-			{
-				htmltext = "dark_presbyter_q0626_0106.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "dark_presbyter_q0626_0105.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		if ((st.getCond() == 1) && Rnd.chance(70))
-		{
-			st.giveItems(BloodOfSaint, 1);
-			
-			if (st.getQuestItemsCount(BloodOfSaint) == 300)
-			{
-				st.setCond(2);
-			}
-		}
-		
-		return null;
 	}
 }

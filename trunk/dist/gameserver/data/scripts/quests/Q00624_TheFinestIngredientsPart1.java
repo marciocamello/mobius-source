@@ -19,92 +19,77 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00624_TheFinestIngredientsPart1 extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int JEREMY = 31521;
+	// Monsters
 	private static final int HOT_SPRINGS_ATROX = 21321;
 	private static final int HOT_SPRINGS_NEPENTHES = 21319;
 	private static final int HOT_SPRINGS_ATROXSPAWN = 21317;
 	private static final int HOT_SPRINGS_BANDERSNATCHLING = 21314;
+	// Items
 	private static final int SECRET_SPICE = 7204;
 	private static final int TRUNK_OF_NEPENTHES = 7202;
 	private static final int FOOT_OF_BANDERSNATCHLING = 7203;
 	private static final int CRYOLITE = 7080;
 	private static final int SAUCE = 7205;
 	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public Q00624_TheFinestIngredientsPart1()
 	{
 		super(true);
 		addStartNpc(JEREMY);
-		addKillId(HOT_SPRINGS_ATROX);
-		addKillId(HOT_SPRINGS_NEPENTHES);
-		addKillId(HOT_SPRINGS_ATROXSPAWN);
-		addKillId(HOT_SPRINGS_BANDERSNATCHLING);
-		addQuestItem(TRUNK_OF_NEPENTHES);
-		addQuestItem(FOOT_OF_BANDERSNATCHLING);
-		addQuestItem(SECRET_SPICE);
+		addKillId(HOT_SPRINGS_ATROX, HOT_SPRINGS_NEPENTHES, HOT_SPRINGS_ATROXSPAWN, HOT_SPRINGS_BANDERSNATCHLING);
+		addQuestItem(TRUNK_OF_NEPENTHES, FOOT_OF_BANDERSNATCHLING, SECRET_SPICE);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("jeremy_q0624_0104.htm"))
+		switch (event)
 		{
-			if (st.getPlayer().getLevel() >= 73)
-			{
-				st.setState(STARTED);
-				st.setCond(1);
-				st.playSound(SOUND_ACCEPT);
-			}
-			else
-			{
-				htmltext = "jeremy_q0624_0103.htm";
-				st.exitCurrentQuest(true);
-			}
-		}
-		else if (event.equalsIgnoreCase("jeremy_q0624_0201.htm"))
-		{
-			if ((st.getQuestItemsCount(TRUNK_OF_NEPENTHES) == 50) && (st.getQuestItemsCount(FOOT_OF_BANDERSNATCHLING) == 50) && (st.getQuestItemsCount(SECRET_SPICE) == 50))
-			{
-				st.takeItems(TRUNK_OF_NEPENTHES, -1);
-				st.takeItems(FOOT_OF_BANDERSNATCHLING, -1);
-				st.takeItems(SECRET_SPICE, -1);
-				st.playSound(SOUND_FINISH);
-				st.giveItems(SAUCE, 1);
-				st.giveItems(CRYOLITE, 1);
-				htmltext = "jeremy_q0624_0201.htm";
-				st.exitCurrentQuest(true);
-			}
-			else
-			{
-				htmltext = "jeremy_q0624_0202.htm";
-				st.setCond(1);
-			}
+			case "jeremy_q0624_0104.htm":
+				if (qs.getPlayer().getLevel() >= 73)
+				{
+					qs.setState(STARTED);
+					qs.setCond(1);
+					qs.playSound(SOUND_ACCEPT);
+				}
+				else
+				{
+					htmltext = "jeremy_q0624_0103.htm";
+					qs.exitCurrentQuest(true);
+				}
+				break;
+			
+			case "jeremy_q0624_0201.htm":
+				if ((qs.getQuestItemsCount(TRUNK_OF_NEPENTHES) == 50) && (qs.getQuestItemsCount(FOOT_OF_BANDERSNATCHLING) == 50) && (qs.getQuestItemsCount(SECRET_SPICE) == 50))
+				{
+					qs.takeItems(TRUNK_OF_NEPENTHES, -1);
+					qs.takeItems(FOOT_OF_BANDERSNATCHLING, -1);
+					qs.takeItems(SECRET_SPICE, -1);
+					qs.playSound(SOUND_FINISH);
+					qs.giveItems(SAUCE, 1);
+					qs.giveItems(CRYOLITE, 1);
+					htmltext = "jeremy_q0624_0201.htm";
+					qs.exitCurrentQuest(true);
+				}
+				else
+				{
+					htmltext = "jeremy_q0624_0202.htm";
+					qs.setCond(1);
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int cond = st.getCond();
+		final int cond = qs.getCond();
 		
 		if (cond == 0)
 		{
@@ -123,46 +108,73 @@ public class Q00624_TheFinestIngredientsPart1 extends Quest implements ScriptFil
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if (st.getState() != STARTED)
+		if (qs.getState() != STARTED)
 		{
 			return null;
 		}
 		
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		
-		if (st.getCond() == 1)
+		if (qs.getCond() == 1)
 		{
-			if ((npcId == HOT_SPRINGS_NEPENTHES) && (st.getQuestItemsCount(TRUNK_OF_NEPENTHES) < 50))
+			switch (npcId)
 			{
-				st.rollAndGive(TRUNK_OF_NEPENTHES, 1, 1, 50, 100);
-			}
-			else if ((npcId == HOT_SPRINGS_BANDERSNATCHLING) && (st.getQuestItemsCount(FOOT_OF_BANDERSNATCHLING) < 50))
-			{
-				st.rollAndGive(FOOT_OF_BANDERSNATCHLING, 1, 1, 50, 100);
-			}
-			else if (((npcId == HOT_SPRINGS_ATROX) || (npcId == HOT_SPRINGS_ATROXSPAWN)) && (st.getQuestItemsCount(SECRET_SPICE) < 50))
-			{
-				st.rollAndGive(SECRET_SPICE, 1, 1, 50, 100);
+				case HOT_SPRINGS_NEPENTHES:
+					if (qs.getQuestItemsCount(TRUNK_OF_NEPENTHES) < 50)
+					{
+						qs.rollAndGive(TRUNK_OF_NEPENTHES, 1, 1, 50, 100);
+					}
+					break;
+				
+				case HOT_SPRINGS_BANDERSNATCHLING:
+					if (qs.getQuestItemsCount(FOOT_OF_BANDERSNATCHLING) < 50)
+					{
+						qs.rollAndGive(FOOT_OF_BANDERSNATCHLING, 1, 1, 50, 100);
+					}
+					break;
+				
+				case HOT_SPRINGS_ATROX:
+				case HOT_SPRINGS_ATROXSPAWN:
+					if (qs.getQuestItemsCount(SECRET_SPICE) < 50)
+					{
+						qs.rollAndGive(SECRET_SPICE, 1, 1, 50, 100);
+					}
+					break;
 			}
 			
-			onKillCheck(st);
+			onKillCheck(qs);
 		}
 		
 		return null;
 	}
 	
-	private void onKillCheck(QuestState st)
+	private void onKillCheck(QuestState qs)
 	{
-		if ((st.getQuestItemsCount(TRUNK_OF_NEPENTHES) == 50) && (st.getQuestItemsCount(FOOT_OF_BANDERSNATCHLING) == 50) && (st.getQuestItemsCount(SECRET_SPICE) == 50))
+		if ((qs.getQuestItemsCount(TRUNK_OF_NEPENTHES) == 50) && (qs.getQuestItemsCount(FOOT_OF_BANDERSNATCHLING) == 50) && (qs.getQuestItemsCount(SECRET_SPICE) == 50))
 		{
-			st.playSound(SOUND_MIDDLE);
-			st.setCond(3);
+			qs.playSound(SOUND_MIDDLE);
+			qs.setCond(3);
 		}
 		else
 		{
-			st.playSound(SOUND_ITEMGET);
+			qs.playSound(SOUND_ITEMGET);
 		}
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

@@ -19,15 +19,109 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00641_AttackSailren extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int STATUE = 32109;
+	// Monsters
 	private static final int VEL1 = 22196;
 	private static final int VEL2 = 22197;
 	private static final int VEL3 = 22198;
 	private static final int VEL4 = 22218;
 	private static final int VEL5 = 22223;
 	private static final int PTE = 22199;
+	// Items
 	private static final int FRAGMENTS = 8782;
 	private static final int GAZKH = 8784;
+	
+	public Q00641_AttackSailren()
+	{
+		super(true);
+		addStartNpc(STATUE);
+		addKillId(VEL1, VEL2, VEL3, VEL4, VEL5, PTE);
+		addQuestItem(FRAGMENTS);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "statue_of_shilen_q0641_05.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "statue_of_shilen_q0641_08.htm":
+				qs.playSound(SOUND_FINISH);
+				qs.takeItems(FRAGMENTS, -1);
+				qs.giveItems(GAZKH, 1);
+				qs.addExpAndSp(1500000, 1650000);
+				qs.exitCurrentQuest(true);
+				qs.unset("cond");
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		
+		switch (qs.getCond())
+		{
+			case 0:
+				final QuestState state = qs.getPlayer().getQuestState(Q00126_TheNameOfEvilPart2.class);
+				if ((state == null) || !state.isCompleted())
+				{
+					htmltext = "statue_of_shilen_q0641_02.htm";
+				}
+				else if (qs.getPlayer().getLevel() >= 77)
+				{
+					htmltext = "statue_of_shilen_q0641_01.htm";
+				}
+				else
+				{
+					qs.exitCurrentQuest(true);
+				}
+				break;
+			
+			case 1:
+				htmltext = "statue_of_shilen_q0641_05.htm";
+				break;
+			
+			case 2:
+				htmltext = "statue_of_shilen_q0641_07.htm";
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if (qs.getQuestItemsCount(FRAGMENTS) < 30)
+		{
+			qs.giveItems(FRAGMENTS, 1);
+			
+			if (qs.getQuestItemsCount(FRAGMENTS) == 30)
+			{
+				qs.playSound(SOUND_MIDDLE);
+				qs.setCond(2);
+				qs.setState(STARTED);
+			}
+			else
+			{
+				qs.playSound(SOUND_ITEMGET);
+			}
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -42,99 +136,5 @@ public class Q00641_AttackSailren extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00641_AttackSailren()
-	{
-		super(true);
-		addStartNpc(STATUE);
-		addKillId(VEL1);
-		addKillId(VEL2);
-		addKillId(VEL3);
-		addKillId(VEL4);
-		addKillId(VEL5);
-		addKillId(PTE);
-		addQuestItem(FRAGMENTS);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("statue_of_shilen_q0641_05.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("statue_of_shilen_q0641_08.htm"))
-		{
-			st.playSound(SOUND_FINISH);
-			st.takeItems(FRAGMENTS, -1);
-			st.giveItems(GAZKH, 1);
-			st.addExpAndSp(1500000, 1650000);
-			st.exitCurrentQuest(true);
-			st.unset("cond");
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int cond = st.getCond();
-		
-		if (cond == 0)
-		{
-			QuestState qs = st.getPlayer().getQuestState(Q00126_TheNameOfEvilPart2.class);
-			
-			if ((qs == null) || !qs.isCompleted())
-			{
-				htmltext = "statue_of_shilen_q0641_02.htm";
-			}
-			else if (st.getPlayer().getLevel() >= 77)
-			{
-				htmltext = "statue_of_shilen_q0641_01.htm";
-			}
-			else
-			{
-				st.exitCurrentQuest(true);
-			}
-		}
-		else if (cond == 1)
-		{
-			htmltext = "statue_of_shilen_q0641_05.htm";
-		}
-		else if (cond == 2)
-		{
-			htmltext = "statue_of_shilen_q0641_07.htm";
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		if (st.getQuestItemsCount(FRAGMENTS) < 30)
-		{
-			st.giveItems(FRAGMENTS, 1);
-			
-			if (st.getQuestItemsCount(FRAGMENTS) == 30)
-			{
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(2);
-				st.setState(STARTED);
-			}
-			else
-			{
-				st.playSound(SOUND_ITEMGET);
-			}
-		}
-		
-		return null;
 	}
 }
