@@ -2671,7 +2671,2503 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="33978" name="Zephyra" title="Master">
+	<npc id="33951" name="Sivanthe" title="Forest Patrol">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33952" name="Leira" title="Forest Patrol">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33953" name="Milone" title="Forest Patrol">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33954" name="Dolkin" title="Maestro">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33955" name="Liberatto" title="Bard">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33956" name="Miso" title="Bard">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33957" name="Marmie" title="Bard">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33958" name="Tulesir" title="Bard">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33959" name="Mahum's Spirit" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33960" name="Barrier Enforcer" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33961" name="Magic Circle Control Device" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33962" name="Life Energy Repository" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33963" name="Pio" title="Researcher">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33964" name="Captured Tree Spirit" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33965" name="Captured Wind Spirit" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33966" name="Vorbos" title="Smitten">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33967" name="Sylph" title="Wind Spirit">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33968" name="Liberated Wind Spirit" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33969" name="Liberated Tree Spirit" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33970" name="Mercenary Captain" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33971" name="Mercenary" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33972" name="Rakun" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33973" name="Namo" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33974" name="Resed" title="Dimensional Warp Expeditioner">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33975" name="Einster" title="Dimensional Warp Expedition Lead">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33976" name="Chross" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33977" name="Veruti" title="Alchemist">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33978" name="Zephyra" title="Alchemist">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33979" name="Kain van Halter" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33980" name="Mysterious Wizard" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33981" name="Telesha" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33982" name="Tahlia" title="Guard">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33983" name="Lenoa" title="Guard">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33984" name="Nairu" title="Guard">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33985" name="Namee" title="Guard">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33986" name="Tauresia" title="Bard">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33987" name="Mortania" title="Bard">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33988" name="Severin" title="Bard">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33989" name="Remembrance Tower" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33990" name="Hidden Crusher" title="Magic Device">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33991" name="Magic Owl" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33992" name="Narsides" title="Cruma Tower Giant">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33993" name="Kain van Halter" title="Mysterious Man">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33994" name="Suspicious Box" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33995" name="Kiku's Cave" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33996" name="Grail" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33997" name="Athrea's Box" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33998" name="Momet" title="Blacksmith">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="8.0"/>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="basePAtk" value="373"/>
+		<set name="baseMAtk" value="373"/>
+		<set name="basePDef" value="373"/>
+		<set name="baseMDef" value="373"/>
+		<set name="basePAtkSpd" value="272"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseMpMax" value="4228"/>
+		<set name="baseHpMax" value="100"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMageCritRate" value="50"/>
+		<set name="baseMDef" value="87"/>
+		<set name="basePDef" value="130"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Trainer"/>
+		<ai_params>
+			<set name="showName" value="true"/>
+			<set name="show Title" value="true"/>
+		</ai_params>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="20"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="33999" name="Kain van Halter" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="8.0"/>

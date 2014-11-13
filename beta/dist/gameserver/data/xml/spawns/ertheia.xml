@@ -109,4 +109,20 @@
 		<point x="-82200" y="249592" z="-3392" h="49151"/>
 		<npc id="19546"/>
 	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-81776" y="245431" z="-3720" h="44041"/>
+		<npc id="33951"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-81912" y="245544" z="-3734" h="44041"/>
+		<npc id="33989"/>
+	</spawn>
+	<spawn count="5" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-80904" y="244360" z="-3674" h="22517"/>
+		<npc id="23450"/>
+	</spawn>
+	<spawn count="5" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-81080" y="244616" z="-3650" h="0"/>
+		<npc id="23451"/>
+	</spawn>
 </list>
