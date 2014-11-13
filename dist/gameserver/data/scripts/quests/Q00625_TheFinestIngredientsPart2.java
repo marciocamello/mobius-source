@@ -30,9 +30,12 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 
 public class Q00625_TheFinestIngredientsPart2 extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int Jeremy = 31521;
 	private static final int Yetis_Table = 31542;
-	static final int RB_Icicle_Emperor_Bumbalump = 25296;
+	// Monster
+	private static final int RB_Icicle_Emperor_Bumbalump = 25296;
+	// Items
 	private static final int Soy_Sauce_Jar = 7205;
 	private static final int Food_for_Bumbalump = 7209;
 	private static final int Special_Yeti_Meat = 7210;
@@ -49,67 +52,77 @@ public class Q00625_TheFinestIngredientsPart2 extends Quest implements ScriptFil
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		int _state = st.getState();
-		int cond = st.getCond();
+		final int _state = qs.getState();
+		final int cond = qs.getCond();
 		
-		if (event.equalsIgnoreCase("jeremy_q0625_0104.htm") && (_state == CREATED))
+		switch (event)
 		{
-			if (st.getQuestItemsCount(Soy_Sauce_Jar) == 0)
-			{
-				st.exitCurrentQuest(true);
-				return "jeremy_q0625_0102.htm";
-			}
+			case "jeremy_q0625_0104.htm":
+				if (_state == CREATED)
+				{
+					if (qs.getQuestItemsCount(Soy_Sauce_Jar) == 0)
+					{
+						qs.exitCurrentQuest(true);
+						return "jeremy_q0625_0102.htm";
+					}
+					
+					qs.setState(STARTED);
+					qs.setCond(1);
+					qs.takeItems(Soy_Sauce_Jar, 1);
+					qs.giveItems(Food_for_Bumbalump, 1);
+					qs.playSound(SOUND_ACCEPT);
+				}
+				break;
 			
-			st.setState(STARTED);
-			st.setCond(1);
-			st.takeItems(Soy_Sauce_Jar, 1);
-			st.giveItems(Food_for_Bumbalump, 1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("jeremy_q0625_0301.htm") && (_state == STARTED) && (cond == 3))
-		{
-			st.exitCurrentQuest(true);
+			case "jeremy_q0625_0301.htm":
+				if ((_state == STARTED) && (cond == 3))
+				{
+					qs.exitCurrentQuest(true);
+					
+					if (qs.getQuestItemsCount(Special_Yeti_Meat) == 0)
+					{
+						return "jeremy_q0625_0302.htm";
+					}
+					
+					qs.takeItems(Special_Yeti_Meat, 1);
+					qs.giveItems(Rnd.get(Reward_First, Reward_Last), 5, true);
+				}
+				break;
 			
-			if (st.getQuestItemsCount(Special_Yeti_Meat) == 0)
-			{
-				return "jeremy_q0625_0302.htm";
-			}
-			
-			st.takeItems(Special_Yeti_Meat, 1);
-			st.giveItems(Rnd.get(Reward_First, Reward_Last), 5, true);
-		}
-		else if (event.equalsIgnoreCase("yetis_table_q0625_0201.htm") && (_state == STARTED) && (cond == 1))
-		{
-			if ((ServerVariables.getLong(Q00625_TheFinestIngredientsPart2.class.getSimpleName(), 0) + (3 * 60 * 60 * 1000)) > System.currentTimeMillis())
-			{
-				return "yetis_table_q0625_0204.htm";
-			}
-			
-			if (st.getQuestItemsCount(Food_for_Bumbalump) == 0)
-			{
-				return "yetis_table_q0625_0203.htm";
-			}
-			
-			if (BumbalumpSpawned())
-			{
-				return "yetis_table_q0625_0202.htm";
-			}
-			
-			st.takeItems(Food_for_Bumbalump, 1);
-			st.setCond(2);
-			ThreadPoolManager.getInstance().schedule(new BumbalumpSpawner(), 1000);
+			case "yetis_table_q0625_0201.htm":
+				if ((_state == STARTED) && (cond == 1))
+				{
+					if ((ServerVariables.getLong(Q00625_TheFinestIngredientsPart2.class.getSimpleName(), 0) + (3 * 60 * 60 * 1000)) > System.currentTimeMillis())
+					{
+						return "yetis_table_q0625_0204.htm";
+					}
+					else if (qs.getQuestItemsCount(Food_for_Bumbalump) == 0)
+					{
+						return "yetis_table_q0625_0203.htm";
+					}
+					else if (BumbalumpSpawned())
+					{
+						return "yetis_table_q0625_0202.htm";
+					}
+					
+					qs.takeItems(Food_for_Bumbalump, 1);
+					qs.setCond(2);
+					ThreadPoolManager.getInstance().schedule(new BumbalumpSpawner(), 1000);
+				}
+				break;
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int _state = st.getState();
-		int npcId = npc.getId();
+		final int _state = qs.getState();
+		final int npcId = npc.getId();
+		final int cond = qs.getCond();
 		
 		if (_state == CREATED)
 		{
@@ -117,20 +130,18 @@ public class Q00625_TheFinestIngredientsPart2 extends Quest implements ScriptFil
 			{
 				return "noquest";
 			}
-			
-			if (st.getPlayer().getLevel() < 73)
+			else if (qs.getPlayer().getLevel() < 73)
 			{
-				st.exitCurrentQuest(true);
+				qs.exitCurrentQuest(true);
 				return "jeremy_q0625_0103.htm";
 			}
-			
-			if (st.getQuestItemsCount(Soy_Sauce_Jar) == 0)
+			else if (qs.getQuestItemsCount(Soy_Sauce_Jar) == 0)
 			{
-				st.exitCurrentQuest(true);
+				qs.exitCurrentQuest(true);
 				return "jeremy_q0625_0102.htm";
 			}
 			
-			st.setCond(0);
+			qs.setCond(0);
 			return "jeremy_q0625_0101.htm";
 		}
 		
@@ -139,102 +150,68 @@ public class Q00625_TheFinestIngredientsPart2 extends Quest implements ScriptFil
 			return "noquest";
 		}
 		
-		int cond = st.getCond();
-		
-		if (npcId == Jeremy)
+		switch (npcId)
 		{
-			if (cond == 1)
-			{
-				return "jeremy_q0625_0105.htm";
-			}
-			
-			if (cond == 2)
-			{
-				return "jeremy_q0625_0202.htm";
-			}
-			
-			if (cond == 3)
-			{
-				return "jeremy_q0625_0201.htm";
-			}
-		}
-		
-		if (npcId == Yetis_Table)
-		{
-			if ((ServerVariables.getLong(Q00625_TheFinestIngredientsPart2.class.getSimpleName(), 0) + (3 * 60 * 60 * 1000)) > System.currentTimeMillis())
-			{
-				return "yetis_table_q0625_0204.htm";
-			}
-			
-			if (cond == 1)
-			{
-				return "yetis_table_q0625_0101.htm";
-			}
-			
-			if (cond == 2)
-			{
-				if (BumbalumpSpawned())
+			case Jeremy:
+				if (cond == 1)
 				{
-					return "yetis_table_q0625_0202.htm";
+					return "jeremy_q0625_0105.htm";
 				}
-				
-				ThreadPoolManager.getInstance().schedule(new BumbalumpSpawner(), 1000);
-				return "yetis_table_q0625_0201.htm";
-			}
+				else if (cond == 2)
+				{
+					return "jeremy_q0625_0202.htm";
+				}
+				else if (cond == 3)
+				{
+					return "jeremy_q0625_0201.htm";
+				}
+				break;
 			
-			if (cond == 3)
-			{
-				return "yetis_table_q0625_0204.htm";
-			}
+			case Yetis_Table:
+				if ((ServerVariables.getLong(Q00625_TheFinestIngredientsPart2.class.getSimpleName(), 0) + (3 * 60 * 60 * 1000)) > System.currentTimeMillis())
+				{
+					return "yetis_table_q0625_0204.htm";
+				}
+				else if (cond == 1)
+				{
+					return "yetis_table_q0625_0101.htm";
+				}
+				else if (cond == 2)
+				{
+					if (BumbalumpSpawned())
+					{
+						return "yetis_table_q0625_0202.htm";
+					}
+					
+					ThreadPoolManager.getInstance().schedule(new BumbalumpSpawner(), 1000);
+					return "yetis_table_q0625_0201.htm";
+				}
+				else if (cond == 3)
+				{
+					return "yetis_table_q0625_0204.htm";
+				}
+				break;
 		}
 		
 		return "noquest";
 	}
 	
-	private static class DeathListener implements OnDeathListener
-	{
-		public DeathListener()
-		{
-		}
-		
-		@Override
-		public void onDeath(Creature actor, Creature killer)
-		{
-			ServerVariables.set(Q00625_TheFinestIngredientsPart2.class.getSimpleName(), String.valueOf(System.currentTimeMillis()));
-		}
-	}
-	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if ((st.getCond() == 1) || (st.getCond() == 2))
+		if ((qs.getCond() == 1) || (qs.getCond() == 2))
 		{
-			if (st.getQuestItemsCount(Food_for_Bumbalump) > 0)
+			if (qs.getQuestItemsCount(Food_for_Bumbalump) > 0)
 			{
-				st.takeItems(Food_for_Bumbalump, 1);
+				qs.takeItems(Food_for_Bumbalump, 1);
 			}
 			
-			st.giveItems(Special_Yeti_Meat, 1);
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
+			qs.giveItems(Special_Yeti_Meat, 1);
+			qs.setCond(3);
+			qs.playSound(SOUND_MIDDLE);
 		}
 		
 		return null;
-	}
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
 	}
 	
 	static boolean BumbalumpSpawned()
@@ -320,5 +297,33 @@ public class Q00625_TheFinestIngredientsPart2 extends Quest implements ScriptFil
 			
 			_spawn.deleteAll();
 		}
+	}
+	
+	private static class DeathListener implements OnDeathListener
+	{
+		public DeathListener()
+		{
+		}
+		
+		@Override
+		public void onDeath(Creature actor, Creature killer)
+		{
+			ServerVariables.set(Q00625_TheFinestIngredientsPart2.class.getSimpleName(), String.valueOf(System.currentTimeMillis()));
+		}
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }
