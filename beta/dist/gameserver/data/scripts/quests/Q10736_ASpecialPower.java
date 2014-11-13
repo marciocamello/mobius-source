@@ -29,6 +29,9 @@ import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
 
+/**
+ * @author blacksmoke
+ */
 public class Q10736_ASpecialPower extends Quest implements ScriptFile
 {
 	private static final int Katalin = 33943;
@@ -96,7 +99,11 @@ public class Q10736_ASpecialPower extends Quest implements ScriptFile
 	{
 		final int cond = qs.getCond();
 		final int npcId = npc.getId();
-		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		String htmltext = "noquest";
+		if (qs.isCompleted())
+		{
+			return "completed";
+		}
 		
 		switch (npcId)
 		{

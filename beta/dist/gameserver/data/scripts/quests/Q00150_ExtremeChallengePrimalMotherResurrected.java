@@ -56,7 +56,11 @@ public class Q00150_ExtremeChallengePrimalMotherResurrected extends Quest implem
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		String htmltext = "noquest";
+		if (qs.isCompleted())
+		{
+			return "completed";
+		}
 		final int cond = qs.getCond();
 		final Player player = qs.getPlayer();
 		

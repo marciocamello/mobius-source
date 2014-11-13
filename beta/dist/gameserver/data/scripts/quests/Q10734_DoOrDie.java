@@ -137,9 +137,13 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
+		String htmltext = "noquest";
+		if (qs.isCompleted())
+		{
+			return "completed";
+		}
 		final int cond = qs.getCond();
 		final int npcId = npc.getId();
-		String htmltext = qs.isCompleted() ? "completed" : "noquest";
 		boolean e_warrior = qs.getPlayer().getClassId().getId() == 182;
 		boolean e_wizard = qs.getPlayer().getClassId().getId() == 183;
 		

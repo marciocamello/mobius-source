@@ -83,7 +83,11 @@ public class Q00181_DevilsStrikeBackAdventOfBalok extends Quest implements Scrip
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		String htmltext = "noquest";
+		if (qs.isCompleted())
+		{
+			return "completed";
+		}
 		final int cond = qs.getCond();
 		final Player player = qs.getPlayer();
 		

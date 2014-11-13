@@ -66,7 +66,11 @@ public class Q00366_SilverHairedShaman extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		String htmltext = "noquest";
+		if (qs.isCompleted())
+		{
+			return "completed";
+		}
 		int cond = qs.getCond();
 		
 		if (qs.getState() == CREATED)

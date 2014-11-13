@@ -170,8 +170,16 @@
 	</skill>
 	<skill id="9928" levels="1" name="Scroll of Escape: Heine">
 		<set name="icon" val="icon.skill0000"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="20000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="townId" val="17"/>
+		<set name="itemConsumeId" val="37112"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RECALL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9929" levels="1" name="Scroll of Escape: Heine">
@@ -404,8 +412,16 @@
 	</skill>
 	<skill id="9967" levels="1" name="Scroll of Escape: Alligator Island">
 		<set name="icon" val="icon.skill0000"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="magicLevel" val="1"/>
+		<set name="hitTime" val="20000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="townId" val="17"/>
+		<set name="itemConsumeId" val="37025"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="isHandler" val="true"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="RECALL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="9968" levels="1" name="Scroll of Escape: Outlaw Forest">

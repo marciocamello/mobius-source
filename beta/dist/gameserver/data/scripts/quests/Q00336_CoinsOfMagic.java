@@ -393,7 +393,11 @@ public class Q00336_CoinsOfMagic extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		String htmltext = "noquest";
+		if (qs.isCompleted())
+		{
+			return "completed";
+		}
 		final int npcId = npc.getId();
 		final int id = qs.getState();
 		final int grade = qs.getInt("grade");

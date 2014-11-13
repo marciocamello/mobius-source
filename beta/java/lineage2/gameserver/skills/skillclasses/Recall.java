@@ -74,7 +74,7 @@ public class Recall extends Skill
 	{
 		if (getHitTime() == 200)
 		{
-			Player player = activeChar.getPlayer();
+			final Player player = activeChar.getPlayer();
 			
 			if (_clanhall)
 			{
@@ -104,21 +104,19 @@ public class Recall extends Skill
 		
 		if (activeChar.isPlayer())
 		{
-			Player p = (Player) activeChar;
+			final Player player = (Player) activeChar;
 			
-			if (p.getActiveWeaponFlagAttachment() != null)
+			if (player.getActiveWeaponFlagAttachment() != null)
 			{
 				activeChar.sendPacket(SystemMsg.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD);
 				return false;
 			}
-			
-			if (p.isInDuel() || (p.getTeam() != TeamType.NONE))
+			else if (player.isInDuel() || (player.getTeam() != TeamType.NONE))
 			{
-				activeChar.sendMessage(new CustomMessage("common.RecallInDuel", p));
+				activeChar.sendMessage(new CustomMessage("common.RecallInDuel", player));
 				return false;
 			}
-			
-			if (p.isInOlympiadMode())
+			else if (player.isInOlympiadMode())
 			{
 				activeChar.sendPacket(new SystemMessage(SystemMessage.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
 				return false;
@@ -188,64 +186,55 @@ public class Recall extends Skill
 				
 				if (_isItemHandler)
 				{
-					if (_itemConsumeId[0] == 7125)
+					switch (_itemConsumeId[0])
 					{
-						pcTarget.teleToLocation(17144, 170156, -3502, 0);
-						return;
-					}
-					
-					if (_itemConsumeId[0] == 7127)
-					{
-						pcTarget.teleToLocation(105918, 109759, -3207, 0);
-						return;
-					}
-					
-					if (_itemConsumeId[0] == 7130)
-					{
-						pcTarget.teleToLocation(85475, 16087, -3672, 0);
-						return;
-					}
-					
-					if (_itemConsumeId[0] == 9716)
-					{
-						pcTarget.teleToLocation(-120000, 44500, 352, 0);
-						return;
-					}
-					
-					if (_itemConsumeId[0] == 7618)
-					{
-						pcTarget.teleToLocation(149864, -81062, -5618, 0);
-						return;
-					}
-					
-					if (_itemConsumeId[0] == 7619)
-					{
-						pcTarget.teleToLocation(108275, -53785, -2524, 0);
-						return;
-					}
-					
-					if (_itemConsumeId[0] == 34978) // Scroll of Escape: Hot Springs
-					{
-						pcTarget.teleToLocation(155784, -105640, -2778, 0);
-						return;
-					}
-					
-					if (_itemConsumeId[0] == 34979) // Scroll of Escape: Forge of the Gods
-					{
-						pcTarget.teleToLocation(175992, -116088, -3798, 0);
-						return;
-					}
-					
-					if (_itemConsumeId[0] == 34980) // Scroll of Escape: Isle of Prayer
-					{
-						pcTarget.teleToLocation(156984, 169736, -3514, 0);
-						return;
-					}
-					
-					if (_itemConsumeId[0] == 34981) // Scroll of Escape: Aden Castle(Siege)
-					{
-						pcTarget.teleToLocation(147432, 15640, -1448, 0);
-						return;
+						case 34978:
+							pcTarget.teleToLocation(155784, -105640, -2778, 0); // Scroll of Escape: Hot Springs
+							return;
+							
+						case 34979:
+							pcTarget.teleToLocation(175992, -116088, -3798, 0); // Scroll of Escape: Forge of the Gods
+							return;
+							
+						case 34980:
+							pcTarget.teleToLocation(156984, 169736, -3514, 0); // Scroll of Escape: Isle of Prayer
+							return;
+							
+						case 34981:
+							pcTarget.teleToLocation(147432, 15640, -1448, 0); // Scroll of Escape: Aden Castle(Siege)
+							return;
+							
+						case 37112:
+							pcTarget.teleToLocation(108472, 221592, -3623, 0);
+							return;
+							
+						case 37025:
+							pcTarget.teleToLocation(116952, 192272, -3403, 0);
+							return;
+							
+						case 7125:
+							pcTarget.teleToLocation(17144, 170156, -3502, 0);
+							return;
+							
+						case 7127:
+							pcTarget.teleToLocation(105918, 109759, -3207, 0);
+							return;
+							
+						case 7618:
+							pcTarget.teleToLocation(149864, -81062, -5618, 0);
+							return;
+							
+						case 7619:
+							pcTarget.teleToLocation(108275, -53785, -2524, 0);
+							return;
+							
+						case 7130:
+							pcTarget.teleToLocation(85475, 16087, -3672, 0);
+							return;
+							
+						case 9716:
+							pcTarget.teleToLocation(-120000, 44500, 352, 0);
+							return;
 					}
 				}
 				
@@ -344,9 +333,6 @@ public class Recall extends Skill
 					case 22:
 						pcTarget.teleToLocation(8976, 252416, -1928, 0);
 						return;
-					case 23: // Faeron Village town Id ???
-						pcTarget.teleToLocation(-80403, 247853, -3496, 0);
-						return;
 				}
 				
 				if (_castle)
@@ -354,14 +340,12 @@ public class Recall extends Skill
 					pcTarget.teleToCastle();
 					return;
 				}
-				
-				if (_clanhall)
+				else if (_clanhall)
 				{
 					pcTarget.teleToClanhall();
 					return;
 				}
-				
-				if (_fortress)
+				else if (_fortress)
 				{
 					pcTarget.teleToFortress();
 					return;

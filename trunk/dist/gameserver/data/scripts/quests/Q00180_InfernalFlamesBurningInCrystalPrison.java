@@ -56,7 +56,11 @@ public class Q00180_InfernalFlamesBurningInCrystalPrison extends Quest implement
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		String htmltext = "noquest";
+		if (qs.isCompleted())
+		{
+			return "completed";
+		}
 		final int cond = qs.getCond();
 		final Player player = qs.getPlayer();
 		

@@ -88,7 +88,11 @@ public class Q00357_WarehouseKeepersAmbition extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		String htmltext = "noquest";
+		if (qs.isCompleted())
+		{
+			return "completed";
+		}
 		final int cond = qs.getCond();
 		final int id = qs.getState();
 		final long jade = qs.getQuestItemsCount(JADE_CRYSTAL);

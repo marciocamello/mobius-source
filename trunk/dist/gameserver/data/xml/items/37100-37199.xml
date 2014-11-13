@@ -86,11 +86,25 @@
         <set name="stackable" value="true"/>
     </etcitem>
     <etcitem id="37112" name="Scroll of Escape: Heine">
-        <set name="class" value="OTHER"/>
-        <set name="crystal_type" value="NONE"/>
-        <set name="weight" value="30"/>
-        <set name="stackable" value="true"/>
-        <set name="type" value="OTHER"/>
+ 		<set name="class" value="CONSUMABLE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="weight" value="120"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="stackable" value="true"/>
+		<skills>
+			<skill id="9928" level="1"/>
+		</skills>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
     </etcitem>
     <etcitem id="37113" name="Scroll of Escape: Town of Oren">
         <set name="class" value="OTHER"/>

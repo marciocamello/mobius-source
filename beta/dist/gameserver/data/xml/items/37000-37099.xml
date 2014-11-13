@@ -208,10 +208,25 @@
 	</etcitem>
 	<etcitem id="37025" name="Scroll of Escape: Alligator Island">
 		<set name="icon" value="icon.etc_scroll_of_return_i00"/>
-		<set name="weight" value="30"/>
+		<set name="class" value="CONSUMABLE"/>
+		<set name="type" value="SCROLL"/>
+		<set name="weight" value="120"/>
+		<set name="destroyable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="augmentable" value="false"/>
+		<set name="enchantable" value="false"/>
+		<set name="attributable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="false"/>
 		<set name="stackable" value="true"/>
-		<set name="crystal_type" value="NONE"/>
-		<set name="type" value="OTHER"/>
+		<skills>
+			<skill id="9967" level="1"/>
+		</skills>
+		<cond msgId="1508">
+			<not>
+				<player olympiad="true"/>
+			</not>
+		</cond>
 	</etcitem>
 	<etcitem id="37026" name="Scroll of Escape: Outlaw Forest">
 		<set name="icon" value="icon.etc_scroll_of_return_i00"/>

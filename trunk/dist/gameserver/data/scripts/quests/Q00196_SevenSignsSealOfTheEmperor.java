@@ -166,7 +166,11 @@ public class Q00196_SevenSignsSealOfTheEmperor extends Quest implements ScriptFi
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = qs.isCompleted() ? "completed" : "noquest";
+		String htmltext = "noquest";
+		if (qs.isCompleted())
+		{
+			return "completed";
+		}
 		final int npcId = npc.getId();
 		final int cond = qs.getCond();
 		final Player player = qs.getPlayer();
