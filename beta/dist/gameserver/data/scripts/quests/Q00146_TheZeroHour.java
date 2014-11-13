@@ -71,11 +71,11 @@ public class Q00146_TheZeroHour extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
 		if (qs.isCompleted())
 		{
 			return "completed";
 		}
+		String htmltext = "noquest";
 		final int cond = qs.getCond();
 		final QuestState InSearchOfTheNest = qs.getPlayer().getQuestState(Q00109_InSearchOfTheNest.class);
 		

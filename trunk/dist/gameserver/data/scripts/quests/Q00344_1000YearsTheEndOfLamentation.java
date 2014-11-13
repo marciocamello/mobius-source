@@ -142,11 +142,11 @@ public class Q00344_1000YearsTheEndOfLamentation extends Quest implements Script
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
 		if (qs.isCompleted())
 		{
 			return "completed";
 		}
+		String htmltext = "noquest";
 		final int cond = qs.getCond();
 		final int npcId = npc.getId();
 		final int id = qs.getState();

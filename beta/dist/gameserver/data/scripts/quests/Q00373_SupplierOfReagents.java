@@ -948,11 +948,11 @@ public class Q00373_SupplierOfReagents extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
 		if (qs.isCompleted())
 		{
 			return "completed";
 		}
+		String htmltext = "noquest";
 		final int cond = qs.getCond();
 		
 		switch (npc.getId())

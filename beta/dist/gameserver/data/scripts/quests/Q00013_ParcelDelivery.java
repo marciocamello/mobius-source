@@ -62,11 +62,11 @@ public class Q00013_ParcelDelivery extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
 		if (qs.isCompleted())
 		{
 			return "completed";
 		}
+		String htmltext = "noquest";
 		final int cond = qs.getCond();
 		final int npcId = npc.getId();
 		

@@ -305,11 +305,11 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest implements ScriptFi
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
 		final QuestState qs = player.getQuestState(getName());
-		String htmltext = "noquest";
 		if (qs.isCompleted())
 		{
 			return "completed";
 		}
+		String htmltext = "noquest";
 		final int cond = qs.getCond();
 		
 		if (cond == 17)
@@ -327,11 +327,11 @@ public class Q00114_ResurrectionOfAnOldManager extends Quest implements ScriptFi
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
 		if (qs.isCompleted())
 		{
 			return "completed";
 		}
+		String htmltext = "noquest";
 		final int cond = qs.getCond();
 		final int npcId = npc.getId();
 		final int talk = qs.getInt("talk");

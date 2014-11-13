@@ -205,11 +205,11 @@ public class Q00372_LegacyOfInsolence extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
 		if (qs.isCompleted())
 		{
 			return "completed";
 		}
+		String htmltext = "noquest";
 		final int npcId = npc.getId();
 		final int _state = qs.getState();
 		

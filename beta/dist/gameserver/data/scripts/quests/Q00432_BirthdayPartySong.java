@@ -69,11 +69,11 @@ public class Q00432_BirthdayPartySong extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
 		if (qs.isCompleted())
 		{
 			return "completed";
 		}
+		String htmltext = "noquest";
 		
 		switch (qs.getCond())
 		{

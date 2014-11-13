@@ -59,11 +59,11 @@ public class Q00450_GraveRobberRescue extends Quest implements ScriptFile
 	@Override
 	public String onTalk(final NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
 		if (qs.isCompleted())
 		{
 			return "completed";
 		}
+		String htmltext = "noquest";
 		final int cond = qs.getCond();
 		final Player player = qs.getPlayer();
 		

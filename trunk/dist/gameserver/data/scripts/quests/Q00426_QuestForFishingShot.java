@@ -362,11 +362,11 @@ public class Q00426_QuestForFishingShot extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = "noquest";
 		if (qs.isCompleted())
 		{
 			return "completed";
 		}
+		String htmltext = "noquest";
 		
 		if (qs.getState() == CREATED)
 		{
