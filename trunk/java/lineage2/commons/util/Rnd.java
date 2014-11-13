@@ -507,7 +507,7 @@ public final class Rnd
 	 */
 	public static boolean chance(int chance)
 	{
-		return rnd.nextInt() <= (chance / 100);
+		return rnd.get(100) < chance;
 	}
 	
 	/**
