@@ -14,7 +14,6 @@ package quests;
 
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.model.GameObjectsStorage;
-import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -26,23 +25,10 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00727_HopeWithinTheDarkness extends Quest implements ScriptFile
 {
+	// Item
 	private static final int KnightsEpaulette = 9912;
+	// Monster
 	private static final int KanadisGuide3 = 25661;
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
 	
 	public Q00727_HopeWithinTheDarkness()
 	{
@@ -52,59 +38,67 @@ public class Q00727_HopeWithinTheDarkness extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		int cond = st.getCond();
 		String htmltext = event;
-		Player player = st.getPlayer();
+		final int cond = qs.getCond();
+		final Player player = qs.getPlayer();
 		
-		if (event.equals("dcw_q727_4.htm") && (cond == 0))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equals("reward") && (cond == 1) && player.getVar("q727").equalsIgnoreCase("done"))
-		{
-			player.unsetVar("q727");
-			st.giveItems(KnightsEpaulette, 300);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(true);
-			return null;
+			case "dcw_q727_4.htm":
+				if (cond == 0)
+				{
+					qs.setCond(1);
+					qs.setState(STARTED);
+					qs.playSound(SOUND_ACCEPT);
+				}
+				break;
+			
+			case "reward":
+				if ((cond == 1) && player.getVar("q727").equalsIgnoreCase("done"))
+				{
+					player.unsetVar("q727");
+					qs.giveItems(KnightsEpaulette, 300);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(true);
+					return null;
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int cond = st.getCond();
-		Player player = st.getPlayer();
-		QuestState qs726 = player.getQuestState(Q00726_LightWithinTheDarkness.class);
+		final int cond = qs.getCond();
+		final Player player = qs.getPlayer();
+		final QuestState qs726 = player.getQuestState(Q00726_LightWithinTheDarkness.class);
 		
-		if (!check(st.getPlayer()))
+		if (!check(qs.getPlayer()))
 		{
-			st.exitCurrentQuest(true);
+			qs.exitCurrentQuest(true);
 			return "dcw_q727_1a.htm";
 		}
 		
 		if (qs726 != null)
 		{
-			st.exitCurrentQuest(true);
+			qs.exitCurrentQuest(true);
 			return "dcw_q727_1b.htm";
 		}
 		else if (cond == 0)
 		{
-			if (st.getPlayer().getLevel() >= 70)
+			if (qs.getPlayer().getLevel() >= 70)
 			{
 				htmltext = "dcw_q727_1.htm";
 			}
 			else
 			{
 				htmltext = "dcw_q727_0.htm";
-				st.exitCurrentQuest(true);
+				qs.exitCurrentQuest(true);
 			}
 		}
 		else if (cond == 1)
@@ -123,18 +117,15 @@ public class Q00727_HopeWithinTheDarkness extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		Player player = st.getPlayer();
-		Party party = player.getParty();
+		final Player player = qs.getPlayer();
 		
-		if ((cond == 1) && (npcId == KanadisGuide3) && checkAllDestroyed(KanadisGuide3, player.getReflectionId()))
+		if ((qs.getCond() == 1) && (npc.getId() == KanadisGuide3) && checkAllDestroyed(KanadisGuide3, player.getReflectionId()))
 		{
 			if (player.isInParty())
 			{
-				for (Player member : party.getPartyMembers())
+				for (Player member : player.getParty().getPartyMembers())
 				{
 					if (!member.isDead() && member.getParty().isInReflection())
 					{
@@ -165,14 +156,14 @@ public class Q00727_HopeWithinTheDarkness extends Quest implements ScriptFile
 	
 	private boolean check(Player player)
 	{
-		Castle castle = ResidenceHolder.getInstance().getResidenceByObject(Castle.class, player);
+		final Castle castle = ResidenceHolder.getInstance().getResidenceByObject(Castle.class, player);
 		
 		if (castle == null)
 		{
 			return false;
 		}
 		
-		Clan clan = player.getClan();
+		final Clan clan = player.getClan();
 		
 		if (clan == null)
 		{
@@ -185,5 +176,20 @@ public class Q00727_HopeWithinTheDarkness extends Quest implements ScriptFile
 		}
 		
 		return true;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

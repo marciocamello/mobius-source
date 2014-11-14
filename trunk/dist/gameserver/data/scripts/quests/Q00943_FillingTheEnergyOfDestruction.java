@@ -23,9 +23,9 @@ import lineage2.gameserver.utils.Util;
  */
 public class Q00943_FillingTheEnergyOfDestruction extends Quest implements ScriptFile
 {
-	// NPC's
+	// NPCs
 	private static final int SEED_TALISMAN_SUPERVISOR = 33715;
-	// Monster's
+	// Monsters
 	private static final int[] RAID_BOSSES =
 	{
 		29195,
@@ -40,7 +40,7 @@ public class Q00943_FillingTheEnergyOfDestruction extends Quest implements Scrip
 		29236,
 		29238
 	};
-	// Item's
+	// Items
 	private static final int CORE_OF_TWISTED_MAGIC = 35668;
 	private static final int ENERGY_OF_DESTRUCTION = 35562;
 	
@@ -55,63 +55,61 @@ public class Q00943_FillingTheEnergyOfDestruction extends Quest implements Scrip
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("seed_talisman_manager_q0943_03.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("seed_talisman_manager_q0943_08.htm"))
-		{
-			st.giveItems(ENERGY_OF_DESTRUCTION, 1);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(this);
+			case "seed_talisman_manager_q0943_03.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "seed_talisman_manager_q0943_08.htm":
+				qs.giveItems(ENERGY_OF_DESTRUCTION, 1);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(this);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
 		String htmltext = "noquest";
+		final int cond = qs.getCond();
 		
-		if (npcId == SEED_TALISMAN_SUPERVISOR)
+		if (qs.isStarted())
 		{
-			if (st.isStarted())
+			if (cond == 1)
 			{
-				if (cond == 1)
+				htmltext = "seed_talisman_manager_q0943_06.htm";
+			}
+			else if (cond == 2)
+			{
+				htmltext = "seed_talisman_manager_q0943_07.htm";
+			}
+		}
+		else
+		{
+			if (isAvailableFor(qs.getPlayer()))
+			{
+				if (qs.isNowAvailable())
 				{
-					htmltext = "seed_talisman_manager_q0943_06.htm";
+					htmltext = "seed_talisman_manager_q0943_01.htm";
 				}
-				else if (cond == 2)
+				else
 				{
-					htmltext = "seed_talisman_manager_q0943_07.htm";
+					htmltext = "seed_talisman_manager_q0943_05.htm";
 				}
 			}
 			else
 			{
-				if (isAvailableFor(st.getPlayer()))
-				{
-					if (st.isNowAvailable())
-					{
-						htmltext = "seed_talisman_manager_q0943_01.htm";
-					}
-					else
-					{
-						htmltext = "seed_talisman_manager_q0943_05.htm";
-					}
-				}
-				else
-				{
-					htmltext = "seed_talisman_manager_q0943_04.htm";
-				}
+				htmltext = "seed_talisman_manager_q0943_04.htm";
 			}
 		}
 		
@@ -119,19 +117,13 @@ public class Q00943_FillingTheEnergyOfDestruction extends Quest implements Scrip
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (Util.contains(RAID_BOSSES, npcId))
+		if ((qs.getCond() == 1) && Util.contains(RAID_BOSSES, npc.getId()))
 		{
-			if (cond == 1)
-			{
-				st.giveItems(CORE_OF_TWISTED_MAGIC, 1);
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(2);
-			}
+			qs.giveItems(CORE_OF_TWISTED_MAGIC, 1);
+			qs.playSound(SOUND_MIDDLE);
+			qs.setCond(2);
 		}
 		
 		return null;
@@ -140,18 +132,15 @@ public class Q00943_FillingTheEnergyOfDestruction extends Quest implements Scrip
 	@Override
 	public void onLoad()
 	{
-		//
 	}
 	
 	@Override
 	public void onReload()
 	{
-		//
 	}
 	
 	@Override
 	public void onShutdown()
 	{
-		//
 	}
 }

@@ -24,9 +24,9 @@ import lineage2.gameserver.utils.Util;
  **/
 public class Q00755_InNeedOfPetras extends Quest implements ScriptFile
 {
-	// NPC's
+	// NPCs
 	private static final int AKU = 33671;
-	// Monster's
+	// Monsters
 	private static final int[] MONSTERS =
 	{
 		23213,
@@ -46,7 +46,7 @@ public class Q00755_InNeedOfPetras extends Quest implements ScriptFile
 		23237,
 		23219
 	};
-	// Item's
+	// Items
 	private static final int AKUS_SUPPLY_BOX = 35550;
 	private static final int ENERGY_OF_DESTRUCTION = 35562;
 	private static final int PETRA = 34959;
@@ -64,61 +64,57 @@ public class Q00755_InNeedOfPetras extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("sofa_aku_q0755_04.htm"))
+		if (event.equals("sofa_aku_q0755_04.htm"))
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.playSound(SOUND_ACCEPT);
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
 		String htmltext = "noquest";
+		final int cond = qs.getCond();
 		
-		if (npcId == AKU)
+		if (qs.isStarted())
 		{
-			if (st.isStarted())
+			if (cond == 1)
 			{
-				if (cond == 1)
+				htmltext = "sofa_aku_q0755_07.htm";
+			}
+			else if (cond == 2)
+			{
+				qs.takeItems(PETRA, -1L);
+				qs.giveItems(AKUS_SUPPLY_BOX, 1);
+				qs.giveItems(ENERGY_OF_DESTRUCTION, 1);
+				qs.exitCurrentQuest(this);
+				htmltext = "sofa_aku_q0755_08.htm";
+			}
+		}
+		else
+		{
+			if (isAvailableFor(qs.getPlayer()))
+			{
+				if (qs.isNowAvailable())
 				{
-					htmltext = "sofa_aku_q0755_07.htm";
+					htmltext = "sofa_aku_q0755_01.htm";
 				}
-				else if (cond == 2)
+				else
 				{
-					st.takeItems(PETRA, -1L);
-					st.giveItems(AKUS_SUPPLY_BOX, 1);
-					st.giveItems(ENERGY_OF_DESTRUCTION, 1);
-					st.exitCurrentQuest(this);
-					htmltext = "sofa_aku_q0755_08.htm";
+					htmltext = "sofa_aku_q0755_06.htm";
 				}
 			}
 			else
 			{
-				if (isAvailableFor(st.getPlayer()))
-				{
-					if (st.isNowAvailable())
-					{
-						htmltext = "sofa_aku_q0755_01.htm";
-					}
-					else
-					{
-						htmltext = "sofa_aku_q0755_06.htm";
-					}
-				}
-				else
-				{
-					htmltext = "sofa_aku_q0755_05.htm";
-				}
+				htmltext = "sofa_aku_q0755_05.htm";
 			}
 		}
 		
@@ -126,29 +122,20 @@ public class Q00755_InNeedOfPetras extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (Util.contains(MONSTERS, npcId))
+		if ((qs.getCond() == 1) && Util.contains(MONSTERS, npc.getId()) && Rnd.chance(PETRA_DROP_CHANCE))
 		{
-			if (cond == 1)
+			qs.giveItems(PETRA, 1);
+			
+			if (qs.getQuestItemsCount(PETRA) >= 50)
 			{
-				if (Rnd.chance(PETRA_DROP_CHANCE))
-				{
-					st.giveItems(PETRA, 1);
-					
-					if (st.getQuestItemsCount(PETRA) >= 50)
-					{
-						st.setCond(2);
-						st.playSound(SOUND_MIDDLE);
-					}
-					else
-					{
-						st.playSound(SOUND_ITEMGET);
-					}
-				}
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+			}
+			else
+			{
+				qs.playSound(SOUND_ITEMGET);
 			}
 		}
 		
@@ -158,18 +145,15 @@ public class Q00755_InNeedOfPetras extends Quest implements ScriptFile
 	@Override
 	public void onLoad()
 	{
-		//
 	}
 	
 	@Override
 	public void onReload()
 	{
-		//
 	}
 	
 	@Override
 	public void onShutdown()
 	{
-		//
 	}
 }

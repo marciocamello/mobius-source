@@ -37,39 +37,34 @@ public class Q00756_TopQualityPetra extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("sofa_aku_q0756_02.htm"))
+		if (event.equals("sofa_aku_q0756_02.htm"))
 		{
-			st.takeAllItems(TOP_QUALITY_PETRA);
-			st.getPlayer().addExpAndSp(570676680, 261024840);
-			st.giveItems(AKU_MARK, 1);
-			st.exitCurrentQuest(this);
-			st.playSound(SOUND_FINISH);
+			qs.takeAllItems(TOP_QUALITY_PETRA);
+			qs.getPlayer().addExpAndSp(570676680, 261024840);
+			qs.giveItems(AKU_MARK, 1);
+			qs.exitCurrentQuest(this);
+			qs.playSound(SOUND_FINISH);
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
 		String htmltext = "noquest";
 		
-		if (npcId == AKU)
+		if (qs.isCreated() && (qs.getCond() == 1))
 		{
-			if (st.isCreated() && (cond == 1))
-			{
-				htmltext = "sofa_aku_q0756_01.htm";
-			}
-			else
-			{
-				htmltext = "sofa_aku_q0756_03.htm";
-			}
+			htmltext = "sofa_aku_q0756_01.htm";
+		}
+		else
+		{
+			htmltext = "sofa_aku_q0756_03.htm";
 		}
 		
 		return htmltext;

@@ -53,132 +53,138 @@ public class Q00902_ReclaimOurEra extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("mathias_q902_04.htm"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("mathias_q902_05.htm"))
-		{
-			st.setCond(2);
-		}
-		else if (event.equalsIgnoreCase("mathias_q902_06.htm"))
-		{
-			st.setCond(3);
-		}
-		else if (event.equalsIgnoreCase("mathias_q902_07.htm"))
-		{
-			st.setCond(4);
-		}
-		else if (event.equalsIgnoreCase("mathias_q902_09.htm"))
-		{
-			if (st.takeAllItems(ShatteredBones) > 0)
-			{
-				st.giveItems(21750, 1);
-				st.giveItems(ADENA_ID, 134038);
-			}
-			else if (st.takeAllItems(CannibalisticStakatoLeaderClaw) > 0)
-			{
-				st.giveItems(21750, 3);
-				st.giveItems(ADENA_ID, 210119);
-			}
-			else if (st.takeAllItems(AnaisScroll) > 0)
-			{
-				st.giveItems(21750, 3);
-				st.giveItems(ADENA_ID, 348155);
-			}
+			case "mathias_q902_04.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
 			
-			st.setState(COMPLETED);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(this);
+			case "mathias_q902_05.htm":
+				qs.setCond(2);
+				break;
+			
+			case "mathias_q902_06.htm":
+				qs.setCond(3);
+				break;
+			
+			case "mathias_q902_07.htm":
+				qs.setCond(4);
+				break;
+			
+			case "mathias_q902_09.htm":
+				if (qs.takeAllItems(ShatteredBones) > 0)
+				{
+					qs.giveItems(21750, 1);
+					qs.giveItems(ADENA_ID, 134038);
+				}
+				else if (qs.takeAllItems(CannibalisticStakatoLeaderClaw) > 0)
+				{
+					qs.giveItems(21750, 3);
+					qs.giveItems(ADENA_ID, 210119);
+				}
+				else if (qs.takeAllItems(AnaisScroll) > 0)
+				{
+					qs.giveItems(21750, 3);
+					qs.giveItems(ADENA_ID, 348155);
+				}
+				qs.setState(COMPLETED);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(this);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int cond = st.getCond();
 		
-		if (npc.getId() == Mathias)
+		switch (qs.getState())
 		{
-			switch (st.getState())
-			{
-				case CREATED:
-					if (st.isNowAvailableByTime())
+			case CREATED:
+				if (qs.isNowAvailableByTime())
+				{
+					if (qs.getPlayer().getLevel() >= 80)
 					{
-						if (st.getPlayer().getLevel() >= 80)
-						{
-							htmltext = "mathias_q902_01.htm";
-						}
-						else
-						{
-							htmltext = "mathias_q902_00.htm";
-							st.exitCurrentQuest(true);
-						}
+						htmltext = "mathias_q902_01.htm";
 					}
 					else
 					{
-						htmltext = "mathias_q902_00a.htm";
+						htmltext = "mathias_q902_00.htm";
+						qs.exitCurrentQuest(true);
 					}
-					
-					break;
-				
-				case STARTED:
-					if (cond == 1)
-					{
+				}
+				else
+				{
+					htmltext = "mathias_q902_00a.htm";
+				}
+				break;
+			
+			case STARTED:
+				switch (qs.getCond())
+				{
+					case 1:
 						htmltext = "mathias_q902_04.htm";
-					}
-					else if (cond == 2)
-					{
-						htmltext = "mathias_q902_05.htm";
-					}
-					else if (cond == 3)
-					{
-						htmltext = "mathias_q902_06.htm";
-					}
-					else if (cond == 4)
-					{
-						htmltext = "mathias_q902_07.htm";
-					}
-					else if (cond == 5)
-					{
-						htmltext = "mathias_q902_08.htm";
-					}
+						break;
 					
-					break;
-			}
+					case 2:
+						htmltext = "mathias_q902_05.htm";
+						break;
+					
+					case 3:
+						htmltext = "mathias_q902_06.htm";
+						break;
+					
+					case 4:
+						htmltext = "mathias_q902_07.htm";
+						break;
+					
+					case 5:
+						htmltext = "mathias_q902_08.htm";
+						break;
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		
-		if ((cond == 2) && Util.contains(OrcsSilenos, npc.getId()))
+		switch (qs.getCond())
 		{
-			st.giveItems(ShatteredBones, 1);
-			st.setCond(5);
-		}
-		else if ((cond == 3) && Util.contains(CannibalisticStakatoChief, npc.getId()))
-		{
-			st.giveItems(CannibalisticStakatoLeaderClaw, 1);
-			st.setCond(5);
-		}
-		else if ((cond == 4) && (npc.getId() == Anais))
-		{
-			st.giveItems(AnaisScroll, 1);
-			st.setCond(5);
+			case 2:
+				if (Util.contains(OrcsSilenos, npc.getId()))
+				{
+					qs.giveItems(ShatteredBones, 1);
+					qs.setCond(5);
+				}
+				break;
+			
+			case 3:
+				if (Util.contains(CannibalisticStakatoChief, npc.getId()))
+				{
+					qs.giveItems(CannibalisticStakatoLeaderClaw, 1);
+					qs.setCond(5);
+				}
+				break;
+			
+			case 4:
+				if (npc.getId() == Anais)
+				{
+					qs.giveItems(AnaisScroll, 1);
+					qs.setCond(5);
+				}
+				break;
 		}
 		
 		return null;

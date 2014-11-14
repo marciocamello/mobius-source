@@ -60,31 +60,31 @@ public class Q00905_RefinedDragonBlood extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("sepsoul_q905_05.htm"))
+		if (event.equals("sepsoul_q905_05.htm"))
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
+			qs.setState(STARTED);
+			qs.setCond(1);
+			qs.playSound(SOUND_ACCEPT);
 		}
 		else if (event.startsWith("sepsoul_q905_08.htm"))
 		{
-			st.takeAllItems(AntharasDragonsBlue);
-			st.takeAllItems(AntharasDragonsRed);
+			qs.takeAllItems(AntharasDragonsBlue);
+			qs.takeAllItems(AntharasDragonsRed);
 			StringTokenizer tokenizer = new StringTokenizer(event);
 			tokenizer.nextToken();
 			
 			switch (Integer.parseInt(tokenizer.nextToken()))
 			{
 				case 1:
-					st.giveItems(21903, 1);
+					qs.giveItems(21903, 1);
 					break;
 				
 				case 2:
-					st.giveItems(21904, 1);
+					qs.giveItems(21904, 1);
 					break;
 				
 				default:
@@ -92,42 +92,41 @@ public class Q00905_RefinedDragonBlood extends Quest implements ScriptFile
 			}
 			
 			htmltext = "sepsoul_q905_08.htm";
-			st.setState(COMPLETED);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(this);
+			qs.setState(COMPLETED);
+			qs.playSound(SOUND_FINISH);
+			qs.exitCurrentQuest(this);
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int cond = st.getCond();
+		final int cond = qs.getCond();
 		
 		if (Util.contains(SeparatedSoul, npc.getId()))
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case CREATED:
-					if (st.isNowAvailableByTime())
+					if (qs.isNowAvailableByTime())
 					{
-						if (st.getPlayer().getLevel() >= 83)
+						if (qs.getPlayer().getLevel() >= 83)
 						{
 							htmltext = "sepsoul_q905_01.htm";
 						}
 						else
 						{
 							htmltext = "sepsoul_q905_00.htm";
-							st.exitCurrentQuest(true);
+							qs.exitCurrentQuest(true);
 						}
 					}
 					else
 					{
 						htmltext = "sepsoul_q905_00a.htm";
 					}
-					
 					break;
 				
 				case STARTED:
@@ -139,7 +138,6 @@ public class Q00905_RefinedDragonBlood extends Quest implements ScriptFile
 					{
 						htmltext = "sepsoul_q905_07.htm";
 					}
-					
 					break;
 			}
 		}
@@ -148,30 +146,28 @@ public class Q00905_RefinedDragonBlood extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		
-		if (cond == 1)
+		if (qs.getCond() == 1)
 		{
 			if (Util.contains(AntharasDragonsBlue, npc.getId()))
 			{
-				if ((st.getQuestItemsCount(UnrefinedBlueDragonBlood) < 10) && Rnd.chance(70))
+				if ((qs.getQuestItemsCount(UnrefinedBlueDragonBlood) < 10) && Rnd.chance(70))
 				{
-					st.giveItems(UnrefinedBlueDragonBlood, 1);
+					qs.giveItems(UnrefinedBlueDragonBlood, 1);
 				}
 			}
 			else if (Util.contains(AntharasDragonsRed, npc.getId()))
 			{
-				if ((st.getQuestItemsCount(UnrefinedRedDragonBlood) < 10) && Rnd.chance(70))
+				if ((qs.getQuestItemsCount(UnrefinedRedDragonBlood) < 10) && Rnd.chance(70))
 				{
-					st.giveItems(UnrefinedRedDragonBlood, 1);
+					qs.giveItems(UnrefinedRedDragonBlood, 1);
 				}
 			}
 			
-			if ((st.getQuestItemsCount(UnrefinedBlueDragonBlood) >= 10) && (st.getQuestItemsCount(UnrefinedRedDragonBlood) >= 10))
+			if ((qs.getQuestItemsCount(UnrefinedBlueDragonBlood) >= 10) && (qs.getQuestItemsCount(UnrefinedRedDragonBlood) >= 10))
 			{
-				st.setCond(2);
+				qs.setCond(2);
 			}
 		}
 		

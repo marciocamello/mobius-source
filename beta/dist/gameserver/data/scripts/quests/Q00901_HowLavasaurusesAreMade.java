@@ -49,62 +49,61 @@ public class Q00901_HowLavasaurusesAreMade extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("blacksmith_rooney_q901_03.htm"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("blacksmith_rooney_q901_12a.htm"))
-		{
-			st.giveItems(TOTEM_OF_BODY, 1);
-			st.playSound(SOUND_FINISH);
-			st.setState(COMPLETED);
-			st.exitCurrentQuest(this);
-		}
-		else if (event.equalsIgnoreCase("blacksmith_rooney_q901_12b.htm"))
-		{
-			st.giveItems(TOTEM_OF_SPIRIT, 1);
-			st.playSound(SOUND_FINISH);
-			st.setState(COMPLETED);
-			st.exitCurrentQuest(this);
-		}
-		else if (event.equalsIgnoreCase("blacksmith_rooney_q901_12c.htm"))
-		{
-			st.giveItems(TOTEM_OF_FORTITUDE, 1);
-			st.playSound(SOUND_FINISH);
-			st.setState(COMPLETED);
-			st.exitCurrentQuest(this);
-		}
-		else if (event.equalsIgnoreCase("blacksmith_rooney_q901_12d.htm"))
-		{
-			st.giveItems(TOTEM_OF_COURAGE, 1);
-			st.playSound(SOUND_FINISH);
-			st.setState(COMPLETED);
-			st.exitCurrentQuest(this);
+			case "blacksmith_rooney_q901_03.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "blacksmith_rooney_q901_12a.htm":
+				qs.giveItems(TOTEM_OF_BODY, 1);
+				qs.playSound(SOUND_FINISH);
+				qs.setState(COMPLETED);
+				qs.exitCurrentQuest(this);
+				break;
+			
+			case "blacksmith_rooney_q901_12b.htm":
+				qs.giveItems(TOTEM_OF_SPIRIT, 1);
+				qs.playSound(SOUND_FINISH);
+				qs.setState(COMPLETED);
+				qs.exitCurrentQuest(this);
+				break;
+			
+			case "blacksmith_rooney_q901_12c.htm":
+				qs.giveItems(TOTEM_OF_FORTITUDE, 1);
+				qs.playSound(SOUND_FINISH);
+				qs.setState(COMPLETED);
+				qs.exitCurrentQuest(this);
+				break;
+			
+			case "blacksmith_rooney_q901_12d.htm":
+				qs.giveItems(TOTEM_OF_COURAGE, 1);
+				qs.playSound(SOUND_FINISH);
+				qs.setState(COMPLETED);
+				qs.exitCurrentQuest(this);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
 		
-		if (npcId == ROONEY)
+		switch (qs.getCond())
 		{
-			if (cond == 0)
-			{
-				if (st.getPlayer().getLevel() >= 76)
+			case 0:
+				if (qs.getPlayer().getLevel() >= 76)
 				{
-					if (st.isNowAvailableByTime())
+					if (qs.isNowAvailableByTime())
 					{
 						htmltext = "blacksmith_rooney_q901_01.htm";
 					}
@@ -117,70 +116,70 @@ public class Q00901_HowLavasaurusesAreMade extends Quest implements ScriptFile
 				{
 					htmltext = "blacksmith_rooney_q901_00.htm";
 				}
-			}
-			else if (cond == 1)
-			{
+				break;
+			
+			case 1:
 				htmltext = "blacksmith_rooney_q901_04.htm";
-			}
-			else if (cond == 2)
-			{
-				if (st.getInt("collect") == 1)
+				break;
+			
+			case 2:
+				if (qs.getInt("collect") == 1)
 				{
 					htmltext = "blacksmith_rooney_q901_07.htm";
 				}
 				else
 				{
-					if (st.haveQuestItem(LAVASAURUS_STONE_FRAGMENT, 10) && st.haveQuestItem(LAVASAURUS_HEAD_FRAGMENT, 10) && st.haveQuestItem(LAVASAURUS_BODY_FRAGMENT, 10) && st.haveQuestItem(LAVASAURUS_HORN_FRAGMENT, 10))
+					if (qs.haveQuestItem(LAVASAURUS_STONE_FRAGMENT, 10) && qs.haveQuestItem(LAVASAURUS_HEAD_FRAGMENT, 10) && qs.haveQuestItem(LAVASAURUS_BODY_FRAGMENT, 10) && qs.haveQuestItem(LAVASAURUS_HORN_FRAGMENT, 10))
 					{
 						htmltext = "blacksmith_rooney_q901_05.htm";
-						st.takeAllItems(LAVASAURUS_STONE_FRAGMENT, LAVASAURUS_HEAD_FRAGMENT, LAVASAURUS_BODY_FRAGMENT, LAVASAURUS_HORN_FRAGMENT);
-						st.set("collect", 1);
+						qs.takeAllItems(LAVASAURUS_STONE_FRAGMENT, LAVASAURUS_HEAD_FRAGMENT, LAVASAURUS_BODY_FRAGMENT, LAVASAURUS_HORN_FRAGMENT);
+						qs.set("collect", 1);
 					}
 					else
 					{
 						htmltext = "blacksmith_rooney_q901_06.htm";
 					}
 				}
-			}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if (st.getCond() == 1)
+		if (qs.getCond() == 1)
 		{
 			if (!Util.contains(KILLING_MONSTERS, npc.getId()))
 			{
 				return null;
 			}
 			
-			if (!st.haveQuestItem(LAVASAURUS_STONE_FRAGMENT, 10))
+			if (!qs.haveQuestItem(LAVASAURUS_STONE_FRAGMENT, 10))
 			{
-				st.rollAndGive(LAVASAURUS_STONE_FRAGMENT, 1, DROP_CHANCE);
+				qs.rollAndGive(LAVASAURUS_STONE_FRAGMENT, 1, DROP_CHANCE);
 			}
 			
-			if (!st.haveQuestItem(LAVASAURUS_HEAD_FRAGMENT, 10))
+			if (!qs.haveQuestItem(LAVASAURUS_HEAD_FRAGMENT, 10))
 			{
-				st.rollAndGive(LAVASAURUS_HEAD_FRAGMENT, 1, DROP_CHANCE);
+				qs.rollAndGive(LAVASAURUS_HEAD_FRAGMENT, 1, DROP_CHANCE);
 			}
 			
-			if (!st.haveQuestItem(LAVASAURUS_BODY_FRAGMENT, 10))
+			if (!qs.haveQuestItem(LAVASAURUS_BODY_FRAGMENT, 10))
 			{
-				st.rollAndGive(LAVASAURUS_BODY_FRAGMENT, 1, DROP_CHANCE);
+				qs.rollAndGive(LAVASAURUS_BODY_FRAGMENT, 1, DROP_CHANCE);
 			}
 			
-			if (!st.haveQuestItem(LAVASAURUS_HORN_FRAGMENT, 10))
+			if (!qs.haveQuestItem(LAVASAURUS_HORN_FRAGMENT, 10))
 			{
-				st.rollAndGive(LAVASAURUS_HORN_FRAGMENT, 1, DROP_CHANCE);
+				qs.rollAndGive(LAVASAURUS_HORN_FRAGMENT, 1, DROP_CHANCE);
 			}
 			
-			if (st.haveQuestItem(LAVASAURUS_STONE_FRAGMENT, 10) && st.haveQuestItem(LAVASAURUS_HEAD_FRAGMENT, 10) && st.haveQuestItem(LAVASAURUS_BODY_FRAGMENT, 10) && st.haveQuestItem(LAVASAURUS_HORN_FRAGMENT, 10))
+			if (qs.haveQuestItem(LAVASAURUS_STONE_FRAGMENT, 10) && qs.haveQuestItem(LAVASAURUS_HEAD_FRAGMENT, 10) && qs.haveQuestItem(LAVASAURUS_BODY_FRAGMENT, 10) && qs.haveQuestItem(LAVASAURUS_HORN_FRAGMENT, 10))
 			{
-				st.setCond(2);
-				st.playSound(SOUND_MIDDLE);
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
 			}
 		}
 		

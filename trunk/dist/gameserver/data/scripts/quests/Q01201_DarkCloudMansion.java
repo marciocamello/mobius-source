@@ -397,21 +397,6 @@ public class Q01201_DarkCloudMansion extends Quest implements ScriptFile
 	
 	private static final TIntObjectHashMap<World> worlds = new TIntObjectHashMap<>();
 	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public Q01201_DarkCloudMansion()
 	{
 		super(true);
@@ -430,7 +415,7 @@ public class Q01201_DarkCloudMansion extends Quest implements ScriptFile
 	@Override
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
-		World world = worlds.get(player.getReflectionId());
+		final World world = worlds.get(player.getReflectionId());
 		
 		if (world.status == 4)
 		{
@@ -453,14 +438,14 @@ public class Q01201_DarkCloudMansion extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		Player player = st.getPlayer();
+		final int npcId = npc.getId();
+		final Player player = qs.getPlayer();
 		
 		if (npcId == YIYEN)
 		{
-			st.setState(STARTED);
+			qs.setState(STARTED);
 			enterInstance(player);
 			return null;
 		}
@@ -470,7 +455,7 @@ public class Q01201_DarkCloudMansion extends Quest implements ScriptFile
 			return null;
 		}
 		
-		World world = worlds.get(npc.getReflectionId());
+		final World world = worlds.get(npc.getReflectionId());
 		
 		if (world != null)
 		{
@@ -481,7 +466,7 @@ public class Q01201_DarkCloudMansion extends Quest implements ScriptFile
 				
 				if (!world.rewarded.contains(player.getStoredId()))
 				{
-					st.giveItems(CC, 1);
+					qs.giveItems(CC, 1);
 					world.rewarded.add(player.getStoredId());
 				}
 			}
@@ -491,10 +476,10 @@ public class Q01201_DarkCloudMansion extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		Player player = st.getPlayer();
-		World world = worlds.get(npc.getReflectionId());
+		final Player player = qs.getPlayer();
+		final World world = worlds.get(npc.getReflectionId());
 		
 		if (world == null)
 		{
@@ -508,7 +493,6 @@ public class Q01201_DarkCloudMansion extends Quest implements ScriptFile
 				{
 					runHall(world);
 				}
-				
 				break;
 			
 			case 1:
@@ -516,7 +500,6 @@ public class Q01201_DarkCloudMansion extends Quest implements ScriptFile
 				{
 					runFirstRoom(world);
 				}
-				
 				break;
 			
 			case 2:
@@ -524,7 +507,6 @@ public class Q01201_DarkCloudMansion extends Quest implements ScriptFile
 				{
 					runHall2(world);
 				}
-				
 				break;
 			
 			case 3:
@@ -532,7 +514,6 @@ public class Q01201_DarkCloudMansion extends Quest implements ScriptFile
 				{
 					runSecondRoom(world);
 				}
-				
 				break;
 			
 			case 5:
@@ -540,7 +521,6 @@ public class Q01201_DarkCloudMansion extends Quest implements ScriptFile
 				{
 					runThirdRoom(world);
 				}
-				
 				break;
 			
 			case 6:
@@ -548,7 +528,6 @@ public class Q01201_DarkCloudMansion extends Quest implements ScriptFile
 				{
 					runForthRoom(world);
 				}
-				
 				break;
 			
 			case 7:
@@ -564,10 +543,10 @@ public class Q01201_DarkCloudMansion extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onAttack(NpcInstance npc, QuestState st)
+	public String onAttack(NpcInstance npc, QuestState qs)
 	{
-		Player player = st.getPlayer();
-		World world = worlds.get(player.getReflectionId());
+		final Player player = qs.getPlayer();
+		final World world = worlds.get(player.getReflectionId());
 		
 		if ((world != null) && (world.status == 7))
 		{
@@ -605,7 +584,7 @@ public class Q01201_DarkCloudMansion extends Quest implements ScriptFile
 	
 	private void enterInstance(Player player)
 	{
-		Reflection r = player.getActiveReflection();
+		final Reflection r = player.getActiveReflection();
 		
 		if (r != null)
 		{
@@ -960,7 +939,7 @@ public class Q01201_DarkCloudMansion extends Quest implements ScriptFile
 	{
 		for (long[] list : world.FifthRoom.npclist2)
 		{
-			NpcInstance npc = GameObjectsStorage.getAsNpc(list[0]);
+			final NpcInstance npc = GameObjectsStorage.getAsNpc(list[0]);
 			
 			if (npc != null)
 			{
@@ -973,7 +952,7 @@ public class Q01201_DarkCloudMansion extends Quest implements ScriptFile
 	{
 		for (long[] list : world.SecondRoom.monolith)
 		{
-			NpcInstance npc = GameObjectsStorage.getAsNpc(list[0]);
+			final NpcInstance npc = GameObjectsStorage.getAsNpc(list[0]);
 			
 			if (npc != null)
 			{
@@ -997,7 +976,7 @@ public class Q01201_DarkCloudMansion extends Quest implements ScriptFile
 	
 	private void chkShadowColumn(World world, NpcInstance npc)
 	{
-		Reflection ref = ReflectionManager.getInstance().get(world.instanceId);
+		final Reflection ref = ReflectionManager.getInstance().get(world.instanceId);
 		
 		for (long[] mob : world.ForthRoom.npclist2)
 		{
@@ -1018,5 +997,20 @@ public class Q01201_DarkCloudMansion extends Quest implements ScriptFile
 				}
 			}
 		}
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

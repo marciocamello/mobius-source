@@ -61,104 +61,100 @@ public class Q00751_LiberatingTheSpirits extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("30631-3.htm"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("30631-5.htm"))
-		{
-			st.getPlayer().addExpAndSp(600000000, 0);
-			st.takeItems(Deadmans_Flesh, 40);
-			st.unset(SCALDISECT_KILL);
-			st.setState(COMPLETED);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(this);
+			case "30631-3.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "30631-5.htm":
+				qs.getPlayer().addExpAndSp(600000000, 0);
+				qs.takeItems(Deadmans_Flesh, 40);
+				qs.unset(SCALDISECT_KILL);
+				qs.setState(COMPLETED);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(this);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int cond = st.getCond();
+		final int cond = qs.getCond();
 		
-		if (npc.getId() == Roderik)
+		switch (qs.getState())
 		{
-			switch (st.getState())
-			{
-				case CREATED:
-					if (st.getPlayer().getLevel() >= 95)
+			case CREATED:
+				if (qs.getPlayer().getLevel() >= 95)
+				{
+					if (qs.isNowAvailable())
 					{
-						if (st.isNowAvailable())
-						{
-							htmltext = "30631.htm";
-						}
-						else
-						{
-							htmltext = "30631-0.htm";
-						}
+						htmltext = "30631.htm";
 					}
 					else
 					{
-						htmltext = "lvl.htm";
-						st.exitCurrentQuest(true);
+						htmltext = "30631-0.htm";
 					}
-					
-					break;
+				}
+				else
+				{
+					htmltext = "lvl.htm";
+					qs.exitCurrentQuest(true);
+				}
 				
-				case STARTED:
-					if (cond == 1)
-					{
-						htmltext = "30631-3.htm";
-					}
-					else if (cond == 2)
-					{
-						htmltext = "30631-4.htm";
-					}
-					
-					break;
-			}
+				break;
+			
+			case STARTED:
+				if (cond == 1)
+				{
+					htmltext = "30631-3.htm";
+				}
+				else if (cond == 2)
+				{
+					htmltext = "30631-4.htm";
+				}
+				
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		boolean doneKill = updateKill(npc, st);
-		
-		if (cond == 1)
+		if (qs.getCond() == 1)
 		{
 			if (Util.contains(Mobs, npc.getId()))
 			{
-				Party party = st.getPlayer().getParty();
+				final Party party = qs.getPlayer().getParty();
 				
 				if (party != null)
 				{
 					for (Player member : party.getPartyMembers())
 					{
-						QuestState qs = member.getQuestState(getClass());
+						final QuestState state = member.getQuestState(getClass());
 						
-						if ((qs != null) && qs.isStarted())
+						if ((state != null) && state.isStarted())
 						{
-							if (st.getQuestItemsCount(Deadmans_Flesh) < 40)
+							if (qs.getQuestItemsCount(Deadmans_Flesh) < 40)
 							{
-								qs.giveItems(Deadmans_Flesh, 1);
-								qs.playSound(SOUND_ITEMGET);
+								state.giveItems(Deadmans_Flesh, 1);
+								state.playSound(SOUND_ITEMGET);
 								
-								if (doneKill && (st.getQuestItemsCount(Deadmans_Flesh) == 40))
+								if (updateKill(npc, qs) && (qs.getQuestItemsCount(Deadmans_Flesh) == 40))
 								{
-									st.setCond(2);
+									qs.setCond(2);
 								}
 							}
 						}
@@ -166,14 +162,14 @@ public class Q00751_LiberatingTheSpirits extends Quest implements ScriptFile
 				}
 				else
 				{
-					if (st.getQuestItemsCount(Deadmans_Flesh) < 40)
+					if (qs.getQuestItemsCount(Deadmans_Flesh) < 40)
 					{
-						st.giveItems(Deadmans_Flesh, 1);
-						st.playSound(SOUND_ITEMGET);
+						qs.giveItems(Deadmans_Flesh, 1);
+						qs.playSound(SOUND_ITEMGET);
 						
-						if (doneKill && (st.getQuestItemsCount(Deadmans_Flesh) == 40))
+						if (updateKill(npc, qs) && (qs.getQuestItemsCount(Deadmans_Flesh) == 40))
 						{
-							st.setCond(2);
+							qs.setCond(2);
 						}
 					}
 				}
@@ -181,32 +177,32 @@ public class Q00751_LiberatingTheSpirits extends Quest implements ScriptFile
 			
 			if (npc.getId() == Scaldisect)
 			{
-				Party party = st.getPlayer().getParty();
+				final Party party = qs.getPlayer().getParty();
 				
 				if (party != null)
 				{
 					for (Player member : party.getPartyMembers())
 					{
-						QuestState qs = member.getQuestState(getClass());
+						final QuestState state = member.getQuestState(getClass());
 						
-						if ((qs != null) && qs.isStarted())
+						if ((state != null) && state.isStarted())
 						{
-							updateKill(npc, st);
+							updateKill(npc, qs);
 							
-							if (st.getQuestItemsCount(Deadmans_Flesh) == 40)
+							if (qs.getQuestItemsCount(Deadmans_Flesh) == 40)
 							{
-								st.setCond(2);
+								qs.setCond(2);
 							}
 						}
 					}
 				}
 				else
 				{
-					updateKill(npc, st);
+					updateKill(npc, qs);
 					
-					if (st.getQuestItemsCount(Deadmans_Flesh) == 40)
+					if (qs.getQuestItemsCount(Deadmans_Flesh) == 40)
 					{
-						st.setCond(2);
+						qs.setCond(2);
 					}
 				}
 			}

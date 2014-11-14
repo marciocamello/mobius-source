@@ -34,52 +34,52 @@ public class Q00999_T1Tutorial extends Quest implements ScriptFile
 	private static final int VOUCHER_OF_FLAME = 1496;
 	private static final int SOULSHOT_NOVICE = 5789;
 	private static final int SPIRITSHOT_NOVICE = 5790;
-	static final int BLUE_GEM = 6353;
+	private static final int BLUE_GEM = 6353;
 	private static final int DIPLOMA = 9881;
 	
 	private static class Event
 	{
-		public String htm;
-		public int radarX;
-		public int radarY;
-		public int radarZ;
-		public int item;
-		public int classId1;
-		public int gift1;
-		public int count1;
-		public int classId2;
-		public int gift2;
-		public int count2;
+		public String _htm;
+		public int _radarX;
+		public int _radarY;
+		public int _radarZ;
+		public int _item;
+		public int _classId1;
+		public int _gift1;
+		public int _count1;
+		public int _classId2;
+		public int _gift2;
+		public int _count2;
 		
 		public Event(String htm, int radarX, int radarY, int radarZ, int item, int classId1, int gift1, int count1, int classId2, int gift2, int count2)
 		{
-			this.htm = htm;
-			this.radarX = radarX;
-			this.radarY = radarY;
-			this.radarZ = radarZ;
-			this.item = item;
-			this.classId1 = classId1;
-			this.gift1 = gift1;
-			this.count1 = count1;
-			this.classId2 = classId2;
-			this.gift2 = gift2;
-			this.count2 = count2;
+			this._htm = htm;
+			this._radarX = radarX;
+			this._radarY = radarY;
+			this._radarZ = radarZ;
+			this._item = item;
+			this._classId1 = classId1;
+			this._gift1 = gift1;
+			this._count1 = count1;
+			this._classId2 = classId2;
+			this._gift2 = gift2;
+			this._count2 = count2;
 		}
 	}
 	
 	private static class Talk
 	{
-		public int raceId;
-		public String[] htmlfiles;
-		public int npcTyp;
-		public int item;
+		public int _raceId;
+		public String[] _htmlfiles;
+		public int _npcTyp;
+		public int _item;
 		
 		public Talk(int raceId, String[] htmlfiles, int npcTyp, int item)
 		{
-			this.raceId = raceId;
-			this.htmlfiles = htmlfiles;
-			this.npcTyp = npcTyp;
-			this.item = item;
+			this._raceId = raceId;
+			this._htmlfiles = htmlfiles;
+			this._npcTyp = npcTyp;
+			this._item = item;
 		}
 	}
 	
@@ -273,21 +273,6 @@ public class Q00999_T1Tutorial extends Quest implements ScriptFile
 		}, 1, DIPLOMA));
 	}
 	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public Q00999_T1Tutorial()
 	{
 		super(false);
@@ -298,16 +283,16 @@ public class Q00999_T1Tutorial extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		QuestState qs = st.getPlayer().getQuestState(Q00255_Tutorial.class);
+		final QuestState state = qs.getPlayer().getQuestState(Q00255_Tutorial.class);
 		
-		if (qs == null)
+		if (state == null)
 		{
 			return null;
 		}
 		
-		Player player = st.getPlayer();
+		final Player player = qs.getPlayer();
 		
 		if (player == null)
 		{
@@ -315,98 +300,93 @@ public class Q00999_T1Tutorial extends Quest implements ScriptFile
 		}
 		
 		String htmltext = event;
-		int Ex = qs.getInt("Ex");
-		int classId = player.getClassId().getId();
-		boolean isMage = (player.getRace() != Race.orc) && player.getClassId().isMage();
+		final int Ex = state.getInt("Ex");
+		final int classId = player.getClassId().getId();
+		final boolean isMage = (player.getRace() != Race.orc) && player.getClassId().isMage();
 		
-		if (event.equalsIgnoreCase("TimerEx_NewbieHelper"))
+		switch (event)
 		{
-			if (Ex == 0)
-			{
-				if (isMage)
+			case "TimerEx_NewbieHelper":
+				if (Ex == 0)
 				{
-					st.playTutorialVoice("tutorial_voice_009b");
-				}
-				else
-				{
-					st.playTutorialVoice("tutorial_voice_009a");
-				}
-				
-				qs.set("Ex", "1");
-			}
-			else if (Ex == 3)
-			{
-				st.playTutorialVoice("tutorial_voice_010a");
-				qs.set("Ex", "4");
-			}
-			
-			return null;
-		}
-		else if (event.equalsIgnoreCase("TimerEx_GrandMaster"))
-		{
-			if (Ex >= 4)
-			{
-				st.showQuestionMark(7);
-				st.playSound(SOUND_TUTORIAL);
-				st.playTutorialVoice("tutorial_voice_025");
-			}
-			
-			return null;
-		}
-		else if (event.equalsIgnoreCase("isle"))
-		{
-			st.addRadar(-119692, 44504, 380);
-			player.teleToLocation(-120050, 44500, 360);
-			String title = npc == null ? "" : npc.getTitle() + " " + npc.getName();
-			htmltext = "<html><body>" + title + "<br>Go to the <font color=\"LEVEL\">Isle of Souls</font> and meet the <font color=\"LEVEL\">Newbie Guide</font> there to learn a number of important tips. He will also give you an item to assist your development.<br>Follow the direction arrow above your head and it will lead you to the Newbie Guide. Good luck!</body></html>";
-		}
-		else
-		{
-			Event e = events.get(event);
-			
-			if (e.radarX != 0)
-			{
-				st.addRadar(e.radarX, e.radarY, e.radarZ);
-			}
-			
-			htmltext = e.htm;
-			
-			if ((st.getQuestItemsCount(e.item) > 0) && (st.getInt("onlyone") == 0))
-			{
-				st.addExpAndSp(0, 50);
-				st.startQuestTimer("TimerEx_GrandMaster", 60000);
-				st.takeItems(e.item, 1);
-				
-				if (Ex <= 3)
-				{
-					qs.set("Ex", "4");
-				}
-				
-				if (classId == e.classId1)
-				{
-					st.giveItems(e.gift1, e.count1);
-					
-					if (e.gift1 == SPIRITSHOT_NOVICE)
+					if (isMage)
 					{
-						st.playTutorialVoice("tutorial_voice_027");
+						qs.playTutorialVoice("tutorial_voice_009b");
 					}
 					else
 					{
-						st.playTutorialVoice("tutorial_voice_026");
+						qs.playTutorialVoice("tutorial_voice_009a");
 					}
+					
+					state.set("Ex", "1");
 				}
-				else if (classId == e.classId2)
+				else if (Ex == 3)
 				{
-					if (e.gift2 != 0)
-					{
-						st.giveItems(e.gift2, e.count2);
-						st.playTutorialVoice("tutorial_voice_026");
-					}
+					qs.playTutorialVoice("tutorial_voice_010a");
+					state.set("Ex", "4");
 				}
+				return null;
 				
-				st.set("step", "3");
-				st.set("onlyone", "1");
-			}
+			case "TimerEx_GrandMaster":
+				if (Ex >= 4)
+				{
+					qs.showQuestionMark(7);
+					qs.playSound(SOUND_TUTORIAL);
+					qs.playTutorialVoice("tutorial_voice_025");
+				}
+				return null;
+				
+			case "isle":
+				qs.addRadar(-119692, 44504, 380);
+				player.teleToLocation(-120050, 44500, 360);
+				String title = npc == null ? "" : npc.getTitle() + " " + npc.getName();
+				htmltext = "<html><body>" + title + "<br>Go to the <font color=\"LEVEL\">Isle of Souls</font> and meet the <font color=\"LEVEL\">Newbie Guide</font> there to learn a number of important tips. He will also give you an item to assist your development.<br>Follow the direction arrow above your head and it will lead you to the Newbie Guide. Good luck!</body></html>";
+				break;
+			
+			default:
+				Event e = events.get(event);
+				if (e._radarX != 0)
+				{
+					qs.addRadar(e._radarX, e._radarY, e._radarZ);
+				}
+				htmltext = e._htm;
+				if ((qs.getQuestItemsCount(e._item) > 0) && (qs.getInt("onlyone") == 0))
+				{
+					qs.addExpAndSp(0, 50);
+					qs.startQuestTimer("TimerEx_GrandMaster", 60000);
+					qs.takeItems(e._item, 1);
+					
+					if (Ex <= 3)
+					{
+						state.set("Ex", "4");
+					}
+					
+					if (classId == e._classId1)
+					{
+						qs.giveItems(e._gift1, e._count1);
+						
+						if (e._gift1 == SPIRITSHOT_NOVICE)
+						{
+							qs.playTutorialVoice("tutorial_voice_027");
+						}
+						else
+						{
+							qs.playTutorialVoice("tutorial_voice_026");
+						}
+					}
+					else if (classId == e._classId2)
+					{
+						if (e._gift2 != 0)
+						{
+							qs.giveItems(e._gift2, e._count2);
+							qs.playTutorialVoice("tutorial_voice_026");
+						}
+					}
+					
+					qs.set("step", "3");
+					qs.set("onlyone", "1");
+				}
+				break;
 		}
 		
 		return htmltext;
@@ -416,7 +396,7 @@ public class Q00999_T1Tutorial extends Quest implements ScriptFile
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
 		String htmltext = "";
-		QuestState qs = player.getQuestState(Q00255_Tutorial.class);
+		final QuestState qs = player.getQuestState(Q00255_Tutorial.class);
 		
 		if (qs == null)
 		{
@@ -431,12 +411,12 @@ public class Q00999_T1Tutorial extends Quest implements ScriptFile
 			st = player.getQuestState(getClass());
 		}
 		
-		int Ex = qs.getInt("Ex");
-		int npcId = npc.getId();
-		int step = st.getInt("step");
-		int onlyone = st.getInt("onlyone");
-		int level = player.getLevel();
-		boolean isMage = (player.getRace() != Race.orc) && player.getClassId().isMage();
+		final int Ex = qs.getInt("Ex");
+		final int npcId = npc.getId();
+		final int step = st.getInt("step");
+		final int onlyone = st.getInt("onlyone");
+		final int level = player.getLevel();
+		final boolean isMage = (player.getRace() != Race.orc) && player.getClassId().isMage();
 		Talk t = talks.get(npcId);
 		
 		if (t == null)
@@ -444,18 +424,18 @@ public class Q00999_T1Tutorial extends Quest implements ScriptFile
 			return "";
 		}
 		
-		if (((level >= 10) || (onlyone == 1)) && (t.npcTyp == 1))
+		if (((level >= 10) || (onlyone == 1)) && (t._npcTyp == 1))
 		{
 			htmltext = "30575-05.htm";
 		}
 		else if ((onlyone == 0) && (level < 10))
 		{
-			if (player.getRace().ordinal() == t.raceId)
+			if (player.getRace().ordinal() == t._raceId)
 			{
-				htmltext = t.htmlfiles[0];
+				htmltext = t._htmlfiles[0];
 			}
 			
-			if (t.npcTyp == 1)
+			if (t._npcTyp == 1)
 			{
 				if ((step == 0) && (Ex < 0))
 				{
@@ -474,12 +454,12 @@ public class Q00999_T1Tutorial extends Quest implements ScriptFile
 						st.setState(STARTED);
 					}
 				}
-				else if ((step == 1) && (st.getQuestItemsCount(t.item) == 0) && (Ex <= 2))
+				else if ((step == 1) && (st.getQuestItemsCount(t._item) == 0) && (Ex <= 2))
 				{
 					if (st.getQuestItemsCount(BLUE_GEM) > 0)
 					{
 						st.takeItems(BLUE_GEM, st.getQuestItemsCount(BLUE_GEM));
-						st.giveItems(t.item, 1);
+						st.giveItems(t._item, 1);
 						st.set("step", "2");
 						qs.set("Ex", "3");
 						st.startQuestTimer("TimerEx_NewbieHelper", 30000);
@@ -489,7 +469,7 @@ public class Q00999_T1Tutorial extends Quest implements ScriptFile
 						{
 							st.playTutorialVoice("tutorial_voice_027");
 							st.giveItems(SPIRITSHOT_NOVICE, 100);
-							htmltext = t.htmlfiles[2];
+							htmltext = t._htmlfiles[2];
 							
 							if (htmltext.isEmpty())
 							{
@@ -500,7 +480,7 @@ public class Q00999_T1Tutorial extends Quest implements ScriptFile
 						{
 							st.playTutorialVoice("tutorial_voice_026");
 							st.giveItems(SOULSHOT_NOVICE, 200);
-							htmltext = t.htmlfiles[1];
+							htmltext = t._htmlfiles[1];
 							
 							if (htmltext.isEmpty())
 							{
@@ -527,22 +507,22 @@ public class Q00999_T1Tutorial extends Quest implements ScriptFile
 				}
 				else if (step == 2)
 				{
-					htmltext = t.htmlfiles[3];
+					htmltext = t._htmlfiles[3];
 				}
 			}
-			else if (t.npcTyp == 0)
+			else if (t._npcTyp == 0)
 			{
 				if (step == 1)
 				{
-					htmltext = t.htmlfiles[0];
+					htmltext = t._htmlfiles[0];
 				}
 				else if (step == 2)
 				{
-					htmltext = t.htmlfiles[1];
+					htmltext = t._htmlfiles[1];
 				}
 				else if (step == 3)
 				{
-					htmltext = t.htmlfiles[2];
+					htmltext = t._htmlfiles[2];
 				}
 			}
 		}
@@ -551,27 +531,27 @@ public class Q00999_T1Tutorial extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		QuestState qs = st.getPlayer().getQuestState(Q00255_Tutorial.class);
+		final QuestState state = qs.getPlayer().getQuestState(Q00255_Tutorial.class);
 		
-		if (qs == null)
+		if (state == null)
 		{
 			return null;
 		}
 		
-		int Ex = qs.getInt("Ex");
+		final int Ex = state.getInt("Ex");
 		
 		if (Ex <= 1)
 		{
-			st.playTutorialVoice("tutorial_voice_011");
-			st.showQuestionMark(3);
-			qs.set("Ex", "2");
+			qs.playTutorialVoice("tutorial_voice_011");
+			qs.showQuestionMark(3);
+			state.set("Ex", "2");
 		}
 		
-		if ((Ex <= 2) && (st.getQuestItemsCount(BLUE_GEM) < 1))
+		if ((Ex <= 2) && (qs.getQuestItemsCount(BLUE_GEM) < 1))
 		{
-			ThreadPoolManager.getInstance().schedule(new DropGem(npc, st), 3000);
+			ThreadPoolManager.getInstance().schedule(new DropGem(npc, qs), 3000);
 		}
 		
 		return null;
@@ -603,5 +583,20 @@ public class Q00999_T1Tutorial extends Quest implements ScriptFile
 	public boolean isVisible(Player player)
 	{
 		return false;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }
