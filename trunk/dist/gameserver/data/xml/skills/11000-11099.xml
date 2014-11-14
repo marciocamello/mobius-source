@@ -840,7 +840,7 @@
 		<table name="#powerPvP">0</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mpConsume2">204 216 252 264</table>
-		<table name="#flyradius">-200</table>
+		<table name="#flyradius">-150</table>
 		<table name="#flycourse">180</table>
 		<set name="flyCourse" val="#flycourse"/>			
 		<set name="magicType" val="MAGIC"/>
@@ -1513,6 +1513,8 @@
 		<set name="skillRadius" val="200"/>
 		<set name="skillType" val="DEBUFF"/>
 		<set name="target" val="TARGET_ONE"/>
+		<set name="castRange" val="1100"/>
+		<set name="hitTime" val="1500"/>		
 		<enchant1 levels="10" name="Cost"/>
 		<enchant2 levels="10" name="Chance"/>
 		<enchant3 levels="10" name="Hex">
@@ -1529,13 +1531,11 @@
 				<mul order="0x30" stat="mDef" val="#mdef"/>
 			</effect>
 		</for>
-		<set name="castRange" val="1100"/>
-		<set name="hitTime" val="1500"/>
 	</skill>
 	<skill id="11052" levels="4" name="Mass Hell Binding">
 		<table name="#magicLevel">85 86 87 88</table>
 		<table name="#mpConsume2">247 248 249 250</table>
-		<table name="#power">100 100 100 100</table>
+		<table name="#dot">100</table>
 		<table name="#radius">350</table>
 		<table name="#flyradius">30</table>
 		<set name="reuseDelay" val="300000"/>
@@ -1568,14 +1568,14 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant3>
 		<for>
-			<effect count="1" name="HellBinding" time="10" stackType="paralyze" stackOrder="1"/>
-			<effect count="1" abnormal="bleeding" name="Bleed" stackType="Bleed" time="10" val="#power"/>
+			<effect name="HellBinding" time="9" stackType="paralyze" stackOrder="1"/>
+			<effect count="10" name="MDamOverTime" time="1" val="#dot"/>
 		</for>
 	</skill>
 	<skill id="11053" levels="4" name="Mass Hell Binding">
 		<table name="#magicLevel">85 86 87 88</table>
 		<table name="#mpConsume2">247 248 249 250</table>
-		<table name="#power">100 100 100 100</table>
+		<table name="#dot">100</table>		
 		<table name="#radius">350</table>
 		<table name="#flyradius">30</table>
 		<set name="reuseDelay" val="300000"/>
@@ -1607,8 +1607,8 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant3>
 		<for>
-			<effect count="1" name="HellBinding" time="10" stackType="paralyze" stackOrder="1"/>
-			<effect count="1" abnormal="bleeding" name="Bleed" stackType="Bleed" time="1" val="#power"/>
+			<effect count="1" name="HellBinding" time="9" stackType="paralyze" stackOrder="1"/>
+			<effect count="10" name="MDamOverTime" time="1" val="#dot"/>			
 		</for>
 	</skill>
 	<skill id="11054" levels="1" name="Yoke Status">

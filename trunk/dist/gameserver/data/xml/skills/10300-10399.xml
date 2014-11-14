@@ -1,37 +1,30 @@
 <?xml version="1.0"?>
 <list>
 	<skill id="10300" levels="3" name="Last Attack">
-		<table name="#targetHp">20</table>
 		<table name="#magicLevel">90 95 99</table>
-		<table name="#activateRate">30 40 50</table>
-		<table name="#power">1200 1600 30343</table>
 		<table name="#mpConsume2">92 99 105</table>
-		<table name="#lethal2">100</table>
+		<table name="#ench2Hp">21 22 23 24 25 26 27 28 29 30</table>
+		<table name="#lethal2">5 10 15</table>
+		<table name="#power">1200 1600 30343</table>
+		<set name="icon" val="icon.skill10300"/>
 		<set name="lethal2" val="#lethal2"/>
 		<set name="power" val="#power"/>
-		<set name="reuseDelay" val="30000"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
-		<set name="target" val="TARGET_ONE"/>
-		<set name="skillType" val="PDAM"/>
-		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="activateRate" val="#activateRate"/>
-		<set name="nextAction" val="attack"/>
 		<set name="hitTime" val="1690"/>
+		<set name="reuseDelay" val="15000"/>
+		<set name="nextAction" val="attack"/>
 		<set name="blow" val="true"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="SSBoost" val="1.5"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msgId="113" addName="1">
 			<and>
-				<target percentHP="#targetHp"/>	
-				<target mob="true"/>
+				<target percentHP="20"/>
+				<using kind="Big Sword, Sword, Dual Sword, Blunt, Dual Blunt, Pole, Fist, Dual Fist"/>
 			</and>
 		</cond>
-		<enchant1 levels="10" name="Cost"/>
-		<enchant2 name="Decrease Penalty">
-			<table name="#targetHp">21 22 23 24 25 26 27 28 29 30</table>
-		</enchant2>
-		<for>
-			<effect name="HpToOne"/>
-		</for>
 	</skill>
 	<skill id="10301" levels="1" name="Maximum Force Mastery">
 		<set name="magicLevel" val="85"/>
@@ -47,12 +40,11 @@
 		<table name="#mpConsume2">103 105 108 110</table>
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#power">17658 20145 22145 25685</table>
-		<set name="coolTime" val="133"/>
 		<set name="reuseDelay" val="10999"/>
 		<set name="hitTime" val="1066"/>
 		<set name="power" val="#power"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="hitTime" val="1667"/>
+		<set name="hitTime" val="2500"/>
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="effectPoint" val="#effectPoint"/>
@@ -100,19 +92,24 @@
 	</skill>
 	<skill id="10305" levels="4" name="Broad Pull">
 		<table name="#magicLevel">85 90 95 99</table>
-		<table name="#pDef">1.10 1.12 1.15 1.20</table>
 		<table name="#effectPoint">9937 10000 10070 10130</table>
+		<table name="#activateRate">75</table>				
+		<table name="#radius">1500</table>		
+		<set name="skillRadius" val="#radius"/>		
+		<set name="activateRate" val="#activateRate"/>
 		<set name="effectPoint" val="#effectPoint"/>
 		<set name="reuseDelay" val="4099"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="power" val="5500"/>
-		<set name="target" val="TARGET_ONE"/>
+		<set name="target" val="TARGET_AURA"/>
 		<set name="skillType" val="AGGRESSION"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="isReuseDelayPermanent" val="true"/>
-		<effect count="1" name="Aggression" time="3" val="0">
-			<div order="0x30" stat="pDef" val="#pDef"/>
-		</effect>
+		<for>
+			<effect count="1" name="Aggression" time="14" val="0">
+				<mul order="0x30" stat="poleWpnVuln" val="0.80"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="10306" levels="4" name="Superior Polearm Mastery">
 		<table name="#magicLevel">85 90 95 99</table>
@@ -212,20 +209,23 @@
 	<skill id="10313" levels="4" name="Infinite Rush">
 		<table name="#mpConsume2">78 87 99 103</table>
 		<table name="#magicLevel">85 90 95 99</table>
-		<set name="coolTime" val="200"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="castRange" val="400"/>
-		<set name="hitTime" val="800"/>
-		<set name="hitCancelTime" val="5000"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="200"/>
+		<set name="effectRange" val="600"/>		
+		<set name="hitCancelTime" val="5000000"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
-		<set name="target" val="TARGET_ONE"/>
+		<set name="target" val="TARGET_TUNNEL"/>
 		<set name="skillType" val="DEBUFF"/>
 		<set name="flyType" val="CHARGE"/>
+		<set name="flySpeed" val="600"/>		
 		<set name="flyRadius" val="600"/>
-		<set name="flyToBack" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="reuseDelay" val="399"/>
 		<set name="nextAction" val="attack"/>
+		<set name="relationSkillsId" val="793"/>
+		<set name="saveVs" val="CON"/>
+		<set name="isSkillTimePermanent" val="true"/>		
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="9" val="0"/>
 		</for>

@@ -41,6 +41,5 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="overHit" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="nextAction" val="attack"/>
 	</skill>
 </list>

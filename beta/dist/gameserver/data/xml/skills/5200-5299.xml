@@ -1123,7 +1123,7 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="saveVs" val="MEN"/>
 		<for>
-			<effect count="1" name="Buff" time="30" val="0">
+			<effect count="1" name="Buff" time="10" val="0">
 				<mul order="0x30" stat="pAtkSpd" val="#power"/>
 				<mul order="0x30" stat="mAtkSpd" val="#power"/>
 				<mul order="0x30" stat="runSpd" val="#power"/>
@@ -1165,7 +1165,7 @@
 		<set name="trait" val="HOLD"/>
 		<set name="saveVs" val="MEN"/>
 		<for>
-			<effect count="1" name="Root" stackOrder="-1" stackType="Root" time="30" val="0"/>
+			<effect count="1" name="Root" stackOrder="-1" stackType="Root" time="10" val="0"/>
 		</for>
 	</skill>
 	<skill id="5272" levels="17" name="Decoy Provocation">

@@ -123,7 +123,7 @@
 		<set name="negateEffects" val="Stun"/>
 		<set name="castOverStun" val="true"/>
 		<for>
-			<effect name="Buff" stackOrder="1" stackType="AntharasStunRes" time="300">
+			<effect name="Buff" stackOrder="1" stackType="AntharasStunRes" time="5">
 				<add order="0x40" stat="stunResist" val="100"/>
 			</effect>
 		</for>
@@ -137,9 +137,8 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x60" stat="maxHp" val="625"/>
-			<add order="0x40" stat="sleepResist" val="50"/>
-			<add order="0x40" stat="sleepPower" val="50"/>
+			<add order="0x40" stat="maxHp" val="625"/>
+			<mul order="0x30" stat="sleepResist" val="1.50"/>
 			<mul order="0x30" stat="mReuse" val="0.90"/>
 			<mul order="0x30" stat="pReuse" val="0.90"/>
 			<mul order="0x30" stat="pAtk" val="1.10"/>
@@ -158,13 +157,13 @@
 		<set name="skillType" val="NEGATE_EFFECTS"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="negateEffects" val="Root"/>
+		<set name="hitTime" val="200"/>
+		<set name="reuseDelay" val="7200000"/>		
 		<for>
-			<effect name="Buff" stackOrder="1" stackType="ValakasHoldRes" time="300">
+			<effect name="Buff" stackOrder="1" stackType="ValakasHoldRes" time="5">
 				<add order="0x40" stat="rootResist" val="100"/>
 			</effect>
 		</for>
-		<set name="hitTime" val="200"/>
-		<set name="reuseDelay" val="7200000"/>
 	</skill>
 	<skill id="13317" levels="1" name="Earth Wyrm Heart Ring">
 		<set name="magicLvl" val="85"/>

@@ -2,19 +2,20 @@
 <list>
 	<skill id="10500" levels="1" name="Tyrr Warrior Knock Chain Skill">
 		<set name="reuseDelay" val="10000"/>
-		<set name="hitTime" val="2000"/>
+		<set name="hitTime" val="1000"/>
 		<set name="mpConsume1" val="40"/>
-		<set name="castRange" val="45"/>
+		<set name="castRange" val="100"/>
 		<set name="power" val="15803"/>
 		<set name="magicLevel" val="85"/>
-		<set name="coolTime" val="1500"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="flyType" val="CHARGE"/>
+		<set name="flyRadius" val="0"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
 		<set name="isSkillTimePermanent" val="true"/>
 		<set name="isAlterSkill" val="true"/>
+		<set name="activateRate" val="100"/>
 		<cond msgId="113" addName="1">
 			<not>
 				<using kind="Bow, Crossbow"/>
@@ -1025,7 +1026,9 @@
 		<set name="skillType" val="CONT"/>
 		<set name="isHideStartMessage" val="true"/>
 		<set name="operateType" val="OP_TOGGLE"/>
+		<set name="cancelTarget" val="100"/>		
 		<for>
+			<effect count="0x7fffffff" name="CannotTarget" stackOrder="-1" stackType="CannotTarget" time="3" val="0" chance="100"/>		
 			<effect count="0x7fffffff" name="FakeDeath" time="5" val="10"/>
 		</for>
 	</skill>

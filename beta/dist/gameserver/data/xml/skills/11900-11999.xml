@@ -25,7 +25,7 @@
 		<set name="hitTime" val="2000"/>
 		<set name="mpConsume2" val="40"/>
 		<set name="castRange" val="900"/>
-		<set name="power" val="230"/>
+		<set name="power" val="17803"/>
 		<set name="magicLevel" val="85"/>
 		<set name="coolTime" val="300"/>
 		<set name="skillType" val="MDAM"/>
@@ -33,7 +33,6 @@
 		<set name="target" val="TARGET_ONE"/>
 		<set name="overHit" val="true"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="nextAction" val="attack"/>
 		<set name="isAlterSkill" val="true"/>
 		<set name="isSkillTimePermanent" val="true"/>
 	</skill>
