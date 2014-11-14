@@ -23,9 +23,9 @@ import lineage2.gameserver.scripts.ScriptFile;
  */
 public class Q00753_ReactingToACrisis extends Quest implements ScriptFile
 {
-	// q items
+	// Items
 	private static final int KEY = 36054;
-	// reward items
+	// Rewards
 	private static final int SCROLL = 36082;
 	private static final int BERNA = 33796;
 	private static final String GOLEM_KILL = "Golem_kill";
@@ -42,59 +42,57 @@ public class Q00753_ReactingToACrisis extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("accepted.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		if (event.equalsIgnoreCase("endquest.htm"))
-		{
-			st.getPlayer().unsetVar("q753doneKill");
-			st.takeAllItems(KEY);
-			st.getPlayer().addExpAndSp(408665250, 40866525);
-			st.giveItems(SCROLL, 1);
-			st.exitCurrentQuest(this);
-			st.playSound(SOUND_FINISH);
+			case "accepted.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "endquest.htm":
+				qs.getPlayer().unsetVar("q753doneKill");
+				qs.takeAllItems(KEY);
+				qs.getPlayer().addExpAndSp(408665250, 40866525);
+				qs.giveItems(SCROLL, 1);
+				qs.exitCurrentQuest(this);
+				qs.playSound(SOUND_FINISH);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
 		String htmltext = "noquest";
-		QuestState Mj = st.getPlayer().getQuestState(Q10386_MysteriousJourney.class);
+		QuestState Mj = qs.getPlayer().getQuestState(Q10386_MysteriousJourney.class);
 		
 		if ((Mj == null) || !Mj.isCompleted())
 		{
-			return "you cannot procceed with this quest until you have completed the Mystrerious Journey quest";
+			return "You cannot procceed with this quest until you have completed the Mystrerious Journey quest";
 		}
 		
-		if (st.isNowAvailable())
+		if (qs.isNowAvailable())
 		{
-			if (npcId == BERNA)
+			switch (qs.getCond())
 			{
-				if (cond == 0)
-				{
+				case 0:
 					htmltext = "start.htm";
-				}
-				else if (cond == 1)
-				{
+					break;
+				
+				case 1:
 					htmltext = "notcollected.htm";
-				}
-				else if (cond == 2)
-				{
+					break;
+				
+				case 2:
 					htmltext = "collected.htm";
-				}
+					break;
 			}
 		}
 		else
@@ -135,9 +133,7 @@ public class Q00753_ReactingToACrisis extends Quest implements ScriptFile
 		
 		if ((npc.getId() == 19296) && !qs.getPlayer().getVarB("q753doneKill"))
 		{
-			boolean doneKill = updateKill(npc, qs);
-			
-			if (doneKill)
+			if (updateKill(npc, qs))
 			{
 				qs.unset(GOLEM_KILL);
 				

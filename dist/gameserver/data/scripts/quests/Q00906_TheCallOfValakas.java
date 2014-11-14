@@ -20,8 +20,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00906_TheCallOfValakas extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int Klein = 31540;
+	// Item
 	private static final int LavasaurusAlphaFragment = 21993;
+	// Monster
 	private static final int ValakasMinion = 29029;
 	
 	public Q00906_TheCallOfValakas()
@@ -33,93 +36,88 @@ public class Q00906_TheCallOfValakas extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("klein_q906_04.htm"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("klein_q906_07.htm"))
-		{
-			st.takeAllItems(LavasaurusAlphaFragment);
-			st.giveItems(21895, 1);
-			st.setState(COMPLETED);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(this);
+			case "klein_q906_04.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "klein_q906_07.htm":
+				qs.takeAllItems(LavasaurusAlphaFragment);
+				qs.giveItems(21895, 1);
+				qs.setState(COMPLETED);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(this);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int cond = st.getCond();
+		final int cond = qs.getCond();
 		
-		if (npc.getId() == Klein)
+		switch (qs.getState())
 		{
-			switch (st.getState())
-			{
-				case CREATED:
-					if (st.isNowAvailableByTime())
+			case CREATED:
+				if (qs.isNowAvailableByTime())
+				{
+					if (qs.getPlayer().getLevel() >= 83)
 					{
-						if (st.getPlayer().getLevel() >= 83)
+						if (qs.getQuestItemsCount(7267) > 0)
 						{
-							if (st.getQuestItemsCount(7267) > 0)
-							{
-								htmltext = "klein_q906_01.htm";
-							}
-							else
-							{
-								htmltext = "klein_q906_00b.htm";
-							}
+							htmltext = "klein_q906_01.htm";
 						}
 						else
 						{
-							htmltext = "klein_q906_00.htm";
-							st.exitCurrentQuest(true);
+							htmltext = "klein_q906_00b.htm";
 						}
 					}
 					else
 					{
-						htmltext = "klein_q906_00a.htm";
+						htmltext = "klein_q906_00.htm";
+						qs.exitCurrentQuest(true);
 					}
-					
-					break;
-				
-				case STARTED:
-					if (cond == 1)
-					{
-						htmltext = "klein_q906_05.htm";
-					}
-					else if (cond == 2)
-					{
-						htmltext = "klein_q906_06.htm";
-					}
-					
-					break;
-			}
+				}
+				else
+				{
+					htmltext = "klein_q906_00a.htm";
+				}
+				break;
+			
+			case STARTED:
+				if (cond == 1)
+				{
+					htmltext = "klein_q906_05.htm";
+				}
+				else if (cond == 2)
+				{
+					htmltext = "klein_q906_06.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		
-		if (cond == 1)
+		if (qs.getCond() == 1)
 		{
 			if ((npc.getId() == ValakasMinion) && Rnd.chance(40))
 			{
-				st.giveItems(LavasaurusAlphaFragment, 1);
-				st.setCond(2);
+				qs.giveItems(LavasaurusAlphaFragment, 1);
+				qs.setCond(2);
 			}
 		}
 		

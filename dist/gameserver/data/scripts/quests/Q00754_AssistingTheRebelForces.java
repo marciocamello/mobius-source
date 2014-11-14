@@ -39,8 +39,7 @@ public class Q00754_AssistingTheRebelForces extends Quest implements ScriptFile
 	{
 		super(2);
 		addStartNpc(SIZRAK);
-		addTalkId(SIZRAK);
-		addTalkId(COMMUNICATION);
+		addTalkId(SIZRAK, COMMUNICATION);
 		addKillNpcWithLog(1, KUNDA_GUARDIAN_KILL, 5, KUNDA_GUARDIAN);
 		addKillNpcWithLog(1, KUNDA_BERSERKER_KILL, 5, KUNDA_BERSERKER);
 		addKillNpcWithLog(1, KUNDA_EXECUTOR_KILL, 5, KUNDA_EXECUTOR);
@@ -48,15 +47,15 @@ public class Q00754_AssistingTheRebelForces extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("quest_accpted"))
+		if (event.equals("quest_accpted"))
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
+			qs.setState(STARTED);
+			qs.setCond(1);
+			qs.playSound(SOUND_ACCEPT);
 			htmltext = "sofa_sizraku_q0754_04.htm";
 		}
 		
@@ -64,69 +63,67 @@ public class Q00754_AssistingTheRebelForces extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
 		String htmltext = "noquest";
+		final int cond = qs.getCond();
 		
-		if (npcId == SIZRAK)
+		switch (npc.getId())
 		{
-			if (st.isCreated() && !st.isNowAvailable())
-			{
-				htmltext = "sofa_sizraku_q0754_06.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = "sofa_sizraku_q0754_01.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "sofa_sizraku_q0754_07.htm";
-			}
-			else if (cond == 2)
-			{
-				st.getPlayer().addExpAndSp(570676680, 261024840);
-				st.giveItems(REBEL_SUPPLY_BOX, 1);
-				st.giveItems(MARK_OF_RESISTANCE, 1);
-				st.exitCurrentQuest(this);
-				st.playSound(SOUND_FINISH);
-				htmltext = "sofa_sizraku_q0754_08.htm";
-			}
-			else
-			{
-				htmltext = "sofa_sizraku_q0754_05.htm";
-			}
-		}
-		
-		if (npcId == COMMUNICATION)
-		{
-			if (cond == 2)
-			{
-				st.getPlayer().addExpAndSp(570676680, 261024840);
-				st.giveItems(REBEL_SUPPLY_BOX, 1);
-				st.giveItems(MARK_OF_RESISTANCE, 1);
-				st.exitCurrentQuest(this);
-				st.playSound(SOUND_FINISH);
-				htmltext = "sofa_sizraku_q0754_08.htm";
-			}
+			case SIZRAK:
+				if (qs.isCreated() && !qs.isNowAvailable())
+				{
+					htmltext = "sofa_sizraku_q0754_06.htm";
+				}
+				else if (cond == 0)
+				{
+					htmltext = "sofa_sizraku_q0754_01.htm";
+				}
+				else if (cond == 1)
+				{
+					htmltext = "sofa_sizraku_q0754_07.htm";
+				}
+				else if (cond == 2)
+				{
+					qs.getPlayer().addExpAndSp(570676680, 261024840);
+					qs.giveItems(REBEL_SUPPLY_BOX, 1);
+					qs.giveItems(MARK_OF_RESISTANCE, 1);
+					qs.exitCurrentQuest(this);
+					qs.playSound(SOUND_FINISH);
+					htmltext = "sofa_sizraku_q0754_08.htm";
+				}
+				else
+				{
+					htmltext = "sofa_sizraku_q0754_05.htm";
+				}
+				break;
+			
+			case COMMUNICATION:
+				if (cond == 2)
+				{
+					qs.getPlayer().addExpAndSp(570676680, 261024840);
+					qs.giveItems(REBEL_SUPPLY_BOX, 1);
+					qs.giveItems(MARK_OF_RESISTANCE, 1);
+					qs.exitCurrentQuest(this);
+					qs.playSound(SOUND_FINISH);
+					htmltext = "sofa_sizraku_q0754_08.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		boolean doneKill = updateKill(npc, st);
-		
-		if (doneKill)
+		if (updateKill(npc, qs))
 		{
-			st.unset(KUNDA_GUARDIAN_KILL);
-			st.unset(KUNDA_BERSERKER_KILL);
-			st.unset(KUNDA_EXECUTOR_KILL);
-			st.playSound(SOUND_MIDDLE);
-			st.setCond(2);
+			qs.unset(KUNDA_GUARDIAN_KILL);
+			qs.unset(KUNDA_BERSERKER_KILL);
+			qs.unset(KUNDA_EXECUTOR_KILL);
+			qs.playSound(SOUND_MIDDLE);
+			qs.setCond(2);
 		}
 		
 		return null;

@@ -19,8 +19,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00907_DragonTrophyValakas extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int Klein = 31540;
+	// Monster
 	private static final int Valakas = 29028;
+	// Item
 	private static final int MedalofGlory = 21874;
 	
 	public Q00907_DragonTrophyValakas()
@@ -31,84 +34,79 @@ public class Q00907_DragonTrophyValakas extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("klein_q907_04.htm"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("klein_q907_07.htm"))
-		{
-			st.giveItems(MedalofGlory, 30);
-			st.setState(COMPLETED);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(true);
+			case "klein_q907_04.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "klein_q907_07.htm":
+				qs.giveItems(MedalofGlory, 30);
+				qs.setState(COMPLETED);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(true);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int cond = st.getCond();
+		final int cond = qs.getCond();
 		
-		if (npc.getId() == Klein)
+		switch (qs.getState())
 		{
-			switch (st.getState())
-			{
-				case CREATED:
-					if (st.getPlayer().getLevel() >= 84)
+			case CREATED:
+				if (qs.getPlayer().getLevel() >= 84)
+				{
+					if (qs.getQuestItemsCount(7267) > 0)
 					{
-						if (st.getQuestItemsCount(7267) > 0)
-						{
-							htmltext = "klein_q907_01.htm";
-						}
-						else
-						{
-							htmltext = "klein_q907_00b.htm";
-						}
+						htmltext = "klein_q907_01.htm";
 					}
 					else
 					{
-						htmltext = "klein_q907_00.htm";
-						st.exitCurrentQuest(true);
+						htmltext = "klein_q907_00b.htm";
 					}
-					
-					break;
-				
-				case STARTED:
-					if (cond == 1)
-					{
-						htmltext = "klein_q907_05.htm";
-					}
-					else if (cond == 2)
-					{
-						htmltext = "klein_q907_06.htm";
-					}
-					
-					break;
-			}
+				}
+				else
+				{
+					htmltext = "klein_q907_00.htm";
+					qs.exitCurrentQuest(true);
+				}
+				break;
+			
+			case STARTED:
+				if (cond == 1)
+				{
+					htmltext = "klein_q907_05.htm";
+				}
+				else if (cond == 2)
+				{
+					htmltext = "klein_q907_06.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		
-		if (cond == 1)
+		if (qs.getCond() == 1)
 		{
 			if (npc.getId() == Valakas)
 			{
-				st.setCond(2);
+				qs.setCond(2);
 			}
 		}
 		

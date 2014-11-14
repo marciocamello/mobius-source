@@ -231,21 +231,6 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 	
 	private static final TIntObjectHashMap<World> worlds = new TIntObjectHashMap<>();
 	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public Q01202_CrystalCaverns()
 	{
 		super(true);
@@ -283,9 +268,9 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 	@Override
 	public String onSkillUse(NpcInstance npc, Skill skill, QuestState qs)
 	{
-		World world = worlds.get(qs.getPlayer().getReflectionId());
-		int skillId = skill.getId();
-		int npcId = npc.getId();
+		final World world = worlds.get(qs.getPlayer().getReflectionId());
+		final int skillId = skill.getId();
+		final int npcId = npc.getId();
 		
 		if (((npcId == OG2) || (npcId == OG3) || (npcId == OG4)) && ((skillId == 1217) || (skillId == 1218) || (skillId == 1011) || (skillId == 1015) || (skillId == 1401) || (skillId == 5146)))
 		{
@@ -303,51 +288,53 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 		Location teleto = null;
 		boolean spawn_captain = false;
 		
-		if (npcId == ORACLE_GUIDE2)
+		switch (npcId)
 		{
-			Reflection r = ReflectionManager.getInstance().get(world.instanceId);
-			r.openDoor(DOOR5);
-			r.openDoor(DOOR6);
-		}
-		else if (npcId == OG1)
-		{
-			spawn_captain = true;
-		}
-		else if (npcId == OG2)
-		{
-			if (world.OracleTriggered)
-			{
-				runSteamRoom2(world);
-				teleto = new Location(147529, 152587, -12169);
-			}
-			else
-			{
+			case ORACLE_GUIDE2:
+				Reflection r = ReflectionManager.getInstance().get(world.instanceId);
+				r.openDoor(DOOR5);
+				r.openDoor(DOOR6);
+				break;
+			
+			case OG1:
 				spawn_captain = true;
-			}
-		}
-		else if (npcId == OG3)
-		{
-			if (world.OracleTriggered)
-			{
-				runSteamRoom3(world);
-				teleto = new Location(150194, 152610, -12169);
-			}
-			else
-			{
-				spawn_captain = true;
-			}
-		}
-		else if (npcId == OG4)
-		{
-			if (world.OracleTriggered)
-			{
-				runSteamRoom4(world);
-				teleto = new Location(149743, 149986, -12141);
-			}
-			else
-			{
-				spawn_captain = true;
-			}
+				break;
+			
+			case OG2:
+				if (world.OracleTriggered)
+				{
+					runSteamRoom2(world);
+					teleto = new Location(147529, 152587, -12169);
+				}
+				else
+				{
+					spawn_captain = true;
+				}
+				break;
+			
+			case OG3:
+				if (world.OracleTriggered)
+				{
+					runSteamRoom3(world);
+					teleto = new Location(150194, 152610, -12169);
+				}
+				else
+				{
+					spawn_captain = true;
+				}
+				break;
+			
+			case OG4:
+				if (world.OracleTriggered)
+				{
+					runSteamRoom4(world);
+					teleto = new Location(149743, 149986, -12141);
+				}
+				else
+				{
+					spawn_captain = true;
+				}
+				break;
 		}
 		
 		if (spawn_captain && Rnd.chance(50))
@@ -362,7 +349,7 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 		
 		if (teleto != null)
 		{
-			Party party = player.getParty();
+			final Party party = player.getParty();
 			
 			if (party != null)
 			{
@@ -381,60 +368,54 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		Player player = st.getPlayer();
+		final Player player = qs.getPlayer();
 		
-		if (event.equalsIgnoreCase("EnterEmeraldSteam"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			enterInstance(player, 1);
-			return null;
-		}
-		else if (event.equalsIgnoreCase("EnterCoralGarden"))
-		{
-			st.setState(STARTED);
-			enterInstance(player, 2);
-			return null;
-		}
-		else if (event.equalsIgnoreCase("meet"))
-		{
-			int state = BaylorManager.canIntoBaylorLair(player);
-			
-			if ((state == 1) || (state == 2))
-			{
-				return "meetingNo.htm";
-			}
-			else if (state == 4)
-			{
-				return "meetingNoParty.htm";
-			}
-			else if (state == 3)
-			{
-				return "teleportOut.htm";
-			}
-			
-			st.giveItems(PRISON_KEY, 1, false);
-			BaylorManager.entryToBaylorLair(player);
-			return "meeting.htm";
-		}
-		else if (event.equalsIgnoreCase("out"))
-		{
-			if (player.getParty() != null)
-			{
-				player.getParty().setReflection(null);
+			case "EnterEmeraldSteam":
+				qs.setState(STARTED);
+				enterInstance(player, 1);
+				return null;
 				
-				for (Player pl : player.getParty().getPartyMembers())
+			case "EnterCoralGarden":
+				qs.setState(STARTED);
+				enterInstance(player, 2);
+				return null;
+				
+			case "meet":
+				switch (BaylorManager.canIntoBaylorLair(player))
 				{
-					pl.teleToLocation(149361, 172327, -945, 0);
+					case 1:
+					case 2:
+						return "meetingNo.htm";
+						
+					case 4:
+						return "meetingNoParty.htm";
+						
+					case 3:
+						return "teleportOut.htm";
 				}
-			}
-			else
-			{
-				player.teleToLocation(149361, 172327, -945, 0);
-			}
-			
-			return null;
+				qs.giveItems(PRISON_KEY, 1, false);
+				BaylorManager.entryToBaylorLair(player);
+				return "meeting.htm";
+				
+			case "out":
+				if (player.getParty() != null)
+				{
+					player.getParty().setReflection(null);
+					
+					for (Player pl : player.getParty().getPartyMembers())
+					{
+						pl.teleToLocation(149361, 172327, -945, 0);
+					}
+				}
+				else
+				{
+					player.teleToLocation(149361, 172327, -945, 0);
+				}
+				return null;
 		}
 		
 		return event;
@@ -443,27 +424,22 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 	@Override
 	public String onTalk(NpcInstance npc, QuestState st)
 	{
-		int npcId = npc.getId();
-		
-		if (npcId == ORACLE_GUIDE3)
+		if (npc.getId() == ORACLE_GUIDE3)
 		{
-			int state = BaylorManager.canIntoBaylorLair(st.getPlayer());
-			
-			if ((state == 1) || (state == 2))
+			switch (BaylorManager.canIntoBaylorLair(st.getPlayer()))
 			{
-				return "meetingNo.htm";
-			}
-			else if (state == 4)
-			{
-				return "meetingNoParty.htm";
-			}
-			else if (state == 3)
-			{
-				return "teleportOut.htm";
-			}
-			else if (state == 0)
-			{
-				return "meetingOk.htm";
+				case 1:
+				case 2:
+					return "meetingNo.htm";
+					
+				case 4:
+					return "meetingNoParty.htm";
+					
+				case 3:
+					return "teleportOut.htm";
+					
+				case 0:
+					return "meetingOk.htm";
 			}
 			
 			return "32280.htm";
@@ -473,10 +449,10 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		World world = worlds.get(npc.getReflectionId());
+		final int npcId = npc.getId();
+		final World world = worlds.get(npc.getReflectionId());
 		
 		if (world == null)
 		{
@@ -488,15 +464,14 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 			case 0:
 				if (npcId == GK1)
 				{
-					st.dropItem(npc, BLUE_CORAL_KEY, 1);
+					qs.dropItem(npc, BLUE_CORAL_KEY, 1);
 					runEmerald(world);
 				}
 				else if (npcId == GK2)
 				{
-					st.dropItem(npc, RED_CORAL_KEY, 1);
+					qs.dropItem(npc, RED_CORAL_KEY, 1);
 					runSteamRoom1(world);
 				}
-				
 				break;
 			
 			case 1:
@@ -505,7 +480,6 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 					world.status = 2;
 					addSpawnToInstance(TOURMALINE, new Location(147937, 145886, -12256, 0), 0, world.instanceId);
 				}
-				
 				break;
 			
 			case 2:
@@ -514,7 +488,6 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 					world.status = 3;
 					addSpawnToInstance(TEROD, new Location(147191, 146855, -12266, 0), 0, world.instanceId);
 				}
-				
 				break;
 			
 			case 3:
@@ -523,7 +496,6 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 					world.status = 4;
 					addSpawnToInstance(TOURMALINE, new Location(144840, 143792, -11991, 0), 0, world.instanceId);
 				}
-				
 				break;
 			
 			case 4:
@@ -532,7 +504,6 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 					world.status = 5;
 					addSpawnToInstance(DOLPH, new Location(142067, 145364, -12036, 0), 0, world.instanceId);
 				}
-				
 				break;
 			
 			case 5:
@@ -540,7 +511,6 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 				{
 					world.status = 6;
 				}
-				
 				break;
 			
 			case 20:
@@ -565,7 +535,6 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 				{
 					runSteamRoom1Oracle(world);
 				}
-				
 				break;
 			
 			case 21:
@@ -590,7 +559,6 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 				{
 					runSteamRoom2Oracle(world);
 				}
-				
 				break;
 			
 			case 22:
@@ -615,7 +583,6 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 				{
 					runSteamRoom3Oracle(world);
 				}
-				
 				break;
 			
 			case 23:
@@ -642,7 +609,6 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 					addSpawnToInstance(ORACLE_GUIDE2, new Location(152243, 150152, -12141, 0), 0, world.instanceId);
 					runKechi(world);
 				}
-				
 				break;
 			
 			case 30:
@@ -650,7 +616,6 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 				{
 					runCoralGardenGolems(world);
 				}
-				
 				break;
 		}
 		
@@ -667,22 +632,22 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 			}
 		}
 		
-		long seedsCount = (long) (1 * Config.RATE_DROP_ITEMS);
+		final long seedsCount = (long) (1 * Config.RATE_DROP_ITEMS);
 		
 		if (npcId == DARNEL)
 		{
 			addSpawnToInstance(ORACLE_GUIDE3, new Location(152760, 145944, -12584, 0), 0, world.instanceId);
-			st.giveItems(Rnd.chance(50) ? WHITE_SEED_OF_EVIL_SHARD : BLACK_SEED_OF_EVIL_SHARD, seedsCount);
+			qs.giveItems(Rnd.chance(50) ? WHITE_SEED_OF_EVIL_SHARD : BLACK_SEED_OF_EVIL_SHARD, seedsCount);
 		}
 		else if (npcId == KECHI)
 		{
 			addSpawnToInstance(ORACLE_GUIDE3, new Location(154072, 149528, -12152, 0), 0, world.instanceId);
-			st.giveItems(Rnd.chance(50) ? WHITE_SEED_OF_EVIL_SHARD : BLACK_SEED_OF_EVIL_SHARD, seedsCount);
+			qs.giveItems(Rnd.chance(50) ? WHITE_SEED_OF_EVIL_SHARD : BLACK_SEED_OF_EVIL_SHARD, seedsCount);
 		}
 		else if (npcId == TEARS)
 		{
 			addSpawnToInstance(ORACLE_GUIDE3, new Location(144307, 154419, -11857, 0), 0, world.instanceId);
-			st.giveItems(Rnd.chance(50) ? WHITE_SEED_OF_EVIL_SHARD : BLACK_SEED_OF_EVIL_SHARD, seedsCount);
+			qs.giveItems(Rnd.chance(50) ? WHITE_SEED_OF_EVIL_SHARD : BLACK_SEED_OF_EVIL_SHARD, seedsCount);
 		}
 		
 		return null;
@@ -690,7 +655,7 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 	
 	private void enterInstance(Player player, int type)
 	{
-		Reflection r = player.getActiveReflection();
+		final Reflection r = player.getActiveReflection();
 		
 		if (r != null)
 		{
@@ -984,7 +949,7 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 		NpcInstance newNpc;
 		newNpc = addSpawnToInstance(DARNEL, new Location(152759, 145949, -12588, 21592), 0, world.instanceId);
 		world.DarnelRoom.npclist.put(newNpc, false);
-		Reflection r = ReflectionManager.getInstance().get(world.instanceId);
+		final Reflection r = ReflectionManager.getInstance().get(world.instanceId);
 		r.openDoor(DOOR3);
 		r.openDoor(DOOR4);
 	}
@@ -1287,5 +1252,20 @@ public class Q01202_CrystalCaverns extends Quest implements ScriptFile
 		}
 		
 		return true;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }
