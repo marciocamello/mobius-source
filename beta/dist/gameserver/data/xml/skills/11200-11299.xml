@@ -1344,6 +1344,7 @@
 		<table name="#activateRate">40</table>
 		<table name="#mpConsume2">120 125 130 135 138 140</table>
 		<table name="#dotDamage">282 288 296 305 313 322</table>
+		<table name="#time">10</table>
 		<set name="reuseDelay" val="300000"/>
 		<set name="hitTime" val="3000"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
