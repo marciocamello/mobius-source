@@ -840,7 +840,9 @@
 		<table name="#power">355 365 375 385 395</table>
 		<table name="#activateRate">60</table>
 		<table name="#mpConsume2">85 88 90 95 99</table>
-		<table name="#dotDamage">706 728 748 770 790 </table>
+		<table name="#dotDamage">355 365 375 385 395</table>
+		<table name="#time">10</table>
+		<set name="icon" val="skill11273"/>
 		<set name="reuseDelay" val="60000"/>
 		<set name="hitTime" val="1500"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
@@ -850,6 +852,8 @@
 		<set name="activateRate" val="#activateRate"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="save" val="3"/>
+		<set name="isDebuff" val="true"/>
+		<set name="trait" val="PARALYZE"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="DEBUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -869,8 +873,10 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant3>
 		<for>
-			<effect name="Paralyze" stackType="Exile" stackOrder="1" time="10" abnormal="s_56"/>
-			<effect name="DamOverTime" count="10" stackType="Bleed" time="1" val="#dotDamage"/>
+			<effect count="1" name="Petrification" stackType="Paralyze" stackOrder="10" time="#time" abnormal="s_56"/>
+		</for>
+		<for>
+			<effect count="10" name="DamOverTime" time="1" val="#dotDamage" stackOrder="-1" abnormal="poison"/>
 		</for>
 	</skill>
 	<skill id="11274" levels="4" name="Summon Barrier">
@@ -1362,10 +1368,10 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant3>
 		<for>
-			<effect name="Paralyze" stackType="Exile" stackOrder="1" time="10" abnormal="s_56"/>
+			<effect count="1" name="Petrification" stackType="Paralyze" stackOrder="10" time="#time" abnormal="s_56"/>
 		</for>
 		<for>
-			<effect name="DamOverTime" count="10" stackType="Bleed" time="1" val="#dotDamage"/>
+			<effect count="10" name="DamOverTime" time="1" val="#dotDamage" stackOrder="-1" abnormal="poison"/>
 		</for>
 	</skill>
 	<skill id="11297" levels="4" name="Blessing of the Giants">
@@ -1394,7 +1400,7 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant3>
 		<for>
-			<effect name="Buff" time="#time" stackOrder="1">
+			<effect name="Buff" time="1770" val="0" stackOrder="1" stackType="ancient">
 				<mul order="0x30" stat="pAtk" val="1.2"/>
 				<mul order="0x30" stat="pDef" val="1.2"/>
 				<mul order="0x30" stat="mDef" val="1.2"/>

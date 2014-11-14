@@ -91,24 +91,24 @@
 		<set name="nextAction" val="attack"/>
 		<set name="isSkillTimePermanent" val="true"/>
 		<set name="isAlterSkill" val="true"/>
-		<set name="activateRate" val="80"/>
+		<set name="activateRate" val="100"/>
 	</skill>
 	<skill id="10250" levels="1" name="Sigel Knight Knock Chain Skill">
 		<set name="reuseDelay" val="10000"/>
-		<set name="hitTime" val="0"/>
+		<set name="hitTime" val="1000"/>
 		<set name="mpConsume1" val="40"/>
-		<set name="castRange" val="30"/>
+		<set name="castRange" val="100"/>
 		<set name="power" val="15803"/>
 		<set name="magicLevel" val="85"/>
-		<set name="coolTime" val="1500"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="flyType" val="CHARGE"/>
+		<set name="flyRadius" val="0"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
 		<set name="isSkillTimePermanent" val="true"/>
 		<set name="isAlterSkill" val="true"/>
-		<set name="activateRate" val="80"/>
+		<set name="activateRate" val="100"/>
 		<cond msgId="113" addName="1">
 			<not>
 				<using kind="Bow, Crossbow"/>
@@ -309,7 +309,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="alterSkillsId" val="10499;10500;14579"/>
+		<set name="alterSkillsId" val="10499;10500"/>
 		<cond msgId="113" addName="1">
 			<not>
 				<using kind="Bow,Crossbow"/>
@@ -760,7 +760,6 @@
 		<table name="#pdef">1</table>
 		<set name="nextAction" val="attack"/>
 		<set name="castRange" val="600"/>
-		<set name="coolTime" val="1100"/>
 		<set name="effectRange" val="600"/>
 		<set name="flyType" val="CHARGE"/>
 		<set name="flyRadius" val="600"/>
@@ -982,6 +981,8 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="trait" val="DISARM"/>
 		<set name="saveVs" val="STR"/>
+		<set name="hitTime" val="1200"/>
+		<set name="reuseDelay" val="120999"/>		
 		<enchant1 levels="10" name="Cost"/>
 		<enchant2 levels="10" name="Chance">
 			<table name="#activateRate">53 56 59 62 65 68 71 74 77 80</table>
@@ -1000,8 +1001,6 @@
 				<mul order="0x30" stat="mDef" val="#Def"/>
 			</effect>
 		</for>
-		<set name="hitTime" val="1200"/>
-		<set name="reuseDelay" val="120999"/>
 	</skill>
 	<skill id="10274" levels="4" name="Berserker">
 		<table name="#magicLevel">85 90 95 99</table>
@@ -1012,6 +1011,8 @@
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
+		<set name="hitTime" val="1200"/>
+		<set name="reuseDelay" val="320999"/>		
 		<set name="relationSkillsId" val="176;130;297;1510;301;25;292;317"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<cond msg="Can be only used when HP is 60% or lower">
@@ -1054,12 +1055,13 @@
 				</add>
 			</effect>
 		</for>
-		<set name="hitTime" val="1200"/>
-		<set name="reuseDelay" val="320999"/>
 	</skill>
 	<skill id="10275" levels="1" name="Infinity Strike">
 		<table name="#power">34026</table>
 		<table name="#powerPvP">0</table>
+		<set name="reuseDelay" val="300000"/>
+		<set name="hitTime" val="5000"/>
+		<set name="hitRange" val="40"/>
 		<set name="magicLevel" val="99"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="power" val="#power"/>
@@ -1205,9 +1207,8 @@
 		<table name="#power">21958 23344</table>
 		<table name="#powerPvP">0</table>
 		<table name="#magicLevel">95 96</table>
-		<set name="hitTime" val="750"/>
-		<set name="coolTime" val="500"/>
-		<set name="reuseDelay" val="30999"/>
+		<set name="hitTime" val="2500"/>
+		<set name="reuseDelay" val="30000"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="nextAction" val="attack"/>
 		<set name="operateType" val="OP_ACTIVE"/>
@@ -1235,6 +1236,9 @@
 			<table name="#power">24311 24805 25317 25830 26897 28006 29159 30357 31603 32898</table>
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant3>
+		<for>
+			<effect name="KnockDown" time="3" val="0" stackOrder="1" chance="75" stackType="KnockDown"/>
+		</for>		
 	</skill>
 	<skill id="10283" levels="1" name="Increase Momentum">
 		<set name="reuseDelay" val="4000"/>

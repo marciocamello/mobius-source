@@ -37,18 +37,20 @@
 	</skill>
 	<skill id="11750" levels="1" name="Iss Enchanter Knock Chain Skill">
 		<set name="reuseDelay" val="10000"/>
-		<set name="coolTime" val="500"/>
-		<set name="castRange" val="900"/>
+		<set name="hitTime" val="1000"/>
 		<set name="mpConsume1" val="40"/>
+		<set name="castRange" val="100"/>
 		<set name="power" val="15803"/>
 		<set name="magicLevel" val="85"/>
 		<set name="target" val="TARGET_ONE"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="flyType" val="CHARGE"/>
+		<set name="flyRadius" val="0"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="nextAction" val="attack"/>
 		<set name="isSkillTimePermanent" val="true"/>
 		<set name="isAlterSkill" val="true"/>
+		<set name="activateRate" val="100"/>
 		<cond msgId="113" addName="1">
 			<not>
 				<using kind="Bow, Crossbow"/>
@@ -83,17 +85,21 @@
 		<set name="castRange" val="600"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="target" val="TARGET_ONE"/>
+		<set name="target" val="TARGET_PARTY_ONE"/>
 		<set name="skillType" val="HEAL"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
+			<effect count="1" name="CallSkills" time="0" val="0">
+				<def name="skillIds" val="11753"/>
+				<def name="skillLevels" val="3"/>
+			</effect>	
 			<effect count="15" name="HealOverTime" stackOrder="#abnormal_lv" stackType="ChantofLife" time="1" val="#hot">
 				<mul order="0x30" stat="hpEff" val="#hpEff"/>
 			</effect>
 		</for>
 	</skill>
 	<skill id="11753" levels="3" name="Sustain">
-		<table name="#hpEff">50 100 200</table>
+		<table name="#healPower">50 100 200</table>
 		<table name="#magicLevel">85 88 92</table>
 		<table name="#mpConsume2">70</table>
 		<set name="mpConsume2" val="#mpConsume2"/>
@@ -104,8 +110,8 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
-			<effect count="10" name="HealOverTime" time="1" val="0">
-				<add order="0x40" stat="hpEff" val="#hpEff"/>
+			<effect count="10" name="HealOverTime" time="1" val="0" applyOnCaster="true">
+				<add order="0x40" stat="healPower" val="#healPower"/>
 			</effect>
 		</for>
 	</skill>
@@ -268,13 +274,13 @@
 		</for>
 	</skill>
 	<skill id="11761" levels="5" name="Brilliant Recharge">
-		<table name="#mpConsume2"> 3900 3970 4030 4110 4180</table>
-		<table name="#power">140 143 145 148 150</table>
+		<table name="#mpConsume1">3900 3970 4030 4110 4180</table>
+		<table name="#power">700 715 725 740 750</table>
 		<table name="#magicLevel">85 86 87 88 89</table>
+		<table name="#ManaHealOverTime">50 50 50 50 55</table>
 		<set name="reuseDelay" val="300000"/>
-		<set name="coolTime" val="500"/>
 		<set name="hitTime" val="5500"/>
-		<set name="mpConsume2" val="#mpConsume2"/>
+		<set name="mpConsume1" val="#mpConsume1"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="power" val="#power"/>
@@ -288,7 +294,7 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant1>
 		<for>
-			<effect count="10" name="ManaHealOverTime" time="1" val="10"/>
+			<effect count="10" name="ManaHealOverTime" time="1" val="#ManaHealOverTime"/>
 		</for>
 	</skill>
 	<skill id="11762" levels="1" name="Balance Heal">
@@ -319,7 +325,7 @@
 		<set name="mpConsume2" val="35"/>
 		<set name="castRange" val="600"/>
 		<set name="effectPoint" val="633"/>
-		<set name="target" val="TARGET_ONE"/>
+		<set name="target" val="TARGET_PARTY_ONE"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="relationSkillsId" val="1012;1409;"/>
@@ -750,8 +756,7 @@
 	<skill id="11778" levels="6" name="Fatal Sleep">
 		<table name="#effectPoint">121 162 204 243 285 331 379 418 457 495 532 549 566 582 597 611 624 635 646 655</table>
 		<table name="#magicLevel">85 86 87 88 89 90</table>
-		<table name="#activateRate">50</table>
-		<table name="#abnormal_time">20</table>
+		<table name="#activateRate">70</table>
 		<table name="#mpConsume2">26 26 27 30 31 33</table>
 		<set name="reuseDelay" val="30000"/>
 		<set name="hitTime" val="1500"/>
@@ -780,7 +785,7 @@
 			<table name="#magicLevel">90 91 92 93 94 95 96 97 98 99</table>
 		</enchant3>
 		<for>
-			<effect name="Sleep" count="1" time="#abnormal_time" stackOrder="-1" stackType="Sleep" val="0"/>
+			<effect name="Sleep" count="1" time="20" stackOrder="-1" stackType="Sleep" val="0"/>
 		</for>
 	</skill>
 	<skill id="11779" levels="1" name="Yoked status">
@@ -861,18 +866,16 @@
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="600"/>
 		<set name="magicLevel" val="85"/>
-		<set name="power" val="230"/>
-		<set name="lvlDepend" val="1"/>
 		<set name="target" val="TARGET_ONE"/>
-		<set name="saveVs" val="MEN"/>
+		<set name="power" val="230"/>		
 		<set name="isDebuff" val="true"/>
 		<set name="skillType" val="DEBUFF"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
-			<effect name="Debuff" time="40" val="0" stackOrder="1" stackType="reuse_delay_up">
-				<mul order="0x30" stat="mReuse" val="3"/>
-				<mul order="0x30" stat="pReuse" val="3"/>
+			<effect name="Debuff" time="0" val="0" stackOrder="-1" stackType="reuse_delay_up">
+				<mul order="0x30" stat="mReuse" val="2.0"/>
+				<mul order="0x30" stat="pReuse" val="2.0"/>
 			</effect>
 		</for>
 	</skill>
@@ -883,7 +886,6 @@
 		<table name="#mpConsume2">35 38 42 46</table>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="reuseDelay" val="10000"/>
-		<set name="coolTime" val="500"/>
 		<set name="hitTime" val="2000"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="castRange" val="400"/>

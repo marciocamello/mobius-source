@@ -89,7 +89,7 @@ public class EffectKnockDown extends Effect
 		_ChainedTemporalReplace.put(10250, 10009);
 		_ChainedTemporalReplace.put(10500, 10258);
 		_ChainedTemporalReplace.put(10750, 10508);
-		_ChainedTemporalReplace.put(11000, 10760);
+		_ChainedTemporalReplace.put(11000, 10762);
 		_ChainedTemporalReplace.put(11249, 11011);
 		_ChainedTemporalReplace.put(11750, 11510);
 		_ChainedTemporalReplace.put(11500, 11273);
@@ -122,7 +122,7 @@ public class EffectKnockDown extends Effect
 		Location tagetLoc = getEffector().getLoc();
 		double distance = playerLoc.distance(tagetLoc);
 		
-		if ((distance > 2000) || (distance < 1))
+		if ((distance > 75) || (distance < 1))
 		{
 			return;
 		}
@@ -130,7 +130,7 @@ public class EffectKnockDown extends Effect
 		double dx = tagetLoc.getX() - playerLoc.getX();
 		double dy = tagetLoc.getY() - playerLoc.getY();
 		double dz = tagetLoc.getZ() - playerLoc.getZ();
-		int offset = Math.min((int) distance + getSkill().getFlyRadius(), 1400);
+		int offset = Math.min((int) distance + getSkill().getFlyRadius(), 75);
 		offset = (int) (offset + Math.abs(dz));
 		
 		if (offset < 5)

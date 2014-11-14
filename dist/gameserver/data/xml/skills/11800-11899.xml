@@ -229,7 +229,7 @@
 			<table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
 		</enchant1>
 		<for>
-			<effect count="1" name="Buff" time="#time" val="0" stackOrder="10" stackType="mAtk;pAtk;pDef">
+			<effect count="1" name="Buff" time="#time" val="0" stackOrder="1" stackType="mAtk;pAtk;pDef">
 				<mul order="0x30" stat="pAtk" val="1.17"/>
 				<mul order="0x30" stat="pDef" val="1.15"/>
 				<mul order="0x30" stat="mAtk" val="1.79"/>
@@ -253,7 +253,7 @@
 			<table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
 		</enchant1>
 		<for>
-			<effect count="1" name="Buff" time="#time" val="0" stackOrder="11" stackType="magicCritUp;rCrit;clarity;cAtk">
+			<effect count="1" name="Buff" time="#time" val="0" stackOrder="1" stackType="magicCritUp;rCrit;clarity;cAtk">
 				<mul order="0x30" stat="rCrit" val="1.32"/>
 				<mul order="0x30" stat="cAtk" val="1.35"/>
 				<add order="0x40" stat="mCritRate" val="20"/>
@@ -278,7 +278,7 @@
 			<table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
 		</enchant1>
 		<for>
-			<effect count="1" name="Buff" time="#time" val="0" stackOrder="11" stackType="pAtkSpeedUp;mAtkSpeedUp">
+			<effect count="1" name="Buff" time="#time" val="0" stackOrder="1" stackType="pAtkSpeedUp;mAtkSpeedUp">
 				<add order="0x40" stat="absorbDam" val="9"/>
 				<mul order="0x30" stat="pAtkSpd" val="1.34"/>
 				<mul order="0x30" stat="mAtkSpd" val="1.31"/>
@@ -301,7 +301,7 @@
 			<table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
 		</enchant1>
 		<for>
-			<effect count="1" name="Buff" time="#time" val="0" stackOrder="11" stackType="accuracyUp;rEvas;SpeedUp;CoP;Poem_Arfa;">
+			<effect count="1" name="Buff" time="#time" val="0" stackOrder="1" stackType="accuracyUp;rEvas;SpeedUp;CoP;Poem_Arfa;">
 				<add order="0x40" stat="accCombat" val="5"/>
 				<add order="0x40" stat="rEvas" val="5"/>
 				<add order="0x40" stat="mEvas" val="5"/>
@@ -326,7 +326,7 @@
 			<table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
 		</enchant1>
 		<for>
-			<effect count="1" name="Buff" time="#time" val="0" stackOrder="4" stackType="shockRcpt;DarkAtr;HolyAtr;poisonResist">
+			<effect count="1" name="Buff" time="#time" val="0" stackOrder="1" stackType="shockRcpt;DarkAtr;HolyAtr;poisonResist">
 				<mul order="0x30" stat="stunResist" val="1.4"/>
 				<mul order="0x30" stat="poisonResist" val="1.5"/>
 				<add order="0x40" stat="defenceHoly" val="30"/>
@@ -350,7 +350,7 @@
 			<table name="#time">1980 2160 2340 2520 2700 2880 3060 3240 3420 3600</table>
 		</enchant1>
 		<for>
-			<effect count="1" name="Buff" time="#time" val="0" stackOrder="4" stackType="mental;resist_debuff_dispel">
+			<effect count="1" name="Buff" time="#time" val="0" stackOrder="1" stackType="mental;resist_debuff_dispel">
 				<add order="0x40" stat="rootResist" val="50"/>
 				<add order="0x40" stat="sleepResist" val="50"/>
 				<add order="0x40" stat="mentalResist" val="50"/>
@@ -516,6 +516,7 @@
 	<skill id="11850" levels="4" name="Miraculous Benediction">
 		<table name="#magicLevel">85 90 95 99</table>
 		<table name="#mpConsume2">185 205 225 243</table>
+		<table name="#mpperc">50 60 70 100</table>
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="600000"/>
 		<set name="magicLevel" val="#magicLevel"/>
@@ -524,10 +525,12 @@
 		<set name="hitCancelTime" val="500"/>
 		<set name="mpConsume2" val="#mpConsume2"/>
 		<set name="cancelRate" val="50"/>
-		<set name="target" val="TARGET_CLAN"/>
+		<set name="target" val="TARGET_CLAN_ONLY"/>
+		<set name="skillRadius" val="1100"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_ACTIVE"/>
-		<cond msgId="113" addName="1">
+		<cond msg="Can be only used when MP is 50% or lower">
+			<player percentHP="#mpperc"/>
 			<target pvp="true"/>
 		</cond>
 		<for>

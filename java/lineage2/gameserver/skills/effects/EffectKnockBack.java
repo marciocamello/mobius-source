@@ -58,7 +58,7 @@ public class EffectKnockBack extends Effect
 		double dx = tagetLoc.getX() - playerLoc.getX();
 		double dy = tagetLoc.getY() - playerLoc.getY();
 		double dz = tagetLoc.getZ() - playerLoc.getZ();
-		int offset = Math.min((int) distance + getSkill().getFlyRadius(), 1400);
+		int offset = Math.min((int) distance + getSkill().getFlyRadius(), 1100);
 		offset = (int) (offset + Math.abs(dz));
 		
 		if (offset < 5)
