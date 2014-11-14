@@ -31,61 +31,45 @@ public class Q00645_GhostsOfBatur extends Quest implements ScriptFile
 		22707
 	};
 	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public Q00645_GhostsOfBatur()
 	{
 		super(true);
 		addStartNpc(Karuda);
+		addQuestItem(CursedBurialItems);
 		
 		for (int i : MOBS)
 		{
 			addKillId(i);
 		}
-		
-		addQuestItem(CursedBurialItems);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("karuda_q0645_0103.htm"))
+		if (event.equals("karuda_q0645_0103.htm"))
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.playSound(SOUND_ACCEPT);
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int cond = st.getCond();
+		final int cond = qs.getCond();
 		
 		if (cond == 0)
 		{
-			if (st.getPlayer().getLevel() < 61)
+			if (qs.getPlayer().getLevel() < 61)
 			{
 				htmltext = "karuda_q0645_0102.htm";
-				st.exitCurrentQuest(true);
+				qs.exitCurrentQuest(true);
 			}
 			else
 			{
@@ -96,10 +80,10 @@ public class Q00645_GhostsOfBatur extends Quest implements ScriptFile
 		{
 			if (cond == 2)
 			{
-				st.setCond(1);
+				qs.setCond(1);
 			}
 			
-			if (st.getQuestItemsCount(CursedBurialItems) == 0)
+			if (qs.getQuestItemsCount(CursedBurialItems) == 0)
 			{
 				htmltext = "karuda_q0645_0106.htm";
 			}
@@ -113,16 +97,31 @@ public class Q00645_GhostsOfBatur extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if (st.getCond() > 0)
+		if (qs.getCond() > 0)
 		{
 			if (Rnd.chance(5))
 			{
-				st.giveItems(CursedBurialItems, 1, true);
+				qs.giveItems(CursedBurialItems, 1, true);
 			}
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

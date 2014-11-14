@@ -21,6 +21,7 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00695_DefendTheHallOfSuffering extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int TEPIOS = 32603;
 	
 	public Q00695_DefendTheHallOfSuffering()
@@ -30,32 +31,29 @@ public class Q00695_DefendTheHallOfSuffering extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("tepios_q695_3.htm"))
+		if (event.equals("tepios_q695_3.htm"))
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
+			qs.setState(STARTED);
+			qs.setCond(1);
+			qs.playSound(SOUND_ACCEPT);
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getId();
-		Player player = st.getPlayer();
-		int cond = st.getCond();
+		final Player player = qs.getPlayer();
 		
-		if (npcId == TEPIOS)
+		switch (qs.getCond())
 		{
-			if (cond == 0)
-			{
+			case 0:
 				if ((player.getLevel() >= 75) && (player.getLevel() <= 82))
 				{
 					if (SoIManager.getCurrentStage() == 4)
@@ -65,19 +63,19 @@ public class Q00695_DefendTheHallOfSuffering extends Quest implements ScriptFile
 					else
 					{
 						htmltext = "tepios_q695_0a.htm";
-						st.exitCurrentQuest(true);
+						qs.exitCurrentQuest(true);
 					}
 				}
 				else
 				{
 					htmltext = "tepios_q695_0.htm";
-					st.exitCurrentQuest(true);
+					qs.exitCurrentQuest(true);
 				}
-			}
-			else if (cond == 1)
-			{
+				break;
+			
+			case 1:
 				htmltext = "tepios_q695_4.htm";
-			}
+				break;
 		}
 		
 		return htmltext;

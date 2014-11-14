@@ -20,7 +20,9 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00694_BreakThroughTheHallOfSuffering extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int TEPIOS = 32603;
+	// Items
 	private static final int MARK_OF_KEUCEREUS_STAGE_1 = 13691;
 	private static final int MARK_OF_KEUCEREUS_STAGE_2 = 13692;
 	
@@ -33,7 +35,7 @@ public class Q00694_BreakThroughTheHallOfSuffering extends Quest implements Scri
 	@Override
 	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		if (event.equalsIgnoreCase("32603-04.htm"))
+		if (event.equals("32603-04.htm"))
 		{
 			qs.setCond(1);
 			qs.setState(STARTED);
@@ -44,36 +46,33 @@ public class Q00694_BreakThroughTheHallOfSuffering extends Quest implements Scri
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		Player player = st.getPlayer();
+		final Player player = qs.getPlayer();
 		
-		if (npcId == TEPIOS)
+		switch (qs.getCond())
 		{
-			if (cond == 0)
-			{
+			case 0:
 				if ((player.getLevel() < 75) || (player.getLevel() > 82))
 				{
-					if ((st.getQuestItemsCount(MARK_OF_KEUCEREUS_STAGE_1) == 0) && (st.getQuestItemsCount(MARK_OF_KEUCEREUS_STAGE_2) == 0) && (player.getLevel() > 82))
+					if ((qs.getQuestItemsCount(MARK_OF_KEUCEREUS_STAGE_1) == 0) && (qs.getQuestItemsCount(MARK_OF_KEUCEREUS_STAGE_2) == 0) && (player.getLevel() > 82))
 					{
-						st.giveItems(MARK_OF_KEUCEREUS_STAGE_1, 1);
+						qs.giveItems(MARK_OF_KEUCEREUS_STAGE_1, 1);
 					}
 					
-					st.exitCurrentQuest(true);
+					qs.exitCurrentQuest(true);
 					htmltext = "32603-00.htm";
 				}
 				else
 				{
 					htmltext = "32603-01.htm";
 				}
-			}
-			else if (cond == 1)
-			{
+				break;
+			
+			case 1:
 				htmltext = "32603-05.htm";
-			}
+				break;
 		}
 		
 		return htmltext;

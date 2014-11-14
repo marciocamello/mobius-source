@@ -25,7 +25,7 @@ import lineage2.gameserver.scripts.ScriptFile;
 public class Q00662_AGameOfCards extends Quest implements ScriptFile
 {
 	private final static int KLUMP = 30845;
-	private final static int[] mobs =
+	private final static int[] MONSTERS =
 	{
 		20677,
 		21109,
@@ -74,82 +74,103 @@ public class Q00662_AGameOfCards extends Quest implements ScriptFile
 	private final static int Enchant_Weapon_D = 955;
 	private final static int Enchant_Armor_D = 956;
 	private final static int ZIGGOS_GEMSTONE = 8868;
-	private final static int drop_chance = 35;
+	private final static int DROP_CHANCE = 35;
 	final static Map<Integer, CardGame> Games = new ConcurrentHashMap<>();
 	
 	public Q00662_AGameOfCards()
 	{
 		super(true);
 		addStartNpc(KLUMP);
-		addKillId(mobs);
+		addKillId(MONSTERS);
 		addQuestItem(RED_GEM);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		int _state = st.getState();
+		final int _state = qs.getState();
 		
-		if (event.equalsIgnoreCase("30845_02.htm") && (_state == CREATED))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
+			case "30845_02.htm":
+				if (_state == CREATED)
+				{
+					qs.setCond(1);
+					qs.setState(STARTED);
+					qs.playSound(SOUND_ACCEPT);
+				}
+				break;
+			
+			case "30845_07.htm":
+				if (_state == STARTED)
+				{
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(true);
+				}
+				break;
+			
+			case "30845_03.htm":
+				if ((_state == STARTED) && (qs.getQuestItemsCount(RED_GEM) >= 50))
+				{
+					return "30845_04.htm";
+				}
+				break;
+			
+			case "30845_10.htm":
+				if (_state == STARTED)
+				{
+					if (qs.getQuestItemsCount(RED_GEM) < 50)
+					{
+						return "30845_10a.htm";
+					}
+					
+					qs.takeItems(RED_GEM, 50);
+					final int player_id = qs.getPlayer().getObjectId();
+					
+					if (Games.containsKey(player_id))
+					{
+						Games.remove(player_id);
+					}
+					
+					Games.put(player_id, new CardGame(player_id));
+				}
+				break;
+			
+			case "play":
+				if (_state == STARTED)
+				{
+					final int player_id = qs.getPlayer().getObjectId();
+					
+					if (!Games.containsKey(player_id))
+					{
+						return null;
+					}
+					
+					return Games.get(player_id).playField();
+				}
+				break;
 		}
-		else if (event.equalsIgnoreCase("30845_07.htm") && (_state == STARTED))
+		
+		if (event.startsWith("card"))
 		{
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(true);
-		}
-		else if (event.equalsIgnoreCase("30845_03.htm") && (_state == STARTED) && (st.getQuestItemsCount(RED_GEM) >= 50))
-		{
-			return "30845_04.htm";
-		}
-		else if (event.equalsIgnoreCase("30845_10.htm") && (_state == STARTED))
-		{
-			if (st.getQuestItemsCount(RED_GEM) < 50)
+			if (_state == STARTED)
 			{
-				return "30845_10a.htm";
-			}
-			
-			st.takeItems(RED_GEM, 50);
-			int player_id = st.getPlayer().getObjectId();
-			
-			if (Games.containsKey(player_id))
-			{
-				Games.remove(player_id);
-			}
-			
-			Games.put(player_id, new CardGame(player_id));
-		}
-		else if (event.equalsIgnoreCase("play") && (_state == STARTED))
-		{
-			int player_id = st.getPlayer().getObjectId();
-			
-			if (!Games.containsKey(player_id))
-			{
-				return null;
-			}
-			
-			return Games.get(player_id).playField();
-		}
-		else if (event.startsWith("card") && (_state == STARTED))
-		{
-			int player_id = st.getPlayer().getObjectId();
-			
-			if (!Games.containsKey(player_id))
-			{
-				return null;
-			}
-			
-			try
-			{
-				int cardn = Integer.valueOf(event.replaceAll("card", ""));
-				return Games.get(player_id).next(cardn, st);
-			}
-			catch (Exception E)
-			{
-				return null;
+				final int player_id = qs.getPlayer().getObjectId();
+				
+				if (!Games.containsKey(player_id))
+				{
+					return null;
+				}
+				
+				try
+				{
+					int cardn = Integer.valueOf(event.replaceAll("card", ""));
+					return Games.get(player_id).next(cardn, qs);
+				}
+				catch (Exception E)
+				{
+					return null;
+				}
 			}
 		}
 		
@@ -157,29 +178,21 @@ public class Q00662_AGameOfCards extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		if (npc.getId() != KLUMP)
+		switch (qs.getState())
 		{
-			return "noquest";
-		}
-		
-		int _state = st.getState();
-		
-		if (_state == CREATED)
-		{
-			if (st.getPlayer().getLevel() < 61)
-			{
-				st.exitCurrentQuest(true);
-				return "30845_00.htm";
-			}
-			
-			st.setCond(0);
-			return "30845_01.htm";
-		}
-		else if (_state == STARTED)
-		{
-			return st.getQuestItemsCount(RED_GEM) < 50 ? "30845_03.htm" : "30845_04.htm";
+			case CREATED:
+				if (qs.getPlayer().getLevel() < 61)
+				{
+					qs.exitCurrentQuest(true);
+					return "30845_00.htm";
+				}
+				qs.setCond(0);
+				return "30845_01.htm";
+				
+			case STARTED:
+				return qs.getQuestItemsCount(RED_GEM) < 50 ? "30845_03.htm" : "30845_04.htm";
 		}
 		
 		return "noquest";
@@ -190,7 +203,7 @@ public class Q00662_AGameOfCards extends Quest implements ScriptFile
 	{
 		if (qs.getState() == STARTED)
 		{
-			qs.rollAndGive(RED_GEM, 1, drop_chance);
+			qs.rollAndGive(RED_GEM, 1, DROP_CHANCE);
 		}
 		
 		return null;
@@ -249,7 +262,7 @@ public class Q00662_AGameOfCards extends Quest implements ScriptFile
 			}
 		}
 		
-		public String next(int cardn, QuestState st)
+		public String next(int cardn, QuestState qs)
 		{
 			if ((cardn >= cards.length) || !cards[cardn].startsWith("<a"))
 			{
@@ -266,10 +279,10 @@ public class Q00662_AGameOfCards extends Quest implements ScriptFile
 				}
 			}
 			
-			return finish(st);
+			return finish(qs);
 		}
 		
-		private String finish(QuestState st)
+		private String finish(QuestState qs)
 		{
 			String result = html_header + table_header;
 			Map<String, Integer> matches = new HashMap<>();
@@ -293,55 +306,59 @@ public class Q00662_AGameOfCards extends Quest implements ScriptFile
 			Integer[] cmatches = matches.values().toArray(new Integer[matches.size()]);
 			String txt = "Hmmm...? This is... No pair? Tough luck, my friend! Want to try again? Perhaps your luck will take a turn for the better...";
 			
-			if (cmatches.length == 1)
+			switch (cmatches.length)
 			{
-				if (cmatches[0] == 5)
-				{
-					txt = "Hmmm...? This is... Five of a kind!!!! What luck! The goddess of victory must be with you! Here is your prize! Well earned, well played!";
-					st.giveItems(ZIGGOS_GEMSTONE, 43);
-					st.giveItems(Enchant_Weapon_S, 3);
-					st.giveItems(Enchant_Weapon_A, 1);
-				}
-				else if (cmatches[0] == 4)
-				{
-					txt = "Hmmm...? This is... Four of a kind! Well done, my young friend! That sort of hand doesn't come up very often, that's for sure. Here's your prize.";
-					st.giveItems(Enchant_Weapon_S, 2);
-					st.giveItems(Enchant_Weapon_C, 2);
-				}
-				else if (cmatches[0] == 3)
-				{
-					txt = "Hmmm...? This is... Three of a kind? Very good, you are very lucky. Here's your prize.";
-					st.giveItems(Enchant_Weapon_C, 2);
-				}
-				else if (cmatches[0] == 2)
-				{
-					txt = "Hmmm...? This is... One pair? You got lucky this time, but I wonder if it'll last. Here's your prize.";
-					st.giveItems(Enchant_Armor_D, 2);
-				}
-			}
-			else if (cmatches.length == 2)
-			{
-				if ((cmatches[0] == 3) || (cmatches[1] == 3))
-				{
-					txt = "Hmmm...? This is... A full house? Excellent! you're better than I thought. Here's your prize.";
-					st.giveItems(Enchant_Weapon_A, 1);
-					st.giveItems(Enchant_Weapon_B, 2);
-					st.giveItems(Enchant_Weapon_D, 1);
-				}
-				else
-				{
-					txt = "Hmmm...? This is... Two pairs? You got lucky this time, but I wonder if it'll last. Here's your prize.";
-					st.giveItems(Enchant_Weapon_C, 1);
-				}
+				case 1:
+					switch (cmatches[0])
+					{
+						case 5:
+							txt = "Hmmm...? This is... Five of a kind!!!! What luck! The goddess of victory must be with you! Here is your prize! Well earned, well played!";
+							qs.giveItems(ZIGGOS_GEMSTONE, 43);
+							qs.giveItems(Enchant_Weapon_S, 3);
+							qs.giveItems(Enchant_Weapon_A, 1);
+							break;
+						
+						case 4:
+							txt = "Hmmm...? This is... Four of a kind! Well done, my young friend! That sort of hand doesn't come up very often, that's for sure. Here's your prize.";
+							qs.giveItems(Enchant_Weapon_S, 2);
+							qs.giveItems(Enchant_Weapon_C, 2);
+							break;
+						
+						case 3:
+							txt = "Hmmm...? This is... Three of a kind? Very good, you are very lucky. Here's your prize.";
+							qs.giveItems(Enchant_Weapon_C, 2);
+							break;
+						
+						case 2:
+							txt = "Hmmm...? This is... One pair? You got lucky this time, but I wonder if it'll last. Here's your prize.";
+							qs.giveItems(Enchant_Armor_D, 2);
+							break;
+					}
+					break;
+				
+				case 2:
+					if ((cmatches[0] == 3) || (cmatches[1] == 3))
+					{
+						txt = "Hmmm...? This is... A full house? Excellent! you're better than I thought. Here's your prize.";
+						qs.giveItems(Enchant_Weapon_A, 1);
+						qs.giveItems(Enchant_Weapon_B, 2);
+						qs.giveItems(Enchant_Weapon_D, 1);
+					}
+					else
+					{
+						txt = "Hmmm...? This is... Two pairs? You got lucky this time, but I wonder if it'll last. Here's your prize.";
+						qs.giveItems(Enchant_Weapon_C, 1);
+					}
+					break;
 			}
 			
 			for (String card : cards)
 			{
-				if ((smatches.length > 0) && smatches[0].equalsIgnoreCase(card))
+				if ((smatches.length > 0) && smatches[0].equals(card))
 				{
 					result += td_begin + "<font color=\"55FD44\">" + card + "</font>" + td_end;
 				}
-				else if ((smatches.length == 2) && smatches[1].equalsIgnoreCase(card))
+				else if ((smatches.length == 2) && smatches[1].equals(card))
 				{
 					result += td_begin + "<font color=\"FE6666\">" + card + "</font>" + td_end;
 				}
@@ -353,7 +370,7 @@ public class Q00662_AGameOfCards extends Quest implements ScriptFile
 			
 			result += table_footer + txt;
 			
-			if (st.getQuestItemsCount(RED_GEM) >= 50)
+			if (qs.getQuestItemsCount(RED_GEM) >= 50)
 			{
 				result += "<br><br><a action=\"bypass -h Quest Q00662_AGameOfCards 30845_10.htm\">Play Again!</a>";
 			}

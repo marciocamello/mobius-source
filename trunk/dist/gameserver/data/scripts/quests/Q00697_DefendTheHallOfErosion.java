@@ -22,7 +22,9 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00697_DefendTheHallOfErosion extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int TEPIOS = 32603;
+	// Item
 	private static final int VesperNobleEnhanceStone = 14052;
 	
 	public Q00697_DefendTheHallOfErosion()
@@ -32,59 +34,57 @@ public class Q00697_DefendTheHallOfErosion extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		st.getPlayer();
+		qs.getPlayer();
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("tepios_q697_3.htm"))
+		if (event.equals("tepios_q697_3.htm"))
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
+			qs.setState(STARTED);
+			qs.setCond(1);
+			qs.playSound(SOUND_ACCEPT);
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getId();
-		Player player = st.getPlayer();
-		int cond = st.getCond();
+		final Player player = qs.getPlayer();
 		
-		if (npcId == TEPIOS)
+		switch (qs.getCond())
 		{
-			if (cond == 0)
-			{
+			case 0:
 				if (player.getLevel() < 75)
 				{
-					st.exitCurrentQuest(true);
+					qs.exitCurrentQuest(true);
 					return "tepios_q697_0.htm";
 				}
-				
 				if (SoIManager.getCurrentStage() != 4)
 				{
-					st.exitCurrentQuest(true);
+					qs.exitCurrentQuest(true);
 					return "tepios_q697_0a.htm";
 				}
-				
 				htmltext = "tepios_q697_1.htm";
-			}
-			else if ((cond == 1) && (st.getInt("defenceDone") == 0))
-			{
-				htmltext = "tepios_q697_4.htm";
-			}
-			else if ((cond == 1) && (st.getInt("defenceDone") != 0))
-			{
-				st.giveItems(VesperNobleEnhanceStone, Rnd.get(12, 20));
-				htmltext = "tepios_q697_5.htm";
-				st.playSound(SOUND_FINISH);
-				st.unset("defenceDone");
-				st.exitCurrentQuest(true);
-			}
+				break;
+			
+			case 1:
+				if (qs.getInt("defenceDone") == 0)
+				{
+					htmltext = "tepios_q697_4.htm";
+				}
+				else
+				{
+					qs.giveItems(VesperNobleEnhanceStone, Rnd.get(12, 20));
+					htmltext = "tepios_q697_5.htm";
+					qs.playSound(SOUND_FINISH);
+					qs.unset("defenceDone");
+					qs.exitCurrentQuest(true);
+				}
+				break;
 		}
 		
 		return htmltext;

@@ -19,12 +19,83 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00652_AnAgedExAdventurer extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int Tantan = 32012;
 	private static final int Sara = 30180;
+	// Items
 	private static final int SoulshotCgrade = 1464;
 	private static final int ElixirOfMentalStrC = 8630;
 	private static final int EnchantArmorC = 952;
 	private static final int ElixirOfLife = 8624;
+	
+	public Q00652_AnAgedExAdventurer()
+	{
+		super(false);
+		addStartNpc(Tantan);
+		addTalkId(Sara);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		if (event.equals("retired_oldman_tantan_q0652_03.htm") && (qs.getQuestItemsCount(SoulshotCgrade) >= 100))
+		{
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.takeItems(SoulshotCgrade, 100);
+			qs.playSound(SOUND_ACCEPT);
+			htmltext = "retired_oldman_tantan_q0652_04.htm";
+		}
+		else
+		{
+			htmltext = "retired_oldman_tantan_q0652_03.htm";
+			qs.exitCurrentQuest(true);
+			qs.playSound(SOUND_GIVEUP);
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		
+		switch (npc.getId())
+		{
+			case Tantan:
+				if (cond == 0)
+				{
+					if (qs.getPlayer().getLevel() < 46)
+					{
+						htmltext = "retired_oldman_tantan_q0652_01a.htm";
+						qs.exitCurrentQuest(true);
+					}
+					else
+					{
+						htmltext = "retired_oldman_tantan_q0652_01.htm";
+					}
+				}
+				break;
+			
+			case Sara:
+				if (cond == 1)
+				{
+					htmltext = "sara_q0652_01.htm";
+					qs.giveItems(ElixirOfMentalStrC, 2);
+					qs.giveItems(EnchantArmorC, 1);
+					qs.giveItems(ElixirOfLife, 1);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(true);
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
 	
 	@Override
 	public void onLoad()
@@ -39,70 +110,5 @@ public class Q00652_AnAgedExAdventurer extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00652_AnAgedExAdventurer()
-	{
-		super(false);
-		addStartNpc(Tantan);
-		addTalkId(Sara);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("retired_oldman_tantan_q0652_03.htm") && (st.getQuestItemsCount(SoulshotCgrade) >= 100))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.takeItems(SoulshotCgrade, 100);
-			st.playSound(SOUND_ACCEPT);
-			htmltext = "retired_oldman_tantan_q0652_04.htm";
-		}
-		else
-		{
-			htmltext = "retired_oldman_tantan_q0652_03.htm";
-			st.exitCurrentQuest(true);
-			st.playSound(SOUND_GIVEUP);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		int cond = st.getCond();
-		
-		if (npcId == Tantan)
-		{
-			if (cond == 0)
-			{
-				if (st.getPlayer().getLevel() < 46)
-				{
-					htmltext = "retired_oldman_tantan_q0652_01a.htm";
-					st.exitCurrentQuest(true);
-				}
-				else
-				{
-					htmltext = "retired_oldman_tantan_q0652_01.htm";
-				}
-			}
-		}
-		else if ((npcId == Sara) && (cond == 1))
-		{
-			htmltext = "sara_q0652_01.htm";
-			st.giveItems(ElixirOfMentalStrC, 2);
-			st.giveItems(EnchantArmorC, 1);
-			st.giveItems(ElixirOfLife, 1);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(true);
-		}
-		
-		return htmltext;
 	}
 }

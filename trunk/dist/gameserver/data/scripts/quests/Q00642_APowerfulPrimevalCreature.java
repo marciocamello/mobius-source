@@ -69,41 +69,38 @@ public class Q00642_APowerfulPrimevalCreature extends Quest implements ScriptFil
 	{
 		super(true);
 		addStartNpc(Dinn);
+		addQuestItem(Dinosaur_Tissue, Dinosaur_Egg);
 		addKillId(Ancient_Egg);
-		
 		for (int dino_id : Dino)
 		{
 			addKillId(dino_id);
 		}
-		
-		addQuestItem(Dinosaur_Tissue);
-		addQuestItem(Dinosaur_Egg);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		int _state = st.getState();
-		long Dinosaur_Tissue_Count = st.getQuestItemsCount(Dinosaur_Tissue);
+		final int _state = qs.getState();
+		final long Dinosaur_Tissue_Count = qs.getQuestItemsCount(Dinosaur_Tissue);
 		
-		if (event.equalsIgnoreCase("dindin_q0642_04.htm") && (_state == CREATED))
+		if (event.equals("dindin_q0642_04.htm") && (_state == CREATED))
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
+			qs.setState(STARTED);
+			qs.setCond(1);
+			qs.playSound(SOUND_ACCEPT);
 		}
-		else if (event.equalsIgnoreCase("dindin_q0642_12.htm") && (_state == STARTED))
+		else if (event.equals("dindin_q0642_12.htm") && (_state == STARTED))
 		{
 			if (Dinosaur_Tissue_Count == 0)
 			{
 				return "dindin_q0642_08a.htm";
 			}
 			
-			st.takeItems(Dinosaur_Tissue, -1);
-			st.giveItems(ADENA_ID, Dinosaur_Tissue_Count * 3000, false);
-			st.playSound(SOUND_MIDDLE);
+			qs.takeItems(Dinosaur_Tissue, -1);
+			qs.giveItems(ADENA_ID, Dinosaur_Tissue_Count * 3000, false);
+			qs.playSound(SOUND_MIDDLE);
 		}
-		else if (event.equalsIgnoreCase("0"))
+		else if (event.equals("0"))
 		{
 			return null;
 		}
@@ -111,9 +108,9 @@ public class Q00642_APowerfulPrimevalCreature extends Quest implements ScriptFil
 		{
 			try
 			{
-				int rew_id = Integer.valueOf(event);
+				final int rew_id = Integer.valueOf(event);
 				
-				if ((Dinosaur_Tissue_Count < 150) || (st.getQuestItemsCount(Dinosaur_Egg) == 0))
+				if ((Dinosaur_Tissue_Count < 150) || (qs.getQuestItemsCount(Dinosaur_Egg) == 0))
 				{
 					return "dindin_q0642_08a.htm";
 				}
@@ -122,11 +119,11 @@ public class Q00642_APowerfulPrimevalCreature extends Quest implements ScriptFil
 				{
 					if (reward == rew_id)
 					{
-						st.takeItems(Dinosaur_Tissue, 150);
-						st.takeItems(Dinosaur_Egg, 1);
-						st.giveItems(reward, 1, false);
-						st.giveItems(ADENA_ID, 44000, false);
-						st.playSound(SOUND_MIDDLE);
+						qs.takeItems(Dinosaur_Tissue, 150);
+						qs.takeItems(Dinosaur_Egg, 1);
+						qs.giveItems(reward, 1, false);
+						qs.giveItems(ADENA_ID, 44000, false);
+						qs.playSound(SOUND_MIDDLE);
 						return "dindin_q0642_12.htm";
 					}
 				}
@@ -143,62 +140,50 @@ public class Q00642_APowerfulPrimevalCreature extends Quest implements ScriptFil
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		if (npc.getId() != Dinn)
+		switch (qs.getState())
 		{
-			return "noquest";
-		}
-		
-		int _state = st.getState();
-		
-		if (_state == CREATED)
-		{
-			if (st.getPlayer().getLevel() < 75)
-			{
-				st.exitCurrentQuest(true);
-				return "dindin_q0642_01a.htm";
-			}
-			
-			st.setCond(0);
-			return "dindin_q0642_01.htm";
-		}
-		
-		if (_state == STARTED)
-		{
-			long Dinosaur_Tissue_Count = st.getQuestItemsCount(Dinosaur_Tissue);
-			
-			if (Dinosaur_Tissue_Count == 0)
-			{
-				return "dindin_q0642_08a.htm";
-			}
-			
-			if ((Dinosaur_Tissue_Count < 150) || (st.getQuestItemsCount(Dinosaur_Egg) == 0))
-			{
-				return "dindin_q0642_07.htm";
-			}
-			
-			return "dindin_q0642_07a.htm";
+			case CREATED:
+				if (qs.getPlayer().getLevel() < 75)
+				{
+					qs.exitCurrentQuest(true);
+					return "dindin_q0642_01a.htm";
+				}
+				qs.setCond(0);
+				return "dindin_q0642_01.htm";
+				
+			case STARTED:
+				long Dinosaur_Tissue_Count = qs.getQuestItemsCount(Dinosaur_Tissue);
+				if (Dinosaur_Tissue_Count == 0)
+				{
+					return "dindin_q0642_08a.htm";
+				}
+				if ((Dinosaur_Tissue_Count < 150) || (qs.getQuestItemsCount(Dinosaur_Egg) == 0))
+				{
+					return "dindin_q0642_07.htm";
+				}
+				return "dindin_q0642_07a.htm";
 		}
 		
 		return "noquest";
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if ((st.getState() != STARTED) || (st.getCond() != 1))
+		if ((qs.getState() != STARTED) || (qs.getCond() != 1))
 		{
 			return null;
 		}
 		
 		if (npc.getId() == Ancient_Egg)
 		{
-			st.rollAndGive(Dinosaur_Egg, 1, Dinosaur_Egg_Chance);
+			qs.rollAndGive(Dinosaur_Egg, 1, Dinosaur_Egg_Chance);
 		}
 		else
 		{
-			st.rollAndGive(Dinosaur_Tissue, 1, Dinosaur_Tissue_Chance);
+			qs.rollAndGive(Dinosaur_Tissue, 1, Dinosaur_Tissue_Chance);
 		}
 		
 		return null;

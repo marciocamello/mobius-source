@@ -23,7 +23,9 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00698_BlockTheLordsEscape extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int TEPIOS = 32603;
+	// Item
 	private static final int VesperNobleEnhanceStone = 14052;
 	
 	public Q00698_BlockTheLordsEscape()
@@ -33,58 +35,52 @@ public class Q00698_BlockTheLordsEscape extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		Player player = st.getPlayer();
+		String htmltext = event;
 		
-		if (npcId == TEPIOS)
+		if (event.equals("tepios_q698_3.htm"))
 		{
-			if (st.getState() == CREATED)
-			{
-				if ((player.getLevel() < 75) || (player.getLevel() > 85))
-				{
-					st.exitCurrentQuest(true);
-					return "tepios_q698_0.htm";
-				}
-				
-				if (SoIManager.getCurrentStage() != 5)
-				{
-					st.exitCurrentQuest(true);
-					return "tepios_q698_0a.htm";
-				}
-				
-				return "tepios_q698_1.htm";
-			}
-			else if ((st.getCond() == 1) && (st.getInt("defenceDone") == 1))
-			{
-				htmltext = "tepios_q698_5.htm";
-				st.giveItems(VesperNobleEnhanceStone, (int) Config.RATE_QUESTS_REWARD * Rnd.get(5, 8));
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(true);
-			}
-			else
-			{
-				return "tepios_q698_4.htm";
-			}
+			qs.setState(STARTED);
+			qs.setCond(1);
+			qs.playSound(SOUND_ACCEPT);
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		st.getPlayer();
-		String htmltext = event;
-		st.getCond();
+		String htmltext = "noquest";
+		final Player player = qs.getPlayer();
 		
-		if (event.equalsIgnoreCase("tepios_q698_3.htm"))
+		if (qs.getState() == CREATED)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
+			if ((player.getLevel() < 75) || (player.getLevel() > 85))
+			{
+				qs.exitCurrentQuest(true);
+				return "tepios_q698_0.htm";
+			}
+			
+			if (SoIManager.getCurrentStage() != 5)
+			{
+				qs.exitCurrentQuest(true);
+				return "tepios_q698_0a.htm";
+			}
+			
+			return "tepios_q698_1.htm";
+		}
+		else if ((qs.getCond() == 1) && (qs.getInt("defenceDone") == 1))
+		{
+			htmltext = "tepios_q698_5.htm";
+			qs.giveItems(VesperNobleEnhanceStone, (int) Config.RATE_QUESTS_REWARD * Rnd.get(5, 8));
+			qs.playSound(SOUND_FINISH);
+			qs.exitCurrentQuest(true);
+		}
+		else
+		{
+			return "tepios_q698_4.htm";
 		}
 		
 		return htmltext;

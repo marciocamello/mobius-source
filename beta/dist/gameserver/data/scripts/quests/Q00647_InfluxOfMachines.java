@@ -20,22 +20,9 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00647_InfluxOfMachines extends Quest implements ScriptFile
 {
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
-	private static final int DROP_CHANCE = 60;
+	// Npc
+	private static final int GUTENHAGEN = 32069;
+	// Items
 	private static final int BROKEN_GOLEM_FRAGMENT = 15521;
 	private static final int[] RECIPES =
 	{
@@ -54,87 +41,110 @@ public class Q00647_InfluxOfMachines extends Quest implements ScriptFile
 	public Q00647_InfluxOfMachines()
 	{
 		super(true);
-		addStartNpc(32069);
-		addTalkId(32069);
+		addStartNpc(GUTENHAGEN);
+		addTalkId(GUTENHAGEN);
+		addQuestItem(BROKEN_GOLEM_FRAGMENT);
 		
 		for (int i = 22801; i < 22812; i++)
 		{
 			addKillId(i);
 		}
-		
-		addQuestItem(BROKEN_GOLEM_FRAGMENT);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("quest_accept"))
+		switch (event)
 		{
-			htmltext = "collecter_gutenhagen_q0647_0103.htm";
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("647_3"))
-		{
-			if (st.getQuestItemsCount(BROKEN_GOLEM_FRAGMENT) >= 500)
-			{
-				st.takeItems(BROKEN_GOLEM_FRAGMENT, -1);
-				st.giveItems(RECIPES[Rnd.get(RECIPES.length)], 1);
-				htmltext = "collecter_gutenhagen_q0647_0201.htm";
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(true);
-			}
-			else
-			{
-				htmltext = "collecter_gutenhagen_q0647_0106.htm";
-			}
+			case "quest_accept":
+				htmltext = "collecter_gutenhagen_q0647_0103.htm";
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "647_3":
+				if (qs.getQuestItemsCount(BROKEN_GOLEM_FRAGMENT) >= 500)
+				{
+					qs.takeItems(BROKEN_GOLEM_FRAGMENT, -1);
+					qs.giveItems(RECIPES[Rnd.get(RECIPES.length)], 1);
+					htmltext = "collecter_gutenhagen_q0647_0201.htm";
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(true);
+				}
+				else
+				{
+					htmltext = "collecter_gutenhagen_q0647_0106.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int cond = st.getCond();
-		long count = st.getQuestItemsCount(BROKEN_GOLEM_FRAGMENT);
+		final long count = qs.getQuestItemsCount(BROKEN_GOLEM_FRAGMENT);
 		
-		if (cond == 0)
+		switch (qs.getCond())
 		{
-			if (st.getPlayer().getLevel() >= 70)
-			{
-				htmltext = "collecter_gutenhagen_q0647_0101.htm";
-			}
-			else
-			{
-				htmltext = "collecter_gutenhagen_q0647_0102.htm";
-				st.exitCurrentQuest(true);
-			}
-		}
-		else if ((cond == 1) && (count < 500))
-		{
-			htmltext = "collecter_gutenhagen_q0647_0106.htm";
-		}
-		else if ((cond == 2) && (count >= 500))
-		{
-			htmltext = "collecter_gutenhagen_q0647_0105.htm";
+			case 0:
+				if (qs.getPlayer().getLevel() >= 70)
+				{
+					htmltext = "collecter_gutenhagen_q0647_0101.htm";
+				}
+				else
+				{
+					htmltext = "collecter_gutenhagen_q0647_0102.htm";
+					qs.exitCurrentQuest(true);
+				}
+				break;
+			
+			case 1:
+				if (count < 500)
+				{
+					htmltext = "collecter_gutenhagen_q0647_0106.htm";
+				}
+				break;
+			
+			case 2:
+				if (count >= 500)
+				{
+					htmltext = "collecter_gutenhagen_q0647_0105.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if ((st.getCond() == 1) && st.rollAndGive(BROKEN_GOLEM_FRAGMENT, 1, 1, 500, DROP_CHANCE * npc.getTemplate().rateHp))
+		if ((qs.getCond() == 1) && qs.rollAndGive(BROKEN_GOLEM_FRAGMENT, 1, 1, 500, GUTENHAGEN * npc.getTemplate().rateHp))
 		{
-			st.setCond(2);
+			qs.setCond(2);
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

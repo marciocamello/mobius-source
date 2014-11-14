@@ -20,8 +20,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00696_ConquerTheHallOfErosion extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int TEPIOS = 32603;
-	private static final int Cohemenes = 25634;
+	// Monster
+	private static final int COHEMENES = 25634;
+	// Items
 	private static final int MARK_OF_KEUCEREUS_STAGE_1 = 13691;
 	private static final int MARK_OF_KEUCEREUS_STAGE_2 = 13692;
 	
@@ -29,82 +32,79 @@ public class Q00696_ConquerTheHallOfErosion extends Quest implements ScriptFile
 	{
 		super(PARTY_ALL);
 		addStartNpc(TEPIOS);
-		addKillId(Cohemenes);
+		addKillId(COHEMENES);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		if (event.equalsIgnoreCase("tepios_q696_3.htm"))
+		if (event.equals("tepios_q696_3.htm"))
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.playSound(SOUND_ACCEPT);
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getId();
-		Player player = st.getPlayer();
-		int cond = st.getCond();
+		final Player player = qs.getPlayer();
 		
-		if (npcId == TEPIOS)
+		switch (qs.getCond())
 		{
-			if (cond == 0)
-			{
+			case 0:
 				if (player.getLevel() >= 75)
 				{
-					if ((st.getQuestItemsCount(MARK_OF_KEUCEREUS_STAGE_1) > 0) || (st.getQuestItemsCount(MARK_OF_KEUCEREUS_STAGE_2) > 0))
+					if ((qs.getQuestItemsCount(MARK_OF_KEUCEREUS_STAGE_1) > 0) || (qs.getQuestItemsCount(MARK_OF_KEUCEREUS_STAGE_2) > 0))
 					{
 						htmltext = "tepios_q696_1.htm";
 					}
 					else
 					{
 						htmltext = "tepios_q696_6.htm";
-						st.exitCurrentQuest(true);
+						qs.exitCurrentQuest(true);
 					}
 				}
 				else
 				{
 					htmltext = "tepios_q696_0.htm";
-					st.exitCurrentQuest(true);
+					qs.exitCurrentQuest(true);
 				}
-			}
-			else if (cond == 1)
-			{
-				if (st.getInt("cohemenesDone") != 0)
+				break;
+			
+			case 1:
+				if (qs.getInt("cohemenesDone") != 0)
 				{
-					if (st.getQuestItemsCount(MARK_OF_KEUCEREUS_STAGE_2) < 1)
+					if (qs.getQuestItemsCount(MARK_OF_KEUCEREUS_STAGE_2) < 1)
 					{
-						st.takeAllItems(MARK_OF_KEUCEREUS_STAGE_1);
-						st.giveItems(MARK_OF_KEUCEREUS_STAGE_2, 1);
+						qs.takeAllItems(MARK_OF_KEUCEREUS_STAGE_1);
+						qs.giveItems(MARK_OF_KEUCEREUS_STAGE_2, 1);
 					}
 					
 					htmltext = "tepios_q696_5.htm";
-					st.playSound(SOUND_FINISH);
-					st.exitCurrentQuest(true);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(true);
 				}
 				else
 				{
 					htmltext = "tepios_q696_1a.htm";
 				}
-			}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if (npc.getId() == Cohemenes)
+		if (npc.getId() == COHEMENES)
 		{
-			st.set("cohemenesDone", 1);
+			qs.set("cohemenesDone", 1);
 		}
 		
 		return null;

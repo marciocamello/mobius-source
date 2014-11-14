@@ -45,6 +45,174 @@ public class Q00690_JudesRequest extends Quest implements ScriptFile
 	private static final int IHallP = 10404;
 	private static final int ISpitterP = 10405;
 	
+	public Q00690_JudesRequest()
+	{
+		super(true);
+		addStartNpc(JUDE);
+		addTalkId(JUDE);
+		addKillId(Evil);
+		addQuestItem(EVIL_WEAPON);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		if (event.equals("jude_q0690_03.htm"))
+		{
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.playSound(SOUND_ACCEPT);
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		
+		if (cond == 0)
+		{
+			if (qs.getPlayer().getLevel() >= 78)
+			{
+				htmltext = "jude_q0690_01.htm";
+			}
+			else
+			{
+				htmltext = "jude_q0690_02.htm";
+			}
+			
+			qs.exitCurrentQuest(true);
+		}
+		else if ((cond == 1) && (qs.getQuestItemsCount(EVIL_WEAPON) >= 5))
+		{
+			if (qs.getQuestItemsCount(EVIL_WEAPON) >= 100)
+			{
+				switch (Rnd.get(8))
+				{
+					case 0:
+						qs.giveItems(ISawsword, 1);
+						break;
+					
+					case 1:
+						qs.giveItems(IDisperser, 1);
+						break;
+					
+					case 2:
+						qs.giveItems(ISpirit, 1);
+						break;
+					
+					case 3:
+						qs.giveItems(IHeavyArms, 1);
+						break;
+					
+					case 4:
+						qs.giveItems(ITrident, 1);
+						break;
+					
+					case 5:
+						qs.giveItems(IHammer, 1);
+						break;
+					
+					case 6:
+						qs.giveItems(IHand, 1);
+						break;
+					
+					case 7:
+						qs.giveItems(IHall, 1);
+						break;
+					
+					case 8:
+						qs.giveItems(ISpitter, 1);
+						break;
+				}
+				
+				qs.playSound(SOUND_FINISH);
+				qs.takeItems(EVIL_WEAPON, 100);
+				htmltext = "jude_q0690_07.htm";
+			}
+			else if ((qs.getQuestItemsCount(EVIL_WEAPON) > 0) && (qs.getQuestItemsCount(EVIL_WEAPON) < 100))
+			{
+				switch (Rnd.get(8))
+				{
+					case 0:
+						qs.giveItems(ISawswordP, 1);
+						break;
+					
+					case 1:
+						qs.giveItems(IDisperserP, 1);
+						break;
+					
+					case 2:
+						qs.giveItems(ISpiritP, 1);
+						break;
+					
+					case 3:
+						qs.giveItems(IHeavyArmsP, 1);
+						break;
+					
+					case 4:
+						qs.giveItems(ITridentP, 1);
+						break;
+					
+					case 5:
+						qs.giveItems(IHammerP, 1);
+						break;
+					
+					case 6:
+						qs.giveItems(IHandP, 1);
+						break;
+					
+					case 7:
+						qs.giveItems(IHallP, 1);
+						break;
+					
+					case 8:
+						qs.giveItems(ISpitterP, 1);
+						break;
+				}
+				
+				qs.playSound(SOUND_FINISH);
+				qs.takeItems(EVIL_WEAPON, 5);
+				htmltext = "jude_q0690_09.htm";
+			}
+		}
+		else
+		{
+			htmltext = "jude_q0690_10.htm";
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		final Player player = qs.getRandomPartyMember(STARTED, Config.ALT_PARTY_DISTRIBUTION_RANGE);
+		
+		if (qs.getState() != STARTED)
+		{
+			return null;
+		}
+		
+		if (player != null)
+		{
+			final QuestState state = player.getQuestState(qs.getQuest().getName());
+			
+			if ((state != null) && Rnd.chance(EVIL_WEAPON_CHANCE))
+			{
+				qs.giveItems(EVIL_WEAPON, 1);
+				qs.playSound(SOUND_ITEMGET);
+			}
+		}
+		
+		return null;
+	}
+	
 	@Override
 	public void onLoad()
 	{
@@ -58,176 +226,5 @@ public class Q00690_JudesRequest extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00690_JudesRequest()
-	{
-		super(true);
-		addStartNpc(JUDE);
-		addTalkId(JUDE);
-		addKillId(Evil);
-		addQuestItem(EVIL_WEAPON);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("jude_q0690_03.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		return htmltext;
-	}
-	
-	private void giveReward(QuestState st, int item_id, long count)
-	{
-		st.giveItems(item_id, count);
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int cond = st.getCond();
-		
-		if (cond == 0)
-		{
-			if (st.getPlayer().getLevel() >= 78)
-			{
-				htmltext = "jude_q0690_01.htm";
-			}
-			else
-			{
-				htmltext = "jude_q0690_02.htm";
-			}
-			
-			st.exitCurrentQuest(true);
-		}
-		else if ((cond == 1) && (st.getQuestItemsCount(EVIL_WEAPON) >= 5))
-		{
-			int reward = Rnd.get(8);
-			
-			if (st.getQuestItemsCount(EVIL_WEAPON) >= 100)
-			{
-				if (reward == 0)
-				{
-					giveReward(st, ISawsword, 1);
-				}
-				else if (reward == 1)
-				{
-					giveReward(st, IDisperser, 1);
-				}
-				else if (reward == 2)
-				{
-					giveReward(st, ISpirit, 1);
-				}
-				else if (reward == 3)
-				{
-					giveReward(st, IHeavyArms, 1);
-				}
-				else if (reward == 4)
-				{
-					giveReward(st, ITrident, 1);
-				}
-				else if (reward == 5)
-				{
-					giveReward(st, IHammer, 1);
-				}
-				else if (reward == 6)
-				{
-					giveReward(st, IHand, 1);
-				}
-				else if (reward == 7)
-				{
-					giveReward(st, IHall, 1);
-				}
-				else if (reward == 8)
-				{
-					giveReward(st, ISpitter, 1);
-				}
-				
-				st.playSound(SOUND_FINISH);
-				st.takeItems(EVIL_WEAPON, 100);
-				htmltext = "jude_q0690_07.htm";
-			}
-			else if ((st.getQuestItemsCount(EVIL_WEAPON) > 0) && (st.getQuestItemsCount(EVIL_WEAPON) < 100))
-			{
-				if (reward == 0)
-				{
-					st.giveItems(ISawswordP, 1);
-				}
-				else if (reward == 1)
-				{
-					st.giveItems(IDisperserP, 1);
-				}
-				else if (reward == 2)
-				{
-					st.giveItems(ISpiritP, 1);
-				}
-				else if (reward == 3)
-				{
-					st.giveItems(IHeavyArmsP, 1);
-				}
-				else if (reward == 4)
-				{
-					st.giveItems(ITridentP, 1);
-				}
-				else if (reward == 5)
-				{
-					st.giveItems(IHammerP, 1);
-				}
-				else if (reward == 6)
-				{
-					st.giveItems(IHandP, 1);
-				}
-				else if (reward == 7)
-				{
-					st.giveItems(IHallP, 1);
-				}
-				else if (reward == 8)
-				{
-					st.giveItems(ISpitterP, 1);
-				}
-				
-				st.playSound(SOUND_FINISH);
-				st.takeItems(EVIL_WEAPON, 5);
-				htmltext = "jude_q0690_09.htm";
-			}
-		}
-		else
-		{
-			htmltext = "jude_q0690_10.htm";
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		Player player = st.getRandomPartyMember(STARTED, Config.ALT_PARTY_DISTRIBUTION_RANGE);
-		
-		if (st.getState() != STARTED)
-		{
-			return null;
-		}
-		
-		if (player != null)
-		{
-			QuestState sts = player.getQuestState(st.getQuest().getName());
-			
-			if ((sts != null) && Rnd.chance(EVIL_WEAPON_CHANCE))
-			{
-				st.giveItems(EVIL_WEAPON, 1);
-				st.playSound(SOUND_ITEMGET);
-			}
-		}
-		
-		return null;
 	}
 }

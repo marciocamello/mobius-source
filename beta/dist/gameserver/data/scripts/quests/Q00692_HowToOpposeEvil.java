@@ -101,6 +101,234 @@ public class Q00692_HowToOpposeEvil extends Quest implements ScriptFile
 		22765
 	};
 	
+	public Q00692_HowToOpposeEvil()
+	{
+		super(true);
+		addStartNpc(Dilios);
+		addTalkId(Kutran, Lekon);
+		addKillId(SOD);
+		addKillId(SOI);
+		addKillId(SOA);
+		addQuestItem(NucleusofanIncompleteSoul, FleetSteedTroupsTotem, PortionofaSoul, BreathofTiat, ConcentratedSpiritEnergy, SpiritStoneDust);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		final int cond = qs.getCond();
+		
+		switch (event)
+		{
+			case "take_test":
+				if (cond == 0)
+				{
+					final QuestState GoodDayToFly = qs.getPlayer().getQuestState(Q10273_GoodDayToFly.class);
+					
+					if ((GoodDayToFly != null) && GoodDayToFly.isCompleted())
+					{
+						qs.setCond(2);
+						qs.setState(STARTED);
+						qs.playSound(SOUND_ACCEPT);
+						htmltext = "dilios_q692_4.htm";
+					}
+					else
+					{
+						qs.setCond(1);
+						qs.setState(STARTED);
+						qs.playSound(SOUND_ACCEPT);
+						htmltext = "dilios_q692_3.htm";
+					}
+				}
+				break;
+			
+			case "lekon_q692_2.htm":
+				if (cond == 1)
+				{
+					qs.exitCurrentQuest(true);
+				}
+				break;
+			
+			case "kutran_q692_2.htm":
+				if (cond == 2)
+				{
+					qs.setCond(3);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
+			
+			case "exchange_sod":
+				if (cond == 3)
+				{
+					if (qs.getQuestItemsCount(FleetSteedTroupsTotem) < 5)
+					{
+						htmltext = "kutran_q692_7.htm";
+					}
+					else
+					{
+						int _charmstogive = Math.round(qs.getQuestItemsCount(FleetSteedTroupsTotem) / 5);
+						qs.takeItems(FleetSteedTroupsTotem, 5 * _charmstogive);
+						qs.giveItems(FleetSteedTroupsCharm, _charmstogive);
+						htmltext = "kutran_q692_4.htm";
+					}
+				}
+				break;
+			
+			case "exchange_soi":
+				if (cond == 3)
+				{
+					if (qs.getQuestItemsCount(NucleusofanIncompleteSoul) < 5)
+					{
+						htmltext = "kutran_q692_7.htm";
+					}
+					else
+					{
+						int _soulstogive = Math.round(qs.getQuestItemsCount(NucleusofanIncompleteSoul) / 5);
+						qs.takeItems(NucleusofanIncompleteSoul, 5 * _soulstogive);
+						qs.giveItems(NucleusofaFreedSoul, _soulstogive);
+						htmltext = "kutran_q692_5.htm";
+					}
+				}
+				break;
+			
+			case "exchange_soa":
+				if (cond == 3)
+				{
+					if (qs.getQuestItemsCount(SpiritStoneDust) < 5)
+					{
+						htmltext = "kutran_q692_7.htm";
+					}
+					else
+					{
+						int _soulstogive = Math.round(qs.getQuestItemsCount(SpiritStoneDust) / 5);
+						qs.takeItems(SpiritStoneDust, 5 * _soulstogive);
+						qs.giveItems(SpiritStoneFragment, _soulstogive);
+						htmltext = "kutran_q692_5.htm";
+					}
+				}
+				break;
+			
+			case "exchange_breath":
+				if (cond == 3)
+				{
+					if (qs.getQuestItemsCount(BreathofTiat) == 0)
+					{
+						htmltext = "kutran_q692_7.htm";
+					}
+					else
+					{
+						qs.giveItems(ADENA_ID, qs.getQuestItemsCount(BreathofTiat) * 2500);
+						qs.takeItems(BreathofTiat, -1);
+						htmltext = "kutran_q692_5.htm";
+					}
+				}
+				break;
+			
+			case "exchange_portion":
+				if (cond == 3)
+				{
+					if (qs.getQuestItemsCount(PortionofaSoul) == 0)
+					{
+						htmltext = "kutran_q692_7.htm";
+					}
+					else
+					{
+						qs.giveItems(ADENA_ID, qs.getQuestItemsCount(PortionofaSoul) * 2500);
+						qs.takeItems(PortionofaSoul, -1);
+						htmltext = "kutran_q692_5.htm";
+					}
+				}
+				break;
+			
+			case "exchange_energy":
+				if (cond == 3)
+				{
+					if (qs.getQuestItemsCount(ConcentratedSpiritEnergy) == 0)
+					{
+						htmltext = "kutran_q692_7.htm";
+					}
+					else
+					{
+						qs.giveItems(ADENA_ID, qs.getQuestItemsCount(ConcentratedSpiritEnergy) * 25000);
+						qs.takeItems(ConcentratedSpiritEnergy, -1);
+						htmltext = "kutran_q692_5.htm";
+					}
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		
+		switch (npc.getId())
+		{
+			case Dilios:
+				if (cond == 0)
+				{
+					if (qs.getPlayer().getLevel() >= 75)
+					{
+						htmltext = "dilios_q692_1.htm";
+					}
+					else
+					{
+						htmltext = "dilios_q692_0.htm";
+						qs.exitCurrentQuest(true);
+					}
+				}
+				break;
+			
+			case Kutran:
+				if (cond == 2)
+				{
+					htmltext = "kutran_q692_1.htm";
+				}
+				else if (cond == 3)
+				{
+					htmltext = "kutran_q692_3.htm";
+				}
+				break;
+			
+			case Lekon:
+				if (cond == 1)
+				{
+					htmltext = "lekon_q692_1.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		final int npcId = npc.getId();
+		
+		if (qs.getCond() == 3)
+		{
+			if (Util.contains(SOD, npcId))
+			{
+				qs.rollAndGive(FleetSteedTroupsTotem, (int) Config.RATE_QUESTS_REWARD * 1, 17);
+			}
+			else if (Util.contains(SOI, npcId))
+			{
+				qs.rollAndGive(NucleusofanIncompleteSoul, (int) Config.RATE_QUESTS_REWARD * 1, 17);
+			}
+			else if (Util.contains(SOA, npcId))
+			{
+				qs.rollAndGive(SpiritStoneDust, (int) Config.RATE_QUESTS_REWARD * 1, 20);
+			}
+		}
+		
+		return null;
+	}
+	
 	@Override
 	public void onLoad()
 	{
@@ -114,205 +342,5 @@ public class Q00692_HowToOpposeEvil extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00692_HowToOpposeEvil()
-	{
-		super(true);
-		addStartNpc(Dilios);
-		addTalkId(Kutran, Lekon);
-		addKillId(SOD);
-		addKillId(SOI);
-		addKillId(SOA);
-		addQuestItem(NucleusofanIncompleteSoul, FleetSteedTroupsTotem, PortionofaSoul);
-		addQuestItem(BreathofTiat, ConcentratedSpiritEnergy, SpiritStoneDust);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		int cond = st.getCond();
-		
-		if (event.equalsIgnoreCase("take_test") && (cond == 0))
-		{
-			QuestState GoodDayToFly = st.getPlayer().getQuestState(Q10273_GoodDayToFly.class);
-			
-			if ((GoodDayToFly != null) && GoodDayToFly.isCompleted())
-			{
-				st.setCond(2);
-				st.setState(STARTED);
-				st.playSound(SOUND_ACCEPT);
-				htmltext = "dilios_q692_4.htm";
-			}
-			else
-			{
-				st.setCond(1);
-				st.setState(STARTED);
-				st.playSound(SOUND_ACCEPT);
-				htmltext = "dilios_q692_3.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("lekon_q692_2.htm") && (cond == 1))
-		{
-			st.exitCurrentQuest(true);
-		}
-		else if (event.equalsIgnoreCase("kutran_q692_2.htm") && (cond == 2))
-		{
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("exchange_sod") && (cond == 3))
-		{
-			if (st.getQuestItemsCount(FleetSteedTroupsTotem) < 5)
-			{
-				htmltext = "kutran_q692_7.htm";
-			}
-			else
-			{
-				int _charmstogive = Math.round(st.getQuestItemsCount(FleetSteedTroupsTotem) / 5);
-				st.takeItems(FleetSteedTroupsTotem, 5 * _charmstogive);
-				st.giveItems(FleetSteedTroupsCharm, _charmstogive);
-				htmltext = "kutran_q692_4.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("exchange_soi") && (cond == 3))
-		{
-			if (st.getQuestItemsCount(NucleusofanIncompleteSoul) < 5)
-			{
-				htmltext = "kutran_q692_7.htm";
-			}
-			else
-			{
-				int _soulstogive = Math.round(st.getQuestItemsCount(NucleusofanIncompleteSoul) / 5);
-				st.takeItems(NucleusofanIncompleteSoul, 5 * _soulstogive);
-				st.giveItems(NucleusofaFreedSoul, _soulstogive);
-				htmltext = "kutran_q692_5.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("exchange_soa") && (cond == 3))
-		{
-			if (st.getQuestItemsCount(SpiritStoneDust) < 5)
-			{
-				htmltext = "kutran_q692_7.htm";
-			}
-			else
-			{
-				int _soulstogive = Math.round(st.getQuestItemsCount(SpiritStoneDust) / 5);
-				st.takeItems(SpiritStoneDust, 5 * _soulstogive);
-				st.giveItems(SpiritStoneFragment, _soulstogive);
-				htmltext = "kutran_q692_5.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("exchange_breath") && (cond == 3))
-		{
-			if (st.getQuestItemsCount(BreathofTiat) == 0)
-			{
-				htmltext = "kutran_q692_7.htm";
-			}
-			else
-			{
-				st.giveItems(ADENA_ID, st.getQuestItemsCount(BreathofTiat) * 2500);
-				st.takeItems(BreathofTiat, -1);
-				htmltext = "kutran_q692_5.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("exchange_portion") && (cond == 3))
-		{
-			if (st.getQuestItemsCount(PortionofaSoul) == 0)
-			{
-				htmltext = "kutran_q692_7.htm";
-			}
-			else
-			{
-				st.giveItems(ADENA_ID, st.getQuestItemsCount(PortionofaSoul) * 2500);
-				st.takeItems(PortionofaSoul, -1);
-				htmltext = "kutran_q692_5.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("exchange_energy") && (cond == 3))
-		{
-			if (st.getQuestItemsCount(ConcentratedSpiritEnergy) == 0)
-			{
-				htmltext = "kutran_q692_7.htm";
-			}
-			else
-			{
-				st.giveItems(ADENA_ID, st.getQuestItemsCount(ConcentratedSpiritEnergy) * 25000);
-				st.takeItems(ConcentratedSpiritEnergy, -1);
-				htmltext = "kutran_q692_5.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (npcId == Dilios)
-		{
-			if (cond == 0)
-			{
-				if (st.getPlayer().getLevel() >= 75)
-				{
-					htmltext = "dilios_q692_1.htm";
-				}
-				else
-				{
-					htmltext = "dilios_q692_0.htm";
-					st.exitCurrentQuest(true);
-				}
-			}
-		}
-		else if (npcId == Kutran)
-		{
-			if (cond == 2)
-			{
-				htmltext = "kutran_q692_1.htm";
-			}
-			else if (cond == 3)
-			{
-				htmltext = "kutran_q692_3.htm";
-			}
-		}
-		else if (npcId == Lekon)
-		{
-			if (cond == 1)
-			{
-				htmltext = "lekon_q692_1.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (cond == 3)
-		{
-			if (Util.contains(SOD, npcId))
-			{
-				st.rollAndGive(FleetSteedTroupsTotem, (int) Config.RATE_QUESTS_REWARD * 1, 17);
-			}
-			else if (Util.contains(SOI, npcId))
-			{
-				st.rollAndGive(NucleusofanIncompleteSoul, (int) Config.RATE_QUESTS_REWARD * 1, 17);
-			}
-			else if (Util.contains(SOA, npcId))
-			{
-				st.rollAndGive(SpiritStoneDust, (int) Config.RATE_QUESTS_REWARD * 1, 20);
-			}
-		}
-		
-		return null;
 	}
 }
