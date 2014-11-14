@@ -21,8 +21,135 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00688_DefeatTheElrokianRaiders extends Quest implements ScriptFile
 {
-	private static final int DROP_CHANCE = 50;
+	// Npc
+	private static final int DINN = 32105;
+	// Monster
+	private static final int ELROKI = 22214;
+	// Item
 	private static final int DINOSAUR_FANG_NECKLACE = 8785;
+	// Other
+	private static final int DROP_CHANCE = 50;
+	
+	public Q00688_DefeatTheElrokianRaiders()
+	{
+		super(false);
+		addStartNpc(DINN);
+		addTalkId(DINN);
+		addKillId(ELROKI);
+		addQuestItem(DINOSAUR_FANG_NECKLACE);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		final long count = qs.getQuestItemsCount(DINOSAUR_FANG_NECKLACE);
+		
+		switch (event)
+		{
+			case "32105-03.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "32105-08.htm":
+				if (count > 0)
+				{
+					qs.takeItems(DINOSAUR_FANG_NECKLACE, -1);
+					qs.giveItems(ADENA_ID, count * 3000);
+				}
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(true);
+				break;
+			
+			case "32105-06.htm":
+				qs.takeItems(DINOSAUR_FANG_NECKLACE, -1);
+				qs.giveItems(ADENA_ID, count * 3000);
+				break;
+			
+			case "32105-07.htm":
+				if (count >= 100)
+				{
+					qs.takeItems(DINOSAUR_FANG_NECKLACE, 100);
+					qs.giveItems(ADENA_ID, 450000);
+				}
+				else
+				{
+					htmltext = "32105-04.htm";
+				}
+				break;
+			
+			case "None":
+				htmltext = null;
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		
+		switch (qs.getCond())
+		{
+			case 0:
+				if (qs.getPlayer().getLevel() >= 75)
+				{
+					htmltext = "32105-01.htm";
+				}
+				else
+				{
+					htmltext = "32105-00.htm";
+					qs.exitCurrentQuest(true);
+				}
+				break;
+			
+			case 1:
+				if (qs.getQuestItemsCount(DINOSAUR_FANG_NECKLACE) == 0)
+				{
+					htmltext = "32105-04.htm";
+				}
+				else
+				{
+					htmltext = "32105-05.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		final long count = qs.getQuestItemsCount(DINOSAUR_FANG_NECKLACE);
+		
+		if ((qs.getCond() == 1) && (count < 100) && Rnd.chance(DROP_CHANCE))
+		{
+			long numItems = (int) Config.RATE_QUESTS_REWARD;
+			
+			if ((count + numItems) > 100)
+			{
+				numItems = 100 - count;
+			}
+			
+			if ((count + numItems) >= 100)
+			{
+				qs.playSound("ItemSound.quest_middle");
+			}
+			else
+			{
+				qs.playSound("ItemSound.quest_itemget");
+			}
+			
+			qs.giveItems(DINOSAUR_FANG_NECKLACE, numItems);
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -37,125 +164,5 @@ public class Q00688_DefeatTheElrokianRaiders extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q00688_DefeatTheElrokianRaiders()
-	{
-		super(false);
-		addStartNpc(32105);
-		addTalkId(32105);
-		addKillId(22214);
-		addQuestItem(DINOSAUR_FANG_NECKLACE);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		long count = st.getQuestItemsCount(DINOSAUR_FANG_NECKLACE);
-		
-		if (event.equalsIgnoreCase("32105-03.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("32105-08.htm"))
-		{
-			if (count > 0)
-			{
-				st.takeItems(DINOSAUR_FANG_NECKLACE, -1);
-				st.giveItems(ADENA_ID, count * 3000);
-			}
-			
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(true);
-		}
-		else if (event.equalsIgnoreCase("32105-06.htm"))
-		{
-			st.takeItems(DINOSAUR_FANG_NECKLACE, -1);
-			st.giveItems(ADENA_ID, count * 3000);
-		}
-		else if (event.equalsIgnoreCase("32105-07.htm"))
-		{
-			if (count >= 100)
-			{
-				st.takeItems(DINOSAUR_FANG_NECKLACE, 100);
-				st.giveItems(ADENA_ID, 450000);
-			}
-			else
-			{
-				htmltext = "32105-04.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("None"))
-		{
-			htmltext = null;
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int cond = st.getCond();
-		long count = st.getQuestItemsCount(DINOSAUR_FANG_NECKLACE);
-		
-		if (cond == 0)
-		{
-			if (st.getPlayer().getLevel() >= 75)
-			{
-				htmltext = "32105-01.htm";
-			}
-			else
-			{
-				htmltext = "32105-00.htm";
-				st.exitCurrentQuest(true);
-			}
-		}
-		else if (cond == 1)
-		{
-			if (count == 0)
-			{
-				htmltext = "32105-04.htm";
-			}
-			else
-			{
-				htmltext = "32105-05.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		long count = st.getQuestItemsCount(DINOSAUR_FANG_NECKLACE);
-		
-		if ((st.getCond() == 1) && (count < 100) && Rnd.chance(DROP_CHANCE))
-		{
-			long numItems = (int) Config.RATE_QUESTS_REWARD;
-			
-			if ((count + numItems) > 100)
-			{
-				numItems = 100 - count;
-			}
-			
-			if ((count + numItems) >= 100)
-			{
-				st.playSound("ItemSound.quest_middle");
-			}
-			else
-			{
-				st.playSound("ItemSound.quest_itemget");
-			}
-			
-			st.giveItems(DINOSAUR_FANG_NECKLACE, numItems);
-		}
-		
-		return null;
 	}
 }

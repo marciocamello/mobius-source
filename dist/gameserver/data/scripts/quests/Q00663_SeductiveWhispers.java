@@ -141,122 +141,138 @@ public class Q00663_SeductiveWhispers extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		int _state = st.getState();
-		long Spirit_Bead_Count = st.getQuestItemsCount(Spirit_Bead);
+		final int _state = qs.getState();
+		final long Spirit_Bead_Count = qs.getQuestItemsCount(Spirit_Bead);
 		
-		if (event.equalsIgnoreCase("30846_04.htm") && (_state == CREATED))
+		switch (event)
 		{
-			st.setCond(1);
-			st.set("round", "0");
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("30846_07.htm") && (_state == STARTED))
-		{
-			return Dialog_Rewards;
-		}
-		else if (event.equalsIgnoreCase("30846_09.htm") && (_state == STARTED))
-		{
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(true);
-		}
-		else if (event.equalsIgnoreCase("30846_08.htm") && (_state == STARTED))
-		{
-			if (Spirit_Bead_Count < 1)
-			{
-				return "30846_11.htm";
-			}
-			
-			st.takeItems(Spirit_Bead, 1);
-			
-			if (!Rnd.chance(WinChance))
-			{
-				return "30846_08a.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("30846_10.htm") && (_state == STARTED))
-		{
-			st.set("round", "0");
-			
-			if (Spirit_Bead_Count < 50)
-			{
-				return "30846_11.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("30846_12.htm") && (_state == STARTED))
-		{
-			int round = st.getInt("round");
-			
-			if (round == 0)
-			{
-				if (Spirit_Bead_Count < 50)
+			case "30846_04.htm":
+				if (_state == CREATED)
 				{
-					return "30846_11.htm";
+					qs.setCond(1);
+					qs.set("round", "0");
+					qs.setState(STARTED);
+					qs.playSound(SOUND_ACCEPT);
 				}
-				
-				st.takeItems(Spirit_Bead, 50);
-			}
+				break;
 			
-			if (!Rnd.chance(WinChance))
-			{
-				st.set("round", "0");
-				return event;
-			}
+			case "30846_07.htm":
+				if (_state == STARTED)
+				{
+					return Dialog_Rewards;
+				}
+				break;
 			
-			LevelRewards current_reward = rewards[round];
-			int next_round = round + 1;
-			boolean LastLevel = next_round == rewards.length;
-			String dialog = LastLevel ? Dialog_WinGame : Dialog_WinLevel;
-			dialog = dialog.replaceFirst("%level%", String.valueOf(next_round));
-			dialog = dialog.replaceFirst("%prize%", current_reward.toString());
+			case "30846_09.htm":
+				if (_state == STARTED)
+				{
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(true);
+				}
+				break;
 			
-			if (LastLevel)
-			{
-				next_round = 0;
-				current_reward.giveRewards(st);
-				st.playSound(SOUND_JACKPOT);
-			}
+			case "30846_08.htm":
+				if (_state == STARTED)
+				{
+					if (Spirit_Bead_Count < 1)
+					{
+						return "30846_11.htm";
+					}
+					
+					qs.takeItems(Spirit_Bead, 1);
+					
+					if (!Rnd.chance(WinChance))
+					{
+						return "30846_08a.htm";
+					}
+				}
+				break;
 			
-			st.set("round", String.valueOf(next_round));
-			return dialog;
-		}
-		else if (event.equalsIgnoreCase("30846_13.htm") && (_state == STARTED))
-		{
-			int round = st.getInt("round") - 1;
-			st.set("round", "0");
+			case "30846_10.htm":
+				if (_state == STARTED)
+				{
+					qs.set("round", "0");
+					
+					if (Spirit_Bead_Count < 50)
+					{
+						return "30846_11.htm";
+					}
+				}
+				break;
 			
-			if ((round < 0) || (round >= rewards.length))
-			{
-				return "30846_13a.htm";
-			}
+			case "30846_12.htm":
+				if (_state == STARTED)
+				{
+					final int round = qs.getInt("round");
+					
+					if (round == 0)
+					{
+						if (Spirit_Bead_Count < 50)
+						{
+							return "30846_11.htm";
+						}
+						
+						qs.takeItems(Spirit_Bead, 50);
+					}
+					
+					if (!Rnd.chance(WinChance))
+					{
+						qs.set("round", "0");
+						return event;
+					}
+					
+					LevelRewards current_reward = rewards[round];
+					int next_round = round + 1;
+					boolean LastLevel = next_round == rewards.length;
+					String dialog = LastLevel ? Dialog_WinGame : Dialog_WinLevel;
+					dialog = dialog.replaceFirst("%level%", String.valueOf(next_round));
+					dialog = dialog.replaceFirst("%prize%", current_reward.toString());
+					
+					if (LastLevel)
+					{
+						next_round = 0;
+						current_reward.giveRewards(qs);
+						qs.playSound(SOUND_JACKPOT);
+					}
+					
+					qs.set("round", String.valueOf(next_round));
+					return dialog;
+				}
+				break;
 			
-			rewards[round].giveRewards(st);
+			case "30846_13.htm":
+				if (_state == STARTED)
+				{
+					final int round = qs.getInt("round") - 1;
+					qs.set("round", "0");
+					
+					if ((round < 0) || (round >= rewards.length))
+					{
+						return "30846_13a.htm";
+					}
+					
+					rewards[round].giveRewards(qs);
+				}
+				break;
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		if (npc.getId() != Wilbert)
+		if (qs.getState() == CREATED)
 		{
-			return "noquest";
-		}
-		
-		int _state = st.getState();
-		
-		if (_state == CREATED)
-		{
-			if (st.getPlayer().getLevel() < 50)
+			if (qs.getPlayer().getLevel() < 50)
 			{
-				st.exitCurrentQuest(true);
+				qs.exitCurrentQuest(true);
 				return "30846_00.htm";
 			}
 			
-			st.setCond(0);
+			qs.setCond(0);
 			return "30846_01.htm";
 		}
 		
@@ -268,26 +284,11 @@ public class Q00663_SeductiveWhispers extends Quest implements ScriptFile
 	{
 		if (qs.getState() == STARTED)
 		{
-			double rand = drop_chance * Experience.penaltyModifier(qs.calculateLevelDiffForDrop(npc.getLevel(), qs.getPlayer().getLevel()), 9) * npc.getTemplate().rateHp;
+			final double rand = drop_chance * Experience.penaltyModifier(qs.calculateLevelDiffForDrop(npc.getLevel(), qs.getPlayer().getLevel()), 9) * npc.getTemplate().rateHp;
 			qs.rollAndGive(Spirit_Bead, 1, rand);
 		}
 		
 		return null;
-	}
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
 	}
 	
 	private static class LevelRewards
@@ -329,5 +330,20 @@ public class Q00663_SeductiveWhispers extends Quest implements ScriptFile
 		{
 			return txt;
 		}
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

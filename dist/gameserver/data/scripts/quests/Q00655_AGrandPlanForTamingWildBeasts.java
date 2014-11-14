@@ -25,7 +25,9 @@ import lineage2.gameserver.utils.TimeUtils;
 
 public class Q00655_AGrandPlanForTamingWildBeasts extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int MESSENGER = 35627;
+	// Items
 	private final static int STONE = 8084;
 	private final static int TRAINER_LICENSE = 8293;
 	
@@ -38,28 +40,28 @@ public class Q00655_AGrandPlanForTamingWildBeasts extends Quest implements Scrip
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmlText = event;
 		
-		if (event.equalsIgnoreCase("farm_messenger_q0655_06.htm"))
+		if (event.equals("farm_messenger_q0655_06.htm"))
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.playSound(SOUND_ACCEPT);
 		}
 		
 		return htmlText;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmlText = "noquest";
-		int cond = st.getCond();
-		Player player = st.getPlayer();
-		Clan clan = player.getClan();
-		ClanHall clanhall = ResidenceHolder.getInstance().getResidence(63);
+		final int cond = qs.getCond();
+		final Player player = qs.getPlayer();
+		final Clan clan = player.getClan();
+		final ClanHall clanhall = ResidenceHolder.getInstance().getResidence(63);
 		
 		if (clanhall.getSiegeEvent().isRegistrationOver())
 		{
@@ -86,18 +88,18 @@ public class Q00655_AGrandPlanForTamingWildBeasts extends Quest implements Scrip
 		{
 			htmlText = "farm_messenger_q0655_01.htm";
 		}
-		else if ((cond == 1) && (st.getQuestItemsCount(STONE) < 10))
+		else if ((cond == 1) && (qs.getQuestItemsCount(STONE) < 10))
 		{
 			htmlText = "farm_messenger_q0655_08.htm";
 		}
-		else if ((cond == 1) && (st.getQuestItemsCount(STONE) == 10))
+		else if ((cond == 1) && (qs.getQuestItemsCount(STONE) == 10))
 		{
-			st.setCond(-1);
-			st.takeItems(STONE, -1);
-			st.giveItems(TRAINER_LICENSE, 1);
+			qs.setCond(-1);
+			qs.takeItems(STONE, -1);
+			qs.giveItems(TRAINER_LICENSE, 1);
 			htmlText = "farm_messenger_q0655_10.htm";
 		}
-		else if (st.getQuestItemsCount(TRAINER_LICENSE) == 1)
+		else if (qs.getQuestItemsCount(TRAINER_LICENSE) == 1)
 		{
 			htmlText = "farm_messenger_q0655_09.htm";
 		}
