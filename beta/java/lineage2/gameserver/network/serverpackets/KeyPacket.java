@@ -33,10 +33,15 @@ public class KeyPacket extends L2GameServerPacket
 		}
 		
 		writeC(0x01);
-		writeB(_key);
+		for (int i = 0; i < 8; i++)
+		{
+			writeC(_key[i]); // key
+		}
+		
 		writeD(0x01);
-		writeD(0x00);
-		writeC(0x00);
+		writeD(0x00); // server id
+		writeC(0x01);
 		writeD(0x00); // Seed (obfuscation key)
+		writeC(0x00);
 	}
 }

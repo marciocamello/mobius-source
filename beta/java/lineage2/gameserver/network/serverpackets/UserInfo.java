@@ -32,6 +32,8 @@ import lineage2.gameserver.utils.Location;
 
 public class UserInfo extends L2GameServerPacket
 {
+	// private static final Logger _log = LoggerFactory.getLogger(UserInfo.class);
+	
 	private static final int _blockSize = 2;
 	
 	private final boolean _partyRoom;
@@ -142,8 +144,6 @@ public class UserInfo extends L2GameServerPacket
 	private int _allyCrestId = 0;
 	private int _largeClanCrestId = 0;
 	private int _mountType = 0;
-	private String _name = "";
-	private String _clanName = "";
 	
 	private int _appearanceBlockSize = 0;
 	private int _fullBlockSize = 0;
@@ -172,6 +172,7 @@ public class UserInfo extends L2GameServerPacket
 	private int _invBlockSize = 0;
 	private int _unk1BlockSize = 0;
 	
+	private String _name;
 	private String _title;
 	
 	/**
@@ -212,7 +213,6 @@ public class UserInfo extends L2GameServerPacket
 			if (clan == null)
 			{
 				_clanId = 0;
-				_clanName = "";
 				_clanCrestId = 0;
 				_largeClanCrestId = 0;
 				
@@ -222,7 +222,6 @@ public class UserInfo extends L2GameServerPacket
 			else
 			{
 				_clanId = clan.getClanId();
-				_clanName = clan.getName();
 				_clanCrestId = clan.getCrestId();
 				_largeClanCrestId = clan.getCrestLargeId();
 				
@@ -254,7 +253,9 @@ public class UserInfo extends L2GameServerPacket
 			}
 		}
 		
+		// _log.info("_name = " + _name + ", length = " + _name.length());
 		generateBlockSizes();
+		
 		_movementSpeedMultiplier = player.getMovementSpeedMultiplier();
 		_runSpd = (int) (player.getRunSpeed() / _movementSpeedMultiplier);
 		_walkSpd = (int) (player.getWalkSpeed() / _movementSpeedMultiplier);
@@ -429,8 +430,8 @@ public class UserInfo extends L2GameServerPacket
 		if ((_uiv1 & CharacterMasksUI1.APPEARANCE) == CharacterMasksUI1.APPEARANCE)
 		{
 			writeH(_appearanceBlockSize); // blockSize
-			writeH(_name.length() + 1);
-			writeS(_name);
+			writeH(_name.length());
+			writeS2(_name);
 			writeC(_canUseAdminCmd);
 			writeC(_race);
 			writeC(_sex);
@@ -572,8 +573,8 @@ public class UserInfo extends L2GameServerPacket
 		if ((_uiv2 & CharacterMasksUI2.PLEDGE_INFO) == CharacterMasksUI2.PLEDGE_INFO)
 		{
 			writeH(_pledgeInfoBlockSize); // blockSize
-			writeH(_title.length() + 1);
-			writeS(_title);
+			writeH(_title.length());
+			writeS2(_title);
 			writeH(_pledgeType);
 			writeD(_clanId);
 			writeD(_largeClanCrestId);
@@ -669,7 +670,7 @@ public class UserInfo extends L2GameServerPacket
 		
 		if ((_uiv1 & CharacterMasksUI1.APPEARANCE) == CharacterMasksUI1.APPEARANCE)
 		{
-			_appearanceBlockSize = (_name.length() * 2) + 14 + 2 + _blockSize;
+			_appearanceBlockSize = (getLengthS2(_name)) + 14 + _blockSize;
 			_fullBlockSize += _appearanceBlockSize - 2;
 		}
 		
@@ -753,7 +754,7 @@ public class UserInfo extends L2GameServerPacket
 		
 		if ((_uiv2 & CharacterMasksUI2.PLEDGE_INFO) == CharacterMasksUI2.PLEDGE_INFO)
 		{
-			_pledgeInfoBlockSize = (_clanName.length() * 2) + 30 + 2 + _blockSize;
+			_pledgeInfoBlockSize = (getLengthS2(_title)) + 30 + _blockSize;
 			_fullBlockSize += _pledgeInfoBlockSize - 2;
 		}
 		

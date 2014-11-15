@@ -43,12 +43,11 @@ public final class LoginOk extends L2LoginServerPacket
 		writeC(0x03);
 		writeD(_loginOk1);
 		writeD(_loginOk2);
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x000003ea);
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
-		writeB(new byte[16]);
+		writeB(new byte[8]);
+		writeD(1002);
+		writeH(60872);
+		writeC(35);
+		writeC(6);
+		writeB(new byte[28]);
 	}
 }

@@ -10,38 +10,24 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package lineage2.loginserver.serverpackets;
+package lineage2.loginserver.utils;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
-public final class GGAuth extends L2LoginServerPacket
+public class Common
 {
-	static final Logger _log = LoggerFactory.getLogger(GGAuth.class);
-	public static final int SKIP_GG_AUTH_REQUEST = 0x0b;
-	private final int _response;
-	
 	/**
-	 * Constructor for GGAuth.
-	 * @param response int
+	 * Method to generate byte array from hex string.
+	 * @param s
+	 * @return
 	 */
-	public GGAuth(int response)
+	public static byte[] hexStringToByteArray(String s)
 	{
-		_response = response;
-	}
-	
-	/**
-	 * Method writeImpl.
-	 */
-	@Override
-	protected void writeImpl()
-	{
-		writeC(0x0b);
-		writeD(_response);
-		writeB(new byte[16]);
+		String fs = s.replaceAll("\\s+", "");
+		int len = fs.length();
+		byte[] data = new byte[len / 2];
+		for (int i = 0; i < len; i += 2)
+		{
+			data[i / 2] = (byte) ((Character.digit(fs.charAt(i), 16) << 4) + Character.digit(fs.charAt(i + 1), 16));
+		}
+		return data;
 	}
 }

@@ -37,10 +37,7 @@ public class ExLoginVitalityEffectInfo extends L2GameServerPacket
 		writeD(charInfo.getVitalityPoints() == 0 ? 0 : (int) (Config.ALT_VITALITY_RATE * 100));
 		// bonus
 		writeD(5); // TODO: Remaining items count
-		// Unknown
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
-		writeD(0x00);
+		writeD(0x00); // TODO: Max vitality items
+		writeD(0x00); // TODO: Max vitality items allowed
 	}
 }

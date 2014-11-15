@@ -23,52 +23,48 @@ public class PetInfo extends L2GameServerPacket
 {
 	private final int _runSpd;
 	private final int _walkSpd;
-	private final int MAtkSpd;
-	private final int PAtkSpd;
-	private final int pvp_flag;
-	private final int karma;
+	private final int _mAtkSpd;
+	private final int _pAtkSpd;
+	private final int _pvpFlag;
+	private final int _karma;
 	private final double _AttackSpeedMultiplier;
 	private final double _MovementSpeedMultiplier;
-	private int rideable;
+	private int _rideable;
 	private final int _type;
-	private final int obj_id;
-	private final int npc_id;
-	private final int runing;
-	private final int incombat;
-	private final int dead;
+	private final int _objId;
+	private final int _npcId;
 	private final int _sp;
-	private final int level;
-	private final int curFed;
-	private final int maxFed;
-	private final int curHp;
-	private final int maxHp;
-	private final int curMp;
-	private final int maxMp;
-	private final int curLoad;
-	private final int maxLoad;
-	private final int PAtk;
-	private final int PDef;
-	private final int MAtk;
-	private final int MDef;
-	private final int Accuracy;
-	private final int Evasion;
-	private final int Crit;
-	private final int sps;
-	private final int ss;
-	private final int type;
-	private int _showSpawnAnimation;
+	private final int _level;
+	private final int _curFed;
+	private final int _maxFed;
+	private final int _curHp;
+	private final int _maxHp;
+	private final int _curMp;
+	private final int _maxMp;
+	private final int _curLoad;
+	private final int _maxLoad;
+	private final int _pAtk;
+	private final int _pDef;
+	private final int _mAtk;
+	private final int _mDef;
+	private final int _accuracy;
+	private final int _evasion;
+	private final int _critical;
+	private final int _sps;
+	private final int _ss;
+	private final int _formId;
+	private int _petStatus;
 	private final Location _loc;
-	private final double col_redius;
-	private final double col_height;
-	private final long exp;
-	private final long exp_this_lvl;
-	private final long exp_next_lvl;
+	private final double _colRadius;
+	private final double _colHeight;
+	private final long _exp;
+	private final long _expThisLvl;
+	private final long _expNextLvl;
 	private final String _name;
-	private final String title;
+	private final String _title;
 	private final TeamType _team;
-	private final int sumPoint;
-	private final int maxSumPoint;
-	private final int _ownerId;
+	private final int _sumPoint;
+	private final int _maxSumPoint;
 	private final List<Integer> _aveList;
 	private final int _mevasion;
 	private final int _maccuracy;
@@ -77,60 +73,56 @@ public class PetInfo extends L2GameServerPacket
 	public PetInfo(Summon summon)
 	{
 		_type = summon.getSummonType();
-		_ownerId = summon.getPlayer().getObjectId();
-		obj_id = summon.getObjectId();
-		npc_id = summon.getTemplate().getId();
+		_objId = summon.getObjectId();
+		_npcId = summon.getTemplate().getId();
 		_loc = summon.getLoc();
-		MAtkSpd = summon.getMAtkSpd();
-		PAtkSpd = summon.getPAtkSpd();
+		_mAtkSpd = summon.getMAtkSpd();
+		_pAtkSpd = summon.getPAtkSpd();
 		_runSpd = summon.getRunSpeed();
 		_walkSpd = summon.getWalkSpeed();
-		col_redius = summon.getColRadius();
-		col_height = summon.getColHeight();
-		runing = summon.isRunning() ? 1 : 0;
-		incombat = summon.isInCombat() ? 1 : 0;
-		dead = summon.isAlikeDead() ? 1 : 0;
+		_colRadius = summon.getColRadius();
+		_colHeight = summon.getColHeight();
 		_name = summon.getName().equalsIgnoreCase(summon.getTemplate().name) ? "" : summon.getName();
-		title = summon.getTitle();
-		pvp_flag = summon.getPvpFlag();
-		karma = summon.getKarma();
-		curFed = summon.getCurrentFed();
-		maxFed = summon.getMaxFed();
-		curHp = (int) summon.getCurrentHp();
-		maxHp = summon.getMaxHp();
-		curMp = (int) summon.getCurrentMp();
-		maxMp = summon.getMaxMp();
+		_title = summon.getTitle();
+		_pvpFlag = summon.getPvpFlag();
+		_karma = summon.getKarma();
+		_curFed = summon.getCurrentFed();
+		_maxFed = summon.getMaxFed();
+		_curHp = (int) summon.getCurrentHp();
+		_maxHp = summon.getMaxHp();
+		_curMp = (int) summon.getCurrentMp();
+		_maxMp = summon.getMaxMp();
 		_sp = summon.getSp();
-		level = summon.getLevel();
-		exp = summon.getExp();
-		exp_this_lvl = summon.getExpForThisLevel();
-		exp_next_lvl = summon.getExpForNextLevel();
-		curLoad = summon.isPet() ? summon.getInventory().getTotalWeight() : 0;
-		maxLoad = summon.getMaxLoad();
-		PAtk = summon.getPAtk(null);
-		PDef = summon.getPDef(null);
-		MAtk = summon.getMAtk(null, null);
-		MDef = summon.getMDef(null, null);
-		Accuracy = summon.getAccuracy();
-		Evasion = summon.getEvasionRate(null);
-		Crit = summon.getCriticalHit(null, null);
+		_level = summon.getLevel();
+		_exp = summon.getExp();
+		_expThisLvl = summon.getExpForThisLevel();
+		_expNextLvl = summon.getExpForNextLevel();
+		_curLoad = summon.isPet() ? summon.getInventory().getTotalWeight() : 0;
+		_maxLoad = summon.getMaxLoad();
+		_pAtk = summon.getPAtk(null);
+		_pDef = summon.getPDef(null);
+		_mAtk = summon.getMAtk(null, null);
+		_mDef = summon.getMDef(null, null);
+		_accuracy = summon.getAccuracy();
+		_evasion = summon.getEvasionRate(null);
+		_critical = summon.getCriticalHit(null, null);
 		
 		if (summon.getPlayer().getTransformation() != 0)
 		{
-			rideable = 0; // not rideable
+			_rideable = 0; // not rideable
 		}
 		else
 		{
-			rideable = PetDataTable.isMountable(npc_id) ? 1 : 0;
+			_rideable = PetDataTable.isMountable(_npcId) ? 1 : 0;
 		}
 		
 		_team = summon.getTeam();
-		ss = summon.getSoulshotConsumeCount();
-		sps = summon.getSpiritshotConsumeCount();
-		_showSpawnAnimation = summon.getSpawnAnimation();
-		type = summon.getFormId();
-		sumPoint = summon.getPlayer().getSummonList().getUsedPoints();
-		maxSumPoint = summon.getPlayer().getSummonPointMax();
+		_ss = summon.getSoulshotConsumeCount();
+		_sps = summon.getSpiritshotConsumeCount();
+		_petStatus = summon.getSpawnAnimation();
+		_formId = summon.getFormId();
+		_sumPoint = summon.getPlayer().getSummonList().getUsedPoints();
+		_maxSumPoint = summon.getPlayer().getSummonPointMax();
 		_aveList = summon.getAveList();
 		_mevasion = summon.getMEvasionRate(null);
 		_maccuracy = summon.getMAccuracy();
@@ -141,7 +133,7 @@ public class PetInfo extends L2GameServerPacket
 	
 	public PetInfo update()
 	{
-		_showSpawnAnimation = 1;
+		_petStatus = 1;
 		return this;
 	}
 	
@@ -149,95 +141,86 @@ public class PetInfo extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xb2);
-		writeD(_type);
-		writeD(obj_id);
-		writeD(npc_id + 1000000);
-		writeD(0); // 1=attackable
+		writeC(_type);
+		writeD(_objId);
+		writeD(_npcId + 1000000);
 		writeD(_loc.getX());
 		writeD(_loc.getY());
 		writeD(_loc.getZ());
 		writeD(_loc.getHeading());
-		writeD(0);
-		writeD(MAtkSpd);
-		writeD(PAtkSpd);
-		writeD(_runSpd);
-		writeD(_walkSpd);
-		writeD(_runSpd/* _swimRunSpd */);
-		writeD(_walkSpd/* _swimWalkSpd */);
-		writeD(_runSpd/* _flRunSpd */);
-		writeD(_walkSpd/* _flWalkSpd */);
-		writeD(_runSpd/* _flyRunSpd */);
-		writeD(_walkSpd/* _flyWalkSpd */);
+		writeD(_mAtkSpd);
+		writeD(_pAtkSpd);
+		
+		writeH(_runSpd);
+		writeH(_walkSpd);
+		writeH(_runSpd/* _swimRunSpd */);
+		writeH(_walkSpd/* _swimWalkSpd */);
+		writeH(_runSpd/* _flRunSpd */);
+		writeH(_walkSpd/* _flWalkSpd */);
+		writeH(_runSpd/* _flyRunSpd */);
+		writeH(_walkSpd/* _flyWalkSpd */);
 		writeF(_MovementSpeedMultiplier);
 		writeF(_AttackSpeedMultiplier);
-		writeF(col_redius);
-		writeF(col_height);
-		writeD(0); // right hand weapon
-		writeD(0); // body armor
-		writeD(0); // left hand weapon
-		writeC(_ownerId); // name above char 1=true ... ??
-		writeC(runing); // running=1
-		writeC(incombat); // attacking 1=true
-		writeC(dead); // dead 1=true
-		writeC(_showSpawnAnimation); // invisible ?? 0=false 1=true 2=summoned
-		// (only works if model has a summon
-		// animation)
+		writeF(_colRadius);
+		writeF(_colHeight);
+		
+		writeD(0); // main weapon
+		writeD(0); // armor
+		writeD(0); // shield weapon
+		writeC(_petStatus); // 0=inactive 1=active 2=summoned (only works if model has a summon animation)
 		writeD(-1);
 		writeS(_name);
 		writeD(-1);
-		writeS(title);
-		writeD(1);
-		writeD(pvp_flag); // 0=white, 1=purple, 2=purpleblink, if its greater
-		// then karma = purple
-		writeD(karma); // hmm karma ??
-		writeD(curFed); // how fed it is
-		writeD(maxFed); // max fed it can be
-		writeD(curHp); // current hp
-		writeD(maxHp); // max hp
-		writeD(curMp); // current mp
-		writeD(maxMp); // max mp
-		writeD(_sp); // sp
-		writeD(level);// lvl
-		writeQ(exp);
-		writeQ(exp_this_lvl); // 0% absolute value
-		writeQ(exp_next_lvl); // 100% absoulte value
-		writeD(curLoad); // weight
-		writeD(maxLoad); // max weight it can carry
-		writeD(PAtk);// patk
-		writeD(PDef);// pdef
-		writeD(Accuracy);// accuracy
-		writeD(Evasion);// evasion
-		writeD(Crit);// critical
-		writeD(MAtk);// matk
-		writeD(MDef);// mdef
+		writeS(_title);
+		writeC(_pvpFlag); // 0=white, 1=purple, 2=purpleblink, if its greater then karma = purple
+		writeD(_karma); // hmm karma ??
+		writeD(_curFed); // how fed it is
+		writeD(_maxFed); // max fed it can be
+		writeD(_curHp); // current hp
+		writeD(_maxHp); // max hp
+		writeD(_curMp); // current mp
+		writeD(_maxMp); // max mp
+		writeQ(_sp); // sp
+		writeC(_level);// lvl
+		writeQ(_exp);
+		writeQ(_expThisLvl); // 0% absolute value
+		writeQ(_expNextLvl); // 100% absoulte value
+		writeD(_curLoad); // weight
+		writeD(_maxLoad); // max weight it can carry
+		writeD(_pAtk);// patk
+		writeD(_pDef);// pdef
+		writeD(_accuracy);// accuracy
+		writeD(_evasion);// evasion
+		writeD(_critical);// critical
+		writeD(_mAtk);// matk
+		writeD(_mDef);// mdef
 		writeD(_mevasion);
 		writeD(_maccuracy);
 		writeD(_mCritRate);
 		writeD(_runSpd);// speed
-		writeD(PAtkSpd);// atkspeed
-		writeD(MAtkSpd);// casting speed
-		writeD(rideable);
-		writeC(0); // c2
+		writeD(_pAtkSpd);// atkspeed
+		writeD(_mAtkSpd);// casting speed
+		writeC(_rideable);
 		writeC(_team.ordinal()); // team aura (1 = blue, 2 = red)
-		writeD(ss);
-		writeD(sps);
-		writeD(type);
-		writeD(0x00); // id
-		writeD(sumPoint);
-		writeD(maxSumPoint);
+		writeC(_ss);
+		writeC(_sps);
+		writeD(_formId); // evolution type
+		writeD(0x00); // evolutionLevel
+		writeC(_sumPoint);
+		writeC(_maxSumPoint);
 		
 		if (_aveList != null)
 		{
-			writeD(_aveList.size());
+			writeH(_aveList.size());
 			
 			for (int i : _aveList)
 			{
-				writeD(i);
+				writeH(i);
 			}
 		}
 		else
 		{
-			writeD(0x00);
+			writeH(0x00);
 		}
 		
 		writeC(0);

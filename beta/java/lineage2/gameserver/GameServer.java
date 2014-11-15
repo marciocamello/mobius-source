@@ -29,6 +29,7 @@ import lineage2.gameserver.data.xml.Parsers;
 import lineage2.gameserver.data.xml.holder.EventHolder;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.data.xml.holder.StaticObjectHolder;
+import lineage2.gameserver.data.xml.holder.UIDataHolder;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.handlers.AdminCommandHandler;
@@ -220,6 +221,7 @@ public class GameServer
 		Announcements.getInstance();
 		LotteryManager.getInstance();
 		PlayerMessageStack.getInstance();
+		UIDataHolder.getInstance();
 		
 		if (Config.AUTODESTROY_ITEM_AFTER > 0)
 		{

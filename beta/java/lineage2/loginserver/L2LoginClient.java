@@ -49,6 +49,8 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 		DISCONNECTED
 	}
 	
+	private static final int PROTOCOL_VERSION = 0xc621;
+	
 	private LoginClientState _state;
 	private LoginCrypt _loginCrypt;
 	private ScrambledKeyPair _scrambledPair;
@@ -338,5 +340,13 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 	@Override
 	protected void onForcedDisconnection()
 	{
+	}
+	
+	/**
+	 * @return
+	 */
+	public int getProtocol()
+	{
+		return PROTOCOL_VERSION;
 	}
 }

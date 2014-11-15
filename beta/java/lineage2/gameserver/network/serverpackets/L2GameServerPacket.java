@@ -12,8 +12,11 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+import java.io.UnsupportedEncodingException;
+
 import lineage2.commons.net.nio.impl.SendablePacket;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
+import lineage2.gameserver.instancemanager.ServerPacketOpCodeManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.base.MultiSellIngredient;
@@ -47,6 +50,37 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 	
 	protected abstract void writeImpl();
 	
+	protected void writeOpCode()
+	{
+		try
+		{
+			int opCode = ServerPacketOpCodeManager.getInstance().getOpCodeForPacketHash(getClass().hashCode());
+			if (opCode > 254)
+			{
+				writeC(254);
+				writeH(opCode - 255);
+			}
+			else
+			{
+				writeC(opCode);
+			}
+		}
+		catch (Exception e)
+		{
+			_log.error("Client: " + getClient() + " - Failed writing: " + toString(), e);
+		}
+	}
+	
+	/**
+	 * get length for UTF-16 encoding. TEMP FIX
+	 * @param text
+	 * @return
+	 */
+	protected int getLengthS2(String text)
+	{
+		return ((text == null) || (text.length() == 0)) ? 2 : (text.length() * 2);
+	}
+	
 	protected void writeEx(int value)
 	{
 		writeC(0xFE);
@@ -78,6 +112,33 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 		{
 			getByteBuffer().putInt(value);
 		}
+	}
+	
+	/**
+	 * Send text with UTF-16 encoding
+	 * @param text
+	 */
+	protected void writeS2(String text)
+	{
+		byte[] bts = new byte[]
+		{
+			0,
+			0
+		};
+		
+		if ((text != null) && (text.length() > 0))
+		{
+			try
+			{
+				bts = text.getBytes("UTF-16LE");
+			}
+			catch (UnsupportedEncodingException e)
+			{
+				_log.error("Client: " + getClient() + " - Failed generating encoding text.", e);
+			}
+		}
+		
+		getByteBuffer().put(bts);
 	}
 	
 	protected void writeDD(int[] values)

@@ -23,6 +23,7 @@ public final class Init extends L2LoginServerPacket
 	private final int _sessionId;
 	private final byte[] _publicKey;
 	private final byte[] _blowfishKey;
+	private final int _protocol;
 	
 	/**
 	 * Constructor for Init.
@@ -30,7 +31,7 @@ public final class Init extends L2LoginServerPacket
 	 */
 	public Init(L2LoginClient client)
 	{
-		this(client.getScrambledModulus(), client.getBlowfishKey(), client.getSessionId());
+		this(client.getScrambledModulus(), client.getBlowfishKey(), client.getSessionId(), client.getProtocol());
 	}
 	
 	/**
@@ -38,12 +39,14 @@ public final class Init extends L2LoginServerPacket
 	 * @param publickey byte[]
 	 * @param blowfishkey byte[]
 	 * @param sessionId int
+	 * @param protocol int
 	 */
-	public Init(byte[] publickey, byte[] blowfishkey, int sessionId)
+	public Init(byte[] publickey, byte[] blowfishkey, int sessionId, int protocol)
 	{
 		_sessionId = sessionId;
 		_publicKey = publickey;
 		_blowfishKey = blowfishkey;
+		_protocol = protocol;
 	}
 	
 	/**
@@ -54,13 +57,10 @@ public final class Init extends L2LoginServerPacket
 	{
 		writeC(0x00);
 		writeD(_sessionId);
-		writeD(0x0000c621);
+		writeD(_protocol); // Protocol version
 		writeB(_publicKey);
-		writeD(0x29DD954E);
-		writeD(0x77C39CFC);
-		writeD(0x97ADB620);
-		writeD(0x07BDE0F7);
+		writeB(new byte[16]);
 		writeB(_blowfishKey);
-		writeC(0x00);
+		writeD(0x00);
 	}
 }

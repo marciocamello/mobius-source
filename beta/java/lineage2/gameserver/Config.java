@@ -849,6 +849,7 @@ public class Config
 	public static int WEAR_DELAY;
 	public static int GARBAGE_COLLECTOR_INTERVAL;
 	public static final boolean GOODS_INVENTORY_ENABLED = false;
+	public static boolean STORE_UI_SETTINGS = false;
 	public static boolean EX_NEW_PETITION_SYSTEM;
 	public static boolean EX_JAPAN_MINIGAME;
 	public static boolean EX_LECTURE_MARK;
@@ -1379,6 +1380,7 @@ public class Config
 		GAME_POINT_ITEM_ID = otherSettings.getProperty("GamePointItemId", -1);
 		REMOVE_UNKNOWN_QUEST = otherSettings.getProperty("RemoveUnknownQuest", false);
 		ALLOW_MENTOR_BUFFS_IN_OFFLINE_MODE = otherSettings.getProperty("AllowMentorBuffsInOfflineMode", false);
+		STORE_UI_SETTINGS = otherSettings.getProperty("StoreUISettings", false);
 		STARTING_LOC = otherSettings.getProperty("StartingLoc", false);
 		STARTING_LOC_X = otherSettings.getProperty("StartingLocX", -114536);
 		STARTING_LOC_Y = otherSettings.getProperty("StartingLocY", 259928);

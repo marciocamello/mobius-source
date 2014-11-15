@@ -33,24 +33,25 @@ public final class ServerList extends L2LoginServerPacket
 {
 	private final List<ServerData> _servers = new ArrayList<>();
 	private final int _lastServer;
+	private int _paddedBytes;
 	
 	/**
 	 * @author Mobius
 	 */
 	private static class ServerData
 	{
-		int serverId;
-		InetAddress ip;
-		int port;
-		int online;
-		int maxPlayers;
-		boolean status;
-		boolean pvp;
-		boolean brackets;
-		int type;
-		int ageLimit;
-		int playerSize;
-		int[] deleteChars;
+		int _serverId;
+		InetAddress _ip;
+		int _port;
+		int _online;
+		int _maxPlayers;
+		boolean _status;
+		boolean _pvp;
+		boolean _brackets;
+		int _type;
+		int _ageLimit;
+		int _playerSize;
+		int[] _deleteChars;
 		
 		/**
 		 * Constructor for ServerData.
@@ -63,24 +64,24 @@ public final class ServerList extends L2LoginServerPacket
 		 * @param online int
 		 * @param maxPlayers int
 		 * @param status boolean
-		 * @param size int
+		 * @param playerSize int
 		 * @param ageLimit int
-		 * @param d int[]
+		 * @param deleteChars int[]
 		 */
-		ServerData(int serverId, InetAddress ip, int port, boolean pvp, boolean brackets, int type, int online, int maxPlayers, boolean status, int size, int ageLimit, int[] d)
+		ServerData(int serverId, InetAddress ip, int port, boolean pvp, boolean brackets, int type, int online, int maxPlayers, boolean status, int playerSize, int ageLimit, int[] deleteChars)
 		{
-			this.serverId = serverId;
-			this.ip = ip;
-			this.port = port;
-			this.pvp = pvp;
-			this.brackets = brackets;
-			this.type = type;
-			this.online = online;
-			this.maxPlayers = maxPlayers;
-			this.status = status;
-			playerSize = size;
-			this.ageLimit = ageLimit;
-			deleteChars = d;
+			_serverId = serverId;
+			_ip = ip;
+			_port = port;
+			_pvp = pvp;
+			_brackets = brackets;
+			_type = type;
+			_online = online;
+			_maxPlayers = maxPlayers;
+			_status = status;
+			_playerSize = playerSize;
+			_ageLimit = ageLimit;
+			_deleteChars = deleteChars;
 		}
 	}
 	
@@ -91,7 +92,7 @@ public final class ServerList extends L2LoginServerPacket
 	public ServerList(Account account)
 	{
 		_lastServer = account.getLastServer();
-		
+		_paddedBytes = 1;
 		for (GameServer gs : GameServerManager.getInstance().getGameServers())
 		{
 			InetAddress ip;
@@ -106,6 +107,7 @@ public final class ServerList extends L2LoginServerPacket
 			}
 			
 			Pair<Integer, int[]> entry = account.getAccountInfo(gs.getId());
+			_paddedBytes += (3 + (4 * (entry == null ? 0 : entry.getValue().length)));
 			_servers.add(new ServerData(gs.getId(), ip, gs.getPort(), gs.isPvp(), gs.isShowingBrackets(), gs.getServerType(), gs.getOnline(), gs.getMaxPlayers(), gs.isOnline(), entry == null ? 0 : entry.getKey(), gs.getAgeLimit(), entry == null ? ArrayUtils.EMPTY_INT_ARRAY : entry.getValue()));
 		}
 	}
@@ -122,33 +124,33 @@ public final class ServerList extends L2LoginServerPacket
 		
 		for (ServerData server : _servers)
 		{
-			writeC(server.serverId);
-			InetAddress i4 = server.ip;
+			writeC(server._serverId);
+			InetAddress i4 = server._ip;
 			byte[] raw = i4.getAddress();
 			writeC(raw[0] & 0xff);
 			writeC(raw[1] & 0xff);
 			writeC(raw[2] & 0xff);
 			writeC(raw[3] & 0xff);
-			writeD(server.port);
-			writeC(server.ageLimit);
-			writeC(server.pvp ? 0x01 : 0x00);
-			writeH(server.online);
-			writeH(server.maxPlayers);
-			writeC(server.status ? 0x01 : 0x00);
-			writeD(server.type);
-			writeC(server.brackets ? 0x01 : 0x00);
+			writeD(server._port);
+			writeC(server._ageLimit);
+			writeC(server._pvp ? 0x01 : 0x00);
+			writeH(server._online);
+			writeH(server._maxPlayers);
+			writeC(server._status ? 0x01 : 0x00);
+			writeD(server._type);
+			writeC(server._brackets ? 0x01 : 0x00);
 		}
 		
-		writeH(0x00);
+		writeH(_paddedBytes);
 		writeC(_servers.size());
 		
 		for (ServerData server : _servers)
 		{
-			writeC(server.serverId);
-			writeC(server.playerSize);
-			writeC(server.deleteChars.length);
+			writeC(server._serverId);
+			writeC(server._playerSize);
+			writeC(server._deleteChars.length);
 			
-			for (int t : server.deleteChars)
+			for (int t : server._deleteChars)
 			{
 				writeD((int) (t - (System.currentTimeMillis() / 1000L)));
 			}

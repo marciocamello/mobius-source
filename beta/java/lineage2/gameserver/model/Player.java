@@ -6630,7 +6630,13 @@ public final class Player extends Playable implements PlayerGroup
 				player.checkRecom();
 				player.restoreVitality();
 				player.getSummonList().restore();
+				
+				if (Config.STORE_UI_SETTINGS)
+				{
+					player.restoreUISettings();
+				}
 			}
+			
 		}
 		catch (final Exception e)
 		{
@@ -6865,6 +6871,10 @@ public final class Player extends Playable implements PlayerGroup
 					storeBlockList();
 				}
 				
+				if (Config.STORE_UI_SETTINGS)
+				{
+					storeUISettings();
+				}
 				storeCharSubClasses();
 				bookmarks.store();
 				DbUtils.closeQuietly(con, statement);
@@ -15460,6 +15470,7 @@ public final class Player extends Playable implements PlayerGroup
 	}
 	
 	private int[] _recentProductList = null;
+	private UIKeysSettings _uiKeySettings;
 	
 	public int[] getRecentProductList()
 	{
@@ -15629,5 +15640,42 @@ public final class Player extends Playable implements PlayerGroup
 	public void setIsInLastHero(boolean param)
 	{
 		_inLastHero = param;
+	}
+	
+	/**
+	 * 
+	 */
+	private void restoreUISettings()
+	{
+		_uiKeySettings = new UIKeysSettings(getObjectId());
+	}
+	
+	/**
+	 * 
+	 */
+	private void storeUISettings()
+	{
+		if (_uiKeySettings == null)
+		{
+			return;
+		}
+		
+		if (!_uiKeySettings.isSaved())
+		{
+			_uiKeySettings.saveInDB();
+		}
+	}
+	
+	/**
+	 * @return
+	 */
+	public UIKeysSettings getUISettings()
+	{
+		if (_uiKeySettings == null)
+		{
+			restoreUISettings();
+		}
+		
+		return _uiKeySettings;
 	}
 }

@@ -854,4 +854,21 @@ public class Util
 	{
 		return new String(HexUtils.bArr2HexEdChars(data, len));
 	}
+	
+	/**
+	 * Method to generate byte array from hex string.
+	 * @param s
+	 * @return
+	 */
+	public static byte[] hexStringToByteArray(String s)
+	{
+		String fs = s.replaceAll("\\s+", "");
+		int len = fs.length();
+		byte[] data = new byte[len / 2];
+		for (int i = 0; i < len; i += 2)
+		{
+			data[i / 2] = (byte) ((Character.digit(fs.charAt(i), 16) << 4) + Character.digit(fs.charAt(i + 1), 16));
+		}
+		return data;
+	}
 }

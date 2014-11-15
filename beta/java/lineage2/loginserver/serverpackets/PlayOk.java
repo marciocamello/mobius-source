@@ -21,6 +21,7 @@ import lineage2.loginserver.SessionKey;
 public final class PlayOk extends L2LoginServerPacket
 {
 	private final int _playOk1, _playOk2;
+	private final int _serverId = 0x0E;
 	
 	/**
 	 * Constructor for PlayOk.
@@ -41,5 +42,6 @@ public final class PlayOk extends L2LoginServerPacket
 		writeC(0x07);
 		writeD(_playOk1);
 		writeD(_playOk2);
+		writeC(_serverId); // TODO: FIX IT !!!
 	}
 }
