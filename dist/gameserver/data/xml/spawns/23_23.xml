@@ -768,8 +768,20 @@
 		</territory>
 		<npc id="25498"/>
 	</spawn>
-		<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="115944" y="191704" z="-3383" h="0"/>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="114248" y="191288" z="-3584" h="16383"/>
 		<npc id="33858"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="115560" y="191576" z="-3395" h="0"/>
+		<npc id="33860"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="115672" y="191624" z="-3395" h="32767"/>
+		<npc id="33861"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="115640" y="191544" z="-3387" h="16383"/>
+		<npc id="33859"/>
 	</spawn>
 </list>
