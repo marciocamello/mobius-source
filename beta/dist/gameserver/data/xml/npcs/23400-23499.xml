@@ -8,7 +8,7 @@
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="148"/>
+		<set name="baseHpMax" value="81"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="2.0"/>
 		<set name="baseINT" value="42"/>
@@ -16,7 +16,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseMDef" value="36"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="77.2"/>
+		<set name="baseMpMax" value="69"/>
 		<set name="baseMpReg" value="0.9"/>
 		<set name="basePAtk" value="14"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -29,12 +29,30 @@
 		<set name="baseWalkSpd" value="60"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="10.0"/>
-		<set name="level" value="8"/>
-		<set name="rewardExp" value="504"/>
+		<set name="level" value="5"/>
+		<set name="rewardExp" value="366"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="2"/>
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
+		<skills>
+			<skill id="4416" level="7"/>
+			<skill id="4410" level="14"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="1" max="3" chance="100.0000"/>
+			</group>
+			<group chance="0.5">
+				<reward item_id="36526" min="1" max="1" chance="33.3333"/>
+			</group>
+			<group chance="0.1">
+				<reward item_id="8" min="1" max="1" chance="33.3333"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="36516" min="1" max="1" chance="0.1"/>
+		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>
@@ -51,7 +69,7 @@
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="148"/>
+		<set name="baseHpMax" value="109"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="2.0"/>
 		<set name="baseINT" value="42"/>
@@ -59,7 +77,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseMDef" value="36"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="77.2"/>
+		<set name="baseMpMax" value="84"/>
 		<set name="baseMpReg" value="0.9"/>
 		<set name="basePAtk" value="14"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -78,6 +96,9 @@
 		<set name="rewardSp" value="2"/>
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
+		<skills>
+			<skill id="4416" level="4"/>
+		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
 				<reward item_id="57" min="2" max="5" chance="100.0000"/>
@@ -108,7 +129,7 @@
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="148"/>
+		<set name="baseHpMax" value="144"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="2.0"/>
 		<set name="baseINT" value="42"/>
@@ -116,7 +137,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseMDef" value="36"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="77.2"/>
+		<set name="baseMpMax" value="100"/>
 		<set name="baseMpReg" value="0.9"/>
 		<set name="basePAtk" value="14"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -129,25 +150,216 @@
 		<set name="baseWalkSpd" value="60"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="10.0"/>
-		<set name="level" value="8"/>
-		<set name="rewardExp" value="504"/>
+		<set name="level" value="9"/>
+		<set name="rewardExp" value="962"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="2"/>
 		<set name="shots" value="NONE"/>
 		<set name="type" value="Monster"/>
+		<skills>
+			<skill id="4416" level="4"/>
+			<skill id="4410" level="14"/>
+			<skill id="4412" level="12"/>
+			<skill id="4413" level="12"/>
+		</skills>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="70.0">
-				<reward item_id="57" min="2" max="5" chance="100.0000"/>
+				<reward item_id="57" min="3" max="7" chance="100.0000"/>
 			</group>
-			<group chance="2.217">
+			<group chance="1.811">
 				<reward item_id="36516" min="1" max="1" chance="33.3333"/>
 			</group>
-			<group chance="0.1">
+			<group chance="0.05">
 				<reward item_id="9" min="1" max="1" chance="33.3333"/>
 			</group>
 		</rewardlist>
 		<rewardlist type="SWEEP">
-			<reward item_id="36516" min="1" max="1" chance="11.75"/>
+			<reward item_id="36516" min="1" max="1" chance="9.61"/>
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="31"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="23452" name="Honeybee" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="164"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="2.0"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="9"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="36"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="108"/>
+		<set name="baseMpReg" value="0.9"/>
+		<set name="basePAtk" value="14"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="basePDef" value="54"/>
+		<set name="baseRunSpd" value="80"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="78"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="10.0"/>
+		<set name="level" value="10"/>
+		<set name="rewardExp" value="826"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="2"/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Monster"/>
+		<skills>
+			<skill id="4416" level="4"/>
+			<skill id="4410" level="14"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="4" max="9" chance="100.0000"/>
+			</group>
+			<group chance="2.417">
+				<reward item_id="36526" min="1" max="1" chance="33.3333"/>
+			</group>
+			<group chance="0.5">
+				<reward item_id="23" min="1" max="1" chance="33.3333"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="36532" min="1" max="1" chance="0.05"/>
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="31"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="23453" name="Kiku" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="200"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="2.0"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="9"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="36"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="124"/>
+		<set name="baseMpReg" value="0.9"/>
+		<set name="basePAtk" value="14"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="basePDef" value="54"/>
+		<set name="baseRunSpd" value="80"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="78"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="10.0"/>
+		<set name="level" value="12"/>
+		<set name="rewardExp" value="1054"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="2"/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Monster"/>
+		<skills>
+			<skill id="4416" level="4"/>
+			<skill id="4410" level="14"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="5" max="11" chance="100.0000"/>
+			</group>
+			<group chance="2.629">
+				<reward item_id="36516" min="1" max="1" chance="33.3333"/>
+			</group>
+			<group chance="4.426">
+				<reward item_id="29" min="1" max="1" chance="33.3333"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="36516" min="1" max="1" chance="13.90"/>
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="20"/>
+			<defence attribute="water" value="20"/>
+			<defence attribute="wind" value="31"/>
+			<defence attribute="earth" value="20"/>
+			<defence attribute="holy" value="20"/>
+			<defence attribute="unholy" value="20"/>
+		</attributes>
+	</npc>
+	<npc id="23484" name="Robust Honeybee" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseHpMax" value="186"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="2.0"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseMAtk" value="9"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseMDef" value="36"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="116"/>
+		<set name="baseMpReg" value="0.9"/>
+		<set name="basePAtk" value="14"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="basePDef" value="54"/>
+		<set name="baseRunSpd" value="80"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="78"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="10.0"/>
+		<set name="level" value="11"/>
+		<set name="rewardExp" value="886"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="2"/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Monster"/>
+		<skills>
+			<skill id="4416" level="4"/>
+			<skill id="4410" level="14"/>
+			<skill id="4412" level="12"/>
+			<skill id="4413" level="12"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="4" max="10" chance="100.0000"/>
+			</group>
+			<group chance="2.459">
+				<reward item_id="36516" min="1" max="1" chance="33.3333"/>
+			</group>
+			<group chance="0.5">
+				<reward item_id="44" min="1" max="1" chance="33.3333"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="36516" min="1" max="1" chance="13.34"/>
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>

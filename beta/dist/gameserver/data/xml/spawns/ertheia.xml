@@ -117,6 +117,12 @@
 		<point x="-81912" y="245544" z="-3734" h="44041"/>
 		<npc id="33989"/>
 	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-78080" y="237343" z="-3551" h="24575"/>
+		<npc id="33952"/>
+	</spawn>
+	
+	<!-- Quest Mobs -->
 	<spawn count="5" respawn="10" respawn_random="0" period_of_day="none">
 		<point x="-80904" y="244360" z="-3674" h="22517"/>
 		<npc id="23450"/>
@@ -124,5 +130,49 @@
 	<spawn count="5" respawn="10" respawn_random="0" period_of_day="none">
 		<point x="-81080" y="244616" z="-3650" h="0"/>
 		<npc id="23451"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-81320" y="242760" z="-3540" h="3491"/>
+		<npc id="23452"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-81880" y="242536" z="-3608" h="44315"/>
+		<npc id="23452"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-81608" y="242600" z="-3618" h="2058"/>
+		<npc id="23452"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-80392" y="241672" z="-3575" h="52507"/>
+		<npc id="23452"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-80120" y="241256" z="-3561" h="39237"/>
+		<npc id="23453"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-80376" y="241384" z="-3568" h="50019"/>
+		<npc id="23453"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-79832" y="241480" z="-3575" h="1722"/>
+		<npc id="23453"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-80200" y="241848" z="-3557" h="15910"/>
+		<npc id="23453"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-81112" y="242312" z="-3599" h="53787"/>
+		<npc id="23484"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-81816" y="242584" z="-3621" h="27259"/>
+		<npc id="23484"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-81560" y="242232" z="-3579" h="50504"/>
+		<npc id="23484"/>
 	</spawn>
 </list>

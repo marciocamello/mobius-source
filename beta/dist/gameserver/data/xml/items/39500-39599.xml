@@ -81,4 +81,34 @@
 		<set name="type" value="QUEST"/>
 		<set name="weight" value="20"/>
 	</etcitem>
+	<etcitem id="39527" name="Empty Honey Jar">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_box_of_adventure_2_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+		<set name="weight" value="20"/>
+	</etcitem>
+	<etcitem id="39528" name="Sweet Honey">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_box_of_adventure_2_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+		<set name="weight" value="20"/>
+	</etcitem>
+	<etcitem id="39529" name="Nutritious Meat">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="100"/>
+		<set name="icon" value="icon.etc_box_of_adventure_2_i00"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="QUEST"/>
+		<set name="weight" value="20"/>
+	</etcitem>
 </list>

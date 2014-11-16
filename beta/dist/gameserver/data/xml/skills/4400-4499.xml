@@ -221,7 +221,7 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 	</skill>
-	<skill id="4416" levels="25" name="Kamael">
+	<skill id="4416" levels="26" name="Ertheia">
 		<set name="icon" val="icon.skill4290"/>
 		<set name="magicLevel" val="1"/>
 		<set name="target" val="TARGET_SELF"/>
