@@ -28,18 +28,18 @@ import lineage2.gameserver.utils.Util;
 
 public class Q10360_CertificationOfFate extends Quest implements ScriptFile
 {
-	private static final int reins = 30288;
-	private static final int raimon = 30289;
-	private static final int tobias = 30297;
+	private static final int Reins = 30288;
+	private static final int Raimon = 30289;
+	private static final int Tobias = 30297;
 	private static final int Drikus = 30505;
-	private static final int mendius = 30504;
-	private static final int gershfin = 32196;
-	private static final int elinia = 30155;
-	private static final int ershandel = 30158;
-	private static final int renpard = 33524;
-	private static final int joel = 33516;
-	private static final int shachen = 33517;
-	private static final int shelon = 33518;
+	private static final int Mendius = 30504;
+	private static final int Gershfin = 32196;
+	private static final int Elinia = 30155;
+	private static final int Ershandel = 30158;
+	private static final int Renpard = 33524;
+	private static final int Joel = 33516;
+	private static final int Shachen = 33517;
+	private static final int Shelon = 33518;
 	private static final int[] classesav =
 	{
 		1,
@@ -79,187 +79,165 @@ public class Q10360_CertificationOfFate extends Quest implements ScriptFile
 		132,
 		133
 	};
-	private static final int poslov = 27460;
-	private static final int kanilov = 27459;
-	private static final int sakum = 27453;
+	private static final int Poslov = 27460;
+	private static final int Kanilov = 27459;
+	private static final int Sakum = 27453;
 	private static final int Stone = 17587;
 	private int killedkanilov;
 	private int killedposlov;
 	private int killedsakum;
 	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public Q10360_CertificationOfFate()
 	{
 		super(false);
-		addStartNpc(reins);
-		addStartNpc(raimon);
-		addStartNpc(tobias);
-		addStartNpc(Drikus);
-		addStartNpc(mendius);
-		addStartNpc(gershfin);
-		addStartNpc(elinia);
-		addStartNpc(ershandel);
-		addTalkId(renpard);
-		addTalkId(joel);
-		addTalkId(shelon);
-		addTalkId(shachen);
-		addKillId(poslov);
-		addKillId(kanilov);
-		addKillId(sakum);
+		addStartNpc(Reins, Raimon, Tobias, Drikus, Mendius, Gershfin, Elinia, Ershandel);
+		addTalkId(Renpard, Joel, Shelon, Shachen);
+		addKillId(Poslov, Kanilov, Sakum);
 		addQuestItem(Stone);
 		addLevelCheck(38, 99);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
-		Player player = st.getPlayer();
+		final Player player = qs.getPlayer();
 		
 		if (player.getClassLevel() > 2)
 		{
 			return htmltext;
 		}
 		
-		if (event.equalsIgnoreCase("1-3.htm"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-			htmltext = "1-3.htm";
-		}
-		else if (event.equalsIgnoreCase("telep"))
-		{
-			player.teleToLocation(-24776, 188696, -3993);
-			htmltext = "";
-		}
-		else if (event.equalsIgnoreCase("master"))
-		{
-			if (st.getPlayer().getRace() == Race.human)
-			{
-				if (st.getPlayer().isMageClass())
-				{
-					htmltext = "4-5re.htm";
-					st.playSound(SOUND_MIDDLE);
-					st.setCond(9);
-				}
-				else
-				{
-					htmltext = "4-5r.htm";
-					st.playSound(SOUND_MIDDLE);
-					st.setCond(8);
-				}
-			}
-			else if (st.getPlayer().getRace() == Race.elf)
-			{
-				if (st.getPlayer().isMageClass())
-				{
-					htmltext = "4-5e.htm";
-					st.playSound(SOUND_MIDDLE);
-					st.setCond(11);
-				}
-				else
-				{
-					htmltext = "4-5ew.htm";
-					st.playSound(SOUND_MIDDLE);
-					st.setCond(10);
-				}
-			}
-			else if (st.getPlayer().getRace() == Race.darkelf)
-			{
-				htmltext = "4-5t.htm";
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(12);
-			}
-			else if (st.getPlayer().getRace() == Race.orc)
-			{
-				htmltext = "4-5d.htm";
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(13);
-			}
-			else if (st.getPlayer().getRace() == Race.dwarf)
-			{
-				htmltext = "4-5m.htm";
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(14);
-			}
-			else if (st.getPlayer().getRace() == Race.kamael)
-			{
-				htmltext = "4-5g.htm";
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(15);
-			}
-		}
-		else if (event.equalsIgnoreCase("quest_ac"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
+			case "1-3.htm":
+				qs.setState(STARTED);
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				htmltext = "1-3.htm";
+				break;
 			
-			if (st.getPlayer().getRace() == Race.human)
-			{
-				if (st.getPlayer().isMageClass())
+			case "telep":
+				player.teleToLocation(-24776, 188696, -3993);
+				htmltext = "";
+				break;
+			
+			case "master":
+				switch (qs.getPlayer().getRace())
 				{
-					htmltext = "0-3re.htm";
+					case human:
+						if (qs.getPlayer().isMageClass())
+						{
+							htmltext = "4-5re.htm";
+							qs.playSound(SOUND_MIDDLE);
+							qs.setCond(9);
+						}
+						else
+						{
+							htmltext = "4-5r.htm";
+							qs.playSound(SOUND_MIDDLE);
+							qs.setCond(8);
+						}
+						break;
+					
+					case elf:
+						if (qs.getPlayer().isMageClass())
+						{
+							htmltext = "4-5e.htm";
+							qs.playSound(SOUND_MIDDLE);
+							qs.setCond(11);
+						}
+						else
+						{
+							htmltext = "4-5ew.htm";
+							qs.playSound(SOUND_MIDDLE);
+							qs.setCond(10);
+						}
+						break;
+					
+					case darkelf:
+						htmltext = "4-5t.htm";
+						qs.playSound(SOUND_MIDDLE);
+						qs.setCond(12);
+						break;
+					
+					case orc:
+						htmltext = "4-5d.htm";
+						qs.playSound(SOUND_MIDDLE);
+						qs.setCond(13);
+						break;
+					
+					case dwarf:
+						htmltext = "4-5m.htm";
+						qs.playSound(SOUND_MIDDLE);
+						qs.setCond(14);
+						break;
+					
+					case kamael:
+						htmltext = "4-5g.htm";
+						qs.playSound(SOUND_MIDDLE);
+						qs.setCond(15);
+						break;
 				}
-				else
+				break;
+			
+			case "quest_ac":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				switch (qs.getPlayer().getRace())
 				{
-					htmltext = "0-3r.htm";
+					case human:
+						if (qs.getPlayer().isMageClass())
+						{
+							htmltext = "0-3re.htm";
+						}
+						else
+						{
+							htmltext = "0-3r.htm";
+						}
+						break;
+					
+					case elf:
+						if (qs.getPlayer().isMageClass())
+						{
+							htmltext = "0-3e.htm";
+						}
+						else
+						{
+							htmltext = "0-3ew.htm";
+						}
+						break;
+					
+					case darkelf:
+						htmltext = "0-3t.htm";
+						break;
+					
+					case orc:
+						htmltext = "0-3d.htm";
+						break;
+					
+					case dwarf:
+						htmltext = "0-3m.htm";
+						break;
+					
+					case kamael:
+						htmltext = "0-3g.htm";
+						break;
 				}
-			}
-			else if (st.getPlayer().getRace() == Race.elf)
-			{
-				if (st.getPlayer().isMageClass())
-				{
-					htmltext = "0-3e.htm";
-				}
-				else
-				{
-					htmltext = "0-3ew.htm";
-				}
-			}
-			else if (st.getPlayer().getRace() == Race.darkelf)
-			{
-				htmltext = "0-3t.htm";
-			}
-			else if (st.getPlayer().getRace() == Race.orc)
-			{
-				htmltext = "0-3d.htm";
-			}
-			else if (st.getPlayer().getRace() == Race.dwarf)
-			{
-				htmltext = "0-3m.htm";
-			}
-			else if (st.getPlayer().getRace() == Race.kamael)
-			{
-				htmltext = "0-3g.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("3-3.htm"))
-		{
-			st.setCond(6);
-			st.playSound(SOUND_MIDDLE);
-			player.sendPacket(new ExShowUsmVideo(ExShowUsmVideo.Q003));
-		}
-		else if (event.equalsIgnoreCase("2-3.htm"))
-		{
-			htmltext = "2-3.htm";
-			st.playSound(SOUND_MIDDLE);
-			st.setCond(4);
+				break;
+			
+			case "3-3.htm":
+				qs.setCond(6);
+				qs.playSound(SOUND_MIDDLE);
+				player.sendPacket(new ExShowUsmVideo(ExShowUsmVideo.Q003));
+				break;
+			
+			case "2-3.htm":
+				htmltext = "2-3.htm";
+				qs.playSound(SOUND_MIDDLE);
+				qs.setCond(4);
+				break;
 		}
 		
 		if (event.startsWith("changeclass"))
@@ -278,53 +256,55 @@ public class Q10360_CertificationOfFate extends Quest implements ScriptFile
 			player.sendPacket(new SystemMessage(SystemMessage.CONGRATULATIONS_YOU_HAVE_TRANSFERRED_TO_A_NEW_CLASS));
 			player.setClassId(newClassId, false, false);
 			player.broadcastCharInfo();
-			MultiSellHolder.getInstance().SeparateAndSend(85556, st.getPlayer(), 0);
-			st.getPlayer().addExpAndSp(2700000, 250000);
-			st.giveItems(17822, 40);
-			st.giveItems(32777, 1);
-			st.giveItems(33800, 1);
-			st.giveItems(ADENA_ID, 110000);
-			st.exitCurrentQuest(false);
-			st.takeAllItems(Stone);
-			st.playSound(SOUND_FINISH);
+			MultiSellHolder.getInstance().SeparateAndSend(85556, qs.getPlayer(), 0);
+			qs.getPlayer().addExpAndSp(2700000, 250000);
+			qs.giveItems(17822, 40);
+			qs.giveItems(32777, 1);
+			qs.giveItems(33800, 1);
+			qs.giveItems(ADENA_ID, 110000);
+			qs.exitCurrentQuest(false);
+			qs.takeAllItems(Stone);
+			qs.playSound(SOUND_FINISH);
 			
-			if (st.getPlayer().getRace() == Race.human)
+			switch (qs.getPlayer().getRace())
 			{
-				if (st.getPlayer().isMageClass())
-				{
-					htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-6re.htm", st.getPlayer());
-				}
-				else
-				{
-					htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-6r.htm", st.getPlayer());
-				}
-			}
-			else if (st.getPlayer().getRace() == Race.elf)
-			{
-				if (st.getPlayer().isMageClass())
-				{
-					htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-6e.htm", st.getPlayer());
-				}
-				else
-				{
-					htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-6ew.htm", st.getPlayer());
-				}
-			}
-			else if (st.getPlayer().getRace() == Race.darkelf)
-			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-6t.htm", st.getPlayer());
-			}
-			else if (st.getPlayer().getRace() == Race.orc)
-			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-6d.htm", st.getPlayer());
-			}
-			else if (st.getPlayer().getRace() == Race.dwarf)
-			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-6m.htm", st.getPlayer());
-			}
-			else if (st.getPlayer().getRace() == Race.kamael)
-			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-6g.htm", st.getPlayer());
+				case human:
+					if (qs.getPlayer().isMageClass())
+					{
+						htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-6re.htm", qs.getPlayer());
+					}
+					else
+					{
+						htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-6r.htm", qs.getPlayer());
+					}
+					break;
+				
+				case elf:
+					if (qs.getPlayer().isMageClass())
+					{
+						htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-6e.htm", qs.getPlayer());
+					}
+					else
+					{
+						htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-6ew.htm", qs.getPlayer());
+					}
+					break;
+				
+				case darkelf:
+					htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-6t.htm", qs.getPlayer());
+					break;
+				
+				case orc:
+					htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-6d.htm", qs.getPlayer());
+					break;
+				
+				case dwarf:
+					htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-6m.htm", qs.getPlayer());
+					break;
+				
+				case kamael:
+					htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-6g.htm", qs.getPlayer());
+					break;
 			}
 			
 			htmltext = htmltext.replace("%showproof%", HtmlUtils.htmlClassName(newClassId));
@@ -334,294 +314,325 @@ public class Q10360_CertificationOfFate extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
 		String htmltext = "noquest";
-		Player player = st.getPlayer();
-		int classid = player.getClassId().getId();
+		final int cond = qs.getCond();
+		final int classid = qs.getPlayer().getClassId().getId();
 		
-		if ((npcId == raimon) && (st.getPlayer().getRace() == Race.human) && st.getPlayer().isMageClass())
+		switch (npc.getId())
 		{
-			if (st.isCompleted())
-			{
-				htmltext = "0re-c.htm";
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && Util.contains(classesav, classid))
-			{
-				htmltext = "0-1re.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-3re.htm";
-			}
-			else if (cond == 9)
-			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-5re.htm", st.getPlayer());
-				htmltext = htmltext.replace("%classmaster%", makeMessage(st.getPlayer()));
-			}
-		}
-		else if ((npcId == reins) && (st.getPlayer().getRace() == Race.human) && !st.getPlayer().isMageClass())
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "0r-c.htm";
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && Util.contains(classesav, classid))
-			{
-				htmltext = "0-1r.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-3r.htm";
-			}
-			else if (cond == 8)
-			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-5r.htm", st.getPlayer());
-				htmltext = htmltext.replace("%classmaster%", makeMessage(st.getPlayer()));
-			}
-		}
-		else if ((npcId == tobias) && (st.getPlayer().getRace() == Race.darkelf))
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "0t-c.htm";
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && Util.contains(classesav, classid))
-			{
-				htmltext = "0-1t.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-3t.htm";
-			}
-			else if (cond == 12)
-			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-5t.htm", st.getPlayer());
-				htmltext = htmltext.replace("%classmaster%", makeMessage(st.getPlayer()));
-			}
-		}
-		else if ((npcId == Drikus) && (st.getPlayer().getRace() == Race.orc))
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "0d-c.htm";
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && Util.contains(classesav, classid))
-			{
-				htmltext = "0-1d.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-3d.htm";
-			}
-			else if (cond == 13)
-			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-5d.htm", st.getPlayer());
-				htmltext = htmltext.replace("%classmaster%", makeMessage(st.getPlayer()));
-			}
-		}
-		else if ((npcId == gershfin) && (st.getPlayer().getRace() == Race.kamael))
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "0g-c.htm";
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && Util.contains(classesav, classid))
-			{
-				htmltext = "0-1g.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-3g.htm";
-			}
-			else if (cond == 15)
-			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-5g.htm", st.getPlayer());
-				htmltext = htmltext.replace("%classmaster%", makeMessage(st.getPlayer()));
-			}
-		}
-		else if ((npcId == elinia) && (st.getPlayer().getRace() == Race.elf) && !st.getPlayer().isMageClass())
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "0e-c.htm";
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && Util.contains(classesav, classid))
-			{
-				htmltext = "0-1e.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-3e.htm";
-			}
-			else if (cond == 10)
-			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-5e.htm", st.getPlayer());
-				htmltext = htmltext.replace("%classmaster%", makeMessage(st.getPlayer()));
-			}
-		}
-		else if ((npcId == ershandel) && (st.getPlayer().getRace() == Race.elf) && st.getPlayer().isMageClass())
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "0ew-c.htm";
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && Util.contains(classesav, classid))
-			{
-				htmltext = "0-1ew.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-3ew.htm";
-			}
-			else if (cond == 11)
-			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-5ew.htm", st.getPlayer());
-				htmltext = htmltext.replace("%classmaster%", makeMessage(st.getPlayer()));
-			}
-		}
-		else if ((npcId == mendius) && (st.getPlayer().getRace() == Race.dwarf))
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "0m-c.htm";
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()) && Util.contains(classesav, classid))
-			{
-				htmltext = "0-1m.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-3m.htm";
-			}
-			else if (cond == 14)
-			{
-				htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-5m.htm", st.getPlayer());
-				htmltext = htmltext.replace("%classmaster%", makeMessage(st.getPlayer()));
-			}
-		}
-		else if (npcId == renpard)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 0)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 1)
-			{
-				htmltext = "1-1.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "1-4.htm";
-			}
-		}
-		else if (npcId == joel)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 0)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 2)
-			{
-				htmltext = "2-1.htm";
-			}
-			else if (cond == 3)
-			{
-				htmltext = "2-2.htm";
-			}
-			else if (cond == 4)
-			{
-				htmltext = "2-5.htm";
-			}
-		}
-		else if (npcId == shachen)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 0)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 5)
-			{
-				htmltext = "3-1.htm";
-			}
-		}
-		else if (npcId == shelon)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 0)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 6)
-			{
-				htmltext = "4-1.htm";
-			}
-			else if (cond == 7)
-			{
-				htmltext = "4-2.htm";
-			}
+			case Raimon:
+				if ((qs.getPlayer().getRace() == Race.human) && qs.getPlayer().isMageClass())
+				{
+					if (qs.isCompleted())
+					{
+						htmltext = "0re-c.htm";
+					}
+					else if ((cond == 0) && isAvailableFor(qs.getPlayer()) && Util.contains(classesav, classid))
+					{
+						htmltext = "0-1re.htm";
+					}
+					else if (cond == 1)
+					{
+						htmltext = "0-3re.htm";
+					}
+					else if (cond == 9)
+					{
+						htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-5re.htm", qs.getPlayer());
+						htmltext = htmltext.replace("%classmaster%", makeMessage(qs.getPlayer()));
+					}
+				}
+				break;
+			
+			case Reins:
+				if ((qs.getPlayer().getRace() == Race.human) && !qs.getPlayer().isMageClass())
+				{
+					if (qs.isCompleted())
+					{
+						htmltext = "0r-c.htm";
+					}
+					else if ((cond == 0) && isAvailableFor(qs.getPlayer()) && Util.contains(classesav, classid))
+					{
+						htmltext = "0-1r.htm";
+					}
+					else if (cond == 1)
+					{
+						htmltext = "0-3r.htm";
+					}
+					else if (cond == 8)
+					{
+						htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-5r.htm", qs.getPlayer());
+						htmltext = htmltext.replace("%classmaster%", makeMessage(qs.getPlayer()));
+					}
+				}
+				break;
+			
+			case Tobias:
+				if (qs.getPlayer().getRace() == Race.darkelf)
+				{
+					if (qs.isCompleted())
+					{
+						htmltext = "0t-c.htm";
+					}
+					else if ((cond == 0) && isAvailableFor(qs.getPlayer()) && Util.contains(classesav, classid))
+					{
+						htmltext = "0-1t.htm";
+					}
+					else if (cond == 1)
+					{
+						htmltext = "0-3t.htm";
+					}
+					else if (cond == 12)
+					{
+						htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-5t.htm", qs.getPlayer());
+						htmltext = htmltext.replace("%classmaster%", makeMessage(qs.getPlayer()));
+					}
+				}
+				break;
+			
+			case Drikus:
+				if (qs.getPlayer().getRace() == Race.orc)
+				{
+					if (qs.isCompleted())
+					{
+						htmltext = "0d-c.htm";
+					}
+					else if ((cond == 0) && isAvailableFor(qs.getPlayer()) && Util.contains(classesav, classid))
+					{
+						htmltext = "0-1d.htm";
+					}
+					else if (cond == 1)
+					{
+						htmltext = "0-3d.htm";
+					}
+					else if (cond == 13)
+					{
+						htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-5d.htm", qs.getPlayer());
+						htmltext = htmltext.replace("%classmaster%", makeMessage(qs.getPlayer()));
+					}
+				}
+				break;
+			
+			case Gershfin:
+				if (qs.getPlayer().getRace() == Race.kamael)
+				{
+					if (qs.isCompleted())
+					{
+						htmltext = "0g-c.htm";
+					}
+					else if ((cond == 0) && isAvailableFor(qs.getPlayer()) && Util.contains(classesav, classid))
+					{
+						htmltext = "0-1g.htm";
+					}
+					else if (cond == 1)
+					{
+						htmltext = "0-3g.htm";
+					}
+					else if (cond == 15)
+					{
+						htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-5g.htm", qs.getPlayer());
+						htmltext = htmltext.replace("%classmaster%", makeMessage(qs.getPlayer()));
+					}
+				}
+				break;
+			
+			case Elinia:
+				if ((qs.getPlayer().getRace() == Race.elf) && !qs.getPlayer().isMageClass())
+				{
+					if (qs.isCompleted())
+					{
+						htmltext = "0e-c.htm";
+					}
+					else if ((cond == 0) && isAvailableFor(qs.getPlayer()) && Util.contains(classesav, classid))
+					{
+						htmltext = "0-1e.htm";
+					}
+					else if (cond == 1)
+					{
+						htmltext = "0-3e.htm";
+					}
+					else if (cond == 10)
+					{
+						htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-5e.htm", qs.getPlayer());
+						htmltext = htmltext.replace("%classmaster%", makeMessage(qs.getPlayer()));
+					}
+				}
+				break;
+			
+			case Ershandel:
+				if ((qs.getPlayer().getRace() == Race.elf) && qs.getPlayer().isMageClass())
+				{
+					if (qs.isCompleted())
+					{
+						htmltext = "0ew-c.htm";
+					}
+					else if ((cond == 0) && isAvailableFor(qs.getPlayer()) && Util.contains(classesav, classid))
+					{
+						htmltext = "0-1ew.htm";
+					}
+					else if (cond == 1)
+					{
+						htmltext = "0-3ew.htm";
+					}
+					else if (cond == 11)
+					{
+						htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-5ew.htm", qs.getPlayer());
+						htmltext = htmltext.replace("%classmaster%", makeMessage(qs.getPlayer()));
+					}
+				}
+				break;
+			
+			case Mendius:
+				if (qs.getPlayer().getRace() == Race.dwarf)
+				{
+					if (qs.isCompleted())
+					{
+						htmltext = "0m-c.htm";
+					}
+					else if ((cond == 0) && isAvailableFor(qs.getPlayer()) && Util.contains(classesav, classid))
+					{
+						htmltext = "0-1m.htm";
+					}
+					else if (cond == 1)
+					{
+						htmltext = "0-3m.htm";
+					}
+					else if (cond == 14)
+					{
+						htmltext = HtmCache.getInstance().getNotNull("quests/Q10360_CertificationOfFate/0-5m.htm", qs.getPlayer());
+						htmltext = htmltext.replace("%classmaster%", makeMessage(qs.getPlayer()));
+					}
+				}
+				break;
+			
+			case Renpard:
+				if (qs.isCompleted())
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 0)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 1)
+				{
+					htmltext = "1-1.htm";
+				}
+				else if (cond == 2)
+				{
+					htmltext = "1-4.htm";
+				}
+				break;
+			
+			case Joel:
+				if (qs.isCompleted())
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 0)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 2)
+				{
+					htmltext = "2-1.htm";
+				}
+				else if (cond == 3)
+				{
+					htmltext = "2-2.htm";
+				}
+				else if (cond == 4)
+				{
+					htmltext = "2-5.htm";
+				}
+				break;
+			
+			case Shachen:
+				if (qs.isCompleted())
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 0)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 5)
+				{
+					htmltext = "3-1.htm";
+				}
+				break;
+			
+			case Shelon:
+				if (qs.isCompleted())
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 0)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 6)
+				{
+					htmltext = "4-1.htm";
+				}
+				else if (cond == 7)
+				{
+					htmltext = "4-2.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		
-		if ((npcId == poslov) && (st.getCond() == 4))
+		switch (npc.getId())
 		{
-			++killedposlov;
+			case Poslov:
+				if (qs.getCond() == 4)
+				{
+					++killedposlov;
+					
+					if (killedposlov >= 1)
+					{
+						qs.setCond(5);
+						qs.playSound(SOUND_MIDDLE);
+						killedposlov = 0;
+					}
+				}
+				break;
 			
-			if (killedposlov >= 1)
-			{
-				st.setCond(5);
-				st.playSound(SOUND_MIDDLE);
-				killedposlov = 0;
-			}
-		}
-		
-		if ((npcId == kanilov) && (st.getCond() == 2))
-		{
-			++killedkanilov;
+			case Kanilov:
+				if (qs.getCond() == 2)
+				{
+					++killedkanilov;
+					
+					if (killedkanilov >= 1)
+					{
+						qs.setCond(3);
+						qs.playSound(SOUND_MIDDLE);
+						killedkanilov = 0;
+					}
+				}
+				break;
 			
-			if (killedkanilov >= 1)
-			{
-				st.setCond(3);
-				st.playSound(SOUND_MIDDLE);
-				killedkanilov = 0;
-			}
-		}
-		
-		if ((npcId == sakum) && (st.getCond() == 6))
-		{
-			++killedsakum;
-			
-			if (killedsakum >= 1)
-			{
-				st.setCond(7);
-				st.playSound(SOUND_MIDDLE);
-				killedsakum = 0;
-				st.giveItems(Stone, 1, false);
-			}
+			case Sakum:
+				if (qs.getCond() == 6)
+				{
+					++killedsakum;
+					
+					if (killedsakum >= 1)
+					{
+						qs.setCond(7);
+						qs.playSound(SOUND_MIDDLE);
+						killedsakum = 0;
+						qs.giveItems(Stone, 1, false);
+					}
+				}
+				break;
 		}
 		
 		return null;
@@ -629,7 +640,7 @@ public class Q10360_CertificationOfFate extends Quest implements ScriptFile
 	
 	private String makeMessage(Player player)
 	{
-		ClassId classId = player.getClassId();
+		final ClassId classId = player.getClassId();
 		StringBuilder html = new StringBuilder();
 		
 		for (ClassId cid : ClassId.VALUES)
@@ -646,5 +657,20 @@ public class Q10360_CertificationOfFate extends Quest implements ScriptFile
 		}
 		
 		return html.toString();
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

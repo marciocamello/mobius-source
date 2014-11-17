@@ -28,8 +28,8 @@ import lineage2.gameserver.utils.NpcUtils;
 
 public class Q10363_RequestOfTheSeeker extends Quest implements ScriptFile
 {
-	private static final int nagel = 33450;
-	private static final int celin = 33451;
+	private static final int Nagel = 33450;
+	private static final int Celin = 33451;
 	private static final int soul1 = 19157;
 	private static final int soul2 = 19158;
 	private static final int corps1 = 32961;
@@ -37,84 +37,71 @@ public class Q10363_RequestOfTheSeeker extends Quest implements ScriptFile
 	private static final int corps3 = 32963;
 	private static final int corps4 = 32964;
 	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public Q10363_RequestOfTheSeeker()
 	{
 		super(false);
-		addStartNpc(nagel);
-		addTalkId(celin);
-		addTalkId(nagel);
+		addStartNpc(Nagel);
+		addTalkId(Celin);
+		addTalkId(Nagel);
 		addLevelCheck(12, 20);
 		addQuestCompletedCheck(Q10362_CertificationOfTheSeeker.class);
 	}
 	
 	@Override
-	public void onSocialActionUse(QuestState st, int actionId)
+	public void onSocialActionUse(QuestState qs, int actionId)
 	{
-		Player player = st.getPlayer();
-		GameObject npc1 = player.getTarget();
+		final Player player = qs.getPlayer();
+		final GameObject npc1 = player.getTarget();
 		
 		if ((player.getTarget() == null) || !player.getTarget().isNpc() || ((NpcInstance) npc1).isDead())
 		{
 			return;
 		}
 		
-		int target = ((NpcInstance) npc1).getId();
-		double dist = player.getDistance(npc1);
-		int cond = st.getCond();
+		final int target = ((NpcInstance) npc1).getId();
+		final double dist = player.getDistance(npc1);
+		final int cond = qs.getCond();
 		
 		if (actionId == SocialAction.SORROW)
 		{
 			if ((dist < 70) && ((target == corps1) || (target == corps2) || (target == corps3) || (target == corps4)))
 			{
-				if (cond == 1)
+				switch (cond)
 				{
-					player.sendPacket(new ExShowScreenMessage(NpcString.YOU_SHOWN_YOUR_CONDOLENCES_TO_ONE_CORPSE, 4500, ScreenMessageAlign.TOP_CENTER));
-					st.setCond(2);
-					st.playSound(SOUND_MIDDLE);
-					((NpcInstance) npc1).doDie(player);
-				}
-				else if (cond == 2)
-				{
-					player.sendPacket(new ExShowScreenMessage(NpcString.YOU_SHOWN_YOUR_CONDOLENCES_TO_SECOND_CORPSE, 4500, ScreenMessageAlign.TOP_CENTER));
-					st.setCond(3);
-					st.playSound(SOUND_MIDDLE);
-					((NpcInstance) npc1).doDie(player);
-				}
-				else if (cond == 3)
-				{
-					player.sendPacket(new ExShowScreenMessage(NpcString.YOU_SHOWN_YOUR_CONDOLENCES_TO_THIRD_CORPSE, 4500, ScreenMessageAlign.TOP_CENTER));
-					st.setCond(4);
-					st.playSound(SOUND_MIDDLE);
-					((NpcInstance) npc1).doDie(player);
-				}
-				else if (cond == 4)
-				{
-					player.sendPacket(new ExShowScreenMessage(NpcString.YOU_SHOWN_YOUR_CONDOLENCES_TO_FOURTH_CORPSE, 4500, ScreenMessageAlign.TOP_CENTER));
-					st.setCond(5);
-					st.playSound(SOUND_MIDDLE);
-					((NpcInstance) npc1).doDie(player);
-				}
-				else if (cond == 5)
-				{
-					player.sendPacket(new ExShowScreenMessage(NpcString.YOU_SHOWN_YOUR_CONDOLENCES_TO_FIFTH_CORPSE, 4500, ScreenMessageAlign.TOP_CENTER));
-					st.setCond(6);
-					st.playSound(SOUND_MIDDLE);
-					((NpcInstance) npc1).doDie(player);
+					case 1:
+						player.sendPacket(new ExShowScreenMessage(NpcString.YOU_SHOWN_YOUR_CONDOLENCES_TO_ONE_CORPSE, 4500, ScreenMessageAlign.TOP_CENTER));
+						qs.setCond(2);
+						qs.playSound(SOUND_MIDDLE);
+						((NpcInstance) npc1).doDie(player);
+						break;
+					
+					case 2:
+						player.sendPacket(new ExShowScreenMessage(NpcString.YOU_SHOWN_YOUR_CONDOLENCES_TO_SECOND_CORPSE, 4500, ScreenMessageAlign.TOP_CENTER));
+						qs.setCond(3);
+						qs.playSound(SOUND_MIDDLE);
+						((NpcInstance) npc1).doDie(player);
+						break;
+					
+					case 3:
+						player.sendPacket(new ExShowScreenMessage(NpcString.YOU_SHOWN_YOUR_CONDOLENCES_TO_THIRD_CORPSE, 4500, ScreenMessageAlign.TOP_CENTER));
+						qs.setCond(4);
+						qs.playSound(SOUND_MIDDLE);
+						((NpcInstance) npc1).doDie(player);
+						break;
+					
+					case 4:
+						player.sendPacket(new ExShowScreenMessage(NpcString.YOU_SHOWN_YOUR_CONDOLENCES_TO_FOURTH_CORPSE, 4500, ScreenMessageAlign.TOP_CENTER));
+						qs.setCond(5);
+						qs.playSound(SOUND_MIDDLE);
+						((NpcInstance) npc1).doDie(player);
+						break;
+					
+					case 5:
+						player.sendPacket(new ExShowScreenMessage(NpcString.YOU_SHOWN_YOUR_CONDOLENCES_TO_FIFTH_CORPSE, 4500, ScreenMessageAlign.TOP_CENTER));
+						qs.setCond(6);
+						qs.playSound(SOUND_MIDDLE);
+						((NpcInstance) npc1).doDie(player);
+						break;
 				}
 				
 				if (cond == 6)
@@ -136,10 +123,10 @@ public class Q10363_RequestOfTheSeeker extends Quest implements ScriptFile
 				{
 					player.sendPacket(new ExShowScreenMessage(NpcString.DONT_TOY_WITH_DEAD, 4500, ScreenMessageAlign.TOP_CENTER));
 					NpcInstance asa = NpcUtils.spawnSingle(soul1, new Location(player.getX() - Rnd.get(100), player.getY() - Rnd.get(100), player.getZ(), 0));
-					asa.getAggroList().addDamageHate(st.getPlayer(), 0, 10000);
+					asa.getAggroList().addDamageHate(qs.getPlayer(), 0, 10000);
 					asa.setAggressionTarget(player);
 					NpcInstance ass = NpcUtils.spawnSingle(soul2, new Location(player.getX() - Rnd.get(100), player.getY() - Rnd.get(100), player.getZ(), 0));
-					ass.getAggroList().addDamageHate(st.getPlayer(), 0, 10000);
+					ass.getAggroList().addDamageHate(qs.getPlayer(), 0, 10000);
 					ass.setAggressionTarget(player);
 					((NpcInstance) npc1).doDie(player);
 				}
@@ -152,84 +139,100 @@ public class Q10363_RequestOfTheSeeker extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("quest_ac"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			htmltext = "0-3.htm";
-		}
-		
-		if (event.equalsIgnoreCase("qet_rev"))
-		{
-			htmltext = "1-3.htm";
-			st.getPlayer().addExpAndSp(70200, 8100);
-			st.giveItems(57, 48000);
-			st.giveItems(1060, 100);
-			st.giveItems(43, 1);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
+			case "quest_ac":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				htmltext = "0-3.htm";
+				break;
+			
+			case "qet_rev":
+				htmltext = "1-3.htm";
+				qs.getPlayer().addExpAndSp(70200, 8100);
+				qs.giveItems(57, 48000);
+				qs.giveItems(1060, 100);
+				qs.giveItems(43, 1);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
 		String htmltext = "noquest";
+		final int cond = qs.getCond();
 		
-		if (npcId == nagel)
+		switch (npc.getId())
 		{
-			if (st.isCompleted())
-			{
-				htmltext = "0-c.htm";
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()))
-			{
-				htmltext = "start.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-4.htm";
-			}
-			else if (cond == 6)
-			{
-				htmltext = "0-5.htm";
-				st.setCond(7);
-			}
-			else if (cond == 7)
-			{
-				htmltext = "0-6.htm";
-			}
-			else
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-		}
-		
-		if (npcId == celin)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "1-c.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 7)
-			{
-				htmltext = "1-1.htm";
-			}
+			case Nagel:
+				if (qs.isCompleted())
+				{
+					htmltext = "0-c.htm";
+				}
+				else if ((cond == 0) && isAvailableFor(qs.getPlayer()))
+				{
+					htmltext = "start.htm";
+				}
+				else if (cond == 1)
+				{
+					htmltext = "0-4.htm";
+				}
+				else if (cond == 6)
+				{
+					htmltext = "0-5.htm";
+					qs.setCond(7);
+				}
+				else if (cond == 7)
+				{
+					htmltext = "0-6.htm";
+				}
+				else
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				break;
+			
+			case Celin:
+				if (qs.isCompleted())
+				{
+					htmltext = "1-c.htm";
+				}
+				else if (cond == 0)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 7)
+				{
+					htmltext = "1-1.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

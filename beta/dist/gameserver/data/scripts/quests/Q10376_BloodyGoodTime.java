@@ -44,178 +44,164 @@ public class Q10376_BloodyGoodTime extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		if (event.equalsIgnoreCase("32140-06.htm"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		if (event.equalsIgnoreCase("32139-03.htm"))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		if (event.equalsIgnoreCase("enterInstance"))
-		{
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
-			NpcInstance BloodyVein = st.addSpawn(MOB_BLOODY_VEIN, st.getPlayer().getX() + 50, st.getPlayer().getY() + 50, st.getPlayer().getZ(), 0, 0, 180000);
-			spawns.put(st.getPlayer().getObjectId(), BloodyVein.getObjectId());
-			BloodyVein.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, st.getPlayer(), 100000);
-			return "";
-		}
-		
-		if (event.equalsIgnoreCase("32139-08.htm"))
-		{
-			st.setCond(5);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		if (event.equalsIgnoreCase("teleport_goddard"))
-		{
-			st.getPlayer().teleToLocation(149597, -57249, -2976);
-			return "";
-		}
-		
-		if (event.equalsIgnoreCase("31588-03.htm"))
-		{
-			st.setCond(6);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		if (event.equalsIgnoreCase("31292-03.htm"))
-		{
-			st.addExpAndSp(121297500, 48433200);
-			st.giveItems(REWARD_MAGIC_RUNE_CLIP, 1);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(false);
+			case "32140-06.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "32139-03.htm":
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "enterInstance":
+				qs.setCond(3);
+				qs.playSound(SOUND_MIDDLE);
+				NpcInstance BloodyVein = qs.addSpawn(MOB_BLOODY_VEIN, qs.getPlayer().getX() + 50, qs.getPlayer().getY() + 50, qs.getPlayer().getZ(), 0, 0, 180000);
+				spawns.put(qs.getPlayer().getObjectId(), BloodyVein.getObjectId());
+				BloodyVein.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, qs.getPlayer(), 100000);
+				return "";
+				
+			case "32139-08.htm":
+				qs.setCond(5);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "teleport_goddard":
+				qs.getPlayer().teleToLocation(149597, -57249, -2976);
+				return "";
+				
+			case "31588-03.htm":
+				qs.setCond(6);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "31292-03.htm":
+				qs.addExpAndSp(121297500, 48433200);
+				qs.giveItems(REWARD_MAGIC_RUNE_CLIP, 1);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(false);
+				break;
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		st.getCond();
-		int npcId = npc.getId();
 		String htmltext = "noquest";
 		
-		if (npcId == NPC_ZENYA)
+		switch (npc.getId())
 		{
-			switch (st.getState())
-			{
-				case COMPLETED:
-					htmltext = "32140-05.htm";
-					break;
-				
-				case CREATED:
-					if (st.getPlayer().getLevel() >= 80)
-					{
-						QuestState qs = st.getPlayer().getQuestState(Q10375_SuccubusDisciples.class);
-						
-						if ((st.getPlayer().getClassId().level() == 4) && (qs != null) && qs.isCompleted())
+			case NPC_ZENYA:
+				switch (qs.getState())
+				{
+					case COMPLETED:
+						htmltext = "32140-05.htm";
+						break;
+					
+					case CREATED:
+						if (qs.getPlayer().getLevel() >= 80)
 						{
-							htmltext = "32140-01.htm";
+							final QuestState state = qs.getPlayer().getQuestState(Q10375_SuccubusDisciples.class);
+							
+							if ((qs.getPlayer().getClassId().level() == 4) && (state != null) && state.isCompleted())
+							{
+								htmltext = "32140-01.htm";
+							}
+							else
+							{
+								htmltext = "32140-03.htm";
+								qs.exitCurrentQuest(true);
+							}
 						}
 						else
 						{
-							htmltext = "32140-03.htm";
-							st.exitCurrentQuest(true);
+							htmltext = "32140-04.htm";
 						}
-					}
-					else
-					{
-						htmltext = "32140-04.htm";
-					}
-					
-					break;
-				
-				case STARTED:
-					htmltext = "32140-07.htm";
-			}
-		}
-		else if (npcId == NPC_CASCA)
-		{
-			if (st.isStarted())
-			{
-				switch (st.getCond())
-				{
-					case 1:
-						htmltext = "32139-02.htm";
 						break;
 					
-					case 2:
-					case 3:
-						htmltext = "32139-03.htm";
-						Integer obj_id = spawns.get(st.getPlayer().getObjectId());
-						NpcInstance mob = obj_id != null ? GameObjectsStorage.getNpc(obj_id) : null;
+					case STARTED:
+						htmltext = "32140-07.htm";
+						break;
+				}
+				break;
+			
+			case NPC_CASCA:
+				if (qs.isStarted())
+				{
+					switch (qs.getCond())
+					{
+						case 1:
+							htmltext = "32139-02.htm";
+							break;
 						
-						if ((mob == null) || mob.isDead())
-						{
+						case 2:
+						case 3:
 							htmltext = "32139-03.htm";
-						}
-						else
-						{
-							htmltext = "noquest";
-						}
+							Integer obj_id = spawns.get(qs.getPlayer().getObjectId());
+							NpcInstance mob = obj_id != null ? GameObjectsStorage.getNpc(obj_id) : null;
+							
+							if ((mob == null) || mob.isDead())
+							{
+								htmltext = "32139-03.htm";
+							}
+							else
+							{
+								htmltext = "noquest";
+							}
+							break;
 						
-						break;
-					
-					case 4:
-						htmltext = "32139-04.htm";
-						break;
-					
-					case 5:
-						htmltext = "32139-08.htm";
+						case 4:
+							htmltext = "32139-04.htm";
+							break;
+						
+						case 5:
+							htmltext = "32139-08.htm";
+							break;
+					}
 				}
-			}
-		}
-		else if (npcId == NPC_AGNES)
-		{
-			if (st.isStarted())
-			{
-				if (st.getCond() == 5)
+				break;
+			
+			case NPC_AGNES:
+				if (qs.isStarted())
 				{
-					htmltext = "31588-01.htm";
+					if (qs.getCond() == 5)
+					{
+						htmltext = "31588-01.htm";
+					}
+					else if (qs.getCond() == 6)
+					{
+						htmltext = "31588-03.htm";
+					}
 				}
-				else if (st.getCond() == 6)
-				{
-					htmltext = "31588-03.htm";
-				}
-			}
-		}
-		else if (npcId == NPC_ANDREI)
-		{
-			if (st.isStarted())
-			{
-				if (st.getCond() == 6)
+				break;
+			
+			case NPC_ANDREI:
+				if (qs.isStarted() && (qs.getCond() == 6))
 				{
 					htmltext = "31292-01.htm";
 				}
-			}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if (st.getCond() != 3)
+		if ((qs.getCond() == 3) && updateKill(npc, qs))
 		{
-			return null;
-		}
-		
-		if (updateKill(npc, st))
-		{
-			st.unset(_bloodyVein);
-			st.setCond(4);
-			st.playSound(SOUND_MIDDLE);
+			qs.unset(_bloodyVein);
+			qs.setCond(4);
+			qs.playSound(SOUND_MIDDLE);
 		}
 		
 		return null;

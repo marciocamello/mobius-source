@@ -17,33 +17,20 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
 
-//By Evil_dnk
 public class Q10368_RebellionOfMonsters extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int fred = 33179;
+	// Monsters
 	private static final int jaga = 23024;
 	private static final int jagav = 23025;
 	private static final int incect = 23099;
 	private static final int incectl = 23100;
+	// Others
 	private static final String jaga_item = "jaga";
 	private static final String jagav_item = "jagav";
 	private static final String incect_item = "incect";
 	private static final String incectl_item = "incectl";
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
 	
 	public Q10368_RebellionOfMonsters()
 	{
@@ -58,15 +45,15 @@ public class Q10368_RebellionOfMonsters extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("quest_ac"))
+		if (event.equals("quest_ac"))
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
+			qs.setState(STARTED);
+			qs.setCond(1);
+			qs.playSound(SOUND_ACCEPT);
 			htmltext = "0-3.htm";
 		}
 		
@@ -74,53 +61,62 @@ public class Q10368_RebellionOfMonsters extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
 		String htmltext = "noquest";
+		final int cond = qs.getCond();
 		
-		if (npcId == fred)
+		if (qs.isCompleted())
 		{
-			if (st.isCompleted())
-			{
-				htmltext = "0-c.htm";
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()))
-			{
-				htmltext = "0-1.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-4.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "0-5.htm";
-				st.getPlayer().addExpAndSp(550000, 150000);
-				st.giveItems(57, 99000);
-				st.exitCurrentQuest(false);
-				st.playSound(SOUND_FINISH);
-			}
+			htmltext = "0-c.htm";
+		}
+		else if ((cond == 0) && isAvailableFor(qs.getPlayer()))
+		{
+			htmltext = "0-1.htm";
+		}
+		else if (cond == 1)
+		{
+			htmltext = "0-4.htm";
+		}
+		else if (cond == 2)
+		{
+			htmltext = "0-5.htm";
+			qs.getPlayer().addExpAndSp(550000, 150000);
+			qs.giveItems(57, 99000);
+			qs.exitCurrentQuest(false);
+			qs.playSound(SOUND_FINISH);
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		boolean doneKill = updateKill(npc, st);
-		
-		if (doneKill)
+		if (updateKill(npc, qs))
 		{
-			st.unset(jaga_item);
-			st.unset(jagav_item);
-			st.unset(incect_item);
-			st.unset(incectl_item);
-			st.setCond(2);
+			qs.unset(jaga_item);
+			qs.unset(jagav_item);
+			qs.unset(incect_item);
+			qs.unset(incectl_item);
+			qs.setCond(2);
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

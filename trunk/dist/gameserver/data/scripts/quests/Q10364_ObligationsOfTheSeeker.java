@@ -26,21 +26,6 @@ public class Q10364_ObligationsOfTheSeeker extends Quest implements ScriptFile
 	private static final int papper = 17578;
 	private static final int walter = 33452;
 	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public Q10364_ObligationsOfTheSeeker()
 	{
 		super(false);
@@ -55,133 +40,149 @@ public class Q10364_ObligationsOfTheSeeker extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("quest_ac"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			htmltext = "0-3.htm";
-		}
-		
-		if (event.equalsIgnoreCase("papper"))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-			htmltext = "0-3.htm";
-		}
-		
-		if (event.equalsIgnoreCase("quest_rev"))
-		{
-			st.takeAllItems(papper);
-			htmltext = "2-4.htm";
-			st.getPlayer().addExpAndSp(95000, 10000);
-			st.giveItems(57, 55000);
-			st.giveItems(1060, 50);
-			st.giveItems(37, 1);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
+			case "quest_ac":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				htmltext = "0-3.htm";
+				break;
+			
+			case "papper":
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				htmltext = "0-3.htm";
+				break;
+			
+			case "quest_rev":
+				qs.takeAllItems(papper);
+				htmltext = "2-4.htm";
+				qs.getPlayer().addExpAndSp(95000, 10000);
+				qs.giveItems(57, 55000);
+				qs.giveItems(1060, 50);
+				qs.giveItems(37, 1);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
 		String htmltext = "noquest";
+		final int cond = qs.getCond();
 		
-		if (npcId == celin)
+		switch (npc.getId())
 		{
-			if (st.isCompleted())
-			{
-				htmltext = "0-c.htm";
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()))
-			{
-				htmltext = "start.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-4.htm";
-			}
-			else
-			{
-				htmltext = "0-nc.htm";
-			}
-		}
-		else if (npcId == walter)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "1-c.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "1-1.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "1-5.htm";
-			}
-			else if (cond == 3)
-			{
-				htmltext = "1-6.htm";
-			}
-			else
-			{
-				htmltext = "1-5.htm";
-			}
-		}
-		else if (npcId == dep)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "2-c.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = "2-nc.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 2)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 3)
-			{
-				htmltext = "2-1.htm";
-			}
+			case celin:
+				if (qs.isCompleted())
+				{
+					htmltext = "0-c.htm";
+				}
+				else if ((cond == 0) && isAvailableFor(qs.getPlayer()))
+				{
+					htmltext = "start.htm";
+				}
+				else if (cond == 1)
+				{
+					htmltext = "0-4.htm";
+				}
+				else
+				{
+					htmltext = "0-nc.htm";
+				}
+				break;
+			
+			case walter:
+				if (qs.isCompleted())
+				{
+					htmltext = "1-c.htm";
+				}
+				else if (cond == 1)
+				{
+					htmltext = "1-1.htm";
+				}
+				else if (cond == 2)
+				{
+					htmltext = "1-5.htm";
+				}
+				else if (cond == 3)
+				{
+					htmltext = "1-6.htm";
+				}
+				else
+				{
+					htmltext = "1-5.htm";
+				}
+				break;
+			
+			case dep:
+				if (qs.isCompleted())
+				{
+					htmltext = "2-c.htm";
+				}
+				else if (cond == 0)
+				{
+					htmltext = "2-nc.htm";
+				}
+				else if (cond == 1)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 2)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 3)
+				{
+					htmltext = "2-1.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		
-		if (((st.getCond() == 2) && (st.getQuestItemsCount(papper) < 5) && (npcId == warper)) || (npcId == avian))
+		if (((qs.getCond() == 2) && (qs.getQuestItemsCount(papper) < 5) && (npcId == warper)) || (npcId == avian))
 		{
-			st.rollAndGive(papper, 1, 35);
-			st.playSound(SOUND_ITEMGET);
+			qs.rollAndGive(papper, 1, 35);
+			qs.playSound(SOUND_ITEMGET);
 		}
 		
-		if (st.getQuestItemsCount(papper) >= 5)
+		if (qs.getQuestItemsCount(papper) >= 5)
 		{
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
+			qs.setCond(3);
+			qs.playSound(SOUND_MIDDLE);
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

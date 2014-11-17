@@ -24,29 +24,15 @@ import services.SupportMagic;
 
 public class Q10352_LegacyOfCrumaTower extends Quest implements ScriptFile
 {
-	// npc
+	// Npcs
 	private static final int LILEJ = 33155;
 	private static final int LINKENS = 33163;
-	private static final int MARTES_NPC = 33292; // martes NPC
-	private static final int MARTES_RB = 25829; // martes RB
-	// items
+	private static final int MARTES_NPC = 33292;
+	// Monster
+	private static final int MARTES_RB = 25829;
+	// Items
 	private static final int TRESURE_TOOL = 17619;
 	private static final int MARTES_CORE = 17728;
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
 	
 	public Q10352_LegacyOfCrumaTower()
 	{
@@ -61,177 +47,177 @@ public class Q10352_LegacyOfCrumaTower extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		Player player = st.getPlayer();
+		final Player player = qs.getPlayer();
 		
-		if (event.equalsIgnoreCase("33155-9.htm"))
+		switch (event)
 		{
-			SupportMagic.getSupportMagic(npc, player);
-		}
-		
-		if (event.equalsIgnoreCase("33155-10.htm"))
-		{
-			SupportMagic.getSupportServitorMagic(npc, player);
-		}
-		
-		if (event.equalsIgnoreCase("advanceCond3"))
-		{
-			if (st.getCond() != 3)
-			{
-				st.setCond(3);
-			}
+			case "33155-9.htm":
+				SupportMagic.getSupportMagic(npc, player);
+				break;
 			
-			return null;
-		}
-		
-		if (event.equalsIgnoreCase("teleportCruma"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-			player.teleToLocation(17192, 114173, -3439);
-			return null;
-		}
-		
-		if (event.equalsIgnoreCase("33163-8.htm"))
-		{
-			if (st.getQuestItemsCount(TRESURE_TOOL) == 0)
-			{
-				st.giveItems(TRESURE_TOOL, 30);
-				st.setCond(2);
-			}
-			else
-			{
-				return "33163-12.htm";
-			}
-		}
-		
-		if (event.equalsIgnoreCase("EnterInstance"))
-		{
-			if (player.getParty() == null)
-			{
-				player.sendMessage("You cannot enter without party!"); // pts message?
-				return null;
-			}
+			case "33155-10.htm":
+				SupportMagic.getSupportServitorMagic(npc, player);
+				break;
 			
-			for (Player member : player.getParty().getPartyMembers())
-			{
-				QuestState qs = member.getQuestState(Q10352_LegacyOfCrumaTower.class);
-				
-				if ((qs == null) || (qs.getCond() != 3))
+			case "advanceCond3":
+				if (qs.getCond() != 3)
 				{
-				} // nothing as I've seen everybody can enter this instance
-				else if (qs.getCond() == 3)
-				{
-					qs.setCond(4);
+					qs.setCond(3);
 				}
-			}
+				return null;
+				
+			case "teleportCruma":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				player.teleToLocation(17192, 114173, -3439);
+				return null;
+				
+			case "33163-8.htm":
+				if (qs.getQuestItemsCount(TRESURE_TOOL) == 0)
+				{
+					qs.giveItems(TRESURE_TOOL, 30);
+					qs.setCond(2);
+				}
+				else
+				{
+					return "33163-12.htm";
+				}
+				break;
 			
-			ReflectionUtils.enterReflection(player, 198);
-			return null;
-		}
-		
-		if (event.equalsIgnoreCase("LeaveInstance"))
-		{
-			player.teleToLocation(17192, 114173, -3439, ReflectionManager.DEFAULT);
-			return null;
+			case "EnterInstance":
+				if (player.getParty() == null)
+				{
+					player.sendMessage("You cannot enter without party!");
+					return null;
+				}
+				for (Player member : player.getParty().getPartyMembers())
+				{
+					final QuestState state = member.getQuestState(Q10352_LegacyOfCrumaTower.class);
+					
+					if ((state == null) || (state.getCond() != 3))
+					{
+					} // nothing as I've seen everybody can enter this instance
+					else if (state.getCond() == 3)
+					{
+						state.setCond(4);
+					}
+				}
+				ReflectionUtils.enterReflection(player, 198);
+				return null;
+				
+			case "LeaveInstance":
+				player.teleToLocation(17192, 114173, -3439, ReflectionManager.DEFAULT);
+				return null;
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		Player player = st.getPlayer();
-		int npcId = npc.getId();
-		int cond = st.getCond();
+		final Player player = qs.getPlayer();
+		final int cond = qs.getCond();
 		
 		if (player.getLevel() < 38)
 		{
 			return "33155-lvl.htm";
 		}
 		
-		if (npcId == LILEJ)
+		switch (npc.getId())
 		{
-			if (cond < 5)
-			{
-				return "33155.htm";
-			}
-		}
-		
-		if (npcId == LINKENS)
-		{
-			if (cond == 1)
-			{
-				return "33163.htm";
-			}
-			
-			if (cond == 2)
-			{
-				return "33163-5.htm";
-			}
-			
-			if (cond == 5)
-			{
-				if (st.getQuestItemsCount(MARTES_CORE) == 0)
+			case LILEJ:
+				if (cond < 5)
 				{
-					return "33163-14.htm";
+					return "33155.htm";
 				}
-				else if (st.getQuestItemsCount(MARTES_CORE) != 0)
-				{
-					st.takeItems(MARTES_CORE, -1);
-					st.takeItems(TRESURE_TOOL, -1);
-					st.addExpAndSp(480000, 312000);
-					st.playSound(SOUND_FINISH);
-					st.exitCurrentQuest(false);
-					return "33163-15.htm";
-				}
-			}
-		}
-		
-		if (npcId == MARTES_NPC)
-		{
-			if (cond == 3)
-			{
-				return "25829.htm";
-			}
+				break;
 			
-			if (cond == 5)
-			{
-				return "25829-1.htm";
-			}
+			case LINKENS:
+				if (cond == 1)
+				{
+					return "33163.htm";
+				}
+				else if (cond == 2)
+				{
+					return "33163-5.htm";
+				}
+				else if (cond == 5)
+				{
+					if (qs.getQuestItemsCount(MARTES_CORE) == 0)
+					{
+						return "33163-14.htm";
+					}
+					else if (qs.getQuestItemsCount(MARTES_CORE) != 0)
+					{
+						qs.takeItems(MARTES_CORE, -1);
+						qs.takeItems(TRESURE_TOOL, -1);
+						qs.addExpAndSp(480000, 312000);
+						qs.playSound(SOUND_FINISH);
+						qs.exitCurrentQuest(false);
+						return "33163-15.htm";
+					}
+				}
+				break;
+			
+			case MARTES_NPC:
+				if (cond == 3)
+				{
+					return "25829.htm";
+				}
+				else if (cond == 5)
+				{
+					return "25829-1.htm";
+				}
+				break;
 		}
 		
 		return "noquest";
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		Player player = st.getPlayer();
+		final Player player = qs.getPlayer();
 		
 		if (player.getParty() == null)
 		{
-			st.setCond(5);
+			qs.setCond(5);
 		}
 		else
 		{
 			for (Player member : player.getParty().getPartyMembers())
 			{
-				QuestState qs = member.getQuestState(Q10352_LegacyOfCrumaTower.class);
+				final QuestState state = member.getQuestState(Q10352_LegacyOfCrumaTower.class);
 				
-				if ((qs == null) || (qs.getCond() != 4))
+				if ((state == null) || (state.getCond() != 4))
 				{
 					continue;
 				}
 				
-				qs.setCond(5);
+				state.setCond(5);
 			}
 		}
 		
-		st.getPlayer().getReflection().addSpawnWithoutRespawn(MARTES_NPC, Location.findPointToStay(st.getPlayer(), 50, 100), st.getPlayer().getGeoIndex());
+		qs.getPlayer().getReflection().addSpawnWithoutRespawn(MARTES_NPC, Location.findPointToStay(qs.getPlayer(), 50, 100), qs.getPlayer().getGeoIndex());
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

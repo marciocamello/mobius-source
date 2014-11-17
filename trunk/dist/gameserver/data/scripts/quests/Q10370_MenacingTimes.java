@@ -12,7 +12,6 @@
  */
 package quests;
 
-import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
@@ -72,6 +71,144 @@ public class Q10370_MenacingTimes extends Quest implements ScriptFile
 	private static final int chance = 10;
 	private static final int Ashes = 34765;
 	
+	public Q10370_MenacingTimes()
+	{
+		super(false);
+		addStartNpc(winoin);
+		addTalkId(winoin, gerkenshtein, andreig);
+		addKillId(mobs);
+		addQuestItem(Ashes);
+		addLevelCheck(76, 81);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "quest_ac":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				htmltext = "0-3.htm";
+				break;
+			
+			case "1-3.htm":
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "2-2.htm":
+				qs.setCond(3);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		final int classid = qs.getPlayer().getClassId().getId();
+		
+		switch (npc.getId())
+		{
+			case winoin:
+				if (qs.isCompleted())
+				{
+					htmltext = "0-c.htm";
+				}
+				else if (cond == 0)
+				{
+					if (isAvailableFor(qs.getPlayer()) && Util.contains(classesav, classid))
+					{
+						htmltext = "start.htm";
+					}
+					else
+					{
+						htmltext = TODO_FIND_HTML;
+					}
+				}
+				else if (cond == 1)
+				{
+					htmltext = "0-3.htm";
+				}
+				break;
+			
+			case andreig:
+				if (qs.isCompleted())
+				{
+					htmltext = "1-c.htm";
+				}
+				else if (cond == 0)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 1)
+				{
+					htmltext = "1-1.htm";
+				}
+				else if (cond == 2)
+				{
+					htmltext = "1-4.htm";
+				}
+				break;
+			
+			case gerkenshtein:
+				if (qs.isCompleted())
+				{
+					htmltext = "2-c.htm";
+				}
+				else if (cond == 0)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 2)
+				{
+					htmltext = "2-1.htm";
+				}
+				else if (cond == 3)
+				{
+					htmltext = "2-4.htm";
+				}
+				else if (cond == 4)
+				{
+					htmltext = "2-3.htm";
+					qs.getPlayer().addExpAndSp(22451400, 25202500);
+					qs.giveItems(57, 479620);
+					qs.takeAllItems(Ashes);
+					qs.exitCurrentQuest(false);
+					qs.playSound(SOUND_FINISH);
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if ((qs.getCond() == 3) && Util.contains(mobs, npc.getId()) && (qs.getQuestItemsCount(Ashes) < 30))
+		{
+			qs.rollAndGive(Ashes, 1, chance);
+			qs.playSound(SOUND_ITEMGET);
+		}
+		
+		if (qs.getQuestItemsCount(Ashes) >= 30)
+		{
+			qs.setCond(4);
+			qs.playSound(SOUND_MIDDLE);
+		}
+		
+		return null;
+	}
+	
 	@Override
 	public void onLoad()
 	{
@@ -85,145 +222,5 @@ public class Q10370_MenacingTimes extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10370_MenacingTimes()
-	{
-		super(false);
-		addStartNpc(winoin);
-		addTalkId(gerkenshtein);
-		addTalkId(winoin);
-		addTalkId(andreig);
-		addKillId(mobs);
-		addQuestItem(Ashes);
-		addLevelCheck(76, 81);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("quest_ac"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			htmltext = "0-3.htm";
-		}
-		else if (event.equalsIgnoreCase("1-3.htm"))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("2-2.htm"))
-		{
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		Player player = st.getPlayer();
-		int classid = player.getClassId().getId();
-		String htmltext = "noquest";
-		
-		if (npcId == winoin)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "0-c.htm";
-			}
-			else if (cond == 0)
-			{
-				if (isAvailableFor(st.getPlayer()) && Util.contains(classesav, classid))
-				{
-					htmltext = "start.htm";
-				}
-				else
-				{
-					htmltext = TODO_FIND_HTML;
-				}
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-3.htm";
-			}
-		}
-		else if (npcId == andreig)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "1-c.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 1)
-			{
-				htmltext = "1-1.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "1-4.htm";
-			}
-		}
-		else if (npcId == gerkenshtein)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "2-c.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 2)
-			{
-				htmltext = "2-1.htm";
-			}
-			else if (cond == 3)
-			{
-				htmltext = "2-4.htm";
-			}
-			else if (cond == 4)
-			{
-				htmltext = "2-3.htm";
-				st.getPlayer().addExpAndSp(22451400, 25202500);
-				st.giveItems(57, 479620);
-				st.takeAllItems(Ashes);
-				st.exitCurrentQuest(false);
-				st.playSound(SOUND_FINISH);
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		
-		if ((st.getCond() == 3) && Util.contains(mobs, npcId) && (st.getQuestItemsCount(Ashes) < 30))
-		{
-			st.rollAndGive(Ashes, 1, chance);
-			st.playSound(SOUND_ITEMGET);
-		}
-		
-		if (st.getQuestItemsCount(Ashes) >= 30)
-		{
-			st.setCond(4);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		return null;
 	}
 }
