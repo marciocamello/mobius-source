@@ -21,8 +21,11 @@ import lineage2.gameserver.utils.Util;
 
 public class Q10318_DecayingDarkness extends Quest implements ScriptFile
 {
-	private static final int NPC_LYDIA = 32892;
+	// Npc
+	private static final int LYDIA = 32892;
+	// Item
 	private static final int ITEM_CURSE_RESIDUE = 17733;
+	// Monsters
 	private static final int[] MOB_ANCIENT_HEROES =
 	{
 		18978,
@@ -36,7 +39,7 @@ public class Q10318_DecayingDarkness extends Quest implements ScriptFile
 	public Q10318_DecayingDarkness()
 	{
 		super(PARTY_ONE);
-		addStartNpc(NPC_LYDIA);
+		addStartNpc(LYDIA);
 		addKillId(MOB_ANCIENT_HEROES);
 		addQuestItem(ITEM_CURSE_RESIDUE);
 		addLevelCheck(95, 99);
@@ -44,94 +47,91 @@ public class Q10318_DecayingDarkness extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		if (st == null)
+		if (qs == null)
 		{
 			return "noquest";
 		}
 		
-		if (event.equalsIgnoreCase("32892-07.htm"))
+		if (event.equals("32892-07.htm"))
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.playSound(SOUND_ACCEPT);
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		Player player = st.getPlayer();
-		QuestState previous = player.getQuestState(Q10317_OrbisWitch.class);
+		final Player player = qs.getPlayer();
+		final QuestState previous = player.getQuestState(Q10317_OrbisWitch.class);
 		
-		if (npc.getId() == NPC_LYDIA)
+		if ((previous == null) || (!previous.isCompleted()) || (player.getLevel() < 95))
 		{
-			if ((previous == null) || (!previous.isCompleted()) || (player.getLevel() < 95))
-			{
-				st.exitCurrentQuest(true);
-				return "32892-02.htm";
-			}
+			qs.exitCurrentQuest(true);
+			return "32892-02.htm";
+		}
+		
+		switch (qs.getState())
+		{
+			case COMPLETED:
+				htmltext = "32892-03.htm";
+				break;
 			
-			switch (st.getState())
-			{
-				case COMPLETED:
-					htmltext = "32892-03.htm";
-					break;
-				
-				case CREATED:
-					htmltext = "32892-01.htm";
-					break;
-				
-				case STARTED:
-					if (st.getCond() == 1)
+			case CREATED:
+				htmltext = "32892-01.htm";
+				break;
+			
+			case STARTED:
+				if (qs.getCond() == 1)
+				{
+					if (qs.getQuestItemsCount(ITEM_CURSE_RESIDUE) != 0)
 					{
-						if (st.getQuestItemsCount(ITEM_CURSE_RESIDUE) != 0)
-						{
-							htmltext = "32892-08.htm";
-						}
-						else
-						{
-							htmltext = "32892-09.htm";
-						}
+						htmltext = "32892-08.htm";
 					}
 					else
 					{
-						if ((st.getCond() != 2) || (st.getQuestItemsCount(ITEM_CURSE_RESIDUE) < 8))
-						{
-							break;
-						}
-						
-						htmltext = "32892-10.htm";
-						st.addExpAndSp(79260650, 36253450);
-						st.giveItems(ADENA_ID, 5427900, true);
-						st.playSound(SOUND_FINISH);
-						st.exitCurrentQuest(false);
+						htmltext = "32892-09.htm";
 					}
-			}
+				}
+				else
+				{
+					if ((qs.getCond() != 2) || (qs.getQuestItemsCount(ITEM_CURSE_RESIDUE) < 8))
+					{
+						break;
+					}
+					
+					htmltext = "32892-10.htm";
+					qs.addExpAndSp(79260650, 36253450);
+					qs.giveItems(ADENA_ID, 5427900, true);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(false);
+				}
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if ((st.getCond() == 1) && (Util.contains(MOB_ANCIENT_HEROES, npc.getId())))
+		if ((qs.getCond() == 1) && (Util.contains(MOB_ANCIENT_HEROES, npc.getId())))
 		{
-			if (st.rollAndGive(ITEM_CURSE_RESIDUE, 1, 1, 8, 100))
+			if (qs.rollAndGive(ITEM_CURSE_RESIDUE, 1, 1, 8, 100))
 			{
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				qs.setCond(2);
 			}
 		}
 		
@@ -141,7 +141,7 @@ public class Q10318_DecayingDarkness extends Quest implements ScriptFile
 	@Override
 	public boolean isVisible(Player player)
 	{
-		QuestState qs = player.getQuestState(Q10318_DecayingDarkness.class);
+		final QuestState qs = player.getQuestState(Q10318_DecayingDarkness.class);
 		return ((qs == null) && isAvailableFor(player)) || ((qs != null) && qs.isNowAvailableByTime());
 	}
 	

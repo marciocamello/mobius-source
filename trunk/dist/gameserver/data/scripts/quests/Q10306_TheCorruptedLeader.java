@@ -21,9 +21,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10306_TheCorruptedLeader extends Quest implements ScriptFile
 {
-	private static final int NPC_NAOMI_KASHERON = 32896;
-	private static final int MOB_KIMERIAN = 32896;
-	
+	// Npc
+	private static final int NAOMI_KASHERON = 32896;
+	// Monster
+	private static final int KIMERIAN = 32896;
+	// Items
 	private static final int[] CRYSTALS =
 	{
 		9552,
@@ -37,34 +39,35 @@ public class Q10306_TheCorruptedLeader extends Quest implements ScriptFile
 	public Q10306_TheCorruptedLeader()
 	{
 		super(false);
-		addStartNpc(NPC_NAOMI_KASHERON);
-		addKillId(MOB_KIMERIAN);
+		addStartNpc(NAOMI_KASHERON);
+		addKillId(KIMERIAN);
 		addQuestCompletedCheck(Q10305_UnstoppableFutileEfforts.class);
 		addLevelCheck(90, 99);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		if (st == null)
+		if (qs == null)
 		{
-			return event;
+			return "noquest";
 		}
+		
 		switch (event)
 		{
 			case "32896-05.htm":
 			{
-				st.setCond(1);
-				st.setState(STARTED);
-				st.playSound(SOUND_ACCEPT);
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
 				break;
 			}
 			case "32896-08.htm":
 			{
-				st.playSound(SOUND_FINISH);
-				st.addExpAndSp(9479594, 4104484);
-				st.giveItems(CRYSTALS[Rnd.get(CRYSTALS.length)], 1);
-				st.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				qs.addExpAndSp(9479594, 4104484);
+				qs.giveItems(CRYSTALS[Rnd.get(CRYSTALS.length)], 1);
+				qs.exitCurrentQuest(false);
 				break;
 			}
 		}
@@ -72,62 +75,59 @@ public class Q10306_TheCorruptedLeader extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = NO_QUEST_DIALOG;
+		String htmltext = "noquest";
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		Player player = st.getPlayer();
-		QuestState prevst = player.getQuestState(Q10305_UnstoppableFutileEfforts.class);
+		final Player player = qs.getPlayer();
+		final QuestState prevst = player.getQuestState(Q10305_UnstoppableFutileEfforts.class);
 		
-		if (npc.getId() == NPC_NAOMI_KASHERON)
+		switch (qs.getState())
 		{
-			switch (st.getState())
-			{
-				case COMPLETED:
-					htmltext = "32896-02.htm";
-					break;
-				
-				case CREATED:
-					if (player.getLevel() >= 90)
+			case COMPLETED:
+				htmltext = "32896-02.htm";
+				break;
+			
+			case CREATED:
+				if (player.getLevel() >= 90)
+				{
+					if ((prevst != null) && (prevst.isCompleted()))
 					{
-						if ((prevst != null) && (prevst.isCompleted()))
-						{
-							htmltext = "32896-01.htm";
-						}
-						else
-						{
-							st.exitCurrentQuest(true);
-							htmltext = "32896-03.htm";
-						}
+						htmltext = "32896-01.htm";
 					}
 					else
 					{
-						st.exitCurrentQuest(true);
+						qs.exitCurrentQuest(true);
 						htmltext = "32896-03.htm";
 					}
-					
-					break;
+				}
+				else
+				{
+					qs.exitCurrentQuest(true);
+					htmltext = "32896-03.htm";
+				}
 				
-				case STARTED:
-					if (st.getCond() == 1)
+				break;
+			
+			case STARTED:
+				if (qs.getCond() == 1)
+				{
+					htmltext = "32896-06.htm";
+				}
+				else
+				{
+					if (qs.getCond() != 2)
 					{
-						htmltext = "32896-06.htm";
+						break;
 					}
-					else
-					{
-						if (st.getCond() != 2)
-						{
-							break;
-						}
-						
-						htmltext = "32896-07.htm";
-					}
-			}
+					
+					htmltext = "32896-07.htm";
+				}
 		}
 		
 		return htmltext;
@@ -136,7 +136,7 @@ public class Q10306_TheCorruptedLeader extends Quest implements ScriptFile
 	@Override
 	public boolean isVisible(Player player)
 	{
-		QuestState qs = player.getQuestState(Q10306_TheCorruptedLeader.class);
+		final QuestState qs = player.getQuestState(Q10306_TheCorruptedLeader.class);
 		return ((qs == null) && isAvailableFor(player)) || ((qs != null) && qs.isNowAvailableByTime());
 	}
 	

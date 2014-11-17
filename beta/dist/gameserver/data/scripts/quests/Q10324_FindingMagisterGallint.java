@@ -20,8 +20,92 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10324_FindingMagisterGallint extends Quest implements ScriptFile
 {
-	private static final int shenon = 32974;
-	private static final int galint = 32980;
+	// Npcs
+	private static final int Shenon = 32974;
+	private static final int Galint = 32980;
+	
+	public Q10324_FindingMagisterGallint()
+	{
+		super(false);
+		addStartNpc(Shenon);
+		addTalkId(Shenon);
+		addTalkId(Galint);
+		addLevelCheck(1, 20);
+		addQuestCompletedCheck(Q10323_GoingIntoARealWarLetsGoToTheTrainingGround.class);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "quest_ac":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				htmltext = "0-3.htm";
+				break;
+			
+			case "qet_rev":
+				htmltext = "1-2.htm";
+				qs.showTutorialHTML(TutorialShowHtml.QT_004, TutorialShowHtml.TYPE_WINDOW);
+				qs.getPlayer().addExpAndSp(1700, 2000);
+				qs.giveItems(57, 11000);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		
+		switch (npc.getId())
+		{
+			case Shenon:
+				if (qs.isCompleted())
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if ((cond == 0) && isAvailableFor(qs.getPlayer()))
+				{
+					htmltext = "start.htm";
+				}
+				else if (cond == 1)
+				{
+					htmltext = "0-4.htm";
+				}
+				else
+				{
+					htmltext = "0-nc.htm";
+				}
+				break;
+			
+			case Galint:
+				if (qs.isCompleted())
+				{
+					htmltext = "1-c.htm";
+				}
+				else if (cond == 0)
+				{
+					htmltext = "1-nc.htm";
+				}
+				else if (cond == 1)
+				{
+					htmltext = "1-1.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
 	
 	@Override
 	public void onLoad()
@@ -36,86 +120,5 @@ public class Q10324_FindingMagisterGallint extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10324_FindingMagisterGallint()
-	{
-		super(false);
-		addStartNpc(shenon);
-		addTalkId(shenon);
-		addTalkId(galint);
-		addLevelCheck(1, 20);
-		addQuestCompletedCheck(Q10323_GoingIntoARealWarLetsGoToTheTrainingGround.class);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("quest_ac"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			htmltext = "0-3.htm";
-		}
-		
-		if (event.equalsIgnoreCase("qet_rev"))
-		{
-			htmltext = "1-2.htm";
-			st.showTutorialHTML(TutorialShowHtml.QT_004, TutorialShowHtml.TYPE_WINDOW);
-			st.getPlayer().addExpAndSp(1700, 2000);
-			st.giveItems(57, 11000);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		
-		if (npcId == shenon)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()))
-			{
-				htmltext = "start.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-4.htm";
-			}
-			else
-			{
-				htmltext = "0-nc.htm";
-			}
-		}
-		else if (npcId == galint)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "1-c.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = "1-nc.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "1-1.htm";
-			}
-		}
-		
-		return htmltext;
 	}
 }

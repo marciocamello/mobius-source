@@ -19,17 +19,144 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10337_SakumsImpact extends Quest implements ScriptFile
 {
-	private static final int guild = 31795;
-	private static final int silvana = 33178;
-	private static final int lef = 33510;
-	private static final int bes = 20506;
-	private static final int skelet = 23022;
-	private static final int batt = 27458;
-	private static final int sc_bat = 20411;
-	private static final int ruin_bat = 20505;
+	private static final int Guild = 31795;
+	private static final int Silvana = 33178;
+	private static final int Lef = 33510;
+	private static final int Bes = 20506;
+	private static final int Skelet = 23022;
+	private static final int Batt = 27458;
+	private static final int Sc_bat = 20411;
+	private static final int Ruin_bat = 20505;
 	private static final String bes_item = "bes";
 	private static final String bat_item = "bat";
 	private static final String skelet_item = "skelet";
+	
+	public Q10337_SakumsImpact()
+	{
+		super(false);
+		addStartNpc(Guild);
+		addTalkId(Guild, Silvana, Lef);
+		addKillNpcWithLog(2, bes_item, 20, Bes);
+		addKillNpcWithLog(2, bat_item, 25, Batt, Sc_bat, Ruin_bat);
+		addKillNpcWithLog(2, skelet_item, 15, Skelet);
+		addLevelCheck(28, 40);
+		addQuestCompletedCheck(Q10336_DividedSakumKanilov.class);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "quest_ac":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				htmltext = "0-3.htm";
+				break;
+			
+			case "qet_rev":
+				htmltext = "2-2.htm";
+				qs.getPlayer().addExpAndSp(470000, 160000);
+				qs.giveItems(57, 103000);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
+			
+			case "1-3.htm":
+				htmltext = "1-3.htm";
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		
+		switch (npc.getId())
+		{
+			case Guild:
+				if (qs.isCompleted())
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if ((cond == 0) && isAvailableFor(qs.getPlayer()))
+				{
+					htmltext = "0-1.htm";
+				}
+				else if ((cond == 1) || (cond == 2) || (cond == 3))
+				{
+					htmltext = "0-4.htm";
+				}
+				break;
+			
+			case Silvana:
+				if (qs.isCompleted())
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 0)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 1)
+				{
+					htmltext = "1-1.htm";
+				}
+				else if ((cond == 2) || (cond == 3))
+				{
+					htmltext = "1-4.htm";
+				}
+				break;
+			
+			case Lef:
+				if (qs.isCompleted())
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 0)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 1)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 2)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 3)
+				{
+					htmltext = "2-1.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if (updateKill(npc, qs))
+		{
+			qs.unset(bes_item);
+			qs.unset(skelet_item);
+			qs.unset(bat_item);
+			qs.setCond(3);
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -44,135 +171,5 @@ public class Q10337_SakumsImpact extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10337_SakumsImpact()
-	{
-		super(false);
-		addStartNpc(guild);
-		addTalkId(silvana);
-		addTalkId(guild);
-		addTalkId(lef);
-		addKillNpcWithLog(2, bes_item, 20, bes);
-		addKillNpcWithLog(2, bat_item, 25, batt, sc_bat, ruin_bat);
-		addKillNpcWithLog(2, skelet_item, 15, skelet);
-		addLevelCheck(28, 40);
-		addQuestCompletedCheck(Q10336_DividedSakumKanilov.class);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("quest_ac"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			htmltext = "0-3.htm";
-		}
-		
-		if (event.equalsIgnoreCase("qet_rev"))
-		{
-			htmltext = "2-2.htm";
-			st.getPlayer().addExpAndSp(470000, 160000);
-			st.giveItems(57, 103000);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
-		}
-		
-		if (event.equalsIgnoreCase("1-3.htm"))
-		{
-			htmltext = "1-3.htm";
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		
-		if (npcId == guild)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()))
-			{
-				htmltext = "0-1.htm";
-			}
-			else if ((cond == 1) || (cond == 2) || (cond == 3))
-			{
-				htmltext = "0-4.htm";
-			}
-		}
-		else if (npcId == silvana)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 0)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 1)
-			{
-				htmltext = "1-1.htm";
-			}
-			else if ((cond == 2) || (cond == 3))
-			{
-				htmltext = "1-4.htm";
-			}
-		}
-		else if (npcId == lef)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 0)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 1)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 2)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 3)
-			{
-				htmltext = "2-1.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		boolean doneKill = updateKill(npc, st);
-		
-		if (doneKill)
-		{
-			st.unset(bes_item);
-			st.unset(skelet_item);
-			st.unset(bat_item);
-			st.setCond(3);
-		}
-		
-		return null;
 	}
 }

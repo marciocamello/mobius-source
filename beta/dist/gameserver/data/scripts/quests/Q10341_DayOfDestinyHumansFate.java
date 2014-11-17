@@ -17,7 +17,21 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10341_DayOfDestinyHumansFate extends SagasSuperclass implements ScriptFile
 {
-	private final int questId = 10341;
+	private static final int questId = 10341;
+	
+	public Q10341_DayOfDestinyHumansFate()
+	{
+		super(false);
+		StartNPC = 30857;
+		StartRace = Race.human;
+		init();
+	}
+	
+	@Override
+	public int questId()
+	{
+		return questId;
+	}
 	
 	@Override
 	public void onLoad()
@@ -32,19 +46,5 @@ public class Q10341_DayOfDestinyHumansFate extends SagasSuperclass implements Sc
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10341_DayOfDestinyHumansFate()
-	{
-		super(false);
-		StartNPC = 30857;
-		StartRace = Race.human;
-		init();
-	}
-	
-	@Override
-	public int questId()
-	{
-		return questId;
 	}
 }

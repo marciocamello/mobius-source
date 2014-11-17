@@ -20,92 +20,94 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10311_PeacefulDaysAreOver extends Quest implements ScriptFile
 {
-	private static final int NPC_SLAKI = 32893;
-	private static final int NPC_SELINA = 33032;
+	// Npcs
+	private static final int SLAKI = 32893;
+	private static final int SELINA = 33032;
 	
 	public Q10311_PeacefulDaysAreOver()
 	{
 		super(PARTY_NONE);
-		addStartNpc(NPC_SELINA);
-		addTalkId(NPC_SLAKI);
+		addStartNpc(SELINA);
+		addTalkId(SLAKI);
 		addQuestCompletedCheck(Q10312_AbandonedGodsCreature.class);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		if (st == null)
+		if (qs == null)
 		{
 			return "noquest";
 		}
 		
-		if (event.equalsIgnoreCase("33031-06.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("32893-05.htm"))
-		{
-			st.addExpAndSp(7168395, 3140085);
-			st.giveItems(57, 489220, true);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(false);
+			case "33031-06.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "32893-05.htm":
+				qs.addExpAndSp(7168395, 3140085);
+				qs.giveItems(57, 489220, true);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(false);
+				break;
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		npc.getId();
-		Player player = st.getPlayer();
-		QuestState previous = player.getQuestState(Q10312_AbandonedGodsCreature.class);
+		final Player player = qs.getPlayer();
+		final QuestState previous = player.getQuestState(Q10312_AbandonedGodsCreature.class);
 		
-		if (npc.getId() == NPC_SELINA)
+		switch (npc.getId())
 		{
-			if ((previous == null) || (!previous.isCompleted()) || (player.getLevel() < 90))
-			{
-				st.exitCurrentQuest(true);
-				return "33032-03.htm";
-			}
-			
-			switch (st.getState())
-			{
-				case COMPLETED:
-					htmltext = "33032-02.htm";
-					break;
-				
-				case CREATED:
-					htmltext = "33032-01.htm";
-					break;
-				
-				case STARTED:
-					if (st.getCond() != 1)
-					{
-						break;
-					}
-					
-					htmltext = "33032-07.htm";
-			}
-		}
-		else if (npc.getId() == NPC_SLAKI)
-		{
-			if (st.isStarted())
-			{
-				if (st.getCond() == 1)
+			case SELINA:
+				if ((previous == null) || (!previous.isCompleted()) || (player.getLevel() < 90))
 				{
-					htmltext = "32893-01.htm";
+					qs.exitCurrentQuest(true);
+					return "33032-03.htm";
 				}
-			}
+				switch (qs.getState())
+				{
+					case COMPLETED:
+						htmltext = "33032-02.htm";
+						break;
+					
+					case CREATED:
+						htmltext = "33032-01.htm";
+						break;
+					
+					case STARTED:
+						if (qs.getCond() != 1)
+						{
+							break;
+						}
+						htmltext = "33032-07.htm";
+				}
+				break;
+			
+			case SLAKI:
+				if (qs.isStarted())
+				{
+					if (qs.getCond() == 1)
+					{
+						htmltext = "32893-01.htm";
+					}
+				}
+				break;
 		}
 		
 		return htmltext;
@@ -114,7 +116,7 @@ public class Q10311_PeacefulDaysAreOver extends Quest implements ScriptFile
 	@Override
 	public boolean isVisible(Player player)
 	{
-		QuestState qs = player.getQuestState(Q10311_PeacefulDaysAreOver.class);
+		final QuestState qs = player.getQuestState(Q10311_PeacefulDaysAreOver.class);
 		return ((qs == null) && isAvailableFor(player)) || ((qs != null) && qs.isNowAvailableByTime());
 	}
 	

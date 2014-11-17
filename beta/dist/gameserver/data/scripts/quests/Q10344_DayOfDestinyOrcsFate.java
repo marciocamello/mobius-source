@@ -17,7 +17,21 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10344_DayOfDestinyOrcsFate extends SagasSuperclass implements ScriptFile
 {
-	private final int questId = 10344;
+	private static final int questId = 10344;
+	
+	public Q10344_DayOfDestinyOrcsFate()
+	{
+		super(false);
+		StartNPC = 30865;
+		StartRace = Race.orc;
+		init();
+	}
+	
+	@Override
+	public int questId()
+	{
+		return questId;
+	}
 	
 	@Override
 	public void onLoad()
@@ -32,19 +46,5 @@ public class Q10344_DayOfDestinyOrcsFate extends SagasSuperclass implements Scri
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10344_DayOfDestinyOrcsFate()
-	{
-		super(false);
-		StartNPC = 30865;
-		StartRace = Race.orc;
-		init();
-	}
-	
-	@Override
-	public int questId()
-	{
-		return questId;
 	}
 }

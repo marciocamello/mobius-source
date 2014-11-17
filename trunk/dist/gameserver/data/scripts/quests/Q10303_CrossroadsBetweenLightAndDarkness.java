@@ -45,57 +45,58 @@ public abstract class Q10303_CrossroadsBetweenLightAndDarkness extends Quest
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("32909-5.htm"))
+		switch (event)
 		{
-			st.takeItems(57, 465855);
-			st.addExpAndSp(6730155, 2847330);
-			st.takeItems(DARKSTONE, -1);
-			st.giveItems(getRndRewardYona(), 1);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(false);
-		}
-		
-		if (event.equalsIgnoreCase("33343-5.htm"))
-		{
-			st.takeItems(57, 465855);
-			st.addExpAndSp(6730155, 2847330);
-			st.giveItems(getRndRewardZhrec(), 1);
-			st.playSound(SOUND_FINISH);
-			st.setState(COMPLETED);
+			case "32909-5.htm":
+				qs.takeItems(57, 465855);
+				qs.addExpAndSp(6730155, 2847330);
+				qs.takeItems(DARKSTONE, -1);
+				qs.giveItems(getRndRewardYona(), 1);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(false);
+				break;
+			
+			case "33343-5.htm":
+				qs.takeItems(57, 465855);
+				qs.addExpAndSp(6730155, 2847330);
+				qs.giveItems(getRndRewardZhrec(), 1);
+				qs.playSound(SOUND_FINISH);
+				qs.setState(COMPLETED);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
+		final int cond = qs.getCond();
 		
-		if (st.getPlayer().getLevel() < 90)
+		if (qs.getPlayer().getLevel() < 90)
 		{
 			return null;
 		}
 		
-		if (st.getState() == COMPLETED)
+		if (qs.getState() == COMPLETED)
 		{
 			return null;
 		}
 		
-		if ((st.getCond() == 0) && (st.getState() == CREATED) && (Rnd.get(1000) == 3))
+		if ((qs.getCond() == 0) && (qs.getState() == CREATED) && (Rnd.get(1000) == 3))
 		{
-			st.setState(STARTED);
+			qs.setState(STARTED);
 			return null;
 		}
 		else if ((cond == 1) && Rnd.chance(5))
 		{
-			if (st.getQuestItemsCount(DARKSTONE) == 0)
+			if (qs.getQuestItemsCount(DARKSTONE) == 0)
 			{
-				st.giveItems(DARKSTONE, 1);
+				qs.giveItems(DARKSTONE, 1);
 			}
 			
 			return null;
@@ -105,45 +106,42 @@ public abstract class Q10303_CrossroadsBetweenLightAndDarkness extends Quest
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
+		final int cond = qs.getCond();
 		
-		if (npcId == YONA)
+		switch (npc.getId())
 		{
-			if (st.getState() == COMPLETED)
-			{
-				return "32909-comp.htm";
-			}
+			case YONA:
+				if (qs.getState() == COMPLETED)
+				{
+					return "32909-comp.htm";
+				}
+				if (qs.getPlayer().getLevel() < 90)
+				{
+					return "32909-lvl.htm";
+				}
+				if ((cond == 1) && (qs.getQuestItemsCount(DARKSTONE) >= 1))
+				{
+					return "32909.htm";
+				}
+				break;
 			
-			if (st.getPlayer().getLevel() < 90)
-			{
-				return "32909-lvl.htm";
-			}
-			
-			if ((cond == 1) && (st.getQuestItemsCount(DARKSTONE) >= 1))
-			{
-				return "32909.htm";
-			}
-		}
-		else if (npcId == SECRET_ZHREC)
-		{
-			if (st.getState() == COMPLETED)
-			{
-				return "33343-comp.htm";
-			}
-			
-			if (st.getPlayer().getLevel() < 90)
-			{
-				return "33343-lvl.htm";
-			}
-			
-			if ((cond == 1) && (st.getQuestItemsCount(DARKSTONE) >= 1))
-			{
-				return "33343.htm";
-			}
+			case SECRET_ZHREC:
+				if (qs.getState() == COMPLETED)
+				{
+					return "33343-comp.htm";
+				}
+				if (qs.getPlayer().getLevel() < 90)
+				{
+					return "33343-lvl.htm";
+				}
+				if ((cond == 1) && (qs.getQuestItemsCount(DARKSTONE) >= 1))
+				{
+					return "33343.htm";
+				}
+				break;
 		}
 		
 		return htmltext;

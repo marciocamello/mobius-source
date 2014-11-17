@@ -17,7 +17,21 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10346_DayOfDestinyKamaelsFate extends SagasSuperclass implements ScriptFile
 {
-	private final int questId = 10346;
+	private static final int questId = 10346;
+	
+	public Q10346_DayOfDestinyKamaelsFate()
+	{
+		super(false);
+		StartNPC = 32221;
+		StartRace = Race.kamael;
+		init();
+	}
+	
+	@Override
+	public int questId()
+	{
+		return questId;
+	}
 	
 	@Override
 	public void onLoad()
@@ -32,19 +46,5 @@ public class Q10346_DayOfDestinyKamaelsFate extends SagasSuperclass implements S
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10346_DayOfDestinyKamaelsFate()
-	{
-		super(false);
-		StartNPC = 32221;
-		StartRace = Race.kamael;
-		init();
-	}
-	
-	@Override
-	public int questId()
-	{
-		return questId;
 	}
 }

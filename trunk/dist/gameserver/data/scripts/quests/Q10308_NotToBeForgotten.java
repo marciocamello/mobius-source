@@ -50,34 +50,34 @@ public class Q10308_NotToBeForgotten extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		if (st == null)
+		if (qs == null)
 		{
 			return "noquest";
 		}
 		
-		if (event.equalsIgnoreCase("33463-04.htm"))
+		if (event.equals("33463-04.htm"))
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.playSound(SOUND_ACCEPT);
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		Player player = st.getPlayer();
+		final Player player = qs.getPlayer();
 		
 		if (npc.getId() == NPC_ADVENTURER_HELPER)
 		{
@@ -85,36 +85,36 @@ public class Q10308_NotToBeForgotten extends Quest implements ScriptFile
 			{
 				htmltext = "33463-00.htm";
 			}
-			else if (st.isCreated())
+			else if (qs.isCreated())
 			{
 				htmltext = "33463-01.htm";
 			}
-			else if ((st.isStarted()) && (st.getCond() == 1))
+			else if ((qs.isStarted()) && (qs.getCond() == 1))
 			{
 				htmltext = "33463-05.htm";
 			}
-			else if (st.isCompleted())
+			else if (qs.isCompleted())
 			{
 				htmltext = "completed";
 			}
 		}
 		else if (npc.getId() == NPC_KURTIZ)
 		{
-			if (st.isCompleted())
+			if (qs.isCompleted())
 			{
 				htmltext = "30870-03.htm";
 			}
-			else if ((st.isStarted()) && (st.getCond() == 1))
+			else if ((qs.isStarted()) && (qs.getCond() == 1))
 			{
 				htmltext = "30870-01.htm";
 			}
-			else if ((st.isStarted()) && (st.getCond() == 2))
+			else if ((qs.isStarted()) && (qs.getCond() == 2))
 			{
-				st.takeItems(ITEM_LEGACY_CORE, -1);
-				st.addExpAndSp(2322445, 1968325);
-				st.giveItems(57, 376704, true);
-				st.unset("cond");
-				st.exitCurrentQuest(false);
+				qs.takeItems(ITEM_LEGACY_CORE, -1);
+				qs.addExpAndSp(2322445, 1968325);
+				qs.giveItems(57, 376704, true);
+				qs.unset("cond");
+				qs.exitCurrentQuest(false);
 				htmltext = "30870-02.htm";
 			}
 		}
@@ -123,19 +123,19 @@ public class Q10308_NotToBeForgotten extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if ((npc == null) || (st == null))
+		if ((npc == null) || (qs == null))
 		{
 			return null;
 		}
 		
-		if (Util.contains(MONSTERS, npc.getId()) && (st.getCond() == 1))
+		if (Util.contains(MONSTERS, npc.getId()) && (qs.getCond() == 1))
 		{
-			if (st.rollAndGive(ITEM_LEGACY_CORE, 1, 3, 40, DROP_CHANCE))
+			if (qs.rollAndGive(ITEM_LEGACY_CORE, 1, 3, 40, DROP_CHANCE))
 			{
-				st.setCond(2);
-				st.playSound(SOUND_MIDDLE);
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
 			}
 		}
 		
@@ -145,7 +145,7 @@ public class Q10308_NotToBeForgotten extends Quest implements ScriptFile
 	@Override
 	public boolean isVisible(Player player)
 	{
-		QuestState qs = player.getQuestState(Q10308_NotToBeForgotten.class);
+		final QuestState qs = player.getQuestState(Q10308_NotToBeForgotten.class);
 		return ((qs == null) && isAvailableFor(player)) || ((qs != null) && qs.isNowAvailableByTime());
 	}
 	

@@ -12,7 +12,6 @@
  */
 package quests;
 
-import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
@@ -25,16 +24,118 @@ import lineage2.gameserver.utils.NpcUtils;
 
 public class Q10329_BackupSeekers extends Quest implements ScriptFile
 {
-	private static final int atran = 33448;
-	private static final int kakai = 30565;
-	private static final int soldier = 33204;
-	private NpcInstance solderg = null;
-	private static final int[] SOLDER_START_POINT =
+	// Npcs
+	private static final int Atran = 33448;
+	private static final int Kakai = 30565;
+	private static final int Soldier = 33204;
+	// Others
+	private NpcInstance soldierg = null;
+	private static final int[] SOLDIER_START_POINT =
 	{
 		-117880,
 		255864,
 		-1352
 	};
+	
+	public Q10329_BackupSeekers()
+	{
+		super(false);
+		addStartNpc(Kakai);
+		addTalkId(Atran, Kakai);
+		addLevelCheck(1, 20);
+		addQuestCompletedCheck(Q10328_RequestToSealTheEvilFragment.class);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "quest_ac":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				htmltext = "0-3.htm";
+				spawnsolider(qs);
+				break;
+			
+			case "qet_rev":
+				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.GOING_INTO_REAL_WAR_SOULSHOTS_ADDED, 4500, ScreenMessageAlign.TOP_CENTER));
+				htmltext = "1-2.htm";
+				qs.getPlayer().addExpAndSp(16900, 5000);
+				qs.giveItems(57, 25000);
+				qs.giveItems(875, 2);
+				qs.giveItems(906, 1);
+				despawnsoldier();
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		
+		switch (npc.getId())
+		{
+			case Kakai:
+				if (qs.isCompleted())
+				{
+					htmltext = "0-c.htm";
+				}
+				else if ((cond == 0) && isAvailableFor(qs.getPlayer()))
+				{
+					htmltext = "start.htm";
+				}
+				else if (cond == 1)
+				{
+					htmltext = "0-4.htm";
+				}
+				else
+				{
+					htmltext = "0-nc.htm";
+				}
+				break;
+			
+			case Atran:
+				if (qs.isCompleted())
+				{
+					htmltext = "1-c.htm";
+				}
+				else if (cond == 0)
+				{
+					htmltext = "1-nc.htm";
+				}
+				else if (cond == 1)
+				{
+					htmltext = "1-1.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	private void spawnsolider(QuestState qs)
+	{
+		soldierg = NpcUtils.spawnSingle(Soldier, Location.findPointToStay(SOLDIER_START_POINT[0], SOLDIER_START_POINT[1], SOLDIER_START_POINT[2], 50, 100, qs.getPlayer().getGeoIndex()));
+		soldierg.setFollowTarget(qs.getPlayer());
+	}
+	
+	private void despawnsoldier()
+	{
+		if (soldierg != null)
+		{
+			soldierg.deleteMe();
+		}
+	}
 	
 	@Override
 	public void onLoad()
@@ -49,106 +150,5 @@ public class Q10329_BackupSeekers extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10329_BackupSeekers()
-	{
-		super(false);
-		addStartNpc(kakai);
-		addTalkId(atran);
-		addTalkId(kakai);
-		addLevelCheck(1, 20);
-		addQuestCompletedCheck(Q10328_RequestToSealTheEvilFragment.class);
-	}
-	
-	private void spawnsolder(QuestState st)
-	{
-		solderg = NpcUtils.spawnSingle(soldier, Location.findPointToStay(SOLDER_START_POINT[0], SOLDER_START_POINT[1], SOLDER_START_POINT[2], 50, 100, st.getPlayer().getGeoIndex()));
-		solderg.setFollowTarget(st.getPlayer());
-	}
-	
-	private void despawnsolder()
-	{
-		if (solderg != null)
-		{
-			solderg.deleteMe();
-		}
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		Player player = st.getPlayer();
-		
-		if (event.equalsIgnoreCase("quest_ac"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			htmltext = "0-3.htm";
-			spawnsolder(st);
-		}
-		
-		if (event.equalsIgnoreCase("qet_rev"))
-		{
-			player.sendPacket(new ExShowScreenMessage(NpcString.GOING_INTO_REAL_WAR_SOULSHOTS_ADDED, 4500, ScreenMessageAlign.TOP_CENTER));
-			htmltext = "1-2.htm";
-			st.getPlayer().addExpAndSp(16900, 5000);
-			st.giveItems(57, 25000);
-			st.giveItems(875, 2);
-			st.giveItems(906, 1);
-			despawnsolder();
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		
-		if (npcId == kakai)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "0-c.htm";
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()))
-			{
-				htmltext = "start.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-4.htm";
-			}
-			else
-			{
-				htmltext = "0-nc.htm";
-			}
-		}
-		
-		if (npcId == atran)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "1-c.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = "1-nc.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "1-1.htm";
-			}
-		}
-		
-		return htmltext;
 	}
 }

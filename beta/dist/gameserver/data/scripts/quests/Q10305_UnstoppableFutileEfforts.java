@@ -19,10 +19,10 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10305_UnstoppableFutileEfforts extends Quest implements ScriptFile
 {
-	public static final String A_LIST = "A_LIST";
-	
-	// npc
+	// Npc
 	private static final int NOETI = 32895;
+	// Other
+	public static final String A_LIST = "A_LIST";
 	
 	public Q10305_UnstoppableFutileEfforts()
 	{
@@ -35,61 +35,54 @@ public class Q10305_UnstoppableFutileEfforts extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		st.getPlayer();
-		if (event.equalsIgnoreCase("32895-6.htm"))
+		if (event.equals("32895-6.htm"))
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.playSound(SOUND_ACCEPT);
 		}
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		st.getPlayer();
-		String htmlText = NO_QUEST_DIALOG;
-		int npcId = npc.getId();
-		int state = st.getState();
-		int cond = st.getCond();
+		String htmlText = "noquest";
 		
-		if (state == COMPLETED)
+		if (qs.getState() == COMPLETED)
 		{
 			return "32895-comp.htm";
 		}
 		
-		if (st.getPlayer().getLevel() < 90)
-		{
-			return "32895-lvl.htm";
-		}
-		QuestState qs = st.getPlayer().getQuestState(Q10302_UnsettlingShadowAndRumors.class);
-		if ((qs == null) || !qs.isCompleted())
+		if (qs.getPlayer().getLevel() < 90)
 		{
 			return "32895-lvl.htm";
 		}
 		
-		if (npcId == NOETI)
+		final QuestState state = qs.getPlayer().getQuestState(Q10302_UnsettlingShadowAndRumors.class);
+		if ((state == null) || !state.isCompleted())
 		{
-			if (cond == 0)
-			{
-				return "32895.htm";
-			}
-			else if (cond == 1)
-			{
-				return "32895-7.htm";
-			}
-			else if (cond == 2)
-			{
-				st.addExpAndSp(34971975, 12142200);
-				st.giveItems(57, 1007735);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(false);
-				return "32895-8.htm";
-			}
+			return "32895-lvl.htm";
 		}
+		
+		switch (qs.getCond())
+		{
+			case 0:
+				return "32895.htm";
+				
+			case 1:
+				return "32895-7.htm";
+				
+			case 2:
+				qs.addExpAndSp(34971975, 12142200);
+				qs.giveItems(57, 1007735);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(false);
+				return "32895-8.htm";
+		}
+		
 		return htmlText;
 	}
 	

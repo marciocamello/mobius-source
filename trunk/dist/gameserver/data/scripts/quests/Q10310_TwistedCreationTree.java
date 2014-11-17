@@ -20,33 +20,35 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10310_TwistedCreationTree extends Quest implements ScriptFile
 {
-	private static final int NPC_SELINA = 33032;
-	private static final int NPC_HORPINA = 33031;
-	private static final int MOB_GARDEN_SENTRY = 22947;
-	private static final int MOB_GARDEN_SCOUT = 22948;
-	private static final int MOB_GARDEN_COMMANDER = 22949;
-	private static final int MOB_OUTDOOR_GARDENER = 22950;
-	private static final int MOB_GARDEN_DESTROYER = 22951;
+	// Npcs
+	private static final int SELINA = 33032;
+	private static final int HORPINA = 33031;
+	// Monsters
+	private static final int GARDEN_SENTRY = 22947;
+	private static final int GARDEN_SCOUT = 22948;
+	private static final int GARDEN_COMMANDER = 22949;
+	private static final int OUTDOOR_GARDENER = 22950;
+	private static final int GARDEN_DESTROYER = 22951;
 	
 	public Q10310_TwistedCreationTree()
 	{
 		super(PARTY_ONE);
-		addStartNpc(NPC_SELINA);
-		addTalkId(NPC_HORPINA);
-		addKillNpcWithLog(2, "Sentry", 10, MOB_GARDEN_SENTRY);
-		addKillNpcWithLog(2, "Scount", 10, MOB_GARDEN_SCOUT);
-		addKillNpcWithLog(2, "Commander", 10, MOB_GARDEN_COMMANDER);
-		addKillNpcWithLog(2, "Gardener", 10, MOB_OUTDOOR_GARDENER);
-		addKillNpcWithLog(2, "Destroyer", 10, MOB_GARDEN_DESTROYER);
+		addStartNpc(SELINA);
+		addTalkId(HORPINA);
+		addKillNpcWithLog(2, "Sentry", 10, GARDEN_SENTRY);
+		addKillNpcWithLog(2, "Scount", 10, GARDEN_SCOUT);
+		addKillNpcWithLog(2, "Commander", 10, GARDEN_COMMANDER);
+		addKillNpcWithLog(2, "Gardener", 10, OUTDOOR_GARDENER);
+		addKillNpcWithLog(2, "Destroyer", 10, GARDEN_DESTROYER);
 		addLevelCheck(90, 99);
 		addQuestCompletedCheck(Q10302_UnsettlingShadowAndRumors.class);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		String htmlText = NO_QUEST_DIALOG;
-		if (st == null)
+		String htmlText = "noquest";
+		if (qs == null)
 		{
 			return htmlText;
 		}
@@ -55,114 +57,114 @@ public class Q10310_TwistedCreationTree extends Quest implements ScriptFile
 		{
 			case "33032-06.htm":
 			{
-				st.setCond(1);
-				st.setState(STARTED);
-				st.playSound(SOUND_ACCEPT);
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
 				break;
 			}
 			case "33031-03.htm":
 			{
-				st.setCond(2);
-				st.playSound(SOUND_MIDDLE);
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
 				break;
 			}
 			case "33031-05.htm":
 			{
-				st.addExpAndSp(50178765, 21980595);
-				st.giveItems(57, 3424540, true);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(false);
+				qs.addExpAndSp(50178765, 21980595);
+				qs.giveItems(57, 3424540, true);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(false);
 				break;
 			}
 		}
+		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmlText = NO_QUEST_DIALOG;
-		
-		if (st == null)
+		String htmlText = "noquest";
+		if (qs == null)
 		{
 			return htmlText;
 		}
 		
-		int npcId = npc.getId();
-		Player player = st.getPlayer();
-		QuestState previous = player.getQuestState(Q10302_UnsettlingShadowAndRumors.class);
+		final Player player = qs.getPlayer();
+		final QuestState previous = player.getQuestState(Q10302_UnsettlingShadowAndRumors.class);
 		
-		if (npcId == NPC_SELINA)
+		switch (npc.getId())
 		{
-			if ((previous == null) || (!previous.isCompleted()) || (player.getLevel() < 90))
-			{
-				st.exitCurrentQuest(true);
-				return "33032-03.htm";
-			}
+			case SELINA:
+				if ((previous == null) || (!previous.isCompleted()) || (player.getLevel() < 90))
+				{
+					qs.exitCurrentQuest(true);
+					return "33032-03.htm";
+				}
+				switch (qs.getState())
+				{
+					case COMPLETED:
+						htmlText = "33032-02.htm";
+						break;
+					
+					case CREATED:
+						htmlText = "33032-01.htm";
+						break;
+					
+					case STARTED:
+						htmlText = "33032-07.htm";
+				}
+				break;
 			
-			switch (st.getState())
-			{
-				case COMPLETED:
-					htmlText = "33032-02.htm";
-					break;
-				
-				case CREATED:
-					htmlText = "33032-01.htm";
-					break;
-				
-				case STARTED:
-					htmlText = "33032-07.htm";
-			}
-		}
-		else if (npcId == NPC_HORPINA)
-		{
-			switch (st.getState())
-			{
-				case COMPLETED:
-					htmlText = "completed";
-					break;
-				
-				case STARTED:
-					if (st.getCond() == 1)
-					{
-						htmlText = "33031-01.htm";
-					}
-					else if (st.getCond() == 2)
-					{
-						htmlText = "33031-03.htm";
-					}
-					else
-					{
-						if (st.getCond() != 3)
+			case HORPINA:
+				switch (qs.getState())
+				{
+					case COMPLETED:
+						htmlText = "completed";
+						break;
+					
+					case STARTED:
+						if (qs.getCond() == 1)
 						{
-							break;
+							htmlText = "33031-01.htm";
 						}
-						
-						htmlText = "33031-04.htm";
-					}
-			}
+						else if (qs.getCond() == 2)
+						{
+							htmlText = "33031-03.htm";
+						}
+						else
+						{
+							if (qs.getCond() != 3)
+							{
+								break;
+							}
+							
+							htmlText = "33031-04.htm";
+						}
+				}
+				break;
 		}
 		
 		return htmlText;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if ((npc == null) || (st == null))
+		if ((npc == null) || (qs == null))
 		{
 			return null;
 		}
 		
-		if (updateKill(npc, st))
+		if (updateKill(npc, qs))
 		{
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
-			st.unset("Sentry");
-			st.unset("Scount");
-			st.unset("Commander");
-			st.unset("Gardener");
-			st.unset("Destroyer");
+			qs.setCond(3);
+			qs.playSound(SOUND_MIDDLE);
+			qs.unset("Sentry");
+			qs.unset("Scount");
+			qs.unset("Commander");
+			qs.unset("Gardener");
+			qs.unset("Destroyer");
 		}
 		
 		return null;
@@ -171,7 +173,7 @@ public class Q10310_TwistedCreationTree extends Quest implements ScriptFile
 	@Override
 	public boolean isVisible(Player player)
 	{
-		QuestState qs = player.getQuestState(Q10310_TwistedCreationTree.class);
+		final QuestState qs = player.getQuestState(Q10310_TwistedCreationTree.class);
 		return ((qs == null) && isAvailableFor(player)) || ((qs != null) && qs.isNowAvailableByTime());
 	}
 	

@@ -52,21 +52,6 @@ public class Q10300_BerserkOutlaws extends Quest implements ScriptFile
 	private static final int markofshaman = 19485;
 	private static final int proofmonstr = 19486;
 	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public Q10300_BerserkOutlaws()
 	{
 		super(false);
@@ -80,35 +65,36 @@ public class Q10300_BerserkOutlaws extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("0-3.htm"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		if (event.equalsIgnoreCase("1-2.htm"))
-		{
-			st.setCond(1);
+			case "0-3.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "1-2.htm":
+				qs.setCond(1);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
 		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
 		
 		if (Util.contains(Adventurequid, npcId))
 		{
-			if ((st.getPlayer().getLevel() >= 50) && (st.getPlayer().getLevel() <= 54) && (cond == 0))
+			if ((qs.getPlayer().getLevel() >= 50) && (qs.getPlayer().getLevel() <= 54) && (cond == 0))
 			{
 				htmltext = "start.htm";
 			}
@@ -121,19 +107,18 @@ public class Q10300_BerserkOutlaws extends Quest implements ScriptFile
 				htmltext = "noquest";
 			}
 		}
-		
-		if (npcId == mouen)
+		else if (npcId == mouen)
 		{
-			if ((cond == 2) && (st.getQuestItemsCount(markofshaman) >= 30))
+			if ((cond == 2) && (qs.getQuestItemsCount(markofshaman) >= 30))
 			{
 				htmltext = "1-3.htm";
-				st.takeAllItems(markofbandit);
-				st.takeAllItems(markofshaman);
-				st.takeAllItems(proofmonstr);
-				st.getPlayer().addExpAndSp(2046093, 1618470);
-				st.giveItems(57, 329556);
-				st.exitCurrentQuest(false);
-				st.playSound(SOUND_FINISH);
+				qs.takeAllItems(markofbandit);
+				qs.takeAllItems(markofshaman);
+				qs.takeAllItems(proofmonstr);
+				qs.getPlayer().addExpAndSp(2046093, 1618470);
+				qs.giveItems(57, 329556);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
 			}
 			else if (cond == 1)
 			{
@@ -145,32 +130,50 @@ public class Q10300_BerserkOutlaws extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
+		final int npcId = npc.getId();
 		
-		if ((st.getCond() == 1) && Util.contains(Basilisk, npcId) && (st.getQuestItemsCount(markofbandit) < 30))
+		if (qs.getCond() == 1)
 		{
-			st.giveItems(markofbandit, 1);
-			st.playSound(SOUND_ITEMGET);
-		}
-		else if ((st.getCond() == 1) && Util.contains(gnols, npcId) && (st.getQuestItemsCount(markofshaman) < 30))
-		{
-			st.giveItems(markofshaman, 1);
-			st.playSound(SOUND_ITEMGET);
-		}
-		else if ((st.getCond() == 1) && Util.contains(OelMahum, npcId) && (st.getQuestItemsCount(proofmonstr) < 30))
-		{
-			st.giveItems(proofmonstr, 1);
-			st.playSound(SOUND_ITEMGET);
-		}
-		
-		if ((st.getQuestItemsCount(markofbandit) >= 30) && (st.getQuestItemsCount(markofshaman) >= 30) && (st.getQuestItemsCount(proofmonstr) >= 30))
-		{
-			st.setCond(2);
+			if (Util.contains(Basilisk, npcId) && (qs.getQuestItemsCount(markofbandit) < 30))
+			{
+				qs.giveItems(markofbandit, 1);
+				qs.playSound(SOUND_ITEMGET);
+			}
+			else if (Util.contains(gnols, npcId) && (qs.getQuestItemsCount(markofshaman) < 30))
+			{
+				qs.giveItems(markofshaman, 1);
+				qs.playSound(SOUND_ITEMGET);
+			}
+			else if (Util.contains(OelMahum, npcId) && (qs.getQuestItemsCount(proofmonstr) < 30))
+			{
+				qs.giveItems(proofmonstr, 1);
+				qs.playSound(SOUND_ITEMGET);
+			}
 		}
 		
-		st.playSound(SOUND_MIDDLE);
+		if ((qs.getQuestItemsCount(markofbandit) >= 30) && (qs.getQuestItemsCount(markofshaman) >= 30) && (qs.getQuestItemsCount(proofmonstr) >= 30))
+		{
+			qs.setCond(2);
+		}
+		
+		qs.playSound(SOUND_MIDDLE);
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

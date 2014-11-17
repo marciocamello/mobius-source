@@ -21,13 +21,16 @@ import lineage2.gameserver.utils.Util;
 
 public class Q10307_TheCorruptedLeaderHisTruth extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int NPC_NAOMI_KASHERON = 32896;
 	private static final int NPC_MIMILEAD = 32895;
+	// Monsters
 	private static final int[] MOB_KIMERIAN =
 	{
 		25745,
 		25747
 	};
+	// Item
 	private static final int REWARD_ENCHANT_ARMOR_R = 17527;
 	
 	public Q10307_TheCorruptedLeaderHisTruth()
@@ -41,50 +44,49 @@ public class Q10307_TheCorruptedLeaderHisTruth extends Quest implements ScriptFi
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		if (st == null)
+		if (qs == null)
 		{
 			return "noquest";
 		}
-		if (event.equalsIgnoreCase("32896-05.htm"))
+		
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("32896-08.htm"))
-		{
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("32896-08.htm"))
-		{
-			st.playSound(SOUND_FINISH);
-			st.addExpAndSp(11779522, 5275253);
-			st.giveItems(REWARD_ENCHANT_ARMOR_R, 1);
-			st.exitCurrentQuest(false);
+			case "32896-05.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "32896-08.htm":
+				qs.setCond(3); // ?
+				qs.playSound(SOUND_FINISH);
+				qs.addExpAndSp(11779522, 5275253);
+				qs.giveItems(REWARD_ENCHANT_ARMOR_R, 1);
+				qs.exitCurrentQuest(false);
+				break;
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		String htmltext = NO_QUEST_DIALOG;
+		String htmltext = "noquest";
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		Player player = st.getPlayer();
-		QuestState prevst = player.getQuestState(Q10306_TheCorruptedLeader.class);
+		final Player player = qs.getPlayer();
+		final QuestState prevst = player.getQuestState(Q10306_TheCorruptedLeader.class);
 		
 		if (npc.getId() == NPC_NAOMI_KASHERON)
 		{
-			switch (st.getState())
+			switch (qs.getState())
 			{
 				case COMPLETED:
 					htmltext = "32896-02.htm";
@@ -99,44 +101,44 @@ public class Q10307_TheCorruptedLeaderHisTruth extends Quest implements ScriptFi
 						}
 						else
 						{
-							st.exitCurrentQuest(true);
+							qs.exitCurrentQuest(true);
 							htmltext = "32896-03.htm";
 						}
 					}
 					else
 					{
-						st.exitCurrentQuest(true);
+						qs.exitCurrentQuest(true);
 						htmltext = "32896-03.htm";
 					}
-					
 					break;
 				
 				case STARTED:
-					if (st.getCond() == 1)
+					if (qs.getCond() == 1)
 					{
 						htmltext = "32896-05.htm";
 					}
 					else
 					{
-						if (st.getCond() != 2)
+						if (qs.getCond() != 2)
 						{
 							break;
 						}
 						
 						htmltext = "32896-06.htm";
 					}
+					break;
 			}
 		}
 		else if (npc.getId() == NPC_MIMILEAD)
 		{
-			if (st.isStarted())
+			if (qs.isStarted())
 			{
-				if (st.getCond() == 3)
+				if (qs.getCond() == 3)
 				{
 					htmltext = "32895-01.htm";
 				}
 			}
-			else if (st.isCompleted())
+			else if (qs.isCompleted())
 			{
 				htmltext = "32895-05.htm";
 			}
@@ -146,19 +148,19 @@ public class Q10307_TheCorruptedLeaderHisTruth extends Quest implements ScriptFi
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if ((npc == null) || (st == null) || (st.getCond() != 1))
+		if ((npc == null) || (qs == null) || (qs.getCond() != 1))
 		{
 			return null;
 		}
 		
 		if (Util.contains(MOB_KIMERIAN, npc.getId()))
 		{
-			if (st.getCond() == 1)
+			if (qs.getCond() == 1)
 			{
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				qs.setCond(2);
 			}
 		}
 		
@@ -168,7 +170,7 @@ public class Q10307_TheCorruptedLeaderHisTruth extends Quest implements ScriptFi
 	@Override
 	public boolean isVisible(Player player)
 	{
-		QuestState qs = player.getQuestState(Q10307_TheCorruptedLeaderHisTruth.class);
+		final QuestState qs = player.getQuestState(Q10307_TheCorruptedLeaderHisTruth.class);
 		return ((qs == null) && isAvailableFor(player)) || ((qs != null) && qs.isNowAvailableByTime());
 	}
 	

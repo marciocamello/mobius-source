@@ -17,7 +17,21 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10345_DayOfDestinyDwarfsFate extends SagasSuperclass implements ScriptFile
 {
-	private final int questId = 10345;
+	private static final int questId = 10345;
+	
+	public Q10345_DayOfDestinyDwarfsFate()
+	{
+		super(false);
+		StartNPC = 30847;
+		StartRace = Race.dwarf;
+		init();
+	}
+	
+	@Override
+	public int questId()
+	{
+		return questId;
+	}
 	
 	@Override
 	public void onLoad()
@@ -32,19 +46,5 @@ public class Q10345_DayOfDestinyDwarfsFate extends SagasSuperclass implements Sc
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10345_DayOfDestinyDwarfsFate()
-	{
-		super(false);
-		StartNPC = 30847;
-		StartRace = Race.dwarf;
-		init();
-	}
-	
-	@Override
-	public int questId()
-	{
-		return questId;
 	}
 }

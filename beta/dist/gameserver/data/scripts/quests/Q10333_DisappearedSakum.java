@@ -19,17 +19,160 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10333_DisappearedSakum extends Quest implements ScriptFile
 {
-	private static final int shnain = 33508;
-	private static final int bent = 33176;
-	private static final int batis = 30332;
-	private static final int lizard = 20030;
-	private static final int vooko = 20017;
-	private static final int spider = 23094;
-	private static final int bigspider = 20038;
-	private static final int arach = 20050;
-	private static final String vooko_item = "vooko";
-	private static final String lizard_item = "lizard";
-	private static final int mark = 17583;
+	private static final int Shnain = 33508;
+	private static final int Bent = 33176;
+	private static final int Batis = 30332;
+	private static final int Lizard = 20030;
+	private static final int Vooko = 20017;
+	private static final int Spider = 23094;
+	private static final int Bigspider = 20038;
+	private static final int Arach = 20050;
+	private static final String Vooko_item = "vooko";
+	private static final String Lizard_item = "lizard";
+	private static final int Mark = 17583;
+	
+	public Q10333_DisappearedSakum()
+	{
+		super(false);
+		addStartNpc(Batis);
+		addTalkId(Batis, Bent, Shnain);
+		addKillNpcWithLog(2, Vooko_item, 5, Vooko);
+		addKillNpcWithLog(2, Lizard_item, 7, Lizard);
+		addKillId(Spider, Bigspider, Arach);
+		addQuestItem(Mark);
+		addLevelCheck(18, 40);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "quest_ac":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				htmltext = "0-5.htm";
+				break;
+			
+			case "qet_rev":
+				htmltext = "2-3.htm";
+				qs.getPlayer().addExpAndSp(130000, 50000);
+				qs.giveItems(57, 80000);
+				qs.takeAllItems(Mark);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
+			
+			case "1-3.htm":
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		
+		switch (npc.getId())
+		{
+			case Batis:
+				if (qs.isCompleted())
+				{
+					htmltext = "0-c.htm";
+				}
+				else if ((cond == 0) && isAvailableFor(qs.getPlayer()))
+				{
+					htmltext = "start.htm";
+				}
+				else if ((cond == 1) || (cond == 2) || (cond == 3))
+				{
+					htmltext = "0-6.htm";
+				}
+				else
+				{
+					htmltext = "0-nc.htm";
+				}
+				break;
+			
+			case Bent:
+				if (qs.isCompleted())
+				{
+					htmltext = "1-c.htm";
+				}
+				else if (cond == 0)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 1)
+				{
+					htmltext = "1-1.htm";
+				}
+				else if ((cond == 2) || (cond == 3))
+				{
+					htmltext = "1-3.htm";
+				}
+				break;
+			
+			case Shnain:
+				if (qs.isCompleted())
+				{
+					htmltext = "1-c.htm";
+				}
+				else if (cond == 0)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 1)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 2)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 3)
+				{
+					htmltext = "2-1.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		switch (npc.getId())
+		{
+			case Spider:
+			case Bigspider:
+			case Arach:
+				if ((qs.getQuestItemsCount(Mark) < 5) && (qs.getCond() == 2))
+				{
+					qs.giveItems(Mark, 1, false);
+				}
+				break;
+		}
+		
+		if (updateKill(npc, qs) && (qs.getQuestItemsCount(Mark) >= 5))
+		{
+			qs.unset(Vooko_item);
+			qs.unset(Lizard_item);
+			qs.setCond(3);
+			qs.playSound(SOUND_MIDDLE);
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -44,142 +187,5 @@ public class Q10333_DisappearedSakum extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10333_DisappearedSakum()
-	{
-		super(false);
-		addStartNpc(batis);
-		addTalkId(batis);
-		addTalkId(bent);
-		addTalkId(shnain);
-		addKillNpcWithLog(2, vooko_item, 5, vooko);
-		addKillNpcWithLog(2, lizard_item, 7, lizard);
-		addKillId(spider, bigspider, arach);
-		addQuestItem(mark);
-		addLevelCheck(18, 40);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("quest_ac"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			htmltext = "0-5.htm";
-		}
-		else if (event.equalsIgnoreCase("qet_rev"))
-		{
-			htmltext = "2-3.htm";
-			st.getPlayer().addExpAndSp(130000, 50000);
-			st.giveItems(57, 80000);
-			st.takeAllItems(mark);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
-		}
-		else if (event.equalsIgnoreCase("1-3.htm"))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		
-		if (npcId == batis)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "0-c.htm";
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()))
-			{
-				htmltext = "start.htm";
-			}
-			else if ((cond == 1) || (cond == 2) || (cond == 3))
-			{
-				htmltext = "0-6.htm";
-			}
-			else
-			{
-				htmltext = "0-nc.htm";
-			}
-		}
-		else if (npcId == bent)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "1-c.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 1)
-			{
-				htmltext = "1-1.htm";
-			}
-			else if ((cond == 2) || (cond == 3))
-			{
-				htmltext = "1-3.htm";
-			}
-		}
-		else if (npcId == shnain)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "1-c.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 1)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 2)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 3)
-			{
-				htmltext = "2-1.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		boolean doneKill = updateKill(npc, st);
-		
-		if (((npc.getId() == spider) || (npc.getId() == bigspider) || (npc.getId() == arach)) && (st.getQuestItemsCount(mark) < 5) && (st.getCond() == 2))
-		{
-			st.giveItems(mark, 1, false);
-		}
-		
-		if (doneKill && (st.getQuestItemsCount(mark) >= 5))
-		{
-			st.unset(vooko_item);
-			st.unset(lizard_item);
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		return null;
 	}
 }

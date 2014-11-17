@@ -20,102 +20,106 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10315_ToThePrisonOfDarkness extends Quest implements ScriptFile
 {
-	private static final int NPC_SLAKI = 32893;
-	private static final int NPC_OPERA = 32946;
+	// Npcs
+	private static final int SLAKI = 32893;
+	private static final int OPERA = 32946;
 	
 	public Q10315_ToThePrisonOfDarkness()
 	{
 		super(false);
-		addStartNpc(NPC_SLAKI);
-		addTalkId(NPC_OPERA);
+		addStartNpc(SLAKI);
+		addTalkId(OPERA);
 		addLevelCheck(90, 99);
 		addQuestCompletedCheck(Q10306_TheCorruptedLeader.class);
 		addQuestCompletedCheck(Q10311_PeacefulDaysAreOver.class);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		if (st == null)
+		if (qs == null)
 		{
 			return "noquest";
 		}
 		
-		if (event.equalsIgnoreCase("32893-06.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("32946-05.htm"))
-		{
-			st.playSound(SOUND_FINISH);
-			st.addExpAndSp(4038093, 1708398);
-			st.giveItems(57, 279513, true);
-			st.exitCurrentQuest(false);
+			case "32893-06.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "32946-05.htm":
+				qs.playSound(SOUND_FINISH);
+				qs.addExpAndSp(4038093, 1708398);
+				qs.giveItems(57, 279513, true);
+				qs.exitCurrentQuest(false);
+				break;
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		Player player = st.getPlayer();
-		QuestState previous = player.getQuestState(Q10306_TheCorruptedLeader.class);
-		QuestState previous2 = player.getQuestState(Q10311_PeacefulDaysAreOver.class);
+		final Player player = qs.getPlayer();
+		final QuestState previous = player.getQuestState(Q10306_TheCorruptedLeader.class);
+		final QuestState previous2 = player.getQuestState(Q10311_PeacefulDaysAreOver.class);
 		
-		if (npc.getId() == NPC_SLAKI)
+		switch (npc.getId())
 		{
-			if ((previous == null) || (!previous.isCompleted()) || (previous2 == null) || (!previous2.isCompleted()) || (player.getLevel() < 90))
-			{
-				st.exitCurrentQuest(true);
-				return "32893-03.htm";
-			}
-			
-			switch (st.getState())
-			{
-				case COMPLETED:
-					htmltext = "32893-04.htm";
-					break;
-				
-				case CREATED:
-					htmltext = "32893-01.htm";
-					break;
-				
-				case STARTED:
-					if (st.getCond() != 1)
-					{
-						break;
-					}
-					
-					htmltext = "32893-07.htm";
-			}
-		}
-		else if (npc.getId() == NPC_OPERA)
-		{
-			if (st.isStarted())
-			{
-				if (st.getCond() == 1)
+			case SLAKI:
+				if ((previous == null) || (!previous.isCompleted()) || (previous2 == null) || (!previous2.isCompleted()) || (player.getLevel() < 90))
 				{
-					htmltext = "32946-01.htm";
+					qs.exitCurrentQuest(true);
+					return "32893-03.htm";
 				}
-			}
-			else if (st.isCompleted())
-			{
-				htmltext = "32946-03.htm";
-			}
-			else
-			{
-				htmltext = "32946-02.htm";
-			}
+				switch (qs.getState())
+				{
+					case COMPLETED:
+						htmltext = "32893-04.htm";
+						break;
+					
+					case CREATED:
+						htmltext = "32893-01.htm";
+						break;
+					
+					case STARTED:
+						if (qs.getCond() != 1)
+						{
+							break;
+						}
+						
+						htmltext = "32893-07.htm";
+				}
+				break;
+			
+			case OPERA:
+				if (qs.isStarted())
+				{
+					if (qs.getCond() == 1)
+					{
+						htmltext = "32946-01.htm";
+					}
+				}
+				else if (qs.isCompleted())
+				{
+					htmltext = "32946-03.htm";
+				}
+				else
+				{
+					htmltext = "32946-02.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
@@ -124,7 +128,7 @@ public class Q10315_ToThePrisonOfDarkness extends Quest implements ScriptFile
 	@Override
 	public boolean isVisible(Player player)
 	{
-		QuestState qs = player.getQuestState(Q10315_ToThePrisonOfDarkness.class);
+		final QuestState qs = player.getQuestState(Q10315_ToThePrisonOfDarkness.class);
 		return ((qs == null) && isAvailableFor(player)) || ((qs != null) && qs.isNowAvailableByTime());
 	}
 	

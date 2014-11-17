@@ -12,7 +12,6 @@
  */
 package quests;
 
-import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
@@ -23,6 +22,7 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10330_ToTheRuinsOfYeSagira extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int ATRAN = 33448;
 	private static final int RAXIS = 32977;
 	
@@ -36,56 +36,57 @@ public class Q10330_ToTheRuinsOfYeSagira extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
-		Player player = st.getPlayer();
 		
-		if (event.equalsIgnoreCase("3.htm"))
+		switch (event)
 		{
-			st.set("cond", "1", true);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("6.htm"))
-		{
-			player.sendPacket(new ExShowScreenMessage(NpcString.ARMOR_HAS_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
-			st.giveItems(57, 62000);
-			st.giveItems(29, 1);
-			st.giveItems(22, 1);
-			st.addExpAndSp(23000, 25000);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(false);
+			case "3.htm":
+				qs.set("cond", "1", true);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "6.htm":
+				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ARMOR_HAS_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
+				qs.giveItems(57, 62000);
+				qs.giveItems(29, 1);
+				qs.giveItems(22, 1);
+				qs.addExpAndSp(23000, 25000);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(false);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getInt("cond");
+		final int cond = qs.getInt("cond");
 		
-		if (npcId == ATRAN)
+		switch (npc.getId())
 		{
-			if ((cond == 0) && isAvailableFor(st.getPlayer()))
-			{
-				htmltext = "1.htm";
-				// else TODO
-			}
-			else if (cond == 1)
-			{
-				htmltext = "3.htm";
-			}
-		}
-		else if (npcId == RAXIS)
-		{
-			if (cond == 1)
-			{
-				htmltext = "4.htm";
-			}
+			case ATRAN:
+				if ((cond == 0) && isAvailableFor(qs.getPlayer()))
+				{
+					htmltext = "1.htm";
+				}
+				else if (cond == 1)
+				{
+					htmltext = "3.htm";
+				}
+				break;
+			
+			case RAXIS:
+				if (cond == 1)
+				{
+					htmltext = "4.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
