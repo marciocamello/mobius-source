@@ -70,7 +70,7 @@ public class BuyListHolder
 		
 		try
 		{
-			File filelists = new File(Config.DATAPACK_ROOT, "data/xml/other/merchant_filelists.xml");
+			File filelists = new File(Config.DATAPACK_ROOT, "data/xml/buylists/merchant_filelists.xml");
 			DocumentBuilderFactory factory1 = DocumentBuilderFactory.newInstance();
 			factory1.setValidating(false);
 			factory1.setIgnoringComments(true);
@@ -87,7 +87,7 @@ public class BuyListHolder
 						if ("file".equalsIgnoreCase(d1.getNodeName()))
 						{
 							final String filename = d1.getAttributes().getNamedItem("name").getNodeValue();
-							File file = new File(Config.DATAPACK_ROOT, "data/xml/other/" + filename);
+							File file = new File(Config.DATAPACK_ROOT, "data/xml/buylists/" + filename);
 							DocumentBuilderFactory factory2 = DocumentBuilderFactory.newInstance();
 							factory2.setValidating(false);
 							factory2.setIgnoringComments(true);
