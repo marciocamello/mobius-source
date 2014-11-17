@@ -94,9 +94,8 @@ public class Q10737_GrakonsWarehouse extends Quest implements ScriptFile
 		}
 		String htmltext = "noquest";
 		final int cond = qs.getCond();
-		final int npcId = npc.getId();
 		
-		switch (npcId)
+		switch (npc.getId())
 		{
 			case Grakon:
 				if ((cond == 0) && (qs.getQuestItemsCount(Apprentice_Support_Box) > 0))

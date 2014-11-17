@@ -93,251 +93,189 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 	}
 	
 	@Override
-	public void onShutdown()
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-	}
-	
-	@Override
-	public void onLoad()
-	{
-		CharListenerList.addGlobal(this);
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onMagicUse(Creature actor, Skill skill, Creature target, boolean alt)
-	{
-		if ((actor == null) || !actor.isPlayer() || (target == null) || !target.isNpc())
-		{
-			return;
-		}
-		
-		QuestState st = actor.getPlayer().getQuestState(Q10385_RedThreadOfFate.class);
-		
-		if (st == null)
-		{
-			return;
-		}
-		
-		NpcInstance npc = (NpcInstance) target;
-		Player player = st.getPlayer();
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		
-		switch (skill.getId())
-		{
-			case water:
-				if ((npcId == MotherTree) && (cond == 18))
-				{
-					ItemFunctions.removeItem(st.getPlayer(), Clearestwater, 1L, true);
-					enterInstance(st.getPlayer());
-					st.setCond(19);
-				}
-				
-				break;
-			
-			case light:
-				if ((npcId == AltarofShilen) && (cond == 16))
-				{
-					ItemFunctions.removeItem(st.getPlayer(), Brightestlight, 1L, true);
-					player.sendPacket(new ExShowScreenMessage(NpcString.YOU_MUST_DESTROY_THE_MESSENGER_SHILEN, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
-					player.sendPacket(new ExShowScreenMessage(NpcString.THE_ONLY_GOOD_SHILEN_CREATURE_IS_A_DEAD_ONE, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
-					NpcInstance mob = st.addSpawn(ShilensMessenger, 28760, 11032, -4252);
-					mob.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, player, 100000);
-				}
-				
-				break;
-			
-			case soul:
-				if ((npcId == CaveofSouls) && (cond == 17))
-				{
-					ItemFunctions.removeItem(st.getPlayer(), Purestsoul, 1L, true);
-					st.setCond(18);
-				}
-				
-				break;
-			
-			case flame:
-				if ((npcId == PaagrioTemple) && (cond == 15))
-				{
-					ItemFunctions.removeItem(st.getPlayer(), Fiercestflame, 1L, true);
-					st.setCond(16);
-				}
-				
-				break;
-			
-			case love:
-				if ((npcId == DesertedDwarvenHouse) && (cond == 14))
-				{
-					ItemFunctions.removeItem(st.getPlayer(), Fondestheart, 1L, true);
-					st.setCond(15);
-				}
-				
-				break;
-		}
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		Player player = st.getPlayer();
-		
-		if (player == null)
-		{
-			return null;
-		}
-		
-		if ((npcId == ShilensMessenger) && (cond == 16))
-		{
-			st.setCond(17);
-			st.playSound(SOUND_ITEMGET);
-		}
-		
-		return null;
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		Player player = st.getPlayer();
 		String htmltext = event;
-		int cond = st.getCond();
+		final int cond = qs.getCond();
 		
-		if ((cond == 0) && event.equalsIgnoreCase("Rean_q10385_03.htm"))
+		switch (event)
 		{
-			st.setState(2);
-			st.setCond(1);
-			st.giveItems(MysteriosLetter, 1L);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if ((cond == 1) && event.equalsIgnoreCase("Morelin_q10385_02.htm"))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if ((cond == 2) && event.equalsIgnoreCase("Lania_q10385_02.htm"))
-		{
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if ((cond == 6) && event.equalsIgnoreCase("Ladyofthelike_q10385_03.htm"))
-		{
-			st.takeItems(Waterfromthegardenofeva, 1L);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if ((cond == 6) && event.equalsIgnoreCase("Ladyofthelike_q10385_06.htm"))
-		{
-			st.giveItems(Clearestwater, 1L);
-			st.setCond(7);
-			player.teleToLocation(new Location(172440, 90312, -2011));
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if ((cond == 7) && event.equalsIgnoreCase("Nerupa_q10385_04.htm"))
-		{
-			st.setCond(8);
-			st.giveItems(Brightestlight, 1L);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if ((cond == 8) && event.equalsIgnoreCase("Enfeux_q10385_02.htm"))
-		{
-			st.giveItems(Purestsoul, 1L);
-			st.setCond(9);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if ((cond == 9) && event.equalsIgnoreCase("Innocentin_q10385_02.htm"))
-		{
-			st.setCond(10);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if ((cond == 10) && event.equalsIgnoreCase("Vulkan_q10385_04.htm"))
-		{
-			st.giveItems(Vulkangold, 1L);
-			st.giveItems(Vulkansilver, 1L);
-			st.giveItems(Vulkanfire, 1L);
-			st.setCond(11);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if ((cond == 13) && event.equalsIgnoreCase("Wesley_q10385_03.htm"))
-		{
-			player.teleToLocation(new Location(180168, -111720, -5856));
-		}
-		else if ((cond == 13) && event.equalsIgnoreCase("Vulkan_q10385_08.htm"))
-		{
-			st.giveItems(Fiercestflame, 1L);
-			st.giveItems(Fondestheart, 1L);
-			st.giveItems(SOEDwarvenvillage, 1L);
-			st.setCond(14);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if ((cond == 11) && event.equalsIgnoreCase("Urn_q10385_02.htm"))
-		{
-			st.takeItems(Vulkangold, 1L);
-			st.takeItems(Vulkansilver, 1L);
-			st.takeItems(Vulkanfire, 1L);
-			st.setCond(12);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if ((cond == 19) && htmltext.equalsIgnoreCase("Darin_q10385_03.htm"))
-		{
-			player.sendPacket(new ExShowScreenMessage(NpcString.TALK_TO_ROXXIE, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
-		}
-		
-		if ((cond == 19) && event.equalsIgnoreCase("Roxxy_q10385_02.htm"))
-		{
-			st.setCond(20);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		if ((cond == 20) && event.equalsIgnoreCase("Biotin_q10385_03.htm"))
-		{
-			player.sendPacket(new ExShowScreenMessage(NpcString.GET_OUT_OF_THE_TEMPLE, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
-			st.setCond(21);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		if ((cond == 21) && event.equalsIgnoreCase("showMovie"))
-		{
-			st.getPlayer().showQuestMovie(ExStartScenePlayer.SCENE_SC_SUB_QUEST);
-			st.startQuestTimer("timer1", 25000L);
-			htmltext = null;
-		}
-		else if (event.equalsIgnoreCase("timer1"))
-		{
-			st.setCond(22);
-			st.cancelQuestTimer("timer1");
-			player.teleToLocation(-113656, 246040, -3724, 0);
-			htmltext = null;
-		}
-		else if ((cond == 22) && event.equalsIgnoreCase("Rean_q10385_05.htm"))
-		{
-			st.giveItems(DimensionalDiamond, 40L);
-			st.setState(3);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
+			case "Rean_q10385_03.htm":
+				if (cond == 0)
+				{
+					qs.setState(2);
+					qs.setCond(1);
+					qs.giveItems(MysteriosLetter, 1L);
+					qs.playSound(SOUND_ACCEPT);
+				}
+				break;
+			
+			case "Morelin_q10385_02.htm":
+				if (cond == 1)
+				{
+					qs.setCond(2);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
+			
+			case "Lania_q10385_02.htm":
+				if (cond == 2)
+				{
+					qs.setCond(3);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
+			
+			case "Ladyofthelike_q10385_03.htm":
+				if (cond == 6)
+				{
+					qs.takeItems(Waterfromthegardenofeva, 1L);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
+			
+			case "Ladyofthelike_q10385_06.htm":
+				if (cond == 6)
+				{
+					qs.giveItems(Clearestwater, 1L);
+					qs.setCond(7);
+					qs.getPlayer().teleToLocation(new Location(172440, 90312, -2011));
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
+			
+			case "Nerupa_q10385_04.htm":
+				if (cond == 7)
+				{
+					qs.setCond(8);
+					qs.giveItems(Brightestlight, 1L);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
+			
+			case "Enfeux_q10385_02.htm":
+				if (cond == 8)
+				{
+					qs.giveItems(Purestsoul, 1L);
+					qs.setCond(9);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
+			
+			case "Innocentin_q10385_02.htm":
+				if (cond == 9)
+				{
+					qs.setCond(10);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
+			
+			case "Vulkan_q10385_04.htm":
+				if (cond == 10)
+				{
+					qs.giveItems(Vulkangold, 1L);
+					qs.giveItems(Vulkansilver, 1L);
+					qs.giveItems(Vulkanfire, 1L);
+					qs.setCond(11);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
+			
+			case "Wesley_q10385_03.htm":
+				if (cond == 13)
+				{
+					qs.getPlayer().teleToLocation(new Location(180168, -111720, -5856));
+				}
+				break;
+			
+			case "Vulkan_q10385_08.htm":
+				if (cond == 13)
+				{
+					qs.giveItems(Fiercestflame, 1L);
+					qs.giveItems(Fondestheart, 1L);
+					qs.giveItems(SOEDwarvenvillage, 1L);
+					qs.setCond(14);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
+			
+			case "Urn_q10385_02.htm":
+				if (cond == 11)
+				{
+					qs.takeItems(Vulkangold, 1L);
+					qs.takeItems(Vulkansilver, 1L);
+					qs.takeItems(Vulkanfire, 1L);
+					qs.setCond(12);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
+			
+			case "Darin_q10385_03.htm":
+				if (cond == 19)
+				{
+					qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.TALK_TO_ROXXIE, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
+				}
+				break;
+			
+			case "Roxxy_q10385_02.htm":
+				if (cond == 19)
+				{
+					qs.setCond(20);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
+			
+			case "Biotin_q10385_03.htm":
+				if (cond == 20)
+				{
+					qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.GET_OUT_OF_THE_TEMPLE, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
+					qs.setCond(21);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
+			
+			case "showMovie":
+				if (cond == 21)
+				{
+					qs.getPlayer().showQuestMovie(ExStartScenePlayer.SCENE_SC_SUB_QUEST);
+					qs.startQuestTimer("timer1", 25000L);
+					htmltext = null;
+				}
+				break;
+			
+			case "timer1":
+				qs.setCond(22);
+				qs.cancelQuestTimer("timer1");
+				qs.getPlayer().teleToLocation(-113656, 246040, -3724, 0);
+				htmltext = null;
+				break;
+			
+			case "Rean_q10385_05.htm":
+				if (cond == 22)
+				{
+					qs.giveItems(DimensionalDiamond, 40L);
+					qs.setState(3);
+					qs.exitCurrentQuest(false);
+					qs.playSound(SOUND_FINISH);
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
 		String htmltext = "noquest";
+		final int cond = qs.getCond();
 		
-		if (st.getPlayer().getVar("q10338") == null)
+		if (qs.getPlayer().getVar("q10338") == null)
 		{
 			return "<html><head><body>You didn't complete quest Seize Your Destiny1...</body></html>";
 		}
 		
-		switch (npcId)
+		switch (npc.getId())
 		{
 			case Rean:
 				if (cond == 22)
@@ -352,7 +290,6 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 				{
 					htmltext = "Rean_q10385_0.htm";
 				}
-				
 				break;
 			
 			case Morelin:
@@ -360,15 +297,14 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 				{
 					htmltext = "Morelin_q10385_01.htm";
 				}
-				
 				break;
 			
 			case Lania:
 				if (cond == 4)
 				{
 					htmltext = "Lania_q10385_03.htm";
-					st.setCond(5);
-					st.playSound(SOUND_MIDDLE);
+					qs.setCond(5);
+					qs.playSound(SOUND_MIDDLE);
 				}
 				else if (cond == 2)
 				{
@@ -378,18 +314,16 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 				{
 					htmltext = "Lania_q10385_02.htm";
 				}
-				
 				break;
 			
 			case HeineWaterSource:
 				if (cond == 5)
 				{
 					htmltext = "HeineWaterSource_q10385_01.htm";
-					st.giveItems(Waterfromthegardenofeva, 1L);
-					st.setCond(6);
-					st.playSound(SOUND_MIDDLE);
+					qs.giveItems(Waterfromthegardenofeva, 1L);
+					qs.setCond(6);
+					qs.playSound(SOUND_MIDDLE);
 				}
-				
 				break;
 			
 			case Ladyofthelike:
@@ -397,7 +331,6 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 				{
 					htmltext = "Ladyofthelike_q10385_01.htm";
 				}
-				
 				break;
 			
 			case Nerupa:
@@ -405,7 +338,6 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 				{
 					htmltext = "Nerupa_q10385_01.htm";
 				}
-				
 				break;
 			
 			case Enfeux:
@@ -413,7 +345,6 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 				{
 					htmltext = "Enfeux_q10385_01.htm";
 				}
-				
 				break;
 			
 			case Innocentin:
@@ -421,7 +352,6 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 				{
 					htmltext = "Innocentin_q10385_01.htm";
 				}
-				
 				break;
 			
 			case Vulkan:
@@ -433,7 +363,6 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 				{
 					htmltext = "Vulkan_q10385_05.htm";
 				}
-				
 				break;
 			
 			case Urn:
@@ -441,17 +370,15 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 				{
 					htmltext = "Urn_q10385_01.htm";
 				}
-				
 				break;
 			
 			case Wesley:
 				if (cond == 12)
 				{
 					htmltext = "Wesley_q10385_01.htm";
-					st.setCond(13);
-					st.playSound(SOUND_MIDDLE);
+					qs.setCond(13);
+					qs.playSound(SOUND_MIDDLE);
 				}
-				
 				break;
 			
 			case Darin:
@@ -459,7 +386,6 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 				{
 					htmltext = "Darin_q10385_01.htm";
 				}
-				
 				break;
 			
 			case Roxxy:
@@ -467,7 +393,6 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 				{
 					htmltext = "Roxxy_q10385_01.htm";
 				}
-				
 				break;
 			
 			case BiotinHighPriest:
@@ -475,16 +400,100 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 				{
 					htmltext = "Biotin_q10385_01.htm";
 				}
-				
 				break;
 		}
 		
 		return htmltext;
 	}
 	
+	@Override
+	public void onMagicUse(Creature actor, Skill skill, Creature target, boolean alt)
+	{
+		if ((actor == null) || !actor.isPlayer() || (target == null) || !target.isNpc())
+		{
+			return;
+		}
+		
+		final QuestState qs = actor.getPlayer().getQuestState(Q10385_RedThreadOfFate.class);
+		
+		if (qs == null)
+		{
+			return;
+		}
+		
+		final NpcInstance npc = (NpcInstance) target;
+		final Player player = qs.getPlayer();
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		
+		switch (skill.getId())
+		{
+			case water:
+				if ((npcId == MotherTree) && (cond == 18))
+				{
+					ItemFunctions.removeItem(qs.getPlayer(), Clearestwater, 1L, true);
+					enterInstance(qs.getPlayer());
+					qs.setCond(19);
+				}
+				break;
+			
+			case light:
+				if ((npcId == AltarofShilen) && (cond == 16))
+				{
+					ItemFunctions.removeItem(qs.getPlayer(), Brightestlight, 1L, true);
+					player.sendPacket(new ExShowScreenMessage(NpcString.YOU_MUST_DESTROY_THE_MESSENGER_SHILEN, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
+					player.sendPacket(new ExShowScreenMessage(NpcString.THE_ONLY_GOOD_SHILEN_CREATURE_IS_A_DEAD_ONE, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
+					NpcInstance mob = qs.addSpawn(ShilensMessenger, 28760, 11032, -4252);
+					mob.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, player, 100000);
+				}
+				break;
+			
+			case soul:
+				if ((npcId == CaveofSouls) && (cond == 17))
+				{
+					ItemFunctions.removeItem(qs.getPlayer(), Purestsoul, 1L, true);
+					qs.setCond(18);
+				}
+				break;
+			
+			case flame:
+				if ((npcId == PaagrioTemple) && (cond == 15))
+				{
+					ItemFunctions.removeItem(qs.getPlayer(), Fiercestflame, 1L, true);
+					qs.setCond(16);
+				}
+				break;
+			
+			case love:
+				if ((npcId == DesertedDwarvenHouse) && (cond == 14))
+				{
+					ItemFunctions.removeItem(qs.getPlayer(), Fondestheart, 1L, true);
+					qs.setCond(15);
+				}
+				break;
+		}
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if (qs.getPlayer() == null)
+		{
+			return null;
+		}
+		
+		if (qs.getCond() == 16)
+		{
+			qs.setCond(17);
+			qs.playSound(SOUND_ITEMGET);
+		}
+		
+		return null;
+	}
+	
 	private void enterInstance(Player player)
 	{
-		Reflection r = player.getActiveReflection();
+		final Reflection r = player.getActiveReflection();
 		
 		if (r != null)
 		{
@@ -502,21 +511,20 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 	}
 	
 	@Override
-	public void onSocialActionUse(QuestState st, int actionId)
+	public void onSocialActionUse(QuestState qs, int actionId)
 	{
-		if ((st.getPlayer().getTarget() == null) || !st.getPlayer().getTarget().isNpc())
+		if ((qs.getPlayer().getTarget() == null) || !qs.getPlayer().getTarget().isNpc())
 		{
 			return;
 		}
 		
-		GameObject npc1 = st.getPlayer().getTarget();
-		int npcId = ((NpcInstance) npc1).getId();
-		int cond = st.getCond();
+		final GameObject npc1 = qs.getPlayer().getTarget();
+		final int npcId = ((NpcInstance) npc1).getId();
 		
-		if ((cond == 3) && (npcId == Lania) && (actionId == SocialAction.BOW))
+		if ((qs.getCond() == 3) && (npcId == Lania) && (actionId == SocialAction.BOW))
 		{
-			st.setCond(4);
-			st.playSound(SOUND_MIDDLE);
+			qs.setCond(4);
+			qs.playSound(SOUND_MIDDLE);
 		}
 	}
 	
@@ -535,15 +543,15 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 				return;
 			}
 			
-			Player player = actor.getPlayer();
-			QuestState st = player.getQuestState(Q10385_RedThreadOfFate.class);
+			final Player player = actor.getPlayer();
+			final QuestState qs = player.getQuestState(Q10385_RedThreadOfFate.class);
 			
-			if (st == null)
+			if (qs == null)
 			{
 				return;
 			}
 			
-			if (st.getCond() == 21)
+			if (qs.getCond() == 21)
 			{
 				Location loc = zone.getName().contains("Q10385_EXIT_1") ? new Location(210632, 15576, -3754) : new Location(210632, 15576, -3754);
 				
@@ -553,5 +561,21 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 				}
 			}
 		}
+	}
+	
+	@Override
+	public void onShutdown()
+	{
+	}
+	
+	@Override
+	public void onLoad()
+	{
+		CharListenerList.addGlobal(this);
+	}
+	
+	@Override
+	public void onReload()
+	{
 	}
 }

@@ -100,9 +100,8 @@ public class Q10739_SupplyAndDemand extends Quest implements ScriptFile
 		}
 		String htmltext = "noquest";
 		final int cond = qs.getCond();
-		final int npcId = npc.getId();
 		
-		switch (npcId)
+		switch (npc.getId())
 		{
 			case Evna:
 				if (cond == 0)

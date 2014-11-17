@@ -12,7 +12,6 @@
  */
 package quests;
 
-import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
@@ -25,6 +24,7 @@ import lineage2.gameserver.scripts.ScriptFile;
  */
 public class Q10732_AForeignLand extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int Navari = 33931;
 	private static final int Gereth = 33932;
 	
@@ -38,28 +38,27 @@ public class Q10732_AForeignLand extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
-		Player player = st.getPlayer();
 		
 		switch (event)
 		{
 			case "quest_ac":
-				st.setState(STARTED);
-				st.setCond(1);
-				st.playSound(SOUND_ACCEPT);
-				player.sendPacket(new ExShowUsmVideo(ExShowUsmVideo.Q014));
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				qs.getPlayer().sendPacket(new ExShowUsmVideo(ExShowUsmVideo.Q014));
 				htmltext = "33931-3.htm";
 				break;
 			
 			case "qet_rev":
-				st.showTutorialHTML(TutorialShowHtml.QT_001, TutorialShowHtml.TYPE_WINDOW);
+				qs.showTutorialHTML(TutorialShowHtml.QT_001, TutorialShowHtml.TYPE_WINDOW);
 				htmltext = "33932-2.htm";
-				st.giveItems(57, 3000);
-				st.getPlayer().addExpAndSp(75, 2);
-				st.exitCurrentQuest(false);
-				st.playSound(SOUND_FINISH);
+				qs.giveItems(57, 3000);
+				qs.getPlayer().addExpAndSp(75, 2);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
 				break;
 		}
 		
@@ -75,9 +74,8 @@ public class Q10732_AForeignLand extends Quest implements ScriptFile
 		}
 		String htmltext = "noquest";
 		final int cond = qs.getCond();
-		final int npcId = npc.getId();
 		
-		switch (npcId)
+		switch (npc.getId())
 		{
 			case Navari:
 				if ((cond == 0) && isAvailableFor(qs.getPlayer()))

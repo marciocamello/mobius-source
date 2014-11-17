@@ -74,9 +74,8 @@ public class Q10738_AnInnerBeauty extends Quest implements ScriptFile
 		}
 		String htmltext = "noquest";
 		final int cond = qs.getCond();
-		final int npcId = npc.getId();
 		
-		switch (npcId)
+		switch (npc.getId())
 		{
 			case Grakon:
 				if (isAvailableFor(qs.getPlayer()))

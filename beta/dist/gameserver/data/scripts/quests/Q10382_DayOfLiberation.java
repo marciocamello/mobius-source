@@ -29,12 +29,119 @@ import lineage2.gameserver.utils.ReflectionUtils;
 public class Q10382_DayOfLiberation extends Quest implements ScriptFile
 {
 	private static final int SIZRAK = 33669;
-	// private static final int TAUTI_NORMAL = 29233;
 	private static final int TAUTI_NORMAL = 29236;
 	private static final int TAUTIS_BRACLET = 35293;
 	private static final int normalTautiInstanceId = 218;
 	private static final int MARK_OF_THE_RESISTANCE = 34909;
 	private static final String TAUTI_KILL = "tauti";
+	
+	public Q10382_DayOfLiberation()
+	{
+		super(2);
+		addStartNpc(SIZRAK);
+		addTalkId(SIZRAK);
+		addKillId(TAUTI_NORMAL);
+		addKillNpcWithLog(1, TAUTI_KILL, 1, TAUTI_NORMAL);
+		addLevelCheck(97, 99);
+		addQuestCompletedCheck(Q10381_ToTheSeedOfHellfire.class);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		final Player player = qs.getPlayer();
+		
+		switch (event)
+		{
+			case "quest_accpted":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				htmltext = "sofa_sizraku_q10382_03.htm";
+				break;
+			
+			case "enter_instance":
+				if (player.getInventory().getItemByItemId(MARK_OF_THE_RESISTANCE) != null)
+				{
+					final Reflection r = player.getActiveReflection();
+					
+					if (r != null)
+					{
+						if (player.canReenterInstance(normalTautiInstanceId))
+						{
+							player.teleToLocation(r.getTeleportLoc(), r);
+						}
+					}
+					else if (player.canEnterInstance(normalTautiInstanceId))
+					{
+						ReflectionUtils.enterReflection(player, new TautiNormal(), normalTautiInstanceId);
+					}
+					
+					return "";
+				}
+				htmltext = "sofa_sizraku_q10382_07.htm";
+				break;
+			
+			case "quest_done":
+				qs.giveItems(ADENA_ID, 3256740);
+				qs.giveItems(TAUTIS_BRACLET, 1);
+				qs.addExpAndSp(951127800, 435041400);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				htmltext = "sofa_sizraku_q10382_10.htm";
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		
+		if (qs.isCompleted())
+		{
+			htmltext = "sofa_sizraku_q10382_06.htm";
+		}
+		else if (!isAvailableFor(qs.getPlayer()))
+		{
+			htmltext = "sofa_sizraku_q10382_05.htm";
+		}
+		else if (cond == 0)
+		{
+			htmltext = "sofa_sizraku_q10382_01.htm";
+		}
+		else if (cond == 1)
+		{
+			htmltext = "sofa_sizraku_q10382_08.htm";
+		}
+		else if (cond == 2)
+		{
+			htmltext = "sofa_sizraku_q10382_09.htm";
+		}
+		else
+		{
+			htmltext = "sofa_sizraku_q10382_04.htm";
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if (updateKill(npc, qs))
+		{
+			qs.unset(TAUTI_KILL);
+			qs.playSound(SOUND_MIDDLE);
+			qs.setCond(2);
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -49,120 +156,5 @@ public class Q10382_DayOfLiberation extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10382_DayOfLiberation()
-	{
-		super(2);
-		addStartNpc(SIZRAK);
-		addTalkId(SIZRAK);
-		addKillId(TAUTI_NORMAL);
-		addKillNpcWithLog(1, TAUTI_KILL, 1, TAUTI_NORMAL);
-		addLevelCheck(97, 99);
-		addQuestCompletedCheck(Q10381_ToTheSeedOfHellfire.class);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		Player player = st.getPlayer();
-		
-		if (event.equalsIgnoreCase("quest_accpted"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			htmltext = "sofa_sizraku_q10382_03.htm";
-		}
-		
-		if (event.equalsIgnoreCase("enter_instance"))
-		{
-			if (player.getInventory().getItemByItemId(MARK_OF_THE_RESISTANCE) != null)
-			{
-				Reflection r = player.getActiveReflection();
-				
-				if (r != null)
-				{
-					if (player.canReenterInstance(normalTautiInstanceId))
-					{
-						player.teleToLocation(r.getTeleportLoc(), r);
-					}
-				}
-				else if (player.canEnterInstance(normalTautiInstanceId))
-				{
-					ReflectionUtils.enterReflection(player, new TautiNormal(), normalTautiInstanceId);
-				}
-				
-				return "";
-			}
-			
-			htmltext = "sofa_sizraku_q10382_07.htm";
-		}
-		
-		if (event.equalsIgnoreCase("quest_done"))
-		{
-			st.giveItems(ADENA_ID, 3256740);
-			st.giveItems(TAUTIS_BRACLET, 1);
-			st.addExpAndSp(951127800, 435041400);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
-			htmltext = "sofa_sizraku_q10382_10.htm";
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		
-		if (npcId == SIZRAK)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "sofa_sizraku_q10382_06.htm";
-			}
-			else if (!isAvailableFor(st.getPlayer()))
-			{
-				htmltext = "sofa_sizraku_q10382_05.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = "sofa_sizraku_q10382_01.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "sofa_sizraku_q10382_08.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "sofa_sizraku_q10382_09.htm";
-			}
-			else
-			{
-				htmltext = "sofa_sizraku_q10382_04.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		boolean doneKill = updateKill(npc, st);
-		
-		if (doneKill)
-		{
-			st.unset(TAUTI_KILL);
-			st.playSound(SOUND_MIDDLE);
-			st.setCond(2);
-		}
-		
-		return null;
 	}
 }

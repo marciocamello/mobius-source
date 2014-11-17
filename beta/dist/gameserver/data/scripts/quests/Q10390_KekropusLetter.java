@@ -95,9 +95,8 @@ public class Q10390_KekropusLetter extends Quest implements ScriptFile
 		}
 		String htmltext = "noquest";
 		final int cond = qs.getCond();
-		final int npcId = npc.getId();
 		
-		switch (npcId)
+		switch (npc.getId())
 		{
 			case RAYMOND:
 				if ((cond == 0) && (qs.getPlayer().getLevel() >= 40) && (qs.getPlayer().getLevel() <= 45))

@@ -23,11 +23,12 @@ import lineage2.gameserver.scripts.ScriptFile;
  */
 public class Q10733_TheTestForSurvival extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int Gereth = 33932;
 	private static final int Dia = 34005;
 	private static final int Katalin = 33943;
 	private static final int Ayanthe = 33942;
-	
+	// Item
 	private static final int Gereth_Recommendtion = 39519;
 	
 	public Q10733_TheTestForSurvival()
@@ -90,9 +91,8 @@ public class Q10733_TheTestForSurvival extends Quest implements ScriptFile
 		}
 		String htmltext = "noquest";
 		final int cond = qs.getCond();
-		final int npcId = npc.getId();
 		
-		switch (npcId)
+		switch (npc.getId())
 		{
 			case Gereth:
 				switch (cond)

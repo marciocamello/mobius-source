@@ -22,16 +22,16 @@ import lineage2.gameserver.scripts.ScriptFile;
  */
 public class Q10377_TheInvadedExecutionGrounds extends Quest implements ScriptFile
 {
-	// NPC's
+	// Npcs
 	private static final int SYLVAIN = 30070;
 	private static final int HARLAN = 30074;
 	private static final int RODERIK = 30631;
 	private static final int ENDRIGO = 30632;
-	// Monster's
+	// Monsters
 	private static final int HOUPON_THE_WARDEN_OVERSEER = 25886;
 	private static final int CROOK_THE_MAD = 25887;
 	private static final int EXECUTION_GROUNDS_WATCHMAN_GUILLOTINE = 25888;
-	// Item's
+	// Items
 	private static final int SOE_GUILLOTINE_FORTRESS = 35292;
 	private static final int HARLANS_ORDERS = 34972;
 	private static final int ENDRIGOS_REPORT = 34973;
@@ -47,150 +47,144 @@ public class Q10377_TheInvadedExecutionGrounds extends Quest implements ScriptFi
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("sylvain_q10377_06.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("hitsran_q10377_03.htm"))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-			st.giveItems(HARLANS_ORDERS, 1);
-		}
-		else if (event.equalsIgnoreCase("warden_roderik_q10377_02.htm"))
-		{
-			st.takeItems(HARLANS_ORDERS, -1L);
-		}
-		else if (event.equalsIgnoreCase("warden_roderik_q10377_03.htm"))
-		{
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
-			st.giveItems(ENDRIGOS_REPORT, 1);
-		}
-		else if (event.equalsIgnoreCase("warden_endrigo_q10377_02.htm"))
-		{
-			st.addExpAndSp(756106110, 338608890);
-			st.giveItems(ADENA_ID, 2970560, true);
-			st.giveItems(SOE_GUILLOTINE_FORTRESS, 2);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(false);
+			case "sylvain_q10377_06.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "hitsran_q10377_03.htm":
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				qs.giveItems(HARLANS_ORDERS, 1);
+				break;
+			
+			case "warden_roderik_q10377_02.htm":
+				qs.takeItems(HARLANS_ORDERS, -1L);
+				break;
+			
+			case "warden_roderik_q10377_03.htm":
+				qs.setCond(3);
+				qs.playSound(SOUND_MIDDLE);
+				qs.giveItems(ENDRIGOS_REPORT, 1);
+				break;
+			
+			case "warden_endrigo_q10377_02.htm":
+				qs.addExpAndSp(756106110, 338608890);
+				qs.giveItems(ADENA_ID, 2970560, true);
+				qs.giveItems(SOE_GUILLOTINE_FORTRESS, 2);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(false);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
 		String htmltext = "noquest";
+		final int cond = qs.getCond();
 		
-		if (npcId == SYLVAIN)
+		switch (npc.getId())
 		{
-			if (st.isCompleted())
-			{
-				htmltext = "sylvain_q10377_03.htm";
-			}
-			else if (st.isStarted())
-			{
-				htmltext = "sylvain_q10377_07.htm";
-			}
-			else
-			{
-				if (isAvailableFor(st.getPlayer()))
+			case SYLVAIN:
+				if (qs.isCompleted())
 				{
-					htmltext = "sylvain_q10377_01.htm";
+					htmltext = "sylvain_q10377_03.htm";
+				}
+				else if (qs.isStarted())
+				{
+					htmltext = "sylvain_q10377_07.htm";
 				}
 				else
 				{
-					htmltext = "sylvain_q10377_02.htm";
+					if (isAvailableFor(qs.getPlayer()))
+					{
+						htmltext = "sylvain_q10377_01.htm";
+					}
+					else
+					{
+						htmltext = "sylvain_q10377_02.htm";
+					}
 				}
-			}
-		}
-		else if (npcId == HARLAN)
-		{
-			if (cond == 1)
-			{
-				htmltext = "hitsran_q10377_01.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "hitsran_q10377_04.htm";
-			}
-		}
-		else if (npcId == RODERIK)
-		{
-			if (cond == 2)
-			{
-				htmltext = "warden_roderik_q10377_01.htm";
-			}
-			else if (cond == 3)
-			{
-				htmltext = "warden_roderik_q10377_04.htm";
-			}
-			else if (cond == 6)
-			{
-				htmltext = "warden_roderik_q10377_05.htm";
-			}
-		}
-		else if (npcId == ENDRIGO)
-		{
-			if (cond == 6)
-			{
-				st.takeItems(ENDRIGOS_REPORT, -1);
-				htmltext = "warden_endrigo_q10377_01.htm";
-			}
+				break;
+			
+			case HARLAN:
+				if (cond == 1)
+				{
+					htmltext = "hitsran_q10377_01.htm";
+				}
+				else if (cond == 2)
+				{
+					htmltext = "hitsran_q10377_04.htm";
+				}
+				break;
+			
+			case RODERIK:
+				if (cond == 2)
+				{
+					htmltext = "warden_roderik_q10377_01.htm";
+				}
+				else if (cond == 3)
+				{
+					htmltext = "warden_roderik_q10377_04.htm";
+				}
+				else if (cond == 6)
+				{
+					htmltext = "warden_roderik_q10377_05.htm";
+				}
+				break;
+			
+			case ENDRIGO:
+				if (cond == 6)
+				{
+					qs.takeItems(ENDRIGOS_REPORT, -1);
+					htmltext = "warden_endrigo_q10377_01.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
+		final int cond = qs.getCond();
 		
-		if (cond > 2)
+		switch (npc.getId())
 		{
-			switch (npc.getId())
-			{
-				case HOUPON_THE_WARDEN_OVERSEER:
-					if (cond != 3)
-					{
-						break;
-					}
-					
-					st.setCond(4);
-					st.playSound(SOUND_MIDDLE);
-					break;
-				
-				case CROOK_THE_MAD:
-					if (cond != 4)
-					{
-						break;
-					}
-					
-					st.setCond(5);
-					st.playSound(SOUND_MIDDLE);
-					break;
-				
-				case EXECUTION_GROUNDS_WATCHMAN_GUILLOTINE:
-					if (cond != 5)
-					{
-						break;
-					}
-					
-					st.setCond(6);
-					st.playSound(SOUND_MIDDLE);
-					break;
-			}
+			case HOUPON_THE_WARDEN_OVERSEER:
+				if (cond == 3)
+				{
+					qs.setCond(4);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
+			
+			case CROOK_THE_MAD:
+				if (cond == 4)
+				{
+					qs.setCond(5);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
+			
+			case EXECUTION_GROUNDS_WATCHMAN_GUILLOTINE:
+				if (cond == 5)
+				{
+					qs.setCond(6);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				break;
 		}
 		
 		return null;
@@ -199,18 +193,15 @@ public class Q10377_TheInvadedExecutionGrounds extends Quest implements ScriptFi
 	@Override
 	public void onLoad()
 	{
-		//
 	}
 	
 	@Override
 	public void onReload()
 	{
-		//
 	}
 	
 	@Override
 	public void onShutdown()
 	{
-		//
 	}
 }

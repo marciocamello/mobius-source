@@ -22,9 +22,11 @@ import lineage2.gameserver.scripts.ScriptFile;
  */
 public class Q10389_TheVoiceOfAuthority extends Quest implements ScriptFile
 {
-	// reward items
-	private static final int SIGN = 36229;
+	// Npc
 	private static final int RADZEN = 33803;
+	// Item
+	private static final int SIGN = 36229;
+	// Other
 	private static final String KILL = "kill";
 	
 	public Q10389_TheVoiceOfAuthority()
@@ -37,56 +39,54 @@ public class Q10389_TheVoiceOfAuthority extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("accepted.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		if (event.equalsIgnoreCase("endquest.htm"))
-		{
-			st.getPlayer().addExpAndSp(592767000, 59276700);
-			st.giveItems(SIGN, 1);
-			st.giveItems(57, 1302720);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
+			case "accepted.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "endquest.htm":
+				qs.getPlayer().addExpAndSp(592767000, 59276700);
+				qs.giveItems(SIGN, 1);
+				qs.giveItems(57, 1302720);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
 		String htmltext = "noquest";
-		QuestState Cb = st.getPlayer().getQuestState(Q10388_ConspiracyBehindDoors.class);
+		final QuestState Cb = qs.getPlayer().getQuestState(Q10388_ConspiracyBehindDoors.class);
 		
 		if ((Cb == null) || !Cb.isCompleted())
 		{
 			return "you cannot procceed with this quest until you have completed the Conspiracy Behind Door quest";
 		}
 		
-		if (npcId == RADZEN)
+		switch (qs.getCond())
 		{
-			if (cond == 0)
-			{
+			case 0:
 				htmltext = "start.htm";
-			}
-			else if (cond == 1)
-			{
+				break;
+			
+			case 1:
 				htmltext = "notcollected.htm";
-			}
-			else if (cond == 2)
-			{
+				break;
+			
+			case 2:
 				htmltext = "collected.htm";
-			}
+				break;
 		}
 		
 		return htmltext;
@@ -105,14 +105,7 @@ public class Q10389_TheVoiceOfAuthority extends Quest implements ScriptFile
 			return null;
 		}
 		
-		if (qs.getCond() != 1)
-		{
-			return null;
-		}
-		
-		boolean doneKill = updateKill(npc, qs);
-		
-		if (doneKill)
+		if ((qs.getCond() == 1) && updateKill(npc, qs))
 		{
 			qs.unset(KILL);
 			qs.setCond(2);

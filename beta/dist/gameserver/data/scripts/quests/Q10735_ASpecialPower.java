@@ -102,9 +102,8 @@ public class Q10735_ASpecialPower extends Quest implements ScriptFile
 		}
 		String htmltext = "noquest";
 		final int cond = qs.getCond();
-		final int npcId = npc.getId();
 		
-		switch (npcId)
+		switch (npc.getId())
 		{
 			case Ayanthe:
 				switch (cond)
@@ -222,10 +221,9 @@ public class Q10735_ASpecialPower extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		final int npcId = npc.getId();
 		final int cond = qs.getCond();
 		
-		switch (npcId)
+		switch (npc.getId())
 		{
 			case Floato:
 				if ((cond == 2) || (cond == 4))

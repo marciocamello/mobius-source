@@ -23,12 +23,16 @@ import lineage2.gameserver.scripts.ScriptFile;
  */
 public class Q10378_WeedingWork extends Quest implements ScriptFile
 {
-	// q items
+	// Npc
+	private static final int DADFENA = 33697;
+	// Monsters
+	private static final int MAN_OF_JOY = 23210;
+	private static final int MAN_OR_PRAYER = 23211;
+	// Items
 	private static final int STEBEL = 34974;
 	private static final int KOREN = 34975;
-	// reward items
+	// Rewards
 	private static final int SCROLL = 35292;
-	private static final int DADFENA = 33697;
 	
 	public Q10378_WeedingWork()
 	{
@@ -36,57 +40,55 @@ public class Q10378_WeedingWork extends Quest implements ScriptFile
 		addTalkId(DADFENA);
 		addQuestItem(STEBEL);
 		addQuestItem(KOREN);
-		addKillId(23210, 23211);
+		addKillId(MAN_OF_JOY, MAN_OR_PRAYER);
 		addLevelCheck(95, 100);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("accepted.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		if (event.equalsIgnoreCase("endquest.htm"))
-		{
-			st.takeAllItems(STEBEL);
-			st.takeAllItems(KOREN);
-			st.getPlayer().addExpAndSp(845059770, 378445230);
-			st.giveItems(SCROLL, 1);
-			st.giveItems(57, 3000000);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
+			case "accepted.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "endquest.htm":
+				qs.takeAllItems(STEBEL);
+				qs.takeAllItems(KOREN);
+				qs.getPlayer().addExpAndSp(845059770, 378445230);
+				qs.giveItems(SCROLL, 1);
+				qs.giveItems(57, 3000000);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
 		String htmltext = "noquest";
 		
-		if (npcId == DADFENA)
+		switch (qs.getCond())
 		{
-			if (cond == 0)
-			{
+			case 0:
 				htmltext = "start.htm";
-			}
-			else if (cond == 1)
-			{
+				break;
+			
+			case 1:
 				htmltext = "notcollected.htm";
-			}
-			else if (cond == 2)
-			{
+				break;
+			
+			case 2:
 				htmltext = "collected.htm";
-			}
+				break;
 		}
 		
 		return htmltext;
@@ -105,24 +107,22 @@ public class Q10378_WeedingWork extends Quest implements ScriptFile
 			return null;
 		}
 		
-		if (qs.getCond() != 1)
+		if (qs.getCond() == 1)
 		{
-			return null;
-		}
-		
-		if ((qs.getQuestItemsCount(STEBEL) < 5) && Rnd.chance(7))
-		{
-			qs.giveItems(STEBEL, 1);
-		}
-		
-		if ((qs.getQuestItemsCount(KOREN) < 5) && Rnd.chance(7))
-		{
-			qs.giveItems(KOREN, 1);
-		}
-		
-		if ((qs.getQuestItemsCount(KOREN) >= 5) && (qs.getQuestItemsCount(STEBEL) >= 5))
-		{
-			qs.setCond(2);
+			if ((qs.getQuestItemsCount(STEBEL) < 5) && Rnd.chance(7))
+			{
+				qs.giveItems(STEBEL, 1);
+			}
+			
+			if ((qs.getQuestItemsCount(KOREN) < 5) && Rnd.chance(7))
+			{
+				qs.giveItems(KOREN, 1);
+			}
+			
+			if ((qs.getQuestItemsCount(KOREN) >= 5) && (qs.getQuestItemsCount(STEBEL) >= 5))
+			{
+				qs.setCond(2);
+			}
 		}
 		
 		return null;

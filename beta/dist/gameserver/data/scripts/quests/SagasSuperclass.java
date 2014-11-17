@@ -50,18 +50,18 @@ public abstract class SagasSuperclass extends Quest
 	protected Race StartRace;
 	// massives
 	static final List<NpcInstance> _npcWaves = new ArrayList<>();
-	private static final int Avanguard_aden = 33407;
-	private static final int Avanguard_corpse1 = 33166;
-	private static final int Avanguard_corpse2 = 33167;
-	private static final int Avanguard_corpse3 = 33168;
-	private static final int Avanguard_corpse4 = 33169;
-	private static final int Avanguard_member = 33165;
-	// instance npc:
-	private static final int Avanguard_camptain = 33170;
-	private static final int Avanguard_Ellis = 33171;
-	private static final int Avanguard_Barton = 33172;
-	private static final int Avanguard_Xaok = 33173;
-	private static final int Avanguard_Ellia = 33174;
+	private static final int Vanguard_aden = 33407;
+	private static final int Vanguard_corpse1 = 33166;
+	private static final int Vanguard_corpse2 = 33167;
+	private static final int Vanguard_corpse3 = 33168;
+	private static final int Vanguard_corpse4 = 33169;
+	private static final int Vanguard_member = 33165;
+	// instance npc
+	private static final int Vanguard_camptain = 33170;
+	private static final int Vanguard_Ellis = 33171;
+	private static final int Vanguard_Barton = 33172;
+	private static final int Vanguard_Xaok = 33173;
+	private static final int Vanguard_Ellia = 33174;
 	// npc helpers
 	private static final int Van_Archer = 33414;
 	private static final int Van_Infantry = 33415;
@@ -113,121 +113,34 @@ public abstract class SagasSuperclass extends Quest
 	protected void init()
 	{
 		addStartNpc(StartNPC);
-		addTalkId(StartNPC);
-		addTalkId(Avanguard_aden);
-		addTalkId(Avanguard_corpse1);
-		addTalkId(Avanguard_corpse2);
-		addTalkId(Avanguard_corpse3);
-		addTalkId(Avanguard_corpse4);
-		addTalkId(Avanguard_member);
-		addTalkId(Avanguard_camptain);
-		addTalkId(Avanguard_Ellis);
-		addTalkId(Avanguard_Barton);
-		addTalkId(Avanguard_Xaok);
-		addTalkId(Avanguard_Ellia);
-		addQuestItem(DeadSoldierOrbs);
-		addQuestItem(Ring_Shout);
+		addTalkId(StartNPC, Vanguard_aden, Vanguard_corpse1, Vanguard_corpse2, Vanguard_corpse3, Vanguard_corpse4, Vanguard_member, Vanguard_camptain, Vanguard_Ellis, Vanguard_Barton, Vanguard_Xaok, Vanguard_Ellia);
+		addQuestItem(DeadSoldierOrbs, Ring_Shout);
 		addLevelCheck(76, 99);
 	}
 	
-	private static void initFriendNpc(Player player)
-	{
-		int npcId1 = Integer.parseInt(player.getVar("sel1")); // first chosen
-		int npcId2 = Integer.parseInt(player.getVar("sel2")); // second chosen
-		int npcId3 = Avanguard_camptain; // adolf
-		int npcId4 = Van_Archer; // 3 archers
-		int npcId5 = Van_Infantry; // 3 infantry soldiers
-		// spawn npc helpers
-		NpcInstance sel1 = player.getReflection().addSpawnWithoutRespawn(npcId1, new Location(55976, -175672, -7980, 49151), 0);
-		NpcInstance sel2 = player.getReflection().addSpawnWithoutRespawn(npcId2, new Location(56328, -175672, -7980, 49151), 0);
-		NpcInstance adolf = player.getReflection().addSpawnWithoutRespawn(npcId3, new Location(56168, -175576, -7974, 49151), 0);
-		// archers
-		NpcInstance archer1 = player.getReflection().addSpawnWithoutRespawn(npcId4, new Location(56392, -176232, -7980, 49151), 0);
-		NpcInstance archer2 = player.getReflection().addSpawnWithoutRespawn(npcId4, new Location(56184, -176168, -7974, 49151), 0);
-		NpcInstance archer3 = player.getReflection().addSpawnWithoutRespawn(npcId4, new Location(55976, -176136, -7980, 49151), 0);
-		// infantry
-		NpcInstance infantry1 = player.getReflection().addSpawnWithoutRespawn(npcId5, new Location(56168, -176712, -7973, 49151), 0);
-		NpcInstance infantry2 = player.getReflection().addSpawnWithoutRespawn(npcId5, new Location(55960, -176696, -7973, 49151), 0);
-		NpcInstance infantry3 = player.getReflection().addSpawnWithoutRespawn(npcId5, new Location(56376, -176712, -7973, 49151), 0);
-		
-		switch (npcId1)
-		{
-			case 33171:
-				sel1.setAI(new NpcHealerAI(sel1));
-				break;
-			
-			case 33172:
-				sel1.setAI(new NpcWarriorAI(sel1));
-				break;
-			
-			case 33173:
-				sel1.setAI(new NpcArcherAI(sel1));
-				break;
-			
-			case 33174:
-				sel1.setAI(new NpcMageAI(sel1));
-				break;
-			
-			default:
-				break;
-		}
-		
-		switch (npcId2)
-		{
-			case 33171:
-				sel2.setAI(new NpcHealerAI(sel2));
-				break;
-			
-			case 33172:
-				sel2.setAI(new NpcWarriorAI(sel2));
-				break;
-			
-			case 33173:
-				sel2.setAI(new NpcArcherAI(sel2));
-				break;
-			
-			case 33174:
-				sel2.setAI(new NpcMageAI(sel2));
-				break;
-			
-			default:
-				break;
-		}
-		
-		adolf.setAI(new NpcWarriorAI(adolf));
-		archer1.setAI(new NpcArcherAI(archer1));
-		archer2.setAI(new NpcArcherAI(archer2));
-		archer3.setAI(new NpcArcherAI(archer3));
-		infantry1.setAI(new NpcWarriorAI(infantry1));
-		infantry2.setAI(new NpcWarriorAI(infantry2));
-		infantry3.setAI(new NpcWarriorAI(infantry3));
-		player.unsetVar("sel1");
-		player.unsetVar("sel2");
-	}
-	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
-		Player player = st.getPlayer();
+		final Player player = qs.getPlayer();
 		
-		if (event.equalsIgnoreCase(StartNPC + "-5.htm"))
+		if (event.equals(StartNPC + "-5.htm"))
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.playSound(SOUND_ACCEPT);
 		}
-		else if (event.equalsIgnoreCase("33407-1.htm"))
+		else if (event.equals("33407-1.htm"))
 		{
-			st.setCond(2);
-			st.playSound(SOUND_ACCEPT);
+			qs.setCond(2);
+			qs.playSound(SOUND_ACCEPT);
 		}
-		else if (event.equalsIgnoreCase("33407-4.htm"))
+		else if (event.equals("33407-4.htm"))
 		{
-			st.takeItems(DeadSoldierOrbs, -1);
-			st.setCond(4);
+			qs.takeItems(DeadSoldierOrbs, -1);
+			qs.setCond(4);
 		}
-		else if (event.equalsIgnoreCase("33166-1.htm"))
+		else if (event.equals("33166-1.htm"))
 		{
 			if (player.getVar("orb1") != null)
 			{
@@ -235,11 +148,11 @@ public abstract class SagasSuperclass extends Quest
 			}
 			
 			player.setVar("orb1", "1", -1);
-			st.giveItems(DeadSoldierOrbs, 1);
-			st.playSound(SOUND_MIDDLE);
-			checkOrbs(player, st);
+			qs.giveItems(DeadSoldierOrbs, 1);
+			qs.playSound(SOUND_MIDDLE);
+			checkOrbs(player, qs);
 		}
-		else if (event.equalsIgnoreCase("33167-1.htm"))
+		else if (event.equals("33167-1.htm"))
 		{
 			if (player.getVar("orb2") != null)
 			{
@@ -247,11 +160,11 @@ public abstract class SagasSuperclass extends Quest
 			}
 			
 			player.setVar("orb2", "1", -1);
-			st.giveItems(DeadSoldierOrbs, 1);
-			st.playSound(SOUND_MIDDLE);
-			checkOrbs(player, st);
+			qs.giveItems(DeadSoldierOrbs, 1);
+			qs.playSound(SOUND_MIDDLE);
+			checkOrbs(player, qs);
 		}
-		else if (event.equalsIgnoreCase("33168-1.htm"))
+		else if (event.equals("33168-1.htm"))
 		{
 			if (player.getVar("orb3") != null)
 			{
@@ -259,11 +172,11 @@ public abstract class SagasSuperclass extends Quest
 			}
 			
 			player.setVar("orb3", "1", -1);
-			st.giveItems(DeadSoldierOrbs, 1);
-			st.playSound(SOUND_MIDDLE);
-			checkOrbs(player, st);
+			qs.giveItems(DeadSoldierOrbs, 1);
+			qs.playSound(SOUND_MIDDLE);
+			checkOrbs(player, qs);
 		}
-		else if (event.equalsIgnoreCase("33169-1.htm"))
+		else if (event.equals("33169-1.htm"))
 		{
 			if (player.getVar("orb4") != null)
 			{
@@ -271,27 +184,27 @@ public abstract class SagasSuperclass extends Quest
 			}
 			
 			player.setVar("orb4", "1", -1);
-			st.giveItems(DeadSoldierOrbs, 1);
-			st.playSound(SOUND_MIDDLE);
-			checkOrbs(player, st);
+			qs.giveItems(DeadSoldierOrbs, 1);
+			qs.playSound(SOUND_MIDDLE);
+			checkOrbs(player, qs);
 		}
-		else if (event.equalsIgnoreCase("33170-2.htm"))
+		else if (event.equals("33170-2.htm"))
 		{
-			st.setCond(6);
-			st.playSound(SOUND_MIDDLE);
+			qs.setCond(6);
+			qs.playSound(SOUND_MIDDLE);
 		}
-		else if (event.equalsIgnoreCase("33170-6.htm"))
+		else if (event.equals("33170-6.htm"))
 		{
-			st.setCond(10);
+			qs.setCond(10);
 			
-			if (st.getQuestItemsCount(Ring_Shout) == 0)
+			if (qs.getQuestItemsCount(Ring_Shout) == 0)
 			{
-				st.giveItems(Ring_Shout, 1); // ring
+				qs.giveItems(Ring_Shout, 1); // ring
 			}
 			
 			Functions.npcSay(npc, NpcString.THE_CRY_OF_FATE_PENDANT_WILL_BE_HELPFUL_TO_YOU_PLEASE_EQUIP_IT_AND_BRING_OUT_THE_POWER_OF_THE_PENDANT_TO_PREPARE_FOR_THE_NEXT_FIGHT);
 		}
-		else if (event.equalsIgnoreCase("selection"))
+		else if (event.equals("selection"))
 		{
 			if (player.getVar("sel1") == null)
 			{
@@ -304,11 +217,11 @@ public abstract class SagasSuperclass extends Quest
 			{
 				player.setVar("sel2", npc.getId(), -1);
 				npc.deleteMe();
-				st.setCond(7);
+				qs.setCond(7);
 				return null;
 			}
 		}
-		else if (event.equalsIgnoreCase("enterinstance"))
+		else if (event.equals("enterinstance"))
 		{
 			if (!_npcWaves.isEmpty())
 			{
@@ -319,86 +232,86 @@ public abstract class SagasSuperclass extends Quest
 			player.unsetVar("sel1");
 			player.unsetVar("sel2");
 			// maybe take some other quest items?
-			st.setCond(5);
-			enterInstance(st, 185);
+			qs.setCond(5);
+			enterInstance(qs, 185);
 			return null;
 		}
-		else if (event.equalsIgnoreCase("battleField"))
+		else if (event.equals("battleField"))
 		{
 			// missing parts of the instance:
 			// init npcs
 			initFriendNpc(player);
 			// init waves
-			st.startQuestTimer("wave1", 2000);
+			qs.startQuestTimer("wave1", 2000);
 			player.teleToLocation(56168, -175576, -7974, player.getReflection().getId());
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
-			st.setCond(8);
+			qs.setCond(8);
 			return null;
 		}
-		else if (event.equalsIgnoreCase("wave1"))
+		else if (event.equals("wave1"))
 		{
 			initWave1(player);
 			return null;
 		}
-		else if (event.equalsIgnoreCase("2"))
+		else if (event.equals("2"))
 		{
 			initWave2(player);
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			return null;
 		}
-		else if (event.equalsIgnoreCase("3"))
+		else if (event.equals("3"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave3(player);
 			return null;
 		}
-		else if (event.equalsIgnoreCase("4"))
+		else if (event.equals("4"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave4(player);
 			return null;
 		}
-		else if (event.equalsIgnoreCase("5"))
+		else if (event.equals("5"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave5(player);
 			return null;
 		}
-		else if (event.equalsIgnoreCase("6"))
+		else if (event.equals("6"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave6(player);
 			return null;
 		}
-		else if (event.equalsIgnoreCase("8"))
+		else if (event.equals("8"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave8(player);
-			st.startQuestTimer("9", 30000);
+			qs.startQuestTimer("9", 30000);
 			return null;
 		}
-		else if (event.equalsIgnoreCase("9"))
+		else if (event.equals("9"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave9(player);
-			st.startQuestTimer("10", 30000);
+			qs.startQuestTimer("10", 30000);
 			return null;
 		}
-		else if (event.equalsIgnoreCase("10"))
+		else if (event.equals("10"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave10(player);
-			st.startQuestTimer("11", 30000);
+			qs.startQuestTimer("11", 30000);
 			return null;
 		}
-		else if (event.equalsIgnoreCase("11"))
+		else if (event.equals("11"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave11(player);
-			st.startQuestTimer("12", 30000);
+			qs.startQuestTimer("12", 30000);
 			return null;
 		}
-		else if (event.equalsIgnoreCase("12"))
+		else if (event.equals("12"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave12(player);
@@ -407,7 +320,7 @@ public abstract class SagasSuperclass extends Quest
 			player.setVar("wave", 12, -1);
 			return null;
 		}
-		else if (event.equalsIgnoreCase("13"))
+		else if (event.equals("13"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.I_DEATH_WOUND_CHAMPION_OF_SHILEN_SHALL_END_YOUR_WORLD, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave13(player);
@@ -416,41 +329,41 @@ public abstract class SagasSuperclass extends Quest
 			player.setVar("wave", 13, -1);
 			return null;
 		}
-		else if (event.equalsIgnoreCase("firstStandCompleted"))
+		else if (event.equals("firstStandCompleted"))
 		{
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_HAVE_STOPPED_THEIR_ATTACK_REST_AND_THEN_SPEAK_WITH_ADOLPH, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
-			st.setCond(9);
+			qs.setCond(9);
 			return null;
 		}
-		else if (event.equalsIgnoreCase("engagesecondstand"))
+		else if (event.equals("engagesecondstand"))
 		{
 			// init second stand
 			// init waves
-			st.startQuestTimer("8", 30000);
-			st.setCond(11);
+			qs.startQuestTimer("8", 30000);
+			qs.setCond(11);
 			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave7(player);
 			return null;
 		}
-		else if (event.equalsIgnoreCase("secondStandCompleted"))
+		else if (event.equals("secondStandCompleted"))
 		{
 			player.unsetVar("wave");
-			st.setCond(12);
+			qs.setCond(12);
 			return null;
 		}
 		else if (event.startsWith("giveme"))
 		{
-			if (event.equalsIgnoreCase("givemered"))
+			if (event.equals("givemered"))
 			{
-				st.giveItems(9570, 1);
+				qs.giveItems(9570, 1);
 			}
-			else if (event.equalsIgnoreCase("givemeblue"))
+			else if (event.equals("givemeblue"))
 			{
-				st.giveItems(9571, 1);
+				qs.giveItems(9571, 1);
 			}
-			else if (event.equalsIgnoreCase("givemegreen"))
+			else if (event.equals("givemegreen"))
 			{
-				st.giveItems(9572, 1);
+				qs.giveItems(9572, 1);
 			}
 			
 			int _reqClass = -1;
@@ -470,19 +383,40 @@ public abstract class SagasSuperclass extends Quest
 			
 			player.setClassId(_reqClass, false, false);
 			player.broadcastPacket(new MagicSkillUse(player, player, 5103, 1, 1000, 0));
-			st.giveItems(ADENA_ID, 5000000);
-			st.addExpAndSp(2050000, 0);
-			st.giveItems(9627, 1);
-			st.takeItems(DeadSoldierOrbs, -1);
-			st.setState(COMPLETED);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
+			qs.giveItems(ADENA_ID, 5000000);
+			qs.addExpAndSp(2050000, 0);
+			qs.giveItems(9627, 1);
+			qs.takeItems(DeadSoldierOrbs, -1);
+			qs.setState(COMPLETED);
+			qs.exitCurrentQuest(false);
+			qs.playSound(SOUND_FINISH);
 			player.broadcastUserInfo();
 			player.sendPacket(new ExShowScreenMessage(NpcString.CONGRATULATIONS_YOU_WILL_NOW_GRADUATE_FROM_THE_CLAN_ACADEMY_AND_LEAVE_YOUR_CURRENT_CLAN_AS_A_GRADUATE_OF_THE_ACADEMY_YOU_CAN_IMMEDIATELY_JOIN_A_CLAN_AS_A_REGULAR_MEMBER_WITHOUT_BEING_SUBJECT_TO_ANY_PENALTIES, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			return StartNPC + "-7.htm";
 		}
 		
 		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		final Player player = qs.getPlayer();
+		final int wave = Integer.parseInt(player.getVar("wave"));
+		
+		if (npc.getId() == Death_wound)
+		{
+			player.sendPacket(new ExShowScreenMessage(NpcString.AGH_HUMANS_HA_IT_DOES_NOT_MATTER_YOUR_WORLD_WILL_END_ANYWAYS, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
+			qs.startQuestTimer("secondStandCompleted", 1000);
+			return null;
+		}
+		
+		if (checkWave(player, npc, wave, qs))
+		{
+			return null;
+		}
+		
+		return null;
 	}
 	
 	private void initWave13(Player player)
@@ -822,27 +756,6 @@ public abstract class SagasSuperclass extends Quest
 		}
 	}
 	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		Player player = st.getPlayer();
-		int wave = Integer.parseInt(player.getVar("wave"));
-		
-		if (npc.getId() == Death_wound)
-		{
-			player.sendPacket(new ExShowScreenMessage(NpcString.AGH_HUMANS_HA_IT_DOES_NOT_MATTER_YOUR_WORLD_WILL_END_ANYWAYS, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
-			st.startQuestTimer("secondStandCompleted", 1000);
-			return null;
-		}
-		
-		if (checkWave(player, npc, wave, st))
-		{
-			return null;
-		}
-		
-		return null;
-	}
-	
 	private static boolean checkWave(Player player, NpcInstance npc, int waveId, QuestState st)
 	{
 		if (_npcWaves.contains(npc))
@@ -876,12 +789,12 @@ public abstract class SagasSuperclass extends Quest
 		return true;
 	}
 	
-	private static void checkOrbs(Player player, QuestState st)
+	private static void checkOrbs(Player player, QuestState qs)
 	{
-		if (st.getQuestItemsCount(DeadSoldierOrbs) == 4)
+		if (qs.getQuestItemsCount(DeadSoldierOrbs) == 4)
 		{
-			st.playSound(SOUND_MIDDLE);
-			st.setCond(3);
+			qs.playSound(SOUND_MIDDLE);
+			qs.setCond(3);
 			player.unsetVar("orb1");
 			player.unsetVar("orb2");
 			player.unsetVar("orb3");
@@ -890,12 +803,12 @@ public abstract class SagasSuperclass extends Quest
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		int id = st.getState();
+		int cond = qs.getCond();
+		int id = qs.getState();
 		int npcId = npc.getId();
-		Player player = st.getPlayer();
+		Player player = qs.getPlayer();
 		String htmltext = "noquest";
 		
 		if (!canTakeQuest(player))
@@ -906,7 +819,7 @@ public abstract class SagasSuperclass extends Quest
 		if (id == COMPLETED)
 		{
 			// QUEST COMPLETED BUT PLAYER WANT TO TRICLASS WITH ANOTHER SUBCLASS
-			st.exitCurrentQuest(true);
+			qs.exitCurrentQuest(true);
 		}
 		
 		if (npcId == StartNPC)
@@ -924,7 +837,7 @@ public abstract class SagasSuperclass extends Quest
 				return StartNPC + "-6.htm";
 			}
 		}
-		else if (npcId == Avanguard_aden)
+		else if (npcId == Vanguard_aden)
 		{
 			if (cond == 1)
 			{
@@ -939,42 +852,42 @@ public abstract class SagasSuperclass extends Quest
 				return "33407-3.htm";
 			}
 		}
-		else if (npcId == Avanguard_corpse1)
+		else if (npcId == Vanguard_corpse1)
 		{
 			if (cond == 2)
 			{
 				return "33166.htm";
 			}
 		}
-		else if (npcId == Avanguard_corpse2)
+		else if (npcId == Vanguard_corpse2)
 		{
 			if (cond == 2)
 			{
 				return "33167.htm";
 			}
 		}
-		else if (npcId == Avanguard_corpse3)
+		else if (npcId == Vanguard_corpse3)
 		{
 			if (cond == 2)
 			{
 				return "33168.htm";
 			}
 		}
-		else if (npcId == Avanguard_corpse4)
+		else if (npcId == Vanguard_corpse4)
 		{
 			if (cond == 2)
 			{
 				return "33169.htm";
 			}
 		}
-		else if (npcId == Avanguard_member)
+		else if (npcId == Vanguard_member)
 		{
 			if (cond >= 4)
 			{
 				return "33165.htm";
 			}
 		}
-		else if (npcId == Avanguard_camptain)
+		else if (npcId == Vanguard_camptain)
 		{
 			if (cond == 5)
 			{
@@ -994,34 +907,34 @@ public abstract class SagasSuperclass extends Quest
 			}
 			else if (cond == 12)
 			{
-				st.setCond(13);
-				st.giveItems(736, 1); // SOE
+				qs.setCond(13);
+				qs.giveItems(736, 1); // SOE
 				npc.broadcastPacket(new SocialAction(npc.getObjectId(), 3));
 				return "33170-8.htm";
 			}
 		}
-		else if (npcId == Avanguard_Ellis)
+		else if (npcId == Vanguard_Ellis)
 		{
 			if (cond == 6)
 			{
 				return "33171-1.htm";
 			}
 		}
-		else if (npcId == Avanguard_Barton)
+		else if (npcId == Vanguard_Barton)
 		{
 			if (cond == 6)
 			{
 				return "33172-1.htm";
 			}
 		}
-		else if (npcId == Avanguard_Xaok)
+		else if (npcId == Vanguard_Xaok)
 		{
 			if (cond == 6)
 			{
 				return "33173-1.htm";
 			}
 		}
-		else if (npcId == Avanguard_Ellia)
+		else if (npcId == Vanguard_Ellia)
 		{
 			if (cond == 6)
 			{
@@ -1030,6 +943,81 @@ public abstract class SagasSuperclass extends Quest
 		}
 		
 		return htmltext;
+	}
+	
+	private static void initFriendNpc(Player player)
+	{
+		int npcId1 = Integer.parseInt(player.getVar("sel1")); // first chosen
+		int npcId2 = Integer.parseInt(player.getVar("sel2")); // second chosen
+		int npcId3 = Vanguard_camptain; // adolf
+		int npcId4 = Van_Archer; // 3 archers
+		int npcId5 = Van_Infantry; // 3 infantry soldiers
+		// spawn npc helpers
+		NpcInstance sel1 = player.getReflection().addSpawnWithoutRespawn(npcId1, new Location(55976, -175672, -7980, 49151), 0);
+		NpcInstance sel2 = player.getReflection().addSpawnWithoutRespawn(npcId2, new Location(56328, -175672, -7980, 49151), 0);
+		NpcInstance adolf = player.getReflection().addSpawnWithoutRespawn(npcId3, new Location(56168, -175576, -7974, 49151), 0);
+		// archers
+		NpcInstance archer1 = player.getReflection().addSpawnWithoutRespawn(npcId4, new Location(56392, -176232, -7980, 49151), 0);
+		NpcInstance archer2 = player.getReflection().addSpawnWithoutRespawn(npcId4, new Location(56184, -176168, -7974, 49151), 0);
+		NpcInstance archer3 = player.getReflection().addSpawnWithoutRespawn(npcId4, new Location(55976, -176136, -7980, 49151), 0);
+		// infantry
+		NpcInstance infantry1 = player.getReflection().addSpawnWithoutRespawn(npcId5, new Location(56168, -176712, -7973, 49151), 0);
+		NpcInstance infantry2 = player.getReflection().addSpawnWithoutRespawn(npcId5, new Location(55960, -176696, -7973, 49151), 0);
+		NpcInstance infantry3 = player.getReflection().addSpawnWithoutRespawn(npcId5, new Location(56376, -176712, -7973, 49151), 0);
+		
+		switch (npcId1)
+		{
+			case Vanguard_Ellis:
+				sel1.setAI(new NpcHealerAI(sel1));
+				break;
+			
+			case Vanguard_Barton:
+				sel1.setAI(new NpcWarriorAI(sel1));
+				break;
+			
+			case Vanguard_Xaok:
+				sel1.setAI(new NpcArcherAI(sel1));
+				break;
+			
+			case Vanguard_Ellia:
+				sel1.setAI(new NpcMageAI(sel1));
+				break;
+			
+			default:
+				break;
+		}
+		
+		switch (npcId2)
+		{
+			case Vanguard_Ellis:
+				sel2.setAI(new NpcHealerAI(sel2));
+				break;
+			
+			case Vanguard_Barton:
+				sel2.setAI(new NpcWarriorAI(sel2));
+				break;
+			
+			case Vanguard_Xaok:
+				sel2.setAI(new NpcArcherAI(sel2));
+				break;
+			
+			case Vanguard_Ellia:
+				sel2.setAI(new NpcMageAI(sel2));
+				break;
+			
+			default:
+				break;
+		}
+		
+		adolf.setAI(new NpcWarriorAI(adolf));
+		archer1.setAI(new NpcArcherAI(archer1));
+		archer2.setAI(new NpcArcherAI(archer2));
+		archer3.setAI(new NpcArcherAI(archer3));
+		infantry1.setAI(new NpcWarriorAI(infantry1));
+		infantry2.setAI(new NpcWarriorAI(infantry2));
+		infantry3.setAI(new NpcWarriorAI(infantry3));
+		player.unsetVar("sel1");
+		player.unsetVar("sel2");
 	}
 	
 	private boolean canTakeQuest(Player player)
@@ -1059,8 +1047,7 @@ public abstract class SagasSuperclass extends Quest
 	
 	QuestState findQuest(Player player)
 	{
-		QuestState st = null;
-		st = player.getQuestState(Quests.get(questId()));
+		QuestState st = player.getQuestState(Quests.get(questId()));
 		
 		if (st != null)
 		{

@@ -25,13 +25,11 @@ public class Q10741_ADraughtForTheCold extends Quest implements ScriptFile
 	// Npcs
 	private static final int Sivanthe = 33951;
 	private static final int Leira = 33952;
-	
-	// Mobs to Kill
+	// Monsters
 	private static final int Honeybee = 23452;
 	private static final int Kiku = 23453;
 	private static final int RobustHoneybee = 23484;
-	
-	// Quest Items
+	// Items
 	private static final int EmptyHoneyJar = 39527;
 	private static final int SweetHoney = 39528;
 	private static final int NutritiousMeat = 39529;
@@ -72,6 +70,7 @@ public class Q10741_ADraughtForTheCold extends Quest implements ScriptFile
 				qs.playSound(SOUND_FINISH);
 				break;
 		}
+		
 		return htmltext;
 	}
 	
@@ -114,6 +113,7 @@ public class Q10741_ADraughtForTheCold extends Quest implements ScriptFile
 				}
 				break;
 		}
+		
 		return htmltext;
 	}
 	

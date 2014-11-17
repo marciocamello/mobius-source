@@ -143,14 +143,13 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 		}
 		String htmltext = "noquest";
 		final int cond = qs.getCond();
-		final int npcId = npc.getId();
 		boolean e_warrior = qs.getPlayer().getClassId().getId() == 182;
 		boolean e_wizard = qs.getPlayer().getClassId().getId() == 183;
 		
-		switch (npcId)
+		switch (npc.getId())
 		{
 			case Katalin:
-				switch (cond)
+				switch (npc.getId())
 				{
 					case 0:
 						if (isAvailableFor(qs.getPlayer()))
@@ -282,31 +281,31 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 	@Override
 	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		final int cond = qs.getCond();
-		
-		if (cond == 1)
+		switch (qs.getCond())
 		{
-			qs.playSound(SOUND_MIDDLE);
-			if (qs.getPlayer().getClassId().getId() == 182)
-			{
-				qs.setCond(3);
-			}
-			else if (qs.getPlayer().getClassId().getId() == 183)
-			{
-				qs.setCond(2);
-			}
-		}
-		else if (cond == 6)
-		{
-			qs.playSound(SOUND_MIDDLE);
-			if (qs.getPlayer().getClassId().getId() == 182)
-			{
-				qs.setCond(8);
-			}
-			else if (qs.getPlayer().getClassId().getId() == 183)
-			{
-				qs.setCond(7);
-			}
+			case 1:
+				qs.playSound(SOUND_MIDDLE);
+				if (qs.getPlayer().getClassId().getId() == 182)
+				{
+					qs.setCond(3);
+				}
+				else if (qs.getPlayer().getClassId().getId() == 183)
+				{
+					qs.setCond(2);
+				}
+				break;
+			
+			case 6:
+				qs.playSound(SOUND_MIDDLE);
+				if (qs.getPlayer().getClassId().getId() == 182)
+				{
+					qs.setCond(8);
+				}
+				else if (qs.getPlayer().getClassId().getId() == 183)
+				{
+					qs.setCond(7);
+				}
+				break;
 		}
 		
 		return null;
@@ -337,10 +336,9 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 	// Need to use this (quest need to be available only at one npc for warrior/wizard)
 	public boolean checkStartNpc(NpcInstance npc, Player player)
 	{
-		int npcId = npc.getId();
-		int classId = player.getClassId().getId();
+		final int classId = player.getClassId().getId();
 		
-		switch (npcId)
+		switch (npc.getId())
 		{
 			case Katalin:
 				if (classId == 182)

@@ -60,6 +60,7 @@ public class Q10740_NeverForget extends Quest implements ScriptFile
 				qs.playSound(SOUND_ACCEPT);
 				htmltext = "33951-3.htm";
 				break;
+			
 			case "quest_cont":
 				qs.takeItems(UnnamedRelics, 20);
 				qs.setCond(3);
@@ -80,9 +81,8 @@ public class Q10740_NeverForget extends Quest implements ScriptFile
 		}
 		String htmltext = "noquest";
 		final int cond = qs.getCond();
-		final int npcId = npc.getId();
 		
-		switch (npcId)
+		switch (npc.getId())
 		{
 			case Sivanthe:
 				switch (cond)
@@ -115,6 +115,7 @@ public class Q10740_NeverForget extends Quest implements ScriptFile
 						break;
 				}
 				break;
+			
 			case RemembranceTower:
 				switch (cond)
 				{
@@ -133,27 +134,23 @@ public class Q10740_NeverForget extends Quest implements ScriptFile
 				}
 				break;
 		}
+		
 		return htmltext;
 	}
 	
 	@Override
 	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		final int npcId = npc.getId();
-		final int cond = qs.getCond();
-		if (cond == 1)
+		if (qs.getCond() == 1)
 		{
-			if ((npcId == KeenFloato) || (npcId == Ratel) || (npcId == RobustRatel))
+			qs.giveItems(UnnamedRelics, 1);
+			qs.playSound(SOUND_ITEMGET);
+			Relics++;
+			if (Relics >= 20)
 			{
-				qs.giveItems(UnnamedRelics, 1);
-				qs.playSound(SOUND_ITEMGET);
-				Relics++;
-				if (Relics >= 20)
-				{
-					qs.setCond(2);
-					qs.playSound(SOUND_MIDDLE);
-					Relics = 0;
-				}
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				Relics = 0;
 			}
 		}
 		return null;
