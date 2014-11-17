@@ -45,21 +45,6 @@ public class Q10383_FergasonsOffer extends Quest implements ScriptFile
 		23228
 	};
 	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public Q10383_FergasonsOffer()
 	{
 		super(2);
@@ -73,112 +58,123 @@ public class Q10383_FergasonsOffer extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("quest_accpted"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			htmltext = "sofa_sizraku_q10383_03.htm";
-		}
-		
-		if (event.equalsIgnoreCase("quest_next"))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-			htmltext = "maestro_ferguson_q10383_04.htm";
-		}
-		
-		if (event.equalsIgnoreCase("quest_done"))
-		{
-			st.giveItems(ADENA_ID, 3256740);
-			st.addExpAndSp(951127800, 435041400);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
-			htmltext = "sofa_aku_q10383_03.htm";
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		
-		if (npcId == SIZRAK)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "sofa_sizraku_q10383_05.htm";
-			}
-			else if (!isAvailableFor(st.getPlayer()))
-			{
-				htmltext = "sofa_sizraku_q10383_07.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = "sofa_sizraku_q10383_01.htm";
-			}
-			else if (cond > 0)
-			{
-				htmltext = "sofa_sizraku_q10383_06.htm";
-			}
-			else
-			{
-				htmltext = "sofa_sizraku_q10383_04.htm";
-			}
-		}
-		
-		if (npcId == FERGASON)
-		{
-			if (cond == 1)
-			{
-				htmltext = "maestro_ferguson_q10383_01.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "maestro_ferguson_q10383_05.htm";
-			}
-		}
-		
-		if (npcId == AKU)
-		{
-			if (cond == 2)
-			{
-				htmltext = "sofa_aku_q10383_01.htm";
-			}
-			else if (cond == 3)
-			{
-				htmltext = "sofa_aku_q10383_02.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if ((cond == 2) && (Util.contains(COUCH, npcId) & (st.getQuestItemsCount(UNSTABLE_PETRA) <= 20)))
-		{
-			st.rollAndGive(UNSTABLE_PETRA, 1, 30);
+			case "quest_accpted":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				htmltext = "sofa_sizraku_q10383_03.htm";
+				break;
 			
-			if (st.getQuestItemsCount(UNSTABLE_PETRA) == 20)
+			case "quest_next":
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				htmltext = "maestro_ferguson_q10383_04.htm";
+				break;
+			
+			case "quest_done":
+				qs.giveItems(ADENA_ID, 3256740);
+				qs.addExpAndSp(951127800, 435041400);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				htmltext = "sofa_aku_q10383_03.htm";
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		
+		switch (npc.getId())
+		{
+			case SIZRAK:
+				if (qs.isCompleted())
+				{
+					htmltext = "sofa_sizraku_q10383_05.htm";
+				}
+				else if (!isAvailableFor(qs.getPlayer()))
+				{
+					htmltext = "sofa_sizraku_q10383_07.htm";
+				}
+				else if (cond == 0)
+				{
+					htmltext = "sofa_sizraku_q10383_01.htm";
+				}
+				else if (cond > 0)
+				{
+					htmltext = "sofa_sizraku_q10383_06.htm";
+				}
+				else
+				{
+					htmltext = "sofa_sizraku_q10383_04.htm";
+				}
+				break;
+			
+			case FERGASON:
+				if (cond == 1)
+				{
+					htmltext = "maestro_ferguson_q10383_01.htm";
+				}
+				else if (cond == 2)
+				{
+					htmltext = "maestro_ferguson_q10383_05.htm";
+				}
+				break;
+			
+			case AKU:
+				if (cond == 2)
+				{
+					htmltext = "sofa_aku_q10383_01.htm";
+				}
+				else if (cond == 3)
+				{
+					htmltext = "sofa_aku_q10383_02.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if ((qs.getCond() == 2) && (Util.contains(COUCH, npc.getId()) & (qs.getQuestItemsCount(UNSTABLE_PETRA) <= 20)))
+		{
+			qs.rollAndGive(UNSTABLE_PETRA, 1, 30);
+			
+			if (qs.getQuestItemsCount(UNSTABLE_PETRA) == 20)
 			{
-				st.setCond(3);
-				st.playSound(SOUND_MIDDLE);
+				qs.setCond(3);
+				qs.playSound(SOUND_MIDDLE);
 			}
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

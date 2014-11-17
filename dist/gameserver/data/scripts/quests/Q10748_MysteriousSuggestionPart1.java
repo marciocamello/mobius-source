@@ -22,9 +22,9 @@ import lineage2.gameserver.scripts.ScriptFile;
  */
 public class Q10748_MysteriousSuggestionPart1 extends Quest implements ScriptFile
 {
-	// NPC'S
+	// Npc
 	private static final int MUSTERIOUS_BUTLER = 33685;
-	// Item's
+	// Items
 	private static final int TOURNAMENT_REMNANTS_I = 35544;
 	private static final int MYSTERIOUS_MARK = 34900;
 	
@@ -38,60 +38,56 @@ public class Q10748_MysteriousSuggestionPart1 extends Quest implements ScriptFil
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("grankain_lumiere_q10748_03.htm"))
+		if (event.equals("grankain_lumiere_q10748_03.htm"))
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.playSound(SOUND_ACCEPT);
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
 		String htmltext = "noquest";
+		final int cond = qs.getCond();
 		
-		if (npcId == MUSTERIOUS_BUTLER)
+		if (qs.isStarted())
 		{
-			if (st.isStarted())
+			if (cond == 1)
 			{
-				if (cond == 1)
+				htmltext = "grankain_lumiere_q10748_06.htm";
+			}
+			else if (cond == 2)
+			{
+				qs.giveItems(MYSTERIOUS_MARK, 1);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(this);
+				htmltext = "grankain_lumiere_q10748_07.htm";
+			}
+		}
+		else
+		{
+			if (isAvailableFor(qs.getPlayer()) && ((qs.getPlayer().getClan() != null) || (qs.getPlayer().getClan().getLevel() > 3)))
+			{
+				if (qs.isNowAvailable())
 				{
-					htmltext = "grankain_lumiere_q10748_06.htm";
+					htmltext = "grankain_lumiere_q10748_01.htm";
 				}
-				else if (cond == 2)
+				else
 				{
-					st.giveItems(MYSTERIOUS_MARK, 1);
-					st.playSound(SOUND_FINISH);
-					st.exitCurrentQuest(this);
-					htmltext = "grankain_lumiere_q10748_07.htm";
+					htmltext = "grankain_lumiere_q10748_05.htm";
 				}
 			}
 			else
 			{
-				if (isAvailableFor(st.getPlayer()) && ((st.getPlayer().getClan() != null) || (st.getPlayer().getClan().getLevel() > 3)))
-				{
-					if (st.isNowAvailable())
-					{
-						htmltext = "grankain_lumiere_q10748_01.htm";
-					}
-					else
-					{
-						htmltext = "grankain_lumiere_q10748_05.htm";
-					}
-				}
-				else
-				{
-					htmltext = "grankain_lumiere_q10748_04.htm";
-				}
+				htmltext = "grankain_lumiere_q10748_04.htm";
 			}
 		}
 		
@@ -101,18 +97,15 @@ public class Q10748_MysteriousSuggestionPart1 extends Quest implements ScriptFil
 	@Override
 	public void onLoad()
 	{
-		//
 	}
 	
 	@Override
 	public void onReload()
 	{
-		//
 	}
 	
 	@Override
 	public void onShutdown()
 	{
-		//
 	}
 }

@@ -24,9 +24,99 @@ import lineage2.gameserver.scripts.ScriptFile;
  */
 public class Q10381_ToTheSeedOfHellfire extends Quest implements ScriptFile
 {
+	// Npcs
 	private final static int KEUCEREUS = 32548;
 	private final static int SIZRAK = 33669;
 	private final static int KBALDIR = 32733;
+	
+	public Q10381_ToTheSeedOfHellfire()
+	{
+		super(false);
+		addStartNpc(KEUCEREUS);
+		addTalkId(KBALDIR, SIZRAK);
+		addLevelCheck(97, 99);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "quest_accpted":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				htmltext = "kserth_q10381_03.htm";
+				break;
+			
+			case "quest_next":
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				htmltext = "kbarldire_q10381_03.htm";
+				break;
+			
+			case "quest_done":
+				qs.giveItems(ADENA_ID, 3256740);
+				qs.addExpAndSp(951127800, 435041400);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				htmltext = "sofa_sizraku_q10381_03.htm";
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		
+		switch (npc.getId())
+		{
+			case KEUCEREUS:
+				if (qs.isCompleted())
+				{
+					htmltext = "kserth_q10381_05.htm";
+				}
+				else if ((cond == 0) && isAvailableFor(qs.getPlayer()))
+				{
+					htmltext = "kserth_q10381_01.htm";
+				}
+				else if (cond > 0)
+				{
+					htmltext = "kserth_q10381_06.htm";
+				}
+				else
+				{
+					htmltext = "kserth_q10381_04.htm";
+				}
+				break;
+			
+			case KBALDIR:
+				if (cond == 2)
+				{
+					htmltext = "kbarldire_q10381_04.htm";
+				}
+				else if (cond > 0)
+				{
+					htmltext = "kbarldire_q10381_01.htm";
+				}
+				break;
+			
+			case SIZRAK:
+				if (cond == 2)
+				{
+					htmltext = "sofa_sizraku_q10381_01.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
 	
 	@Override
 	public void onLoad()
@@ -41,96 +131,5 @@ public class Q10381_ToTheSeedOfHellfire extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10381_ToTheSeedOfHellfire()
-	{
-		super(false);
-		addStartNpc(KEUCEREUS);
-		addTalkId(KBALDIR);
-		addTalkId(SIZRAK);
-		addLevelCheck(97, 99);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("quest_accpted"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			htmltext = "kserth_q10381_03.htm";
-		}
-		
-		if (event.equalsIgnoreCase("quest_next"))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-			htmltext = "kbarldire_q10381_03.htm";
-		}
-		
-		if (event.equalsIgnoreCase("quest_done"))
-		{
-			st.giveItems(ADENA_ID, 3256740);
-			st.addExpAndSp(951127800, 435041400);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
-			htmltext = "sofa_sizraku_q10381_03.htm";
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		
-		if (npcId == KEUCEREUS)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "kserth_q10381_05.htm";
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()))
-			{
-				htmltext = "kserth_q10381_01.htm";
-			}
-			else if (cond > 0)
-			{
-				htmltext = "kserth_q10381_06.htm";
-			}
-			else
-			{
-				htmltext = "kserth_q10381_04.htm";
-			}
-		}
-		
-		if (npcId == KBALDIR)
-		{
-			if (cond == 2)
-			{
-				htmltext = "kbarldire_q10381_04.htm";
-			}
-			else if (cond > 0)
-			{
-				htmltext = "kbarldire_q10381_01.htm";
-			}
-		}
-		
-		if (npcId == SIZRAK)
-		{
-			if (cond == 2)
-			{
-				htmltext = "sofa_sizraku_q10381_01.htm";
-			}
-		}
-		
-		return htmltext;
 	}
 }

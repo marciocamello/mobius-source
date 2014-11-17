@@ -82,9 +82,8 @@ public class Q10391_SuspiciousHelper extends Quest implements ScriptFile
 		}
 		String htmltext = "noquest";
 		final int cond = qs.getCond();
-		final int npcId = npc.getId();
 		
-		switch (npcId)
+		switch (npc.getId())
 		{
 			case Eli:
 				if ((cond == 0) && (qs.getPlayer().getLevel() >= 40) && (qs.getPlayer().getLevel() <= 46))

@@ -19,21 +19,7 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10388_ConspiracyBehindDoors extends Quest implements ScriptFile
 {
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
+	// Npcs
 	private static final int ELIA = 31329;
 	private static final int KARGOS = 33821;
 	private static final int HICHEN = 33820;
@@ -43,55 +29,54 @@ public class Q10388_ConspiracyBehindDoors extends Quest implements ScriptFile
 	{
 		super(true);
 		addStartNpc(ELIA);
-		addTalkId(KARGOS);
-		addTalkId(HICHEN);
-		addTalkId(RAZDEN);
+		addTalkId(KARGOS, HICHEN, RAZDEN);
 		addLevelCheck(97, 100);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equals("go.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equals("toCond2.htm"))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equals("toCond3.htm"))
-		{
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equals("final.htm"))
-		{
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
-			st.giveItems(ADENA_ID, 65136);
-			st.addExpAndSp(29638350, 2963835);
+			case "go.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "toCond2.htm":
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "toCond3.htm":
+				qs.setCond(3);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "final.htm":
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				qs.giveItems(ADENA_ID, 65136);
+				qs.addExpAndSp(29638350, 2963835);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		int id = st.getState();
+		final int npcId = npc.getId();
+		final int cond = qs.getCond();
 		
-		if (id == CREATED)
+		if (qs.getState() == CREATED)
 		{
-			if (st.getPlayer().getLevel() >= 97)
+			if (qs.getPlayer().getLevel() >= 97)
 			{
 				htmltext = "start.htm";
 			}
@@ -107,7 +92,7 @@ public class Q10388_ConspiracyBehindDoors extends Quest implements ScriptFile
 				return "cond1.htm";
 			}
 		}
-		else if (npcId == 33820)
+		else if (npcId == HICHEN)
 		{
 			if (cond == 2)
 			{
@@ -123,5 +108,20 @@ public class Q10388_ConspiracyBehindDoors extends Quest implements ScriptFile
 		}
 		
 		return htmltext;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

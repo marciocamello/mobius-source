@@ -22,10 +22,11 @@ import lineage2.gameserver.scripts.ScriptFile;
  */
 public class Q10504_JewelOfAntharas extends Quest implements ScriptFile
 {
-	// NPC's
+	// Npc
 	private static final int THEODRIC = 30755;
+	// Monster
 	private static final int ULTIMATE_ANTHARAS = 29068;
-	// Item's
+	// Items
 	private static final int CLEAR_CRYSTAL = 21905;
 	private static final int FILLED_CRYSTAL_ANTHARAS = 21907;
 	private static final int PORTAL_STONE = 3865;
@@ -40,41 +41,38 @@ public class Q10504_JewelOfAntharas extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("antharas_watchman_theodric_q10504_04.htm"))
+		if (event.equals("antharas_watchman_theodric_q10504_04.htm"))
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			st.giveItems(CLEAR_CRYSTAL, 1);
+			qs.setState(STARTED);
+			qs.setCond(1);
+			qs.playSound(SOUND_ACCEPT);
+			qs.giveItems(CLEAR_CRYSTAL, 1);
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
 		
-		if (npcId == THEODRIC)
+		switch (qs.getCond())
 		{
-			if (cond == 0)
-			{
-				if (st.getPlayer().getLevel() < 84)
+			case 0:
+				if (qs.getPlayer().getLevel() < 84)
 				{
 					htmltext = "antharas_watchman_theodric_q10504_00.htm";
 				}
-				else if (st.getQuestItemsCount(PORTAL_STONE) < 1)
+				else if (qs.getQuestItemsCount(PORTAL_STONE) < 1)
 				{
 					htmltext = "antharas_watchman_theodric_q10504_00a.htm";
 				}
-				else if (st.isNowAvailable())
+				else if (qs.isNowAvailable())
 				{
 					htmltext = "antharas_watchman_theodric_q10504_01.htm";
 				}
@@ -82,50 +80,47 @@ public class Q10504_JewelOfAntharas extends Quest implements ScriptFile
 				{
 					htmltext = "antharas_watchman_theodric_q10504_09.htm";
 				}
-			}
-			else if (cond == 1)
-			{
-				if (st.getQuestItemsCount(CLEAR_CRYSTAL) < 1)
+				break;
+			
+			case 1:
+				if (qs.getQuestItemsCount(CLEAR_CRYSTAL) < 1)
 				{
 					htmltext = "antharas_watchman_theodric_q10504_08.htm";
-					st.giveItems(CLEAR_CRYSTAL, 1);
+					qs.giveItems(CLEAR_CRYSTAL, 1);
 				}
 				else
 				{
 					htmltext = "antharas_watchman_theodric_q10504_05.htm";
 				}
-			}
-			else if (cond == 2)
-			{
-				if (st.getQuestItemsCount(FILLED_CRYSTAL_ANTHARAS) >= 1)
+				break;
+			
+			case 2:
+				if (qs.getQuestItemsCount(FILLED_CRYSTAL_ANTHARAS) >= 1)
 				{
 					htmltext = "antharas_watchman_theodric_q10504_07.htm";
-					st.takeAllItems(FILLED_CRYSTAL_ANTHARAS);
-					st.giveItems(JEWEL_OF_ANTHARAS, 1);
-					st.playSound(SOUND_FINISH);
-					st.exitCurrentQuest(this);
+					qs.takeAllItems(FILLED_CRYSTAL_ANTHARAS);
+					qs.giveItems(JEWEL_OF_ANTHARAS, 1);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(this);
 				}
 				else
 				{
 					htmltext = "antharas_watchman_theodric_q10504_06.htm";
 				}
-			}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if ((cond == 1) && (npcId == ULTIMATE_ANTHARAS))
+		if (qs.getCond() == 1)
 		{
-			st.takeAllItems(CLEAR_CRYSTAL);
-			st.giveItems(FILLED_CRYSTAL_ANTHARAS, 1);
-			st.setCond(2);
+			qs.takeAllItems(CLEAR_CRYSTAL);
+			qs.giveItems(FILLED_CRYSTAL_ANTHARAS, 1);
+			qs.setCond(2);
 		}
 		
 		return null;
