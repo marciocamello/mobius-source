@@ -47,128 +47,123 @@ public class Q10374_ThatPlaceSuccubus extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		if (event.equalsIgnoreCase("31292-07.htm"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		if (event.equalsIgnoreCase("31588-02.htm"))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		if (event.equalsIgnoreCase("32140-02.htm"))
-		{
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
+			case "31292-07.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "31588-02.htm":
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "32140-02.htm":
+				qs.setCond(3);
+				qs.playSound(SOUND_MIDDLE);
+				break;
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
 		String htmltext = "noquest";
 		
-		if (npcId == NPC_ANDREI)
+		switch (npc.getId())
 		{
-			switch (st.getState())
-			{
-				case COMPLETED:
-					htmltext = "31292-06.htm";
-					break;
-				
-				case CREATED:
-					if (st.getPlayer().getLevel() >= 80)
-					{
-						if (st.getPlayer().getClassId().level() >= 4)
+			case NPC_ANDREI:
+				switch (qs.getState())
+				{
+					case COMPLETED:
+						htmltext = "31292-06.htm";
+						break;
+					
+					case CREATED:
+						if (qs.getPlayer().getLevel() >= 80)
 						{
-							htmltext = "31292-01.htm";
+							if (qs.getPlayer().getClassId().level() >= 4)
+							{
+								htmltext = "31292-01.htm";
+							}
+							else
+							{
+								htmltext = "31292-04.htm";
+								qs.exitCurrentQuest(true);
+							}
 						}
 						else
 						{
-							htmltext = "31292-04.htm";
-							st.exitCurrentQuest(true);
+							htmltext = "31292-05.htm";
 						}
-					}
-					else
-					{
-						htmltext = "31292-05.htm";
-					}
+						break;
 					
-					break;
-				
-				case STARTED:
-					if (st.getCond() == 1)
+					case STARTED:
+						if (qs.getCond() == 1)
+						{
+							htmltext = "31292-08.htm";
+						}
+				}
+				break;
+			
+			case NPC_AGNES:
+				if (qs.isStarted())
+				{
+					if (qs.getCond() == 1)
 					{
-						htmltext = "31292-08.htm";
+						htmltext = "31588-01.htm";
 					}
-			}
-		}
-		else if (npcId == NPC_AGNES)
-		{
-			if (st.isStarted())
-			{
-				if (st.getCond() == 1)
-				{
-					htmltext = "31588-01.htm";
+					else if (qs.getCond() == 2)
+					{
+						htmltext = "31588-03.htm";
+					}
 				}
-				else if (st.getCond() == 2)
+				break;
+			
+			case NPC_ZENYA:
+				if (qs.isStarted())
 				{
-					htmltext = "31588-03.htm";
+					if (qs.getCond() == 2)
+					{
+						htmltext = "32140-01.htm";
+					}
+					else if (qs.getCond() == 3)
+					{
+						htmltext = "32140-03.htm";
+					}
+					else if (qs.getCond() == 4)
+					{
+						htmltext = "32140-04.htm";
+						qs.addExpAndSp(23747100, 27618200);
+						qs.giveItems(57, 500560);
+						qs.playSound(SOUND_FINISH);
+						qs.exitCurrentQuest(false);
+					}
 				}
-			}
-		}
-		else if (npcId == NPC_ZENYA)
-		{
-			if (st.isStarted())
-			{
-				if (st.getCond() == 2)
-				{
-					htmltext = "32140-01.htm";
-				}
-				else if (st.getCond() == 3)
-				{
-					htmltext = "32140-03.htm";
-				}
-				else if (st.getCond() == 4)
-				{
-					htmltext = "32140-04.htm";
-					st.addExpAndSp(23747100, 27618200);
-					st.giveItems(57, 500560);
-					st.playSound(SOUND_FINISH);
-					st.exitCurrentQuest(false);
-				}
-			}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if (st.getCond() != 3)
+		if ((qs.getCond() == 3) && updateKill(npc, qs))
 		{
-			return null;
-		}
-		
-		if (updateKill(npc, st))
-		{
-			st.unset(Mirage_Fighter);
-			st.unset(Warrior_Mirage);
-			st.unset(Shooter_Mirage);
-			st.unset(Shaman_Mirage);
-			st.unset(Martyr_Mirage);
-			st.setCond(4);
-			st.playSound(SOUND_MIDDLE);
+			qs.unset(Mirage_Fighter);
+			qs.unset(Warrior_Mirage);
+			qs.unset(Shooter_Mirage);
+			qs.unset(Shaman_Mirage);
+			qs.unset(Martyr_Mirage);
+			qs.setCond(4);
+			qs.playSound(SOUND_MIDDLE);
 		}
 		
 		return null;

@@ -12,7 +12,6 @@
  */
 package quests;
 
-import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
@@ -72,21 +71,6 @@ public class Q10371_GraspThyPower extends Quest implements ScriptFile
 	private static final String Shaman_item = "Shaman";
 	private static final String Bloody_item = "Bloody";
 	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public Q10371_GraspThyPower()
 	{
 		super(false);
@@ -106,79 +90,89 @@ public class Q10371_GraspThyPower extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("quest_ac"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			htmltext = "0-4.htm";
-		}
-		else if (event.equalsIgnoreCase("quest_rev"))
-		{
-			htmltext = "0-8.htm";
-			st.getPlayer().addExpAndSp(22641900, 25729500);
-			st.giveItems(57, 484990);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
+			case "quest_ac":
+				st.setState(STARTED);
+				st.setCond(1);
+				st.playSound(SOUND_ACCEPT);
+				htmltext = "0-4.htm";
+				break;
+			
+			case "quest_rev":
+				htmltext = "0-8.htm";
+				st.getPlayer().addExpAndSp(22641900, 25729500);
+				st.giveItems(57, 484990);
+				st.exitCurrentQuest(false);
+				st.playSound(SOUND_FINISH);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		Player player = st.getPlayer();
-		int classid = player.getClassId().getId();
 		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		final int classid = qs.getPlayer().getClassId().getId();
 		
-		if (npcId == gerkenshtein)
+		if (qs.isCompleted())
 		{
-			if (st.isCompleted())
+			htmltext = "0-c.htm";
+		}
+		else if (cond == 0)
+		{
+			if (isAvailableFor(qs.getPlayer()) && Util.contains(classesav, classid))
 			{
-				htmltext = "0-c.htm";
+				htmltext = "start.htm";
 			}
-			else if (cond == 0)
+			else
 			{
-				if (isAvailableFor(st.getPlayer()) && Util.contains(classesav, classid))
-				{
-					htmltext = "start.htm";
-				}
-				else
-				{
-					htmltext = TODO_FIND_HTML;
-				}
+				htmltext = TODO_FIND_HTML;
 			}
-			else if (cond == 1)
-			{
-				htmltext = "0-5.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "0-6.htm";
-			}
+		}
+		else if (cond == 1)
+		{
+			htmltext = "0-5.htm";
+		}
+		else if (cond == 2)
+		{
+			htmltext = "0-6.htm";
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		boolean doneKill = updateKill(npc, st);
-		
-		if (doneKill)
+		if (updateKill(npc, qs))
 		{
-			st.unset(Soldier_item);
-			st.unset(Shaman_item);
-			st.unset(Warrior_item);
-			st.unset(Bloody_item);
-			st.unset(Archer_item);
-			st.setCond(2);
+			qs.unset(Soldier_item);
+			qs.unset(Shaman_item);
+			qs.unset(Warrior_item);
+			qs.unset(Bloody_item);
+			qs.unset(Archer_item);
+			qs.setCond(2);
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

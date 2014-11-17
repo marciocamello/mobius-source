@@ -42,110 +42,102 @@ public class Q10375_SuccubusDisciples extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		if (event.equalsIgnoreCase("32140-06.htm"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		if (event.equalsIgnoreCase("32140-09.htm"))
-		{
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
+			case "32140-06.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "32140-09.htm":
+				qs.setCond(3);
+				qs.playSound(SOUND_MIDDLE);
+				break;
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
 		String htmltext = "noquest";
 		
-		if (npcId == NPC_ZENYA)
+		switch (qs.getState())
 		{
-			switch (st.getState())
-			{
-				case COMPLETED:
-					htmltext = "32140-05.htm";
-					break;
-				
-				case CREATED:
-					if (st.getPlayer().getLevel() >= 80)
+			case COMPLETED:
+				htmltext = "32140-05.htm";
+				break;
+			
+			case CREATED:
+				if (qs.getPlayer().getLevel() >= 80)
+				{
+					final QuestState state = qs.getPlayer().getQuestState(Q10374_ThatPlaceSuccubus.class);
+					
+					if ((qs.getPlayer().getClassId().level() == 4) && (state != null) && state.isCompleted())
 					{
-						QuestState qs = st.getPlayer().getQuestState(Q10374_ThatPlaceSuccubus.class);
-						
-						if ((st.getPlayer().getClassId().level() == 4) && (qs != null) && qs.isCompleted())
-						{
-							htmltext = "32140-01.htm";
-						}
-						else
-						{
-							htmltext = "32140-03.htm";
-							st.exitCurrentQuest(true);
-						}
+						htmltext = "32140-01.htm";
 					}
 					else
 					{
-						htmltext = "32140-04.htm";
+						htmltext = "32140-03.htm";
+						qs.exitCurrentQuest(true);
 					}
-					
-					break;
-				
-				case STARTED:
-					if (st.getCond() == 1)
-					{
-						htmltext = "32140-07.htm";
-					}
-					else if (st.getCond() == 2)
-					{
-						htmltext = "32140-08.htm";
-					}
-					else if (st.getCond() == 3)
-					{
-						htmltext = "32140-10.htm";
-					}
-					else if (st.getCond() == 4)
-					{
-						htmltext = "32140-11.htm";
-						st.giveItems(57, 498700L);
-						st.addExpAndSp(24782300, 28102300);
-						st.exitCurrentQuest(false);
-						st.playSound(SOUND_FINISH);
-					}
-			}
+				}
+				else
+				{
+					htmltext = "32140-04.htm";
+				}
+				break;
+			
+			case STARTED:
+				if (qs.getCond() == 1)
+				{
+					htmltext = "32140-07.htm";
+				}
+				else if (qs.getCond() == 2)
+				{
+					htmltext = "32140-08.htm";
+				}
+				else if (qs.getCond() == 3)
+				{
+					htmltext = "32140-10.htm";
+				}
+				else if (qs.getCond() == 4)
+				{
+					htmltext = "32140-11.htm";
+					qs.giveItems(57, 498700L);
+					qs.addExpAndSp(24782300, 28102300);
+					qs.exitCurrentQuest(false);
+					qs.playSound(SOUND_FINISH);
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if (!((st.getCond() == 1) || (st.getCond() == 3)))
+		if (((qs.getCond() == 1) || (qs.getCond() == 3)) && updateKill(npc, qs))
 		{
-			return null;
-		}
-		
-		if (updateKill(npc, st))
-		{
-			if (st.getCond() == 1)
+			if (qs.getCond() == 1)
 			{
-				st.unset(Nightmare_Death);
-				st.unset(Nightmare_of_Darkness);
-				st.setCond(2);
-				st.playSound(SOUND_MIDDLE);
+				qs.unset(Nightmare_Death);
+				qs.unset(Nightmare_of_Darkness);
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
 			}
-			else if (st.getCond() == 3)
+			else if (qs.getCond() == 3)
 			{
-				st.unset(Nightmare_of_Madness);
-				st.unset(Nightmare_of_Silence);
-				st.setCond(4);
-				st.playSound(SOUND_MIDDLE);
+				qs.unset(Nightmare_of_Madness);
+				qs.unset(Nightmare_of_Silence);
+				qs.setCond(4);
+				qs.playSound(SOUND_MIDDLE);
 			}
 		}
 		

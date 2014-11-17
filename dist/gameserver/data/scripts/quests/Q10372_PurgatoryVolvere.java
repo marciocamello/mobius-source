@@ -12,7 +12,6 @@
  */
 package quests;
 
-import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
@@ -66,6 +65,178 @@ public class Q10372_PurgatoryVolvere extends Quest implements ScriptFile
 	private static final int Bloody = 23185;
 	private static final int chance = 10;
 	
+	public Q10372_PurgatoryVolvere()
+	{
+		super(false);
+		addStartNpc(gerkenshtein);
+		addTalkId(gerkenshtein, andreig);
+		addKillId(Bloody);
+		addQuestItem(Essence);
+		addLevelCheck(76, 81);
+		addQuestCompletedCheck(Q10371_GraspThyPower.class);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "quest_ac":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				htmltext = "0-4.htm";
+				break;
+			
+			case "firec":
+				htmltext = "1-4.htm";
+				qs.getPlayer().addExpAndSp(23009000, 26440100);
+				qs.giveItems(9552, 1);
+				qs.takeAllItems(Essence);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
+			
+			case "waterc":
+				htmltext = "1-4.htm";
+				qs.getPlayer().addExpAndSp(23009000, 26440100);
+				qs.giveItems(9553, 1);
+				qs.takeAllItems(Essence);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
+			
+			case "windc":
+				htmltext = "1-4.htm";
+				qs.getPlayer().addExpAndSp(23009000, 26440100);
+				qs.giveItems(9555, 1);
+				qs.takeAllItems(Essence);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
+			
+			case "earth":
+				htmltext = "1-4.htm";
+				qs.getPlayer().addExpAndSp(23009000, 26440100);
+				qs.giveItems(9554, 1);
+				qs.takeAllItems(Essence);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
+			
+			case "darkc":
+				htmltext = "1-4.htm";
+				qs.getPlayer().addExpAndSp(23009000, 26440100);
+				qs.giveItems(9556, 1);
+				qs.takeAllItems(Essence);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
+			
+			case "holyc":
+				htmltext = "1-4.htm";
+				qs.getPlayer().addExpAndSp(23009000, 26440100);
+				qs.giveItems(9557, 1);
+				qs.takeAllItems(Essence);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		final int classid = qs.getPlayer().getClassId().getId();
+		
+		switch (npc.getId())
+		{
+			case gerkenshtein:
+				if (qs.isCompleted())
+				{
+					htmltext = "0-c.htm";
+				}
+				else if (cond == 0)
+				{
+					if (isAvailableFor(qs.getPlayer()) && Util.contains(classesav, classid))
+					{
+						htmltext = "start.htm";
+					}
+					else
+					{
+						htmltext = TODO_FIND_HTML;
+					}
+				}
+				else if (cond == 1)
+				{
+					htmltext = "0-5.htm";
+				}
+				else if (cond == 2)
+				{
+					htmltext = "0-6.htm";
+					qs.setCond(3);
+					qs.giveItems(34767, 1, false);
+					qs.takeAllItems(Essence);
+					qs.playSound(SOUND_MIDDLE);
+				}
+				else if (cond == 3)
+				{
+					htmltext = "0-3.htm";
+				}
+				break;
+			
+			case andreig:
+				if (qs.isCompleted())
+				{
+					htmltext = "1-4.htm";
+				}
+				else if (cond == 0)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 1)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 2)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 3)
+				{
+					htmltext = "1-1.htm";
+					qs.takeAllItems(34767);
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if ((qs.getCond() == 1) && (npc.getId() == Bloody) && (qs.getQuestItemsCount(Essence) < 10))
+		{
+			qs.rollAndGive(Essence, 1, chance);
+			qs.playSound(SOUND_ITEMGET);
+		}
+		
+		if (qs.getQuestItemsCount(Essence) >= 10)
+		{
+			qs.setCond(2);
+			qs.playSound(SOUND_MIDDLE);
+		}
+		
+		return null;
+	}
+	
 	@Override
 	public void onLoad()
 	{
@@ -79,178 +250,5 @@ public class Q10372_PurgatoryVolvere extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10372_PurgatoryVolvere()
-	{
-		super(false);
-		addStartNpc(gerkenshtein);
-		addTalkId(gerkenshtein);
-		addTalkId(andreig);
-		addKillId(Bloody);
-		addQuestItem(Essence);
-		addLevelCheck(76, 81);
-		addQuestCompletedCheck(Q10371_GraspThyPower.class);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("quest_ac"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			htmltext = "0-4.htm";
-		}
-		else if (event.equalsIgnoreCase("firec"))
-		{
-			htmltext = "1-4.htm";
-			st.getPlayer().addExpAndSp(23009000, 26440100);
-			st.giveItems(9552, 1);
-			st.takeAllItems(Essence);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
-		}
-		else if (event.equalsIgnoreCase("waterc"))
-		{
-			htmltext = "1-4.htm";
-			st.getPlayer().addExpAndSp(23009000, 26440100);
-			st.giveItems(9553, 1);
-			st.takeAllItems(Essence);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
-		}
-		else if (event.equalsIgnoreCase("windc"))
-		{
-			htmltext = "1-4.htm";
-			st.getPlayer().addExpAndSp(23009000, 26440100);
-			st.giveItems(9555, 1);
-			st.takeAllItems(Essence);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
-		}
-		else if (event.equalsIgnoreCase("earth"))
-		{
-			htmltext = "1-4.htm";
-			st.getPlayer().addExpAndSp(23009000, 26440100);
-			st.giveItems(9554, 1);
-			st.takeAllItems(Essence);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
-		}
-		else if (event.equalsIgnoreCase("darkc"))
-		{
-			htmltext = "1-4.htm";
-			st.getPlayer().addExpAndSp(23009000, 26440100);
-			st.giveItems(9556, 1);
-			st.takeAllItems(Essence);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
-		}
-		else if (event.equalsIgnoreCase("holyc"))
-		{
-			htmltext = "1-4.htm";
-			st.getPlayer().addExpAndSp(23009000, 26440100);
-			st.giveItems(9557, 1);
-			st.takeAllItems(Essence);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		Player player = st.getPlayer();
-		int classid = player.getClassId().getId();
-		String htmltext = "noquest";
-		
-		if (npcId == gerkenshtein)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "0-c.htm";
-			}
-			else if (cond == 0)
-			{
-				if (isAvailableFor(st.getPlayer()) && Util.contains(classesav, classid))
-				{
-					htmltext = "start.htm";
-				}
-				else
-				{
-					htmltext = TODO_FIND_HTML;
-				}
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-5.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "0-6.htm";
-				st.setCond(3);
-				st.giveItems(34767, 1, false);
-				st.takeAllItems(Essence);
-				st.playSound(SOUND_MIDDLE);
-			}
-			else if (cond == 3)
-			{
-				htmltext = "0-3.htm";
-			}
-		}
-		else if (npcId == andreig)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "1-4.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 1)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 2)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 3)
-			{
-				htmltext = "1-1.htm";
-				st.takeAllItems(34767);
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		
-		if ((st.getCond() == 1) && (npcId == Bloody) && (st.getQuestItemsCount(Essence) < 10))
-		{
-			st.rollAndGive(Essence, 1, chance);
-			st.playSound(SOUND_ITEMGET);
-		}
-		
-		if (st.getQuestItemsCount(Essence) >= 10)
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		return null;
 	}
 }

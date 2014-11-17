@@ -29,12 +29,12 @@ import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Util;
 
 /**
- * @author Jocy,vegax
+ * @author Jocy, vegax
  * @version $Revision: 1.0 $
  */
 public class Q10369_NoblesseSoulTesting extends Quest implements ScriptFile, OnMagicUseListener
 {
-	// npc
+	// Npcs
 	private static final int Cerenas = 31281;
 	private static final int EvasAltar = 33686;
 	private static final int Lanya = 33696;
@@ -43,7 +43,7 @@ public class Q10369_NoblesseSoulTesting extends Quest implements ScriptFile, OnM
 	private static final int HelpingRune = 19293;
 	private static final int HelpingTree = 27486;
 	private static final int SeedWaler = 18678;
-	// monster
+	// Monsters
 	private static final int OneWho = 27482;
 	private static final int[] HotSprings =
 	{
@@ -57,17 +57,15 @@ public class Q10369_NoblesseSoulTesting extends Quest implements ScriptFile, OnM
 		22263,
 		22264
 	};
-	// skill
+	// Skills
 	private static final int Trower = 9442;
-	// private static final int EmptyHotSkill = 9443;
 	private static final int HelpingS = 9444;
-	// private static final int SummonStoneSkill = 9445;
-	// item
+	// Items
 	private static final int HelpingSeed = 34961;
 	private static final int Ashes = 34962;
 	private static final int SOEAdneCastle = 34981;
 	private static final int SackContaining = 34913;
-	private static final int HfCeoW = 34892; // isle item
+	private static final int HfCeoW = 34892;
 	private static final int SOEIsleofPrayer = 34980;
 	private static final int EnergyOfFire = 34891;
 	private static final int SOEForgeOfTheGods = 34979;
@@ -97,6 +95,345 @@ public class Q10369_NoblesseSoulTesting extends Quest implements ScriptFile, OnM
 	}
 	
 	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		final Player player = qs.getPlayer();
+		final int cond = qs.getCond();
+		
+		switch (event)
+		{
+			case "showMovie":
+				if (cond == 0)
+				{
+					qs.setState(STARTED);
+					qs.setCond(1);
+					qs.getPlayer().showQuestMovie(SceneMovie.sc_noble_opening);
+					qs.playSound("ItemSound.quest_accept");
+					qs.startQuestTimer("", 25000);
+					htmltext = null;
+				}
+				else if (cond == 3)
+				{
+					qs.getPlayer().showQuestMovie(SceneMovie.sc_noble_ending);
+					qs.playSound("ItemSound.quest_middle");
+					qs.startQuestTimer("", 25000);
+					htmltext = null;
+					qs.takeItems(NovellProphecy, -1);
+					qs.setCond(4);
+				}
+				break;
+			
+			case "Cerenas-6.htm":
+				if (cond == 1)
+				{
+					qs.setCond(2);
+					qs.playSound("ItemSound.quest_middle");
+				}
+				break;
+			
+			case "Cerenas-10.htm":
+				if (cond == 4)
+				{
+					qs.playSound("ItemSound.quest_middle");
+					player.teleToLocation(new Location(-122136, -116552, -5797));
+					qs.setCond(5);
+				}
+				break;
+			
+			case "Evas-3.htm":
+				if (cond == 5)
+				{
+					qs.giveItems(EmptyHot, 1);
+					qs.giveItems(SummoningStone, 1);
+					qs.giveItems(SOEHotSprings, 1);
+					qs.playSound("ItemSound.quest_middle");
+					qs.setCond(6);
+				}
+				break;
+			
+			case "Lanya-2.htm":
+				if (cond == 7)
+				{
+					qs.takeItems(HotFull, -1);
+					qs.playSound("ItemSound.quest_middle");
+					qs.setCond(8);
+				}
+				break;
+			
+			case "Lanya-5.htm":
+				if (cond == 9)
+				{
+					qs.takeItems(HardLeather, -10);
+					qs.giveItems(Trowel, 1);
+					qs.giveItems(SOEForgeOfTheGods, 1);
+					qs.playSound("ItemSound.quest_middle");
+					qs.setCond(10);
+				}
+				break;
+			
+			case "Lanya-8.htm":
+				if (cond == 11)
+				{
+					qs.takeItems(EnergyOfFire, -5);
+					qs.takeItems(Trowel, -1);
+					qs.giveItems(SOEIsleofPrayer, 1);
+					qs.playSound("ItemSound.quest_middle");
+					qs.setCond(12);
+				}
+				break;
+			
+			case "Evas-5.htm":
+				if (cond == 15)
+				{
+					qs.giveItems(HelpingSeed, 1);
+					qs.giveItems(SOEAdneCastle, 1);
+					qs.playSound("ItemSound.quest_middle");
+					qs.setCond(16);
+				}
+				break;
+			
+			case "Evas-7.htm":
+				if (qs.getPlayer().getLevel() >= 75)
+				{
+					qs.takeItems(Ashes, -1);
+					qs.takeItems(SummoningStone, -1);
+					qs.giveItems(NoblessTiara, 1);
+					qs.giveItems(DimensionalDiamond, 10);
+					qs.giveItems(NoblessePrivi, 1);
+					qs.addExpAndSp(12625440, 0);
+					qs.setState(COMPLETED);
+					qs.exitCurrentQuest(false);
+					Olympiad.addNoble(qs.getPlayer());
+					qs.getPlayer().setNoble(true);
+					qs.getPlayer().updatePledgeClass();
+					qs.getPlayer().updateNobleSkills();
+					qs.getPlayer().sendSkillList();
+					qs.getPlayer().broadcastUserInfo();
+					qs.playSound(SOUND_FINISH);
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final Player player = qs.getPlayer();
+		final int cond = qs.getCond();
+		
+		switch (npc.getId())
+		{
+			case Cerenas:
+				switch (cond)
+				{
+					case 0:
+						if (qs.getPlayer().isBaseClassActive())
+						{
+							return "Subclass only!";
+						}
+						if (qs.getPlayer().getSubClassList().size() < 2)
+						{
+							return "You do not have subclass!";
+						}
+						if (qs.getPlayer().getLevel() >= 75)
+						{
+							htmltext = "Cerenas-1.htm";
+						}
+						else
+						{
+							htmltext = "Cerenas-no.htm";
+							qs.exitCurrentQuest(true);
+						}
+						break;
+					
+					case 1:
+						htmltext = "Cerenas-4.htm";
+						break;
+					
+					case 3:
+						htmltext = "Cerenas-7.htm";
+						break;
+					
+					case 4:
+						htmltext = "Cerenas-8.htm";
+						break;
+					
+					case 14:
+						htmltext = "Cerenas-11.htm";
+						qs.playSound("ItemSound.quest_middle");
+						player.teleToLocation(new Location(-122136, -116552, -5797));
+						qs.setCond(15);
+						break;
+					
+					case 17:
+						htmltext = "Cerenas-12.htm";
+						qs.playSound("ItemSound.quest_middle");
+						player.teleToLocation(new Location(-122136, -116552, -5797));
+						qs.setCond(18);
+						break;
+				}
+				
+				break;
+			
+			case Lanya:
+				switch (cond)
+				{
+					case 6:
+						if (qs.getQuestItemsCount(HotFull) == 1)
+						{
+							qs.playSound("ItemSound.quest_middle");
+							qs.setCond(7);
+							htmltext = "Lanya-1.htm";
+						}
+						break;
+					
+					case 7:
+						htmltext = "Lanya-1.htm";
+						break;
+					
+					case 9:
+						htmltext = "Lanya-4.htm";
+						break;
+					
+					case 10:
+						htmltext = "Lanya-6.htm";
+						break;
+					
+					case 11:
+						htmltext = "Lanya-7.htm";
+						break;
+					
+					case 13:
+						htmltext = "Lanya-9.htm";
+						qs.takeItems(HfCeoW, -10);
+						qs.playSound("ItemSound.quest_middle");
+						qs.setCond(14);
+						break;
+				}
+				
+				break;
+			
+			case EvasAltar:
+				if (cond == 5)
+				{
+					htmltext = "Evas-1.htm";
+				}
+				else if (cond == 15)
+				{
+					htmltext = "Evas-4.htm";
+				}
+				else if (cond == 18)
+				{
+					htmltext = "Evas-6.htm";
+				}
+				
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public void onMagicUse(Creature actor, Skill skill, Creature target, boolean alt)
+	{
+		if ((actor == null) || !actor.isPlayer() || (target == null) || !target.isNpc())
+		{
+			return;
+		}
+		
+		final QuestState qs = ((Player) actor).getQuestState(Q10369_NoblesseSoulTesting.class);
+		
+		if (qs == null)
+		{
+			return;
+		}
+		
+		final NpcInstance npc = (NpcInstance) target;
+		final Player player = qs.getPlayer();
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
+		
+		switch (skill.getId())
+		{
+			case HelpingS:
+				if ((npcId == Helping) && (cond == 16)) // Aden Castle
+				{
+					ItemFunctions.removeItem(qs.getPlayer(), HelpingSeed, 1L, true);
+					/* NpcInstance mob = */
+					qs.addSpawn(HelpingTree, 148216, 14856, -1393);
+					qs.giveItems(Ashes, 1);
+					qs.playSound("ItemSound.quest_middle");
+					qs.setCond(17);
+				}
+				
+				break;
+			
+			case Trower:
+				if ((qs.getCond() == 10) && (npcId == FlameFlower) && !npc.isDead())
+				{
+					qs.giveItems(EnergyOfFire, 1);
+					qs.playSound("ItemSound.quest_itemget");
+					npc.doDie(player);
+				}
+				
+				if ((qs.getQuestItemsCount(EnergyOfFire) >= 5))
+				{
+					qs.playSound(SOUND_MIDDLE);
+					qs.setCond(11);
+				}
+		}
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		final int npcId = npc.getId();
+		final int cond = qs.getCond();
+		
+		if (qs.getPlayer() == null)
+		{
+			return null;
+		}
+		
+		if ((npcId == OneWho) && (cond == 2))
+		{
+			qs.giveItems(NovellProphecy, 1);
+			qs.playSound("ItemSound.quest_itemget");
+			qs.setCond(3);
+		}
+		
+		if ((qs.getCond() == 8) && Util.contains(HotSprings, npcId) && Rnd.chance(40))
+		{
+			qs.giveItems(HardLeather, 1);
+			qs.playSound("ItemSound.quest_itemget");
+		}
+		
+		if ((qs.getQuestItemsCount(HardLeather) >= 10))
+		{
+			qs.setCond(9);
+			qs.playSound(SOUND_MIDDLE);
+		}
+		
+		if ((qs.getCond() == 12) && Util.contains(IsleOf, npcId) && Rnd.chance(40))
+		{
+			qs.giveItems(HfCeoW, 1);
+			qs.playSound("ItemSound.quest_itemget");
+		}
+		
+		if ((qs.getQuestItemsCount(HfCeoW) >= 10))
+		{
+			qs.setCond(13);
+			qs.playSound(SOUND_MIDDLE);
+		}
+		
+		return null;
+	}
+	
+	@Override
 	public void onShutdown()
 	{
 	}
@@ -112,317 +449,5 @@ public class Q10369_NoblesseSoulTesting extends Quest implements ScriptFile, OnM
 	{
 		CharListenerList.removeGlobal(this);
 		CharListenerList.addGlobal(this);
-	}
-	
-	@Override
-	public void onMagicUse(Creature actor, Skill skill, Creature target, boolean alt)
-	{
-		if ((actor == null) || !actor.isPlayer() || (target == null) || !target.isNpc())
-		{
-			return;
-		}
-		
-		QuestState st = ((Player) actor).getQuestState(Q10369_NoblesseSoulTesting.class);
-		
-		if (st == null)
-		{
-			return;
-		}
-		
-		NpcInstance npc = (NpcInstance) target;
-		Player player = st.getPlayer();
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		
-		switch (skill.getId())
-		{
-			case HelpingS:
-				if ((npcId == Helping) && (cond == 16)) // Aden Castle
-				{
-					ItemFunctions.removeItem(st.getPlayer(), HelpingSeed, 1L, true);
-					/* NpcInstance mob = */
-					st.addSpawn(HelpingTree, 148216, 14856, -1393);
-					st.giveItems(Ashes, 1);
-					st.playSound("ItemSound.quest_middle");
-					st.setCond(17);
-				}
-				
-				break;
-			
-			case Trower:
-				if ((st.getCond() == 10) && (npcId == FlameFlower) && !npc.isDead())
-				{
-					st.giveItems(EnergyOfFire, 1);
-					st.playSound("ItemSound.quest_itemget");
-					npc.doDie(player);
-				}
-				
-				if ((st.getQuestItemsCount(EnergyOfFire) >= 5))
-				{
-					st.playSound(SOUND_MIDDLE);
-					st.setCond(11);
-				}
-		}
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		Player player = st.getPlayer();
-		
-		if (player == null)
-		{
-			return null;
-		}
-		
-		if ((npcId == OneWho) && (cond == 2))
-		{
-			st.giveItems(NovellProphecy, 1);
-			st.playSound("ItemSound.quest_itemget");
-			st.setCond(3);
-		}
-		
-		if ((st.getCond() == 8) && Util.contains(HotSprings, npcId) && Rnd.chance(40))
-		{
-			st.giveItems(HardLeather, 1);
-			st.playSound("ItemSound.quest_itemget");
-		}
-		
-		if ((st.getQuestItemsCount(HardLeather) >= 10))
-		{
-			st.setCond(9);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		if ((st.getCond() == 12) && Util.contains(IsleOf, npcId) && Rnd.chance(40))
-		{
-			st.giveItems(HfCeoW, 1);
-			st.playSound("ItemSound.quest_itemget");
-		}
-		
-		if ((st.getQuestItemsCount(HfCeoW) >= 10))
-		{
-			st.setCond(13);
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		return null;
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		Player player = st.getPlayer();
-		String htmltext = event;
-		int cond = st.getCond();
-		
-		if ((cond == 0) && event.equalsIgnoreCase("showMovie"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.getPlayer().showQuestMovie(SceneMovie.sc_noble_opening);
-			st.playSound("ItemSound.quest_accept");
-			st.startQuestTimer("", 25000);
-			htmltext = null;
-		}
-		else if ((cond == 1) && event.equalsIgnoreCase("Cerenas-6.htm"))
-		{
-			st.setCond(2);
-			st.playSound("ItemSound.quest_middle");
-		}
-		else if ((cond == 3) && event.equalsIgnoreCase("showMovie"))
-		{
-			st.getPlayer().showQuestMovie(SceneMovie.sc_noble_ending);
-			st.playSound("ItemSound.quest_middle");
-			st.startQuestTimer("", 25000);
-			htmltext = null;
-			st.takeItems(NovellProphecy, -1);
-			st.setCond(4);
-		}
-		else if ((cond == 4) && event.equalsIgnoreCase("Cerenas-10.htm"))
-		{
-			st.playSound("ItemSound.quest_middle");
-			player.teleToLocation(new Location(-122136, -116552, -5797));
-			st.setCond(5);
-		}
-		else if ((cond == 5) && event.equalsIgnoreCase("Evas-3.htm"))
-		{
-			st.giveItems(EmptyHot, 1);
-			st.giveItems(SummoningStone, 1);
-			st.giveItems(SOEHotSprings, 1);
-			st.playSound("ItemSound.quest_middle");
-			st.setCond(6);
-		}
-		else if ((cond == 7) && event.equalsIgnoreCase("Lanya-2.htm"))
-		{
-			st.takeItems(HotFull, -1);
-			st.playSound("ItemSound.quest_middle");
-			st.setCond(8);
-		}
-		else if ((cond == 9) && event.equalsIgnoreCase("Lanya-5.htm"))
-		{
-			st.takeItems(HardLeather, -10);
-			st.giveItems(Trowel, 1);
-			st.giveItems(SOEForgeOfTheGods, 1);
-			st.playSound("ItemSound.quest_middle");
-			st.setCond(10);
-		}
-		else if ((cond == 11) && event.equalsIgnoreCase("Lanya-8.htm"))
-		{
-			st.takeItems(EnergyOfFire, -5);
-			st.takeItems(Trowel, -1);
-			st.giveItems(SOEIsleofPrayer, 1);
-			st.playSound("ItemSound.quest_middle");
-			st.setCond(12);
-		}
-		else if ((cond == 15) && event.equalsIgnoreCase("Evas-5.htm"))
-		{
-			st.giveItems(HelpingSeed, 1);
-			st.giveItems(SOEAdneCastle, 1);
-			st.playSound("ItemSound.quest_middle");
-			st.setCond(16);
-		}
-		else if (event.equalsIgnoreCase("Evas-7.htm"))
-		{
-			if (st.getPlayer().getLevel() >= 75)
-			{
-				st.takeItems(Ashes, -1);
-				st.takeItems(SummoningStone, -1);
-				st.giveItems(NoblessTiara, 1);
-				st.giveItems(DimensionalDiamond, 10);
-				st.giveItems(NoblessePrivi, 1);
-				st.addExpAndSp(12625440, 0);
-				st.setState(COMPLETED);
-				st.exitCurrentQuest(false);
-				Olympiad.addNoble(st.getPlayer());
-				st.getPlayer().setNoble(true);
-				st.getPlayer().updatePledgeClass();
-				st.getPlayer().updateNobleSkills();
-				st.getPlayer().sendSkillList();
-				st.getPlayer().broadcastUserInfo();
-				st.playSound(SOUND_FINISH);
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		Player player = st.getPlayer();
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		
-		switch (npcId)
-		{
-			case Cerenas:
-				if (cond == 0)
-				{
-					if (st.getPlayer().isBaseClassActive())
-					{
-						return "Subclass only!";
-					}
-					
-					if (st.getPlayer().getSubClassList().size() < 2)
-					{
-						return "You do not have subclass!";
-					}
-					
-					if (st.getPlayer().getLevel() >= 75)
-					{
-						htmltext = "Cerenas-1.htm";
-					}
-					else
-					{
-						htmltext = "Cerenas-no.htm";
-						st.exitCurrentQuest(true);
-					}
-				}
-				else if (cond == 1)
-				{
-					htmltext = "Cerenas-4.htm";
-				}
-				else if (cond == 3)
-				{
-					htmltext = "Cerenas-7.htm";
-				}
-				else if (cond == 4)
-				{
-					htmltext = "Cerenas-8.htm";
-				}
-				else if (cond == 14)
-				{
-					htmltext = "Cerenas-11.htm";
-					st.playSound("ItemSound.quest_middle");
-					player.teleToLocation(new Location(-122136, -116552, -5797));
-					st.setCond(15);
-				}
-				else if (cond == 17)
-				{
-					htmltext = "Cerenas-12.htm";
-					st.playSound("ItemSound.quest_middle");
-					player.teleToLocation(new Location(-122136, -116552, -5797));
-					st.setCond(18);
-				}
-				
-				break;
-			
-			case Lanya:
-				if ((cond == 6) && (st.getQuestItemsCount(HotFull) == 1))
-				{
-					st.playSound("ItemSound.quest_middle");
-					st.setCond(7);
-					htmltext = "Lanya-1.htm";
-				}
-				else if (cond == 7)
-				{
-					htmltext = "Lanya-1.htm";
-				}
-				else if (cond == 9)
-				{
-					htmltext = "Lanya-4.htm";
-				}
-				else if (cond == 10)
-				{
-					htmltext = "Lanya-6.htm";
-				}
-				else if (cond == 11)
-				{
-					htmltext = "Lanya-7.htm";
-				}
-				else if (cond == 13)
-				{
-					htmltext = "Lanya-9.htm";
-					st.takeItems(HfCeoW, -10);
-					st.playSound("ItemSound.quest_middle");
-					st.setCond(14);
-				}
-				
-				break;
-			
-			case EvasAltar:
-				if (cond == 5)
-				{
-					htmltext = "Evas-1.htm";
-				}
-				
-				if (cond == 15)
-				{
-					htmltext = "Evas-4.htm";
-				}
-				
-				if (cond == 18)
-				{
-					htmltext = "Evas-6.htm";
-				}
-				
-				break;
-		}
-		
-		return htmltext;
 	}
 }

@@ -21,10 +21,114 @@ import services.SupportMagic;
 
 public class Q10353_CertificationOfValue extends Quest implements ScriptFile
 {
-	// npc
+	// Npcs
 	private static final int LILEJ = 33155;
 	private static final int KUORI = 33358;
+	// Other
 	private static final String A_LIST = "a_list";
+	
+	public Q10353_CertificationOfValue()
+	{
+		super(true);
+		addStartNpc(LILEJ);
+		addTalkId(KUORI);
+		addLevelCheck(48, 100);
+		addKillNpcWithLog(2, A_LIST, 10, 23044, 23045, 23046, 23047, 23048, 23049, 23050, 23051, 23052, 23053, 23054, 23055, 23056, 23057, 23058, 23059, 23060, 23061, 23062, 23063, 23064, 23065, 23066, 23067, 23068, 23102, 23103, 23104, 23105, 23106, 23107, 23108, 23109, 23110, 23111, 23112);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		final Player player = qs.getPlayer();
+		
+		switch (event)
+		{
+			case "SupportPlayer":
+				SupportMagic.getSupportMagic(npc, player);
+				return "33155-6.htm";
+				
+			case "SupportPet":
+				SupportMagic.getSupportServitorMagic(npc, player);
+				return "33155-6.htm";
+				
+			case "Goto":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				player.teleToLocation(119656, 16072, -5120);
+				return null;
+				
+			case "33358-3.htm":
+				qs.setCond(2);
+				break;
+		}
+		
+		return event;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		final Player player = qs.getPlayer();
+		final int cond = qs.getCond();
+		
+		if (player.getLevel() < 48)
+		{
+			return "33155-lvl.htm";
+		}
+		
+		if (qs.getState() == COMPLETED)
+		{
+			return "33155-comp.htm";
+		}
+		
+		switch (npc.getId())
+		{
+			case LILEJ:
+				if (cond == 0)
+				{
+					return "33155.htm";
+				}
+				else if (cond == 1)
+				{
+					return "33155-11.htm";
+				}
+				break;
+			
+			case KUORI:
+				if (cond == 1)
+				{
+					return "33358.htm";
+				}
+				else if (cond == 2)
+				{
+					return "33358-5.htm";
+				}
+				else if (cond == 3)
+				{
+					qs.addExpAndSp(3000000, 2500000);
+					qs.giveItems(17624, 1);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(false);
+					return "33358-6.htm";
+				}
+				break;
+		}
+		
+		return "noquest";
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if ((qs.getCond() == 2) && updateKill(npc, qs))
+		{
+			qs.unset(A_LIST);
+			qs.setCond(3);
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -39,125 +143,5 @@ public class Q10353_CertificationOfValue extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10353_CertificationOfValue()
-	{
-		super(true);
-		addStartNpc(LILEJ);
-		addTalkId(KUORI);
-		addLevelCheck(48, 100);
-		addKillNpcWithLog(2, A_LIST, 10, 23044, 23045, 23046, 23047, 23048, 23049, 23050, 23051, 23052, 23053, 23054, 23055, 23056, 23057, 23058, 23059, 23060, 23061, 23062, 23063, 23064, 23065, 23066, 23067, 23068, 23102, 23103, 23104, 23105, 23106, 23107, 23108, 23109, 23110, 23111, 23112);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		Player player = st.getPlayer();
-		
-		if (event.equalsIgnoreCase("SupportPlayer"))
-		{
-			SupportMagic.getSupportMagic(npc, player);
-			return "33155-6.htm";
-		}
-		
-		if (event.equalsIgnoreCase("SupportPet"))
-		{
-			SupportMagic.getSupportServitorMagic(npc, player);
-			return "33155-6.htm";
-		}
-		
-		if (event.equalsIgnoreCase("Goto"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-			player.teleToLocation(119656, 16072, -5120);
-			return null;
-		}
-		
-		if (event.equalsIgnoreCase("33358-3.htm"))
-		{
-			st.setCond(2);
-		}
-		
-		return event;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		Player player = st.getPlayer();
-		int npcId = npc.getId();
-		int state = st.getState();
-		int cond = st.getCond();
-		
-		if (player.getLevel() < 48)
-		{
-			return "33155-lvl.htm";
-		}
-		
-		if (state == COMPLETED)
-		{
-			return "33155-comp.htm";
-		}
-		
-		if (npcId == LILEJ)
-		{
-			if (cond == 0)
-			{
-				return "33155.htm";
-			}
-			
-			if (cond == 1)
-			{
-				return "33155-11.htm";
-			}
-		}
-		
-		if (npcId == KUORI)
-		{
-			if (cond == 1)
-			{
-				return "33358.htm";
-			}
-			
-			if (cond == 2)
-			{
-				return "33358-5.htm";
-			}
-			
-			if (cond == 3)
-			{
-				st.addExpAndSp(3000000, 2500000);
-				st.giveItems(17624, 1);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(false);
-				return "33358-6.htm";
-			}
-		}
-		
-		return "noquest";
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		
-		if (cond != 2)
-		{
-			return null;
-		}
-		
-		boolean doneKill = updateKill(npc, st);
-		
-		if (doneKill)
-		{
-			st.unset(A_LIST);
-			st.setCond(3);
-		}
-		
-		return null;
 	}
 }
