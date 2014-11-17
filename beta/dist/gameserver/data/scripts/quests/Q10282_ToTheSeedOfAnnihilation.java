@@ -19,9 +19,91 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10282_ToTheSeedOfAnnihilation extends Quest implements ScriptFile
 {
+	// Npcs
 	private final static int KBALDIR = 32733;
 	private final static int KLEMIS = 32734;
+	// Item
 	private final static int SOA_ORDERS = 15512;
+	
+	public Q10282_ToTheSeedOfAnnihilation()
+	{
+		super(false);
+		addStartNpc(KBALDIR);
+		addTalkId(KBALDIR);
+		addTalkId(KLEMIS);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		switch (event)
+		{
+			case "32733-07.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.giveItems(SOA_ORDERS, 1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "32734-02.htm":
+				qs.unset("cond");
+				qs.giveItems(57, 212182);
+				qs.addExpAndSp(1148480, 99110);
+				qs.takeItems(SOA_ORDERS, -1);
+				qs.exitCurrentQuest(false);
+				break;
+		}
+		
+		return event;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int npcId = npc.getId();
+		
+		switch (qs.getState())
+		{
+			case COMPLETED:
+				if (npcId == KBALDIR)
+				{
+					htmltext = "32733-09.htm";
+				}
+				else if (npcId == KLEMIS)
+				{
+					htmltext = "32734-03.htm";
+				}
+				break;
+			
+			case CREATED:
+				if (qs.getPlayer().getLevel() >= 84)
+				{
+					htmltext = "32733-01.htm";
+				}
+				else
+				{
+					htmltext = "32733-00.htm";
+				}
+				break;
+			
+			default:
+				if (qs.getCond() == 1)
+				{
+					if (npcId == KBALDIR)
+					{
+						htmltext = "32733-08.htm";
+					}
+					else if (npcId == KLEMIS)
+					{
+						htmltext = "32734-01.htm";
+					}
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
 	
 	@Override
 	public void onLoad()
@@ -36,82 +118,5 @@ public class Q10282_ToTheSeedOfAnnihilation extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10282_ToTheSeedOfAnnihilation()
-	{
-		super(false);
-		addStartNpc(KBALDIR);
-		addTalkId(KBALDIR);
-		addTalkId(KLEMIS);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		if (event.equalsIgnoreCase("32733-07.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.giveItems(SOA_ORDERS, 1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("32734-02.htm"))
-		{
-			st.unset("cond");
-			st.giveItems(57, 212182);
-			st.addExpAndSp(1148480, 99110);
-			st.takeItems(SOA_ORDERS, -1);
-			st.exitCurrentQuest(false);
-		}
-		
-		return event;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int id = st.getState();
-		int npcId = npc.getId();
-		
-		if (id == COMPLETED)
-		{
-			if (npcId == KBALDIR)
-			{
-				htmltext = "32733-09.htm";
-			}
-			else if (npcId == KLEMIS)
-			{
-				htmltext = "32734-03.htm";
-			}
-		}
-		else if (id == CREATED)
-		{
-			if (st.getPlayer().getLevel() >= 84)
-			{
-				htmltext = "32733-01.htm";
-			}
-			else
-			{
-				htmltext = "32733-00.htm";
-			}
-		}
-		else
-		{
-			if (st.getCond() == 1)
-			{
-				if (npcId == KBALDIR)
-				{
-					htmltext = "32733-08.htm";
-				}
-				else if (npcId == KLEMIS)
-				{
-					htmltext = "32734-01.htm";
-				}
-			}
-		}
-		
-		return htmltext;
 	}
 }

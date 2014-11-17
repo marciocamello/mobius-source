@@ -45,188 +45,183 @@ public class Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal extends Quest impleme
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		Player player = st.getPlayer();
 		String htmltext = event;
+		final Player player = qs.getPlayer();
 		
-		if (event.equalsIgnoreCase("eris_q10296_3.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("start_scene"))
-		{
-			st.setCond(2);
-			teleportElcardia(player, hiddenLoc);
-			ThreadPoolManager.getInstance().schedule(new Teleport(player), 60500L);
-			player.showQuestMovie(ExStartScenePlayer.SCENE_SSQ2_BOSS_OPENING);
-			return null;
-		}
-		else if (event.equalsIgnoreCase("teleport_back"))
-		{
-			player.teleToLocation(new Location(76736, -241021, -10832));
-			teleportElcardia(player);
-			return null;
-		}
-		else if (event.equalsIgnoreCase("elcardiahome_q10296_3.htm"))
-		{
-			st.setCond(4);
-		}
-		else if (event.equalsIgnoreCase("hardin_q10296_3.htm"))
-		{
-			st.setCond(5);
-		}
-		else if (event.equalsIgnoreCase("enter_instance"))
-		{
-			enterInstance(st, 146);
-			return null;
-		}
-		else if (event.equalsIgnoreCase("franz_q10296_3.htm"))
-		{
-			if (player.getLevel() >= 81)
-			{
-				st.addExpAndSp(125000000, 12500000);
-				st.giveItems(17265, 1);
-				st.setState(COMPLETED);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(false);
-			}
-			else
-			{
-				htmltext = "franz_q10296_0.htm";
-			}
+			case "eris_q10296_3.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "start_scene":
+				qs.setCond(2);
+				teleportElcardia(player, hiddenLoc);
+				ThreadPoolManager.getInstance().schedule(new Teleport(player), 60500L);
+				player.showQuestMovie(ExStartScenePlayer.SCENE_SSQ2_BOSS_OPENING);
+				return null;
+				
+			case "teleport_back":
+				player.teleToLocation(new Location(76736, -241021, -10832));
+				teleportElcardia(player);
+				return null;
+				
+			case "elcardiahome_q10296_3.htm":
+				qs.setCond(4);
+				break;
+			
+			case "hardin_q10296_3.htm":
+				qs.setCond(5);
+				break;
+			
+			case "enter_instance":
+				enterInstance(qs, 146);
+				return null;
+				
+			case "franz_q10296_3.htm":
+				if (player.getLevel() >= 81)
+				{
+					qs.addExpAndSp(125000000, 12500000);
+					qs.giveItems(17265, 1);
+					qs.setState(COMPLETED);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(false);
+				}
+				else
+				{
+					htmltext = "franz_q10296_0.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		Player player = st.getPlayer();
+		final int cond = qs.getCond();
+		final Player player = qs.getPlayer();
 		
 		if (!player.isBaseClassActive())
 		{
 			return "no_subclass_allowed.htm";
 		}
 		
-		if (npcId == Eris)
+		switch (npc.getId())
 		{
-			if (cond == 0)
-			{
-				QuestState qs = player.getQuestState(Q10295_SevenSignsSolinasTomb.class);
-				
-				if ((player.getLevel() >= 81) && (qs != null) && qs.isCompleted())
+			case Eris:
+				if (cond == 0)
 				{
-					htmltext = "eris_q10296_1.htm";
+					final QuestState state = player.getQuestState(Q10295_SevenSignsSolinasTomb.class);
+					
+					if ((player.getLevel() >= 81) && (state != null) && state.isCompleted())
+					{
+						htmltext = "eris_q10296_1.htm";
+					}
+					else
+					{
+						htmltext = "eris_q10296_0.htm";
+						qs.exitCurrentQuest(true);
+					}
 				}
-				else
+				else if (cond == 1)
 				{
-					htmltext = "eris_q10296_0.htm";
-					st.exitCurrentQuest(true);
+					htmltext = "eris_q10296_4.htm";
 				}
-			}
-			else if (cond == 1)
-			{
-				htmltext = "eris_q10296_4.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "eris_q10296_5.htm";
-			}
-			else if (cond >= 3)
-			{
-				htmltext = "eris_q10296_6.htm";
-			}
-		}
-		else if (npcId == ElcardiaInzone1)
-		{
-			if (cond == 1)
-			{
-				htmltext = "elcardia_q10296_1.htm";
-			}
-			else if (cond == 2)
-			{
-				if (st.getInt("EtisKilled") == 0)
+				else if (cond == 2)
+				{
+					htmltext = "eris_q10296_5.htm";
+				}
+				else if (cond >= 3)
+				{
+					htmltext = "eris_q10296_6.htm";
+				}
+				break;
+			
+			case ElcardiaInzone1:
+				if (cond == 1)
 				{
 					htmltext = "elcardia_q10296_1.htm";
 				}
-				else
+				else if (cond == 2)
 				{
-					st.setCond(3);
-					htmltext = "elcardia_q10296_2.htm";
+					if (qs.getInt("EtisKilled") == 0)
+					{
+						htmltext = "elcardia_q10296_1.htm";
+					}
+					else
+					{
+						qs.setCond(3);
+						htmltext = "elcardia_q10296_2.htm";
+					}
 				}
-			}
-			else if (cond >= 3)
-			{
-				htmltext = "elcardia_q10296_4.htm";
-			}
-		}
-		else if (npcId == ElcardiaHome)
-		{
-			if (cond == 3)
-			{
-				htmltext = "elcardiahome_q10296_1.htm";
-			}
-			else if (cond >= 4)
-			{
-				htmltext = "elcardiahome_q10296_3.htm";
-			}
-		}
-		else if (npcId == Hardin)
-		{
-			if (cond == 4)
-			{
-				htmltext = "hardin_q10296_1.htm";
-			}
-			else if (cond == 5)
-			{
-				htmltext = "hardin_q10296_4.htm";
-			}
-		}
-		else if (npcId == Wood)
-		{
-			if (cond == 5)
-			{
-				htmltext = "wood_q10296_1.htm";
-			}
-		}
-		else if (npcId == Franz)
-		{
-			if (cond == 5)
-			{
-				htmltext = "franz_q10296_1.htm";
-			}
+				else if (cond >= 3)
+				{
+					htmltext = "elcardia_q10296_4.htm";
+				}
+				break;
+			
+			case ElcardiaHome:
+				if (cond == 3)
+				{
+					htmltext = "elcardiahome_q10296_1.htm";
+				}
+				else if (cond >= 4)
+				{
+					htmltext = "elcardiahome_q10296_3.htm";
+				}
+				break;
+			
+			case Hardin:
+				if (cond == 4)
+				{
+					htmltext = "hardin_q10296_1.htm";
+				}
+				else if (cond == 5)
+				{
+					htmltext = "hardin_q10296_4.htm";
+				}
+				break;
+			
+			case Wood:
+				if (cond == 5)
+				{
+					htmltext = "wood_q10296_1.htm";
+				}
+				break;
+			
+			case Franz:
+				if (cond == 5)
+				{
+					htmltext = "franz_q10296_1.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
+		qs.set("EtisKilled", 1);
 		
-		if (npcId == EtisEtina)
+		for (NpcInstance n : qs.getPlayer().getReflection().getNpcs())
 		{
-			st.set("EtisKilled", 1);
-			
-			for (NpcInstance n : st.getPlayer().getReflection().getNpcs())
+			if (n.getId() == ElcardiaInzone1)
 			{
-				if (n.getId() == ElcardiaInzone1)
-				{
-					n.teleToLocation(new Location(120664, -86968, -3392));
-				}
+				n.teleToLocation(new Location(120664, -86968, -3392));
 			}
-			
-			ThreadPoolManager.getInstance().schedule(new ElcardiaTeleport(st.getPlayer()), 60500L);
-			st.getPlayer().showQuestMovie(ExStartScenePlayer.SCENE_SSQ2_BOSS_CLOSING);
 		}
+		
+		ThreadPoolManager.getInstance().schedule(new ElcardiaTeleport(qs.getPlayer()), 60500L);
+		qs.getPlayer().showQuestMovie(ExStartScenePlayer.SCENE_SSQ2_BOSS_CLOSING);
 		
 		return null;
 	}

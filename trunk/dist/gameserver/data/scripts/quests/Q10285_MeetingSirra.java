@@ -29,6 +29,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 
 public class Q10285_MeetingSirra extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int Rafforty = 32020;
 	private static final int Jinia = 32760;
 	private static final int Jinia2 = 32781;
@@ -43,167 +44,163 @@ public class Q10285_MeetingSirra extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("rafforty_q10285_03.htm"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("enterinstance"))
-		{
-			if (st.getCond() == 1)
-			{
-				st.setCond(2);
-			}
+			case "rafforty_q10285_03.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
 			
-			enterInstance(st.getPlayer(), 141);
-			return null;
-		}
-		else if (event.equalsIgnoreCase("jinia_q10285_02.htm"))
-		{
-			st.setCond(3);
-		}
-		else if (event.equalsIgnoreCase("kegor_q10285_02.htm"))
-		{
-			st.setCond(4);
-		}
-		else if (event.equalsIgnoreCase("sirraspawn"))
-		{
-			st.setCond(5);
-			st.getPlayer().getReflection().addSpawnWithoutRespawn(Sirra, new Location(-23848, -8744, -5413, 49152), 0);
-			
-			for (NpcInstance sirra : st.getPlayer().getAroundNpc(1000, 100))
-			{
-				if (sirra.getId() == Sirra)
+			case "enterinstance":
+				if (qs.getCond() == 1)
 				{
-					Functions.npcSay(sirra, "Вас послушать, получается, что Вы знаете обо всем на свете. Но я больше не могу слушать Ваши мудрствования");
+					qs.setCond(2);
 				}
-			}
+				enterInstance(qs.getPlayer(), 141);
+				return null;
+				
+			case "jinia_q10285_02.htm":
+				qs.setCond(3);
+				break;
 			
-			return null;
-		}
-		else if (event.equalsIgnoreCase("sirra_q10285_07.htm"))
-		{
-			st.setCond(6);
+			case "kegor_q10285_02.htm":
+				qs.setCond(4);
+				break;
 			
-			for (NpcInstance sirra : st.getPlayer().getAroundNpc(1000, 100))
-			{
-				if (sirra.getId() == 32762)
+			case "sirraspawn":
+				qs.setCond(5);
+				qs.getPlayer().getReflection().addSpawnWithoutRespawn(Sirra, new Location(-23848, -8744, -5413, 49152), 0);
+				for (NpcInstance sirra : qs.getPlayer().getAroundNpc(1000, 100))
 				{
-					sirra.deleteMe();
+					if (sirra.getId() == Sirra)
+					{
+						Functions.npcSay(sirra, "Вас послушать, получается, что Вы знаете обо всем на свете. Но я больше не могу слушать Ваши мудрствования");
+					}
 				}
-			}
-		}
-		else if (event.equalsIgnoreCase("jinia_q10285_10.htm"))
-		{
-			if (!st.getPlayer().getReflection().isDefault())
-			{
-				st.getPlayer().getReflection().startCollapseTimer(60 * 1000L);
-				st.getPlayer().sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(1));
-			}
+				return null;
+				
+			case "sirra_q10285_07.htm":
+				qs.setCond(6);
+				for (NpcInstance sirra : qs.getPlayer().getAroundNpc(1000, 100))
+				{
+					if (sirra.getId() == 32762)
+					{
+						sirra.deleteMe();
+					}
+				}
+				break;
 			
-			st.setCond(7);
-		}
-		else if (event.equalsIgnoreCase("exitinstance"))
-		{
-			st.getPlayer().getReflection().collapse();
-			return null;
-		}
-		else if (event.equalsIgnoreCase("enterfreya"))
-		{
-			st.setCond(9);
-			enterInstance(st.getPlayer(), 137);
-			return null;
+			case "jinia_q10285_10.htm":
+				if (!qs.getPlayer().getReflection().isDefault())
+				{
+					qs.getPlayer().getReflection().startCollapseTimer(60 * 1000L);
+					qs.getPlayer().sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(1));
+				}
+				qs.setCond(7);
+				break;
+			
+			case "exitinstance":
+				qs.getPlayer().getReflection().collapse();
+				return null;
+				
+			case "enterfreya":
+				qs.setCond(9);
+				enterInstance(qs.getPlayer(), 137);
+				return null;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
+		final int cond = qs.getCond();
 		
-		if (npcId == Rafforty)
+		switch (npc.getId())
 		{
-			if (cond == 0)
-			{
-				QuestState qs = st.getPlayer().getQuestState(Q10284_AcquisitionOfDivineSword.class);
-				
-				if ((st.getPlayer().getLevel() >= 82) && (qs != null) && qs.isCompleted())
+			case Rafforty:
+				if (cond == 0)
 				{
-					htmltext = "rafforty_q10285_01.htm";
+					final QuestState state = qs.getPlayer().getQuestState(Q10284_AcquisitionOfDivineSword.class);
+					
+					if ((qs.getPlayer().getLevel() >= 82) && (state != null) && state.isCompleted())
+					{
+						htmltext = "rafforty_q10285_01.htm";
+					}
+					else
+					{
+						htmltext = "rafforty_q10285_00.htm";
+						qs.exitCurrentQuest(true);
+					}
 				}
-				else
+				else if ((cond >= 1) && (cond < 7))
 				{
-					htmltext = "rafforty_q10285_00.htm";
-					st.exitCurrentQuest(true);
+					htmltext = "rafforty_q10285_03.htm";
 				}
-			}
-			else if ((cond >= 1) && (cond < 7))
-			{
-				htmltext = "rafforty_q10285_03.htm";
-			}
-			else if (cond == 10)
-			{
-				htmltext = "rafforty_q10285_04.htm";
-				st.giveItems(ADENA_ID, 283425);
-				st.addExpAndSp(939075, 83855);
-				st.setState(COMPLETED);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(false);
-			}
-		}
-		else if (npcId == Jinia)
-		{
-			if (cond == 2)
-			{
-				htmltext = "jinia_q10285_01.htm";
-			}
-			else if (cond == 4)
-			{
-				htmltext = "jinia_q10285_03.htm";
-			}
-			else if (cond == 6)
-			{
-				htmltext = "jinia_q10285_05.htm";
-			}
-			else if (cond == 7)
-			{
-				htmltext = "jinia_q10285_10.htm";
-			}
-		}
-		else if (npcId == Kegor)
-		{
-			if (cond == 3)
-			{
-				htmltext = "kegor_q10285_01.htm";
-			}
-		}
-		else if (npcId == Sirra)
-		{
-			if (cond == 5)
-			{
-				htmltext = "sirra_q10285_01.htm";
-			}
-		}
-		else if (npcId == Jinia2)
-		{
-			if ((cond == 7) || (cond == 8))
-			{
-				st.setCond(8);
-				htmltext = "jinia2_q10285_01.htm";
-			}
-			else if (cond == 9)
-			{
-				htmltext = "jinia2_q10285_02.htm";
-			}
+				else if (cond == 10)
+				{
+					htmltext = "rafforty_q10285_04.htm";
+					qs.giveItems(ADENA_ID, 283425);
+					qs.addExpAndSp(939075, 83855);
+					qs.setState(COMPLETED);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(false);
+				}
+				break;
+			
+			case Jinia:
+				switch (cond)
+				{
+					case 2:
+						htmltext = "jinia_q10285_01.htm";
+						break;
+					
+					case 4:
+						htmltext = "jinia_q10285_03.htm";
+						break;
+					
+					case 6:
+						htmltext = "jinia_q10285_05.htm";
+						break;
+					
+					case 7:
+						htmltext = "jinia_q10285_10.htm";
+						break;
+				}
+				break;
+			
+			case Kegor:
+				if (cond == 3)
+				{
+					htmltext = "kegor_q10285_01.htm";
+				}
+				break;
+			
+			case Sirra:
+				if (cond == 5)
+				{
+					htmltext = "sirra_q10285_01.htm";
+				}
+				break;
+			
+			case Jinia2:
+				if ((cond == 7) || (cond == 8))
+				{
+					qs.setCond(8);
+					htmltext = "jinia2_q10285_01.htm";
+				}
+				else if (cond == 9)
+				{
+					htmltext = "jinia2_q10285_02.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
@@ -211,7 +208,7 @@ public class Q10285_MeetingSirra extends Quest implements ScriptFile
 	
 	private void enterInstance(Player player, int izId)
 	{
-		Reflection r = player.getActiveReflection();
+		final Reflection r = player.getActiveReflection();
 		
 		if (r != null)
 		{

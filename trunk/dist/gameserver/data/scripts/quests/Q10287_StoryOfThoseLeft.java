@@ -24,6 +24,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
 
 public class Q10287_StoryOfThoseLeft extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int Rafforty = 32020;
 	private static final int Jinia = 32760;
 	private static final int Jinia2 = 32781;
@@ -37,37 +38,38 @@ public class Q10287_StoryOfThoseLeft extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("rafforty_q10287_02.htm"))
+		switch (event)
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
+			case "rafforty_q10287_02.htm":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "enterinstance":
+				qs.setCond(2);
+				enterInstance(qs.getPlayer(), 141);
+				return null;
+				
+			case "jinia_q10287_03.htm":
+				qs.setCond(3);
+				break;
+			
+			case "kegor_q10287_03.htm":
+				qs.setCond(4);
+				break;
+			
+			case "exitinstance":
+				qs.setCond(5);
+				qs.getPlayer().getReflection().collapse();
+				return null;
 		}
-		else if (event.equalsIgnoreCase("enterinstance"))
-		{
-			st.setCond(2);
-			enterInstance(st.getPlayer(), 141);
-			return null;
-		}
-		else if (event.equalsIgnoreCase("jinia_q10287_03.htm"))
-		{
-			st.setCond(3);
-		}
-		else if (event.equalsIgnoreCase("kegor_q10287_03.htm"))
-		{
-			st.setCond(4);
-		}
-		else if (event.equalsIgnoreCase("exitinstance"))
-		{
-			st.setCond(5);
-			st.getPlayer().getReflection().collapse();
-			return null;
-		}
-		else if (event.startsWith("exgivebook"))
+		
+		if (event.startsWith("exgivebook"))
 		{
 			StringTokenizer str = new StringTokenizer(event);
 			str.nextToken();
@@ -77,98 +79,103 @@ public class Q10287_StoryOfThoseLeft extends Quest implements ScriptFile
 			switch (id)
 			{
 				case 1:
-					st.giveItems(10549, 1);
+					qs.giveItems(10549, 1);
 					break;
 				
 				case 2:
-					st.giveItems(10550, 1);
+					qs.giveItems(10550, 1);
 					break;
 				
 				case 3:
-					st.giveItems(10551, 1);
+					qs.giveItems(10551, 1);
 					break;
 				
 				case 4:
-					st.giveItems(10552, 1);
+					qs.giveItems(10552, 1);
 					break;
 				
 				case 5:
-					st.giveItems(10553, 1);
+					qs.giveItems(10553, 1);
 					break;
 				
 				case 6:
-					st.giveItems(14219, 1);
+					qs.giveItems(14219, 1);
 					break;
 			}
 			
-			st.setState(COMPLETED);
-			st.exitCurrentQuest(false);
+			qs.setState(COMPLETED);
+			qs.exitCurrentQuest(false);
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
+		final int cond = qs.getCond();
 		
-		if (npcId == Rafforty)
+		switch (npc.getId())
 		{
-			if (cond == 0)
-			{
-				QuestState qs = st.getPlayer().getQuestState(Q10286_ReunionWithSirra.class);
-				
-				if ((st.getPlayer().getLevel() >= 82) && (qs != null) && qs.isCompleted())
+			case Rafforty:
+				switch (cond)
 				{
-					htmltext = "rafforty_q10287_01.htm";
+					case 0:
+						final QuestState state = qs.getPlayer().getQuestState(Q10286_ReunionWithSirra.class);
+						if ((qs.getPlayer().getLevel() >= 82) && (state != null) && state.isCompleted())
+						{
+							htmltext = "rafforty_q10287_01.htm";
+						}
+						else
+						{
+							htmltext = "rafforty_q10287_00.htm";
+							qs.exitCurrentQuest(true);
+						}
+						break;
+					
+					case 1:
+					case 2:
+					case 3:
+					case 4:
+						htmltext = "rafforty_q10287_02.htm";
+						break;
+					
+					case 5:
+						htmltext = "rafforty_q10287_03.htm";
+						break;
+					
+					default:
+						htmltext = "rafforty_q10287_06.htm";
+						break;
 				}
-				else
+				break;
+			
+			case Jinia:
+				if (cond == 2)
 				{
-					htmltext = "rafforty_q10287_00.htm";
-					st.exitCurrentQuest(true);
+					htmltext = "jinia_q10287_01.htm";
 				}
-			}
-			else if ((cond >= 1) && (cond < 5))
-			{
-				htmltext = "rafforty_q10287_02.htm";
-			}
-			else if (cond == 5)
-			{
-				htmltext = "rafforty_q10287_03.htm";
-			}
-			else
-			{
-				htmltext = "rafforty_q10287_06.htm";
-			}
-		}
-		else if (npcId == Jinia)
-		{
-			if (cond == 2)
-			{
-				htmltext = "jinia_q10287_01.htm";
-			}
-			else if (cond == 3)
-			{
-				htmltext = "jinia_q10287_04.htm";
-			}
-			else if (cond == 4)
-			{
-				htmltext = "jinia_q10287_05.htm";
-			}
-		}
-		else if (npcId == Kegor)
-		{
-			if (cond == 3)
-			{
-				htmltext = "kegor_q10287_01.htm";
-			}
-			else if ((cond == 2) || (cond == 4))
-			{
-				htmltext = "kegor_q10287_04.htm";
-			}
+				else if (cond == 3)
+				{
+					htmltext = "jinia_q10287_04.htm";
+				}
+				else if (cond == 4)
+				{
+					htmltext = "jinia_q10287_05.htm";
+				}
+				break;
+			
+			case Kegor:
+				if (cond == 3)
+				{
+					htmltext = "kegor_q10287_01.htm";
+				}
+				else if ((cond == 2) || (cond == 4))
+				{
+					htmltext = "kegor_q10287_04.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
@@ -176,7 +183,7 @@ public class Q10287_StoryOfThoseLeft extends Quest implements ScriptFile
 	
 	private void enterInstance(Player player, int izId)
 	{
-		Reflection r = player.getActiveReflection();
+		final Reflection r = player.getActiveReflection();
 		
 		if (r != null)
 		{

@@ -24,12 +24,12 @@ import lineage2.gameserver.utils.Location;
  */
 public class Q10293_SevenSignsForbiddenBookOfTheElmoredenKingdom extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int Elcardia = 32784;
 	private static final int Sophia = 32596;
 	private static final int SophiaInzone1 = 32861;
 	private static final int ElcardiaInzone1 = 32785;
 	private static final int SophiaInzone2 = 32863;
-	private static final int SolinasBiography = 17213;
 	private static final int[] books =
 	{
 		32809,
@@ -38,6 +38,8 @@ public class Q10293_SevenSignsForbiddenBookOfTheElmoredenKingdom extends Quest i
 		32812,
 		32813
 	};
+	// Item
+	private static final int SolinasBiography = 17213;
 	
 	public Q10293_SevenSignsForbiddenBookOfTheElmoredenKingdom()
 	{
@@ -49,101 +51,97 @@ public class Q10293_SevenSignsForbiddenBookOfTheElmoredenKingdom extends Quest i
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		Player player = st.getPlayer();
+		Player player = qs.getPlayer();
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("elcardia_q10293_3.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("enter_library"))
-		{
-			enterInstance(st, 156);
-			return null;
-		}
-		else if (event.equalsIgnoreCase("sophia2_q10293_4.htm"))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("sophia2_q10293_8.htm"))
-		{
-			st.setCond(4);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("elcardia2_q10293_4.htm"))
-		{
-			st.setCond(5);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("sophia2_q10293_10.htm"))
-		{
-			st.setCond(6);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("teleport_in"))
-		{
-			Location loc = new Location(37348, -50383, -1168);
-			st.getPlayer().teleToLocation(loc);
-			teleportElcardia(player);
-			return null;
-		}
-		else if (event.equalsIgnoreCase("teleport_out"))
-		{
-			Location loc = new Location(37205, -49753, -1128);
-			st.getPlayer().teleToLocation(loc);
-			teleportElcardia(player);
-			return null;
-		}
-		else if (event.equalsIgnoreCase("book_q10293_3a.htm"))
-		{
-			st.giveItems(SolinasBiography, 1);
-			st.setCond(7);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("elcardia_q10293_7.htm"))
-		{
-			st.addExpAndSp(15000000, 1500000);
-			st.setState(COMPLETED);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
+			case "elcardia_q10293_3.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "enter_library":
+				enterInstance(qs, 156);
+				return null;
+				
+			case "sophia2_q10293_4.htm":
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "sophia2_q10293_8.htm":
+				qs.setCond(4);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "elcardia2_q10293_4.htm":
+				qs.setCond(5);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "sophia2_q10293_10.htm":
+				qs.setCond(6);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "teleport_in":
+				qs.getPlayer().teleToLocation(new Location(37348, -50383, -1168));
+				teleportElcardia(player);
+				return null;
+				
+			case "teleport_out":
+				qs.getPlayer().teleToLocation(new Location(37205, -49753, -1128));
+				teleportElcardia(player);
+				return null;
+				
+			case "book_q10293_3a.htm":
+				qs.giveItems(SolinasBiography, 1);
+				qs.setCond(7);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "elcardia_q10293_7.htm":
+				qs.addExpAndSp(15000000, 1500000);
+				qs.setState(COMPLETED);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		Player player = st.getPlayer();
+		final int cond = qs.getCond();
+		final Player player = qs.getPlayer();
 		
 		if (!player.isBaseClassActive())
 		{
 			return "no_subclass_allowed.htm";
 		}
 		
-		switch (npcId)
+		switch (npc.getId())
 		{
 			case Elcardia:
 				if (cond == 0)
 				{
-					QuestState qs = player.getQuestState(Q10292_SevenSignsMysteriousGirl.class);
+					final QuestState state = player.getQuestState(Q10292_SevenSignsMysteriousGirl.class);
 					
-					if ((player.getLevel() >= 81) && (qs != null) && qs.isCompleted())
+					if ((player.getLevel() >= 81) && (state != null) && state.isCompleted())
 					{
 						htmltext = "elcardia_q10293_1.htm";
 					}
 					else
 					{
 						htmltext = "elcardia_q10293_0.htm";
-						st.exitCurrentQuest(true);
+						qs.exitCurrentQuest(true);
 					}
 				}
 				else if ((cond >= 1) && (cond < 8))
@@ -154,7 +152,6 @@ public class Q10293_SevenSignsForbiddenBookOfTheElmoredenKingdom extends Quest i
 				{
 					htmltext = "elcardia_q10293_5.htm";
 				}
-				
 				break;
 			
 			case Sophia:
@@ -162,55 +159,63 @@ public class Q10293_SevenSignsForbiddenBookOfTheElmoredenKingdom extends Quest i
 				{
 					htmltext = "sophia_q10293_1.htm";
 				}
-				
 				break;
 			
 			case SophiaInzone1:
-				if (cond == 1)
+				switch (cond)
 				{
-					htmltext = "sophia2_q10293_1.htm";
+					case 1:
+						htmltext = "sophia2_q10293_1.htm";
+						break;
+					
+					case 2:
+					case 4:
+					case 7:
+					case 8:
+						htmltext = "sophia2_q10293_5.htm";
+						break;
+					
+					case 3:
+						htmltext = "sophia2_q10293_6.htm";
+						break;
+					
+					case 5:
+						htmltext = "sophia2_q10293_9.htm";
+						break;
+					
+					case 6:
+						htmltext = "sophia2_q10293_11.htm";
+						break;
 				}
-				else if ((cond == 2) || (cond == 4) || (cond == 7) || (cond == 8))
-				{
-					htmltext = "sophia2_q10293_5.htm";
-				}
-				else if (cond == 3)
-				{
-					htmltext = "sophia2_q10293_6.htm";
-				}
-				else if (cond == 5)
-				{
-					htmltext = "sophia2_q10293_9.htm";
-				}
-				else if (cond == 6)
-				{
-					htmltext = "sophia2_q10293_11.htm";
-				}
-				
 				break;
 			
 			case ElcardiaInzone1:
-				if ((cond == 1) || (cond == 3) || (cond == 5) || (cond == 6))
+				switch (cond)
 				{
-					htmltext = "elcardia2_q10293_1.htm";
-				}
-				else if (cond == 2)
-				{
-					st.setCond(3);
-					htmltext = "elcardia2_q10293_2.htm";
-				}
-				else if (cond == 4)
-				{
-					htmltext = "elcardia2_q10293_3.htm";
-				}
-				else if (cond == 7)
-				{
-					st.setCond(8);
-					htmltext = "elcardia2_q10293_5.htm";
-				}
-				else if (cond == 8)
-				{
-					htmltext = "elcardia2_q10293_5.htm";
+					case 1:
+					case 3:
+					case 5:
+					case 6:
+						htmltext = "elcardia2_q10293_1.htm";
+						break;
+					
+					case 2:
+						qs.setCond(3);
+						htmltext = "elcardia2_q10293_2.htm";
+						break;
+					
+					case 4:
+						htmltext = "elcardia2_q10293_3.htm";
+						break;
+					
+					case 7:
+						qs.setCond(8);
+						htmltext = "elcardia2_q10293_5.htm";
+						break;
+					
+					case 8:
+						htmltext = "elcardia2_q10293_5.htm";
+						break;
 				}
 				
 				break;

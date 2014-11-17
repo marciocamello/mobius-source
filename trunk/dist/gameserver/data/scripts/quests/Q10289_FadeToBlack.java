@@ -22,8 +22,11 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10289_FadeToBlack extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int Greymore = 32757;
+	// Monster
 	private static final int Anays = 25701;
+	// Items
 	private static final int MarkofSplendor = 15527;
 	private static final int MarkofDarkness = 15528;
 	
@@ -36,23 +39,23 @@ public class Q10289_FadeToBlack extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("greymore_q10289_03.htm"))
+		if (event.equals("greymore_q10289_03.htm"))
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
+			qs.setState(STARTED);
+			qs.setCond(1);
+			qs.playSound(SOUND_ACCEPT);
 		}
-		else if (event.equalsIgnoreCase("showmark"))
+		else if (event.equals("showmark"))
 		{
-			if ((st.getCond() == 2) && (st.getQuestItemsCount(MarkofDarkness) > 0))
+			if ((qs.getCond() == 2) && (qs.getQuestItemsCount(MarkofDarkness) > 0))
 			{
 				htmltext = "greymore_q10289_06.htm";
 			}
-			else if ((st.getCond() == 3) && (st.getQuestItemsCount(MarkofSplendor) > 0))
+			else if ((qs.getCond() == 3) && (qs.getQuestItemsCount(MarkofSplendor) > 0))
 			{
 				htmltext = "greymore_q10289_07.htm";
 			}
@@ -70,167 +73,160 @@ public class Q10289_FadeToBlack extends Quest implements ScriptFile
 			switch (id)
 			{
 				case 1:
-					st.giveItems(15775, 1, false);
-					st.giveItems(ADENA_ID, 420920);
+					qs.giveItems(15775, 1, false);
+					qs.giveItems(ADENA_ID, 420920);
 					break;
 				
 				case 2:
-					st.giveItems(15776, 1, false);
-					st.giveItems(ADENA_ID, 420920);
+					qs.giveItems(15776, 1, false);
+					qs.giveItems(ADENA_ID, 420920);
 					break;
 				
 				case 3:
-					st.giveItems(15777, 1, false);
-					st.giveItems(ADENA_ID, 420920);
+					qs.giveItems(15777, 1, false);
+					qs.giveItems(ADENA_ID, 420920);
 					break;
 				
 				case 4:
-					st.giveItems(15778, 1, false);
+					qs.giveItems(15778, 1, false);
 					break;
 				
 				case 5:
-					st.giveItems(15779, 1, false);
-					st.giveItems(ADENA_ID, 168360);
+					qs.giveItems(15779, 1, false);
+					qs.giveItems(ADENA_ID, 168360);
 					break;
 				
 				case 6:
-					st.giveItems(15780, 1, false);
-					st.giveItems(ADENA_ID, 168360);
+					qs.giveItems(15780, 1, false);
+					qs.giveItems(ADENA_ID, 168360);
 					break;
 				
 				case 7:
-					st.giveItems(15781, 1, false);
-					st.giveItems(ADENA_ID, 252540);
+					qs.giveItems(15781, 1, false);
+					qs.giveItems(ADENA_ID, 252540);
 					break;
 				
 				case 8:
-					st.giveItems(15782, 1, false);
-					st.giveItems(ADENA_ID, 357780);
+					qs.giveItems(15782, 1, false);
+					qs.giveItems(ADENA_ID, 357780);
 					break;
 				
 				case 9:
-					st.giveItems(15783, 1, false);
-					st.giveItems(ADENA_ID, 357780);
+					qs.giveItems(15783, 1, false);
+					qs.giveItems(ADENA_ID, 357780);
 					break;
 				
 				case 10:
-					st.giveItems(15784, 1, false);
-					st.giveItems(ADENA_ID, 505100);
+					qs.giveItems(15784, 1, false);
+					qs.giveItems(ADENA_ID, 505100);
 					break;
 				
 				case 11:
-					st.giveItems(15785, 1, false);
-					st.giveItems(ADENA_ID, 505100);
+					qs.giveItems(15785, 1, false);
+					qs.giveItems(ADENA_ID, 505100);
 					break;
 				
 				case 12:
-					st.giveItems(15786, 1, false);
-					st.giveItems(ADENA_ID, 505100);
+					qs.giveItems(15786, 1, false);
+					qs.giveItems(ADENA_ID, 505100);
 					break;
 				
 				case 13:
-					st.giveItems(15787, 1, false);
-					st.giveItems(ADENA_ID, 505100);
+					qs.giveItems(15787, 1, false);
+					qs.giveItems(ADENA_ID, 505100);
 					break;
 				
 				case 14:
-					st.giveItems(15788, 1, false);
-					st.giveItems(ADENA_ID, 505100);
+					qs.giveItems(15788, 1, false);
+					qs.giveItems(ADENA_ID, 505100);
 					break;
 				
 				case 15:
-					st.giveItems(15789, 1, false);
-					st.giveItems(ADENA_ID, 505100);
+					qs.giveItems(15789, 1, false);
+					qs.giveItems(ADENA_ID, 505100);
 					break;
 				
 				case 16:
-					st.giveItems(15790, 1, false);
-					st.giveItems(ADENA_ID, 496680);
+					qs.giveItems(15790, 1, false);
+					qs.giveItems(ADENA_ID, 496680);
 					break;
 				
 				case 17:
-					st.giveItems(15791, 1, false);
-					st.giveItems(ADENA_ID, 496680);
+					qs.giveItems(15791, 1, false);
+					qs.giveItems(ADENA_ID, 496680);
 					break;
 				
 				case 18:
-					st.giveItems(15812, 1, false);
-					st.giveItems(ADENA_ID, 563860);
+					qs.giveItems(15812, 1, false);
+					qs.giveItems(ADENA_ID, 563860);
 					break;
 				
 				case 19:
-					st.giveItems(15813, 1, false);
-					st.giveItems(ADENA_ID, 509040);
+					qs.giveItems(15813, 1, false);
+					qs.giveItems(ADENA_ID, 509040);
 					break;
 				
 				case 20:
-					st.giveItems(15814, 1, false);
-					st.giveItems(ADENA_ID, 454240);
+					qs.giveItems(15814, 1, false);
+					qs.giveItems(ADENA_ID, 454240);
 					break;
 			}
 			
 			htmltext = "greymore_q10289_09.htm";
-			st.takeAllItems(MarkofSplendor, MarkofDarkness);
-			st.exitCurrentQuest(false);
+			qs.takeAllItems(MarkofSplendor, MarkofDarkness);
+			qs.exitCurrentQuest(false);
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int cond = st.getCond();
 		
-		if (npc.getId() == Greymore)
+		switch (qs.getCond())
 		{
-			if (cond == 0)
-			{
-				QuestState qs = st.getPlayer().getQuestState(Q10288_SecretMission.class);
-				
-				if ((st.getPlayer().getLevel() >= 82) && (qs != null) && qs.isCompleted())
+			case 0:
+				final QuestState state = qs.getPlayer().getQuestState(Q10288_SecretMission.class);
+				if ((qs.getPlayer().getLevel() >= 82) && (state != null) && state.isCompleted())
 				{
 					htmltext = "greymore_q10289_01.htm";
 				}
 				else
 				{
 					htmltext = "greymore_q10289_00.htm";
-					st.exitCurrentQuest(true);
+					qs.exitCurrentQuest(true);
 				}
-			}
-			else if (cond == 1)
-			{
+				break;
+			
+			case 1:
 				htmltext = "greymore_q10289_04.htm";
-			}
-			else if ((cond == 2) || (cond == 3))
-			{
+				break;
+			
+			case 2:
+			case 3:
 				htmltext = "greymore_q10289_05.htm";
-			}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		
-		if (cond == 1)
+		if (qs.getCond() == 1)
 		{
-			if (npc.getId() == Anays)
+			if (Rnd.chance(30))
 			{
-				if (Rnd.chance(30))
-				{
-					st.giveItems(MarkofSplendor, 1);
-					st.setCond(3);
-				}
-				else
-				{
-					st.giveItems(MarkofDarkness, 1);
-					st.setCond(2);
-				}
+				qs.giveItems(MarkofSplendor, 1);
+				qs.setCond(3);
+			}
+			else
+			{
+				qs.giveItems(MarkofDarkness, 1);
+				qs.setCond(2);
 			}
 		}
 		

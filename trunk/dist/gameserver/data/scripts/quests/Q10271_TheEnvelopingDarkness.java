@@ -20,11 +20,123 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10271_TheEnvelopingDarkness extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int Orbyu = 32560;
 	private static final int El = 32556;
 	private static final int MedibalsCorpse = 32528;
+	// Item
 	private static final int InspectorMedibalsDocument = 13852;
+	// Other
 	private static final int CC_MINIMUM = 36;
+	
+	public Q10271_TheEnvelopingDarkness()
+	{
+		super(false);
+		addStartNpc(Orbyu);
+		addTalkId(Orbyu, El, MedibalsCorpse);
+		addQuestItem(InspectorMedibalsDocument);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "orbyu_q10271_3.htm":
+				if (qs.getCond() == 0)
+				{
+					qs.setCond(1);
+					qs.setState(STARTED);
+					qs.playSound(SOUND_ACCEPT);
+				}
+				break;
+			
+			case "el_q10271_2.htm":
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "medibalscorpse_q10271_2.htm":
+				qs.setCond(3);
+				qs.playSound(SOUND_MIDDLE);
+				qs.giveItems(InspectorMedibalsDocument, 1);
+				break;
+			
+			case "el_q10271_4.htm":
+				qs.setCond(4);
+				qs.playSound(SOUND_MIDDLE);
+				qs.takeItems(InspectorMedibalsDocument, -1);
+				break;
+			
+			case "orbyu_q10271_5.htm":
+				qs.giveItems(ADENA_ID, 236510);
+				qs.addExpAndSp(1109665, 1229015);
+				qs.setState(COMPLETED);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		final Player player = qs.getPlayer();
+		
+		switch (npc.getId())
+		{
+			case Orbyu:
+				if (cond == 0)
+				{
+					final QuestState ToTheSeedOfDestruction = player.getQuestState(Q10269_ToTheSeedOfDestruction.class);
+					
+					if ((player.getLevel() >= 75) && (ToTheSeedOfDestruction != null) && ToTheSeedOfDestruction.isCompleted() && (player.getParty() != null) && (player.getParty().getCommandChannel() != null) && (player.getParty().getCommandChannel().getMemberCount() >= CC_MINIMUM))
+					{
+						htmltext = "orbyu_q10271_1.htm";
+					}
+					else
+					{
+						htmltext = "orbyu_q10271_0.htm";
+						qs.exitCurrentQuest(true);
+					}
+				}
+				else if (cond == 4)
+				{
+					htmltext = "orbyu_q10271_4.htm";
+				}
+				break;
+			
+			case El:
+				if (cond == 1)
+				{
+					htmltext = "el_q10271_1.htm";
+				}
+				else if ((cond == 3) && (qs.getQuestItemsCount(InspectorMedibalsDocument) >= 1))
+				{
+					htmltext = "el_q10271_3.htm";
+				}
+				else if ((cond == 3) && (qs.getQuestItemsCount(InspectorMedibalsDocument) < 1))
+				{
+					htmltext = "el_q10271_0.htm";
+				}
+				break;
+			
+			case MedibalsCorpse:
+				if (cond == 2)
+				{
+					htmltext = "medibalscorpse_q10271_1.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
 	
 	@Override
 	public void onLoad()
@@ -39,110 +151,5 @@ public class Q10271_TheEnvelopingDarkness extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10271_TheEnvelopingDarkness()
-	{
-		super(false);
-		addStartNpc(Orbyu);
-		addTalkId(Orbyu);
-		addTalkId(El);
-		addTalkId(MedibalsCorpse);
-		addQuestItem(InspectorMedibalsDocument);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		int cond = st.getCond();
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("orbyu_q10271_3.htm") && (cond == 0))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("el_q10271_2.htm"))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("medibalscorpse_q10271_2.htm"))
-		{
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
-			st.giveItems(InspectorMedibalsDocument, 1);
-		}
-		else if (event.equalsIgnoreCase("el_q10271_4.htm"))
-		{
-			st.setCond(4);
-			st.playSound(SOUND_MIDDLE);
-			st.takeItems(InspectorMedibalsDocument, -1);
-		}
-		else if (event.equalsIgnoreCase("orbyu_q10271_5.htm"))
-		{
-			st.giveItems(ADENA_ID, 236510);
-			st.addExpAndSp(1109665, 1229015);
-			st.setState(COMPLETED);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		Player player = st.getPlayer();
-		QuestState ToTheSeedOfDestruction = player.getQuestState(Q10269_ToTheSeedOfDestruction.class);
-		
-		if (npcId == Orbyu)
-		{
-			if (cond == 0)
-			{
-				if ((player.getLevel() >= 75) && (ToTheSeedOfDestruction != null) && ToTheSeedOfDestruction.isCompleted() && (player.getParty() != null) && (player.getParty().getCommandChannel() != null) && (player.getParty().getCommandChannel().getMemberCount() >= CC_MINIMUM))
-				{
-					htmltext = "orbyu_q10271_1.htm";
-				}
-				else
-				{
-					htmltext = "orbyu_q10271_0.htm";
-					st.exitCurrentQuest(true);
-				}
-			}
-			else if (cond == 4)
-			{
-				htmltext = "orbyu_q10271_4.htm";
-			}
-		}
-		else if (npcId == El)
-		{
-			if (cond == 1)
-			{
-				htmltext = "el_q10271_1.htm";
-			}
-			else if ((cond == 3) && (st.getQuestItemsCount(InspectorMedibalsDocument) >= 1))
-			{
-				htmltext = "el_q10271_3.htm";
-			}
-			else if ((cond == 3) && (st.getQuestItemsCount(InspectorMedibalsDocument) < 1))
-			{
-				htmltext = "el_q10271_0.htm";
-			}
-		}
-		else if (npcId == MedibalsCorpse)
-		{
-			if (cond == 2)
-			{
-				htmltext = "medibalscorpse_q10271_1.htm";
-			}
-		}
-		
-		return htmltext;
 	}
 }
