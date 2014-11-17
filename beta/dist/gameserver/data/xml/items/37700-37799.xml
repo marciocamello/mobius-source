@@ -85,5 +85,13 @@
 		<equip>
 			<slot id="HAIR_ALL"/>
 		</equip>
-	</armor>	
+	</armor>
+	<etcitem id="37756" name="Mysterious Fragment">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="Branchsys2.icon.event_cubic_w_piece_i02"/>
+		<set name="tradeable" value="true"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>	
 </list>

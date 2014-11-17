@@ -4367,7 +4367,7 @@
 		<set name="baseMCritRate" value="50.0"/>
 		<set name="collision_radius" value="8.0"/>
 		<set name="collision_height" value="17.5"/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="Warehouse"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="level" value="85"/>
 		<set name="baseHpRate" value="1.0"/>

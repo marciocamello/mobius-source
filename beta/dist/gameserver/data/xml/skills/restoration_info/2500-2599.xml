@@ -28,35 +28,80 @@
 		</group>
 	</restoration>
 	<restoration skill_id="2510" skill_level="1" name="Wondrous Cubic">
-		<group chance="35.0">
+		<group chance="15.0">
 			<item id="10633" min_count="1" max_count="1"/>
 		</group>
-		<group chance="25.0">
+		<group chance="17.0">
 			<item id="10642" min_count="1" max_count="1"/>
 		</group>
 		<group chance="20.0">
 			<item id="10634" min_count="1" max_count="1"/>
 		</group>
-		<group chance="10.0">
+		<group chance="15.0">
 			<item id="10643" min_count="1" max_count="1"/>
 		</group>
-		<group chance="4.0">
+		<group chance="15.47">
 			<item id="10635" min_count="1" max_count="1"/>
 		</group>
-		<group chance="3.0">
+		<group chance="5.20">
 			<item id="10644" min_count="1" max_count="1"/>
 		</group>
-		<group chance="1.2">
+		<group chance="5.74">
 			<item id="10636" min_count="1" max_count="1"/>
 		</group>
-		<group chance="0.8">
+		<group chance="6.0">
 			<item id="10645" min_count="1" max_count="1"/>
 		</group>
-		<group chance="0.6">
+		<group chance="6.89">
 			<item id="10637" min_count="1" max_count="1"/>
 		</group>
-		<group chance="0.4">
+		<group chance="7.33">
 			<item id="10646" min_count="1" max_count="1"/>
+		</group>
+			<group chance="6.05">
+			<item id="34852" min_count="1" max_count="1"/>
+		</group>
+			<group chance="6.36">
+			<item id="34851" min_count="1" max_count="1"/>
+		</group>
+			<group chance="20.00">
+			<item id="21096" min_count="1" max_count="1"/>
+		</group>
+			<group chance="21.00">
+			<item id="21101" min_count="1" max_count="1"/>
+		</group>
+			<group chance="12.00">
+			<item id="21097" min_count="1" max_count="1"/>
+		</group>
+			<group chance="10.00">
+			<item id="21102" min_count="1" max_count="1"/>
+		</group>
+			<group chance="7.80">
+			<item id="21098" min_count="1" max_count="1"/>
+		</group>
+			<group chance="7.30">
+			<item id="21103" min_count="1" max_count="1"/>
+		</group>
+		    <group chance="7.5">
+			<item id="21099" min_count="1" max_count="1"/>
+		</group>
+			<group chance="7.03">
+			<item id="21104" min_count="1" max_count="1"/>
+		</group>
+			<group chance="5.8">
+			<item id="21100" min_count="1" max_count="1"/>
+		</group>
+			<group chance="5.03">
+			<item id="21105" min_count="1" max_count="1"/>
+		</group>
+			<group chance="3.9">
+			<item id="34853" min_count="1" max_count="1"/>
+		</group>
+			<group chance="2.6">
+			<item id="34854" min_count="1" max_count="1"/>
+		</group>
+			<group chance="10.00">
+			<item id="37756" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
 	<restoration skill_id="2532" skill_level="1" name="Pathfinder Supplies">
