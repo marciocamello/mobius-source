@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>	
+	<armor id="24133" name="Dark Assassin Suit">
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="NONE"/>
+		</equip>
+	</armor>
+	<etcitem id="24134" name="Dark Assassin Suit Appearance Stone">
+		<set name="type" value="OTHER"/>
+		<set name="stackable" value="true"/>
+		<set name="weight" value="0"/>
+	</etcitem>	
+</list>

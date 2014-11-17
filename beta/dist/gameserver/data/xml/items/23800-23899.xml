@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<armor id="23877" name="Samurai Hair Accessory">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.iconArmar.g_co_japan_general_hair_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>
+	<etcitem id="23878" name="Samurai Hair Accessory Appearance Stone">
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>		
+	<armor id="23879" name="Samurai Outfit">
+		<set name="icon" value="BranchSys3.iconArmar.g_co_japan_general_i00"/>	
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="NONE"/>
+		</equip>
+	</armor> 
+	<etcitem id="23880" name="Samurai Outfit Appearance Stone">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+	</etcitem> 
+	<armor id="23881" name="Anakim Outfit">
+		<set name="icon" value="BranchSys3.iconArmar.g_co_anakim_i00"/>	
+		<set name="crystal_type" value="NONE"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="NONE"/>
+		</equip>
+	</armor>
+	<etcitem id="23882" name="Anakim Outfit Appearance Stone">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<armor id="23883" name="Vampire Top">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.iconArmar.g_co_vampiric_u_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="CHEST"/>
+		</equip>
+	</armor>
+	<armor id="23884" name="Vampire Pants">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.iconArmar.g_co_vampiric_l_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="LEGS"/>
+		</equip>
+	</armor>
+	<armor id="23885" name="Vampire Gloves">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.iconArmar.g_co_vampiric_g_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="GLOVES"/>
+		</equip>
+	</armor>
+	<armor id="23886" name="Vampire Shoes">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.iconArmar.g_co_vampiric_b_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="FEET"/>
+		</equip>
+	</armor>
+	<armor id="23887" name="Vampire Hair Accessory">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="BranchSys3.iconArmar.g_co_vampiric_hair_i00"/>
+		<set name="price" value="0"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+	</armor>	
+	<etcitem id="23888" name="Vampire Top Appearance Stone">
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23889" name="Vampire Pants Appearance Stone">
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23890" name="Vampire Gloves Appearance Stone">
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23891" name="Vampire Shoes Appearance Stone">
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="23892" name="Vampire Hair Accessory Appearance Stone">
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>	
+</list>
