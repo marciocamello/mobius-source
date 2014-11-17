@@ -45,7 +45,7 @@ public class QuestList extends L2GameServerPacket
 				{
 					quest.getQuest().getId(),
 					quest.getInt(QuestState.VAR_COND),
-					0x00
+				// 0x00
 				});
 			}
 		}
@@ -60,8 +60,8 @@ public class QuestList extends L2GameServerPacket
 		for (int[] q : questlist)
 		{
 			writeD(q[0]);
-			writeH(q[1]);
-			writeH(q[2]); // 603 - targetNpcId ???
+			writeD(q[1]);
+			// writeD(q[2]); // 603 - targetNpcId ???
 		}
 		
 		writeB(unk);
