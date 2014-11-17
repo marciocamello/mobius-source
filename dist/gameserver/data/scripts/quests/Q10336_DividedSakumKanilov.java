@@ -19,10 +19,121 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10336_DividedSakumKanilov extends Quest implements ScriptFile
 {
-	private static final int guild = 31795;
-	private static final int jena = 33509;
-	private static final int kanilov = 27451;
-	private int killedkanilov;
+	// Npcs
+	private static final int Guild = 31795;
+	private static final int Jena = 33509;
+	// Monster
+	private static final int Kanilov = 27451;
+	
+	public Q10336_DividedSakumKanilov()
+	{
+		super(false);
+		addStartNpc(Jena);
+		addTalkId(Jena, Guild);
+		addKillId(Kanilov);
+		addLevelCheck(27, 40);
+		addQuestCompletedCheck(Q10335_RequestToFindSakum.class);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "quest_ac":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				htmltext = "0-3.htm";
+				break;
+			
+			case "qet_rev":
+				htmltext = "1-3.htm";
+				qs.takeAllItems(17584);
+				qs.getPlayer().addExpAndSp(350000, 150000);
+				qs.giveItems(57, 100000);
+				qs.giveItems(955, 3);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		
+		switch (npc.getId())
+		{
+			case Jena:
+				if (qs.isCompleted())
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if ((cond == 0) && isAvailableFor(qs.getPlayer()))
+				{
+					htmltext = "0-1.htm";
+				}
+				else if (cond == 1)
+				{
+					htmltext = "0-4.htm";
+				}
+				else if (cond == 2)
+				{
+					htmltext = "0-5.htm";
+					qs.setCond(3);
+					qs.giveItems(17584, 1, false);
+				}
+				else if (cond == 3)
+				{
+					htmltext = "0-6.htm";
+				}
+				break;
+			
+			case Guild:
+				if (qs.isCompleted())
+				{
+					htmltext = "1-c.htm";
+				}
+				else if (cond == 0)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 1)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 2)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 3)
+				{
+					htmltext = "1-1.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if (qs.getCond() == 1)
+		{
+			qs.setCond(2);
+			qs.playSound(SOUND_MIDDLE);
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -37,122 +148,5 @@ public class Q10336_DividedSakumKanilov extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10336_DividedSakumKanilov()
-	{
-		super(false);
-		addStartNpc(jena);
-		addTalkId(jena);
-		addTalkId(guild);
-		addKillId(kanilov);
-		addLevelCheck(27, 40);
-		addQuestCompletedCheck(Q10335_RequestToFindSakum.class);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("quest_ac"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			htmltext = "0-3.htm";
-		}
-		
-		if (event.equalsIgnoreCase("qet_rev"))
-		{
-			htmltext = "1-3.htm";
-			st.takeAllItems(17584);
-			st.getPlayer().addExpAndSp(350000, 150000);
-			st.giveItems(57, 100000);
-			st.giveItems(955, 3);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		
-		if (npcId == jena)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()))
-			{
-				htmltext = "0-1.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-4.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "0-5.htm";
-				st.setCond(3);
-				st.giveItems(17584, 1, false);
-			}
-			else if (cond == 3)
-			{
-				htmltext = "0-6.htm";
-			}
-		}
-		else if (npcId == guild)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "1-c.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 1)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 2)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 3)
-			{
-				htmltext = "1-1.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		int npcId = npc.getId();
-		
-		if ((npcId == kanilov) && (st.getCond() == 1))
-		{
-			++killedkanilov;
-			
-			if (killedkanilov >= 1)
-			{
-				st.setCond(2);
-				st.playSound(SOUND_MIDDLE);
-				killedkanilov = 0;
-			}
-		}
-		
-		return null;
 	}
 }

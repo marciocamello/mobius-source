@@ -19,13 +19,12 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10302_UnsettlingShadowAndRumors extends Quest implements ScriptFile
 {
-	// npc
+	// Npcs
 	private static final int KANIBYS = 32898;
 	private static final int ISHAEL = 32894;
 	private static final int KES = 32901;
 	private static final int KEY = 32903;
 	private static final int KIK = 32902;
-	
 	// Reward
 	private static final int PAPER = 34033;
 	
@@ -39,56 +38,54 @@ public class Q10302_UnsettlingShadowAndRumors extends Quest implements ScriptFil
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		st.getPlayer();
-		
 		switch (event)
 		{
 			case "32898-4.htm":
 			{
-				st.setCond(1);
-				st.setState(STARTED);
-				st.playSound(SOUND_ACCEPT);
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
 				break;
 			}
 			case "32898-8.htm":
 			{
-				st.addExpAndSp(6728850, 755280);
-				st.giveItems(57, 2177190);
-				st.giveItems(PAPER, 1);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(false);
+				qs.addExpAndSp(6728850, 755280);
+				qs.giveItems(57, 2177190);
+				qs.giveItems(PAPER, 1);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(false);
 				break;
 			}
 			case "32894-1.htm":
 			{
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				qs.setCond(2);
 				break;
 			}
 			case "32901-1.htm":
 			{
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(3);
+				qs.playSound(SOUND_MIDDLE);
+				qs.setCond(3);
 				break;
 			}
 			case "32903-1.htm":
 			{
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(4);
+				qs.playSound(SOUND_MIDDLE);
+				qs.setCond(4);
 				break;
 			}
 			case "32902-1.htm":
 			{
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(5);
+				qs.playSound(SOUND_MIDDLE);
+				qs.setCond(5);
 				break;
 			}
 			case "32894-5.htm":
 			{
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(6);
+				qs.playSound(SOUND_MIDDLE);
+				qs.setCond(6);
 				break;
 			}
 		}
@@ -96,32 +93,29 @@ public class Q10302_UnsettlingShadowAndRumors extends Quest implements ScriptFil
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		st.getPlayer();
-		String htmlText = NO_QUEST_DIALOG;
-		int npcId = npc.getId();
-		int state = st.getState();
-		int cond = st.getCond();
+		String htmlText = "noquest";
+		final int cond = qs.getCond();
 		
-		if (state == COMPLETED)
+		if (qs.getState() == COMPLETED)
 		{
 			return "32898-comp.htm";
 		}
 		
-		if (st.getPlayer().getLevel() < 90)
+		if (qs.getPlayer().getLevel() < 90)
 		{
 			return "32898-lvl.htm";
 		}
 		
-		QuestState qs = st.getPlayer().getQuestState(Q10301_ShadowOfTerrorBlackishRedFog.class);
+		final QuestState state = qs.getPlayer().getQuestState(Q10301_ShadowOfTerrorBlackishRedFog.class);
 		
-		if ((qs == null) || !qs.isCompleted())
+		if ((state == null) || !state.isCompleted())
 		{
 			return "32898-lvl.htm";
 		}
 		
-		switch (npcId)
+		switch (npc.getId())
 		{
 			case KANIBYS:
 			{

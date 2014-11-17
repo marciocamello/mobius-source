@@ -26,22 +26,21 @@ import lineage2.gameserver.utils.ReflectionUtils;
 
 public class Q10338_SeizeYourDestiny extends Quest implements ScriptFile
 {
-	private static final int CELLPHINE_ID = 33477;
-	private static final int HADEL_ID = 33344;
+	private static final int CELLPHINE = 33477;
+	private static final int HADEL = 33344;
+	private static final int HERMUNKUS = 33340;
+	private static final int HARNAK = 27445;
+	private static final int SCROLL_OF_AFTERLIFE = 17600;
 	private static final int INSTANCE_ID = 195;
 	private static final int MEMORY_OF_DISASTER_ID = 200;
-	private static final int HARNAK_ID = 27445;
-	private static final int HERMUNKUS_ID = 33340;
-	private static final int SCROLL_OF_AFTERLIFE = 17600;
 	
 	public Q10338_SeizeYourDestiny()
 	{
 		super(false);
-		addStartNpc(CELLPHINE_ID);
-		addTalkId(HADEL_ID);
-		addTalkId(HERMUNKUS_ID);
-		addFirstTalkId(HERMUNKUS_ID);
-		addKillId(HARNAK_ID);
+		addStartNpc(CELLPHINE);
+		addTalkId(HADEL, HERMUNKUS);
+		addFirstTalkId(HERMUNKUS);
+		addKillId(HARNAK);
 		addLevelCheck(85, 99);
 		addClassLevelCheck(4);
 	}
@@ -54,7 +53,7 @@ public class Q10338_SeizeYourDestiny extends Quest implements ScriptFile
 			return null;
 		}
 		
-		Player player = qs.getPlayer();
+		final Player player = qs.getPlayer();
 		
 		if (player == null)
 		{
@@ -62,11 +61,11 @@ public class Q10338_SeizeYourDestiny extends Quest implements ScriptFile
 		}
 		
 		String htmltext = null;
-		int cond = qs.getCond();
+		final int cond = qs.getCond();
 		
 		switch (npc.getId())
 		{
-			case CELLPHINE_ID:
+			case CELLPHINE:
 				if (!isAvailableFor(player))
 				{
 					htmltext = "noqu.htm";
@@ -90,12 +89,10 @@ public class Q10338_SeizeYourDestiny extends Quest implements ScriptFile
 							htmltext = "0-3.htm";
 					}
 				}
-				
 				break;
 			
-			case HADEL_ID:
+			case HADEL:
 				htmltext = "noqu.htm";
-				
 				switch (cond)
 				{
 					case 1:
@@ -107,19 +104,16 @@ public class Q10338_SeizeYourDestiny extends Quest implements ScriptFile
 						htmltext = "1-5.htm";
 						break;
 				}
-				
 				break;
 			
-			case HERMUNKUS_ID:
+			case HERMUNKUS:
 				htmltext = "noqu.htm";
-				
 				switch (cond)
 				{
 					case 3:
 						htmltext = "2-2.htm";
 						break;
 				}
-				
 				break;
 		}
 		
@@ -127,25 +121,25 @@ public class Q10338_SeizeYourDestiny extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		Player player = st.getPlayer();
+		final Player player = qs.getPlayer();
 		
 		if (player == null)
 		{
 			return htmltext;
 		}
 		
-		if (event.equalsIgnoreCase("MemoryOfDisaster"))
+		if (event.equals("MemoryOfDisaster"))
 		{
-			Reflection r = player.getActiveReflection();
+			final Reflection r = player.getActiveReflection();
 			
 			if (r != null)
 			{
@@ -169,26 +163,25 @@ public class Q10338_SeizeYourDestiny extends Quest implements ScriptFile
 		
 		switch (npc.getId())
 		{
-			case CELLPHINE_ID:
-				if (event.equalsIgnoreCase("quest_ac"))
+			case CELLPHINE:
+				if (event.equals("quest_ac"))
 				{
-					st.setState(STARTED);
-					st.setCond(1);
-					st.playSound(SOUND_ACCEPT);
+					qs.setState(STARTED);
+					qs.setCond(1);
+					qs.playSound(SOUND_ACCEPT);
 					htmltext = "0-2.htm";
 				}
-				
 				break;
 			
-			case HADEL_ID:
-				if (event.equalsIgnoreCase("1-5.htm"))
+			case HADEL:
+				if (event.equals("1-5.htm"))
 				{
-					st.setCond(2);
-					st.playSound(SOUND_MIDDLE);
+					qs.setCond(2);
+					qs.playSound(SOUND_MIDDLE);
 				}
-				else if (event.equalsIgnoreCase("EnterInstance"))
+				else if (event.equals("EnterInstance"))
 				{
-					Reflection r = player.getActiveReflection();
+					final Reflection r = player.getActiveReflection();
 					
 					if (r != null)
 					{
@@ -199,7 +192,7 @@ public class Q10338_SeizeYourDestiny extends Quest implements ScriptFile
 					}
 					else if (player.canEnterInstance(INSTANCE_ID))
 					{
-						if (st.getCond() < 3)
+						if (qs.getCond() < 3)
 						{
 							ReflectionUtils.enterReflection(player, new HarnakUndergroundRuins(1), INSTANCE_ID);
 						}
@@ -211,19 +204,17 @@ public class Q10338_SeizeYourDestiny extends Quest implements ScriptFile
 					
 					htmltext = null;
 				}
-				
 				break;
 			
-			case HERMUNKUS_ID:
-				if (event.equalsIgnoreCase("accept_scroll"))
+			case HERMUNKUS:
+				if (event.equals("accept_scroll"))
 				{
 					player.sendPacket(new ExShowScreenMessage(NpcString.YOU_MAY_USE_SCROLL_OF_AFTERLIFE_FROM_HERMUNCUS_TO_AWAKEN, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));
-					st.playSound(SOUND_FINISH);
-					st.giveItems(SCROLL_OF_AFTERLIFE, 1);
-					st.exitCurrentQuest(false);
+					qs.playSound(SOUND_FINISH);
+					qs.giveItems(SCROLL_OF_AFTERLIFE, 1);
+					qs.exitCurrentQuest(false);
 					htmltext = "2-3.htm";
 				}
-				
 				break;
 		}
 		
@@ -231,42 +222,34 @@ public class Q10338_SeizeYourDestiny extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState qs)
-	{
-		if (npc.getId() == HARNAK_ID)
-		{
-			qs.setCond(3);
-			qs.playSound(SOUND_MIDDLE);
-		}
-		
-		return null;
-	}
-	
-	@Override
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
-		QuestState st = player.getQuestState(getClass());
+		final QuestState st = player.getQuestState(getClass());
 		
 		if (st == null)
 		{
 			return null;
 		}
 		
-		if (npc.getId() == HERMUNKUS_ID)
+		if (npc.getNpcState() == 1)
 		{
-			if (npc.getNpcState() == 1)
-			{
-				return null;
-			}
-			else if (st.getCond() == 3)
-			{
-				return "2-1.htm";
-			}
-			else
-			{
-				return "2-3.htm";
-			}
+			return null;
 		}
+		else if (st.getCond() == 3)
+		{
+			return "2-1.htm";
+		}
+		else
+		{
+			return "2-3.htm";
+		}
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		qs.setCond(3);
+		qs.playSound(SOUND_MIDDLE);
 		
 		return null;
 	}

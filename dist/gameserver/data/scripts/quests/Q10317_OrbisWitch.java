@@ -20,96 +20,100 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10317_OrbisWitch extends Quest implements ScriptFile
 {
-	private static final int NPC_OPERA = 32946;
-	private static final int NPC_LYDIA = 32892;
+	// Npcs
+	private static final int OPERA = 32946;
+	private static final int LYDIA = 32892;
 	
 	public Q10317_OrbisWitch()
 	{
 		super(PARTY_NONE);
-		addStartNpc(NPC_OPERA);
-		addTalkId(NPC_LYDIA);
+		addStartNpc(OPERA);
+		addTalkId(LYDIA);
 		addLevelCheck(95, 99);
 		addQuestCompletedCheck(Q10316_UndecayingMemoryOfThePast.class);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		if (st == null)
+		if (qs == null)
 		{
 			return "noquest";
 		}
 		
-		if (event.equalsIgnoreCase("32946-08.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("32892-02.htm"))
-		{
-			st.playSound(SOUND_FINISH);
-			st.addExpAndSp(74128050, 3319695);
-			st.giveItems(ADENA_ID, 506760, true);
-			st.exitCurrentQuest(false);
+			case "32946-08.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "32892-02.htm":
+				qs.playSound(SOUND_FINISH);
+				qs.addExpAndSp(74128050, 3319695);
+				qs.giveItems(ADENA_ID, 506760, true);
+				qs.exitCurrentQuest(false);
+				break;
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return htmltext;
 		}
 		
-		Player player = st.getPlayer();
-		QuestState previous = player.getQuestState(Q10316_UndecayingMemoryOfThePast.class);
+		final Player player = qs.getPlayer();
+		final QuestState previous = player.getQuestState(Q10316_UndecayingMemoryOfThePast.class);
 		
-		if (npc.getId() == NPC_OPERA)
+		switch (npc.getId())
 		{
-			if ((previous == null) || (!previous.isCompleted()) || (player.getLevel() < 95))
-			{
-				st.exitCurrentQuest(true);
-				return "32946-03.htm";
-			}
-			
-			switch (st.getState())
-			{
-				case COMPLETED:
-					htmltext = "32946-02.htm";
-					break;
-				
-				case CREATED:
-					htmltext = "32946-01.htm";
-					break;
-				
-				case STARTED:
-					if (st.getCond() != 1)
-					{
-						break;
-					}
-					
-					htmltext = "32946-09.htm";
-			}
-		}
-		else if (npc.getId() == NPC_LYDIA)
-		{
-			if (st.isStarted())
-			{
-				if (st.getCond() == 1)
+			case OPERA:
+				if ((previous == null) || (!previous.isCompleted()) || (player.getLevel() < 95))
 				{
-					htmltext = "32892-01.htm";
+					qs.exitCurrentQuest(true);
+					return "32946-03.htm";
 				}
-			}
-			else if (st.isCompleted())
-			{
-				htmltext = "32892-03.htm";
-			}
+				switch (qs.getState())
+				{
+					case COMPLETED:
+						htmltext = "32946-02.htm";
+						break;
+					
+					case CREATED:
+						htmltext = "32946-01.htm";
+						break;
+					
+					case STARTED:
+						if (qs.getCond() != 1)
+						{
+							break;
+						}
+						htmltext = "32946-09.htm";
+						break;
+				}
+				break;
+			
+			case LYDIA:
+				if (qs.isStarted())
+				{
+					if (qs.getCond() == 1)
+					{
+						htmltext = "32892-01.htm";
+					}
+				}
+				else if (qs.isCompleted())
+				{
+					htmltext = "32892-03.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
@@ -118,7 +122,7 @@ public class Q10317_OrbisWitch extends Quest implements ScriptFile
 	@Override
 	public boolean isVisible(Player player)
 	{
-		QuestState qs = player.getQuestState(Q10317_OrbisWitch.class);
+		final QuestState qs = player.getQuestState(Q10317_OrbisWitch.class);
 		return ((qs == null) && isAvailableFor(player)) || ((qs != null) && qs.isNowAvailableByTime());
 	}
 	

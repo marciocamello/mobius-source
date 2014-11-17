@@ -12,7 +12,6 @@
  */
 package quests;
 
-import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
@@ -20,6 +19,7 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10326_RespectYourElders extends Quest implements ScriptFile
 {
+	// Npcs
 	private static final int GALLINT = 32980;
 	private static final int PANTEON = 32972;
 	
@@ -33,68 +33,68 @@ public class Q10326_RespectYourElders extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		// Player player = st.getPlayer();
-		if (event.equalsIgnoreCase("3.htm"))
+		switch (event)
 		{
-			st.set("cond", "1", true);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("5.htm"))
-		{
-			st.giveItems(57, 14000);
-			st.addExpAndSp(5300, 2800);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(false);
+			case "3.htm":
+				qs.set("cond", "1", true);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "5.htm":
+				qs.giveItems(57, 14000);
+				qs.addExpAndSp(5300, 2800);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(false);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getInt("cond");
-		Player player = st.getPlayer();
+		final int cond = qs.getCond();
 		
-		if (npcId == GALLINT)
+		switch (npc.getId())
 		{
-			if ((cond == 0) && isAvailableFor(st.getPlayer()))
-			{
-				htmltext = "1.htm";
-				// else TODO
-			}
-			else if (cond >= 8)
-			{
-				htmltext = "3.htm";
-				st.giveItems(57, 12000);
-				
-				if (player.isMageClass())
+			case GALLINT:
+				if ((cond == 0) && isAvailableFor(qs.getPlayer()))
 				{
-					st.giveItems(2509, 1000);
+					htmltext = "1.htm";
 				}
-				else
+				else if (cond >= 8)
 				{
-					st.giveItems(1835, 1000);
+					htmltext = "3.htm";
+					qs.giveItems(57, 12000);
+					
+					if (qs.getPlayer().isMageClass())
+					{
+						qs.giveItems(2509, 1000);
+					}
+					else
+					{
+						qs.giveItems(1835, 1000);
+					}
+					
+					qs.addExpAndSp(3254, 2400);
+					qs.playSound(SOUND_FINISH);
+					qs.exitCurrentQuest(false);
 				}
-				
-				st.addExpAndSp(3254, 2400);
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(false);
-			}
-		}
-		else if (npcId == PANTEON)
-		{
-			if (cond == 1)
-			{
-				htmltext = "4.htm";
-			}
+				break;
+			
+			case PANTEON:
+				if (cond == 1)
+				{
+					htmltext = "4.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
@@ -103,18 +103,15 @@ public class Q10326_RespectYourElders extends Quest implements ScriptFile
 	@Override
 	public void onLoad()
 	{
-		//
 	}
 	
 	@Override
 	public void onReload()
 	{
-		//
 	}
 	
 	@Override
 	public void onShutdown()
 	{
-		//
 	}
 }

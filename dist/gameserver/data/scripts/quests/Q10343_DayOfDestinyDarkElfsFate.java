@@ -17,7 +17,21 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10343_DayOfDestinyDarkElfsFate extends SagasSuperclass implements ScriptFile
 {
-	private final int questId = 10343;
+	private static final int questId = 10343;
+	
+	public Q10343_DayOfDestinyDarkElfsFate()
+	{
+		super(false);
+		StartNPC = 30862;
+		StartRace = Race.darkelf;
+		init();
+	}
+	
+	@Override
+	public int questId()
+	{
+		return questId;
+	}
 	
 	@Override
 	public void onLoad()
@@ -32,19 +46,5 @@ public class Q10343_DayOfDestinyDarkElfsFate extends SagasSuperclass implements 
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10343_DayOfDestinyDarkElfsFate()
-	{
-		super(false);
-		StartNPC = 30862;
-		StartRace = Race.darkelf;
-		init();
-	}
-	
-	@Override
-	public int questId()
-	{
-		return questId;
 	}
 }

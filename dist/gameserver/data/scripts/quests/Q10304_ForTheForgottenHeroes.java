@@ -20,20 +20,168 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10304_ForTheForgottenHeroes extends Quest implements ScriptFile
 {
-	// npc
+	// Npc
 	private static final int ISHAEL = 32894;
 	
-	// mobs
+	// Monsters
 	private static final int YUI = 25837;
 	private static final int KINEN = 25840;
 	private static final int KONJAN = 25845;
 	private static final int RASINDA = 25841;
-	
 	private static final int MAKYSHA = 25838;
 	private static final int HORNAPI = 25839;
-	
 	private static final int YONTYMAK = 25846;
 	private static final int FRON = 25825;
+	
+	public Q10304_ForTheForgottenHeroes()
+	{
+		super(PARTY_ALL);
+		addStartNpc(ISHAEL);
+		addTalkId(ISHAEL);
+		addKillId(YUI, KINEN, KONJAN, RASINDA, MAKYSHA, HORNAPI, YONTYMAK, FRON);
+		addLevelCheck(90, 99);
+		addQuestCompletedCheck(Q10302_UnsettlingShadowAndRumors.class);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		switch (event)
+		{
+			case "32894-7.htm":
+				qs.setCond(2);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				qs.takeItems(17618, -1);
+				break;
+			
+			case "32894-11.htm":
+				qs.addExpAndSp(15197798, 6502166);
+				qs.giveItems(57, 47085998);
+				qs.giveItems(33467, 1);
+				qs.giveItems(33466, 1);
+				qs.giveItems(32779, 1);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(false);
+				break;
+		}
+		return event;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		if (qs.getState() == COMPLETED)
+		{
+			return "32894-comp.htm";
+		}
+		
+		if (qs.getPlayer().getLevel() < 90)
+		{
+			return "32894-lvl.htm";
+		}
+		
+		final QuestState state = qs.getPlayer().getQuestState(Q10302_UnsettlingShadowAndRumors.class);
+		if ((state == null) || !state.isCompleted())
+		{
+			return "32894-lvl.htm";
+		}
+		
+		switch (qs.getCond())
+		{
+			case 1:
+				return "32894-3.htm";
+				
+			case 2:
+				return "32894-15.htm";
+				
+			case 9:
+				return "32894-10.htm";
+		}
+		
+		return "noquest";
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		final int cond = qs.getCond();
+		
+		switch (npc.getId())
+		{
+			case YUI:
+				if (cond == 2)
+				{
+					qs.setCond(3);
+				}
+				break;
+			
+			case KINEN:
+				if (cond == 3)
+				{
+					qs.setCond(4);
+				}
+				break;
+			
+			case KONJAN:
+				if (cond == 4)
+				{
+					qs.setCond(5);
+				}
+				break;
+			
+			case RASINDA:
+				if (cond == 5)
+				{
+					qs.setCond(6);
+				}
+				break;
+			
+			case MAKYSHA:
+				if (cond == 6)
+				{
+					qs.getPlayer().setVar("MarkywaKilled", "true", -1);
+					checkVars(qs, qs.getPlayer());
+				}
+				break;
+			
+			case HORNAPI:
+				if (cond == 6)
+				{
+					qs.getPlayer().setVar("HornapiKilled", "true", -1);
+					checkVars(qs, qs.getPlayer());
+				}
+				break;
+			
+			case YONTYMAK:
+				if (cond == 7)
+				{
+					qs.setCond(8);
+				}
+				break;
+			
+			case FRON:
+				if (cond == 8)
+				{
+					qs.setCond(9);
+				}
+				break;
+		}
+		
+		return null;
+	}
+	
+	private static void checkVars(QuestState qs, Player player)
+	{
+		if (player == null)
+		{
+			return;
+		}
+		if ((player.getVar("MarkywaKilled") != null) && (player.getVar("HornapiKilled") != null))
+		{
+			qs.setCond(7);
+		}
+	}
 	
 	@Override
 	public void onLoad()
@@ -48,142 +196,5 @@ public class Q10304_ForTheForgottenHeroes extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10304_ForTheForgottenHeroes()
-	{
-		super(PARTY_ALL);
-		addStartNpc(ISHAEL);
-		addTalkId(ISHAEL);
-		addKillId(YUI);
-		addKillId(KINEN);
-		addKillId(KONJAN);
-		addKillId(RASINDA);
-		addKillId(MAKYSHA);
-		addKillId(HORNAPI);
-		addKillId(YONTYMAK);
-		addKillId(FRON);
-		
-		addLevelCheck(90, 99);
-		addQuestCompletedCheck(Q10302_UnsettlingShadowAndRumors.class);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		st.getPlayer();
-		if (event.equalsIgnoreCase("32894-7.htm"))
-		{
-			st.setCond(2);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-			st.takeItems(17618, -1);
-		}
-		else if (event.equalsIgnoreCase("32894-11.htm"))
-		{
-			st.addExpAndSp(15197798, 6502166);
-			st.giveItems(57, 47085998);
-			st.giveItems(33467, 1);
-			st.giveItems(33466, 1);
-			st.giveItems(32779, 1);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(false);
-		}
-		return event;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		st.getPlayer();
-		int npcId = npc.getId();
-		int state = st.getState();
-		int cond = st.getCond();
-		
-		if (state == COMPLETED)
-		{
-			return "32894-comp.htm";
-		}
-		
-		if (st.getPlayer().getLevel() < 90)
-		{
-			return "32894-lvl.htm";
-		}
-		QuestState qs = st.getPlayer().getQuestState(Q10302_UnsettlingShadowAndRumors.class);
-		if ((qs == null) || !qs.isCompleted())
-		{
-			return "32894-lvl.htm";
-		}
-		
-		if (npcId == ISHAEL)
-		{
-			if (cond == 1)
-			{
-				return "32894-3.htm";
-			}
-			else if (cond == 2)
-			{
-				return "32894-15.htm";
-			}
-			else if (cond == 9)
-			{
-				return "32894-10.htm";
-			}
-		}
-		return "noquest";
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState qs)
-	{
-		int cond = qs.getCond();
-		int npcId = npc.getId();
-		if ((npcId == YUI) && (cond == 2))
-		{
-			qs.setCond(3);
-		}
-		else if ((npcId == KINEN) && (cond == 3))
-		{
-			qs.setCond(4);
-		}
-		else if ((npcId == KONJAN) && (cond == 4))
-		{
-			qs.setCond(5);
-		}
-		else if ((npcId == RASINDA) && (cond == 5))
-		{
-			qs.setCond(6);
-		}
-		else if ((npcId == MAKYSHA) && (cond == 6))
-		{
-			qs.getPlayer().setVar("MarkywaKilled", "true", -1);
-			checkVars(qs, qs.getPlayer());
-		}
-		else if ((npcId == HORNAPI) && (cond == 6))
-		{
-			qs.getPlayer().setVar("HornapiKilled", "true", -1);
-			checkVars(qs, qs.getPlayer());
-		}
-		else if ((npcId == YONTYMAK) && (cond == 7))
-		{
-			qs.setCond(8);
-		}
-		else if ((npcId == FRON) && (cond == 8))
-		{
-			qs.setCond(9);
-		}
-		return null;
-	}
-	
-	private static void checkVars(QuestState qs, Player player)
-	{
-		if (player == null)
-		{
-			return;
-		}
-		if ((player.getVar("MarkywaKilled") != null) && (player.getVar("HornapiKilled") != null))
-		{
-			qs.setCond(7);
-		}
 	}
 }

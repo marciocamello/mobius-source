@@ -20,8 +20,87 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10351_OwnerOfHall extends Quest implements ScriptFile
 {
-	// npc
+	// Npc
 	private static final int TIPIA_NORMAL = 32892;
+	// Monster
+	private static final int OCTAVIUS = 29212;
+	
+	public Q10351_OwnerOfHall()
+	{
+		super(true);
+		addStartNpc(TIPIA_NORMAL);
+		addTalkId(TIPIA_NORMAL);
+		addKillId(OCTAVIUS);
+		addQuestCompletedCheck(Q10318_DecayingDarkness.class);
+		addLevelCheck(95, 100);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		switch (event)
+		{
+			case "32892-7.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "32892-10.htm":
+				qs.giveItems(57, 23655000);
+				qs.giveItems(19461, 1);
+				qs.addExpAndSp(897850000, 416175000);
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(false);
+				break;
+		}
+		
+		return event;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		final Player player = qs.getPlayer();
+		
+		if (player.getLevel() < 95)
+		{
+			return "32892-lvl.htm";
+		}
+		
+		final QuestState state = qs.getPlayer().getQuestState(Q10318_DecayingDarkness.class);
+		
+		if ((state == null) || !state.isCompleted())
+		{
+			return "32892-lvl.htm";
+		}
+		
+		switch (qs.getCond())
+		{
+			case 0:
+				return "32892.htm";
+				
+			case 1:
+				return "32892-8.htm";
+				
+			case 2:
+				return "32892-9.htm";
+		}
+		
+		return "noquest";
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if (qs.getCond() != 1)
+		{
+			return null;
+		}
+		
+		qs.setCond(2);
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -36,89 +115,5 @@ public class Q10351_OwnerOfHall extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10351_OwnerOfHall()
-	{
-		super(true);
-		addStartNpc(TIPIA_NORMAL);
-		addTalkId(TIPIA_NORMAL);
-		addKillId(29212); // octavius
-		addQuestCompletedCheck(Q10318_DecayingDarkness.class);
-		addLevelCheck(95, 100);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		if (event.equalsIgnoreCase("32892-7.htm"))
-		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		
-		if (event.equalsIgnoreCase("32892-10.htm"))
-		{
-			st.giveItems(57, 23655000);
-			st.giveItems(19461, 1);
-			st.addExpAndSp(897850000, 416175000);
-			st.playSound(SOUND_FINISH);
-			st.exitCurrentQuest(false);
-		}
-		
-		return event;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		Player player = st.getPlayer();
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if (player.getLevel() < 95)
-		{
-			return "32892-lvl.htm";
-		}
-		
-		QuestState qs = st.getPlayer().getQuestState(Q10318_DecayingDarkness.class);
-		
-		if ((qs == null) || !qs.isCompleted())
-		{
-			return "32892-lvl.htm";
-		}
-		
-		if (npcId == TIPIA_NORMAL)
-		{
-			if (cond == 0)
-			{
-				return "32892.htm";
-			}
-			
-			if (cond == 1)
-			{
-				return "32892-8.htm";
-			}
-			
-			if (cond == 2)
-			{
-				return "32892-9.htm";
-			}
-		}
-		
-		return "noquest";
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		if (st.getCond() != 1)
-		{
-			return null;
-		}
-		
-		st.setCond(2);
-		return null;
 	}
 }

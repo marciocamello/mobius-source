@@ -19,17 +19,152 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10335_RequestToFindSakum extends Quest implements ScriptFile
 {
-	private static final int batis = 30332;
-	private static final int kalesin = 33177;
-	private static final int jena = 33509;
-	private static final int sledopyt = 20035;
-	private static final int strelec = 20051;
-	private static final int skelet = 20054;
-	private static final int zombie = 20026;
+	private static final int Batis = 30332;
+	private static final int Kalesin = 33177;
+	private static final int Jena = 33509;
+	private static final int Sledopyt = 20035;
+	private static final int Strelec = 20051;
+	private static final int Skelet = 20054;
+	private static final int Zombie = 20026;
 	private static final String sledopyt_item = "sledopyt";
 	private static final String strelec_item = "strelec";
 	private static final String skelet_item = "skelet";
 	private static final String zombie_item = "zombie";
+	
+	public Q10335_RequestToFindSakum()
+	{
+		super(false);
+		addStartNpc(Batis);
+		addTalkId(Batis);
+		addTalkId(Kalesin);
+		addTalkId(Jena);
+		addKillNpcWithLog(2, sledopyt_item, 10, Sledopyt);
+		addKillNpcWithLog(2, strelec_item, 10, Strelec);
+		addKillNpcWithLog(2, skelet_item, 15, Skelet);
+		addKillNpcWithLog(2, zombie_item, 15, Zombie);
+		addLevelCheck(23, 40);
+		addQuestCompletedCheck(Q10334_WindmillHillStatusReport.class);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "quest_ac":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				htmltext = "0-3.htm";
+				break;
+			
+			case "qet_rev":
+				htmltext = "2-3.htm";
+				qs.getPlayer().addExpAndSp(250000, 100000);
+				qs.giveItems(57, 90000);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
+			
+			case "1-2.htm":
+				qs.setCond(2);
+				htmltext = "1-2.htm";
+				qs.playSound(SOUND_MIDDLE);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		
+		switch (npc.getId())
+		{
+			case Batis:
+				if (qs.isCompleted())
+				{
+					htmltext = "0-c.htm";
+				}
+				else if ((cond == 0) && isAvailableFor(qs.getPlayer()))
+				{
+					htmltext = "0-1.htm";
+				}
+				else if ((cond == 1) || (cond == 2) || (cond == 3))
+				{
+					htmltext = "0-3.htm";
+				}
+				else
+				{
+					htmltext = "0-nc.htm";
+				}
+				break;
+			
+			case Kalesin:
+				if (qs.isCompleted())
+				{
+					htmltext = "1-c.htm";
+				}
+				else if (cond == 0)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 1)
+				{
+					htmltext = "1-1.htm";
+				}
+				else if (cond == 2)
+				{
+					htmltext = "1-3.htm";
+				}
+				break;
+			
+			case Jena:
+				if (qs.isCompleted())
+				{
+					htmltext = "2-c.htm";
+				}
+				else if (cond == 0)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 1)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 2)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 3)
+				{
+					htmltext = "2-1.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		if (updateKill(npc, qs))
+		{
+			qs.unset(sledopyt_item);
+			qs.unset(strelec_item);
+			qs.unset(skelet_item);
+			qs.unset(zombie_item);
+			qs.setCond(3);
+		}
+		
+		return null;
+	}
 	
 	@Override
 	public void onLoad()
@@ -44,139 +179,5 @@ public class Q10335_RequestToFindSakum extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10335_RequestToFindSakum()
-	{
-		super(false);
-		addStartNpc(batis);
-		addTalkId(batis);
-		addTalkId(kalesin);
-		addTalkId(jena);
-		addKillNpcWithLog(2, sledopyt_item, 10, sledopyt);
-		addKillNpcWithLog(2, strelec_item, 10, strelec);
-		addKillNpcWithLog(2, skelet_item, 15, skelet);
-		addKillNpcWithLog(2, zombie_item, 15, zombie);
-		addLevelCheck(23, 40);
-		addQuestCompletedCheck(Q10334_WindmillHillStatusReport.class);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("quest_ac"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			htmltext = "0-3.htm";
-		}
-		else if (event.equalsIgnoreCase("qet_rev"))
-		{
-			htmltext = "2-3.htm";
-			st.getPlayer().addExpAndSp(250000, 100000);
-			st.giveItems(57, 90000);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
-		}
-		else if (event.equalsIgnoreCase("1-2.htm"))
-		{
-			st.setCond(2);
-			htmltext = "1-2.htm";
-			st.playSound(SOUND_MIDDLE);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		
-		if (npcId == batis)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "0-c.htm";
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()))
-			{
-				htmltext = "0-1.htm";
-			}
-			else if ((cond == 1) || (cond == 2) || (cond == 3))
-			{
-				htmltext = "0-3.htm";
-			}
-			else
-			{
-				htmltext = "0-nc.htm";
-			}
-		}
-		else if (npcId == kalesin)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "1-c.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 1)
-			{
-				htmltext = "1-1.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "1-3.htm";
-			}
-		}
-		else if (npcId == jena)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "2-c.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 1)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 2)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 3)
-			{
-				htmltext = "2-1.htm";
-			}
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onKill(NpcInstance npc, QuestState st)
-	{
-		boolean doneKill = updateKill(npc, st);
-		
-		if (doneKill)
-		{
-			st.unset(sledopyt_item);
-			st.unset(strelec_item);
-			st.unset(skelet_item);
-			st.unset(zombie_item);
-			st.setCond(3);
-		}
-		
-		return null;
 	}
 }

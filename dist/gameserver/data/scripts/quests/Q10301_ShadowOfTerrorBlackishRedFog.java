@@ -56,24 +56,9 @@ public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 	}
 	
 	@Override
-	public String onSkillUse(NpcInstance npc, Skill skill, QuestState qs)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		int skillId = skill.getId();
-		int npcId = npc.getId();
-		
-		if ((skillId == 12011) && (npcId == LARGE_VERDANT_WILDS))
-		{
-			NpcUtils.spawnSingle(WISP, Location.findPointToStay(qs.getPlayer().getLoc(), 50, 100, 0), 120000);
-			NpcUtils.spawnSingle(WISP, Location.findPointToStay(qs.getPlayer().getLoc(), 50, 100, 0), 120000);
-		}
-		
-		return null;
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		Player player = st.getPlayer();
+		Player player = qs.getPlayer();
 		
 		if (player == null)
 		{
@@ -84,31 +69,31 @@ public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 		{
 			case "33100-8.htm":
 			{
-				st.setCond(2);
-				st.setState(STARTED);
-				st.playSound(SOUND_ACCEPT);
-				st.giveItems(CRYSTALL, 8);
+				qs.setCond(2);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				qs.giveItems(CRYSTALL, 8);
 				break;
 			}
 			case "33100-10.htm":
 			{
-				st.giveItems(CRYSTALL, 3);
+				qs.giveItems(CRYSTALL, 3);
 				break;
 			}
 			case "32893-6.htm":
 			{
-				st.giveItems(57, 1863420);
-				st.giveItems(FAIRY, 1);
-				st.addExpAndSp(26920620, 11389320);
-				st.getPlayer().unsetVar("instance10301");
-				st.playSound(SOUND_FINISH);
-				st.exitCurrentQuest(false);
+				qs.giveItems(57, 1863420);
+				qs.giveItems(FAIRY, 1);
+				qs.addExpAndSp(26920620, 11389320);
+				qs.getPlayer().unsetVar("instance10301");
+				qs.playSound(SOUND_FINISH);
+				qs.exitCurrentQuest(false);
 				break;
 			}
 			case "enterInstance":
 			{
-				enterInstance(st, 192); // instance ID
-				st.startQuestTimer("initNpcs", 5000); // delay as in movie
+				enterInstance(qs, 192); // instance ID
+				qs.startQuestTimer("initNpcs", 5000); // delay as in movie
 				return null;
 			}
 			case "initNpcs":
@@ -151,12 +136,12 @@ public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 				_MobsToDie.add(_npc18);
 				_MobsToDie.add(_npc19);
 				_MobsToDie.add(_npc20);
-				st.startQuestTimer("startDiologue1", 5000); // delay as in movie
+				qs.startQuestTimer("startDiologue1", 5000); // delay as in movie
 				return null;
 			}
 			case "startDiologue1":
 			{
-				st.startQuestTimer("startDiologue2", 3000); // dlg 2
+				qs.startQuestTimer("startDiologue2", 3000); // dlg 2
 				return null;
 			}
 			case "startDiologue2":
@@ -175,10 +160,10 @@ public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 				
 				for (int i = 0; i < 5; i++)
 				{
-					st.getPlayer().broadcastPacket(new MagicSkillUse(st.getPlayer(), 14496, 1, 500, 0));
+					qs.getPlayer().broadcastPacket(new MagicSkillUse(qs.getPlayer(), 14496, 1, 500, 0));
 				}
 				
-				st.startQuestTimer("startDiologue3", 5000); // dlg 3
+				qs.startQuestTimer("startDiologue3", 5000); // dlg 3
 				return null;
 			}
 			case "startDiologue3":
@@ -189,7 +174,7 @@ public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 				}
 				
 				_mainZhrec.broadcastPacket(new MagicSkillUse(_mainZhrec, 14497, 1, 5000, 0));
-				st.startQuestTimer("startKillTimer", 5000); // dlg 3
+				qs.startQuestTimer("startKillTimer", 5000); // dlg 3
 				return null;
 			}
 			case "startKillTimer":
@@ -199,7 +184,7 @@ public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 					npcP.doDie(null);
 				}
 				
-				st.startQuestTimer("startSpawnLast", 5000); // spawn guards
+				qs.startQuestTimer("startSpawnLast", 5000); // spawn guards
 				return null;
 			}
 			case "startSpawnLast":
@@ -211,13 +196,13 @@ public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 				player.getReflection().addSpawnWithoutRespawn(33365, new Location(player.getX() + Rnd.get(150), 85780 + Rnd.get(150), -7752, 15428), 0);
 				player.getReflection().addSpawnWithoutRespawn(33365, new Location(player.getX() + Rnd.get(150), 85780 + Rnd.get(150), -7752, 15428), 0);
 				Functions.npcSay(npcP, NpcString.AH_UH_AH_UH_AH);
-				st.startQuestTimer("ExitInstance", 3000); // exitInstance
+				qs.startQuestTimer("ExitInstance", 3000); // exitInstance
 				return null;
 			}
 			case "ExitInstance":
 			{
-				st.getPlayer().setVar("instance10301", "true", -1);
-				st.getPlayer().teleToLocation(207559, 86429, -1000, 0);
+				qs.getPlayer().setVar("instance10301", "true", -1);
+				qs.getPlayer().teleToLocation(207559, 86429, -1000, 0);
 				return null;
 			}
 		}
@@ -225,67 +210,61 @@ public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
-		Player player = st.getPlayer();
-		String htmlText = NO_QUEST_DIALOG;
-		int npcId = npc.getId();
-		int state = st.getState();
-		int cond = st.getCond();
+		String htmlText = "noquest";
+		final int state = qs.getState();
+		final int cond = qs.getCond();
+		final Player player = qs.getPlayer();
 		
-		if (npcId == RADA)
+		switch (npc.getId())
 		{
-			if (state == COMPLETED)
-			{
-				return "33100-comp.htm";
-			}
-			
-			if (player.getLevel() < 90)
-			{
-				return "33100-lvl.htm";
-			}
-			
-			if (cond == 0)
-			{
-				return "33100.htm";
-			}
-			
-			if (state == 2)
-			{
-				if ((cond == 2) && (st.getQuestItemsCount(CRYSTALL) == 0))
+			case RADA:
+				if (state == COMPLETED)
 				{
-					return "33100-9.htm";
+					return "33100-comp.htm";
 				}
-				
-				if (cond == 3)
+				if (player.getLevel() < 90)
 				{
-					return "33100-11.htm";
+					return "33100-lvl.htm";
 				}
-			}
-		}
-		
-		if (npcId == SLAKI)
-		{
-			if (state == COMPLETED)
-			{
-				return "32893-comp.htm";
-			}
+				if (cond == 0)
+				{
+					return "33100.htm";
+				}
+				if (state == 2)
+				{
+					if ((cond == 2) && (qs.getQuestItemsCount(CRYSTALL) == 0))
+					{
+						return "33100-9.htm";
+					}
+					
+					if (cond == 3)
+					{
+						return "33100-11.htm";
+					}
+				}
+				break;
 			
-			if ((cond == 3) && (st.getQuestItemsCount(SPIRIT_ITEM) >= 1) && (player.getVar("instance10301") != null))
-			{
-				return "32893-1.htm";
-			}
+			case SLAKI:
+				if (state == COMPLETED)
+				{
+					return "32893-comp.htm";
+				}
+				if ((cond == 3) && (qs.getQuestItemsCount(SPIRIT_ITEM) >= 1) && (player.getVar("instance10301") != null))
+				{
+					return "32893-1.htm";
+				}
+				break;
 		}
 		
 		return htmlText;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int cond = st.getCond();
-		
-		if (cond != 2)
+		if (qs.getCond() != 2)
 		{
 			return null;
 		}
@@ -295,9 +274,21 @@ public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 			return null;
 		}
 		
-		st.giveItems(SPIRIT_ITEM, 1);
-		st.takeItems(CRYSTALL, -1);
-		st.setCond(3);
+		qs.giveItems(SPIRIT_ITEM, 1);
+		qs.takeItems(CRYSTALL, -1);
+		qs.setCond(3);
+		return null;
+	}
+	
+	@Override
+	public String onSkillUse(NpcInstance npc, Skill skill, QuestState qs)
+	{
+		if ((skill.getId() == 12011) && (npc.getId() == LARGE_VERDANT_WILDS))
+		{
+			NpcUtils.spawnSingle(WISP, Location.findPointToStay(qs.getPlayer().getLoc(), 50, 100, 0), 120000);
+			NpcUtils.spawnSingle(WISP, Location.findPointToStay(qs.getPlayer().getLoc(), 50, 100, 0), 120000);
+		}
+		
 		return null;
 	}
 	

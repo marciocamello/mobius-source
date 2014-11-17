@@ -54,40 +54,42 @@ public class Q10325_SearchingForNewPower extends Quest implements ScriptFile
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("quest_accept"))
+		if (event.equals("quest_accept"))
 		{
 			htmltext = "gallint_q10325_3.htm";
-			Race race = qs.getPlayer().getRace();
+			final Race race = qs.getPlayer().getRace();
 			
-			if (race == Race.darkelf)
+			switch (race)
 			{
-				htmltext = "gallint_q10325_3_darkelves.htm";
-				qs.setCond(4);
-			}
-			else if (race == Race.dwarf)
-			{
-				htmltext = "gallint_q10325_3_dwarves.htm";
-				qs.setCond(6);
-			}
-			else if (race == Race.elf)
-			{
-				htmltext = "gallint_q10325_3_elves.htm";
-				qs.setCond(3);
-			}
-			else if (race == Race.human)
-			{
-				htmltext = "gallint_q10325_3_human.htm";
-				qs.setCond(2);
-			}
-			else if (race == Race.kamael)
-			{
-				htmltext = "gallint_q10325_3_kamael.htm";
-				qs.setCond(7);
-			}
-			else if (race == Race.orc)
-			{
-				htmltext = "gallint_q10325_3_orcs.htm";
-				qs.setCond(5);
+				case darkelf:
+					htmltext = "gallint_q10325_3_darkelves.htm";
+					qs.setCond(4);
+					break;
+				
+				case dwarf:
+					htmltext = "gallint_q10325_3_dwarves.htm";
+					qs.setCond(6);
+					break;
+				
+				case elf:
+					htmltext = "gallint_q10325_3_elves.htm";
+					qs.setCond(3);
+					break;
+				
+				case human:
+					htmltext = "gallint_q10325_3_human.htm";
+					qs.setCond(2);
+					break;
+				
+				case kamael:
+					htmltext = "gallint_q10325_3_kamael.htm";
+					qs.setCond(7);
+					break;
+				
+				case orc:
+					htmltext = "gallint_q10325_3_orcs.htm";
+					qs.setCond(5);
+					break;
 			}
 			
 			qs.setState(STARTED);
@@ -98,21 +100,20 @@ public class Q10325_SearchingForNewPower extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		QuestState reqQuest = st.getPlayer().getQuestState("Q10324_FindingMagisterGallint");
-		final Race race = st.getPlayer().getRace();
+		final int cond = qs.getCond();
+		final QuestState reqQuest = qs.getPlayer().getQuestState("Q10324_FindingMagisterGallint");
+		final Race race = qs.getPlayer().getRace();
 		// Add talk NPC by player race
 		/*
 		 * if(cond == 0 && !talkerAdded) { talkerAdded = true; if(race == Race.DARKELF) addTalkId(BLACK); else if(race == Race.DWARF) addTalkId(KINCAID); else if(race == Race.ELF) addTalkId(CINDET); else if(race == Race.HUMAN) addTalkId(TALBOT); else if(race == Race.KAMAEL) addTalkId(XONIA); else
 		 * if(race == Race.ORC) addTalkId(HERZ); addTalkId(GALLINT); }
 		 */
-		int currentCond = st.getCond();
+		final int currentCond = qs.getCond();
 		
-		switch (npcId)
+		switch (npc.getId())
 		{
 			case GALLINT:
 				htmltext = "gallint_q10325_1.htm";
@@ -120,20 +121,20 @@ public class Q10325_SearchingForNewPower extends Quest implements ScriptFile
 				if (cond >= 8)
 				{
 					htmltext = "gallint_q10325_4.htm";
-					st.giveItems(ADENA_ID, 12000);
-					st.getPlayer().addExpAndSp(3254, 2400);
-					st.playSound(SOUND_FINISH);
+					qs.giveItems(ADENA_ID, 12000);
+					qs.getPlayer().addExpAndSp(3254, 2400);
+					qs.playSound(SOUND_FINISH);
 					
-					if (st.getPlayer().isMageClass())
+					if (qs.getPlayer().isMageClass())
 					{
-						st.giveItems(SPIRITSHOT, 1000);
+						qs.giveItems(SPIRITSHOT, 1000);
 					}
 					else
 					{
-						st.giveItems(SOULSHOT, 1000);
+						qs.giveItems(SOULSHOT, 1000);
 					}
 					
-					st.exitCurrentQuest(false);
+					qs.exitCurrentQuest(false);
 				}
 				else if (cond > 0)
 				{
@@ -143,7 +144,6 @@ public class Q10325_SearchingForNewPower extends Quest implements ScriptFile
 				{
 					htmltext = "You need to complete quest Finding Magister Gallint"; // TODO: Unknown text here
 				}
-				
 				break;
 			
 			case TALBOT:
@@ -152,14 +152,13 @@ public class Q10325_SearchingForNewPower extends Quest implements ScriptFile
 					if (currentCond == 2)
 					{
 						htmltext = "talbot_q10325_1.htm";
-						st.setCond(st.getCond() + 6);
+						qs.setCond(qs.getCond() + 6);
 					}
 					else
 					{
 						htmltext = "talbot_q10325_taken.htm";
 					}
 				}
-				
 				break;
 			
 			case CINDET:
@@ -168,14 +167,13 @@ public class Q10325_SearchingForNewPower extends Quest implements ScriptFile
 					if (currentCond == 3)
 					{
 						htmltext = "cindet_q10325_1.htm";
-						st.setCond(st.getCond() + 6);
+						qs.setCond(qs.getCond() + 6);
 					}
 					else
 					{
 						htmltext = "cindet_q10325_taken.htm";
 					}
 				}
-				
 				break;
 			
 			case BLACK:
@@ -184,14 +182,13 @@ public class Q10325_SearchingForNewPower extends Quest implements ScriptFile
 					if (currentCond == 4)
 					{
 						htmltext = "black_q10325_1.htm";
-						st.setCond(st.getCond() + 6);
+						qs.setCond(qs.getCond() + 6);
 					}
 					else
 					{
 						htmltext = "black_q10325_taken.htm";
 					}
 				}
-				
 				break;
 			
 			case HERZ:
@@ -200,14 +197,13 @@ public class Q10325_SearchingForNewPower extends Quest implements ScriptFile
 					if (currentCond == 5)
 					{
 						htmltext = "herz_q10325_1.htm";
-						st.setCond(st.getCond() + 6);
+						qs.setCond(qs.getCond() + 6);
 					}
 					else
 					{
 						htmltext = "herz_q10325_taken.htm";
 					}
 				}
-				
 				break;
 			
 			case KINCAID:
@@ -216,14 +212,13 @@ public class Q10325_SearchingForNewPower extends Quest implements ScriptFile
 					if (currentCond == 6)
 					{
 						htmltext = "kincaid_q10325_1.htm";
-						st.setCond(st.getCond() + 6);
+						qs.setCond(qs.getCond() + 6);
 					}
 					else
 					{
 						htmltext = "kincaid_q10325_taken.htm";
 					}
 				}
-				
 				break;
 			
 			case XONIA:
@@ -232,14 +227,13 @@ public class Q10325_SearchingForNewPower extends Quest implements ScriptFile
 					if (currentCond == 7)
 					{
 						htmltext = "xonia_q10325_1.htm";
-						st.setCond(st.getCond() + 6);
+						qs.setCond(qs.getCond() + 6);
 					}
 					else
 					{
 						htmltext = "xonia_q10325_taken.htm";
 					}
 				}
-				
 				break;
 		}
 		

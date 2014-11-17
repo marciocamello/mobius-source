@@ -19,8 +19,87 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10332_ToughRoad extends Quest implements ScriptFile
 {
-	private static final int batis = 30332;
-	private static final int kakai = 30565;
+	// Npcs
+	private static final int Batis = 30332;
+	private static final int Kakai = 30565;
+	
+	public Q10332_ToughRoad()
+	{
+		super(false);
+		addStartNpc(Kakai);
+		addTalkId(Kakai, Batis);
+		addLevelCheck(20, 40);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "quest_ac":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.giveItems(17582, 1, false);
+				qs.playSound(SOUND_ACCEPT);
+				htmltext = "0-2.htm";
+				break;
+			
+			case "qet_rev":
+				htmltext = "1-3.htm";
+				qs.getPlayer().addExpAndSp(90000, 30000);
+				qs.giveItems(57, 70000);
+				qs.takeAllItems(17582);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		
+		switch (npc.getId())
+		{
+			case Kakai:
+				if (qs.isCompleted())
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if ((cond == 0) && isAvailableFor(qs.getPlayer()))
+				{
+					htmltext = "0-1.htm";
+				}
+				else if (cond == 1)
+				{
+					htmltext = "0-3.htm";
+				}
+				break;
+			
+			case Batis:
+				if (qs.isCompleted())
+				{
+					htmltext = "1-c.htm";
+				}
+				else if (cond == 0)
+				{
+					htmltext = TODO_FIND_HTML;
+				}
+				else if (cond == 1)
+				{
+					htmltext = "1-1.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
 	
 	@Override
 	public void onLoad()
@@ -35,82 +114,5 @@ public class Q10332_ToughRoad extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10332_ToughRoad()
-	{
-		super(false);
-		addStartNpc(kakai);
-		addTalkId(kakai);
-		addTalkId(batis);
-		addLevelCheck(20, 40);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("quest_ac"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.giveItems(17582, 1, false);
-			st.playSound(SOUND_ACCEPT);
-			htmltext = "0-2.htm";
-		}
-		
-		if (event.equalsIgnoreCase("qet_rev"))
-		{
-			htmltext = "1-3.htm";
-			st.getPlayer().addExpAndSp(90000, 30000);
-			st.giveItems(57, 70000);
-			st.takeAllItems(17582);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		
-		if (npcId == kakai)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()))
-			{
-				htmltext = "0-1.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-3.htm";
-			}
-		}
-		else if (npcId == batis)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "1-c.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = TODO_FIND_HTML;
-			}
-			else if (cond == 1)
-			{
-				htmltext = "1-1.htm";
-			}
-		}
-		
-		return htmltext;
 	}
 }

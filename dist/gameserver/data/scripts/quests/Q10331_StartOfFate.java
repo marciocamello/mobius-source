@@ -44,22 +44,21 @@ import lineage2.gameserver.utils.Location;
  */
 public class Q10331_StartOfFate extends Quest implements ScriptFile
 {
-	// NPC.
-	private static final int INFILTRATION_OFFICER = 19155; // ok
-	private static final int VALFAR = 32146; // ok
-	private static final int RIVIAN = 32147; // ok
-	private static final int TOOK = 32150; // ok
-	private static final int FRANCO = 32153; // ok
-	private static final int MOKA = 32157; // ok
-	private static final int DEVON = 32160; // ok
+	private static final int INFILTRATION_OFFICER = 19155;
+	private static final int VALFAR = 32146;
+	private static final int RIVIAN = 32147;
+	private static final int TOOK = 32150;
+	private static final int FRANCO = 32153;
+	private static final int MOKA = 32157;
+	private static final int DEVON = 32160;
 	private static final int PANTHEON = 32972;
-	private static final int LAKCIS = 32977; // ok
-	private static final int SEBION = 32978; // ok
+	private static final int LAKCIS = 32977;
+	private static final int SEBION = 32978;
 	private static final int BELIS_VERIFICATION_SYSTEM = 33215;
 	private static final int ELECTRICITY_GENERATOR = 33216;
-	private static final int NEMERTESS = 22984; // ok
-	private static final int HANDYMAN = 22997; // ok
-	private static final int OPERATIVE = 22998; // ok
+	private static final int NEMERTESS = 22984;
+	private static final int HANDYMAN = 22997;
+	private static final int OPERATIVE = 22998;
 	private static final int SARILS_NECKLACE = 17580;
 	private static final int BELIS_MARK = 17615;
 	private static final int PROOF_OF_COURAGE = 17821;
@@ -82,111 +81,111 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if ((npc != null) && event.equalsIgnoreCase(getStartNpcPrefix(npc.getId()) + "_q10331_3.htm"))
+		if ((npc != null) && event.equals(getStartNpcPrefix(npc.getId()) + "_q10331_3.htm"))
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
+			qs.setCond(1);
+			qs.setState(STARTED);
+			qs.playSound(SOUND_ACCEPT);
 		}
-		else if (event.equalsIgnoreCase("lakcis_q10331_2.htm"))
+		else if (event.equals("lakcis_q10331_2.htm"))
 		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
+			qs.setCond(2);
+			qs.playSound(SOUND_MIDDLE);
 		}
-		else if (event.equalsIgnoreCase("teleport_to_5_area"))
+		else if (event.equals("teleport_to_5_area"))
 		{
-			st.getPlayer().teleToLocation(ESAGIRA_5_AREA);
+			qs.getPlayer().teleToLocation(ESAGIRA_5_AREA);
 			return null;
 		}
-		else if (event.equalsIgnoreCase("sebion_q10331_3.htm"))
+		else if (event.equals("sebion_q10331_3.htm"))
 		{
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
+			qs.setCond(3);
+			qs.playSound(SOUND_MIDDLE);
 		}
-		else if (event.equalsIgnoreCase("enter_to_labyrinth"))
+		else if (event.equals("enter_to_labyrinth"))
 		{
-			enterInstance(st, INSTANCED_ZONE_ID);
+			enterInstance(qs, INSTANCED_ZONE_ID);
 			return null;
 		}
-		else if (event.equalsIgnoreCase("start_stage_1"))
+		else if (event.equals("start_stage_1"))
 		{
-			Player p = st.getPlayer();
+			Player p = qs.getPlayer();
 			Reflection reflect = p.getReflection();
 			NpcInstance officer = getNpcFromReflection(INFILTRATION_OFFICER, reflect);
 			
 			if (reflect.getInstancedZoneId() == INSTANCED_ZONE_ID)
 			{
-				st.set("stage", 1);
+				qs.set("stage", 1);
 				reflect.openDoor(16240002);
 				officer.setRunning();
-				officer.setFollowTarget(st.getPlayer());
-				officer.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, st.getPlayer(), 150);
+				officer.setFollowTarget(qs.getPlayer());
+				officer.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, qs.getPlayer(), 150);
 			}
 			
 			return null;
 		}
-		else if (event.equalsIgnoreCase("start_stage_3"))
+		else if (event.equals("start_stage_3"))
 		{
-			Player p = st.getPlayer();
+			Player p = qs.getPlayer();
 			Reflection reflect = p.getReflection();
 			NpcInstance officer = getNpcFromReflection(INFILTRATION_OFFICER, reflect);
 			
 			if (reflect.getInstancedZoneId() == INSTANCED_ZONE_ID)
 			{
-				st.set("stage", 3);
+				qs.set("stage", 3);
 				reflect.openDoor(16240004);
 				officer.setRunning();
-				officer.setFollowTarget(st.getPlayer());
-				officer.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, st.getPlayer(), 150);
-				st.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.MARK_OF_BELIS_CAN_BE_ACQUIRED_FROM_ENEMIES, 7000, ScreenMessageAlign.TOP_CENTER));
-				st.startQuestTimer("belise_mark_msg_timer", 10000);
+				officer.setFollowTarget(qs.getPlayer());
+				officer.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, qs.getPlayer(), 150);
+				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.MARK_OF_BELIS_CAN_BE_ACQUIRED_FROM_ENEMIES, 7000, ScreenMessageAlign.TOP_CENTER));
+				qs.startQuestTimer("belise_mark_msg_timer", 10000);
 			}
 			
 			return null;
 		}
-		else if (event.equalsIgnoreCase("drop_belise_mark") && (npc != null))
+		else if (event.equals("drop_belise_mark") && (npc != null))
 		{
-			npc.dropItem(st.getPlayer(), BELIS_MARK, 1);
+			npc.dropItem(qs.getPlayer(), BELIS_MARK, 1);
 			return null;
 		}
-		else if (event.equalsIgnoreCase("belise_mark_msg_timer"))
+		else if (event.equals("belise_mark_msg_timer"))
 		{
-			Player player = st.getPlayer();
+			Player player = qs.getPlayer();
 			Reflection reflection = player.getActiveReflection();
 			
-			if ((reflection != null) && (reflection.getInstancedZoneId() == INSTANCED_ZONE_ID) && (st.getInt("stage") == 3))
+			if ((reflection != null) && (reflection.getInstancedZoneId() == INSTANCED_ZONE_ID) && (qs.getInt("stage") == 3))
 			{
 				player.sendPacket(new ExShowScreenMessage(NpcString.MARK_OF_BELIS_CAN_BE_ACQUIRED_FROM_ENEMIES, 7000, ScreenMessageAlign.TOP_CENTER));
-				st.startQuestTimer("belise_mark_msg_timer", 10000);
+				qs.startQuestTimer("belise_mark_msg_timer", 10000);
 			}
 			
 			return null;
 		}
-		else if (event.equalsIgnoreCase("use_belise_mark"))
+		else if (event.equals("use_belise_mark"))
 		{
-			if (st.getInt("stage") == 3)
+			if (qs.getInt("stage") == 3)
 			{
-				if (st.takeItems(BELIS_MARK, 1) == 1)
+				if (qs.takeItems(BELIS_MARK, 1) == 1)
 				{
-					int marksLeft = NEED_BELIS_MARKS_COUNT - st.getInt("belise_marks_left") - 1;
+					int marksLeft = NEED_BELIS_MARKS_COUNT - qs.getInt("belise_marks_left") - 1;
 					
 					if (marksLeft > 0)
 					{
-						htmltext = HtmCache.getInstance().getNotNull("quests/Q10331_StartOfFate/belis_verification_system_q10331_2.htm", st.getPlayer());
+						htmltext = HtmCache.getInstance().getNotNull("quests/Q10331_StartOfFate/belis_verification_system_q10331_2.htm", qs.getPlayer());
 						htmltext = htmltext.replace("<?BELISE_MARKS_LEFT?>", String.valueOf(marksLeft));
 					}
 					else
 					{
-						Player player = st.getPlayer();
+						Player player = qs.getPlayer();
 						Reflection reflect = player.getActiveReflection();
 						
 						if (reflect.getInstancedZoneId() == INSTANCED_ZONE_ID)
 						{
-							st.set("stage", 4);
+							qs.set("stage", 4);
 							reflect.openDoor(16240005);
 							NpcInstance officer = getNpcFromReflection(INFILTRATION_OFFICER, reflect);
 							
@@ -199,7 +198,7 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 						htmltext = "belis_verification_system_q10331_3.htm";
 					}
 					
-					st.set("belise_marks_left", NEED_BELIS_MARKS_COUNT - marksLeft);
+					qs.set("belise_marks_left", NEED_BELIS_MARKS_COUNT - marksLeft);
 				}
 				else
 				{
@@ -211,15 +210,15 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 				htmltext = "belis_verification_system_q10331_4.htm";
 			}
 		}
-		else if (event.equalsIgnoreCase("start_stage_5"))
+		else if (event.equals("start_stage_5"))
 		{
-			Player p = st.getPlayer();
+			Player p = qs.getPlayer();
 			Reflection reflect = p.getReflection();
 			NpcInstance officer = getNpcFromReflection(INFILTRATION_OFFICER, reflect);
 			
 			if (reflect.getInstancedZoneId() == INSTANCED_ZONE_ID)
 			{
-				st.set("stage", 5);
+				qs.set("stage", 5);
 				reflect.openDoor(16240006);
 				officer.setRunning();
 				NpcInstance generator = getNpcFromReflection(ELECTRICITY_GENERATOR, reflect);
@@ -229,19 +228,19 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 					generator.setNpcState(1);
 					officer.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, generator, 1000);
 					Functions.npcSay(officer, NpcString.DONT_COME_BACK_HERE);
-					st.startQuestTimer("stage_5_phrases_timer", 5000, officer);
-					st.startQuestTimer("stage_5_spawn_timer", 5000, officer);
+					qs.startQuestTimer("stage_5_phrases_timer", 5000, officer);
+					qs.startQuestTimer("stage_5_spawn_timer", 5000, officer);
 				}
 			}
 			
 			return null;
 		}
-		else if (event.equalsIgnoreCase("stage_5_phrases_timer"))
+		else if (event.equals("stage_5_phrases_timer"))
 		{
-			if (st.getInt("stage") == 5)
+			if (qs.getInt("stage") == 5)
 			{
 				Functions.npcSay(npc, NpcString.DONT_COME_BACK_HERE);
-				Player player = st.getPlayer();
+				Player player = qs.getPlayer();
 				Reflection reflection = player.getActiveReflection();
 				
 				if ((reflection != null) && (reflection.getInstancedZoneId() == INSTANCED_ZONE_ID))
@@ -256,16 +255,16 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 					player.sendPacket(new ExShowScreenMessage(screenMsg, 7000, ScreenMessageAlign.TOP_CENTER, true, true));
 				}
 				
-				st.startQuestTimer("stage_5_phrases_timer", 10000, npc);
+				qs.startQuestTimer("stage_5_phrases_timer", 10000, npc);
 			}
 			
 			return null;
 		}
-		else if (event.equalsIgnoreCase("stage_5_spawn_timer"))
+		else if (event.equals("stage_5_spawn_timer"))
 		{
-			if (st.getInt("stage") == 5)
+			if (qs.getInt("stage") == 5)
 			{
-				int defendersCount = st.getInt("spawned_defenders");
+				int defendersCount = qs.getInt("spawned_defenders");
 				
 				if ((defendersCount < NEED_DEFENDERS_KILLS_COUNT) && (npc != null))
 				{
@@ -283,35 +282,35 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 						defender.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, officer, 10);
 					}
 					
-					st.set("spawned_defenders", defendersCount + 1);
-					String defendersIds = st.get("defenders_ids");
+					qs.set("spawned_defenders", defendersCount + 1);
+					String defendersIds = qs.get("defenders_ids");
 					
 					if (defendersIds == null)
 					{
 						defendersIds = "";
 					}
 					
-					st.set("defenders_ids", st.get("defenders_ids") + "-" + defender.getObjectId() + "-");
+					qs.set("defenders_ids", qs.get("defenders_ids") + "-" + defender.getObjectId() + "-");
 				}
 				
-				st.startQuestTimer("stage_5_spawn_timer", 20000, npc);
+				qs.startQuestTimer("stage_5_spawn_timer", 20000, npc);
 			}
 			
 			return null;
 		}
-		else if (event.equalsIgnoreCase("process_stage_5"))
+		else if (event.equals("process_stage_5"))
 		{
-			Player player = st.getPlayer();
+			Player player = qs.getPlayer();
 			Reflection reflect = player.getActiveReflection();
 			
 			if (reflect.getInstancedZoneId() == INSTANCED_ZONE_ID)
 			{
-				int defenderKills = st.getInt("defender_kills");
+				int defenderKills = qs.getInt("defender_kills");
 				
 				if (defenderKills >= NEED_DEFENDERS_KILLS_COUNT)
 				{
-					st.set("stage", 6);
-					st.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ELECTRONIC_DEVICE_HAS_BEEN_DESTROYED, 5000, ScreenMessageAlign.TOP_CENTER));
+					qs.set("stage", 6);
+					qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ELECTRONIC_DEVICE_HAS_BEEN_DESTROYED, 5000, ScreenMessageAlign.TOP_CENTER));
 					reflect.openDoor(16240007);
 					reflect.getZone("[belise_labyrinth_03_1]").setActive(true);
 					reflect.getZone("[belise_labyrinth_03_2]").setActive(false);
@@ -333,27 +332,27 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 			
 			return null;
 		}
-		else if (event.equalsIgnoreCase("start_stage_7"))
+		else if (event.equals("start_stage_7"))
 		{
-			Player player = st.getPlayer();
+			Player player = qs.getPlayer();
 			Reflection reflect = player.getActiveReflection();
 			
 			if (reflect.getInstancedZoneId() == INSTANCED_ZONE_ID)
 			{
-				st.set("stage", 7);
+				qs.set("stage", 7);
 				reflect.openDoor(16240008);
 				SceneMovie scene = SceneMovie.sc_talking_island_boss_opening;
-				st.getPlayer().showQuestMovie(scene);
-				st.startQuestTimer("spawn_nemertess", scene.getDuration(), npc);
+				qs.getPlayer().showQuestMovie(scene);
+				qs.startQuestTimer("spawn_nemertess", scene.getDuration(), npc);
 			}
 			
 			return null;
 		}
-		else if (event.equalsIgnoreCase("spawn_nemertess"))
+		else if (event.equals("spawn_nemertess"))
 		{
-			if (st.getInt("stage") == 7)
+			if (qs.getInt("stage") == 7)
 			{
-				Player player = st.getPlayer();
+				Player player = qs.getPlayer();
 				Reflection reflect = player.getActiveReflection();
 				
 				if (reflect.getInstancedZoneId() == INSTANCED_ZONE_ID)
@@ -364,18 +363,18 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 			
 			return null;
 		}
-		else if (event.equalsIgnoreCase("kill_nemertess"))
+		else if (event.equals("kill_nemertess"))
 		{
-			if (st.getInt("stage") == 7)
+			if (qs.getInt("stage") == 7)
 			{
-				Player player = st.getPlayer();
+				Player player = qs.getPlayer();
 				Reflection reflect = player.getActiveReflection();
 				
 				if (reflect.getInstancedZoneId() == INSTANCED_ZONE_ID)
 				{
-					clearInstanceVariables(st);
-					st.setCond(4);
-					st.giveItems(SARILS_NECKLACE, 1);
+					clearInstanceVariables(qs);
+					qs.setCond(4);
+					qs.giveItems(SARILS_NECKLACE, 1);
 					NpcInstance officer = getNpcFromReflection(INFILTRATION_OFFICER, reflect);
 					
 					if (officer != null)
@@ -387,10 +386,10 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 			
 			return null;
 		}
-		else if (event.equalsIgnoreCase("pantheon_q10331_2.htm"))
+		else if (event.equals("pantheon_q10331_2.htm"))
 		{
-			int cond = st.getPlayer().getRace().ordinal() + 6;
-			st.setCond(cond);
+			int cond = qs.getPlayer().getRace().ordinal() + 6;
+			qs.setCond(cond);
 		}
 		else if (event.startsWith("class_transfer"))
 		{
@@ -403,20 +402,20 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 			
 			int classId = Integer.parseInt(params[1]);
 			String html = params[2];
-			htmltext = HtmCache.getInstance().getNotNull("quests/Q10331_StartOfFate/" + html, st.getPlayer());
+			htmltext = HtmCache.getInstance().getNotNull("quests/Q10331_StartOfFate/" + html, qs.getPlayer());
 			htmltext = htmltext.replace("<?CLASS_NAME?>", HtmlUtils.htmlClassName(classId));
-			Player player = st.getPlayer();
+			Player player = qs.getPlayer();
 			player.setClassId(classId, false, false);
 			player.sendPacket(SystemMsg.CONGRATULATIONS__YOUVE_COMPLETED_A_CLASS_TRANSFER);
 			player.broadcastPacket(new MagicSkillUse(player, player, 5103, 1, 1000, 0));
-			MultiSellHolder.getInstance().SeparateAndSend(PROOF_OF_COURAGE_MULTISELL_ID, st.getPlayer(), 0);
-			st.showTutorialHTML(TutorialShowHtml.QT_009, TutorialShowHtml.TYPE_WINDOW);
-			st.giveItems(ADENA_ID, 80000);
-			st.giveItems(PROOF_OF_COURAGE, 40);
-			st.addExpAndSp(200000, 40000);
-			st.setState(COMPLETED);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FANFARE2);
+			MultiSellHolder.getInstance().SeparateAndSend(PROOF_OF_COURAGE_MULTISELL_ID, qs.getPlayer(), 0);
+			qs.showTutorialHTML(TutorialShowHtml.QT_009, TutorialShowHtml.TYPE_WINDOW);
+			qs.giveItems(ADENA_ID, 80000);
+			qs.giveItems(PROOF_OF_COURAGE, 40);
+			qs.addExpAndSp(200000, 40000);
+			qs.setState(COMPLETED);
+			qs.exitCurrentQuest(false);
+			qs.playSound(SOUND_FANFARE2);
 			// st.playSound(SOUND_FINISH);
 		}
 		
@@ -424,77 +423,83 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
 		
-		if ((npcId == FRANCO) || (npcId == RIVIAN) || (npcId == DEVON) || (npcId == TOOK) || (npcId == MOKA) || (npcId == VALFAR))
+		switch (npcId)
 		{
-			String prefix = getStartNpcPrefix(npcId);
+			case FRANCO:
+			case RIVIAN:
+			case DEVON:
+			case TOOK:
+			case MOKA:
+			case VALFAR:
+				String prefix = getStartNpcPrefix(npcId);
+				if (cond == 0)
+				{
+					if (checkSC(qs.getPlayer()))
+					{
+						htmltext = prefix + "_q10331_1.htm";
+					}
+					else
+					{
+						htmltext = prefix + "_q10331_0.htm";
+					}
+				}
+				else if (cond == 1)
+				{
+					htmltext = prefix + "_q10331_4.htm";
+				}
+				else if (cond >= 6)
+				{
+					htmltext = getAvailableClassList(qs.getPlayer(), prefix + "_q10331_5.htm", prefix + "_q10331_6.htm");
+				}
+				break;
 			
-			if (cond == 0)
-			{
-				if (checkSC(st.getPlayer()))
+			case LAKCIS:
+				if (cond == 1)
 				{
-					htmltext = prefix + "_q10331_1.htm";
+					htmltext = "lakcis_q10331_1.htm";
 				}
-				else
+				else if (cond == 2)
 				{
-					htmltext = prefix + "_q10331_0.htm";
+					htmltext = "lakcis_q10331_3.htm";
 				}
-			}
-			else if (cond == 1)
-			{
-				htmltext = prefix + "_q10331_4.htm";
-			}
-			else if (cond >= 6)
-			{
-				htmltext = getAvailableClassList(st.getPlayer(), prefix + "_q10331_5.htm", prefix + "_q10331_6.htm");
-			}
-		}
-		else if (npcId == LAKCIS)
-		{
-			if (cond == 1)
-			{
-				htmltext = "lakcis_q10331_1.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "lakcis_q10331_3.htm";
-			}
-		}
-		else if (npcId == SEBION)
-		{
-			if (cond == 2)
-			{
-				htmltext = "sebion_q10331_1.htm";
-			}
-			else if (cond == 3)
-			{
-				htmltext = "sebion_q10331_4.htm";
-			}
-			else if (cond == 4)
-			{
-				htmltext = "sebion_q10331_5.htm";
-				st.setCond(5);
-			}
-			else if (cond == 5)
-			{
-				htmltext = "sebion_q10331_6.htm";
-			}
-		}
-		else if (npcId == PANTHEON)
-		{
-			if (cond == 5)
-			{
-				htmltext = "pantheon_q10331_1.htm";
-			}
-			else if (cond >= 6)
-			{
-				htmltext = "pantheon_q10331_3.htm";
-			}
+				break;
+			
+			case SEBION:
+				if (cond == 2)
+				{
+					htmltext = "sebion_q10331_1.htm";
+				}
+				else if (cond == 3)
+				{
+					htmltext = "sebion_q10331_4.htm";
+				}
+				else if (cond == 4)
+				{
+					htmltext = "sebion_q10331_5.htm";
+					qs.setCond(5);
+				}
+				else if (cond == 5)
+				{
+					htmltext = "sebion_q10331_6.htm";
+				}
+				break;
+			
+			case PANTHEON:
+				if (cond == 5)
+				{
+					htmltext = "pantheon_q10331_1.htm";
+				}
+				else if (cond >= 6)
+				{
+					htmltext = "pantheon_q10331_3.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
@@ -503,22 +508,22 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 	@Override
 	public String onFirstTalk(NpcInstance npc, Player player)
 	{
-		QuestState st = player.getQuestState(getClass());
+		final QuestState qs = player.getQuestState(getClass());
 		
-		if (st == null)
+		if (qs == null)
 		{
 			return "";
 		}
 		
-		Reflection reflect = npc.getReflection();
+		final Reflection reflect = npc.getReflection();
 		
 		if (reflect.getInstancedZoneId() == INSTANCED_ZONE_ID)
 		{
-			int npcId = npc.getId();
+			final int npcId = npc.getId();
 			
 			if (npcId == INFILTRATION_OFFICER)
 			{
-				int cond = st.getCond();
+				final int cond = qs.getCond();
 				
 				if (cond == 3)
 				{
@@ -527,7 +532,7 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 						return "infiltration_officer_q10331_no.htm";
 					}
 					
-					int stage = st.getInt("stage");
+					final int stage = qs.getInt("stage");
 					player.sendMessage("npc:" + npc.getId());
 					
 					if (stage == 0)
@@ -561,18 +566,18 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 			}
 			else if (npcId == BELIS_VERIFICATION_SYSTEM)
 			{
-				int cond = st.getCond();
+				int cond = qs.getCond();
 				
 				if ((cond == 3) || (cond == 4))
 				{
-					String htmltext = HtmCache.getInstance().getNotNull("quests/Q10331_StartOfFate/belis_verification_system_q10331_1.htm", st.getPlayer());
+					String htmltext = HtmCache.getInstance().getNotNull("quests/Q10331_StartOfFate/belis_verification_system_q10331_1.htm", qs.getPlayer());
 					htmltext = htmltext.replace("<?BELISE_MARK_COUNT?>", String.valueOf(NEED_BELIS_MARKS_COUNT));
 					return htmltext;
 				}
 			}
 			else if (npcId == ELECTRICITY_GENERATOR)
 			{
-				int cond = st.getCond();
+				int cond = qs.getCond();
 				
 				if ((cond == 3) || (cond == 4))
 				{
@@ -585,80 +590,80 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		Reflection reflect = npc.getReflection();
+		final Reflection reflect = npc.getReflection();
 		
 		if (reflect.getInstancedZoneId() == INSTANCED_ZONE_ID)
 		{
-			int npcId = npc.getId();
-			
-			if (npcId == OPERATIVE)
+			switch (npc.getId())
 			{
-				if (st.getCond() == 3)
-				{
-					if (st.getInt("stage") == 1)
+				case OPERATIVE:
+					if (qs.getCond() == 3)
 					{
-						int killsCount = st.getInt("operative_kills") + 1;
-						
-						if (killsCount >= NEED_OPERATIVES_KILLS_COUNT)
+						if (qs.getInt("stage") == 1)
 						{
-							st.set("stage", 2);
-							reflect.openDoor(16240003);
-							NpcInstance officer = getNpcFromReflection(INFILTRATION_OFFICER, reflect);
+							int killsCount = qs.getInt("operative_kills") + 1;
 							
-							if (officer != null)
+							if (killsCount >= NEED_OPERATIVES_KILLS_COUNT)
 							{
-								officerMoveToLocation(officer, new Location(-117037, 212504, -8592, 39479));
+								qs.set("stage", 2);
+								reflect.openDoor(16240003);
+								NpcInstance officer = getNpcFromReflection(INFILTRATION_OFFICER, reflect);
+								
+								if (officer != null)
+								{
+									officerMoveToLocation(officer, new Location(-117037, 212504, -8592, 39479));
+								}
+							}
+							else
+							{
+								qs.set("operative_kills", killsCount);
 							}
 						}
-						else
+						else if (qs.getInt("stage") == 5)
 						{
-							st.set("operative_kills", killsCount);
+							qs.set("defender_kills", qs.getInt("defender_kills") + 1);
+							qs.startQuestTimer("process_stage_5", 3000, npc);
 						}
 					}
-					else if (st.getInt("stage") == 5)
+					break;
+				
+				case HANDYMAN:
+					if (qs.getCond() == 3)
 					{
-						st.set("defender_kills", st.getInt("defender_kills") + 1);
-						st.startQuestTimer("process_stage_5", 3000, npc);
-					}
-				}
-			}
-			else if (npcId == HANDYMAN)
-			{
-				if (st.getCond() == 3)
-				{
-					if (st.getInt("stage") == 3)
-					{
-						if (Rnd.chance(BELISE_MARK_DROP_CHANCE))
+						if (qs.getInt("stage") == 3)
 						{
-							st.startQuestTimer("drop_belise_mark", 3000, npc);
+							if (Rnd.chance(BELISE_MARK_DROP_CHANCE))
+							{
+								qs.startQuestTimer("drop_belise_mark", 3000, npc);
+							}
+						}
+						else if (qs.getInt("stage") == 5)
+						{
+							String defendersIds = qs.get("defenders_ids");
+							
+							if ((defendersIds != null) && defendersIds.contains("-" + npc.getObjectId() + "-"))
+							{
+								qs.set("defender_kills", qs.getInt("defender_kills") + 1);
+								qs.startQuestTimer("process_stage_5", 3000, npc);
+							}
 						}
 					}
-					else if (st.getInt("stage") == 5)
+					break;
+				
+				case NEMERTESS:
+					if (qs.getCond() == 3)
 					{
-						String defendersIds = st.get("defenders_ids");
-						
-						if ((defendersIds != null) && defendersIds.contains("-" + npc.getObjectId() + "-"))
+						if (qs.getInt("stage") == 7)
 						{
-							st.set("defender_kills", st.getInt("defender_kills") + 1);
-							st.startQuestTimer("process_stage_5", 3000, npc);
+							npc.deleteMe();
+							SceneMovie scene = SceneMovie.sc_talking_island_boss_ending;
+							qs.getPlayer().showQuestMovie(scene);
+							qs.startQuestTimer("kill_nemertess", scene.getDuration(), npc);
 						}
 					}
-				}
-			}
-			else if (npcId == NEMERTESS)
-			{
-				if (st.getCond() == 3)
-				{
-					if (st.getInt("stage") == 7)
-					{
-						npc.deleteMe();
-						SceneMovie scene = SceneMovie.sc_talking_island_boss_ending;
-						st.getPlayer().showQuestMovie(scene);
-						st.startQuestTimer("kill_nemertess", scene.getDuration(), npc);
-					}
-				}
+					break;
 			}
 		}
 		
@@ -666,9 +671,9 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public void onEnterInstance(QuestState st, Reflection reflection)
+	public void onEnterInstance(QuestState qs, Reflection reflection)
 	{
-		clearInstanceVariables(st);
+		clearInstanceVariables(qs);
 	}
 	
 	public boolean checkSC(Player player)
@@ -678,17 +683,15 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 	
 	public boolean checkStartNpc(NpcInstance npc, Player player)
 	{
-		int npcId = npc.getId();
-		Race race = player.getRace();
+		final Race race = player.getRace();
 		
-		switch (npcId)
+		switch (npc.getId())
 		{
 			case FRANCO:
 				if (race == Race.human)
 				{
 					return true;
 				}
-				
 				return false;
 				
 			case RIVIAN:
@@ -696,7 +699,6 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 				{
 					return true;
 				}
-				
 				return false;
 				
 			case DEVON:
@@ -704,7 +706,6 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 				{
 					return true;
 				}
-				
 				return false;
 				
 			case TOOK:
@@ -712,7 +713,6 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 				{
 					return true;
 				}
-				
 				return false;
 				
 			case MOKA:
@@ -720,7 +720,6 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 				{
 					return true;
 				}
-				
 				return false;
 				
 			case VALFAR:
@@ -728,69 +727,55 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 				{
 					return true;
 				}
-				
 				return false;
 		}
 		
 		return true;
 	}
 	
-	public boolean checkTalkNpc(NpcInstance npc, QuestState st)
+	public boolean checkTalkNpc(NpcInstance npc, QuestState qs)
 	{
-		return checkStartNpc(npc, st.getPlayer());
-	}
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
+		return checkStartNpc(npc, qs.getPlayer());
 	}
 	
 	private static String getStartNpcPrefix(int npcId)
 	{
 		String prefix = "high_priest_franco";
 		
-		if (npcId == RIVIAN)
+		switch (npcId)
 		{
-			prefix = "grand_master_rivian";
-		}
-		else if (npcId == DEVON)
-		{
-			prefix = "grand_magister_devon";
-		}
-		else if (npcId == TOOK)
-		{
-			prefix = "high_prefect_took";
-		}
-		else if (npcId == MOKA)
-		{
-			prefix = "head_blacksmith_moka";
-		}
-		else if (npcId == VALFAR)
-		{
-			prefix = "grand_master_valfar";
+			case RIVIAN:
+				prefix = "grand_master_rivian";
+				break;
+			
+			case DEVON:
+				prefix = "grand_magister_devon";
+				break;
+			
+			case TOOK:
+				prefix = "high_prefect_took";
+				break;
+			
+			case MOKA:
+				prefix = "head_blacksmith_moka";
+				break;
+			
+			case VALFAR:
+				prefix = "grand_master_valfar";
+				break;
 		}
 		
 		return prefix;
 	}
 	
-	private static void clearInstanceVariables(QuestState st)
+	private static void clearInstanceVariables(QuestState qs)
 	{
-		st.unset("belise_marks_left");
-		st.unset("operative_kills");
-		st.unset("stage");
-		st.unset("defender_kills");
-		st.unset("spawned_defenders");
-		st.unset("defenders_ids");
+		qs.unset("belise_marks_left");
+		qs.unset("operative_kills");
+		qs.unset("stage");
+		qs.unset("defender_kills");
+		qs.unset("spawned_defenders");
+		qs.unset("defenders_ids");
 	}
 	
 	private static NpcInstance getNpcFromReflection(int npcId, Reflection reflect)
@@ -847,5 +832,20 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 		
 		htmltext = htmltext.replace("<?AVAILABLE_CLASS_LIST?>", classList.toString());
 		return htmltext;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

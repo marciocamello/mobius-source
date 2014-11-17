@@ -20,8 +20,87 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10320_LetsGoToTheCentralSquare extends Quest implements ScriptFile
 {
-	private static final int teodor = 32975;
-	private static final int panteleon = 32972;
+	// Npcs
+	private static final int Teodor = 32975;
+	private static final int Panteleon = 32972;
+	
+	public Q10320_LetsGoToTheCentralSquare()
+	{
+		super(false);
+		addStartNpc(Panteleon);
+		addTalkId(Panteleon);
+		addTalkId(Teodor);
+		addLevelCheck(1, 20);
+	}
+	
+	@Override
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
+	{
+		String htmltext = event;
+		
+		switch (event)
+		{
+			case "quest_ac":
+				qs.setState(STARTED);
+				qs.setCond(1);
+				qs.playSound(SOUND_ACCEPT);
+				qs.showTutorialHTML(TutorialShowHtml.QT_001, TutorialShowHtml.TYPE_WINDOW);
+				htmltext = "0-3.htm";
+				break;
+			
+			case "qet_rev":
+				htmltext = "1-2.htm";
+				qs.getPlayer().addExpAndSp(30, 100);
+				qs.giveItems(57, 3000);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public String onTalk(NpcInstance npc, QuestState qs)
+	{
+		String htmltext = "noquest";
+		final int cond = qs.getCond();
+		
+		switch (npc.getId())
+		{
+			case Panteleon:
+				if (qs.isCompleted())
+				{
+					htmltext = "0-c.htm";
+				}
+				else if ((cond == 0) && isAvailableFor(qs.getPlayer()))
+				{
+					htmltext = "0-1.htm";
+				}
+				else if (cond == 1)
+				{
+					htmltext = "0-4.htm";
+				}
+				break;
+			
+			case Teodor:
+				if (qs.isCompleted())
+				{
+					htmltext = "1-c.htm";
+				}
+				else if (cond == 0)
+				{
+					htmltext = "1-t.htm";
+				}
+				else if (cond == 1)
+				{
+					htmltext = "1-1.htm";
+				}
+				break;
+		}
+		
+		return htmltext;
+	}
 	
 	@Override
 	public void onLoad()
@@ -36,81 +115,5 @@ public class Q10320_LetsGoToTheCentralSquare extends Quest implements ScriptFile
 	@Override
 	public void onShutdown()
 	{
-	}
-	
-	public Q10320_LetsGoToTheCentralSquare()
-	{
-		super(false);
-		addStartNpc(panteleon);
-		addTalkId(panteleon);
-		addTalkId(teodor);
-		addLevelCheck(1, 20);
-	}
-	
-	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
-	{
-		String htmltext = event;
-		
-		if (event.equalsIgnoreCase("quest_ac"))
-		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			st.showTutorialHTML(TutorialShowHtml.QT_001, TutorialShowHtml.TYPE_WINDOW);
-			htmltext = "0-3.htm";
-		}
-		
-		if (event.equalsIgnoreCase("qet_rev"))
-		{
-			htmltext = "1-2.htm";
-			st.getPlayer().addExpAndSp(30, 100);
-			st.giveItems(57, 3000);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
-		}
-		
-		return htmltext;
-	}
-	
-	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
-	{
-		int cond = st.getCond();
-		int npcId = npc.getId();
-		String htmltext = "noquest";
-		
-		if (npcId == panteleon)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "0-c.htm";
-			}
-			else if ((cond == 0) && isAvailableFor(st.getPlayer()))
-			{
-				htmltext = "0-1.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "0-4.htm";
-			}
-		}
-		else if (npcId == teodor)
-		{
-			if (st.isCompleted())
-			{
-				htmltext = "1-c.htm";
-			}
-			else if (cond == 0)
-			{
-				htmltext = "1-t.htm";
-			}
-			else if (cond == 1)
-			{
-				htmltext = "1-1.htm";
-			}
-		}
-		
-		return htmltext;
 	}
 }
