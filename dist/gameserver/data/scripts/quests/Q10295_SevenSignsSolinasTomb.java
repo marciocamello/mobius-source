@@ -95,295 +95,290 @@ public class Q10295_SevenSignsSolinasTomb extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		Player player = st.getPlayer();
 		String htmltext = event;
+		final Player player = qs.getPlayer();
 		
-		if (event.equalsIgnoreCase("eris_q10295_5.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("teleport_in"))
-		{
-			player.teleToLocation(new Location(45512, -249832, -6760));
-			teleportElcardia(player);
-			return null;
-		}
-		else if (event.equalsIgnoreCase("teleport_out"))
-		{
-			player.teleToLocation(new Location(120664, -86968, -3392));
-			teleportElcardia(player);
-			return null;
-		}
-		else if (event.equalsIgnoreCase("use_staff"))
-		{
-			if (st.getQuestItemsCount(StaffofBlessing) > 0)
-			{
-				st.takeAllItems(StaffofBlessing);
-				// TODO: remove glow from NPC
-				removeInvincibility(player, 18953);
-				return null;
-			}
+			case "eris_q10295_5.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
 			
-			htmltext = "powerful_q10295_0.htm";
-		}
-		else if (event.equalsIgnoreCase("use_book"))
-		{
-			if (st.getQuestItemsCount(ScrollofAbstinence) > 0)
-			{
-				st.takeAllItems(ScrollofAbstinence);
-				// TODO: remove glow from NPC
-				removeInvincibility(player, 18954);
+			case "teleport_in":
+				player.teleToLocation(new Location(45512, -249832, -6760));
+				teleportElcardia(player);
 				return null;
-			}
-			
-			htmltext = "powerful_q10295_0.htm";
-		}
-		else if (event.equalsIgnoreCase("use_sword"))
-		{
-			if (st.getQuestItemsCount(SwordofHolySpirit) > 0)
-			{
-				st.takeAllItems(SwordofHolySpirit);
-				// TODO: remove glow from NPC
-				removeInvincibility(player, 18955);
+				
+			case "teleport_out":
+				player.teleToLocation(new Location(120664, -86968, -3392));
+				teleportElcardia(player);
 				return null;
-			}
+				
+			case "use_staff":
+				if (qs.getQuestItemsCount(StaffofBlessing) > 0)
+				{
+					qs.takeAllItems(StaffofBlessing);
+					// TODO: remove glow from NPC
+					removeInvincibility(player, 18953);
+					return null;
+				}
+				htmltext = "powerful_q10295_0.htm";
+				break;
 			
-			htmltext = "powerful_q10295_0.htm";
-		}
-		else if (event.equalsIgnoreCase("use_shield"))
-		{
-			if (st.getQuestItemsCount(ShieldofSacrifice) > 0)
-			{
-				st.takeAllItems(ShieldofSacrifice);
-				// TODO: remove glow from NPC
-				removeInvincibility(player, 18952);
+			case "use_book":
+				if (qs.getQuestItemsCount(ScrollofAbstinence) > 0)
+				{
+					qs.takeAllItems(ScrollofAbstinence);
+					// TODO: remove glow from NPC
+					removeInvincibility(player, 18954);
+					return null;
+				}
+				htmltext = "powerful_q10295_0.htm";
+				break;
+			
+			case "use_sword":
+				if (qs.getQuestItemsCount(SwordofHolySpirit) > 0)
+				{
+					qs.takeAllItems(SwordofHolySpirit);
+					// TODO: remove glow from NPC
+					removeInvincibility(player, 18955);
+					return null;
+				}
+				htmltext = "powerful_q10295_0.htm";
+				break;
+			
+			case "use_shield":
+				if (qs.getQuestItemsCount(ShieldofSacrifice) > 0)
+				{
+					qs.takeAllItems(ShieldofSacrifice);
+					// TODO: remove glow from NPC
+					removeInvincibility(player, 18952);
+					return null;
+				}
+				htmltext = "powerful_q10295_0.htm";
+				break;
+			
+			case "altarstaff_q10295_2.htm":
+				if (qs.getQuestItemsCount(StaffofBlessing) == 0)
+				{
+					qs.giveItems(StaffofBlessing, 1);
+				}
+				else
+				{
+					htmltext = "atlar_q10295_0.htm";
+				}
+				break;
+			
+			case "altarbook_q10295_2.htm":
+				if (qs.getQuestItemsCount(ScrollofAbstinence) == 0)
+				{
+					qs.giveItems(ScrollofAbstinence, 1);
+				}
+				else
+				{
+					htmltext = "atlar_q10295_0.htm";
+				}
+				break;
+			
+			case "altarsword_q10295_2.htm":
+				if (qs.getQuestItemsCount(SwordofHolySpirit) == 0)
+				{
+					qs.giveItems(SwordofHolySpirit, 1);
+				}
+				else
+				{
+					htmltext = "atlar_q10295_0.htm";
+				}
+				break;
+			
+			case "altarshield_q10295_2.htm":
+				if (qs.getQuestItemsCount(ShieldofSacrifice) == 0)
+				{
+					qs.giveItems(ShieldofSacrifice, 1);
+				}
+				else
+				{
+					htmltext = "atlar_q10295_0.htm";
+				}
+				break;
+			
+			case "teleport_solina":
+				player.teleToLocation(new Location(56033, -252944, -6760));
+				teleportElcardia(player);
 				return null;
-			}
+				
+			case "tombsaintess_q10295_2.htm":
+				if (!player.getReflection().getDoor(21100101).isOpen())
+				{
+					activateTombGuards(player);
+				}
+				else
+				{
+					htmltext = "tombsaintess_q10295_3.htm";
+				}
+				break;
 			
-			htmltext = "powerful_q10295_0.htm";
-		}
-		else if (event.equalsIgnoreCase("altarstaff_q10295_2.htm"))
-		{
-			if (st.getQuestItemsCount(StaffofBlessing) == 0)
-			{
-				st.giveItems(StaffofBlessing, 1);
-			}
-			else
-			{
-				htmltext = "atlar_q10295_0.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("altarbook_q10295_2.htm"))
-		{
-			if (st.getQuestItemsCount(ScrollofAbstinence) == 0)
-			{
-				st.giveItems(ScrollofAbstinence, 1);
-			}
-			else
-			{
-				htmltext = "atlar_q10295_0.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("altarsword_q10295_2.htm"))
-		{
-			if (st.getQuestItemsCount(SwordofHolySpirit) == 0)
-			{
-				st.giveItems(SwordofHolySpirit, 1);
-			}
-			else
-			{
-				htmltext = "atlar_q10295_0.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("altarshield_q10295_2.htm"))
-		{
-			if (st.getQuestItemsCount(ShieldofSacrifice) == 0)
-			{
-				st.giveItems(ShieldofSacrifice, 1);
-			}
-			else
-			{
-				htmltext = "atlar_q10295_0.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("teleport_solina"))
-		{
-			player.teleToLocation(new Location(56033, -252944, -6760));
-			teleportElcardia(player);
-			return null;
-		}
-		else if (event.equalsIgnoreCase("tombsaintess_q10295_2.htm"))
-		{
-			if (!player.getReflection().getDoor(21100101).isOpen())
-			{
-				activateTombGuards(player);
-			}
-			else
-			{
-				htmltext = "tombsaintess_q10295_3.htm";
-			}
-		}
-		else if (event.equalsIgnoreCase("teleport_realtomb"))
-		{
-			player.teleToLocation(new Location(56081, -250391, -6760));
-			teleportElcardia(player);
-			player.showQuestMovie(ExStartScenePlayer.SCENE_SSQ2_ELYSS_NARRATION);
-			return null;
-		}
-		else if (event.equalsIgnoreCase("solina_q10295_4.htm"))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("solina_q10295_8.htm"))
-		{
-			st.setCond(3);
-			st.playSound(SOUND_MIDDLE);
+			case "teleport_realtomb":
+				player.teleToLocation(new Location(56081, -250391, -6760));
+				teleportElcardia(player);
+				player.showQuestMovie(ExStartScenePlayer.SCENE_SSQ2_ELYSS_NARRATION);
+				return null;
+				
+			case "solina_q10295_4.htm":
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "solina_q10295_8.htm":
+				qs.setCond(3);
+				qs.playSound(SOUND_MIDDLE);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		Player player = st.getPlayer();
+		final int cond = qs.getCond();
+		final Player player = qs.getPlayer();
 		
 		if (!player.isBaseClassActive())
 		{
 			return "no_subclass_allowed.htm";
 		}
 		
-		if (npcId == ErisEvilThoughts)
+		switch (npc.getId())
 		{
-			if (cond == 0)
-			{
-				QuestState qs = player.getQuestState(Q10294_SevenSignsToTheMonasteryOfSilence.class);
-				
-				if ((player.getLevel() >= 81) && (qs != null) && qs.isCompleted())
+			case ErisEvilThoughts:
+				if (cond == 0)
 				{
-					htmltext = "eris_q10295_1.htm";
+					final QuestState state = player.getQuestState(Q10294_SevenSignsToTheMonasteryOfSilence.class);
+					
+					if ((player.getLevel() >= 81) && (state != null) && state.isCompleted())
+					{
+						htmltext = "eris_q10295_1.htm";
+					}
+					else
+					{
+						htmltext = "eris_q10295_0a.htm";
+						qs.exitCurrentQuest(true);
+					}
+				}
+				else if (cond == 1)
+				{
+					htmltext = "eris_q10295_6.htm";
+				}
+				else if (cond == 2)
+				{
+					htmltext = "eris_q10295_7.htm";
+				}
+				else if (cond == 3)
+				{
+					if (player.getLevel() >= 81)
+					{
+						htmltext = "eris_q10295_8.htm";
+						qs.addExpAndSp(125000000, 12500000);
+						qs.setState(COMPLETED);
+						qs.playSound(SOUND_FINISH);
+						qs.exitCurrentQuest(false);
+					}
+					else
+					{
+						htmltext = "eris_q10295_0.htm";
+					}
+				}
+				break;
+			
+			case ElcardiaInzone1:
+				htmltext = "elcardia_q10295_1.htm";
+				break;
+			
+			case TeleportControlDevice:
+				if (!checkGuardians(player, SolinaGuardians))
+				{
+					htmltext = "teleport_device_q10295_1.htm";
 				}
 				else
 				{
-					htmltext = "eris_q10295_0a.htm";
-					st.exitCurrentQuest(true);
+					htmltext = "teleport_device_q10295_2.htm";
 				}
-			}
-			else if (cond == 1)
-			{
-				htmltext = "eris_q10295_6.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "eris_q10295_7.htm";
-			}
-			else if (cond == 3)
-			{
-				if (player.getLevel() >= 81)
+				break;
+			
+			case PowerfulDeviceStaff:
+				htmltext = "powerfulstaff_q10295_1.htm";
+				break;
+			
+			case PowerfulDeviceBook:
+				htmltext = "powerfulbook_q10295_1.htm";
+				break;
+			
+			case PowerfulDeviceSword:
+				htmltext = "powerfulsword_q10295_1.htm";
+				break;
+			
+			case PowerfulDeviceShield:
+				htmltext = "powerfulsheild_q10295_1.htm";
+				break;
+			
+			case AltarofHallowsStaff:
+				htmltext = "altarstaff_q10295_1.htm";
+				break;
+			
+			case AltarofHallowsSword:
+				htmltext = "altarsword_q10295_1.htm";
+				break;
+			
+			case AltarofHallowsBook:
+				htmltext = "altarbook_q10295_1.htm";
+				break;
+			
+			case AltarofHallowsShield:
+				htmltext = "altarshield_q10295_1.htm";
+				break;
+			
+			case TeleportControlDevice2:
+				htmltext = "teleportdevice2_q10295_1.htm";
+				break;
+			
+			case TomboftheSaintess:
+				htmltext = "tombsaintess_q10295_1.htm";
+				break;
+			
+			case TeleportControlDevice3:
+				htmltext = "teleportdevice3_q10295_1.htm";
+				break;
+			
+			case Solina:
+				if (cond == 1)
 				{
-					htmltext = "eris_q10295_8.htm";
-					st.addExpAndSp(125000000, 12500000);
-					st.setState(COMPLETED);
-					st.playSound(SOUND_FINISH);
-					st.exitCurrentQuest(false);
+					htmltext = "solina_q10295_1.htm";
 				}
-				else
+				else if (cond == 2)
 				{
-					htmltext = "eris_q10295_0.htm";
+					htmltext = "solina_q10295_4.htm";
 				}
-			}
-		}
-		else if (npcId == ElcardiaInzone1)
-		{
-			htmltext = "elcardia_q10295_1.htm";
-		}
-		else if (npcId == TeleportControlDevice)
-		{
-			if (!checkGuardians(player, SolinaGuardians))
-			{
-				htmltext = "teleport_device_q10295_1.htm";
-			}
-			else
-			{
-				htmltext = "teleport_device_q10295_2.htm";
-			}
-		}
-		else if (npcId == PowerfulDeviceStaff)
-		{
-			htmltext = "powerfulstaff_q10295_1.htm";
-		}
-		else if (npcId == PowerfulDeviceBook)
-		{
-			htmltext = "powerfulbook_q10295_1.htm";
-		}
-		else if (npcId == PowerfulDeviceSword)
-		{
-			htmltext = "powerfulsword_q10295_1.htm";
-		}
-		else if (npcId == PowerfulDeviceShield)
-		{
-			htmltext = "powerfulsheild_q10295_1.htm";
-		}
-		else if (npcId == AltarofHallowsStaff)
-		{
-			htmltext = "altarstaff_q10295_1.htm";
-		}
-		else if (npcId == AltarofHallowsSword)
-		{
-			htmltext = "altarsword_q10295_1.htm";
-		}
-		else if (npcId == AltarofHallowsBook)
-		{
-			htmltext = "altarbook_q10295_1.htm";
-		}
-		else if (npcId == AltarofHallowsShield)
-		{
-			htmltext = "altarshield_q10295_1.htm";
-		}
-		else if (npcId == TeleportControlDevice2)
-		{
-			htmltext = "teleportdevice2_q10295_1.htm";
-		}
-		else if (npcId == TomboftheSaintess)
-		{
-			htmltext = "tombsaintess_q10295_1.htm";
-		}
-		else if (npcId == TeleportControlDevice3)
-		{
-			htmltext = "teleportdevice3_q10295_1.htm";
-		}
-		else if (npcId == Solina)
-		{
-			if (cond == 1)
-			{
-				htmltext = "solina_q10295_1.htm";
-			}
-			else if (cond == 2)
-			{
-				htmltext = "solina_q10295_4.htm";
-			}
-			else if (cond == 3)
-			{
-				htmltext = "solina_q10295_8.htm";
-			}
+				else if (cond == 3)
+				{
+					htmltext = "solina_q10295_8.htm";
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		Player player = st.getPlayer();
+		final int npcId = npc.getId();
+		final Player player = qs.getPlayer();
 		
 		if (Util.contains(SolinaGuardians, npcId) && checkGuardians(player, SolinaGuardians))
 		{

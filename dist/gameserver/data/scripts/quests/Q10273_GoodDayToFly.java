@@ -22,25 +22,13 @@ import lineage2.gameserver.tables.SkillTable;
 
 public class Q10273_GoodDayToFly extends Quest implements ScriptFile
 {
+	// Npc
 	private final static int Lekon = 32557;
+	// Monsters
 	private final static int VultureRider1 = 22614;
 	private final static int VultureRider2 = 22615;
+	// Item
 	private final static int Mark = 13856;
-	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
 	
 	public Q10273_GoodDayToFly()
 	{
@@ -51,64 +39,63 @@ public class Q10273_GoodDayToFly extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
-		Player player = st.getPlayer();
+		final Player player = qs.getPlayer();
 		
-		if (event.equalsIgnoreCase("32557-06.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("32557-09.htm"))
-		{
-			if (player.getTransformation() != 0)
-			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
-				return null;
-			}
+			case "32557-06.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
 			
-			st.set("transform", "1");
-			SkillTable.getInstance().getInfo(5982, 1).getEffects(player, player, false, false);
-		}
-		else if (event.equalsIgnoreCase("32557-10.htm"))
-		{
-			if (player.getTransformation() != 0)
-			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
-				return null;
-			}
-			
-			SkillTable.getInstance().getInfo(5983, 1).getEffects(player, player, false, false);
-		}
-		else if (event.equalsIgnoreCase("32557-13.htm"))
-		{
-			if (player.getTransformation() != 0)
-			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
-				return null;
-			}
-			
-			if (st.getInt("transform") == 1)
-			{
+			case "32557-09.htm":
+				if (player.getTransformation() != 0)
+				{
+					player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
+					return null;
+				}
+				qs.set("transform", "1");
 				SkillTable.getInstance().getInfo(5982, 1).getEffects(player, player, false, false);
-			}
-			else if (st.getInt("transform") == 2)
-			{
+				break;
+			
+			case "32557-10.htm":
+				if (player.getTransformation() != 0)
+				{
+					player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
+					return null;
+				}
 				SkillTable.getInstance().getInfo(5983, 1).getEffects(player, player, false, false);
-			}
+				break;
+			
+			case "32557-13.htm":
+				if (player.getTransformation() != 0)
+				{
+					player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
+					return null;
+				}
+				if (qs.getInt("transform") == 1)
+				{
+					SkillTable.getInstance().getInfo(5982, 1).getEffects(player, player, false, false);
+				}
+				else if (qs.getInt("transform") == 2)
+				{
+					SkillTable.getInstance().getInfo(5983, 1).getEffects(player, player, false, false);
+				}
+				break;
 		}
 		
 		return event;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int id = st.getState();
-		int transform = st.getInt("transform");
+		final int id = qs.getState();
+		final int transform = qs.getInt("transform");
 		
 		if (id == COMPLETED)
 		{
@@ -116,7 +103,7 @@ public class Q10273_GoodDayToFly extends Quest implements ScriptFile
 		}
 		else if (id == CREATED)
 		{
-			if (st.getPlayer().getLevel() < 75)
+			if (qs.getPlayer().getLevel() < 75)
 			{
 				htmltext = "32557-00.htm";
 			}
@@ -125,24 +112,24 @@ public class Q10273_GoodDayToFly extends Quest implements ScriptFile
 				htmltext = "32557-01.htm";
 			}
 		}
-		else if (st.getQuestItemsCount(Mark) >= 5)
+		else if (qs.getQuestItemsCount(Mark) >= 5)
 		{
 			htmltext = "32557-14.htm";
 			
 			if (transform == 1)
 			{
-				st.giveItems(13553, 1);
+				qs.giveItems(13553, 1);
 			}
 			else if (transform == 2)
 			{
-				st.giveItems(13554, 1);
+				qs.giveItems(13554, 1);
 			}
 			
-			st.takeAllItems(Mark);
-			st.giveItems(13857, 1);
-			st.addExpAndSp(6660000, 7375000);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
+			qs.takeAllItems(Mark);
+			qs.giveItems(13857, 1);
+			qs.addExpAndSp(6660000, 7375000);
+			qs.exitCurrentQuest(false);
+			qs.playSound(SOUND_FINISH);
 		}
 		else if (transform < 1)
 		{
@@ -157,31 +144,46 @@ public class Q10273_GoodDayToFly extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if (st.getState() != STARTED)
+		if (qs.getState() != STARTED)
 		{
 			return null;
 		}
 		
-		int cond = st.getCond();
-		long count = st.getQuestItemsCount(Mark);
+		final int cond = qs.getCond();
+		final long count = qs.getQuestItemsCount(Mark);
 		
 		if ((cond == 1) && (count < 5))
 		{
-			st.giveItems(Mark, 1);
+			qs.giveItems(Mark, 1);
 			
 			if (count == 4)
 			{
-				st.playSound(SOUND_MIDDLE);
-				st.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				qs.setCond(2);
 			}
 			else
 			{
-				st.playSound(SOUND_ITEMGET);
+				qs.playSound(SOUND_ITEMGET);
 			}
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

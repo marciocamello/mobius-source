@@ -24,169 +24,155 @@ import lineage2.gameserver.tables.SkillTable;
 
 public class Q10275_ContainingTheAttributePower extends Quest implements ScriptFile
 {
+	// Npcs
 	private final static int Holly = 30839;
 	private final static int Weber = 31307;
 	private final static int Yin = 32325;
 	private final static int Yang = 32326;
+	// Monsters
 	private final static int Water = 27380;
 	private final static int Air = 27381;
+	// Items
 	private final static int YinSword = 13845;
 	private final static int YangSword = 13881;
 	private final static int SoulPieceWater = 13861;
 	private final static int SoulPieceAir = 13862;
 	
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public Q10275_ContainingTheAttributePower()
 	{
 		super(false);
-		addStartNpc(Holly);
-		addStartNpc(Weber);
-		addTalkId(Yin);
-		addTalkId(Yang);
-		addKillId(Air);
-		addKillId(Water);
+		addStartNpc(Holly, Weber);
+		addTalkId(Yin, Yang);
+		addKillId(Air, Water);
 		addQuestItem(YinSword, YangSword, SoulPieceWater, SoulPieceAir);
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
-		Player player = st.getPlayer();
+		final Player player = qs.getPlayer();
 		
-		if (event.equalsIgnoreCase("30839-02.htm") || event.equalsIgnoreCase("31307-02.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("30839-05.htm"))
-		{
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("31307-05.htm"))
-		{
-			st.setCond(7);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("32325-03.htm"))
-		{
-			st.setCond(3);
-			st.giveItems(YinSword, 1, Element.FIRE, 10);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("32326-03.htm"))
-		{
-			st.setCond(8);
-			st.giveItems(YangSword, 1, Element.EARTH, 10);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("32325-06.htm"))
-		{
-			if (st.getQuestItemsCount(YinSword) > 0)
-			{
-				st.takeItems(YinSword, 1);
-				htmltext = "32325-07.htm";
-			}
+			case "30839-02.htm":
+			case "31307-02.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
 			
-			st.giveItems(YinSword, 1, Element.FIRE, 10);
-		}
-		else if (event.equalsIgnoreCase("32326-06.htm"))
-		{
-			if (st.getQuestItemsCount(YangSword) > 0)
-			{
-				st.takeItems(YangSword, 1);
-				htmltext = "32326-07.htm";
-			}
+			case "30839-05.htm":
+				qs.setCond(2);
+				qs.playSound(SOUND_MIDDLE);
+				break;
 			
-			st.giveItems(YangSword, 1, Element.EARTH, 10);
-		}
-		else if (event.equalsIgnoreCase("32325-09.htm"))
-		{
-			st.setCond(5);
-			SkillTable.getInstance().getInfo(2635, 1).getEffects(player, player, false, false);
-			st.giveItems(YinSword, 1, Element.FIRE, 10);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else if (event.equalsIgnoreCase("32326-09.htm"))
-		{
-			st.setCond(10);
-			SkillTable.getInstance().getInfo(2636, 1).getEffects(player, player, false, false);
-			st.giveItems(YangSword, 1, Element.EARTH, 10);
-			st.playSound(SOUND_MIDDLE);
-		}
-		else
-		{
-			int item = 0;
+			case "31307-05.htm":
+				qs.setCond(7);
+				qs.playSound(SOUND_MIDDLE);
+				break;
 			
-			if (event.equalsIgnoreCase("1"))
-			{
-				item = 10521;
-			}
-			else if (event.equalsIgnoreCase("2"))
-			{
-				item = 10522;
-			}
-			else if (event.equalsIgnoreCase("3"))
-			{
-				item = 10523;
-			}
-			else if (event.equalsIgnoreCase("4"))
-			{
-				item = 10524;
-			}
-			else if (event.equalsIgnoreCase("5"))
-			{
-				item = 10525;
-			}
-			else if (event.equalsIgnoreCase("6"))
-			{
-				item = 10526;
-			}
+			case "32325-03.htm":
+				qs.setCond(3);
+				qs.giveItems(YinSword, 1, Element.FIRE, 10);
+				qs.playSound(SOUND_MIDDLE);
+				break;
 			
-			if (item > 0)
-			{
-				st.giveItems(item, 2, true);
-				st.addExpAndSp(10000000, 11200000);
-				st.exitCurrentQuest(false);
-				st.playSound(SOUND_FINISH);
-				
-				if (npc != null)
+			case "32326-03.htm":
+				qs.setCond(8);
+				qs.giveItems(YangSword, 1, Element.EARTH, 10);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "32325-06.htm":
+				if (qs.getQuestItemsCount(YinSword) > 0)
 				{
-					htmltext = str(npc.getId()) + "-1" + event + ".htm";
+					qs.takeItems(YinSword, 1);
+					htmltext = "32325-07.htm";
 				}
-				else
+				qs.giveItems(YinSword, 1, Element.FIRE, 10);
+				break;
+			
+			case "32326-06.htm":
+				if (qs.getQuestItemsCount(YangSword) > 0)
 				{
-					htmltext = null;
+					qs.takeItems(YangSword, 1);
+					htmltext = "32326-07.htm";
 				}
-			}
+				qs.giveItems(YangSword, 1, Element.EARTH, 10);
+				break;
+			
+			case "32325-09.htm":
+				qs.setCond(5);
+				SkillTable.getInstance().getInfo(2635, 1).getEffects(player, player, false, false);
+				qs.giveItems(YinSword, 1, Element.FIRE, 10);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			case "32326-09.htm":
+				qs.setCond(10);
+				SkillTable.getInstance().getInfo(2636, 1).getEffects(player, player, false, false);
+				qs.giveItems(YangSword, 1, Element.EARTH, 10);
+				qs.playSound(SOUND_MIDDLE);
+				break;
+			
+			default:
+				int item = 0;
+				switch (event)
+				{
+					case "1":
+						item = 10521;
+						break;
+					
+					case "2":
+						item = 10522;
+						break;
+					
+					case "3":
+						item = 10523;
+						break;
+					
+					case "4":
+						item = 10524;
+						break;
+					
+					case "5":
+						item = 10525;
+						break;
+					
+					case "6":
+						item = 10526;
+						break;
+				}
+				if (item > 0)
+				{
+					qs.giveItems(item, 2, true);
+					qs.addExpAndSp(10000000, 11200000);
+					qs.exitCurrentQuest(false);
+					qs.playSound(SOUND_FINISH);
+					
+					if (npc != null)
+					{
+						htmltext = str(npc.getId()) + "-1" + event + ".htm";
+					}
+					else
+					{
+						htmltext = null;
+					}
+				}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int id = st.getState();
-		int cond = st.getCond();
-		int npcId = npc.getId();
+		final int id = qs.getState();
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
 		
 		if (id == COMPLETED)
 		{
@@ -201,7 +187,7 @@ public class Q10275_ContainingTheAttributePower extends Quest implements ScriptF
 		}
 		else if (id == CREATED)
 		{
-			if (st.getPlayer().getLevel() >= 76)
+			if (qs.getPlayer().getLevel() >= 76)
 			{
 				if (npcId == Holly)
 				{
@@ -256,8 +242,8 @@ public class Q10275_ContainingTheAttributePower extends Quest implements ScriptF
 			else if (cond == 4)
 			{
 				htmltext = "32325-08.htm";
-				st.takeItems(YinSword, 1);
-				st.takeItems(SoulPieceWater, -1);
+				qs.takeItems(YinSword, 1);
+				qs.takeItems(SoulPieceWater, -1);
 			}
 			else if (cond == 6)
 			{
@@ -277,8 +263,8 @@ public class Q10275_ContainingTheAttributePower extends Quest implements ScriptF
 			else if (cond == 9)
 			{
 				htmltext = "32326-08.htm";
-				st.takeItems(YangSword, 1);
-				st.takeItems(SoulPieceAir, -1);
+				qs.takeItems(YangSword, 1);
+				qs.takeItems(SoulPieceAir, -1);
 			}
 			else if (cond == 11)
 			{
@@ -290,43 +276,59 @@ public class Q10275_ContainingTheAttributePower extends Quest implements ScriptF
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if (st.getState() != STARTED)
+		if (qs.getState() != STARTED)
 		{
 			return null;
 		}
 		
-		int cond = st.getCond();
-		int npcId = npc.getId();
+		final int cond = qs.getCond();
 		
-		if (npcId == Air)
+		switch (npc.getId())
 		{
-			if ((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YangSword) && ((cond == 8) || (cond == 10)) && (st.getQuestItemsCount(SoulPieceAir) < 6) && Rnd.chance(30))
-			{
-				st.giveItems(SoulPieceAir, 1, false);
-				
-				if (st.getQuestItemsCount(SoulPieceAir) >= 6)
+			case Air:
+				if ((qs.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YangSword) && ((cond == 8) || (cond == 10)) && (qs.getQuestItemsCount(SoulPieceAir) < 6) && Rnd.chance(30))
 				{
-					st.setCond(cond + 1);
-					st.playSound(SOUND_MIDDLE);
+					qs.giveItems(SoulPieceAir, 1, false);
+					
+					if (qs.getQuestItemsCount(SoulPieceAir) >= 6)
+					{
+						qs.setCond(cond + 1);
+						qs.playSound(SOUND_MIDDLE);
+					}
 				}
-			}
-		}
-		else if (npcId == Water)
-		{
-			if ((st.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YinSword) && ((cond == 3) || (cond == 5)) && (st.getQuestItemsCount(SoulPieceWater) < 6) && Rnd.chance(30))
-			{
-				st.giveItems(SoulPieceWater, 1, false);
-				
-				if (st.getQuestItemsCount(SoulPieceWater) >= 6)
+				break;
+			
+			case Water:
+				if ((qs.getItemEquipped(Inventory.PAPERDOLL_RHAND) == YinSword) && ((cond == 3) || (cond == 5)) && (qs.getQuestItemsCount(SoulPieceWater) < 6) && Rnd.chance(30))
 				{
-					st.setCond(cond + 1);
-					st.playSound(SOUND_MIDDLE);
+					qs.giveItems(SoulPieceWater, 1, false);
+					
+					if (qs.getQuestItemsCount(SoulPieceWater) >= 6)
+					{
+						qs.setCond(cond + 1);
+						qs.playSound(SOUND_MIDDLE);
+					}
 				}
-			}
+				break;
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

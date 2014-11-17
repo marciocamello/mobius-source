@@ -19,9 +19,12 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10291_FireDragonDestroyer extends Quest implements ScriptFile
 {
+	// Npc
 	private static final int Klein = 31540;
+	// Items
 	private static final int PoorNecklace = 15524;
 	private static final int ValorNecklace = 15525;
+	// Monster
 	private static final int Valakas = 29028;
 	
 	public Q10291_FireDragonDestroyer()
@@ -33,37 +36,34 @@ public class Q10291_FireDragonDestroyer extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("klein_q10291_04.htm"))
+		if (event.equals("klein_q10291_04.htm"))
 		{
-			st.setState(STARTED);
-			st.setCond(1);
-			st.playSound(SOUND_ACCEPT);
-			st.giveItems(PoorNecklace, 1);
+			qs.setState(STARTED);
+			qs.setCond(1);
+			qs.playSound(SOUND_ACCEPT);
+			qs.giveItems(PoorNecklace, 1);
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int npcId = npc.getId();
-		int cond = st.getCond();
 		
-		if (npcId == Klein)
+		switch (qs.getCond())
 		{
-			if (cond == 0)
-			{
-				if ((st.getPlayer().getLevel() >= 83) && (st.getQuestItemsCount(7267) >= 1))
+			case 0:
+				if ((qs.getPlayer().getLevel() >= 83) && (qs.getQuestItemsCount(7267) >= 1))
 				{
 					htmltext = "klein_q10291_01.htm";
 				}
-				else if (st.getQuestItemsCount(7267) < 1)
+				else if (qs.getQuestItemsCount(7267) < 1)
 				{
 					htmltext = "klein_q10291_00a.htm";
 				}
@@ -71,45 +71,42 @@ public class Q10291_FireDragonDestroyer extends Quest implements ScriptFile
 				{
 					htmltext = "klein_q10291_00.htm";
 				}
-			}
-			else if (cond == 1)
-			{
+				break;
+			
+			case 1:
 				htmltext = "klein_q10291_05.htm";
-			}
-			else if (cond == 2)
-			{
-				if (st.getQuestItemsCount(ValorNecklace) >= 1)
+				break;
+			
+			case 2:
+				if (qs.getQuestItemsCount(ValorNecklace) >= 1)
 				{
 					htmltext = "klein_q10291_07.htm";
-					st.takeAllItems(ValorNecklace);
-					st.giveItems(8567, 1);
-					st.giveItems(ADENA_ID, 126549);
-					st.addExpAndSp(717291, 77397);
-					st.playSound(SOUND_FINISH);
-					st.setState(COMPLETED);
-					st.exitCurrentQuest(false);
+					qs.takeAllItems(ValorNecklace);
+					qs.giveItems(8567, 1);
+					qs.giveItems(ADENA_ID, 126549);
+					qs.addExpAndSp(717291, 77397);
+					qs.playSound(SOUND_FINISH);
+					qs.setState(COMPLETED);
+					qs.exitCurrentQuest(false);
 				}
 				else
 				{
 					htmltext = "klein_q10291_06.htm";
 				}
-			}
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		int npcId = npc.getId();
-		int cond = st.getCond();
-		
-		if ((cond == 1) && (npcId == Valakas))
+		if (qs.getCond() == 1)
 		{
-			st.takeAllItems(PoorNecklace);
-			st.giveItems(ValorNecklace, 1);
-			st.setCond(2);
+			qs.takeAllItems(PoorNecklace);
+			qs.giveItems(ValorNecklace, 1);
+			qs.setCond(2);
 		}
 		
 		return null;

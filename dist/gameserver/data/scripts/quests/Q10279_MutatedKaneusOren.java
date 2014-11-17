@@ -19,25 +19,13 @@ import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10279_MutatedKaneusOren extends Quest implements ScriptFile
 {
-	@Override
-	public void onLoad()
-	{
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
+	// Npcs
 	private static final int Mouen = 30196;
 	private static final int Rovia = 30189;
+	// Monsters
 	private static final int KaimAbigore = 18566;
 	private static final int KnightMontagnar = 18568;
+	// Items
 	private static final int Tissue1 = 13836;
 	private static final int Tissue2 = 13837;
 	
@@ -51,34 +39,36 @@ public class Q10279_MutatedKaneusOren extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onEvent(String event, QuestState st, NpcInstance npc)
+	public String onEvent(String event, QuestState qs, NpcInstance npc)
 	{
 		String htmltext = event;
 		
-		if (event.equalsIgnoreCase("30196-03.htm"))
+		switch (event)
 		{
-			st.setCond(1);
-			st.setState(STARTED);
-			st.playSound(SOUND_ACCEPT);
-		}
-		else if (event.equalsIgnoreCase("30189-02.htm"))
-		{
-			st.giveItems(ADENA_ID, 200000);
-			st.addExpAndSp(1000000, 770000);
-			st.exitCurrentQuest(false);
-			st.playSound(SOUND_FINISH);
+			case "30196-03.htm":
+				qs.setCond(1);
+				qs.setState(STARTED);
+				qs.playSound(SOUND_ACCEPT);
+				break;
+			
+			case "30189-02.htm":
+				qs.giveItems(ADENA_ID, 200000);
+				qs.addExpAndSp(1000000, 770000);
+				qs.exitCurrentQuest(false);
+				qs.playSound(SOUND_FINISH);
+				break;
 		}
 		
 		return htmltext;
 	}
 	
 	@Override
-	public String onTalk(NpcInstance npc, QuestState st)
+	public String onTalk(NpcInstance npc, QuestState qs)
 	{
 		String htmltext = "noquest";
-		int id = st.getState();
-		int cond = st.getCond();
-		int npcId = npc.getId();
+		final int id = qs.getState();
+		final int cond = qs.getCond();
+		final int npcId = npc.getId();
 		
 		if (id == COMPLETED)
 		{
@@ -89,7 +79,7 @@ public class Q10279_MutatedKaneusOren extends Quest implements ScriptFile
 		}
 		else if ((id == CREATED) && (npcId == Mouen))
 		{
-			if (st.getPlayer().getLevel() >= 48)
+			if (qs.getPlayer().getLevel() >= 48)
 			{
 				htmltext = "30196-01.htm";
 			}
@@ -125,16 +115,31 @@ public class Q10279_MutatedKaneusOren extends Quest implements ScriptFile
 	}
 	
 	@Override
-	public String onKill(NpcInstance npc, QuestState st)
+	public String onKill(NpcInstance npc, QuestState qs)
 	{
-		if ((st.getState() == STARTED) && (st.getCond() == 1))
+		if ((qs.getState() == STARTED) && (qs.getCond() == 1))
 		{
-			st.giveItems(Tissue1, 1);
-			st.giveItems(Tissue2, 1);
-			st.setCond(2);
-			st.playSound(SOUND_MIDDLE);
+			qs.giveItems(Tissue1, 1);
+			qs.giveItems(Tissue2, 1);
+			qs.setCond(2);
+			qs.playSound(SOUND_MIDDLE);
 		}
 		
 		return null;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }
