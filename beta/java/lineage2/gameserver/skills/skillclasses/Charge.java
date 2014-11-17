@@ -31,7 +31,7 @@ import lineage2.gameserver.templates.StatsSet;
  */
 public class Charge extends Skill
 {
-	public static final int MAX_CHARGE = 10;
+	public static final int MAX_CHARGE = 15;
 	private final int _charges;
 	private final boolean _fullCharge;
 	

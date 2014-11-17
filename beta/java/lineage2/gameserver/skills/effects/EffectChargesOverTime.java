@@ -32,7 +32,7 @@ public class EffectChargesOverTime extends Effect
 	public EffectChargesOverTime(Env env, EffectTemplate template)
 	{
 		super(env, template);
-		_maxCharges = getTemplate().getParam().getInteger("maxCharges", 10);
+		_maxCharges = getTemplate().getParam().getInteger("maxCharges", 15);
 	}
 	
 	/**
