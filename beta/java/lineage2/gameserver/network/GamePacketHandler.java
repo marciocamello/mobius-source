@@ -1648,15 +1648,18 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 								switch (id3)
 								{
 									case 0x02:
-										msg = new RequestDynamicQuestProgressInfo();
+										// Campaign quests removed on Ertheia?
+										// msg = new RequestDynamicQuestProgressInfo();
 										break;
 									
 									case 0x03:
-										msg = new RequestDynamicQuestScoreBoard();
+										// Campaign quests removed on Ertheia?
+										// msg = new RequestDynamicQuestScoreBoard();
 										break;
 									
 									case 0x04:
-										msg = new RequestDynamicQuestHTML();
+										// Campaign quests removed on Ertheia?
+										// msg = new RequestDynamicQuestHTML();
 										break;
 									
 									default:
