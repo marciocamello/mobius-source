@@ -66,64 +66,62 @@ public final class DeadTumorInstance extends NpcInstance
 				deadTumors.remove(this);
 			}
 			
-			if (command.equals("examine_tumor"))
+			switch (command)
 			{
-				showChatWindow(player, 1);
-			}
-			else if (command.equals("showcheckpage"))
-			{
-				if (!player.isInParty())
-				{
-					showChatWindow(player, 2);
-					return;
-				}
+				case "examine_tumor":
+					showChatWindow(player, 1);
+					break;
 				
-				if ((warpTimer + 60000) > System.currentTimeMillis())
-				{
-					showChatWindow(player, 4);
-					return;
-				}
-				
-				if (deadTumors.size() < 1)
-				{
-					showChatWindow(player, 3);
-					return;
-				}
-				
-				showChatWindow(player, 5);
-			}
-			else if (command.equals("warp"))
-			{
-				if (ItemFunctions.getItemCount(player, 13797) < 1)
-				{
-					showChatWindow(player, 6);
-					return;
-				}
-				
-				if ((ItemFunctions.removeItem(player, 13797, 1, true) > 0) && player.isInParty())
-				{
-					Location loc = Location.coordsRandomize(deadTumors.get(Rnd.get(deadTumors.size())).getLoc(), 100, 150);
-					
-					if (loc != null)
+				case "showcheckpage":
+					if (!player.isInParty())
 					{
-						for (Player p : getReflection().getPlayers())
-						{
-							p.sendPacket(new ExShowScreenMessage(NpcString.S1S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, player.getParty().getPartyLeader().getName()));
-						}
+						showChatWindow(player, 2);
+						return;
+					}
+					if ((warpTimer + 60000) > System.currentTimeMillis())
+					{
+						showChatWindow(player, 4);
+						return;
+					}
+					if (deadTumors.size() < 1)
+					{
+						showChatWindow(player, 3);
+						return;
+					}
+					showChatWindow(player, 5);
+					break;
+				
+				case "warp":
+					if (ItemFunctions.getItemCount(player, 13797) < 1)
+					{
+						showChatWindow(player, 6);
+						return;
+					}
+					if ((ItemFunctions.removeItem(player, 13797, 1, true) > 0) && player.isInParty())
+					{
+						Location loc = Location.coordsRandomize(deadTumors.get(Rnd.get(deadTumors.size())).getLoc(), 100, 150);
 						
-						for (Player p : player.getParty().getPartyMembers())
+						if (loc != null)
 						{
-							if (p.isInRange(this, 500))
+							for (Player p : getReflection().getPlayers())
 							{
-								p.teleToLocation(loc);
+								p.sendPacket(new ExShowScreenMessage(NpcString.S1S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, player.getParty().getPartyLeader().getName()));
+							}
+							
+							for (Player p : player.getParty().getPartyMembers())
+							{
+								if (p.isInRange(this, 500))
+								{
+									p.teleToLocation(loc);
+								}
 							}
 						}
 					}
-				}
-			}
-			else
-			{
-				super.onBypassFeedback(player, command);
+					break;
+				
+				default:
+					super.onBypassFeedback(player, command);
+					break;
 			}
 		}
 		else if (getReflection().getInstancedZoneId() == 121)
@@ -135,120 +133,114 @@ public final class DeadTumorInstance extends NpcInstance
 				deadTumors.remove(this);
 			}
 			
-			if (command.equals("examine_tumor"))
+			switch (command)
 			{
-				if (getId() == 32536)
-				{
-					showChatWindow(player, 1);
-				}
-				else if (getId() == 32535)
-				{
-					showChatWindow(player, 7);
-				}
-			}
-			else if (command.equals("warpechmus"))
-			{
-				if (!player.isInParty())
-				{
-					showChatWindow(player, 2);
-					return;
-				}
-				
-				for (Player p : getReflection().getPlayers())
-				{
-					p.sendPacket(new ExShowScreenMessage(NpcString.S1S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, player.getParty().getPartyLeader().getName()));
-				}
-				
-				for (Player p : player.getParty().getPartyMembers())
-				{
-					if (p.isInRange(this, 800))
+				case "examine_tumor":
+					if (getId() == 32536)
 					{
-						p.teleToLocation(new Location(-179548, 209584, -15504));
+						showChatWindow(player, 1);
 					}
-				}
-				
-				((HeartInfinityAttack) getReflection()).notifyEchmusEntrance(player.getParty().getPartyLeader());
-			}
-			else if (command.equals("showcheckpage"))
-			{
-				if (!player.isInParty())
-				{
-					showChatWindow(player, 2);
-					return;
-				}
-				
-				if ((warpTimer + 60000) > System.currentTimeMillis())
-				{
-					showChatWindow(player, 4);
-					return;
-				}
-				
-				if (deadTumors.size() < 1)
-				{
-					showChatWindow(player, 3);
-					return;
-				}
-				
-				showChatWindow(player, 5);
-			}
-			else if (command.equals("warp"))
-			{
-				if (ItemFunctions.getItemCount(player, 13797) < 1)
-				{
-					showChatWindow(player, 6);
-					return;
-				}
-				
-				if ((ItemFunctions.removeItem(player, 13797, 1, true) > 0) && player.isInParty())
-				{
-					Location loc = Location.coordsRandomize(deadTumors.get(Rnd.get(deadTumors.size())).getLoc(), 100, 150);
-					
-					if (loc != null)
+					else if (getId() == 32535)
 					{
-						for (Player p : getReflection().getPlayers())
-						{
-							p.sendPacket(new ExShowScreenMessage(NpcString.S1S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, player.getParty().getPartyLeader().getName()));
-						}
-						
-						for (Player p : player.getParty().getPartyMembers())
-						{
-							if (p.isInRange(this, 500))
-							{
-								p.teleToLocation(loc);
-							}
-						}
+						showChatWindow(player, 7);
 					}
-				}
-			}
-			else if (command.equals("reenterechmus"))
-			{
-				if (ItemFunctions.getItemCount(player, 13797) < 3)
-				{
-					showChatWindow(player, 6);
-					return;
-				}
+					break;
 				
-				if ((ItemFunctions.removeItem(player, 13797, 3, true) >= 3) && player.isInParty())
-				{
+				case "warpechmus":
+					if (!player.isInParty())
+					{
+						showChatWindow(player, 2);
+						return;
+					}
 					for (Player p : getReflection().getPlayers())
 					{
-						p.sendPacket(new ExShowScreenMessage(NpcString.S1S_PARTY_HAS_ENTERED_THE_CHAMBER_OF_EKIMUS_THROUGH_THE_CRACK_IN_THE_TUMOR, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, player.getParty().getPartyLeader().getName()));
+						p.sendPacket(new ExShowScreenMessage(NpcString.S1S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, player.getParty().getPartyLeader().getName()));
 					}
-					
-					((HeartInfinityAttack) getReflection()).notifyEkimusRoomEntrance();
-					
 					for (Player p : player.getParty().getPartyMembers())
 					{
-						if (p.isInRange(this, 400))
+						if (p.isInRange(this, 800))
 						{
 							p.teleToLocation(new Location(-179548, 209584, -15504));
 						}
 					}
-				}
-			}
-			else
-			{
-				super.onBypassFeedback(player, command);
+					((HeartInfinityAttack) getReflection()).notifyEchmusEntrance(player.getParty().getPartyLeader());
+					break;
+				
+				case "showcheckpage":
+					if (!player.isInParty())
+					{
+						showChatWindow(player, 2);
+						return;
+					}
+					if ((warpTimer + 60000) > System.currentTimeMillis())
+					{
+						showChatWindow(player, 4);
+						return;
+					}
+					if (deadTumors.size() < 1)
+					{
+						showChatWindow(player, 3);
+						return;
+					}
+					showChatWindow(player, 5);
+					break;
+				
+				case "warp":
+					if (ItemFunctions.getItemCount(player, 13797) < 1)
+					{
+						showChatWindow(player, 6);
+						return;
+					}
+					if ((ItemFunctions.removeItem(player, 13797, 1, true) > 0) && player.isInParty())
+					{
+						Location loc = Location.coordsRandomize(deadTumors.get(Rnd.get(deadTumors.size())).getLoc(), 100, 150);
+						
+						if (loc != null)
+						{
+							for (Player p : getReflection().getPlayers())
+							{
+								p.sendPacket(new ExShowScreenMessage(NpcString.S1S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, player.getParty().getPartyLeader().getName()));
+							}
+							
+							for (Player p : player.getParty().getPartyMembers())
+							{
+								if (p.isInRange(this, 500))
+								{
+									p.teleToLocation(loc);
+								}
+							}
+						}
+					}
+					break;
+				
+				case "reenterechmus":
+					if (ItemFunctions.getItemCount(player, 13797) < 3)
+					{
+						showChatWindow(player, 6);
+						return;
+					}
+					if ((ItemFunctions.removeItem(player, 13797, 3, true) >= 3) && player.isInParty())
+					{
+						for (Player p : getReflection().getPlayers())
+						{
+							p.sendPacket(new ExShowScreenMessage(NpcString.S1S_PARTY_HAS_ENTERED_THE_CHAMBER_OF_EKIMUS_THROUGH_THE_CRACK_IN_THE_TUMOR, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, player.getParty().getPartyLeader().getName()));
+						}
+						
+						((HeartInfinityAttack) getReflection()).notifyEkimusRoomEntrance();
+						
+						for (Player p : player.getParty().getPartyMembers())
+						{
+							if (p.isInRange(this, 400))
+							{
+								p.teleToLocation(new Location(-179548, 209584, -15504));
+							}
+						}
+					}
+					break;
+				
+				default:
+					super.onBypassFeedback(player, command);
+					break;
 			}
 		}
 		else

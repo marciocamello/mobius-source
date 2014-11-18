@@ -57,114 +57,99 @@ public final class KartiaManagerInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equals("request_zellaka_solo"))
-		{
-			Reflection r = player.getActiveReflection();
-			
-			if (r != null)
-			{
-				if (player.canReenterInstance(205))
-				{
-					player.teleToLocation(r.getTeleportLoc(), r);
-				}
-			}
-			else if (player.canEnterInstance(205))
-			{
-				ReflectionUtils.enterReflection(player, new KartiaLabyrinth85Solo(), 205);
-			}
-		}
+		final Reflection r = player.getActiveReflection();
 		
-		if (command.equals("request_zellaka_party"))
+		switch (command)
 		{
-			Reflection r = player.getActiveReflection();
-			
-			if (r != null)
-			{
-				if (player.canReenterInstance(208))
+			case "request_zellaka_solo":
+				if (r != null)
 				{
-					player.teleToLocation(r.getTeleportLoc(), r);
+					if (player.canReenterInstance(205))
+					{
+						player.teleToLocation(r.getTeleportLoc(), r);
+					}
 				}
-			}
-			else if (player.canEnterInstance(208))
-			{
-				ReflectionUtils.enterReflection(player, new KartiaLabyrinth85Party(), 208);
-			}
-		}
-		
-		if (command.equals("request_pelline_solo"))
-		{
-			Reflection r = player.getActiveReflection();
-			
-			if (r != null)
-			{
-				if (player.canReenterInstance(206))
+				else if (player.canEnterInstance(205))
 				{
-					player.teleToLocation(r.getTeleportLoc(), r);
+					ReflectionUtils.enterReflection(player, new KartiaLabyrinth85Solo(), 205);
 				}
-			}
-			else if (player.canEnterInstance(206))
-			{
-				ReflectionUtils.enterReflection(player, new KartiaLabyrinth90Solo(), 206);
-			}
-		}
-		
-		if (command.equals("request_pelline_party"))
-		{
-			Reflection r = player.getActiveReflection();
+				break;
 			
-			if (r != null)
-			{
-				if (player.canReenterInstance(209))
+			case "request_zellaka_party":
+				if (r != null)
 				{
-					player.teleToLocation(r.getTeleportLoc(), r);
+					if (player.canReenterInstance(208))
+					{
+						player.teleToLocation(r.getTeleportLoc(), r);
+					}
 				}
-			}
-			else if (player.canEnterInstance(209))
-			{
-				ReflectionUtils.enterReflection(player, new KartiaLabyrinth90Party(), 209);
-			}
-		}
-		
-		if (command.equals("request_kalios_solo"))
-		{
-			Reflection r = player.getActiveReflection();
+				else if (player.canEnterInstance(208))
+				{
+					ReflectionUtils.enterReflection(player, new KartiaLabyrinth85Party(), 208);
+				}
+				break;
 			
-			if (r != null)
-			{
-				if (player.canReenterInstance(207))
+			case "request_pelline_solo":
+				if (r != null)
 				{
-					player.teleToLocation(r.getTeleportLoc(), r);
+					if (player.canReenterInstance(206))
+					{
+						player.teleToLocation(r.getTeleportLoc(), r);
+					}
 				}
-			}
-			else if (player.canEnterInstance(207))
-			{
-				ReflectionUtils.enterReflection(player, new KartiaLabyrinth95Solo(), 207);
-			}
-		}
-		
-		if (command.equals("request_kalios_party"))
-		{
-			Reflection r = player.getActiveReflection();
+				else if (player.canEnterInstance(206))
+				{
+					ReflectionUtils.enterReflection(player, new KartiaLabyrinth90Solo(), 206);
+				}
+				break;
 			
-			if (r != null)
-			{
-				if (player.canReenterInstance(210))
+			case "request_pelline_party":
+				if (r != null)
 				{
-					player.teleToLocation(r.getTeleportLoc(), r);
+					if (player.canReenterInstance(209))
+					{
+						player.teleToLocation(r.getTeleportLoc(), r);
+					}
 				}
-			}
-			else if (player.canEnterInstance(210))
-			{
-				ReflectionUtils.enterReflection(player, new KartiaLabyrinth95Party(), 210);
-			}
+				else if (player.canEnterInstance(209))
+				{
+					ReflectionUtils.enterReflection(player, new KartiaLabyrinth90Party(), 209);
+				}
+				break;
+			
+			case "request_kalios_solo":
+				if (r != null)
+				{
+					if (player.canReenterInstance(207))
+					{
+						player.teleToLocation(r.getTeleportLoc(), r);
+					}
+				}
+				else if (player.canEnterInstance(207))
+				{
+					ReflectionUtils.enterReflection(player, new KartiaLabyrinth95Solo(), 207);
+				}
+				break;
+			
+			case "request_kalios_party":
+				if (r != null)
+				{
+					if (player.canReenterInstance(210))
+					{
+						player.teleToLocation(r.getTeleportLoc(), r);
+					}
+				}
+				else if (player.canEnterInstance(210))
+				{
+					ReflectionUtils.enterReflection(player, new KartiaLabyrinth95Party(), 210);
+				}
+				break;
 		}
 		
 		if (command.startsWith("start"))
 		{
 			String[] splited = command.split("\\s");
-			// w a s h
 			String param = splited[1];
-			Reflection r = player.getActiveReflection();
 			
 			if (r != null)
 			{
@@ -178,94 +163,82 @@ public final class KartiaManagerInstance extends NpcInstance
 				{
 					player.teleToLocation(TELEPORT_POSITION);
 					
-					if (r.getInstancedZoneId() == 205)
+					switch (r.getInstancedZoneId())
 					{
-						NpcInstance adolph = r.addSpawnWithoutRespawn(Adolph88, TELEPORT_POSITION, 100);
-						adolph.setFollowTarget(player);
+						case 205:
+							NpcInstance adolph88 = r.addSpawnWithoutRespawn(Adolph88, TELEPORT_POSITION, 100);
+							adolph88.setFollowTarget(player);
+							if (!param.equals("w"))
+							{
+								NpcInstance barton = r.addSpawnWithoutRespawn(Barton88, TELEPORT_POSITION, 100);
+								barton.setFollowTarget(player);
+							}
+							if (!param.equals("a"))
+							{
+								NpcInstance hayuk = r.addSpawnWithoutRespawn(Hayuk88, TELEPORT_POSITION, 100);
+								hayuk.setFollowTarget(player);
+							}
+							if (!param.equals("s"))
+							{
+								NpcInstance eliyah = r.addSpawnWithoutRespawn(Eliyah88, TELEPORT_POSITION, 100);
+								eliyah.setFollowTarget(player);
+							}
+							if (!param.equals("h"))
+							{
+								NpcInstance elise = r.addSpawnWithoutRespawn(Elise88, TELEPORT_POSITION, 100);
+								elise.setFollowTarget(player);
+							}
+							break;
 						
-						if (!param.equals("w"))
-						{
-							NpcInstance barton = r.addSpawnWithoutRespawn(Barton88, TELEPORT_POSITION, 100);
-							barton.setFollowTarget(player);
-						}
+						case 206:
+							NpcInstance adolph93 = r.addSpawnWithoutRespawn(Adolph93, TELEPORT_POSITION, 100);
+							adolph93.setFollowTarget(player);
+							if (!param.equals("w"))
+							{
+								NpcInstance barton = r.addSpawnWithoutRespawn(Barton93, TELEPORT_POSITION, 100);
+								barton.setFollowTarget(player);
+							}
+							if (!param.equals("a"))
+							{
+								NpcInstance hayuk = r.addSpawnWithoutRespawn(Hayuk93, TELEPORT_POSITION, 100);
+								hayuk.setFollowTarget(player);
+							}
+							if (!param.equals("s"))
+							{
+								NpcInstance eliyah = r.addSpawnWithoutRespawn(Eliyah93, TELEPORT_POSITION, 100);
+								eliyah.setFollowTarget(player);
+							}
+							if (!param.equals("h"))
+							{
+								NpcInstance elise = r.addSpawnWithoutRespawn(Elise93, TELEPORT_POSITION, 100);
+								elise.setFollowTarget(player);
+							}
+							break;
 						
-						if (!param.equals("a"))
-						{
-							NpcInstance hayuk = r.addSpawnWithoutRespawn(Hayuk88, TELEPORT_POSITION, 100);
-							hayuk.setFollowTarget(player);
-						}
-						
-						if (!param.equals("s"))
-						{
-							NpcInstance eliyah = r.addSpawnWithoutRespawn(Eliyah88, TELEPORT_POSITION, 100);
-							eliyah.setFollowTarget(player);
-						}
-						
-						if (!param.equals("h"))
-						{
-							NpcInstance elise = r.addSpawnWithoutRespawn(Elise88, TELEPORT_POSITION, 100);
-							elise.setFollowTarget(player);
-						}
-					}
-					
-					if (r.getInstancedZoneId() == 206)
-					{
-						NpcInstance adolph = r.addSpawnWithoutRespawn(Adolph93, TELEPORT_POSITION, 100);
-						adolph.setFollowTarget(player);
-						
-						if (!param.equals("w"))
-						{
-							NpcInstance barton = r.addSpawnWithoutRespawn(Barton93, TELEPORT_POSITION, 100);
-							barton.setFollowTarget(player);
-						}
-						
-						if (!param.equals("a"))
-						{
-							NpcInstance hayuk = r.addSpawnWithoutRespawn(Hayuk93, TELEPORT_POSITION, 100);
-							hayuk.setFollowTarget(player);
-						}
-						
-						if (!param.equals("s"))
-						{
-							NpcInstance eliyah = r.addSpawnWithoutRespawn(Eliyah93, TELEPORT_POSITION, 100);
-							eliyah.setFollowTarget(player);
-						}
-						
-						if (!param.equals("h"))
-						{
-							NpcInstance elise = r.addSpawnWithoutRespawn(Elise93, TELEPORT_POSITION, 100);
-							elise.setFollowTarget(player);
-						}
-					}
-					
-					if (r.getInstancedZoneId() == 207)
-					{
-						NpcInstance adolph = r.addSpawnWithoutRespawn(Adolph98, TELEPORT_POSITION, 100);
-						adolph.setFollowTarget(player);
-						
-						if (!param.equals("w"))
-						{
-							NpcInstance barton = r.addSpawnWithoutRespawn(Barton98, TELEPORT_POSITION, 100);
-							barton.setFollowTarget(player);
-						}
-						
-						if (!param.equals("a"))
-						{
-							NpcInstance hayuk = r.addSpawnWithoutRespawn(Hayuk98, TELEPORT_POSITION, 100);
-							hayuk.setFollowTarget(player);
-						}
-						
-						if (!param.equals("s"))
-						{
-							NpcInstance eliyah = r.addSpawnWithoutRespawn(Eliyah98, TELEPORT_POSITION, 100);
-							eliyah.setFollowTarget(player);
-						}
-						
-						if (!param.equals("h"))
-						{
-							NpcInstance elise = r.addSpawnWithoutRespawn(Elise98, TELEPORT_POSITION, 100);
-							elise.setFollowTarget(player);
-						}
+						case 207:
+							NpcInstance adolph98 = r.addSpawnWithoutRespawn(Adolph98, TELEPORT_POSITION, 100);
+							adolph98.setFollowTarget(player);
+							if (!param.equals("w"))
+							{
+								NpcInstance barton = r.addSpawnWithoutRespawn(Barton98, TELEPORT_POSITION, 100);
+								barton.setFollowTarget(player);
+							}
+							if (!param.equals("a"))
+							{
+								NpcInstance hayuk = r.addSpawnWithoutRespawn(Hayuk98, TELEPORT_POSITION, 100);
+								hayuk.setFollowTarget(player);
+							}
+							if (!param.equals("s"))
+							{
+								NpcInstance eliyah = r.addSpawnWithoutRespawn(Eliyah98, TELEPORT_POSITION, 100);
+								eliyah.setFollowTarget(player);
+							}
+							if (!param.equals("h"))
+							{
+								NpcInstance elise = r.addSpawnWithoutRespawn(Elise98, TELEPORT_POSITION, 100);
+								elise.setFollowTarget(player);
+							}
+							break;
 					}
 				}
 			}

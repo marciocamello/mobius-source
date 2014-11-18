@@ -62,113 +62,109 @@ public final class GunPrisionInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equals("zalp"))
+		switch (command)
 		{
-			if (!checkShot)
-			{
-				Functions.npcSay(this, NpcString.CANNON_READY_TO_FIRE);
-				player.sendPacket(new NpcHtmlMessage(player, this).setHtml("Cannon:<br><br>Preparations are underway to re-activate the cannon. This process can take up to 5 minutes."));
-				return;
-			}
-			else if (!player.getInventory().destroyItemByItemId(17611, 1))
-			{
-				player.sendPacket(new NpcHtmlMessage(player, this).setHtml("Cannon:<br><br>\"Huge Charges\" not available."));
-				return;
-			}
+			case "zalp":
+				if (!checkShot)
+				{
+					Functions.npcSay(this, NpcString.CANNON_READY_TO_FIRE);
+					player.sendPacket(new NpcHtmlMessage(player, this).setHtml("Cannon:<br><br>Preparations are underway to re-activate the cannon. This process can take up to 5 minutes."));
+					return;
+				}
+				else if (!player.getInventory().destroyItemByItemId(17611, 1))
+				{
+					player.sendPacket(new NpcHtmlMessage(player, this).setHtml("Cannon:<br><br>\"Huge Charges\" not available."));
+					return;
+				}
+				broadcastPacketToOthers(new MagicSkillUse(this, this, 14175, 1, 3000, 0));
+				broadcastPacket(new Earthquake(player.getLoc(), 10, 7));
+				ThreadPoolManager.getInstance().schedule(new Shot(), 300 * 1000L);
+				checkShot = false;
+				ThreadPoolManager.getInstance().schedule(new RunnableImpl()
+				{
+					@Override
+					public void runImpl()
+					{
+						decayMe();
+						spawnMe();
+					}
+				}, 3100);
+				setTitle("Cannon is loading");
+				for (NpcInstance monster : World.getAroundNpcCor(point_bombs[getId() - 32939], getCurrentRegion(), getReflectionId(), 650, 500))
+				{
+					if ((monster == null) || !monster.isNpc() || ((monster.getId() != 22966) && (monster.getId() != 22965) && (monster.getId() != 22967)))
+					{
+						continue;
+					}
+					
+					if (monster.getId() == 22966)
+					{
+						Functions.spawn(monster.getLoc(), 22980);
+					}
+					else if (monster.getId() == 22965)
+					{
+						Functions.spawn(monster.getLoc(), 22979);
+					}
+					else if (monster.getId() == 22967)
+					{
+						Functions.spawn(monster.getLoc(), 22981);
+					}
+					
+					monster.decayMe();
+					monster.doDie(this);
+				}
+				break;
 			
-			broadcastPacketToOthers(new MagicSkillUse(this, this, 14175, 1, 3000, 0));
-			broadcastPacket(new Earthquake(player.getLoc(), 10, 7));
-			ThreadPoolManager.getInstance().schedule(new Shot(), 300 * 1000L);
-			checkShot = false;
-			ThreadPoolManager.getInstance().schedule(new RunnableImpl()
-			{
-				@Override
-				public void runImpl()
+			case "spezion_bomb":
+				if (!checkShot)
 				{
-					decayMe();
-					spawnMe();
+					Functions.npcSay(this, NpcString.CANNON_READY_TO_FIRE);
+					player.sendPacket(new NpcHtmlMessage(player, this).setHtml("Cannon:<br><br>Preparations are underway to re-activate the cannon. This process can take up to 5 minutes."));
+					return;
 				}
-			}, 3100);
-			setTitle("Cannon is loading");
-			Location loc = point_bombs[getId() - 32939];
+				else if (!player.getInventory().destroyItemByItemId(17611, 1))
+				{
+					player.sendPacket(new NpcHtmlMessage(player, this).setHtml("Cannon:<br><br>\"Huge Charges\" not available."));
+					return;
+				}
+				checkShot = false;
+				broadcastPacketToOthers(new MagicSkillUse(this, this, 14175, 1, 3000, 0));
+				broadcastPacket(new Earthquake(player.getLoc(), 10, 7));
+				ThreadPoolManager.getInstance().schedule(new RunnableImpl()
+				{
+					@Override
+					public void runImpl()
+					{
+						checkShot = true;
+						setTitle("Empty Cannon");
+					}
+				}, 60000);
+				ThreadPoolManager.getInstance().schedule(new RunnableImpl()
+				{
+					@Override
+					public void runImpl()
+					{
+						decayMe();
+						spawnMe();
+					}
+				}, 3100);
+				setTitle("Cannon is loading");
+				for (NpcInstance monster : World.getAroundNpcCor(point_bombs_spezion[getId() - 33288], getCurrentRegion(), getReflectionId(), 700, 500))
+				{
+					if ((monster == null) || !monster.isNpc() || (monster.getId() != 25779))
+					{
+						continue;
+					}
+					
+					monster.getEffectList().stopEffect(SkillTable.getInstance().getInfo(14190, 1));
+					monster.setNpcState(2);
+					ThreadPoolManager.getInstance().schedule(new Buff(monster), 60 * 1000L);
+				}
+				break;
 			
-			for (NpcInstance monster : World.getAroundNpcCor(loc, getCurrentRegion(), getReflectionId(), 650, 500))
-			{
-				if ((monster == null) || !monster.isNpc() || ((monster.getId() != 22966) && (monster.getId() != 22965) && (monster.getId() != 22967)))
-				{
-					continue;
-				}
-				
-				if (monster.getId() == 22966)
-				{
-					Functions.spawn(monster.getLoc(), 22980);
-				}
-				else if (monster.getId() == 22965)
-				{
-					Functions.spawn(monster.getLoc(), 22979);
-				}
-				else if (monster.getId() == 22967)
-				{
-					Functions.spawn(monster.getLoc(), 22981);
-				}
-				
-				monster.decayMe();
-				monster.doDie(this);
-			}
-		}
-		else if (command.equals("spezion_bomb"))
-		{
-			if (!checkShot)
-			{
-				Functions.npcSay(this, NpcString.CANNON_READY_TO_FIRE);
-				player.sendPacket(new NpcHtmlMessage(player, this).setHtml("Cannon:<br><br>Preparations are underway to re-activate the cannon. This process can take up to 5 minutes."));
-				return;
-			}
-			else if (!player.getInventory().destroyItemByItemId(17611, 1))
-			{
-				player.sendPacket(new NpcHtmlMessage(player, this).setHtml("Cannon:<br><br>\"Huge Charges\" not available."));
-				return;
-			}
-			
-			checkShot = false;
-			broadcastPacketToOthers(new MagicSkillUse(this, this, 14175, 1, 3000, 0));
-			broadcastPacket(new Earthquake(player.getLoc(), 10, 7));
-			ThreadPoolManager.getInstance().schedule(new RunnableImpl()
-			{
-				@Override
-				public void runImpl()
-				{
-					checkShot = true;
-					setTitle("Empty Cannon");
-				}
-			}, 60000);
-			ThreadPoolManager.getInstance().schedule(new RunnableImpl()
-			{
-				@Override
-				public void runImpl()
-				{
-					decayMe();
-					spawnMe();
-				}
-			}, 3100);
-			setTitle("Cannon is loading");
-			Location loc = point_bombs_spezion[getId() - 33288];
-			
-			for (NpcInstance monster : World.getAroundNpcCor(loc, getCurrentRegion(), getReflectionId(), 700, 500))
-			{
-				if ((monster == null) || !monster.isNpc() || (monster.getId() != 25779))
-				{
-					continue;
-				}
-				
-				monster.getEffectList().stopEffect(SkillTable.getInstance().getInfo(14190, 1));
-				monster.setNpcState(2);
-				ThreadPoolManager.getInstance().schedule(new Buff(monster), 60 * 1000L);
-			}
-		}
-		else
-		{
-			super.onBypassFeedback(player, command);
+			default:
+				super.onBypassFeedback(player, command);
+				break;
 		}
 	}
 	

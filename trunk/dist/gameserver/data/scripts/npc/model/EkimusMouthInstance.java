@@ -57,75 +57,75 @@ public final class EkimusMouthInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equals("hos_enter"))
+		final Reflection r = player.getActiveReflection();
+		
+		switch (command)
 		{
-			Reflection r = player.getActiveReflection();
+			case "hos_enter":
+				if (SoIManager.getCurrentStage() == 1)
+				{
+					if (r != null)
+					{
+						if (player.canReenterInstance(hosattackIzId))
+						{
+							player.teleToLocation(r.getTeleportLoc(), r);
+						}
+					}
+					else if (player.canEnterInstance(hosattackIzId))
+					{
+						ReflectionUtils.enterReflection(player, new SufferingHallAttack(), hosattackIzId);
+					}
+				}
+				else if (SoIManager.getCurrentStage() == 4)
+				{
+					if (r != null)
+					{
+						if (player.canReenterInstance(hosdefenceIzId))
+						{
+							player.teleToLocation(r.getTeleportLoc(), r);
+						}
+					}
+					else if (player.canEnterInstance(hosdefenceIzId))
+					{
+						ReflectionUtils.enterReflection(player, new SufferingHallDefence(), hosdefenceIzId);
+					}
+				}
+				break;
 			
-			if (SoIManager.getCurrentStage() == 1)
-			{
-				if (r != null)
+			case "hoe_enter":
+				if (SoIManager.getCurrentStage() == 1)
 				{
-					if (player.canReenterInstance(hosattackIzId))
+					if (r != null)
 					{
-						player.teleToLocation(r.getTeleportLoc(), r);
+						if (player.canReenterInstance(hoeattackIzId))
+						{
+							player.teleToLocation(r.getTeleportLoc(), r);
+						}
+					}
+					else if (player.canEnterInstance(hoeattackIzId))
+					{
+						ReflectionUtils.enterReflection(player, new ErosionHallAttack(), hoeattackIzId);
 					}
 				}
-				else if (player.canEnterInstance(hosattackIzId))
+				else if (SoIManager.getCurrentStage() == 4)
 				{
-					ReflectionUtils.enterReflection(player, new SufferingHallAttack(), hosattackIzId);
-				}
-			}
-			else if (SoIManager.getCurrentStage() == 4)
-			{
-				if (r != null)
-				{
-					if (player.canReenterInstance(hosdefenceIzId))
+					if (r != null)
 					{
-						player.teleToLocation(r.getTeleportLoc(), r);
+						if (player.canReenterInstance(hoedefenceIzId))
+						{
+							player.teleToLocation(r.getTeleportLoc(), r);
+						}
+					}
+					else if (player.canEnterInstance(hoedefenceIzId))
+					{
+						ReflectionUtils.enterReflection(player, new ErosionHallDefence(), hoedefenceIzId);
 					}
 				}
-				else if (player.canEnterInstance(hosdefenceIzId))
-				{
-					ReflectionUtils.enterReflection(player, new SufferingHallDefence(), hosdefenceIzId);
-				}
-			}
-		}
-		else if (command.equals("hoe_enter"))
-		{
-			Reflection r = player.getActiveReflection();
+				break;
 			
-			if (SoIManager.getCurrentStage() == 1)
-			{
-				if (r != null)
-				{
-					if (player.canReenterInstance(hoeattackIzId))
-					{
-						player.teleToLocation(r.getTeleportLoc(), r);
-					}
-				}
-				else if (player.canEnterInstance(hoeattackIzId))
-				{
-					ReflectionUtils.enterReflection(player, new ErosionHallAttack(), hoeattackIzId);
-				}
-			}
-			else if (SoIManager.getCurrentStage() == 4)
-			{
-				if (r != null)
-				{
-					if (player.canReenterInstance(hoedefenceIzId))
-					{
-						player.teleToLocation(r.getTeleportLoc(), r);
-					}
-				}
-				else if (player.canEnterInstance(hoedefenceIzId))
-				{
-					ReflectionUtils.enterReflection(player, new ErosionHallDefence(), hoedefenceIzId);
-				}
-			}
-		}
-		else
-		{
-			super.onBypassFeedback(player, command);
+			default:
+				super.onBypassFeedback(player, command);
+				break;
 		}
 	}
 }

@@ -59,107 +59,105 @@ public final class GardenDoorInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equals("aphros_door_open"))
+		switch (command)
 		{
-			if (timeRespwn1 == 0)
-			{
-				timeRespwn1 = System.currentTimeMillis();
-			}
-			
-			if (player.getInventory().getItemByItemId(APHROS_KEY) == null)
-			{
-				showChatWindow(player, "aphros/aphros_door_nokey.htm");
-			}
-			else
-			{
-				if ((getId() == 33133) && (System.currentTimeMillis() >= timeRespwn1))
+			case "aphros_door_open":
+				if (timeRespwn1 == 0)
 				{
-					if (Rnd.chance(50))
-					{
-						showChatWindow(player, "aphros/aphros_door_ok.htm");
-						player.getInventory().removeItemByObjectId(APHROS_KEY, 1);
-						timeRespwn1 = System.currentTimeMillis() + 14400000;
-						NpcUtils.spawnSingle(APHROS, new Location(213732, 115288, -856, 0));
-						ThreadPoolManager.getInstance().schedule(new runDoorOpener(), 10000L);
-					}
-					else
-					{
-						showChatWindow(player, "aphros/aphros_door_wrongkey.htm");
-						
-						for (int i = 0; i < 3; i++)
-						{
-							NpcInstance guardian = NpcUtils.spawnSingle(GUARDIAN, new Location(player.getX() - Rnd.get(20), player.getY() - Rnd.get(20), player.getZ(), 0), 1800000);
-							guardian.getAggroList().addDamageHate(player, 0, 10000);
-							guardian.setAggressionTarget(player);
-						}
-					}
+					timeRespwn1 = System.currentTimeMillis();
+				}
+				if (player.getInventory().getItemByItemId(APHROS_KEY) == null)
+				{
+					showChatWindow(player, "aphros/aphros_door_nokey.htm");
 				}
 				else
 				{
-					showChatWindow(player, "aphros/aphros_door_chekedno.htm");
+					if ((getId() == 33133) && (System.currentTimeMillis() >= timeRespwn1))
+					{
+						if (Rnd.chance(50))
+						{
+							showChatWindow(player, "aphros/aphros_door_ok.htm");
+							player.getInventory().removeItemByObjectId(APHROS_KEY, 1);
+							timeRespwn1 = System.currentTimeMillis() + 14400000;
+							NpcUtils.spawnSingle(APHROS, new Location(213732, 115288, -856, 0));
+							ThreadPoolManager.getInstance().schedule(new runDoorOpener(), 10000L);
+						}
+						else
+						{
+							showChatWindow(player, "aphros/aphros_door_wrongkey.htm");
+							
+							for (int i = 0; i < 3; i++)
+							{
+								NpcInstance guardian = NpcUtils.spawnSingle(GUARDIAN, new Location(player.getX() - Rnd.get(20), player.getY() - Rnd.get(20), player.getZ(), 0), 1800000);
+								guardian.getAggroList().addDamageHate(player, 0, 10000);
+								guardian.setAggressionTarget(player);
+							}
+						}
+					}
+					else
+					{
+						showChatWindow(player, "aphros/aphros_door_chekedno.htm");
+					}
 				}
-			}
-		}
-		else if (command.equals("garden_door_angel"))
-		{
-			if (timeRespwn2 == 0)
-			{
-				timeRespwn2 = System.currentTimeMillis();
-			}
+				break;
 			
-			if (System.currentTimeMillis() >= timeRespwn2)
-			{
-				timeRespwn2 = System.currentTimeMillis() + 14400000;
-				NpcInstance angel = NpcUtils.spawnSingle(ANGEL_STATUE_KEEPER, new Location(player.getX() - Rnd.get(20), player.getY() - Rnd.get(20), player.getZ(), 0), 14400000L);
-				angel.getAggroList().addDamageHate(player, 0, 10000);
-				angel.setAggressionTarget(player);
-			}
-			else
-			{
-				showChatWindow(player, "aphros/keeper_no_respawn.htm");
-			}
-		}
-		else if (command.equals("garden_door_fountain"))
-		{
-			if (timeRespwn3 == 0)
-			{
-				timeRespwn3 = System.currentTimeMillis();
-			}
+			case "garden_door_angel":
+				if (timeRespwn2 == 0)
+				{
+					timeRespwn2 = System.currentTimeMillis();
+				}
+				if (System.currentTimeMillis() >= timeRespwn2)
+				{
+					timeRespwn2 = System.currentTimeMillis() + 14400000;
+					NpcInstance angel = NpcUtils.spawnSingle(ANGEL_STATUE_KEEPER, new Location(player.getX() - Rnd.get(20), player.getY() - Rnd.get(20), player.getZ(), 0), 14400000L);
+					angel.getAggroList().addDamageHate(player, 0, 10000);
+					angel.setAggressionTarget(player);
+				}
+				else
+				{
+					showChatWindow(player, "aphros/keeper_no_respawn.htm");
+				}
+				break;
 			
-			if (System.currentTimeMillis() >= timeRespwn3)
-			{
-				timeRespwn3 = System.currentTimeMillis() + 14400000;
-				NpcInstance fountain = NpcUtils.spawnSingle(FOUNTAIN_KEEPER, new Location(player.getX() - Rnd.get(20), player.getY() - Rnd.get(20), player.getZ(), 0), 14400000L);
-				fountain.getAggroList().addDamageHate(player, 0, 10000);
-				fountain.setAggressionTarget(player);
-			}
-			else
-			{
-				showChatWindow(player, "aphros/keeper_no_respawn.htm");
-			}
-		}
-		else if (command.equals("garden_door_statue"))
-		{
-			if (timeRespwn4 == 0)
-			{
-				timeRespwn4 = System.currentTimeMillis();
-			}
+			case "garden_door_fountain":
+				if (timeRespwn3 == 0)
+				{
+					timeRespwn3 = System.currentTimeMillis();
+				}
+				if (System.currentTimeMillis() >= timeRespwn3)
+				{
+					timeRespwn3 = System.currentTimeMillis() + 14400000;
+					NpcInstance fountain = NpcUtils.spawnSingle(FOUNTAIN_KEEPER, new Location(player.getX() - Rnd.get(20), player.getY() - Rnd.get(20), player.getZ(), 0), 14400000L);
+					fountain.getAggroList().addDamageHate(player, 0, 10000);
+					fountain.setAggressionTarget(player);
+				}
+				else
+				{
+					showChatWindow(player, "aphros/keeper_no_respawn.htm");
+				}
+				break;
 			
-			if (System.currentTimeMillis() >= timeRespwn4)
-			{
-				timeRespwn4 = System.currentTimeMillis() + 14400000;
-				NpcInstance statue = NpcUtils.spawnSingle(GODDESS_STATUE_KEEPER, new Location(player.getX() - Rnd.get(20), player.getY() - Rnd.get(20), player.getZ(), 0), 14400000L);
-				statue.getAggroList().addDamageHate(player, 0, 10000);
-				statue.setAggressionTarget(player);
-			}
-			else
-			{
-				showChatWindow(player, "aphros/keeper_no_respawn.htm");
-			}
-		}
-		else
-		{
-			super.onBypassFeedback(player, command);
+			case "garden_door_statue":
+				if (timeRespwn4 == 0)
+				{
+					timeRespwn4 = System.currentTimeMillis();
+				}
+				if (System.currentTimeMillis() >= timeRespwn4)
+				{
+					timeRespwn4 = System.currentTimeMillis() + 14400000;
+					NpcInstance statue = NpcUtils.spawnSingle(GODDESS_STATUE_KEEPER, new Location(player.getX() - Rnd.get(20), player.getY() - Rnd.get(20), player.getZ(), 0), 14400000L);
+					statue.getAggroList().addDamageHate(player, 0, 10000);
+					statue.setAggressionTarget(player);
+				}
+				else
+				{
+					showChatWindow(player, "aphros/keeper_no_respawn.htm");
+				}
+				break;
+			
+			default:
+				super.onBypassFeedback(player, command);
+				break;
 		}
 	}
 	

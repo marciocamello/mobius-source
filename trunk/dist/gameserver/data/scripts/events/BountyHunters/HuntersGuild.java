@@ -55,44 +55,6 @@ public final class HuntersGuild extends Functions implements ScriptFile, IVoiced
 	private static final Logger _log = LoggerFactory.getLogger(HuntersGuild.class);
 	
 	/**
-	 * Method onLoad.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
-	 */
-	@Override
-	public void onLoad()
-	{
-		CharListenerList.addGlobal(this);
-		
-		if (!Config.EVENT_BOUNTY_HUNTERS_ENABLED)
-		{
-			return;
-		}
-		
-		VoicedCommandHandler.getInstance().registerVoicedCommandHandler(this);
-		_log.info("Loaded Event: Bounty Hunters Guild");
-	}
-	
-	/**
-	 * Method onReload.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
-	 */
-	@Override
-	public void onReload()
-	{
-		// empty method
-	}
-	
-	/**
-	 * Method onShutdown.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
-	 */
-	@Override
-	public void onShutdown()
-	{
-		// empty method
-	}
-	
-	/**
 	 * Method checkTarget.
 	 * @param npc NpcTemplate
 	 * @return boolean
@@ -330,7 +292,7 @@ public final class HuntersGuild extends Functions implements ScriptFile, IVoiced
 	
 	/**
 	 * Method getVoicedCommandList.
-	 * @return String[] * @see lineage2.gameserver.handlers.voicedcommands.IVoicedCommandHandler#getVoicedCommandList()
+	 * @return String[]
 	 */
 	@Override
 	public String[] getVoicedCommandList()
@@ -380,8 +342,7 @@ public final class HuntersGuild extends Functions implements ScriptFile, IVoiced
 			getTask(activeChar, id);
 			return true;
 		}
-		
-		if (command.equals("declinetask"))
+		else if (command.equals("declinetask"))
 		{
 			if (activeChar.getVar("bhMonstersId") == null)
 			{
@@ -409,5 +370,41 @@ public final class HuntersGuild extends Functions implements ScriptFile, IVoiced
 		}
 		
 		return false;
+	}
+	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
+	@Override
+	public void onLoad()
+	{
+		CharListenerList.addGlobal(this);
+		
+		if (!Config.EVENT_BOUNTY_HUNTERS_ENABLED)
+		{
+			return;
+		}
+		
+		VoicedCommandHandler.getInstance().registerVoicedCommandHandler(this);
+		_log.info("Loaded Event: Bounty Hunters Guild");
+	}
+	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
+	@Override
+	public void onReload()
+	{
+	}
+	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
+	@Override
+	public void onShutdown()
+	{
 	}
 }
