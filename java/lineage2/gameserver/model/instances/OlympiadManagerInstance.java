@@ -115,7 +115,6 @@ public class OlympiadManagerInstance extends NpcInstance
 						
 						player.sendPacket(html);
 					}
-					
 					break;
 				
 				case 4:
@@ -138,7 +137,6 @@ public class OlympiadManagerInstance extends NpcInstance
 					{
 						player.sendPacket(html.setFile(Olympiad.OLYMPIAD_HTML_PATH + "manager_nopoints.htm"));
 					}
-					
 					break;
 				
 				case 7:
@@ -205,7 +203,6 @@ public class OlympiadManagerInstance extends NpcInstance
 						
 						player.sendPacket(reply);
 					}
-					
 					break;
 				
 				case 3:

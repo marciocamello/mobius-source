@@ -87,7 +87,6 @@ public class RequestRestartPoint extends L2GameClientPacket
 				{
 					activeChar.sendPacket(ActionFail.STATIC, new Die(activeChar));
 				}
-				
 				break;
 			
 			case FIXED:
@@ -109,7 +108,6 @@ public class RequestRestartPoint extends L2GameClientPacket
 				{
 					activeChar.sendPacket(ActionFail.STATIC, new Die(activeChar));
 				}
-				
 				break;
 			
 			default:
@@ -145,7 +143,6 @@ public class RequestRestartPoint extends L2GameClientPacket
 				{
 					activeChar.sendPacket(ActionFail.STATIC, new Die(activeChar));
 				}
-				
 				break;
 		}
 	}
@@ -174,7 +171,6 @@ public class RequestRestartPoint extends L2GameClientPacket
 						activeChar.restoreExp(clanHall.getFunction(ResidenceFunction.RESTORE_EXP).getLevel());
 					}
 				}
-				
 				break;
 			
 			case TO_CASTLE:
@@ -188,7 +184,6 @@ public class RequestRestartPoint extends L2GameClientPacket
 						activeChar.restoreExp(castle.getFunction(ResidenceFunction.RESTORE_EXP).getLevel());
 					}
 				}
-				
 				break;
 			
 			case TO_FORTRESS:
@@ -202,7 +197,6 @@ public class RequestRestartPoint extends L2GameClientPacket
 						activeChar.restoreExp(fort.getFunction(ResidenceFunction.RESTORE_EXP).getLevel());
 					}
 				}
-				
 				break;
 			
 			case TO_VILLAGE:

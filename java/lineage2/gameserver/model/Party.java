@@ -633,7 +633,7 @@ public class Party implements PlayerGroup
 	{
 		for (Player member : _members)
 		{
-			if (name.equalsIgnoreCase(member.getName()))
+			if (name.equals(member.getName()))
 			{
 				return member;
 			}
@@ -726,7 +726,6 @@ public class Party implements PlayerGroup
 				{
 					return;
 				}
-				
 				break;
 			
 			case ITEM_LOOTER:

@@ -342,7 +342,6 @@ public final class SquashAI extends Fighter
 					Functions.npcSay(actor, textFail0[Rnd.get(textFail0.length)]);
 					actor.broadcastPacket(new MagicSkillUse(actor, actor, Squash_Poisoned, 1, NECTAR_REUSE, 0));
 				}
-				
 				break;
 			
 			case 1:
@@ -366,7 +365,6 @@ public final class SquashAI extends Fighter
 					Functions.npcSay(actor, textFail1[Rnd.get(textFail1.length)]);
 					actor.broadcastPacket(new MagicSkillUse(actor, actor, Squash_Poisoned, 1, NECTAR_REUSE, 0));
 				}
-				
 				break;
 			
 			case 2:
@@ -390,7 +388,6 @@ public final class SquashAI extends Fighter
 					Functions.npcSay(actor, textFail2[Rnd.get(textFail2.length)]);
 					actor.broadcastPacket(new MagicSkillUse(actor, actor, Squash_Poisoned, 1, NECTAR_REUSE, 0));
 				}
-				
 				break;
 			
 			case 3:
@@ -414,7 +411,6 @@ public final class SquashAI extends Fighter
 					Functions.npcSay(actor, textFail3[Rnd.get(textFail3.length)]);
 					actor.broadcastPacket(new MagicSkillUse(actor, actor, Squash_Poisoned, 1, NECTAR_REUSE, 0));
 				}
-				
 				break;
 			
 			case 4:

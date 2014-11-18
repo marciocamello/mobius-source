@@ -2220,7 +2220,6 @@ public final class ItemBroker extends Functions
 						}
 					}
 				}
-				
 				break;
 			
 			case Player.STORE_PRIVATE_BUY:
@@ -2235,7 +2234,6 @@ public final class ItemBroker extends Functions
 						}
 					}
 				}
-				
 				break;
 			
 			case Player.STORE_PRIVATE_MANUFACTURE:
@@ -2335,7 +2333,6 @@ public final class ItemBroker extends Functions
 								
 								oldItems.put(key, newItem);
 							}
-							
 							break;
 						
 						case Player.STORE_PRIVATE_BUY:
@@ -2369,7 +2366,6 @@ public final class ItemBroker extends Functions
 								
 								oldItems.put(key, newItem);
 							}
-							
 							break;
 						
 						case Player.STORE_PRIVATE_MANUFACTURE:
@@ -2417,7 +2413,6 @@ public final class ItemBroker extends Functions
 								
 								oldItems.put(key, newItem);
 							}
-							
 							break;
 						
 						default:

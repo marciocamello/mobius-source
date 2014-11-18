@@ -350,11 +350,11 @@ public class DominionSiegeRunnerEvent extends GlobalEvent
 	@Override
 	public void action(String name, boolean start)
 	{
-		if (name.equalsIgnoreCase(REGISTRATION))
+		if (name.equals(REGISTRATION))
 		{
 			setRegistrationOver(!start);
 		}
-		else if (name.equalsIgnoreCase(BATTLEFIELD))
+		else if (name.equals(BATTLEFIELD))
 		{
 			setBattlefieldChatActive(start);
 		}

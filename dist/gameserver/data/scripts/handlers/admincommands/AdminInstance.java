@@ -67,7 +67,6 @@ public class AdminInstance implements IAdminCommandHandler, ScriptFile
 				{
 					listOfCharsForInstance(activeChar, wordList[1]);
 				}
-				
 				break;
 			
 			case "admin_collapse":
@@ -79,7 +78,6 @@ public class AdminInstance implements IAdminCommandHandler, ScriptFile
 				{
 					activeChar.sendMessage("Cannot collapse default reflection!");
 				}
-				
 				break;
 			
 			case "admin_reset_reuse":
@@ -89,7 +87,6 @@ public class AdminInstance implements IAdminCommandHandler, ScriptFile
 					p.removeInstanceReuse(Integer.parseInt(wordList[1]));
 					Functions.sendDebugMessage(activeChar, "Instance reuse has been removed");
 				}
-				
 				break;
 			
 			case "admin_reset_reuse_all":
@@ -99,7 +96,6 @@ public class AdminInstance implements IAdminCommandHandler, ScriptFile
 					p.removeAllInstanceReuses();
 					Functions.sendDebugMessage(activeChar, "All instance reuses has been removed");
 				}
-				
 				break;
 			
 			case "admin_set_reuse":
@@ -107,7 +103,6 @@ public class AdminInstance implements IAdminCommandHandler, ScriptFile
 				{
 					activeChar.getReflection().setReenterTime(System.currentTimeMillis());
 				}
-				
 				break;
 			
 			case "admin_addtiatkill":

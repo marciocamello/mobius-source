@@ -943,7 +943,6 @@ public abstract class ArenaTemplate extends Functions
 						_status = 0;
 						_timeOutTask = false;
 					}
-					
 					break;
 				
 				case 2:

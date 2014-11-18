@@ -290,7 +290,6 @@ public final class EnchantingReward extends Functions implements ScriptFile
 					{
 						addItem(player, 13988, 1);
 					}
-					
 					break;
 			}
 			

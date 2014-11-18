@@ -87,7 +87,6 @@ public class AdminPetition implements IAdminCommandHandler, ScriptFile
 				{
 					activeChar.sendPacket(new SystemMessage(SystemMessage.NOT_UNDER_PETITION_CONSULTATION));
 				}
-				
 				break;
 			
 			case "admin_reject_petition":
@@ -142,7 +141,6 @@ public class AdminPetition implements IAdminCommandHandler, ScriptFile
 					activeChar.sendMessage("Usage: //force_peti text");
 					return false;
 				}
-				
 				break;
 		}
 		

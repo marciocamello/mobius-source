@@ -185,7 +185,6 @@ public class ReflectionUtils
 					member.setVar("backCoords", invoker.getLoc().toXYZString(), -1);
 					member.teleToLocation(iz.getTeleportCoord(), r);
 				}
-				
 				break;
 			
 			case COMMAND_CHANNEL:
@@ -219,7 +218,6 @@ public class ReflectionUtils
 					member.setVar("backCoords", invoker.getLoc().toXYZString(), -1);
 					member.teleToLocation(iz.getTeleportCoord(), r);
 				}
-				
 				break;
 		}
 		

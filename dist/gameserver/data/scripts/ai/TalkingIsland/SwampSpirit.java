@@ -72,7 +72,6 @@ public final class SwampSpirit extends DefaultAI
 							npc.broadcastPacket(new MagicSkillUse(npc, player, healSkill.getId(), healSkill.getLevel(), 0, 0));
 							npc.callSkill(SkillTable.getInstance().getInfo(healSkill.getId(), healSkill.getLevel()), target, true);
 						}
-						
 						break;
 					
 					case 32916:
@@ -83,7 +82,6 @@ public final class SwampSpirit extends DefaultAI
 							npc.broadcastPacket(new MagicSkillUse(npc, player, healSkillBig.getId(), healSkillBig.getLevel(), 0, 0));
 							npc.callSkill(SkillTable.getInstance().getInfo(healSkillBig.getId(), healSkillBig.getLevel()), target, true);
 						}
-						
 						break;
 					
 					case 32938:

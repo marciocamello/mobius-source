@@ -97,7 +97,6 @@ public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 				{
 					// empty catch clause
 				}
-				
 				break;
 			
 			case "admin_spawn1":
@@ -120,7 +119,6 @@ public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 				{
 					// empty catch clause
 				}
-				
 				break;
 			
 			case "admin_spawn":
@@ -150,7 +148,6 @@ public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 				{
 					// empty catch clause
 				}
-				
 				break;
 			
 			case "admin_setai":
@@ -209,7 +206,6 @@ public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 					
 					target.getAI().startAITask();
 				}
-				
 				break;
 			
 			case "admin_setaiparam":
@@ -264,7 +260,6 @@ public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 				{
 					System.out.println("Parameters is empty.");
 				}
-				
 				break;
 			
 			case "admin_setheading":
@@ -288,7 +283,6 @@ public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 					activeChar.sendMessage("Spawn for this npc == null!");
 					return false;
 				}
-				
 				break;
 			
 			case "admin_generate_loc":
@@ -373,7 +367,6 @@ public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 				{
 					// empty catch clause
 				}
-				
 				break;
 		}
 		

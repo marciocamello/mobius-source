@@ -83,7 +83,7 @@ public class LoginServer
 		
 		try
 		{
-			if (Config.LOGIN_HOST.equalsIgnoreCase("*"))
+			if (Config.LOGIN_HOST.equals("*"))
 			{
 				ss = new ServerSocket(Config.PORT_LOGIN);
 			}

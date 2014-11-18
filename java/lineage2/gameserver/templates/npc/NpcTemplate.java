@@ -500,7 +500,6 @@ public final class NpcTemplate extends CharTemplate
 				{
 					_damageSkills = ArrayUtils.add(_damageSkills, skill);
 				}
-				
 				break;
 			}
 			

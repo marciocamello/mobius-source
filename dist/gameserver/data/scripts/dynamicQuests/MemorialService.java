@@ -201,7 +201,6 @@ public final class MemorialService extends DynamicQuest implements ScriptFile
 						{
 							increaseTaskPoint(SORROW_EMOTE, player, 1);
 						}
-						
 						break;
 					
 					case GUARD_JANSON:
@@ -209,7 +208,6 @@ public final class MemorialService extends DynamicQuest implements ScriptFile
 						{
 							increaseTaskPoint(PERFORM_POLITE, player, 1);
 						}
-						
 						break;
 				}
 			}

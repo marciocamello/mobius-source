@@ -865,7 +865,6 @@ public class Reflection
 						
 						addSpawn(c);
 					}
-					
 					break;
 				
 				case 1:

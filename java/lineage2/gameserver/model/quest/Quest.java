@@ -86,7 +86,7 @@ public class Quest
 	public static final String SOUND_ED_CHIMES05 = "AmdSound.ed_chimes_05";
 	public static final String SOUND_ARMOR_WOOD_3 = "ItemSound.armor_wood_3";
 	public static final String SOUND_ITEM_DROP_EQUIP_ARMOR_CLOTH = "ItemSound.item_drop_equip_armor_cloth";
-	public static final String NO_QUEST_DIALOG = "no-quest";
+	public static final String NO_QUEST_DIALOG = "noquest";
 	private static final String FONT_QUEST_AVAILABLE = "<font color=\"6699ff\">";
 	private static final String FONT_QUEST_DONE = "<font color=\"787878\">";
 	private static final String FONT_QUEST_NOT_AVAILABLE = "<font color=\"a62f31\">";
@@ -1290,11 +1290,11 @@ public class Quest
 			return false;
 		}
 		
-		if (res.startsWith("no_quest") || res.equalsIgnoreCase("noquest") || res.equalsIgnoreCase("no-quest"))
+		if (res.equals("noquest"))
 		{
 			showSimpleHtmFile(player, "no-quest.htm");
 		}
-		else if (res.equalsIgnoreCase("completed"))
+		else if (res.equals("completed"))
 		{
 			showSimpleHtmFile(player, "completed-quest.htm");
 		}

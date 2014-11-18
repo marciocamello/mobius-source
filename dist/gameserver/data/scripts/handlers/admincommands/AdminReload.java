@@ -181,7 +181,6 @@ public class AdminReload implements IAdminCommandHandler, ScriptFile
 						reloadQuestStates(activeChar);
 					}
 				}
-				
 				break;
 			}
 			

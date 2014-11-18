@@ -151,7 +151,6 @@ public class PlayerVsPlayerDuelEvent extends DuelEvent
 				{
 					d.getPlayer().broadcastPacket(new SocialAction(d.getPlayer().getObjectId(), SocialAction.BOW));
 				}
-				
 				break;
 		}
 		

@@ -276,7 +276,6 @@ public class Q10369_NoblesseSoulTesting extends Quest implements ScriptFile, OnM
 						qs.setCond(18);
 						break;
 				}
-				
 				break;
 			
 			case Lanya:
@@ -314,7 +313,6 @@ public class Q10369_NoblesseSoulTesting extends Quest implements ScriptFile, OnM
 						qs.setCond(14);
 						break;
 				}
-				
 				break;
 			
 			case EvasAltar:
@@ -330,7 +328,6 @@ public class Q10369_NoblesseSoulTesting extends Quest implements ScriptFile, OnM
 				{
 					htmltext = "Evas-6.htm";
 				}
-				
 				break;
 		}
 		
@@ -369,7 +366,6 @@ public class Q10369_NoblesseSoulTesting extends Quest implements ScriptFile, OnM
 					qs.playSound("ItemSound.quest_middle");
 					qs.setCond(17);
 				}
-				
 				break;
 			
 			case Trower:

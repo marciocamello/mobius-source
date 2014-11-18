@@ -126,18 +126,18 @@ public class DelusionChamberManager
 			
 			for (Node rift = doc.getFirstChild(); rift != null; rift = rift.getNextSibling())
 			{
-				if ("rift".equalsIgnoreCase(rift.getNodeName()))
+				if ("rift".equals(rift.getNodeName()))
 				{
 					for (Node area = rift.getFirstChild(); area != null; area = area.getNextSibling())
 					{
-						if ("area".equalsIgnoreCase(area.getNodeName()))
+						if ("area".equals(area.getNodeName()))
 						{
 							attrs = area.getAttributes();
 							type = Integer.parseInt(attrs.getNamedItem("type").getNodeValue());
 							
 							for (Node room = area.getFirstChild(); room != null; room = room.getNextSibling())
 							{
-								if ("room".equalsIgnoreCase(room.getNodeName()))
+								if ("room".equals(room.getNodeName()))
 								{
 									attrs = room.getAttributes();
 									roomId = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
@@ -147,12 +147,12 @@ public class DelusionChamberManager
 									
 									for (Node coord = room.getFirstChild(); coord != null; coord = coord.getNextSibling())
 									{
-										if ("teleport".equalsIgnoreCase(coord.getNodeName()))
+										if ("teleport".equals(coord.getNodeName()))
 										{
 											attrs = coord.getAttributes();
 											tele = Location.parseLoc(attrs.getNamedItem("loc").getNodeValue());
 										}
-										else if ("zone".equalsIgnoreCase(coord.getNodeName()))
+										else if ("zone".equals(coord.getNodeName()))
 										{
 											attrs = coord.getAttributes();
 											xMin = Integer.parseInt(attrs.getNamedItem("xMin").getNodeValue());
@@ -179,7 +179,7 @@ public class DelusionChamberManager
 									
 									for (Node spawn = room.getFirstChild(); spawn != null; spawn = spawn.getNextSibling())
 									{
-										if ("spawn".equalsIgnoreCase(spawn.getNodeName()))
+										if ("spawn".equals(spawn.getNodeName()))
 										{
 											attrs = spawn.getAttributes();
 											mobId = Integer.parseInt(attrs.getNamedItem("mobId").getNodeValue());

@@ -137,7 +137,6 @@ public class AdminOlympiad implements IAdminCommandHandler, ScriptFile
 				{
 					// empty catch clause
 				}
-				
 				break;
 			}
 			

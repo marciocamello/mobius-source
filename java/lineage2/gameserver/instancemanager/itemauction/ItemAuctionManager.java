@@ -123,11 +123,11 @@ public class ItemAuctionManager
 			
 			for (Node na = doc.getFirstChild(); na != null; na = na.getNextSibling())
 			{
-				if ("list".equalsIgnoreCase(na.getNodeName()))
+				if ("list".equals(na.getNodeName()))
 				{
 					for (Node nb = na.getFirstChild(); nb != null; nb = nb.getNextSibling())
 					{
-						if ("instance".equalsIgnoreCase(nb.getNodeName()))
+						if ("instance".equals(nb.getNodeName()))
 						{
 							NamedNodeMap nab = nb.getAttributes();
 							int instanceId = Integer.parseInt(nab.getNamedItem("id").getNodeValue());
@@ -142,7 +142,7 @@ public class ItemAuctionManager
 							
 							for (Node nc = nb.getFirstChild(); nc != null; nc = nc.getNextSibling())
 							{
-								if ("item".equalsIgnoreCase(nc.getNodeName()))
+								if ("item".equals(nc.getNodeName()))
 								{
 									NamedNodeMap nac = nc.getAttributes();
 									int auctionItemId = Integer.parseInt(nac.getNamedItem("auctionItemId").getNodeValue());
@@ -168,7 +168,7 @@ public class ItemAuctionManager
 									
 									for (Node nd = nc.getFirstChild(); nd != null; nd = nd.getNextSibling())
 									{
-										if ("extra".equalsIgnoreCase(nd.getNodeName()))
+										if ("extra".equals(nd.getNodeName()))
 										{
 											NamedNodeMap nad = nd.getAttributes();
 											

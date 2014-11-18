@@ -4566,7 +4566,6 @@ public abstract class Creature extends GameObject
 					target.setLoc(flyLoc);
 					broadcastPacket(new FlyToLocation(target, flyLoc, skill.getFlyType(), 0));
 				}
-				
 				break;
 			
 			// CASTER FLYTYPE
@@ -4581,7 +4580,6 @@ public abstract class Creature extends GameObject
 					setLoc(flyLocCharge);
 					broadcastPacket(new FlyToLocation(this, flyLocCharge, skill.getFlyType(), 0));
 				}
-				
 				break;
 			
 			case DUMMY:
@@ -4598,7 +4596,6 @@ public abstract class Creature extends GameObject
 				{
 					sendPacket(SystemMsg.CANNOT_SEE_TARGET);
 				}
-				
 				break;
 			
 			default:

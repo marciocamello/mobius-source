@@ -260,7 +260,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		List<Player> players = new ArrayList<>();
 		Clan ownerClan = getResidence().getOwner();
 		
-		if (t.equalsIgnoreCase(OWNER))
+		if (t.equals(OWNER))
 		{
 			if (ownerClan != null)
 			{
@@ -273,7 +273,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 				}
 			}
 		}
-		else if (t.equalsIgnoreCase(ATTACKERS))
+		else if (t.equals(ATTACKERS))
 		{
 			for (Player player : getPlayersInZone())
 			{
@@ -285,7 +285,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 				}
 			}
 		}
-		else if (t.equalsIgnoreCase(DEFENDERS))
+		else if (t.equals(DEFENDERS))
 		{
 			for (Player player : getPlayersInZone())
 			{
@@ -302,7 +302,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 				}
 			}
 		}
-		else if (t.equalsIgnoreCase(SPECTATORS))
+		else if (t.equals(SPECTATORS))
 		{
 			for (Player player : getPlayersInZone())
 			{
@@ -326,7 +326,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		{
 			Location loc = null;
 			
-			if (t.equalsIgnoreCase(OWNER) || t.equalsIgnoreCase(DEFENDERS))
+			if (t.equals(OWNER) || t.equals(DEFENDERS))
 			{
 				loc = getResidence().getOwnerRestartPoint();
 			}
@@ -667,7 +667,6 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 				{
 					player.sendPacket(SystemMsg.IF_A_BASE_CAMP_DOES_NOT_EXIST_RESURRECTION_IS_NOT_POSSIBLE);
 				}
-				
 				break;
 			
 			default:
@@ -821,7 +820,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	@Override
 	public void action(String name, boolean start)
 	{
-		if (name.equalsIgnoreCase(REGISTRATION))
+		if (name.equals(REGISTRATION))
 		{
 			setRegistrationOver(!start);
 		}

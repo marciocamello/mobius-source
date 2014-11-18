@@ -54,7 +54,7 @@ public class FameManagerInstance extends NpcInstance
 		String actualCommand = st.nextToken();
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		
-		if (actualCommand.equalsIgnoreCase("PK_Count"))
+		if (actualCommand.equals("PK_Count"))
 		{
 			if (player.getFame() >= 5000)
 			{
@@ -77,7 +77,7 @@ public class FameManagerInstance extends NpcInstance
 			html.replace("%objectId%", String.valueOf(getObjectId()));
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("CRP"))
+		else if (actualCommand.equals("CRP"))
 		{
 			if ((player.getClan() == null) || (player.getClassId().level() < 2) || (player.getClan().getLevel() < 5))
 			{

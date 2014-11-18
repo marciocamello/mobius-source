@@ -246,7 +246,7 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 	@Override
 	public void action(String name, boolean start)
 	{
-		if (name.equalsIgnoreCase(NEXT_STEP))
+		if (name.equals(NEXT_STEP))
 		{
 			nextStep();
 		}

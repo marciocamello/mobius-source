@@ -711,7 +711,6 @@ public class PrintfFormat
 					{
 						s2 = printDFormat(s);
 					}
-					
 					break;
 				
 				case 'x':
@@ -728,7 +727,6 @@ public class PrintfFormat
 					{
 						s2 = printXFormat(s);
 					}
-					
 					break;
 				
 				case 'o':
@@ -744,7 +742,6 @@ public class PrintfFormat
 					{
 						s2 = printOFormat(s);
 					}
-					
 					break;
 				
 				case 'c':
@@ -785,7 +782,6 @@ public class PrintfFormat
 					{
 						s2 = printDFormat((int) s);
 					}
-					
 					break;
 				
 				case 'x':
@@ -802,7 +798,6 @@ public class PrintfFormat
 					{
 						s2 = printXFormat((int) s);
 					}
-					
 					break;
 				
 				case 'o':
@@ -818,7 +813,6 @@ public class PrintfFormat
 					{
 						s2 = printOFormat((int) s);
 					}
-					
 					break;
 				
 				case 'c':
@@ -2600,7 +2594,6 @@ public class PrintfFormat
 								sx = "f" + t.substring(1, 4);
 								break;
 						}
-						
 						break;
 				}
 			}
@@ -2722,7 +2715,6 @@ public class PrintfFormat
 								sx = "f" + t.substring(1, 16);
 								break;
 						}
-						
 						break;
 				}
 			}
@@ -2812,7 +2804,6 @@ public class PrintfFormat
 								sx = "f" + t.substring(1, 8);
 								break;
 						}
-						
 						break;
 				}
 			}

@@ -53,13 +53,13 @@ public class WeaverInstance extends MerchantInstance
 			return;
 		}
 		
-		StringTokenizer st = new StringTokenizer(command, " ");
-		String actualCommand = st.nextToken();
+		final StringTokenizer st = new StringTokenizer(command, " ");
+		final String actualCommand = st.nextToken();
 		
-		if (actualCommand.equalsIgnoreCase("unseal"))
+		if (actualCommand.equals("unseal"))
 		{
-			int cost = Integer.parseInt(st.nextToken());
-			int id = Integer.parseInt(st.nextToken());
+			final int cost = Integer.parseInt(st.nextToken());
+			final int id = Integer.parseInt(st.nextToken());
 			
 			if (player.getAdena() < cost)
 			{
@@ -99,7 +99,6 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
-					
 					break;
 				
 				case 13899:
@@ -123,7 +122,6 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
-					
 					break;
 				
 				case 13900:
@@ -147,7 +145,6 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
-					
 					break;
 				
 				case 13901:
@@ -171,7 +168,6 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
-					
 					break;
 				
 				case 13918:
@@ -195,7 +191,6 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
-					
 					break;
 				
 				case 13919:
@@ -219,7 +214,6 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
-					
 					break;
 				
 				case 13920:
@@ -243,7 +237,6 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
-					
 					break;
 				
 				case 13921:
@@ -267,7 +260,6 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
-					
 					break;
 				
 				case 14902:
@@ -291,7 +283,6 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
-					
 					break;
 				
 				case 14903:
@@ -315,7 +306,6 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
-					
 					break;
 				
 				case 14904:
@@ -339,7 +329,6 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
-					
 					break;
 				
 				case 14905:
@@ -363,7 +352,6 @@ public class WeaverInstance extends MerchantInstance
 					{
 						informFail(player, id);
 					}
-					
 					break;
 				
 				default:

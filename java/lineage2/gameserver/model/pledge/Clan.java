@@ -1791,7 +1791,6 @@ public class Clan implements Iterable<UnitMember>
 				{
 					limit = 20;
 				}
-				
 				break;
 			
 			case SUBUNIT_KNIGHT1:
@@ -1804,7 +1803,6 @@ public class Clan implements Iterable<UnitMember>
 				{
 					limit = 10;
 				}
-				
 				break;
 			
 			case SUBUNIT_KNIGHT3:
@@ -1817,7 +1815,6 @@ public class Clan implements Iterable<UnitMember>
 				{
 					limit = 10;
 				}
-				
 				break;
 		}
 		

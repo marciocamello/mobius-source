@@ -94,7 +94,6 @@ public final class SkillAcquireHolder extends AbstractHolder
 					info("skill tree for race " + player.getRace().ordinal() + " is not defined !");
 					return 0;
 				}
-				
 				break;
 			
 			case FISHING:
@@ -105,7 +104,6 @@ public final class SkillAcquireHolder extends AbstractHolder
 					info("skill tree for race " + player.getRace().ordinal() + " is not defined !");
 					return 0;
 				}
-				
 				break;
 			
 			default:

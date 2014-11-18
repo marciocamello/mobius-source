@@ -48,7 +48,6 @@ public final class L2LoginPacketHandler implements IPacketHandler<L2LoginClient>
 				{
 					packet = new AuthGameGuard();
 				}
-				
 				break;
 			
 			case AUTHED_GG:
@@ -56,7 +55,6 @@ public final class L2LoginPacketHandler implements IPacketHandler<L2LoginClient>
 				{
 					packet = new RequestAuthLogin();
 				}
-				
 				break;
 			
 			case AUTHED:
@@ -68,7 +66,6 @@ public final class L2LoginPacketHandler implements IPacketHandler<L2LoginClient>
 				{
 					packet = new RequestServerLogin();
 				}
-				
 				break;
 			
 			default:

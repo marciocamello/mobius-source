@@ -297,7 +297,7 @@ public class GameServer
 		_log.info("GameServer Started");
 		_log.info("Maximum Numbers of Connected Players: " + Config.MAXIMUM_ONLINE_USERS);
 		GamePacketHandler gph = new GamePacketHandler();
-		InetAddress serverAddr = Config.GAMESERVER_HOSTNAME.equalsIgnoreCase("*") ? null : InetAddress.getByName(Config.GAMESERVER_HOSTNAME);
+		InetAddress serverAddr = Config.GAMESERVER_HOSTNAME.equals("*") ? null : InetAddress.getByName(Config.GAMESERVER_HOSTNAME);
 		_selectorThreads = new SelectorThread[Config.PORTS_GAME.length];
 		
 		for (int i = 0; i < Config.PORTS_GAME.length; i++)
@@ -381,7 +381,7 @@ public class GameServer
 				{
 					ServerSocket ss;
 					
-					if (Config.GAMESERVER_HOSTNAME.equalsIgnoreCase("*"))
+					if (Config.GAMESERVER_HOSTNAME.equals("*"))
 					{
 						ss = new ServerSocket(PORT_GAME);
 					}

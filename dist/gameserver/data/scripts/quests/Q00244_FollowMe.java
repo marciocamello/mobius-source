@@ -117,7 +117,6 @@ public class Q00244_FollowMe extends Quest implements ScriptFile
 					htmltext = "30655-02.htm";
 					qs.exitCurrentQuest(true);
 				}
-				
 				break;
 			
 			case STARTED:
@@ -158,7 +157,6 @@ public class Q00244_FollowMe extends Quest implements ScriptFile
 						{
 							htmltext = "30655-09.htm";
 						}
-						
 						break;
 					
 					case 3:

@@ -110,7 +110,6 @@ public class AdminGeodata implements IAdminCommandHandler, ScriptFile
 				{
 					activeChar.sendMessage("None Target!");
 				}
-				
 				break;
 			
 			case "admin_geo_load":
@@ -140,7 +139,6 @@ public class AdminGeodata implements IAdminCommandHandler, ScriptFile
 						activeChar.sendMessage(new CustomMessage("common.Error", activeChar));
 					}
 				}
-				
 				break;
 			
 			case "admin_geo_dump":
@@ -173,7 +171,6 @@ public class AdminGeodata implements IAdminCommandHandler, ScriptFile
 				{
 					activeChar.sendMessage("Usage: //geo_trace on|off");
 				}
-				
 				break;
 			
 			case "admin_geo_map":

@@ -375,7 +375,6 @@ public final class BelethManager extends Functions implements ScriptFile
 					{
 						spawnClone(i);
 					}
-					
 					break;
 				
 				case spawn_extras:
@@ -383,7 +382,6 @@ public final class BelethManager extends Functions implements ScriptFile
 					{
 						spawnClone(i);
 					}
-					
 					break;
 				
 				case beleth_dead:
@@ -467,7 +465,6 @@ public final class BelethManager extends Functions implements ScriptFile
 						_beleth.deleteMe();
 						ThreadPoolManager.getInstance().schedule(new eventExecutor(Event.entity_clear), 10);
 					}
-					
 					break;
 				
 				default:

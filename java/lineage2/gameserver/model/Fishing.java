@@ -527,7 +527,6 @@ public class Fishing
 						fisher.sendPacket(new SystemMessage(SystemMessage.YOUR_REELING_WAS_SUCCESSFUL_MASTERY_PENALTYS1_).addNumber(pen));
 					}
 				}
-				
 				break;
 			
 			case 2:
@@ -539,7 +538,6 @@ public class Fishing
 				{
 					fisher.sendPacket(new SystemMessage(SystemMessage.REELING_FAILED_DAMAGE_S1).addNumber(dmg));
 				}
-				
 				break;
 			
 			case 3:
@@ -561,7 +559,6 @@ public class Fishing
 						fisher.sendPacket(new SystemMessage(SystemMessage.YOUR_REELING_WAS_SUCCESSFUL_MASTERY_PENALTYS1_).addNumber(pen));
 					}
 				}
-				
 				break;
 			
 			default:
@@ -609,7 +606,6 @@ public class Fishing
 				{
 					type = 6;
 				}
-				
 				break;
 			
 			case 7808:
@@ -625,7 +621,6 @@ public class Fishing
 				{
 					type = 5;
 				}
-				
 				break;
 			
 			case 7809:
@@ -641,7 +636,6 @@ public class Fishing
 				{
 					type = 4;
 				}
-				
 				break;
 			
 			case 8486:
@@ -657,7 +651,6 @@ public class Fishing
 				{
 					type = 6;
 				}
-				
 				break;
 			
 			case 7610:
@@ -698,7 +691,6 @@ public class Fishing
 				{
 					type = 3;
 				}
-				
 				break;
 			
 			case 6522:
@@ -722,7 +714,6 @@ public class Fishing
 				{
 					type = 3;
 				}
-				
 				break;
 			
 			case 6525:
@@ -746,7 +737,6 @@ public class Fishing
 				{
 					type = 3;
 				}
-				
 				break;
 			
 			case 8484:
@@ -762,7 +752,6 @@ public class Fishing
 				{
 					type = 2;
 				}
-				
 				break;
 			
 			case 8506:
@@ -778,7 +767,6 @@ public class Fishing
 				{
 					type = 9;
 				}
-				
 				break;
 			
 			case 8509:
@@ -794,7 +782,6 @@ public class Fishing
 				{
 					type = 8;
 				}
-				
 				break;
 			
 			case 8512:
@@ -810,7 +797,6 @@ public class Fishing
 				{
 					type = 7;
 				}
-				
 				break;
 			
 			case 8485:
@@ -826,7 +812,6 @@ public class Fishing
 				{
 					type = 9;
 				}
-				
 				break;
 			
 			default:

@@ -120,7 +120,6 @@ public final class GilmoreAI extends Fighter
 							wait = true;
 							return true;
 						}
-						
 						break;
 					
 					case 2:
@@ -135,7 +134,6 @@ public final class GilmoreAI extends Fighter
 							case 2:
 								break;
 						}
-						
 						break;
 				}
 			}

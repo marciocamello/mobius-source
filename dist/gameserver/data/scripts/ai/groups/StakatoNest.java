@@ -171,7 +171,6 @@ public final class StakatoNest extends Fighter
 				{
 					spawnMonster(_minion, killer, SPIKED_STAKATO_CAPTAIN);
 				}
-				
 				break;
 			
 			case SPIKED_STAKATO_BABY:
@@ -181,7 +180,6 @@ public final class StakatoNest extends Fighter
 				{
 					ThreadPoolManager.getInstance().schedule(new ChangeMonster(SPIKE_STAKATO_NURSE_CHANGED, actor, killer), 3000L);
 				}
-				
 				break;
 			
 			case MALE_SPIKED_STAKATO:
@@ -196,7 +194,6 @@ public final class StakatoNest extends Fighter
 				{
 					spawnMonster(_minion, killer, SPIKED_STAKATO_GUARD);
 				}
-				
 				break;
 			
 			case FEMALE_SPIKED_STAKATO:
@@ -206,7 +203,6 @@ public final class StakatoNest extends Fighter
 				{
 					ThreadPoolManager.getInstance().schedule(new ChangeMonster(MALE_SPIKED_STAKATO_2, actor, killer), 3000L);
 				}
-				
 				break;
 			
 			case QUEEN_SHYEED:
@@ -217,7 +213,6 @@ public final class StakatoNest extends Fighter
 					_zone_mob_buff.setActive(false);
 					_zone_mob_buff_pc_display.setActive(false);
 				}
-				
 				break;
 			
 			default:

@@ -1745,7 +1745,6 @@ public abstract class Skill extends StatTemplate implements Cloneable
 						}
 					}
 				}
-				
 				break;
 			}
 			
@@ -1767,7 +1766,6 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				{
 					addTargetsToList(targets, aimingTarget, activeChar, forceUse);
 				}
-				
 				break;
 			}
 			
@@ -1813,7 +1811,6 @@ public abstract class Skill extends StatTemplate implements Cloneable
 					targets.add(activeChar);
 					addTargetAndPetToList(targets, activeChar.getPlayer(), activeChar.getPlayer());
 				}
-				
 				break;
 			}
 			
@@ -1844,7 +1841,6 @@ public abstract class Skill extends StatTemplate implements Cloneable
 					default:
 						break;
 				}
-				
 				break;
 			
 			case TARGET_PARTY:
@@ -1864,7 +1860,6 @@ public abstract class Skill extends StatTemplate implements Cloneable
 							targets.add(c);
 						}
 					}
-					
 					break;
 				}
 				
@@ -1927,7 +1922,6 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				{
 					addTargetAndPetToList(targets, player, player);
 				}
-				
 				break;
 			}
 			

@@ -128,7 +128,6 @@ public final class BaylorManager extends Functions implements ScriptFile
 						_crystaline[i].moveToLocation(_pos, 300, false);
 						ThreadPoolManager.getInstance().schedule(new Social(_crystaline[i], 2), 15000);
 					}
-					
 					break;
 				
 				case Baylor:

@@ -65,7 +65,7 @@ public class ClanAirShipControllerInstance extends AirShipControllerInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("summon"))
+		if (command.equals("summon"))
 		{
 			if ((player.getClan() == null) || (player.getClan().getLevel() < 5))
 			{
@@ -122,7 +122,7 @@ public class ClanAirShipControllerInstance extends AirShipControllerInstance
 			dockedShip.startDepartTask();
 			Functions.npcSay(this, NpcString.AIRSHIP_IS_SUMMONED_IS_DEPART_IN_5_MINUTES, ChatType.SHOUT, 5000);
 		}
-		else if (command.equalsIgnoreCase("register"))
+		else if (command.equals("register"))
 		{
 			if ((player.getClan() == null) || !player.isClanLeader() || (player.getClan().getLevel() < 5))
 			{

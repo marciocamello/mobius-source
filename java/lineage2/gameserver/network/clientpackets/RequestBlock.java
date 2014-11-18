@@ -86,7 +86,6 @@ public class RequestBlock extends L2GameClientPacket
 					
 					activeChar.sendPacket(new SystemMessage(SystemMessage.__EQUALS__));
 				}
-				
 				break;
 			
 			case ALLBLOCK:

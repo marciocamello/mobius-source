@@ -68,7 +68,7 @@ public class ShowBoard extends L2GameServerPacket
 		
 		if (htmlCode != null)
 		{
-			if (id.equalsIgnoreCase("101"))
+			if (id.equals("101"))
 			{
 				player.cleanBypasses(true);
 			}

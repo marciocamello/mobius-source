@@ -72,7 +72,6 @@ public class AdminDoorControl implements IAdminCommandHandler, ScriptFile
 				{
 					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 				}
-				
 				break;
 			
 			case "admin_close":
@@ -93,7 +92,6 @@ public class AdminDoorControl implements IAdminCommandHandler, ScriptFile
 				{
 					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 				}
-				
 				break;
 		}
 		

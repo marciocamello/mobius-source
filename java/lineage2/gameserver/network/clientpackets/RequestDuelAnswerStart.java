@@ -114,7 +114,6 @@ public class RequestDuelAnswerStart extends L2GameClientPacket
 				{
 					requestor.sendPacket(new SystemMessage2(SystemMsg.C1_HAS_DECLINED_YOUR_CHALLENGE_TO_A_PARTY_DUEL).addName(activeChar));
 				}
-				
 				break;
 			
 			case -1:

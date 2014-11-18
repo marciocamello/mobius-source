@@ -182,21 +182,7 @@ public class LotteryManagerInstance extends NpcInstance
 			
 			if (count == 5)
 			{
-				String search = "";
-				String replace = "";
-				
-				if (player.getVar("lang@").equalsIgnoreCase("en"))
-				{
-					search = "0\">Return";
-					replace = "22\">The winner selected the numbers above.";
-				}
-				else
-				{
-					search = "0\">�?азад";
-					replace = "22\">Выигры�?ные номера выбранные вы�?е.";
-				}
-				
-				html.replace(search, replace);
+				html.replace("0\">Return", "22\">The winner selected the numbers above.");
 			}
 			
 			player.sendPacket(html);

@@ -92,7 +92,7 @@ public class AdventurerInstance extends NpcInstance
 			
 			showChatWindow(player, filename);
 		}
-		else if (command.equalsIgnoreCase("questlist"))
+		else if (command.equals("questlist"))
 		{
 			player.sendPacket(ExShowQuestInfo.STATIC);
 		}

@@ -111,11 +111,11 @@ public class CursedWeaponsManager
 			
 			for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 			{
-				if ("list".equalsIgnoreCase(n.getNodeName()))
+				if ("list".equals(n.getNodeName()))
 				{
 					for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 					{
-						if ("item".equalsIgnoreCase(d.getNodeName()))
+						if ("item".equals(d.getNodeName()))
 						{
 							NamedNodeMap attrs = d.getAttributes();
 							int id = Integer.parseInt(attrs.getNamedItem("id").getNodeValue());
@@ -140,37 +140,37 @@ public class CursedWeaponsManager
 							
 							for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 							{
-								if ("dropRate".equalsIgnoreCase(cd.getNodeName()))
+								if ("dropRate".equals(cd.getNodeName()))
 								{
 									cw.setDropRate(Integer.parseInt(cd.getAttributes().getNamedItem("val").getNodeValue()));
 								}
-								else if ("duration".equalsIgnoreCase(cd.getNodeName()))
+								else if ("duration".equals(cd.getNodeName()))
 								{
 									attrs = cd.getAttributes();
 									cw.setDurationMin(Integer.parseInt(attrs.getNamedItem("min").getNodeValue()));
 									cw.setDurationMax(Integer.parseInt(attrs.getNamedItem("max").getNodeValue()));
 								}
-								else if ("durationLost".equalsIgnoreCase(cd.getNodeName()))
+								else if ("durationLost".equals(cd.getNodeName()))
 								{
 									cw.setDurationLost(Integer.parseInt(cd.getAttributes().getNamedItem("val").getNodeValue()));
 								}
-								else if ("disapearChance".equalsIgnoreCase(cd.getNodeName()))
+								else if ("disapearChance".equals(cd.getNodeName()))
 								{
 									cw.setDisapearChance(Integer.parseInt(cd.getAttributes().getNamedItem("val").getNodeValue()));
 								}
-								else if ("stageKills".equalsIgnoreCase(cd.getNodeName()))
+								else if ("stageKills".equals(cd.getNodeName()))
 								{
 									cw.setStageKills(Integer.parseInt(cd.getAttributes().getNamedItem("val").getNodeValue()));
 								}
-								else if ("transformationId".equalsIgnoreCase(cd.getNodeName()))
+								else if ("transformationId".equals(cd.getNodeName()))
 								{
 									cw.setTransformationId(Integer.parseInt(cd.getAttributes().getNamedItem("val").getNodeValue()));
 								}
-								else if ("transformationTemplateId".equalsIgnoreCase(cd.getNodeName()))
+								else if ("transformationTemplateId".equals(cd.getNodeName()))
 								{
 									cw.setTransformationTemplateId(Integer.parseInt(cd.getAttributes().getNamedItem("val").getNodeValue()));
 								}
-								else if ("transformationName".equalsIgnoreCase(cd.getNodeName()))
+								else if ("transformationName".equals(cd.getNodeName()))
 								{
 									cw.setTransformationName(cd.getAttributes().getNamedItem("val").getNodeValue());
 								}

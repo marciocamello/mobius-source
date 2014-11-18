@@ -182,7 +182,6 @@ public final class PathfinderInstance extends NpcInstance
 					{
 						htmlpath += "-S";
 					}
-					
 					break;
 			}
 			

@@ -118,7 +118,7 @@ public class MerchantInstance extends NpcInstance
 			return;
 		}
 		
-		NpcTradeList list = BuyListHolder.getInstance().getBuyList(val);
+		final NpcTradeList list = BuyListHolder.getInstance().getBuyList(val);
 		
 		if (list != null)
 		{
@@ -157,7 +157,7 @@ public class MerchantInstance extends NpcInstance
 			}
 		}
 		
-		NpcTradeList list = BuyListHolder.getInstance().getBuyList(listId);
+		final NpcTradeList list = BuyListHolder.getInstance().getBuyList(listId);
 		
 		if ((list == null) || (list.getNpcId() == getId()))
 		{
@@ -192,78 +192,76 @@ public class MerchantInstance extends NpcInstance
 			return;
 		}
 		
-		StringTokenizer st = new StringTokenizer(command, " ");
-		String actualCommand = st.nextToken();
+		final StringTokenizer st = new StringTokenizer(command, " ");
+		final String actualCommand = st.nextToken();
 		
-		if (actualCommand.equalsIgnoreCase("Buy") || actualCommand.equalsIgnoreCase("Sell"))
+		switch (actualCommand)
 		{
-			int val = 0;
+			case "Buy":
+			case "Sell":
+				int val0 = 0;
+				if (st.countTokens() > 0)
+				{
+					val0 = Integer.parseInt(st.nextToken());
+				}
+				showShopWindow(player, val0, true);
+				break;
 			
-			if (st.countTokens() > 0)
-			{
-				val = Integer.parseInt(st.nextToken());
-			}
+			case "Wear":
+				if (st.countTokens() < 1)
+				{
+					return;
+				}
+				int val1 = Integer.parseInt(st.nextToken());
+				showWearWindow(player, val1);
+				break;
 			
-			showShopWindow(player, val, true);
-		}
-		else if (actualCommand.equalsIgnoreCase("Wear"))
-		{
-			if (st.countTokens() < 1)
-			{
-				return;
-			}
+			case "Multisell":
+				if (st.countTokens() < 1)
+				{
+					return;
+				}
+				int val2 = Integer.parseInt(st.nextToken());
+				Castle castle = getCastle(player);
+				MultiSellHolder.getInstance().SeparateAndSend(val2, player, castle != null ? castle.getTaxRate() : 0);
+				break;
 			
-			int val = Integer.parseInt(st.nextToken());
-			showWearWindow(player, val);
-		}
-		else if (actualCommand.equalsIgnoreCase("Multisell"))
-		{
-			if (st.countTokens() < 1)
-			{
-				return;
-			}
+			case "ReceivePremium":
+				if (player.getPremiumItemList().isEmpty())
+				{
+					player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_MORE_VITAMIN_ITEMS_TO_BE_FOUND));
+					return;
+				}
+				player.sendPacket(new ExGetPremiumItemList(player));
+				break;
 			
-			int val = Integer.parseInt(st.nextToken());
-			Castle castle = getCastle(player);
-			MultiSellHolder.getInstance().SeparateAndSend(val, player, castle != null ? castle.getTaxRate() : 0);
-		}
-		else if (actualCommand.equalsIgnoreCase("ReceivePremium"))
-		{
-			if (player.getPremiumItemList().isEmpty())
-			{
-				player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_MORE_VITAMIN_ITEMS_TO_BE_FOUND));
-				return;
-			}
+			case "MenteeCertGet":
+				if ((player.getInventory().getCountOf(33800) == 0) && (player.getLevel() < 86) && (player.getVar("MenteeCertGet") == null))
+				{
+					player.setVar("MenteeCertGet", "1", -1);
+					ItemFunctions.addItem(player, 33800, 1, true);
+				}
+				else
+				{
+					player.sendPacket(new SystemMessage2(SystemMsg.YOU_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER));
+				}
+				break;
 			
-			player.sendPacket(new ExGetPremiumItemList(player));
-		}
-		else if (actualCommand.equalsIgnoreCase("MenteeCertGet"))
-		{
-			if ((player.getInventory().getCountOf(33800) == 0) && (player.getLevel() < 86) && (player.getVar("MenteeCertGet") == null))
-			{
-				player.setVar("MenteeCertGet", "1", -1);
-				ItemFunctions.addItem(player, 33800, 1, true);
-			}
-			else
-			{
-				player.sendPacket(new SystemMessage2(SystemMsg.YOU_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER));
-			}
-		}
-		else if (actualCommand.equalsIgnoreCase("MenteeCertChange"))
-		{
-			if ((player.getInventory().getCountOf(33800) == 1) && (player.getLevel() >= 86))
-			{
-				ItemFunctions.addItem(player, 33805, 40, true);
-				ItemFunctions.removeItem(player, 33800, 1, true);
-			}
-			else
-			{
-				player.sendPacket(new SystemMessage2(SystemMsg.YOU_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER));
-			}
-		}
-		else
-		{
-			super.onBypassFeedback(player, command);
+			case "MenteeCertChange":
+				if ((player.getInventory().getCountOf(33800) == 1) && (player.getLevel() >= 86))
+				{
+					ItemFunctions.addItem(player, 33805, 40, true);
+					ItemFunctions.removeItem(player, 33800, 1, true);
+				}
+				else
+				{
+					player.sendPacket(new SystemMessage2(SystemMsg.YOU_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER));
+				}
+				break;
+			
+			default:
+				super.onBypassFeedback(player, command);
+				break;
 		}
 	}
 	
@@ -282,12 +280,12 @@ public class MerchantInstance extends NpcInstance
 		
 		if ((getReflection() == ReflectionManager.GIRAN_HARBOR) || (getReflection() == ReflectionManager.PARNASSUS))
 		{
-			String var = player.getVar("backCoords");
+			final String var = player.getVar("backCoords");
 			
 			if ((var != null) && !var.isEmpty())
 			{
-				Location loc = Location.parseLoc(var);
-				DomainArea domain = MapRegionManager.getInstance().getRegionData(DomainArea.class, loc);
+				final Location loc = Location.parseLoc(var);
+				final DomainArea domain = MapRegionManager.getInstance().getRegionData(DomainArea.class, loc);
 				
 				if (domain != null)
 				{

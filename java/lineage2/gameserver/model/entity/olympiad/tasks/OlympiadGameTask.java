@@ -168,7 +168,6 @@ public class OlympiadGameTask extends RunnableImpl
 					{
 						task = new OlympiadGameTask(_game, BattleStatus.PortPlayers, 0, 1000);
 					}
-					
 					break;
 				}
 				
@@ -216,7 +215,6 @@ public class OlympiadGameTask extends RunnableImpl
 					{
 						task = new OlympiadGameTask(_game, BattleStatus.CountDown, _count, 1000);
 					}
-					
 					break;
 				}
 				
@@ -241,7 +239,6 @@ public class OlympiadGameTask extends RunnableImpl
 					{
 						task = new OlympiadGameTask(_game, BattleStatus.StartComp, _count, 10000);
 					}
-					
 					break;
 				}
 				

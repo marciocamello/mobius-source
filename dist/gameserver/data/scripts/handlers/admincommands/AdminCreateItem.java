@@ -189,7 +189,6 @@ public class AdminCreateItem implements IAdminCommandHandler, ScriptFile
 				{
 					activeChar.sendMessage("Can't create this item.");
 				}
-				
 				break;
 			
 			case "admin_create_item_element":

@@ -75,7 +75,6 @@ public final class Chimera extends Fighter
 						actor.dropItem(caster.getPlayer(), 9680, 1);
 					}
 				}
-				
 				break;
 		}
 		

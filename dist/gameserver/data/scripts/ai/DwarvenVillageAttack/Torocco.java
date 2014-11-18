@@ -83,7 +83,6 @@ public final class Torocco extends Dwarvs
 					final NpcInstance rogin = list.get(0);
 					rogin.getAI().notifyEvent(CtrlEvent.EVT_SCRIPT_EVENT, "ROGIN_1");
 				}
-				
 				break;
 		}
 	}

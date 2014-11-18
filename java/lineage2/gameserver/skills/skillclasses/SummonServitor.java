@@ -99,7 +99,6 @@ public class SummonServitor extends Skill
 					activeChar.sendPacket(new SystemMessage(SystemMessage.A_MALICIOUS_SKILL_CANNOT_BE_USED_IN_A_PEACE_ZONE));
 					return false;
 				}
-				
 				break;
 			
 			case SERVITOR:
@@ -111,7 +110,6 @@ public class SummonServitor extends Skill
 					player.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
 					return false;
 				}
-				
 				break;
 			
 			case AGATHION:
@@ -120,7 +118,6 @@ public class SummonServitor extends Skill
 					player.sendPacket(SystemMsg.AN_AGATHION_HAS_ALREADY_BEEN_SUMMONED);
 					return false;
 				}
-				
 				break;
 			
 			case CLONE:
@@ -162,7 +159,6 @@ public class SummonServitor extends Skill
 					agat.setRunning();
 					ThreadPoolManager.getInstance().schedule(new GameObjectTasks.DeleteTask(agat), _lifeTime);
 				}
-				
 				break;
 			
 			case TRAP:
@@ -229,7 +225,7 @@ public class SummonServitor extends Skill
 					summon.altUseSkill(SkillTable.getInstance().getInfo(4140, summon.getSkillLevel(4140)), activeChar);
 				}
 				
-				if (summon.getName().equalsIgnoreCase("Shadow"))
+				if (summon.getName().equals("Shadow"))
 				{
 					summon.addStatFunc(new FuncAdd(Stats.ABSORB_DAMAGE_PERCENT, 0x40, this, 15));
 				}
@@ -246,7 +242,6 @@ public class SummonServitor extends Skill
 					SiegeEvent<?, ?> siegeEvent = activeChar.getEvent(SiegeEvent.class);
 					siegeEvent.addSiegeSummon(summon);
 				}
-				
 				break;
 			
 			case MERCHANT:

@@ -214,7 +214,7 @@ class GameObjectArray<E extends GameObject> implements Iterable<E>
 		{
 			o = elementData[i];
 			
-			if ((o != null) && s.equalsIgnoreCase(o.getName()))
+			if ((o != null) && s.equals(o.getName()))
 			{
 				return o;
 			}
@@ -242,7 +242,7 @@ class GameObjectArray<E extends GameObject> implements Iterable<E>
 		{
 			o = elementData[i];
 			
-			if ((o != null) && s.equalsIgnoreCase(o.getName()))
+			if ((o != null) && s.equals(o.getName()))
 			{
 				result.add(o);
 			}

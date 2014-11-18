@@ -306,7 +306,6 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 						{
 							player.sendPacket(EnchantResult.FAILED_NO_CRYSTALS);
 						}
-						
 						break;
 					case GIANT:
 						if (item.isEquipped())
@@ -343,7 +342,6 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 						{
 							player.sendPacket(EnchantResult.FAILED_NO_CRYSTALS);
 						}
-						
 						break;
 					case DESTRUCTION:
 						item.setEnchantLevel(item.getEnchantLevel());

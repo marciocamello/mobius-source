@@ -51,7 +51,6 @@ public final class DragonKnight extends Fighter
 					final NpcInstance n = NpcUtils.spawnSingle(22845, getActor().getLoc());
 					n.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, killer, 2);
 				}
-				
 				break;
 			
 			case 22845:
@@ -60,7 +59,6 @@ public final class DragonKnight extends Fighter
 					final NpcInstance n = NpcUtils.spawnSingle(22846, getActor().getLoc());
 					n.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, killer, 2);
 				}
-				
 				break;
 		}
 	}

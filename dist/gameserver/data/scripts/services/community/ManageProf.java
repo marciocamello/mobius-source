@@ -278,7 +278,6 @@ public final class ManageProf implements ScriptFile, ICommunityBoardHandler
 					{
 						html.append("You already Nobless. Getting the nobless no longer available.<br>");
 					}
-					
 					break;
 				
 				case 5:
@@ -301,7 +300,6 @@ public final class ManageProf implements ScriptFile, ICommunityBoardHandler
 					{
 						html.append("You already Nobless. Getting the nobless no longer available.<br>");
 					}
-					
 					break;
 			}
 		}

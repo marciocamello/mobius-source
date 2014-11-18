@@ -78,7 +78,6 @@ public class AdminServer implements IAdminCommandHandler, ScriptFile
 				{
 					// empty catch clause
 				}
-				
 				break;
 			
 			case "admin_check_actor":
@@ -204,7 +203,6 @@ public class AdminServer implements IAdminCommandHandler, ScriptFile
 				{
 					// empty catch clause
 				}
-				
 				break;
 		}
 		

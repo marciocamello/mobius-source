@@ -108,7 +108,6 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 							// empty catch clause
 						}
 					}
-					
 					break;
 				
 				case "admin_play_sound":
@@ -120,7 +119,6 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					{
 						// empty catch clause
 					}
-					
 					break;
 				
 				case "admin_silence":
@@ -142,7 +140,6 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 						activeChar.sendPacket(new SystemMessage(SystemMessage.MESSAGE_REFUSAL_MODE));
 						activeChar.sendEtcStatusUpdate();
 					}
-					
 					break;
 				
 				case "admin_tradeoff":
@@ -170,7 +167,6 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 							Functions.sendDebugMessage(activeChar, "tradeoff currently disabled");
 						}
 					}
-					
 					break;
 				
 				case "admin_show_html":
@@ -191,7 +187,6 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					{
 						Functions.sendDebugMessage(activeChar, "Html page not found");
 					}
-					
 					break;
 				
 				case "admin_setnpcstate":
@@ -241,7 +236,6 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					{
 						Functions.sendDebugMessage(activeChar, "Usage: //setareanpcstate [range] [state]");
 					}
-					
 					break;
 				
 				case "admin_showmovie":
@@ -370,7 +364,6 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					{
 						Functions.sendDebugMessage(activeChar, s);
 					}
-					
 					break;
 				
 				case "admin_uievent":
@@ -448,7 +441,6 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 							SoIManager.notifyHoEDefSuccess();
 							break;
 					}
-					
 					break;
 				
 				case "admin_forcenpcinfo":
@@ -498,7 +490,6 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					{
 						// empty catch clause
 					}
-					
 					break;
 				
 				case "admin_undying":
@@ -512,7 +503,6 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 						activeChar.setUndying(true);
 						Functions.sendDebugMessage(activeChar, "Undying state has been enabled.");
 					}
-					
 					break;
 				
 				default:
@@ -552,7 +542,6 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					{
 						activeChar.sendMessage("Html page not found");
 					}
-					
 					break;
 				
 				default:

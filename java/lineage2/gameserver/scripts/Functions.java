@@ -655,7 +655,7 @@ public class Functions
 	 */
 	public static boolean IsActive(String name)
 	{
-		return ServerVariables.getString(name, "off").equalsIgnoreCase("on");
+		return ServerVariables.getString(name, "off").equals("on");
 	}
 	
 	/**

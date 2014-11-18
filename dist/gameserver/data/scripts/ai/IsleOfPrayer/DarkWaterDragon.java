@@ -74,7 +74,6 @@ public final class DarkWaterDragon extends Fighter
 						_mobsSpawned = 2;
 						spawnShades(attacker);
 					}
-					
 					break;
 			}
 		}

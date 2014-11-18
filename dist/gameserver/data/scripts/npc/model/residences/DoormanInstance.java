@@ -88,7 +88,6 @@ public abstract class DoormanInstance extends NpcInstance
 						ReflectionUtils.getDoor(i).closeMe();
 					}
 				}
-				
 				break;
 			
 			case COND_SIEGE:

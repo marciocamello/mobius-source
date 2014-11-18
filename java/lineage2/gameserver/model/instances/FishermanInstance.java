@@ -71,7 +71,7 @@ public class FishermanInstance extends MerchantInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("FishingSkillList"))
+		if (command.equals("FishingSkillList"))
 		{
 			showFishingSkillList(player);
 		}

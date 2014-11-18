@@ -52,7 +52,7 @@ public final class MercManagerInstance extends MerchantInstance
 			return;
 		}
 		
-		int condition = validateCondition(player);
+		final int condition = validateCondition(player);
 		
 		if ((condition <= COND_ALL_FALSE) || (condition == COND_BUSY_BECAUSE_OF_SIEGE))
 		{
@@ -61,8 +61,8 @@ public final class MercManagerInstance extends MerchantInstance
 		
 		if (condition == COND_OWNER)
 		{
-			StringTokenizer st = new StringTokenizer(command, " ");
-			String actualCommand = st.nextToken();
+			final StringTokenizer st = new StringTokenizer(command, " ");
+			final String actualCommand = st.nextToken();
 			String val = "";
 			
 			if (st.countTokens() >= 1)
@@ -70,7 +70,7 @@ public final class MercManagerInstance extends MerchantInstance
 				val = st.nextToken();
 			}
 			
-			if (actualCommand.equalsIgnoreCase("hire"))
+			if (actualCommand.equals("hire"))
 			{
 				if (val.equals(""))
 				{
@@ -96,7 +96,7 @@ public final class MercManagerInstance extends MerchantInstance
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
 		String filename = "castle/mercmanager/mercmanager-no.htm";
-		int condition = validateCondition(player);
+		final int condition = validateCondition(player);
 		
 		if (condition == COND_BUSY_BECAUSE_OF_SIEGE)
 		{
