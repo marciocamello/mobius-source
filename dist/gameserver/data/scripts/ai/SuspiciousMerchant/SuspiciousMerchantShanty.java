@@ -144,7 +144,7 @@ public final class SuspiciousMerchantShanty extends DefaultAI
 				switch (current_point)
 				{
 					case 0:
-						Functions.npcSay(actor, "Надо разведать обстановку...");
+						Functions.npcSay(actor, "We must reconsider the situation...");
 						break;
 					
 					case 2:

@@ -35,17 +35,19 @@ public class GuillotineNpcPriest extends DefaultAI
 	{
 		super.onEvtScriptEvent(event, arg1, arg2);
 		
-		if (event.equals("SHOUT_PRIEST_1"))
+		switch (event)
 		{
-			Functions.npcSayInRange(getActor(), 1000, NpcString.IT_LEFT_NOTHING_BEHIND);
-		}
-		else if (event.equals("SHOUT_PRIEST_2"))
-		{
-			Functions.npcSayInRange(getActor(), 1000, NpcString.IM_IN_A_PICKLE_WE_CANT_GO_BACK_LETS_LOOK_FURTHER);
-		}
-		else if (event.equals("SHOUT_PRIEST_3"))
-		{
-			Functions.npcSayInRange(getActor(), 1000, NpcString.WELL_BEGIN_INTERNAL_PURIFICATION_PROCESS);
+			case "SHOUT_PRIEST_1":
+				Functions.npcSayInRange(getActor(), 1000, NpcString.IT_LEFT_NOTHING_BEHIND);
+				break;
+			
+			case "SHOUT_PRIEST_2":
+				Functions.npcSayInRange(getActor(), 1000, NpcString.IM_IN_A_PICKLE_WE_CANT_GO_BACK_LETS_LOOK_FURTHER);
+				break;
+			
+			case "SHOUT_PRIEST_3":
+				Functions.npcSayInRange(getActor(), 1000, NpcString.WELL_BEGIN_INTERNAL_PURIFICATION_PROCESS);
+				break;
 		}
 	}
 	

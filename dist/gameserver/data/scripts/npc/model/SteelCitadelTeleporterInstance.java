@@ -67,99 +67,83 @@ public final class SteelCitadelTeleporterInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equals("01_up"))
+		switch (command)
 		{
-			player.getParty().Teleport(new Location(-22208, 277122, -13376));
-			return;
-		}
-		else if (command.equals("02_up"))
-		{
-			player.getParty().Teleport(new Location(-22208, 277106, -11648));
-			return;
-		}
-		else if (command.equals("02_down"))
-		{
-			player.getParty().Teleport(new Location(-22208, 277074, -15040));
-			return;
-		}
-		else if (command.equals("03_up"))
-		{
-			player.getParty().Teleport(new Location(-22208, 277120, -9920));
-			return;
-		}
-		else if (command.equals("03_down"))
-		{
-			player.getParty().Teleport(new Location(-22208, 277120, -13376));
-			return;
-		}
-		else if (command.equals("04_up"))
-		{
-			player.getParty().Teleport(new Location(-19024, 277126, -8256));
-			return;
-		}
-		else if (command.equals("04_down"))
-		{
-			player.getParty().Teleport(new Location(-22208, 277106, -11648));
-			return;
-		}
-		else if (command.equals("06_up"))
-		{
-			player.getParty().Teleport(new Location(-19024, 277106, -9920));
-			return;
-		}
-		else if (command.equals("06_down"))
-		{
-			player.getParty().Teleport(new Location(-22208, 277122, -9920));
-			return;
-		}
-		else if (command.equals("07_up"))
-		{
-			player.getParty().Teleport(new Location(-19008, 277100, -11648));
-			return;
-		}
-		else if (command.equals("07_down"))
-		{
-			player.getParty().Teleport(new Location(-19024, 277122, -8256));
-			return;
-		}
-		else if (command.equals("08_up"))
-		{
-			player.getParty().Teleport(new Location(-19008, 277100, -13376));
-			return;
-		}
-		else if (command.equals("08_down"))
-		{
-			player.getParty().Teleport(new Location(-19008, 277106, -9920));
-			return;
-		}
-		else if (command.equals("09_up"))
-		{
-			player.getParty().Teleport(new Location(14602, 283179, -7500));
-			return;
-		}
-		else if (command.equals("09_down"))
-		{
-			player.getParty().Teleport(new Location(-19008, 277100, -11648));
-			return;
-		}
-		else if (command.equals("facedemon"))
-		{
-			enterInstance(player, 5);
-			return;
-		}
-		else if (command.equals("faceranku"))
-		{
-			enterInstance(player, 6);
-			return;
-		}
-		else if (command.equals("leave"))
-		{
-			player.getReflection().collapse();
-			return;
-		}
-		else
-		{
-			super.onBypassFeedback(player, command);
+			case "01_up":
+				player.getParty().Teleport(new Location(-22208, 277122, -13376));
+				return;
+				
+			case "02_up":
+				player.getParty().Teleport(new Location(-22208, 277106, -11648));
+				return;
+				
+			case "02_down":
+				player.getParty().Teleport(new Location(-22208, 277074, -15040));
+				return;
+				
+			case "03_up":
+				player.getParty().Teleport(new Location(-22208, 277120, -9920));
+				return;
+				
+			case "03_down":
+				player.getParty().Teleport(new Location(-22208, 277120, -13376));
+				return;
+				
+			case "04_up":
+				player.getParty().Teleport(new Location(-19024, 277126, -8256));
+				return;
+				
+			case "04_down":
+				player.getParty().Teleport(new Location(-22208, 277106, -11648));
+				return;
+				
+			case "06_up":
+				player.getParty().Teleport(new Location(-19024, 277106, -9920));
+				return;
+				
+			case "06_down":
+				player.getParty().Teleport(new Location(-22208, 277122, -9920));
+				return;
+				
+			case "07_up":
+				player.getParty().Teleport(new Location(-19008, 277100, -11648));
+				return;
+				
+			case "07_down":
+				player.getParty().Teleport(new Location(-19024, 277122, -8256));
+				return;
+				
+			case "08_up":
+				player.getParty().Teleport(new Location(-19008, 277100, -13376));
+				return;
+				
+			case "08_down":
+				player.getParty().Teleport(new Location(-19008, 277106, -9920));
+				return;
+				
+			case "09_up":
+				player.getParty().Teleport(new Location(14602, 283179, -7500));
+				return;
+				
+			case "09_down":
+				player.getParty().Teleport(new Location(-19008, 277100, -11648));
+				return;
+				
+			case "facedemon":
+				enterInstance(player, 5);
+				return;
+				
+			case "faceranku":
+				enterInstance(player, 6);
+				return;
+				
+			case "leave":
+				player.getReflection().collapse();
+				return;
+				
+			default:
+				super.onBypassFeedback(player, command);
+				break;
 		}
 	}
 	
@@ -203,7 +187,7 @@ public final class SteelCitadelTeleporterInstance extends NpcInstance
 	 */
 	private void enterInstance(Player player, int floor)
 	{
-		Reflection r = player.getActiveReflection();
+		final Reflection r = player.getActiveReflection();
 		
 		if (r != null)
 		{

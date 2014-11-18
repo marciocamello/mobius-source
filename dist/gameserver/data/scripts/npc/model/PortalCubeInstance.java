@@ -41,49 +41,51 @@ public final class PortalCubeInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equals("register"))
+		switch (command)
 		{
-			players.put(player.getObjectId(), player.getObjectId());
-		}
-		else if (command.equals("exit"))
-		{
-			for (Player p : ((SpezionNormal) getReflection()).getPlayers())
-			{
-				if (players.get(p.getObjectId()) == null)
+			case "register":
+				players.put(player.getObjectId(), player.getObjectId());
+				break;
+			
+			case "exit":
+				for (Player p : ((SpezionNormal) getReflection()).getPlayers())
 				{
-					return;
+					if (players.get(p.getObjectId()) == null)
+					{
+						return;
+					}
+					
+					players.clear();
+					((SpezionNormal) getReflection()).SecondRoom();
 				}
-				
-				players.clear();
-				((SpezionNormal) getReflection()).SecondRoom();
-			}
-		}
-		else if (command.equals("opengate"))
-		{
-			if (getId() == 32951)
-			{
-				((SpezionNormal) getReflection()).openGate(26190001);
-			}
-			else if (getId() == 32952)
-			{
-				((SpezionNormal) getReflection()).openGate(26190006);
-			}
-			else if (getId() == 32953)
-			{
-				((SpezionNormal) getReflection()).openGate(26190005);
-			}
-		}
-		else if (command.equals("stage_third"))
-		{
-			((SpezionNormal) getReflection()).thirdStage();
-		}
-		else if (command.equals("spawn_spezion"))
-		{
-			((SpezionNormal) getReflection()).spazionSpawn();
-		}
-		else
-		{
-			super.onBypassFeedback(player, command);
+				break;
+			
+			case "opengate":
+				if (getId() == 32951)
+				{
+					((SpezionNormal) getReflection()).openGate(26190001);
+				}
+				else if (getId() == 32952)
+				{
+					((SpezionNormal) getReflection()).openGate(26190006);
+				}
+				else if (getId() == 32953)
+				{
+					((SpezionNormal) getReflection()).openGate(26190005);
+				}
+				break;
+			
+			case "stage_third":
+				((SpezionNormal) getReflection()).thirdStage();
+				break;
+			
+			case "spawn_spezion":
+				((SpezionNormal) getReflection()).spazionSpawn();
+				break;
+			
+			default:
+				super.onBypassFeedback(player, command);
+				break;
 		}
 	}
 }
