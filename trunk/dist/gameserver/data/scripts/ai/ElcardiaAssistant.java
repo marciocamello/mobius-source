@@ -221,7 +221,6 @@ public final class ElcardiaAssistant extends DefaultAI
 							}
 						}
 					}
-					
 					break;
 				
 				case 151:
@@ -343,7 +342,6 @@ public final class ElcardiaAssistant extends DefaultAI
 							doTask();
 						}
 					}
-					
 					break;
 				
 				default:

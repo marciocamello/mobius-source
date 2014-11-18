@@ -105,7 +105,6 @@ public final class IsleOfPrayerFighter extends Fighter
 						{
 							actor.dropItem(player, YELLOW_CRYSTAL, 1);
 						}
-						
 						break;
 					
 					case 22263:
@@ -113,7 +112,6 @@ public final class IsleOfPrayerFighter extends Fighter
 						{
 							actor.dropItem(player, GREEN_CRYSTAL, 1);
 						}
-						
 						break;
 				}
 			}

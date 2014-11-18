@@ -125,7 +125,6 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 				{
 					canCrystallize = false;
 				}
-				
 				break;
 			}
 			
@@ -135,7 +134,6 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 				{
 					canCrystallize = false;
 				}
-				
 				break;
 			}
 			
@@ -145,7 +143,6 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 				{
 					canCrystallize = false;
 				}
-				
 				break;
 			}
 			
@@ -155,7 +152,6 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 				{
 					canCrystallize = false;
 				}
-				
 				break;
 			}
 			
@@ -165,7 +161,6 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 				{
 					canCrystallize = false;
 				}
-				
 				break;
 			}
 			
@@ -175,7 +170,6 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 				{
 					canCrystallize = false;
 				}
-				
 				break;
 			}
 			
@@ -185,7 +179,6 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 				{
 					canCrystallize = false;
 				}
-				
 				break;
 			}
 			
@@ -195,7 +188,6 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 				{
 					canCrystallize = false;
 				}
-				
 				break;
 			}
 			
@@ -205,7 +197,6 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 				{
 					canCrystallize = false;
 				}
-				
 				break;
 			}
 			
@@ -215,7 +206,6 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 				{
 					canCrystallize = false;
 				}
-				
 				break;
 			}
 			

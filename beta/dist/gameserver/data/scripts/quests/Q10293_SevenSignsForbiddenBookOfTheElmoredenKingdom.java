@@ -217,7 +217,6 @@ public class Q10293_SevenSignsForbiddenBookOfTheElmoredenKingdom extends Quest i
 						htmltext = "elcardia2_q10293_5.htm";
 						break;
 				}
-				
 				break;
 			
 			case SophiaInzone2:
@@ -229,7 +228,6 @@ public class Q10293_SevenSignsForbiddenBookOfTheElmoredenKingdom extends Quest i
 				{
 					htmltext = "sophia3_q10293_4.htm";
 				}
-				
 				break;
 			
 			// Books

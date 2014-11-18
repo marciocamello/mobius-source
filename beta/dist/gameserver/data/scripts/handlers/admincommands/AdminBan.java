@@ -125,7 +125,6 @@ public class AdminBan implements IAdminCommandHandler, ScriptFile
 							activeChar.sendMessage("Player " + player.getName() + " kicked.");
 						}
 					}
-					
 					break;
 				}
 				
@@ -165,7 +164,6 @@ public class AdminBan implements IAdminCommandHandler, ScriptFile
 					{
 						activeChar.sendMessage("Command syntax: //chatban char_name period reason");
 					}
-					
 					break;
 				
 				case "admin_chatunban":
@@ -187,7 +185,6 @@ public class AdminBan implements IAdminCommandHandler, ScriptFile
 					{
 						activeChar.sendMessage("Command syntax: //chatunban char_name");
 					}
-					
 					break;
 				
 				case "admin_jail":
@@ -225,7 +222,6 @@ public class AdminBan implements IAdminCommandHandler, ScriptFile
 					{
 						activeChar.sendMessage("Command syntax: //jail char_name period reason");
 					}
-					
 					break;
 				
 				case "admin_unjail":
@@ -256,7 +252,6 @@ public class AdminBan implements IAdminCommandHandler, ScriptFile
 					{
 						activeChar.sendMessage("Command syntax: //unjail char_name");
 					}
-					
 					break;
 				
 				case "admin_cban":

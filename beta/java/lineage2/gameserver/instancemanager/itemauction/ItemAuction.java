@@ -498,7 +498,6 @@ public class ItemAuction
 					player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU));
 					return;
 				}
-				
 				break;
 			
 			default:

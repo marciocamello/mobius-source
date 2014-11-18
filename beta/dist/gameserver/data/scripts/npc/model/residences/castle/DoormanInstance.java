@@ -91,7 +91,6 @@ public final class DoormanInstance extends npc.model.residences.DoormanInstance
 						player.teleToLocation(loc);
 					}
 				}
-				
 				break;
 			
 			case COND_SIEGE:
@@ -109,7 +108,6 @@ public final class DoormanInstance extends npc.model.residences.DoormanInstance
 				{
 					player.sendPacket(new NpcHtmlMessage(player, this, _siegeDialog, 0));
 				}
-				
 				break;
 			
 			case COND_FAIL:

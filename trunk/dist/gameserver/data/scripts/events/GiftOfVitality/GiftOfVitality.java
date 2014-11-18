@@ -326,7 +326,6 @@ public final class GiftOfVitality extends Functions implements ScriptFile
 					player.setVitality(Config.MAX_VITALITY);
 					htmltext = "jack-okvitality.htm";
 				}
-				
 				break;
 			
 			case PLAYER:
@@ -355,7 +354,6 @@ public final class GiftOfVitality extends Functions implements ScriptFile
 					
 					htmltext = "jack-okbuff.htm";
 				}
-				
 				break;
 			
 			default:

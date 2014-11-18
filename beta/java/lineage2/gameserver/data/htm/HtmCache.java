@@ -99,7 +99,6 @@ public class HtmCache
 					Cache c = _cache[i];
 					_log.info(String.format("HtmCache: parsing %d documents; lang: %s.", c.getSize(), Language.VALUES[i]));
 				}
-				
 				break;
 			
 			case LAZY:
@@ -234,7 +233,6 @@ public class HtmCache
 					{
 						cache = loadLazy(Language.ENGLISH, file);
 					}
-					
 					break;
 				
 				case DISABLED:
@@ -244,7 +242,6 @@ public class HtmCache
 					{
 						cache = loadDisabled(Language.ENGLISH, file);
 					}
-					
 					break;
 			}
 		}

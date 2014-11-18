@@ -164,7 +164,6 @@ public class StatusUpdate extends L2GameServerPacket
 				{
 					value = _actor.getPlayer().getCurrentLoad();
 				}
-				
 				break;
 			}
 			
@@ -174,7 +173,6 @@ public class StatusUpdate extends L2GameServerPacket
 				{
 					value = _actor.getPlayer().getMaxLoad();
 				}
-				
 				break;
 			}
 			
@@ -238,7 +236,6 @@ public class StatusUpdate extends L2GameServerPacket
 				{
 					value = _actor.getPvpFlag();
 				}
-				
 				break;
 			}
 			
@@ -248,7 +245,6 @@ public class StatusUpdate extends L2GameServerPacket
 				{
 					value = _actor.getKarma();
 				}
-				
 				break;
 			}
 			
@@ -258,7 +254,6 @@ public class StatusUpdate extends L2GameServerPacket
 				{
 					value = (int) _actor.getCurrentCp();
 				}
-				
 				break;
 			}
 			
@@ -268,7 +263,6 @@ public class StatusUpdate extends L2GameServerPacket
 				{
 					value = _actor.getMaxCp();
 				}
-				
 				break;
 			}
 			

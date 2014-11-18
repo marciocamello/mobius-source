@@ -87,7 +87,6 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler, ScriptFile
 						player.setAccessLevel(lvl);
 					}
 				}
-				
 				break;
 			
 			case "admin_moders":
@@ -146,14 +145,13 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler, ScriptFile
 				{
 					if (Config.BANCHAT_ANNOUNCE_FOR_ALL_WORLD)
 					{
-						Announcements.getInstance().announceToAll(activeChar + " о�?трафовал модератора " + wordList[1] + " на " + count + ", причина: " + reason + ".");
+						Announcements.getInstance().announceToAll(activeChar + " fined moderator " + wordList[1] + " on " + count + ", reasons: " + reason + ".");
 					}
 					else
 					{
-						Announcements.shout(activeChar, activeChar + " о�?трафовал модератора " + wordList[1] + " на " + count + ", причина: " + reason + ".", ChatType.CRITICAL_ANNOUNCE);
+						Announcements.shout(activeChar, activeChar + " fined moderator " + wordList[1] + " on " + count + ", reasons: " + reason + ".", ChatType.CRITICAL_ANNOUNCE);
 					}
 				}
-				
 				break;
 		}
 		

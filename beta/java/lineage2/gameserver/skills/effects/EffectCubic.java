@@ -161,7 +161,6 @@ public class EffectCubic extends Effect
 							break;
 					}
 				}
-				
 				break;
 			}
 		}

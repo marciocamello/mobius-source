@@ -836,7 +836,6 @@ public class Zone
 				{
 					return false;
 				}
-				
 				break;
 			
 			case only_pc:
@@ -844,7 +843,6 @@ public class Zone
 				{
 					return false;
 				}
-				
 				break;
 			
 			case npc:
@@ -852,7 +850,6 @@ public class Zone
 				{
 					return false;
 				}
-				
 				break;
 		}
 		

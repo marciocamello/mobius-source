@@ -1328,7 +1328,6 @@ public class PetInstance extends Summon
 				{
 					return 1;
 				}
-				
 				break;
 		}
 		

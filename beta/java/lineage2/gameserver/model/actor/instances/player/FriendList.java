@@ -138,7 +138,7 @@ public class FriendList
 		
 		for (Map.Entry<Integer, Friend> entry : _friendList.entrySet())
 		{
-			if (name.equalsIgnoreCase(entry.getValue().getName()))
+			if (name.equals(entry.getValue().getName()))
 			{
 				objectId = entry.getKey();
 				break;

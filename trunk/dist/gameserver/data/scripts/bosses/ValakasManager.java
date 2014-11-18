@@ -585,7 +585,6 @@ public final class ValakasManager extends Functions implements ScriptFile, OnDea
 						pc.leaveMovieMode();
 						pc.altOnMagicUseTimer(pc, SkillTable.getInstance().getInfo(23312, 1));
 					}
-					
 					break;
 			}
 		}

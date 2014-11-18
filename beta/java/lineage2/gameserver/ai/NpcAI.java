@@ -202,7 +202,6 @@ public class NpcAI extends CharacterAI
 					_toBackWay = false;
 					break;
 				}
-				
 				break;
 			
 			case 2:
@@ -213,7 +212,6 @@ public class NpcAI extends CharacterAI
 					_currentWalkerPoint = 0;
 					break;
 				}
-				
 				break;
 			
 			case 3:
@@ -226,7 +224,6 @@ public class NpcAI extends CharacterAI
 						_currentWalkerPoint = Rnd.get(_walkerRoute.size() - 1);
 					}
 				}
-				
 				break;
 			
 			case 4:
@@ -243,7 +240,6 @@ public class NpcAI extends CharacterAI
 					_delete = true;
 					break;
 				}
-				
 				break;
 			
 			case 5:
@@ -253,7 +249,6 @@ public class NpcAI extends CharacterAI
 				{
 					actor.stopMove();
 				}
-				
 				break;
 		}
 		

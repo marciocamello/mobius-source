@@ -306,7 +306,6 @@ public class RewardGroup implements Cloneable
 				{
 					t.count = SafeMath.addAndLimit(t.count, count);
 				}
-				
 				break;
 			}
 		}

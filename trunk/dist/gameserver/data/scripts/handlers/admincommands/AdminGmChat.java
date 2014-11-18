@@ -62,7 +62,6 @@ public class AdminGmChat implements IAdminCommandHandler, ScriptFile
 				{
 					// empty catch clause
 				}
-				
 				break;
 			
 			case "admin_snoop":

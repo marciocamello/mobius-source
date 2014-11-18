@@ -99,7 +99,6 @@ public class Q00452_FindingTheLostSoldiers extends Quest implements ScriptFile
 					{
 						htmltext = "32773-0.htm";
 					}
-					
 					break;
 				
 				case STARTED:
@@ -117,7 +116,6 @@ public class Q00452_FindingTheLostSoldiers extends Quest implements ScriptFile
 						qs.playSound(SOUND_FINISH);
 						qs.exitCurrentQuest(this);
 					}
-					
 					break;
 			}
 		}

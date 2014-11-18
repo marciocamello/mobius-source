@@ -174,7 +174,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 				String firstVal = ar[0].split("=")[1];
 				String secondVal = ar[1].split("=")[1];
 				
-				if (firstVal.equalsIgnoreCase("move_op_field"))
+				if (firstVal.equals("move_op_field"))
 				{
 					if (!Config.ENABLE_OLYMPIAD_SPECTATING)
 					{

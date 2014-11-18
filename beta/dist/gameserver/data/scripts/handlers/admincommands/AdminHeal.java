@@ -60,7 +60,6 @@ public class AdminHeal implements IAdminCommandHandler, ScriptFile
 				{
 					handleRes(activeChar, wordList[1]);
 				}
-				
 				break;
 		}
 		

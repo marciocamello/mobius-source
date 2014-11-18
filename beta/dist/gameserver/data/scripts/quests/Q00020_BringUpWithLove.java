@@ -86,7 +86,6 @@ public class Q00020_BringUpWithLove extends Quest implements ScriptFile
 				{
 					htmltext = "31537-00.htm";
 				}
-				
 				break;
 			
 			case STARTED:
@@ -98,7 +97,6 @@ public class Q00020_BringUpWithLove extends Quest implements ScriptFile
 				{
 					htmltext = "31537-14.htm";
 				}
-				
 				break;
 		}
 		

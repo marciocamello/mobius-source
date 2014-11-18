@@ -152,7 +152,6 @@ public class Q00453_NotStrongEnoughAlone extends Quest implements ScriptFile
 						{
 							htmltext = "klemis_q453_00.htm";
 						}
-						
 						break;
 					}
 					case STARTED:
@@ -183,7 +182,6 @@ public class Q00453_NotStrongEnoughAlone extends Quest implements ScriptFile
 								qs.exitCurrentQuest(this);
 								break;
 						}
-						
 						break;
 					}
 				}

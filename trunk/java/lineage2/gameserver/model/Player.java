@@ -7072,7 +7072,6 @@ public final class Player extends Playable implements PlayerGroup
 							}
 						}
 					}
-					
 					break;
 				}
 			}
@@ -7858,7 +7857,6 @@ public final class Player extends Playable implements PlayerGroup
 					sendPacket(new InventoryUpdate().addModifiedItem(item));
 					return true;
 				}
-				
 				break;
 			}
 		}
@@ -7973,7 +7971,6 @@ public final class Player extends Playable implements PlayerGroup
 				{
 					addSkill(SkillTable.getInstance().getInfo(Skill.SKILL_STRIDER_ASSAULT, 1), false);
 				}
-				
 				break;
 			
 			case PetDataTable.WYVERN_ID:
@@ -8893,7 +8890,7 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	public void addToBlockList(final String charName)
 	{
-		if ((charName == null) || charName.equalsIgnoreCase(getName()) || isInBlockList(charName))
+		if ((charName == null) || charName.equals(getName()) || isInBlockList(charName))
 		{
 			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_REGISTER_THE_USER_TO_YOUR_IGNORE_LIST));
 			return;
@@ -8943,7 +8940,7 @@ public final class Player extends Playable implements PlayerGroup
 		
 		for (int blockId : _blockList.keySet())
 		{
-			if (charName.equalsIgnoreCase(_blockList.get(blockId)))
+			if (charName.equals(_blockList.get(blockId)))
 			{
 				charId = blockId;
 				break;
@@ -8994,7 +8991,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		for (int blockId : _blockList.keySet())
 		{
-			if (charName.equalsIgnoreCase(_blockList.get(blockId)))
+			if (charName.equals(_blockList.get(blockId)))
 			{
 				return true;
 			}
@@ -9432,7 +9429,6 @@ public final class Player extends Playable implements PlayerGroup
 				{
 					_pledgeClass = RANK_VASSAL;
 				}
-				
 				break;
 			
 			case 4:
@@ -9444,7 +9440,6 @@ public final class Player extends Playable implements PlayerGroup
 				{
 					_pledgeClass = RANK_HEIR;
 				}
-				
 				break;
 			
 			case 5:
@@ -9460,7 +9455,6 @@ public final class Player extends Playable implements PlayerGroup
 				{
 					_pledgeClass = RANK_HEIR;
 				}
-				
 				break;
 			
 			case 6:
@@ -9484,7 +9478,6 @@ public final class Player extends Playable implements PlayerGroup
 				{
 					_pledgeClass = RANK_KNIGHT;
 				}
-				
 				break;
 			
 			case 7:
@@ -9516,7 +9509,6 @@ public final class Player extends Playable implements PlayerGroup
 				{
 					_pledgeClass = RANK_WISEMAN;
 				}
-				
 				break;
 			
 			case 8:
@@ -9548,7 +9540,6 @@ public final class Player extends Playable implements PlayerGroup
 				{
 					_pledgeClass = RANK_BARON;
 				}
-				
 				break;
 			
 			case 9:
@@ -9580,7 +9571,6 @@ public final class Player extends Playable implements PlayerGroup
 				{
 					_pledgeClass = RANK_VISCOUNT;
 				}
-				
 				break;
 			
 			case 10:
@@ -9612,7 +9602,6 @@ public final class Player extends Playable implements PlayerGroup
 				{
 					_pledgeClass = RANK_COUNT;
 				}
-				
 				break;
 			
 			case 11:
@@ -9644,7 +9633,6 @@ public final class Player extends Playable implements PlayerGroup
 				{
 					_pledgeClass = RANK_MARQUIS;
 				}
-				
 				break;
 		}
 		
@@ -9833,7 +9821,7 @@ public final class Player extends Playable implements PlayerGroup
 			return defaultVal;
 		}
 		
-		return !(var.equals("0") || var.equalsIgnoreCase("false"));
+		return !(var.equals("0") || var.equals("false"));
 	}
 	
 	/**
@@ -9844,7 +9832,7 @@ public final class Player extends Playable implements PlayerGroup
 	public boolean getVarB(String name)
 	{
 		String var = user_variables.get(name);
-		return !((var == null) || var.equals("0") || var.equalsIgnoreCase("false"));
+		return !((var == null) || var.equals("0") || var.equals("false"));
 	}
 	
 	/**

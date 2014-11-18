@@ -215,7 +215,6 @@ public final class BatCountry extends DynamicQuest implements ScriptFile
 							ItemFunctions.addItem(player, FIRECRACKER, Rnd.get(1, 3), true);
 							npc.doDie(player);
 						}
-						
 						break;
 					
 					case NPC_2:
@@ -225,7 +224,6 @@ public final class BatCountry extends DynamicQuest implements ScriptFile
 							ItemFunctions.addItem(player, FIRECRACKER, Rnd.get(1, 3), true);
 							npc.doDie(player);
 						}
-						
 						break;
 					
 					case NPC_3:
@@ -235,7 +233,6 @@ public final class BatCountry extends DynamicQuest implements ScriptFile
 							ItemFunctions.addItem(player, FIRECRACKER, Rnd.get(1, 3), true);
 							npc.doDie(player);
 						}
-						
 						break;
 				}
 			}

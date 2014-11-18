@@ -71,7 +71,6 @@ public class CommandChannel implements IUserCommandHandler, ScriptFile
 				{
 					activeChar.sendPacket(new SystemMessage(SystemMessage.ONLY_THE_CREATOR_OF_A_CHANNEL_CAN_USE_THE_CHANNEL_DISMISS_COMMAND));
 				}
-				
 				break;
 			
 			case 96:

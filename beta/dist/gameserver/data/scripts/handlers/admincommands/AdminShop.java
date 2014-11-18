@@ -64,7 +64,6 @@ public class AdminShop implements IAdminCommandHandler, ScriptFile
 				{
 					activeChar.sendMessage("Please specify buylist.");
 				}
-				
 				break;
 			
 			case "admin_gmshop":

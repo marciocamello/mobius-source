@@ -146,7 +146,7 @@ public class SubUnit
 	{
 		for (UnitMember m : getUnitMembers())
 		{
-			if (m.getName().equalsIgnoreCase(obj))
+			if (m.getName().equals(obj))
 			{
 				return m;
 			}

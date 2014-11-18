@@ -274,7 +274,6 @@ public final class ChamberlainDarkInstance extends ResidenceManager
 					{
 						player.sendPacket(new ExShowSeedInfo(castleId, ResidenceHolder.getInstance().getResidence(Castle.class, castleId).getSeedProduction(time)));
 					}
-					
 					break;
 				
 				case 4: // Current crops (Manor info)
@@ -286,7 +285,6 @@ public final class ChamberlainDarkInstance extends ResidenceManager
 					{
 						player.sendPacket(new ExShowCropInfo(castleId, ResidenceHolder.getInstance().getResidence(Castle.class, castleId).getCropProcure(time)));
 					}
-					
 					break;
 				
 				case 5: // Basic info (Manor info)
@@ -302,7 +300,6 @@ public final class ChamberlainDarkInstance extends ResidenceManager
 					{
 						player.sendPacket(new ExShowSeedSetting(castle.getId()));
 					}
-					
 					break;
 				
 				case 8: // Edit crop setup
@@ -314,7 +311,6 @@ public final class ChamberlainDarkInstance extends ResidenceManager
 					{
 						player.sendPacket(new ExShowCropSetting(castle.getId()));
 					}
-					
 					break;
 			}
 		}
@@ -782,7 +778,6 @@ public final class ChamberlainDarkInstance extends ResidenceManager
 						price = 5000000;
 						break;
 				}
-				
 				break;
 			
 			case 2:
@@ -800,7 +795,6 @@ public final class ChamberlainDarkInstance extends ResidenceManager
 						price = 1000000;
 						break;
 				}
-				
 				break;
 			
 			case 3:
@@ -818,7 +812,6 @@ public final class ChamberlainDarkInstance extends ResidenceManager
 						price = 2000000;
 						break;
 				}
-				
 				break;
 		}
 		

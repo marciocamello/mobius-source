@@ -554,7 +554,7 @@ public abstract class GlobalEvent extends LoggerObject
 	 */
 	public void action(String name, boolean start)
 	{
-		if (name.equalsIgnoreCase(EVENT))
+		if (name.equals(EVENT))
 		{
 			if (start)
 			{

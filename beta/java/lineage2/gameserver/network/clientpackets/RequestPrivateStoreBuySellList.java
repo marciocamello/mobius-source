@@ -255,7 +255,6 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 								{
 									buyList.remove(bi);
 								}
-								
 								break;
 							}
 						}

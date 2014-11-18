@@ -90,7 +90,6 @@ public final class OriginalSinWarden extends Fighter
 						e.printStackTrace();
 					}
 				}
-				
 				break;
 			}
 			
@@ -111,7 +110,6 @@ public final class OriginalSinWarden extends Fighter
 						e.printStackTrace();
 					}
 				}
-				
 				break;
 			}
 			

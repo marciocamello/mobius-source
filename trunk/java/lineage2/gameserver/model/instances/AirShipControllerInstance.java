@@ -50,7 +50,7 @@ public class AirShipControllerInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("board"))
+		if (command.equals("board"))
 		{
 			SystemMsg msg = canBoard(player);
 			
@@ -77,8 +77,7 @@ public class AirShipControllerInstance extends NpcInstance
 			player._stablePoint = player.getLoc().setHeading(0);
 			boat.addPlayer(player, new Location());
 		}
-		
-		if (command.equalsIgnoreCase("hellfireenter"))
+		else if (command.equals("hellfireenter"))
 		{
 			if (player.getLevel() < 97)
 			{

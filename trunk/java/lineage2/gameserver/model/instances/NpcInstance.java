@@ -1219,7 +1219,6 @@ public class NpcInstance extends Creature
 								{
 									return;
 								}
-								
 								break;
 							}
 						}
@@ -1535,7 +1534,6 @@ public class NpcInstance extends Creature
 				{
 					filename = getHtmlPath(npcId, 0, player);
 				}
-				
 				break;
 			
 			default:

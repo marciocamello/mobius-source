@@ -135,7 +135,6 @@ public final class Rogin extends Dwarvs
 					final NpcInstance bronk = list.get(0);
 					bronk.getAI().notifyEvent(CtrlEvent.EVT_SCRIPT_EVENT, "BRONK_1");
 				}
-				
 				break;
 			
 			case 3:
@@ -152,7 +151,6 @@ public final class Rogin extends Dwarvs
 					final NpcInstance bronk = list.get(0);
 					bronk.getAI().notifyEvent(CtrlEvent.EVT_SCRIPT_EVENT, "BRONK_2");
 				}
-				
 				break;
 		}
 	}

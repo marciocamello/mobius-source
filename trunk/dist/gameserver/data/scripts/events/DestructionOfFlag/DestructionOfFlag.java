@@ -1497,7 +1497,6 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 				{
 					teleportPlayerToSavedCoords(player);
 				}
-				
 				break;
 			
 			case 2:
@@ -1505,7 +1504,6 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 				{
 					teleportPlayerToSavedCoords(player);
 				}
-				
 				break;
 			
 			case 3:
@@ -1513,7 +1511,6 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 				{
 					teleportPlayerToSavedCoords(player);
 				}
-				
 				break;
 			
 			case 4:
@@ -1521,7 +1518,6 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 				{
 					teleportPlayerToSavedCoords(player);
 				}
-				
 				break;
 		}
 	}

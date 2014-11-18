@@ -79,7 +79,6 @@ public class ExProperties extends Properties
 				{
 					return false;
 				}
-				
 				break;
 			}
 			
@@ -97,7 +96,6 @@ public class ExProperties extends Properties
 				{
 					return false;
 				}
-				
 				break;
 			}
 			
@@ -116,7 +114,6 @@ public class ExProperties extends Properties
 				{
 					return false;
 				}
-				
 				break;
 			}
 			
@@ -131,7 +128,6 @@ public class ExProperties extends Properties
 				{
 					return true;
 				}
-				
 				break;
 			}
 			
@@ -147,7 +143,6 @@ public class ExProperties extends Properties
 				{
 					return false;
 				}
-				
 				break;
 			}
 		}

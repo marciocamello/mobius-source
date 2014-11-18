@@ -133,7 +133,6 @@ public final class RainbowYeti extends CharacterAI
 				{
 					actor.addMob(NpcUtils.spawnSingle(35592, actor.getX() + 10, actor.getY() + 10, actor.getZ(), 0));
 				}
-				
 				break;
 			
 			case 2241: // mineral water

@@ -392,7 +392,6 @@ public class RequestActionUse extends L2GameClientPacket
 						{
 							activeChar.standUp();
 						}
-						
 						break;
 					
 					case 1:
@@ -404,7 +403,6 @@ public class RequestActionUse extends L2GameClientPacket
 						{
 							activeChar.setRunning();
 						}
-						
 						break;
 					
 					case 10:
@@ -546,7 +544,6 @@ public class RequestActionUse extends L2GameClientPacket
 							activeChar.setMount(pet.getTemplate().getId(), pet.getObjectId(), pet.getLevel());
 							activeChar.getSummonList().unsummonPet(false);
 						}
-						
 						break;
 					
 					case 37:
@@ -587,7 +584,6 @@ public class RequestActionUse extends L2GameClientPacket
 								activeChar.sendPacket(SystemMsg.ANOTHER_PLAYER_IS_PROBABLY_CONTROLLING_THE_TARGET);
 							}
 						}
-						
 						break;
 					
 					case 68:
@@ -597,7 +593,6 @@ public class RequestActionUse extends L2GameClientPacket
 							boat.setDriver(null);
 							activeChar.broadcastCharInfo();
 						}
-						
 						break;
 					
 					case 69:
@@ -605,7 +600,6 @@ public class RequestActionUse extends L2GameClientPacket
 						{
 							activeChar.sendPacket(new ExAirShipTeleportList((ClanAirShip) activeChar.getBoat()));
 						}
-						
 						break;
 					
 					case 70:
@@ -613,7 +607,6 @@ public class RequestActionUse extends L2GameClientPacket
 						{
 							activeChar.getBoat().oustPlayer(activeChar, activeChar.getBoat().getReturnLoc(), true);
 						}
-						
 						break;
 					
 					case 78:
@@ -656,7 +649,6 @@ public class RequestActionUse extends L2GameClientPacket
 						_log.info("Player action: " + action.id + " - not done.");
 						break;
 				}
-				
 				break;
 			
 			case PET_ACTION:
@@ -761,7 +753,6 @@ public class RequestActionUse extends L2GameClientPacket
 							pet.setFollowMode(false);
 							pet.moveToLocation(target.getLoc(), 100, true);
 						}
-						
 						break;
 					
 					case 1070:
@@ -769,7 +760,6 @@ public class RequestActionUse extends L2GameClientPacket
 						{
 							((PetBabyInstance) pet).triggerBuff();
 						}
-						
 						break;
 				}
 				
@@ -779,7 +769,6 @@ public class RequestActionUse extends L2GameClientPacket
 					activeChar.sendActionFailed();
 					return;
 				}
-				
 				break;
 			
 			case SERVITOR_ACTION:
@@ -861,7 +850,6 @@ public class RequestActionUse extends L2GameClientPacket
 							servitor.saveEffects();
 							activeChar.getSummonList().unsummonAllServitors();
 						}
-						
 						break;
 					
 					case 53:
@@ -870,7 +858,6 @@ public class RequestActionUse extends L2GameClientPacket
 							servitor.setFollowMode(false);
 							servitor.moveToLocation(target.getLoc(), 100, true);
 						}
-						
 						break;
 					
 					case 1000:
@@ -879,7 +866,6 @@ public class RequestActionUse extends L2GameClientPacket
 							activeChar.sendActionFailed();
 							return;
 						}
-						
 						break;
 					
 					case 1039:
@@ -889,7 +875,6 @@ public class RequestActionUse extends L2GameClientPacket
 							activeChar.sendActionFailed();
 							return;
 						}
-						
 						break;
 				}
 				
@@ -899,7 +884,6 @@ public class RequestActionUse extends L2GameClientPacket
 					activeChar.sendActionFailed();
 					return;
 				}
-				
 				break;
 			
 			case SERVITOR_GROUP_ACTION:
@@ -969,7 +953,6 @@ public class RequestActionUse extends L2GameClientPacket
 								summon.getAI().Attack(target, _ctrlPressed, _shiftPressed);
 							}
 						}
-						
 						break;
 					
 					case 1100: // Move
@@ -984,7 +967,6 @@ public class RequestActionUse extends L2GameClientPacket
 								}
 							}
 						}
-						
 						break;
 					
 					case 1101: // Pause
@@ -992,7 +974,6 @@ public class RequestActionUse extends L2GameClientPacket
 						{
 							summon.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 						}
-						
 						break;
 					
 					case 1102: // Cancel the Summoning
@@ -1005,7 +986,6 @@ public class RequestActionUse extends L2GameClientPacket
 						{
 							activeChar.getSummonList().unsummonAllServitors();
 						}
-						
 						break;
 					
 					case 1103: // Passive
@@ -1013,7 +993,6 @@ public class RequestActionUse extends L2GameClientPacket
 						{
 							summon.setDefendMode(false);
 						}
-						
 						break;
 					
 					case 1104: // Defend
@@ -1021,7 +1000,6 @@ public class RequestActionUse extends L2GameClientPacket
 						{
 							summon.setDefendMode(true);
 						}
-						
 						break;
 				}
 				
@@ -1031,7 +1009,6 @@ public class RequestActionUse extends L2GameClientPacket
 					activeChar.sendActionFailed();
 					return;
 				}
-				
 				break;
 			
 			case SOCIAL_ACTION:
@@ -1112,7 +1089,6 @@ public class RequestActionUse extends L2GameClientPacket
 					ThreadPoolManager.getInstance().schedule(new SocialTask(activeChar), 2600);
 					activeChar.startParalyzed();
 				}
-				
 				break;
 		}
 		

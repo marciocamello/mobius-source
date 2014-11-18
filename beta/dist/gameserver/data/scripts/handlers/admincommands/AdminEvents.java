@@ -57,7 +57,6 @@ public class AdminEvents implements IAdminCommandHandler, ScriptFile
 				{
 					activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/events/" + wordList[1].trim()));
 				}
-				
 				break;
 		}
 		

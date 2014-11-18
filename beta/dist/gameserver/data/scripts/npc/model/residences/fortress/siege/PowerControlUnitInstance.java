@@ -138,7 +138,6 @@ public final class PowerControlUnitInstance extends NpcInstance
 					machineInstance.powerOff(this);
 					onDecay();
 				}
-				
 				break;
 			
 			case COND_TIMEOUT:

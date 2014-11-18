@@ -110,7 +110,6 @@ public class AdminAnnouncements implements IAdminCommandHandler, ScriptFile
 				{
 					// empty catch clause
 				}
-				
 				break;
 			
 			case "admin_del_announcement":
@@ -157,7 +156,6 @@ public class AdminAnnouncements implements IAdminCommandHandler, ScriptFile
 				{
 					player.sendPacket(sm);
 				}
-				
 				break;
 			
 			case "admin_reload_announcements":

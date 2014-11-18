@@ -375,7 +375,6 @@ public class Q00144_PailakaInjuredDragon extends Quest implements ScriptFile
 				{
 					qs.set("stage", "2");
 				}
-				
 				break;
 			
 			case VSCOMMAO1:
@@ -389,7 +388,6 @@ public class Q00144_PailakaInjuredDragon extends Quest implements ScriptFile
 				{
 					qs.giveItems(STAGE1, 1);
 				}
-				
 				break;
 			
 			case VSGMAG1:
@@ -403,7 +401,6 @@ public class Q00144_PailakaInjuredDragon extends Quest implements ScriptFile
 				{
 					qs.giveItems(STAGE2, 1);
 				}
-				
 				break;
 			
 			case VSHGAPG1:
@@ -412,7 +409,6 @@ public class Q00144_PailakaInjuredDragon extends Quest implements ScriptFile
 				{
 					qs.set("stage", "5");
 				}
-				
 				break;
 			
 			case LATANA:
@@ -453,7 +449,6 @@ public class Q00144_PailakaInjuredDragon extends Quest implements ScriptFile
 					player.teleToLocation(122789, -45692, -3036);
 					return null;
 				}
-				
 				break;
 			
 			case VSGMAG1:
@@ -468,7 +463,6 @@ public class Q00144_PailakaInjuredDragon extends Quest implements ScriptFile
 					player.teleToLocation(116948, -46445, -2673);
 					return null;
 				}
-				
 				break;
 			
 			case VSHGAPG1:
@@ -488,7 +482,6 @@ public class Q00144_PailakaInjuredDragon extends Quest implements ScriptFile
 					player.teleToLocation(112445, -44118, -2700);
 					return null;
 				}
-				
 				break;
 			
 			case LATANA:
@@ -512,7 +505,6 @@ public class Q00144_PailakaInjuredDragon extends Quest implements ScriptFile
 					player.teleToLocation(109947, -41433, -2311);
 					return null;
 				}
-				
 				break;
 		}
 		

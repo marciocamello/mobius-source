@@ -111,7 +111,6 @@ public class Q00751_LiberatingTheSpirits extends Quest implements ScriptFile
 					htmltext = "lvl.htm";
 					qs.exitCurrentQuest(true);
 				}
-				
 				break;
 			
 			case STARTED:
@@ -123,7 +122,6 @@ public class Q00751_LiberatingTheSpirits extends Quest implements ScriptFile
 				{
 					htmltext = "30631-4.htm";
 				}
-				
 				break;
 		}
 		

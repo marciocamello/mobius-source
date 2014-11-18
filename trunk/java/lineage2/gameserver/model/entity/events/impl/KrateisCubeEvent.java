@@ -542,7 +542,7 @@ public class KrateisCubeEvent extends GlobalEvent
 	@Override
 	public void action(String name, boolean start)
 	{
-		if (name.equalsIgnoreCase(PREPARE))
+		if (name.equals(PREPARE))
 		{
 			prepare();
 		}

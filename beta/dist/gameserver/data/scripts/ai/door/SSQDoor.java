@@ -83,7 +83,6 @@ public final class SSQDoor extends DoorAI
 						return;
 					}
 				}
-				
 				break;
 			
 			case 17240104:
@@ -94,7 +93,6 @@ public final class SSQDoor extends DoorAI
 						return;
 					}
 				}
-				
 				break;
 			
 			case 17240106:
@@ -105,7 +103,6 @@ public final class SSQDoor extends DoorAI
 						return;
 					}
 				}
-				
 				break;
 			
 			case 17240108:
@@ -116,7 +113,6 @@ public final class SSQDoor extends DoorAI
 						return;
 					}
 				}
-				
 				break;
 			
 			case 17240110:
@@ -127,7 +123,6 @@ public final class SSQDoor extends DoorAI
 						return;
 					}
 				}
-				
 				break;
 		}
 		

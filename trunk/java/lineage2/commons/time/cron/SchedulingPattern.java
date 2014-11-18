@@ -519,7 +519,7 @@ public class SchedulingPattern
 	{
 		for (int i = 0; i < aliases.length; i++)
 		{
-			if (aliases[i].equalsIgnoreCase(value))
+			if (aliases[i].equals(value))
 			{
 				return offset + i;
 			}
@@ -694,7 +694,7 @@ public class SchedulingPattern
 		@Override
 		public int parse(String value) throws Exception
 		{
-			if (value.equalsIgnoreCase("L"))
+			if (value.equals("L"))
 			{
 				return 32;
 			}

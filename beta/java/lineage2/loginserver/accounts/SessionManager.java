@@ -180,7 +180,7 @@ public class SessionManager
 	{
 		for (Session session : sessions.values())
 		{
-			if (session.account.getLogin().equalsIgnoreCase(name))
+			if (session.account.getLogin().equals(name))
 			{
 				return session;
 			}

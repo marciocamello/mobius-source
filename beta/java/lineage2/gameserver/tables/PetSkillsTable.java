@@ -159,7 +159,6 @@ public class PetSkillsTable
 				{
 					lvl = maxLvl;
 				}
-				
 				break;
 			}
 			else if (temp.getMinLevel() <= cha.getLevel())

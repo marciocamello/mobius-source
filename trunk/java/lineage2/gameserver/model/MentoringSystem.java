@@ -95,7 +95,7 @@ public class MentoringSystem
 		
 		for (MenteeInfo entry : menteeInfo)
 		{
-			if (name.equalsIgnoreCase(entry.getName()))
+			if (name.equals(entry.getName()))
 			{
 				removedMentee = entry;
 				break;

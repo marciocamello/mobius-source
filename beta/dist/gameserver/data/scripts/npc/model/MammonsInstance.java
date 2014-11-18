@@ -85,7 +85,6 @@ public final class MammonsInstance extends NpcInstance
 						player.sendPacket(SystemMessage2.removeItems(ANCIENT_ADENA_ID, ancientAdenaConvert));
 						player.sendPacket(SystemMessage2.obtainItems(ADENA, ancientAdenaConvert, 0));
 					}
-					
 					break;
 				
 				default:

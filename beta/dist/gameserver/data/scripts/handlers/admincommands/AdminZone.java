@@ -72,7 +72,6 @@ public class AdminZone implements IAdminCommandHandler, ScriptFile
 				{
 					activeChar.sendMessage(zone.getType().toString() + ", name: " + zone.getName() + ", state: " + (zone.isActive() ? "active" : "not active") + ", inside: " + zone.checkIfInZone(activeChar) + "/" + zone.checkIfInZone(activeChar.getX(), activeChar.getY(), activeChar.getZ()));
 				}
-				
 				break;
 			}
 			
@@ -88,7 +87,6 @@ public class AdminZone implements IAdminCommandHandler, ScriptFile
 						activeChar.sendMessage(o.toString());
 					}
 				}
-				
 				break;
 			}
 			

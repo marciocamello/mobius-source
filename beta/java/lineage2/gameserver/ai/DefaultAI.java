@@ -501,12 +501,12 @@ public class DefaultAI extends CharacterAI
 				return false;
 			}
 			
-			if (actor.getFaction().getName().equalsIgnoreCase("varka_silenos_clan") && (target.getPlayer().getVarka() > 0))
+			if (actor.getFaction().getName().equals("varka_silenos_clan") && (target.getPlayer().getVarka() > 0))
 			{
 				return false;
 			}
 			
-			if (actor.getFaction().getName().equalsIgnoreCase("ketra_orc_clan") && (target.getPlayer().getKetra() > 0))
+			if (actor.getFaction().getName().equals("ketra_orc_clan") && (target.getPlayer().getKetra() > 0))
 			{
 				return false;
 			}

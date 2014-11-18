@@ -80,7 +80,6 @@ public class Q00551_OlympiadStarter extends Quest implements ScriptFile
 					
 					return "olympiad_operator_q0551_05.htm";
 				}
-				
 				break;
 		}
 		

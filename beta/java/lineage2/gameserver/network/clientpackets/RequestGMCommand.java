@@ -77,7 +77,6 @@ public class RequestGMCommand extends L2GameClientPacket
 				{
 					player.sendPacket(new GMViewPledgeInfo(target));
 				}
-				
 				break;
 			
 			case 3:

@@ -216,7 +216,6 @@ public class BuyListHolder
 					{
 						return false;
 					}
-					
 					break;
 				}
 			}

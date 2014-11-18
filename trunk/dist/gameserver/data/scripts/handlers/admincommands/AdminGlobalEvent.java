@@ -59,7 +59,6 @@ public final class AdminGlobalEvent implements IAdminCommandHandler, ScriptFile
 						activeChar.sendMessage("- " + e.toString());
 					}
 				}
-				
 				break;
 		}
 		

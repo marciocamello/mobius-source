@@ -92,7 +92,6 @@ public class AdminClanHall implements IAdminCommandHandler, ScriptFile
 				{
 					clanhall.changeOwner(player.getClan());
 				}
-				
 				break;
 			
 			case "admin_clanhalldel":
@@ -106,7 +105,6 @@ public class AdminClanHall implements IAdminCommandHandler, ScriptFile
 				{
 					activeChar.teleToLocation(zone.getSpawn());
 				}
-				
 				break;
 		}
 		

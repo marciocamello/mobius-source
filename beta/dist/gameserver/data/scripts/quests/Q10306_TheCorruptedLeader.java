@@ -111,7 +111,6 @@ public class Q10306_TheCorruptedLeader extends Quest implements ScriptFile
 					qs.exitCurrentQuest(true);
 					htmltext = "32896-03.htm";
 				}
-				
 				break;
 			
 			case STARTED:

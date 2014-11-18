@@ -262,7 +262,6 @@ public class HellboundManager
 							reduceConfidence(10);
 							break;
 					}
-					
 					break;
 				}
 				
@@ -281,7 +280,6 @@ public class HellboundManager
 							reduceConfidence(10);
 							break;
 					}
-					
 					break;
 				}
 				
@@ -304,7 +302,6 @@ public class HellboundManager
 							reduceConfidence(10);
 							break;
 					}
-					
 					break;
 				}
 				
@@ -323,7 +320,6 @@ public class HellboundManager
 							reduceConfidence(10);
 							break;
 					}
-					
 					break;
 				}
 				
@@ -335,7 +331,6 @@ public class HellboundManager
 							reduceConfidence(50);
 							break;
 					}
-					
 					break;
 				}
 				
@@ -351,7 +346,6 @@ public class HellboundManager
 							addConfidence(5);
 							break;
 					}
-					
 					break;
 				}
 				
@@ -364,7 +358,6 @@ public class HellboundManager
 							ServerVariables.set("HB_captainKilled", true);
 							break;
 					}
-					
 					break;
 				}
 				
@@ -443,11 +436,11 @@ public class HellboundManager
 			
 			for (Node n1 = doc1.getFirstChild(); n1 != null; n1 = n1.getNextSibling())
 			{
-				if ("list".equalsIgnoreCase(n1.getNodeName()))
+				if ("list".equals(n1.getNodeName()))
 				{
 					for (Node d1 = n1.getFirstChild(); d1 != null; d1 = d1.getNextSibling())
 					{
-						if ("data".equalsIgnoreCase(d1.getNodeName()))
+						if ("data".equals(d1.getNodeName()))
 						{
 							counter++;
 							int npcId = Integer.parseInt(d1.getAttributes().getNamedItem("npc_id").getNodeValue());
@@ -494,13 +487,13 @@ public class HellboundManager
 							
 							for (Node s1 = d1.getFirstChild(); s1 != null; s1 = s1.getNextSibling())
 							{
-								if ("territory".equalsIgnoreCase(s1.getNodeName()))
+								if ("territory".equals(s1.getNodeName()))
 								{
 									Polygon poly = new Polygon();
 									
 									for (Node s2 = s1.getFirstChild(); s2 != null; s2 = s2.getNextSibling())
 									{
-										if ("add".equalsIgnoreCase(s2.getNodeName()))
+										if ("add".equals(s2.getNodeName()))
 										{
 											int x = Integer.parseInt(s2.getAttributes().getNamedItem("x").getNodeValue());
 											int y = Integer.parseInt(s2.getAttributes().getNamedItem("y").getNodeValue());

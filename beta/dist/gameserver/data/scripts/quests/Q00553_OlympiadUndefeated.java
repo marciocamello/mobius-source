@@ -78,7 +78,6 @@ public class Q00553_OlympiadUndefeated extends Quest implements ScriptFile
 					
 					return "olympiad_operator_q0553_05.htm";
 				}
-				
 				break;
 		}
 		

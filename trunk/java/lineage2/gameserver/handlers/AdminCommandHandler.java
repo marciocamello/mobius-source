@@ -100,7 +100,7 @@ public class AdminCommandHandler extends AbstractHolder
 			{
 				for (String e : handler.getAdminCommandList())
 				{
-					if (e.toString().equalsIgnoreCase(wordList[0]))
+					if (e.toString().equals(wordList[0]))
 					{
 						success = handler.useAdminCommand(e, wordList, adminCommand, activeChar);
 						break;

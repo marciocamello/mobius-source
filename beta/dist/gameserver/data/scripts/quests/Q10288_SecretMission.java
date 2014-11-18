@@ -101,7 +101,6 @@ public class Q10288_SecretMission extends Quest implements ScriptFile
 						{
 							htmltext = "31350-00.htm";
 						}
-						
 						break;
 					
 					case STARTED:
@@ -113,7 +112,6 @@ public class Q10288_SecretMission extends Quest implements ScriptFile
 						{
 							htmltext = "31350-07.htm";
 						}
-						
 						break;
 					
 					case COMPLETED:

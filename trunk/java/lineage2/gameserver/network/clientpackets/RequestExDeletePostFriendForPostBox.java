@@ -60,7 +60,7 @@ public class RequestExDeletePostFriendForPostBox extends L2GameClientPacket
 		
 		for (IntObjectMap.Entry<String> entry : postFriends.entrySet())
 		{
-			if (entry.getValue().equalsIgnoreCase(_name))
+			if (entry.getValue().equals(_name))
 			{
 				key = entry.getKey();
 			}

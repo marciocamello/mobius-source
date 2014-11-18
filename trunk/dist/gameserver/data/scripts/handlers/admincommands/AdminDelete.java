@@ -73,7 +73,6 @@ public class AdminDelete implements IAdminCommandHandler, ScriptFile
 				{
 					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
 				}
-				
 				break;
 		}
 		

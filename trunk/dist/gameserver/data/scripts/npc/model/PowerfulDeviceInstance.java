@@ -250,49 +250,42 @@ public final class PowerfulDeviceInstance extends NpcInstance
 				{
 					return true;
 				}
-				
 				break;
 			case 33398:
 				if ((oldId == 88) || (oldId == 89) || (oldId == 113) || (oldId == 114) || (oldId == 118) || (oldId == 131))
 				{
 					return true;
 				}
-				
 				break;
 			case 33399:
 				if ((oldId == 93) || (oldId == 101) || (oldId == 108) || (oldId == 117))
 				{
 					return true;
 				}
-				
 				break;
 			case 33400:
 				if ((oldId == 92) || (oldId == 102) || (oldId == 109) || (oldId == 134))
 				{
 					return true;
 				}
-				
 				break;
 			case 33401:
 				if ((oldId == 94) || (oldId == 95) || (oldId == 103) || (oldId == 110) || (oldId == 132) || (oldId == 133))
 				{
 					return true;
 				}
-				
 				break;
 			case 33402:
 				if ((oldId == 98) || (oldId == 116) || (oldId == 115) || (oldId == 100) || (oldId == 107) || (oldId == 136))
 				{
 					return true;
 				}
-				
 				break;
 			case 33403:
 				if ((oldId == 96) || (oldId == 104) || (oldId == 111))
 				{
 					return true;
 				}
-				
 				break;
 			case 33404:
 				if ((oldId == 97) || (oldId == 105) || (oldId == 112))

@@ -148,7 +148,6 @@ public final class Kechi extends DefaultAI
 					spawnMobs();
 					return true;
 				}
-				
 				break;
 			
 			case 1:
@@ -157,7 +156,6 @@ public final class Kechi extends DefaultAI
 					spawnMobs();
 					return true;
 				}
-				
 				break;
 			
 			case 2:
@@ -166,7 +164,6 @@ public final class Kechi extends DefaultAI
 					spawnMobs();
 					return true;
 				}
-				
 				break;
 			
 			case 3:
@@ -175,7 +172,6 @@ public final class Kechi extends DefaultAI
 					spawnMobs();
 					return true;
 				}
-				
 				break;
 			
 			case 4:
@@ -184,7 +180,6 @@ public final class Kechi extends DefaultAI
 					spawnMobs();
 					return true;
 				}
-				
 				break;
 			
 			case 5:
@@ -193,7 +188,6 @@ public final class Kechi extends DefaultAI
 					spawnMobs();
 					return true;
 				}
-				
 				break;
 			
 			case 6:
@@ -202,7 +196,6 @@ public final class Kechi extends DefaultAI
 					spawnMobs();
 					return true;
 				}
-				
 				break;
 		}
 		

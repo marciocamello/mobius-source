@@ -132,7 +132,6 @@ public final class Cocktails extends SimpleItemHandler
 					player.broadcastPacket(new MagicSkillUse(player, player, skill, 1, 0, 0));
 					player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(skill, 1));
 				}
-				
 				break;
 			
 			case 10179:
@@ -143,7 +142,6 @@ public final class Cocktails extends SimpleItemHandler
 					player.broadcastPacket(new MagicSkillUse(player, player, skill, 1, 0, 0));
 					player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(skill, 1));
 				}
-				
 				break;
 			
 			case 32316:
@@ -154,7 +152,6 @@ public final class Cocktails extends SimpleItemHandler
 					player.broadcastPacket(new MagicSkillUse(player, player, skill, 1, 0, 0));
 					player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(skill, 1));
 				}
-				
 				break;
 			
 			case 14739:
@@ -166,7 +163,6 @@ public final class Cocktails extends SimpleItemHandler
 					player.broadcastPacket(new MagicSkillUse(player, player, skill, 1, 0, 0));
 					player.altOnMagicUseTimer(player, SkillTable.getInstance().getInfo(skill, 1));
 				}
-				
 				break;
 			
 			default:

@@ -82,7 +82,6 @@ public final class NpcFriendInstance extends MerchantInstance
 				{
 					filename = "npc_friend/" + getId() + ".htm";
 				}
-				
 				break;
 			
 			case 31379:
@@ -94,7 +93,6 @@ public final class NpcFriendInstance extends MerchantInstance
 				{
 					filename = "npc_friend/" + getId() + ".htm";
 				}
-				
 				break;
 			
 			case 31374:
@@ -106,7 +104,6 @@ public final class NpcFriendInstance extends MerchantInstance
 				{
 					filename = "npc_friend/" + getId() + ".htm";
 				}
-				
 				break;
 			
 			case 31381:
@@ -118,7 +115,6 @@ public final class NpcFriendInstance extends MerchantInstance
 				{
 					filename = "npc_friend/" + getId() + ".htm";
 				}
-				
 				break;
 			
 			case 31375:
@@ -134,7 +130,6 @@ public final class NpcFriendInstance extends MerchantInstance
 				{
 					filename = "npc_friend/" + getId() + ".htm";
 				}
-				
 				break;
 			
 			case 31382:
@@ -150,7 +145,6 @@ public final class NpcFriendInstance extends MerchantInstance
 				{
 					filename = "npc_friend/" + getId() + ".htm";
 				}
-				
 				break;
 			
 			case 31376:
@@ -166,7 +160,6 @@ public final class NpcFriendInstance extends MerchantInstance
 				{
 					filename = "npc_friend/" + getId() + ".htm";
 				}
-				
 				break;
 			
 			case 31383:
@@ -182,7 +175,6 @@ public final class NpcFriendInstance extends MerchantInstance
 				{
 					filename = "npc_friend/" + getId() + ".htm";
 				}
-				
 				break;
 			
 			case 31555:
@@ -198,7 +190,6 @@ public final class NpcFriendInstance extends MerchantInstance
 				{
 					filename = "npc_friend/" + getId() + ".htm";
 				}
-				
 				break;
 			
 			case 31556:
@@ -210,6 +201,7 @@ public final class NpcFriendInstance extends MerchantInstance
 				{
 					filename = "npc_friend/" + getId() + ".htm";
 				}
+				break;
 		}
 		
 		showChatWindow(player, filename);
@@ -228,17 +220,17 @@ public final class NpcFriendInstance extends MerchantInstance
 			return;
 		}
 		
-		StringTokenizer st = new StringTokenizer(command, " ");
-		String actualCommand = st.nextToken();
+		final StringTokenizer st = new StringTokenizer(command, " ");
+		final String actualCommand = st.nextToken();
 		
-		if (actualCommand.equalsIgnoreCase("Buff"))
+		if (actualCommand.equals("Buff"))
 		{
 			if (st.countTokens() < 1)
 			{
 				return;
 			}
 			
-			int val = Integer.parseInt(st.nextToken());
+			final int val = Integer.parseInt(st.nextToken());
 			int item = 0;
 			
 			switch (getId())
@@ -322,27 +314,19 @@ public final class NpcFriendInstance extends MerchantInstance
 		}
 		else if (command.startsWith("Chat"))
 		{
-			int val = Integer.parseInt(command.substring(5));
-			String fname = "";
-			fname = "npc_friend/" + getId() + "-" + val + ".htm";
-			
-			if (!fname.equals(""))
-			{
-				showChatWindow(player, fname);
-			}
+			showChatWindow(player, "npc_friend/" + getId() + "-" + Integer.parseInt(command.substring(5)) + ".htm");
 		}
 		else if (command.startsWith("Buy"))
 		{
-			int val = Integer.parseInt(command.substring(4));
-			showShopWindow(player, val, false);
+			showShopWindow(player, Integer.parseInt(command.substring(4)), false);
 		}
-		else if (actualCommand.equalsIgnoreCase("Sell"))
+		else if (actualCommand.equals("Sell"))
 		{
 			showShopWindow(player);
 		}
 		else if (command.startsWith("WithdrawP"))
 		{
-			int val = Integer.parseInt(command.substring(10));
+			final int val = Integer.parseInt(command.substring(10));
 			
 			if (val == 99)
 			{

@@ -444,7 +444,7 @@ class MuseumManager
 			{
 				int category = Integer.parseInt(information[2]);
 				
-				if ((getTopMuseum(category) != null) && information[0].equalsIgnoreCase("monthly"))
+				if ((getTopMuseum(category) != null) && information[0].equals("monthly"))
 				{
 					museum = getTopMuseum(category);
 					

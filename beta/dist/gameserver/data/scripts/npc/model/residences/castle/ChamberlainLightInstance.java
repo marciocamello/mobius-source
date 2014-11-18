@@ -274,7 +274,6 @@ public final class ChamberlainLightInstance extends ResidenceManager
 					{
 						player.sendPacket(new ExShowSeedInfo(castleId, ResidenceHolder.getInstance().getResidence(Castle.class, castleId).getSeedProduction(time)));
 					}
-					
 					break;
 				
 				case 4: // Current crops (Manor info)
@@ -286,7 +285,6 @@ public final class ChamberlainLightInstance extends ResidenceManager
 					{
 						player.sendPacket(new ExShowCropInfo(castleId, ResidenceHolder.getInstance().getResidence(Castle.class, castleId).getCropProcure(time)));
 					}
-					
 					break;
 				
 				case 5: // Basic info (Manor info)
@@ -302,7 +300,6 @@ public final class ChamberlainLightInstance extends ResidenceManager
 					{
 						player.sendPacket(new ExShowSeedSetting(castle.getId()));
 					}
-					
 					break;
 				
 				case 8: // Edit crop setup
@@ -314,7 +311,6 @@ public final class ChamberlainLightInstance extends ResidenceManager
 					{
 						player.sendPacket(new ExShowCropSetting(castle.getId()));
 					}
-					
 					break;
 			}
 		}
@@ -767,7 +763,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 		
 		switch (type)
 		{
-			case 1: // Главные ворота
+			case 1:
 				switch (level)
 				{
 					case 2:
@@ -785,7 +781,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 				
 				break;
 			
-			case 2: // Внутренние ворота
+			case 2:
 				switch (level)
 				{
 					case 2:
@@ -800,10 +796,9 @@ public final class ChamberlainLightInstance extends ResidenceManager
 						price = 1000000;
 						break;
 				}
-				
 				break;
 			
-			case 3: // Стены
+			case 3:
 				switch (level)
 				{
 					case 2:
@@ -818,7 +813,6 @@ public final class ChamberlainLightInstance extends ResidenceManager
 						price = 2000000;
 						break;
 				}
-				
 				break;
 		}
 		

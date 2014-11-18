@@ -50,7 +50,7 @@ public final class ClanTraderInstance extends NpcInstance
 		
 		NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 		
-		if (command.equalsIgnoreCase("crp"))
+		if (command.equals("crp"))
 		{
 			if ((player.getClan() != null) && (player.getClan().getLevel() > 4))
 			{

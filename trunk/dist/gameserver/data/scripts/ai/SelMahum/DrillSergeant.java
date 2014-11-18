@@ -74,7 +74,6 @@ public final class DrillSergeant extends Fighter
 								mob.broadcastPacket(new SocialAction(mob.getObjectId(), 7));
 							}
 						}
-						
 						break;
 					
 					case 2:
@@ -87,7 +86,6 @@ public final class DrillSergeant extends Fighter
 								mob.broadcastPacket(new SocialAction(mob.getObjectId(), 4));
 							}
 						}
-						
 						break;
 					
 					case 3:
@@ -100,7 +98,6 @@ public final class DrillSergeant extends Fighter
 								mob.broadcastPacket(new SocialAction(mob.getObjectId(), 5));
 							}
 						}
-						
 						break;
 				}
 			}

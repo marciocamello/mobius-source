@@ -445,17 +445,17 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 			return _oldOwner != null;
 		}
 		
-		if (name.equalsIgnoreCase("reinforce_1"))
+		if (name.equals("reinforce_1"))
 		{
 			return getResidence().getFacilityLevel(Fortress.REINFORCE) == 1;
 		}
 		
-		if (name.equalsIgnoreCase("reinforce_2"))
+		if (name.equals("reinforce_2"))
 		{
 			return getResidence().getFacilityLevel(Fortress.REINFORCE) == 2;
 		}
 		
-		if (name.equalsIgnoreCase("dwarvens"))
+		if (name.equals("dwarvens"))
 		{
 			return getResidence().getFacilityLevel(Fortress.DWARVENS) == 1;
 		}

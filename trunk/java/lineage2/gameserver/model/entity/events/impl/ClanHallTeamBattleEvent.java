@@ -273,7 +273,6 @@ public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanOb
 					int index = objectList.indexOf(attackerClan);
 					loc = teleportList.get(index);
 				}
-				
 				break;
 			
 			default:
@@ -291,7 +290,7 @@ public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanOb
 	@Override
 	public void action(String name, boolean start)
 	{
-		if (name.equalsIgnoreCase(NEXT_STEP))
+		if (name.equals(NEXT_STEP))
 		{
 			nextStep();
 		}

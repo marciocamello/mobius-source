@@ -89,7 +89,6 @@ public final class Bronk extends Dwarvs
 					final NpcInstance torocco = list.get(0);
 					torocco.getAI().notifyEvent(CtrlEvent.EVT_SCRIPT_EVENT, "TOROCCO_1");
 				}
-				
 				break;
 			
 			case 2:

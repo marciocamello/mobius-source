@@ -499,7 +499,6 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getId(), 2, player);
 				}
-				
 				break;
 			
 			case 32300:
@@ -523,7 +522,6 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getId(), 7, player);
 				}
-				
 				break;
 			
 			case 32297:
@@ -535,7 +533,6 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getId(), 1, player);
 				}
-				
 				break;
 			
 			case 32354:
@@ -563,7 +560,6 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getId(), 8, player);
 				}
-				
 				break;
 			
 			case 32345:
@@ -587,7 +583,6 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getId(), 1, player);
 				}
-				
 				break;
 			
 			case 32355:
@@ -599,7 +594,6 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getId(), 0, player);
 				}
-				
 				break;
 			
 			case 32298:
@@ -623,7 +617,6 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getId(), 8, player);
 				}
-				
 				break;
 			
 			case 32364:
@@ -635,7 +628,6 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getId(), 6, player);
 				}
-				
 				break;
 			
 			case 32357:
@@ -651,7 +643,6 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getId(), 0, player);
 				}
-				
 				break;
 			
 			case 32346:
@@ -663,7 +654,6 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getId(), 3, player);
 				}
-				
 				break;
 			
 			case 32313:
@@ -675,7 +665,6 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getId(), 2, player);
 				}
-				
 				break;
 			
 			case 32302:
@@ -687,7 +676,6 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getId(), 3, player);
 				}
-				
 				break;
 			
 			case 32373:
@@ -699,7 +687,6 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getId(), 3, player);
 				}
-				
 				break;
 		}
 		
@@ -768,7 +755,6 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					return true;
 				}
-				
 				break;
 			
 			case 2:
@@ -776,7 +762,6 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					return true;
 				}
-				
 				break;
 			
 			case 3:
@@ -784,7 +769,6 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					return true;
 				}
-				
 				break;
 			
 			case 4:
@@ -792,7 +776,6 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					return true;
 				}
-				
 				break;
 			
 			default:

@@ -306,7 +306,7 @@ public class ClanTable
 		
 		for (Clan clan : _clans.values())
 		{
-			if (clan.getName().equalsIgnoreCase(clanName))
+			if (clan.getName().equals(clanName))
 			{
 				return clan;
 			}
@@ -329,7 +329,7 @@ public class ClanTable
 		
 		for (Alliance ally : _alliances.values())
 		{
-			if (ally.getAllyName().equalsIgnoreCase(allyName))
+			if (ally.getAllyName().equals(allyName))
 			{
 				return ally;
 			}

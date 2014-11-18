@@ -89,7 +89,6 @@ public final class AdminClientSupport implements IAdminCommandHandler, ScriptFil
 					_log.info("AdminClientSupport:useAdminCommand(Enum,String[],String,L2Player): " + e, e);
 					return false;
 				}
-				
 				break;
 			
 			case "admin_summon":
@@ -167,7 +166,6 @@ public final class AdminClientSupport implements IAdminCommandHandler, ScriptFil
 					_log.info("AdminClientSupport:useAdminCommand(Enum,String[],String,L2Player): " + e, e);
 					return false;
 				}
-				
 				break;
 		}
 		

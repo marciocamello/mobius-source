@@ -709,7 +709,6 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 						giveItem(Bl_Wyrm_Eggs, 10, qs);
 						break;
 				}
-				
 				break;
 			
 			case 5:
@@ -754,7 +753,6 @@ public class Q00503_PursuitOfClanAmbition extends Quest implements ScriptFile
 						setLeaderVar(qs, "ImpGraveKeeper", "3");
 						break;
 				}
-				
 				break;
 		}
 		

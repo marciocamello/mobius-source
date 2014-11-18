@@ -55,11 +55,11 @@ public final class WyvernManagerInstance extends NpcInstance
 			return;
 		}
 		
-		StringTokenizer st = new StringTokenizer(command, " ");
-		String actualCommand = st.nextToken();
-		boolean condition = validateCondition(player);
+		final StringTokenizer st = new StringTokenizer(command, " ");
+		final String actualCommand = st.nextToken();
+		final boolean condition = validateCondition(player);
 		
-		if (actualCommand.equalsIgnoreCase("RideHelp"))
+		if (actualCommand.equals("RideHelp"))
 		{
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile("wyvern/help_ride.htm");
@@ -70,7 +70,7 @@ public final class WyvernManagerInstance extends NpcInstance
 		
 		if (condition)
 		{
-			if (actualCommand.equalsIgnoreCase("RideWyvern") && player.isClanLeader())
+			if (actualCommand.equals("RideWyvern") && player.isClanLeader())
 			{
 				if (!player.isRiding() || !PetDataTable.isStrider(player.getMountNpcId()))
 				{
@@ -138,41 +138,23 @@ public final class WyvernManagerInstance extends NpcInstance
 	{
 		Residence residence = getCastle();
 		
-		if ((residence != null) && (residence.getId() > 0))
+		if ((residence != null) && (residence.getId() > 0) && (player.getClan() != null) && ((residence.getOwnerId() == player.getClanId()) && player.isClanLeader()))
 		{
-			if (player.getClan() != null)
-			{
-				if ((residence.getOwnerId() == player.getClanId()) && player.isClanLeader())
-				{
-					return true;
-				}
-			}
+			return true;
 		}
 		
 		residence = getFortress();
 		
-		if ((residence != null) && (residence.getId() > 0))
+		if ((residence != null) && (residence.getId() > 0) && (player.getClan() != null) && ((residence.getOwnerId() == player.getClanId()) && player.isClanLeader()))
 		{
-			if (player.getClan() != null)
-			{
-				if ((residence.getOwnerId() == player.getClanId()) && player.isClanLeader())
-				{
-					return true;
-				}
-			}
+			return true;
 		}
 		
 		residence = getClanHall();
 		
-		if ((residence != null) && (residence.getId() > 0))
+		if ((residence != null) && (residence.getId() > 0) && (player.getClan() != null) && ((residence.getOwnerId() == player.getClanId()) && player.isClanLeader()))
 		{
-			if (player.getClan() != null)
-			{
-				if ((residence.getOwnerId() == player.getClanId()) && player.isClanLeader())
-				{
-					return true;
-				}
-			}
+			return true;
 		}
 		
 		return false;

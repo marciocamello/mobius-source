@@ -138,7 +138,6 @@ public final class FortuneBug extends DefaultAI
 						{
 							i_ai2 = 1;
 						}
-						
 						break;
 					
 					case 2:
@@ -154,7 +153,6 @@ public final class FortuneBug extends DefaultAI
 						{
 							i_ai2 = 2;
 						}
-						
 						break;
 					
 					case 3:
@@ -166,7 +164,6 @@ public final class FortuneBug extends DefaultAI
 						{
 							i_ai2 = 3;
 						}
-						
 						break;
 					
 					case 4:
@@ -178,7 +175,6 @@ public final class FortuneBug extends DefaultAI
 						{
 							i_ai2 = 4;
 						}
-						
 						break;
 				}
 				
@@ -291,7 +287,6 @@ public final class FortuneBug extends DefaultAI
 					{
 						actor.dropItem(killer.getPlayer(), ItemName_B_4, 1);
 					}
-					
 					break;
 			}
 		}

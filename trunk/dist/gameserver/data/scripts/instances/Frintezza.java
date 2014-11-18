@@ -673,7 +673,6 @@ public final class Frintezza extends Reflection
 						{
 							pc.leaveMovieMode();
 						}
-						
 						break;
 				}
 			}
@@ -888,7 +887,6 @@ public final class Frintezza extends Reflection
 						_scarletMorph = 2;
 						ThreadPoolManager.getInstance().schedule(new SecondMorph(1), 1100);
 					}
-					
 					break;
 				
 				case 2:
@@ -897,7 +895,6 @@ public final class Frintezza extends Reflection
 						_scarletMorph = 3;
 						ThreadPoolManager.getInstance().schedule(new ThirdMorph(1), 2000);
 					}
-					
 					break;
 			}
 		}

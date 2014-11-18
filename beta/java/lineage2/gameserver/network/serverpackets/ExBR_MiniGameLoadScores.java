@@ -51,7 +51,7 @@ public class ExBR_MiniGameLoadScores extends L2GameServerPacket
 					_entries.put(i, set = new ArrayList<>());
 				}
 				
-				if (name.equalsIgnoreCase(player.getName()))
+				if (name.equals(player.getName()))
 				{
 					if (entry.getKey() > lastBig)
 					{

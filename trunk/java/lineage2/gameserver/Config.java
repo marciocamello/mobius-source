@@ -2235,7 +2235,7 @@ public class Config
 			{
 				for (Node n = nod.getFirstChild(); n != null; n = n.getNextSibling())
 				{
-					if (!n.getNodeName().equalsIgnoreCase("access"))
+					if (!n.getNodeName().equals("access"))
 					{
 						continue;
 					}
@@ -2247,7 +2247,7 @@ public class Config
 						Class<?> cls = access.getClass();
 						String node = d.getNodeName();
 						
-						if (node.equalsIgnoreCase("#text"))
+						if (node.equals("#text"))
 						{
 							continue;
 						}
@@ -2262,11 +2262,11 @@ public class Config
 							continue;
 						}
 						
-						if (field.getType().getName().equalsIgnoreCase("boolean"))
+						if (field.getType().getName().equals("boolean"))
 						{
 							field.setBoolean(access, Boolean.parseBoolean(d.getAttributes().getNamedItem("set").getNodeValue()));
 						}
-						else if (field.getType().getName().equalsIgnoreCase("int"))
+						else if (field.getType().getName().equals("int"))
 						{
 							field.setInt(access, Integer.valueOf(d.getAttributes().getNamedItem("set").getNodeValue()));
 						}

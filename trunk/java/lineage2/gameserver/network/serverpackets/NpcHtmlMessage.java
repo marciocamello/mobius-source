@@ -55,7 +55,7 @@ public class NpcHtmlMessage extends L2GameServerPacket
 		{
 			have_appends = true;
 			
-			if ((filename != null) && filename.equalsIgnoreCase("npcdefault.htm"))
+			if ((filename != null) && filename.equals("npcdefault.htm"))
 			{
 				setHtml(""); // content is defined through scripts DialogAppend_
 			}

@@ -76,7 +76,6 @@ public final class DoormanInstance extends npc.model.residences.DoormanInstance
 						ReflectionUtils.getDoor(i).closeMe(player, true);
 					}
 				}
-				
 				break;
 			
 			case COND_SIEGE:
@@ -84,7 +83,6 @@ public final class DoormanInstance extends npc.model.residences.DoormanInstance
 				{
 					player.teleToLocation(_loc);
 				}
-				
 				break;
 			
 			case COND_FAIL:

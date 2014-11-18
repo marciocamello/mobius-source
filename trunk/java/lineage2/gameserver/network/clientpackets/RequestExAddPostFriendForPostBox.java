@@ -60,7 +60,7 @@ public class RequestExAddPostFriendForPostBox extends L2GameClientPacket
 			return;
 		}
 		
-		if (_name.equalsIgnoreCase(player.getName()))
+		if (_name.equals(player.getName()))
 		{
 			player.sendPacket(new ExConfirmAddingPostFriend(_name, ExConfirmAddingPostFriend.NAME_IS_NOT_REGISTERED));
 			return;

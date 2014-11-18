@@ -130,7 +130,6 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 					}
 					activeChar.sendMessage(activeChar.getName() + " is now invisible.");
 				}
-				
 				break;
 			
 			case "admin_gmspeed":
@@ -184,7 +183,6 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				{
 					activeChar.sendMessage("USAGE: //gmspeed value=[0..4]");
 				}
-				
 				break;
 			
 			case "admin_invul":
@@ -201,7 +199,6 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				{
 					activeChar.unsetVar("gm_invul");
 				}
-				
 				break;
 			
 			default:
@@ -225,7 +222,6 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 						player.spawnMe();
 					}
 				}
-				
 				break;
 			
 			case "admin_offline_invis":
@@ -237,7 +233,6 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 						player.decayMe();
 					}
 				}
-				
 				break;
 			
 			case "admin_earthquake":
@@ -252,7 +247,6 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 					activeChar.sendMessage("USAGE: //earthquake intensity duration");
 					return false;
 				}
-				
 				break;
 			
 			case "admin_block":
@@ -329,7 +323,6 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				{
 					activeChar.sendMessage("Target " + target.getName() + "(object ID: " + target.getObjectId() + ") is " + (!((Creature) target).isInvul() ? "NOT " : "") + "invul");
 				}
-				
 				break;
 			
 			case "admin_social":
@@ -358,7 +351,6 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				{
 					((Creature) target).broadcastPacket(new SocialAction(target.getObjectId(), val));
 				}
-				
 				break;
 			
 			case "admin_abnormal":
@@ -398,7 +390,6 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 						effectTarget.sendMessage("Added abnormal effect: " + ae.getName());
 					}
 				}
-				
 				break;
 			
 			case "admin_effect":
@@ -442,7 +433,6 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 					((Creature) target).broadcastPacket(new MagicSkillUse(((Creature) target), activeChar, Integer.valueOf(Skill), Integer.valueOf(level), Integer.valueOf(hittime), 0));
 					activeChar.sendMessage(((Creature) target).getName() + " performs MSU " + Skill + "/" + level + " by your request.");
 				}
-				
 				break;
 			
 			case "admin_removereuse":

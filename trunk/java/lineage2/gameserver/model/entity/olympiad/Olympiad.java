@@ -140,7 +140,6 @@ public class Olympiad
 				{
 					_isOlympiadEnd = false;
 				}
-				
 				break;
 			
 			case 1:
@@ -377,7 +376,6 @@ public class Olympiad
 					validPlayer.sendPacket(SystemMsg.THE_TOTAL_NUMBER_OF_MATCHES_THAT_CAN_BE_ENTERED_IN_1_WEEK_IS_60_CLASS_IRRELEVANT_INDIVIDUAL_MATCHES_30_SPECIFIC_MATCHES_AND_10_TEAM_MATCHES);
 					return false;
 				}
-				
 				break;
 			
 			case NON_CLASSED:
@@ -392,7 +390,6 @@ public class Olympiad
 					validPlayer.sendPacket(SystemMsg.THE_TOTAL_NUMBER_OF_MATCHES_THAT_CAN_BE_ENTERED_IN_1_WEEK_IS_60_CLASS_IRRELEVANT_INDIVIDUAL_MATCHES_30_SPECIFIC_MATCHES_AND_10_TEAM_MATCHES);
 					return false;
 				}
-				
 				break;
 			
 			default:

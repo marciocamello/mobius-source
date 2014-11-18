@@ -452,7 +452,6 @@ public final class EnchantCommunity extends Functions implements ScriptFile, ICo
 				{
 					return false;
 				}
-				
 				break;
 			
 			case 1:
@@ -460,7 +459,6 @@ public final class EnchantCommunity extends Functions implements ScriptFile, ICo
 				{
 					return false;
 				}
-				
 				break;
 			
 			case 2:
@@ -468,7 +466,6 @@ public final class EnchantCommunity extends Functions implements ScriptFile, ICo
 				{
 					return false;
 				}
-				
 				break;
 			
 			case 3:
@@ -476,7 +473,6 @@ public final class EnchantCommunity extends Functions implements ScriptFile, ICo
 				{
 					return false;
 				}
-				
 				break;
 			
 			case 4:
@@ -484,7 +480,6 @@ public final class EnchantCommunity extends Functions implements ScriptFile, ICo
 				{
 					return false;
 				}
-				
 				break;
 			
 			case 5:
@@ -492,7 +487,6 @@ public final class EnchantCommunity extends Functions implements ScriptFile, ICo
 				{
 					return false;
 				}
-				
 				break;
 		}
 		

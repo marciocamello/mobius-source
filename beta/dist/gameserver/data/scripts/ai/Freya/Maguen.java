@@ -108,7 +108,6 @@ public final class Maguen extends Fighter
 					{
 						actor.doCast(SkillTable.getInstance().getInfo(maguenStatsSkills[0], Rnd.get(1, 2)), caster, true);
 					}
-					
 					break;
 				
 				case 2:
@@ -120,7 +119,6 @@ public final class Maguen extends Fighter
 					{
 						actor.doCast(SkillTable.getInstance().getInfo(maguenStatsSkills[1], Rnd.get(1, 2)), caster, true);
 					}
-					
 					break;
 				
 				case 3:
@@ -132,7 +130,6 @@ public final class Maguen extends Fighter
 					{
 						actor.doCast(SkillTable.getInstance().getInfo(maguenStatsSkills[2], Rnd.get(1, 2)), caster, true);
 					}
-					
 					break;
 				
 				default:

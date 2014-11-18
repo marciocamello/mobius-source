@@ -100,7 +100,6 @@ public class AdminScripts implements IAdminCommandHandler, ScriptFile
 				{
 					activeChar.sendMessage("Script(s) successfully reloaded.");
 				}
-				
 				break;
 			
 			case "admin_sqreload":

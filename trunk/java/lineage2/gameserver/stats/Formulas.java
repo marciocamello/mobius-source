@@ -728,7 +728,6 @@ public class Formulas
 				{
 					chance = 3.0;
 				}
-				
 				break;
 			
 			default:

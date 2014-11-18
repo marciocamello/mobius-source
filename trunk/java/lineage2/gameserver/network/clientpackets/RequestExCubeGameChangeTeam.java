@@ -70,7 +70,6 @@ public final class RequestExCubeGameChangeTeam extends L2GameClientPacket
 				{
 					HandysBlockCheckerManager.getInstance().removePlayer(activeChar, _arena, team);
 				}
-				
 				break;
 			}
 			

@@ -199,7 +199,7 @@ public class KrateisCubeRunnerEvent extends GlobalEvent
 	@Override
 	public void action(String name, boolean start)
 	{
-		if (name.equalsIgnoreCase(REGISTRATION))
+		if (name.equals(REGISTRATION))
 		{
 			_isRegistrationOver = !start;
 		}

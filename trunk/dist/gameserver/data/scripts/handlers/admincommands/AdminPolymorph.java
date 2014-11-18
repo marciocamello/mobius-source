@@ -83,7 +83,6 @@ public class AdminPolymorph implements IAdminCommandHandler, ScriptFile
 					activeChar.sendMessage("USAGE: //poly id [type:npc|item]");
 					return false;
 				}
-				
 				break;
 			
 			case "admin_unpolyself":

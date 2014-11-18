@@ -77,7 +77,6 @@ public final class Util extends Functions
 						show("teleporter/30483-no.htm", player);
 						return;
 					}
-					
 					break;
 				
 				case 32864:
@@ -92,7 +91,6 @@ public final class Util extends Functions
 						show("teleporter/" + npcId + "-no.htm", player);
 						return;
 					}
-					
 					break;
 			}
 		}

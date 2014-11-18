@@ -61,7 +61,6 @@ public class AdminKill implements IAdminCommandHandler, ScriptFile
 				{
 					handleKill(activeChar, wordList[1]);
 				}
-				
 				break;
 			
 			case "admin_damage":

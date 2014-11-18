@@ -113,7 +113,7 @@ public class RequestExSendPost extends L2GameClientPacket
 			return;
 		}
 		
-		if (activeChar.isGM() && _recieverName.equalsIgnoreCase("ONLINE_ALL"))
+		if (activeChar.isGM() && _recieverName.equals("ONLINE_ALL"))
 		{
 			Map<Integer, Long> map = new HashMap<>();
 			
@@ -170,7 +170,7 @@ public class RequestExSendPost extends L2GameClientPacket
 			return;
 		}
 		
-		if (activeChar.getName().equalsIgnoreCase(_recieverName))
+		if (activeChar.getName().equals(_recieverName))
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_SEND_A_MAIL_TO_YOURSELF));
 			return;

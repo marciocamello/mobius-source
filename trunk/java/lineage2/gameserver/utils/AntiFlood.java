@@ -120,7 +120,7 @@ public class AntiFlood
 			itr.advance();
 			lastSent = itr.value();
 			
-			if ((currentMillis - lastSent) < (text.equalsIgnoreCase(_lastText) ? 600000L : 60000L))
+			if ((currentMillis - lastSent) < (text.equals(_lastText) ? 600000L : 60000L))
 			{
 				recent++;
 			}

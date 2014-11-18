@@ -103,7 +103,7 @@ public class Faction
 	 */
 	public boolean equals(Faction faction)
 	{
-		if (isNone() || !faction.getName().equalsIgnoreCase(factionId))
+		if (isNone() || !faction.getName().equals(factionId))
 		{
 			return false;
 		}

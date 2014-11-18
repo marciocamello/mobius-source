@@ -654,7 +654,6 @@ public final class FourSepulchersSpawn extends Functions implements ScriptFile
 								spawnKeyBoxMob = true;
 								spawnedKeyBoxMob = true;
 							}
-							
 							break;
 					}
 				}

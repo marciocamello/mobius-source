@@ -114,7 +114,6 @@ public class AdminSkill implements IAdminCommandHandler, ScriptFile
 				{
 					activeChar.sendPacket(new NpcHtmlMessage(5).setFile("admin/skills/" + wordList[1] + ".htm"));
 				}
-				
 				break;
 			
 			case "admin_add_skill":

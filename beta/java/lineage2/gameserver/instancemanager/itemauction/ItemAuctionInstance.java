@@ -218,7 +218,6 @@ public class ItemAuctionInstance
 						{
 							nextAuction = auctions[0];
 						}
-						
 						break;
 					}
 					
@@ -239,7 +238,6 @@ public class ItemAuctionInstance
 					default:
 						throw new IllegalArgumentException();
 				}
-				
 				break;
 			}
 			
@@ -286,7 +284,6 @@ public class ItemAuctionInstance
 				{
 					nextAuction = createAuction(System.currentTimeMillis() + START_TIME_SPACE);
 				}
-				
 				break;
 			}
 		}
@@ -413,7 +410,6 @@ public class ItemAuctionInstance
 								setStateTask(ThreadPoolManager.getInstance().schedule(this, Math.max(_auction.getEndingTime() - System.currentTimeMillis(), 0L)));
 								return;
 							}
-							
 							break;
 						}
 						
@@ -425,7 +421,6 @@ public class ItemAuctionInstance
 								setStateTask(ThreadPoolManager.getInstance().schedule(this, Math.max(_auction.getEndingTime() - System.currentTimeMillis(), 0L)));
 								return;
 							}
-							
 							break;
 						}
 					}

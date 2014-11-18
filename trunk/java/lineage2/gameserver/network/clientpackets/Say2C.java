@@ -272,7 +272,6 @@ public class Say2C extends L2GameClientPacket
 				{
 					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_BEEN_BLOCKED_FROM_THE_CONTACT_YOU_SELECTED), ActionFail.STATIC);
 				}
-				
 				break;
 			
 			case SHOUT:
@@ -389,7 +388,6 @@ public class Say2C extends L2GameClientPacket
 				{
 					activeChar.getClan().broadcastToOnlineMembers(cs);
 				}
-				
 				break;
 			
 			case ALLIANCE:
@@ -397,7 +395,6 @@ public class Say2C extends L2GameClientPacket
 				{
 					activeChar.getClan().getAlliance().broadcastToOnlineMembers(cs);
 				}
-				
 				break;
 			
 			case PARTY:
@@ -405,7 +402,6 @@ public class Say2C extends L2GameClientPacket
 				{
 					activeChar.getParty().broadCast(cs);
 				}
-				
 				break;
 			
 			case PARTY_ROOM:
@@ -415,7 +411,6 @@ public class Say2C extends L2GameClientPacket
 				{
 					r.broadCast(cs);
 				}
-				
 				break;
 			
 			case COMMANDCHANNEL_ALL:
@@ -433,7 +428,6 @@ public class Say2C extends L2GameClientPacket
 				{
 					activeChar.sendPacket(new SystemMessage(SystemMessage.ONLY_CHANNEL_OPENER_CAN_GIVE_ALL_COMMAND));
 				}
-				
 				break;
 			
 			case COMMANDCHANNEL_COMMANDER:
@@ -451,7 +445,6 @@ public class Say2C extends L2GameClientPacket
 				{
 					activeChar.sendPacket(new SystemMessage(SystemMessage.ONLY_A_PARTY_LEADER_CAN_ACCESS_THE_COMMAND_CHANNEL));
 				}
-				
 				break;
 			
 			case HERO_VOICE:
@@ -486,7 +479,6 @@ public class Say2C extends L2GameClientPacket
 						}
 					}
 				}
-				
 				break;
 			
 			case PETITION_PLAYER:
@@ -513,7 +505,6 @@ public class Say2C extends L2GameClientPacket
 						player.sendPacket(cs);
 					}
 				}
-				
 				break;
 			
 			case MPCC_ROOM:
@@ -523,7 +514,6 @@ public class Say2C extends L2GameClientPacket
 				{
 					r2.broadCast(cs);
 				}
-				
 				break;
 			
 			default:

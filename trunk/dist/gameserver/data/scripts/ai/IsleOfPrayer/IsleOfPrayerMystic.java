@@ -113,7 +113,6 @@ public final class IsleOfPrayerMystic extends Mystic
 						{
 							actor.dropItem(player, GREEN_CRYSTAL, 1);
 						}
-						
 						break;
 					
 					case 22265:
@@ -121,7 +120,6 @@ public final class IsleOfPrayerMystic extends Mystic
 						{
 							actor.dropItem(player, RED_CRYSTAL, 1);
 						}
-						
 						break;
 					
 					case 22260:
@@ -129,7 +127,6 @@ public final class IsleOfPrayerMystic extends Mystic
 						{
 							actor.dropItem(player, YELLOW_CRYSTAL, 1);
 						}
-						
 						break;
 					
 					case 22262:
@@ -137,7 +134,6 @@ public final class IsleOfPrayerMystic extends Mystic
 						{
 							actor.dropItem(player, GREEN_CRYSTAL, 1);
 						}
-						
 						break;
 					
 					case 22264:
@@ -145,7 +141,6 @@ public final class IsleOfPrayerMystic extends Mystic
 						{
 							actor.dropItem(player, GREEN_CRYSTAL, 1);
 						}
-						
 						break;
 					
 					case 22266:
@@ -153,7 +148,6 @@ public final class IsleOfPrayerMystic extends Mystic
 						{
 							actor.dropItem(player, RED_CRYSTAL, 1);
 						}
-						
 						break;
 					
 					case 22257:
@@ -161,7 +155,6 @@ public final class IsleOfPrayerMystic extends Mystic
 						{
 							actor.dropItem(player, YELLOW_CRYSTAL, 1);
 						}
-						
 						break;
 					
 					case 22258:
@@ -169,7 +162,6 @@ public final class IsleOfPrayerMystic extends Mystic
 						{
 							actor.dropItem(player, YELLOW_CRYSTAL, 1);
 						}
-						
 						break;
 				}
 			}

@@ -101,7 +101,7 @@ public class Config
 		
 		for (String method : Config.LEGACY_PASSWORD_HASH.split(";"))
 		{
-			if (!method.equalsIgnoreCase(Config.DEFAULT_PASSWORD_HASH))
+			if (!method.equals(Config.DEFAULT_PASSWORD_HASH))
 			{
 				legacy.add(new PasswordHash(method));
 			}
@@ -150,7 +150,7 @@ public class Config
 			{
 				Element node = (Element) itr.next();
 				
-				if (node.getName().equalsIgnoreCase("server"))
+				if (node.getName().equals("server"))
 				{
 					Integer id = Integer.valueOf(node.attributeValue("id"));
 					String name = node.attributeValue("name");

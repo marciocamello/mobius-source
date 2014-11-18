@@ -172,7 +172,7 @@ public class FishingChampionShipManager
 		{
 			for (Fisher fisher : _tmpPlayers)
 			{
-				if (fisher.getName().equalsIgnoreCase(pl.getName()))
+				if (fisher.getName().equals(pl.getName()))
 				{
 					if (fisher.getLength() < len)
 					{
@@ -193,7 +193,7 @@ public class FishingChampionShipManager
 		{
 			for (Fisher fisher : _tmpPlayers)
 			{
-				if (fisher.getName().equalsIgnoreCase(pl.getName()))
+				if (fisher.getName().equals(pl.getName()))
 				{
 					if (fisher.getLength() < len)
 					{
@@ -325,7 +325,7 @@ public class FishingChampionShipManager
 		
 		for (Fisher fisher : _winPlayers)
 		{
-			if (fisher._name.equalsIgnoreCase(pl.getName()))
+			if (fisher._name.equals(pl.getName()))
 			{
 				if (fisher.getRewardType() != 2)
 				{
@@ -333,7 +333,7 @@ public class FishingChampionShipManager
 					
 					for (int x = 0; x < _winPlayersName.size(); x++)
 					{
-						if (_winPlayersName.get(x).equalsIgnoreCase(pl.getName()))
+						if (_winPlayersName.get(x).equals(pl.getName()))
 						{
 							switch (x)
 							{

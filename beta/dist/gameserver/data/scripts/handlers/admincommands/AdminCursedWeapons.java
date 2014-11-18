@@ -66,7 +66,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler, ScriptFile
 			case "admin_cw_drop":
 				if (wordList.length < 2)
 				{
-					activeChar.sendMessage("Вы не указали id");
+					activeChar.sendMessage("You have not specified id.");
 					return false;
 				}
 				
@@ -80,10 +80,9 @@ public class AdminCursedWeapons implements IAdminCommandHandler, ScriptFile
 				
 				if (cw == null)
 				{
-					activeChar.sendMessage("�?еизве�?тный id");
+					activeChar.sendMessage("Unknown id.");
 					return false;
 				}
-				
 				break;
 			
 			default:
@@ -118,7 +117,6 @@ public class AdminCursedWeapons implements IAdminCommandHandler, ScriptFile
 						activeChar.sendMessage("  Don't exist in the world.");
 					}
 				}
-				
 				break;
 			
 			case "admin_cw_reload":
@@ -165,7 +163,6 @@ public class AdminCursedWeapons implements IAdminCommandHandler, ScriptFile
 						cwm.showUsageTime(player, cw);
 					}
 				}
-				
 				break;
 			
 			case "admin_cw_drop":
@@ -188,7 +185,6 @@ public class AdminCursedWeapons implements IAdminCommandHandler, ScriptFile
 						cw.create(null, player);
 					}
 				}
-				
 				break;
 		}
 		

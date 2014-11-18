@@ -441,7 +441,6 @@ public abstract class ItemTemplate extends StatTemplate
 				{
 					type2 = TYPE2_WEAPON;
 				}
-				
 				break;
 			
 			case TYPE2_PENDANT:

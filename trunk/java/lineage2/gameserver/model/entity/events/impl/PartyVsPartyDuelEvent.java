@@ -108,7 +108,6 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 				{
 					sendPacket(SystemMsg.THE_DUEL_HAS_ENDED_IN_A_TIE);
 				}
-				
 				break;
 		}
 		

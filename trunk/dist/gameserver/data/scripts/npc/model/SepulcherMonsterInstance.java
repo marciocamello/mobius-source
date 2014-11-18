@@ -222,7 +222,6 @@ public final class SepulcherMonsterInstance extends MonsterInstance
 					
 					_onDeadEventTask = ThreadPoolManager.getInstance().schedule(new OnDeadEvent(this), 3500);
 				}
-				
 				break;
 			
 			case 18220:
@@ -255,7 +254,6 @@ public final class SepulcherMonsterInstance extends MonsterInstance
 					
 					_onDeadEventTask = ThreadPoolManager.getInstance().schedule(new OnDeadEvent(this), 3500);
 				}
-				
 				break;
 		}
 	}

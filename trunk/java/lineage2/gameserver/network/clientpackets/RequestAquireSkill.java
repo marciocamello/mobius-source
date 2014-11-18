@@ -117,7 +117,6 @@ public class RequestAquireSkill extends L2GameClientPacket
 				{
 					trainer.showTransformationSkillList(player, AcquireType.TRANSFORMATION);
 				}
-				
 				break;
 			
 			case COLLECTION:
@@ -127,7 +126,6 @@ public class RequestAquireSkill extends L2GameClientPacket
 				{
 					BypassHandler.getInstance().getBypass("CollectionSkillList").onBypassFeedback(trainer, player, "CollectionSkillList");
 				}
-				
 				break;
 			
 			case TRANSFER_CARDINAL:
@@ -139,7 +137,6 @@ public class RequestAquireSkill extends L2GameClientPacket
 				{
 					BypassHandler.getInstance().getBypass("TransferSkillList").onBypassFeedback(trainer, player, "TransferSkillList");
 				}
-				
 				break;
 			
 			case FISHING:
@@ -149,7 +146,6 @@ public class RequestAquireSkill extends L2GameClientPacket
 				{
 					NpcInstance.showFishingSkillList(player);
 				}
-				
 				break;
 			
 			case CLAN:
@@ -173,7 +169,6 @@ public class RequestAquireSkill extends L2GameClientPacket
 				{
 					trainer.showTransformationSkillList(player, AcquireType.CERTIFICATION);
 				}
-				
 				break;
 			
 			case DUAL_CERTIFICATION:
@@ -189,7 +184,6 @@ public class RequestAquireSkill extends L2GameClientPacket
 				{
 					trainer.showTransformationSkillList(player, AcquireType.DUAL_CERTIFICATION);
 				}
-				
 				break;
 		}
 	}

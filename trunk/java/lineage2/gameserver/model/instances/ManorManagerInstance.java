@@ -143,7 +143,6 @@ public class ManorManagerInstance extends MerchantInstance
 						BuyListSeed bl = new BuyListSeed(tradeList, castleId, player.getAdena());
 						player.sendPacket(bl);
 					}
-					
 					break;
 				
 				case 2:
@@ -159,7 +158,6 @@ public class ManorManagerInstance extends MerchantInstance
 					{
 						player.sendPacket(new ExShowSeedInfo(castleId, ResidenceHolder.getInstance().getResidence(Castle.class, castleId).getSeedProduction(time)));
 					}
-					
 					break;
 				
 				case 4:
@@ -171,7 +169,6 @@ public class ManorManagerInstance extends MerchantInstance
 					{
 						player.sendPacket(new ExShowCropInfo(castleId, ResidenceHolder.getInstance().getResidence(Castle.class, castleId).getCropProcure(time)));
 					}
-					
 					break;
 				
 				case 5:

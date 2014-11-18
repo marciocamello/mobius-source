@@ -102,7 +102,6 @@ public final class ZakenNightly extends Fighter
 					r.addSpawnWithoutRespawn(pirates_zombie_captain_b, actor.getLoc(), 300);
 					_stage++;
 				}
-				
 				break;
 			
 			case 1:
@@ -111,7 +110,6 @@ public final class ZakenNightly extends Fighter
 					r.addSpawnWithoutRespawn(doll_blader_b, actor.getLoc(), 300);
 					_stage++;
 				}
-				
 				break;
 			
 			case 2:
@@ -121,7 +119,6 @@ public final class ZakenNightly extends Fighter
 					r.addSpawnWithoutRespawn(vale_master_b, actor.getLoc(), 300);
 					_stage++;
 				}
-				
 				break;
 			
 			case 3:
@@ -134,7 +131,6 @@ public final class ZakenNightly extends Fighter
 					
 					_stage++;
 				}
-				
 				break;
 			
 			case 4:
@@ -150,7 +146,6 @@ public final class ZakenNightly extends Fighter
 					
 					_stage++;
 				}
-				
 				break;
 			
 			case 5:
@@ -166,7 +161,6 @@ public final class ZakenNightly extends Fighter
 					
 					_stage++;
 				}
-				
 				break;
 			
 			case 6:
@@ -182,7 +176,6 @@ public final class ZakenNightly extends Fighter
 					
 					_stage++;
 				}
-				
 				break;
 			
 			default:

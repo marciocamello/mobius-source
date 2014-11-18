@@ -359,7 +359,6 @@ public abstract class Inventory extends ItemContainer
 					continue loop;
 				}
 			}
-			
 			break;
 		}
 		
@@ -581,7 +580,6 @@ public abstract class Inventory extends ItemContainer
 				{
 					pdollSlot = PAPERDOLL_REAR;
 				}
-				
 				break;
 			
 			case ItemTemplate.SLOT_L_FINGER:
@@ -607,7 +605,6 @@ public abstract class Inventory extends ItemContainer
 				{
 					pdollSlot = PAPERDOLL_RFINGER;
 				}
-				
 				break;
 			
 			case ItemTemplate.SLOT_HAIR:
@@ -713,7 +710,6 @@ public abstract class Inventory extends ItemContainer
 				{
 					pdollSlot = PAPERDOLL_DECO6;
 				}
-				
 				break;
 			
 			default:
@@ -841,7 +837,6 @@ public abstract class Inventory extends ItemContainer
 				{
 					setPaperdollItem(PAPERDOLL_LEAR, item);
 				}
-				
 				break;
 			}
 			
@@ -861,7 +856,6 @@ public abstract class Inventory extends ItemContainer
 				{
 					setPaperdollItem(PAPERDOLL_LFINGER, item);
 				}
-				
 				break;
 			}
 			
@@ -998,7 +992,6 @@ public abstract class Inventory extends ItemContainer
 				{
 					setPaperdollItem(PAPERDOLL_DECO1, item);
 				}
-				
 				break;
 			
 			case ItemTemplate.SLOT_FORMAL_WEAR:

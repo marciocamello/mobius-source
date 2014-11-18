@@ -1069,7 +1069,6 @@ public class MonsterInstance extends NpcInstance
 					
 					dropItem(activePlayer, drop.itemId, drop.count);
 				}
-				
 				break;
 		}
 	}

@@ -221,7 +221,6 @@ public final class DoorInstance extends Creature implements GeoCollision
 				{
 					return false;
 				}
-				
 				break;
 			
 			case DOOR:

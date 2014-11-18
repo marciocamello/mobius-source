@@ -65,7 +65,6 @@ public class ExShowSeedMapInfo extends L2GameServerPacket
 					{
 						writeD(2772);
 					}
-					
 					break;
 				
 				case 2: // Seed of Immortality
