@@ -36,7 +36,7 @@ public final class IzaelManagerInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("enter"))
+		if (command.equals("enter"))
 		{
 			Reflection r = player.getActiveReflection();
 			

@@ -218,7 +218,7 @@ public final class Rename extends Functions
 		
 		for (Entry<Integer, String> e : player.getAccountChars().entrySet())
 		{
-			if (e.getValue().equalsIgnoreCase(param[1]))
+			if (e.getValue().equals(param[1]))
 			{
 				newcharid = e.getKey();
 			}

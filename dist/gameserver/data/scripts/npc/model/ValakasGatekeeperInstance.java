@@ -50,7 +50,7 @@ public final class ValakasGatekeeperInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("request_passage"))
+		if (command.equals("request_passage"))
 		{
 			if (!ValakasManager.isEnableEnterToLair())
 			{
@@ -67,7 +67,7 @@ public final class ValakasGatekeeperInstance extends NpcInstance
 			player.teleToLocation(TELEPORT_POSITION1);
 			return;
 		}
-		else if (command.equalsIgnoreCase("request_valakas"))
+		else if (command.equals("request_valakas"))
 		{
 			ValakasManager.enterTheLair(player);
 			return;

@@ -67,92 +67,92 @@ public final class SteelCitadelTeleporterInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("01_up"))
+		if (command.equals("01_up"))
 		{
 			player.getParty().Teleport(new Location(-22208, 277122, -13376));
 			return;
 		}
-		else if (command.equalsIgnoreCase("02_up"))
+		else if (command.equals("02_up"))
 		{
 			player.getParty().Teleport(new Location(-22208, 277106, -11648));
 			return;
 		}
-		else if (command.equalsIgnoreCase("02_down"))
+		else if (command.equals("02_down"))
 		{
 			player.getParty().Teleport(new Location(-22208, 277074, -15040));
 			return;
 		}
-		else if (command.equalsIgnoreCase("03_up"))
+		else if (command.equals("03_up"))
 		{
 			player.getParty().Teleport(new Location(-22208, 277120, -9920));
 			return;
 		}
-		else if (command.equalsIgnoreCase("03_down"))
+		else if (command.equals("03_down"))
 		{
 			player.getParty().Teleport(new Location(-22208, 277120, -13376));
 			return;
 		}
-		else if (command.equalsIgnoreCase("04_up"))
+		else if (command.equals("04_up"))
 		{
 			player.getParty().Teleport(new Location(-19024, 277126, -8256));
 			return;
 		}
-		else if (command.equalsIgnoreCase("04_down"))
+		else if (command.equals("04_down"))
 		{
 			player.getParty().Teleport(new Location(-22208, 277106, -11648));
 			return;
 		}
-		else if (command.equalsIgnoreCase("06_up"))
+		else if (command.equals("06_up"))
 		{
 			player.getParty().Teleport(new Location(-19024, 277106, -9920));
 			return;
 		}
-		else if (command.equalsIgnoreCase("06_down"))
+		else if (command.equals("06_down"))
 		{
 			player.getParty().Teleport(new Location(-22208, 277122, -9920));
 			return;
 		}
-		else if (command.equalsIgnoreCase("07_up"))
+		else if (command.equals("07_up"))
 		{
 			player.getParty().Teleport(new Location(-19008, 277100, -11648));
 			return;
 		}
-		else if (command.equalsIgnoreCase("07_down"))
+		else if (command.equals("07_down"))
 		{
 			player.getParty().Teleport(new Location(-19024, 277122, -8256));
 			return;
 		}
-		else if (command.equalsIgnoreCase("08_up"))
+		else if (command.equals("08_up"))
 		{
 			player.getParty().Teleport(new Location(-19008, 277100, -13376));
 			return;
 		}
-		else if (command.equalsIgnoreCase("08_down"))
+		else if (command.equals("08_down"))
 		{
 			player.getParty().Teleport(new Location(-19008, 277106, -9920));
 			return;
 		}
-		else if (command.equalsIgnoreCase("09_up"))
+		else if (command.equals("09_up"))
 		{
 			player.getParty().Teleport(new Location(14602, 283179, -7500));
 			return;
 		}
-		else if (command.equalsIgnoreCase("09_down"))
+		else if (command.equals("09_down"))
 		{
 			player.getParty().Teleport(new Location(-19008, 277100, -11648));
 			return;
 		}
-		else if (command.equalsIgnoreCase("facedemon"))
+		else if (command.equals("facedemon"))
 		{
 			enterInstance(player, 5);
 			return;
 		}
-		else if (command.equalsIgnoreCase("faceranku"))
+		else if (command.equals("faceranku"))
 		{
 			enterInstance(player, 6);
 			return;
 		}
-		else if (command.equalsIgnoreCase("leave"))
+		else if (command.equals("leave"))
 		{
 			player.getReflection().collapse();
 			return;

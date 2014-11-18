@@ -71,7 +71,7 @@ public class Repair extends Functions implements IVoicedCommandHandler, ScriptFi
 	{
 		if (!target.isEmpty())
 		{
-			if (activeChar.getName().equalsIgnoreCase(target))
+			if (activeChar.getName().equals(target))
 			{
 				sendMessage(new CustomMessage("voicedcommandhandlers.Repair.YouCantRepairYourself", activeChar), activeChar);
 				return false;
@@ -81,7 +81,7 @@ public class Repair extends Functions implements IVoicedCommandHandler, ScriptFi
 			
 			for (Map.Entry<Integer, String> e : activeChar.getAccountChars().entrySet())
 			{
-				if (e.getValue().equalsIgnoreCase(target))
+				if (e.getValue().equals(target))
 				{
 					objId = e.getKey();
 					break;

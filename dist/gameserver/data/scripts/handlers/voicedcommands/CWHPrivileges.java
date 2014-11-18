@@ -82,7 +82,7 @@ public final class CWHPrivileges implements IVoicedCommandHandler, ScriptFile
 				
 				if (param.length > 0)
 				{
-					if (param[0].equalsIgnoreCase("allowwh") && (param.length > 1))
+					if (param[0].equals("allowwh") && (param.length > 1))
 					{
 						UnitMember cm = activeChar.getClan().getAnyMember(param[1]);
 						
@@ -119,7 +119,7 @@ public final class CWHPrivileges implements IVoicedCommandHandler, ScriptFile
 							activeChar.sendMessage("Player not found.");
 						}
 					}
-					else if (param[0].equalsIgnoreCase("list"))
+					else if (param[0].equals("list"))
 					{
 						StringBuilder sb = new StringBuilder("SELECT `obj_id` FROM `character_variables` WHERE `obj_id` IN (");
 						List<UnitMember> members = activeChar.getClan().getAllMembers();

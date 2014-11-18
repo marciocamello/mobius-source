@@ -39,7 +39,7 @@ public final class SnonePortalInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("start"))
+		if (command.equals("start"))
 		{
 			Reflection r = player.getActiveReflection();
 			

@@ -95,7 +95,7 @@ public final class ArenaManagerInstance extends WarehouseInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("ArenaBuff"))
+		if (command.equals("ArenaBuff"))
 		{
 			if (player.isCursedWeaponEquipped() || player.isInZone(Zone.ZoneType.Battle))
 			{

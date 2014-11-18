@@ -133,7 +133,6 @@ public final class DaimonTheWhiteEyed extends DefaultAI
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		// empty method
 	}
 	
 	/**
@@ -144,6 +143,5 @@ public final class DaimonTheWhiteEyed extends DefaultAI
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
-		// empty method
 	}
 }

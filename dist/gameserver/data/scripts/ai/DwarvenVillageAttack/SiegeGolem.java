@@ -187,7 +187,7 @@ public final class SiegeGolem extends DefaultAI
 	{
 		super.onEvtScriptEvent(event, arg1, arg2);
 		
-		if (event.equalsIgnoreCase("TEREDOR_DIE"))
+		if (event.equals("TEREDOR_DIE"))
 		{
 			diedTeredor++;
 		}

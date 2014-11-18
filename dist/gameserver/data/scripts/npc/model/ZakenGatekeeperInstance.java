@@ -54,7 +54,7 @@ public final class ZakenGatekeeperInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("request_nightzaken"))
+		if (command.equals("request_nightzaken"))
 		{
 			Reflection r = player.getActiveReflection();
 			
@@ -70,7 +70,7 @@ public final class ZakenGatekeeperInstance extends NpcInstance
 				ReflectionUtils.enterReflection(player, new ZakenNight(), nightZakenIzId);
 			}
 		}
-		else if (command.equalsIgnoreCase("request_dayzaken"))
+		else if (command.equals("request_dayzaken"))
 		{
 			Reflection r = player.getActiveReflection();
 			
@@ -86,7 +86,7 @@ public final class ZakenGatekeeperInstance extends NpcInstance
 				ReflectionUtils.enterReflection(player, new ZakenDay(), dayZakenIzId);
 			}
 		}
-		else if (command.equalsIgnoreCase("request_ultrazaken"))
+		else if (command.equals("request_ultrazaken"))
 		{
 			Reflection r = player.getActiveReflection();
 			

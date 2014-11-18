@@ -46,7 +46,7 @@ public final class AngelCatInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("give_buff"))
+		if (command.equals("give_buff"))
 		{
 			if (loadInfo(player))
 			{

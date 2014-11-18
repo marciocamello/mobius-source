@@ -97,7 +97,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 		
 		Castle castle = getCastle();
 		
-		if (actualCommand.equalsIgnoreCase("viewSiegeInfo"))
+		if (actualCommand.equals("viewSiegeInfo"))
 		{
 			if (!isHaveRigths(player, Clan.CP_CS_MANAGE_SIEGE))
 			{
@@ -107,7 +107,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 			
 			player.sendPacket(new CastleSiegeInfo(castle, player));
 		}
-		else if (actualCommand.equalsIgnoreCase("ManageTreasure"))
+		else if (actualCommand.equals("ManageTreasure"))
 		{
 			if (!player.isClanLeader())
 			{
@@ -122,7 +122,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 			html.replace("%CollectedSeed%", String.valueOf(castle.getCollectedSeed()));
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("TakeTreasure"))
+		else if (actualCommand.equals("TakeTreasure"))
 		{
 			if (!player.isClanLeader())
 			{
@@ -159,7 +159,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 			html.replace("%CollectedSeed%", String.valueOf(castle.getCollectedSeed()));
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("PutTreasure"))
+		else if (actualCommand.equals("PutTreasure"))
 		{
 			if (!val.equals(""))
 			{
@@ -186,7 +186,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 			html.replace("%CollectedSeed%", String.valueOf(castle.getCollectedSeed()));
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("manor"))
+		else if (actualCommand.equals("manor"))
 		{
 			if (!isHaveRigths(player, Clan.CP_CS_MANOR_ADMIN))
 			{
@@ -318,7 +318,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 					break;
 			}
 		}
-		else if (actualCommand.equalsIgnoreCase("operate_door")) // door control
+		else if (actualCommand.equals("operate_door")) // door control
 		{
 			if (!isHaveRigths(player, Clan.CP_CS_ENTRY_EXIT))
 			{
@@ -355,7 +355,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 			html.setFile("castle/chamberlain/" + getTemplate().getId() + "-d.htm");
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("tax_set")) // tax rates control
+		else if (actualCommand.equals("tax_set")) // tax rates control
 		{
 			if (!isHaveRigths(player, Clan.CP_CS_TAXES))
 			{
@@ -385,7 +385,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 			html.replace("%CurrentTax%", String.valueOf(castle.getTaxPercent()));
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("upgrade_castle"))
+		else if (actualCommand.equals("upgrade_castle"))
 		{
 			if (!checkSiegeFunctions(player))
 			{
@@ -394,7 +394,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 			
 			showChatWindow(player, "castle/chamberlain/chamberlain-upgrades.htm");
 		}
-		else if (actualCommand.equalsIgnoreCase("reinforce"))
+		else if (actualCommand.equals("reinforce"))
 		{
 			if (!checkSiegeFunctions(player))
 			{
@@ -405,7 +405,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 			html.setFile("castle/chamberlain/doorStrengthen-" + castle.getName() + ".htm");
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("trap_select"))
+		else if (actualCommand.equals("trap_select"))
 		{
 			if (!checkSiegeFunctions(player))
 			{
@@ -416,7 +416,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 			html.setFile("castle/chamberlain/trap_select-" + castle.getName() + ".htm");
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("buy_trap"))
+		else if (actualCommand.equals("buy_trap"))
 		{
 			if (!checkSiegeFunctions(player))
 			{
@@ -452,7 +452,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 			html.setFile("castle/chamberlain/trapSuccess.htm");
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("door_manage"))
+		else if (actualCommand.equals("door_manage"))
 		{
 			if (!isHaveRigths(player, Clan.CP_CS_ENTRY_EXIT))
 			{
@@ -472,7 +472,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 			html.replace("%type%", st.nextToken());
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("upgrade_door_confirm"))
+		else if (actualCommand.equals("upgrade_door_confirm"))
 		{
 			if (!isHaveRigths(player, Clan.CP_CS_MANAGE_SIEGE))
 			{
@@ -492,7 +492,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 			html.replace("%price%", String.valueOf(price));
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("upgrade_door"))
+		else if (actualCommand.equals("upgrade_door"))
 		{
 			if (checkSiegeFunctions(player))
 			{
@@ -549,7 +549,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 			targetDoorObject.setUpgradeValue(castle.<SiegeEvent<?, ?>> getSiegeEvent(), upgradeHp);
 			CastleDoorUpgradeDAO.getInstance().insert(door.getDoorId(), upgradeHp);
 		}
-		else if (actualCommand.equalsIgnoreCase("report")) // Report page
+		else if (actualCommand.equals("report")) // Report page
 		{
 			if (!isHaveRigths(player, Clan.CP_CS_USE_FUNCTIONS))
 			{
@@ -564,7 +564,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 			html.replace("%CharName%", player.getName());
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("fortressStatus"))
+		else if (actualCommand.equals("fortressStatus"))
 		{
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile("castle/chamberlain/chamberlain-fortress-status.htm");
@@ -620,7 +620,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 			html.replace("%list%", b.toString());
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("Crown")) // Give Crown to Castle Owner
+		else if (actualCommand.equals("Crown")) // Give Crown to Castle Owner
 		{
 			if (!player.isClanLeader())
 			{
@@ -644,11 +644,11 @@ public final class ChamberlainLightInstance extends ResidenceManager
 				player.sendPacket(html);
 			}
 		}
-		else if (actualCommand.equalsIgnoreCase("viewTerritoryWarInfo"))
+		else if (actualCommand.equals("viewTerritoryWarInfo"))
 		{
 			player.sendPacket(new ExShowDominionRegistry(player, castle.getDominion()));
 		}
-		else if (actualCommand.equalsIgnoreCase("Cloak")) // Give Radiant Cloak of Light to Castle Owner
+		else if (actualCommand.equals("Cloak")) // Give Radiant Cloak of Light to Castle Owner
 		{
 			if (!player.isClanLeader())
 			{
@@ -672,7 +672,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 				player.sendPacket(html);
 			}
 		}
-		else if (actualCommand.equalsIgnoreCase("manageFunctions"))
+		else if (actualCommand.equals("manageFunctions"))
 		{
 			if (!player.hasPrivilege(Privilege.CS_FS_SET_FUNCTIONS))
 			{
@@ -683,7 +683,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 				showChatWindow(player, "residence2/castle/chamberlain_saius065.htm");
 			}
 		}
-		else if (actualCommand.equalsIgnoreCase("manageSiegeFunctions"))
+		else if (actualCommand.equals("manageSiegeFunctions"))
 		{
 			if (!player.hasPrivilege(Privilege.CS_FS_SET_FUNCTIONS))
 			{
@@ -698,14 +698,14 @@ public final class ChamberlainLightInstance extends ResidenceManager
 				showChatWindow(player, "residence2/castle/chamberlain_saius052.htm");
 			}
 		}
-		else if (actualCommand.equalsIgnoreCase("items"))
+		else if (actualCommand.equals("items"))
 		{
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile("residence2/castle/chamberlain_saius064.htm");
 			html.replace("%npcId%", String.valueOf(getId()));
 			player.sendPacket(html);
 		}
-		else if (actualCommand.equalsIgnoreCase("default"))
+		else if (actualCommand.equals("default"))
 		{
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile("castle/chamberlain/chamberlain.htm");

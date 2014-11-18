@@ -108,13 +108,13 @@ public final class AwakenTPInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("Town_of_Shuttgart"))
+		if (command.equals("Town_of_Shuttgart"))
 		{
 			player.reduceAdena(150000);
 			player.teleToLocation(new Location(86153, -143707, -1336));
 			return;
 		}
-		else if (command.equalsIgnoreCase("Ruins_of_Ye_Sagira"))
+		else if (command.equals("Ruins_of_Ye_Sagira"))
 		{
 			if (player.getLevel() >= 85)
 			{
@@ -125,7 +125,7 @@ public final class AwakenTPInstance extends NpcInstance
 			
 			doNotLvl(player);
 		}
-		else if (command.equalsIgnoreCase("Seed_of_Annihilation"))
+		else if (command.equals("Seed_of_Annihilation"))
 		{
 			if (player.getLevel() >= 85)
 			{
@@ -136,7 +136,7 @@ public final class AwakenTPInstance extends NpcInstance
 			
 			doNotLvl(player);
 		}
-		else if (command.equalsIgnoreCase("Bloody_Swampland"))
+		else if (command.equals("Bloody_Swampland"))
 		{
 			if (player.getLevel() >= 85)
 			{
@@ -147,13 +147,13 @@ public final class AwakenTPInstance extends NpcInstance
 			
 			doNotLvl(player);
 		}
-		else if (command.equalsIgnoreCase("Ancient_City_Arcan"))
+		else if (command.equals("Ancient_City_Arcan"))
 		{
 			player.reduceAdena(150000);
 			player.teleToLocation(new Location(207951, 84475, -1144));
 			return;
 		}
-		else if (command.equalsIgnoreCase("Garden_of_Genesis"))
+		else if (command.equals("Garden_of_Genesis"))
 		{
 			if (player.getLevel() >= 90)
 			{
@@ -164,7 +164,7 @@ public final class AwakenTPInstance extends NpcInstance
 			
 			doNotLvl(player);
 		}
-		else if (command.equalsIgnoreCase("Fayry_Settlement"))
+		else if (command.equals("Fayry_Settlement"))
 		{
 			if (player.getLevel() >= 90)
 			{
@@ -175,7 +175,7 @@ public final class AwakenTPInstance extends NpcInstance
 			
 			doNotLvl(player);
 		}
-		else if (command.equalsIgnoreCase("Seal_of_Shilen"))
+		else if (command.equals("Seal_of_Shilen"))
 		{
 			if (player.getLevel() >= 95)
 			{
@@ -186,7 +186,7 @@ public final class AwakenTPInstance extends NpcInstance
 			
 			doNotLvl(player);
 		}
-		else if (command.equalsIgnoreCase("Guilloutine_Fortress"))
+		else if (command.equals("Guilloutine_Fortress"))
 		{
 			if (player.getLevel() >= 95)
 			{
@@ -197,7 +197,7 @@ public final class AwakenTPInstance extends NpcInstance
 			
 			doNotLvl(player);
 		}
-		else if (command.equalsIgnoreCase("Parnassus"))
+		else if (command.equals("Parnassus"))
 		{
 			if (player.getLevel() >= 97)
 			{
@@ -208,7 +208,7 @@ public final class AwakenTPInstance extends NpcInstance
 			
 			doNotLvl(player);
 		}
-		else if (command.equalsIgnoreCase("Orbis_Temple_Entrance"))
+		else if (command.equals("Orbis_Temple_Entrance"))
 		{
 			if (player.getLevel() >= 97)
 			{
@@ -219,7 +219,7 @@ public final class AwakenTPInstance extends NpcInstance
 			
 			doNotLvl(player);
 		}
-		else if (command.equalsIgnoreCase("teleport"))
+		else if (command.equals("teleport"))
 		{
 			switch (getId())
 			{

@@ -400,6 +400,5 @@ public final class ElcardiaAssistant extends DefaultAI
 	@Override
 	public void addTaskAttack(Creature target)
 	{
-		// empty method
 	}
 }

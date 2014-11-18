@@ -94,7 +94,7 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 	
 	/**
 	 * Method getBypassCommands.
-	 * @return String[] * @see lineage2.gameserver.handlers.bbs.ICommunityBoardHandler#getBypassCommands()
+	 * @return String[]
 	 */
 	@Override
 	public String[] getBypassCommands()

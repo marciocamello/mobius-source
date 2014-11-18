@@ -107,73 +107,6 @@ public class LastHero extends Functions implements ScriptFile, OnDeathListener, 
 	
 	private static final Location _enter = new Location(149505, 46719, -3417);
 	
-	@Override
-	public void onLoad()
-	{
-		CharListenerList.addGlobal(this);
-		
-		_zones.put("[colosseum_battle]", ReflectionUtils.getZone("[colosseum_battle]").getTemplate());
-		for (final int doorId : doors)
-		{
-			_doors.put(doorId, ReflectionUtils.getDoor(doorId).getTemplate());
-		}
-		reflection.init(_doors, _zones);
-		_zone = reflection.getZone("[colosseum_battle]");
-		_zone.addListener(_zoneListener);
-		
-		_active = ServerVariables.getString("LastHero", "off").equalsIgnoreCase("on");
-		
-		if (isActive())
-		{
-			scheduleEventStart();
-		}
-		
-		int i = 0;
-		
-		if (Config.EVENT_LHBuffPlayers && (Config.EVENT_LHMageBuffs.length != 0))
-		{
-			for (String skill : Config.EVENT_LHMageBuffs)
-			{
-				String[] splitSkill = skill.split(",");
-				mage_buffs[i][0] = Integer.parseInt(splitSkill[0]);
-				mage_buffs[i][1] = Integer.parseInt(splitSkill[1]);
-				i++;
-			}
-		}
-		
-		i = 0;
-		
-		if (Config.EVENT_LHBuffPlayers && (Config.EVENT_LHFighterBuffs.length != 0))
-		{
-			for (String skill : Config.EVENT_LHFighterBuffs)
-			{
-				String[] splitSkill = skill.split(",");
-				fighter_buffs[i][0] = Integer.parseInt(splitSkill[0]);
-				fighter_buffs[i][1] = Integer.parseInt(splitSkill[1]);
-				i++;
-			}
-		}
-		
-		_log.info("Loaded Event: Last Hero");
-	}
-	
-	@Override
-	public void onReload()
-	{
-		_zone.removeListener(_zoneListener);
-		if (_startTask != null)
-		{
-			_startTask.cancel(false);
-			_startTask = null;
-		}
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-		onReload();
-	}
-	
 	private static boolean isActive()
 	{
 		return _active;
@@ -1032,7 +965,7 @@ public class LastHero extends Functions implements ScriptFile, OnDeathListener, 
 	{
 		if (!Config.EVENT_LHAllowMultiReg)
 		{
-			if ("IP".equalsIgnoreCase(Config.EVENT_LHCheckWindowMethod))
+			if ("IP".equals(Config.EVENT_LHCheckWindowMethod))
 			{
 				if (boxes.containsValue(player.getIP()))
 				{
@@ -1041,7 +974,7 @@ public class LastHero extends Functions implements ScriptFile, OnDeathListener, 
 				}
 			}
 			
-			// else if ("HWid".equalsIgnoreCase(Config.EVENT_LHCheckWindowMethod)) {
+			// else if ("HWid".equals(Config.EVENT_LHCheckWindowMethod)) {
 			// if (boxes.containsValue(player.getNetConnection().getHWID())) {
 			// show(new CustomMessage("scripts.events.TvT.CancelledBox",
 			// player), player);
@@ -1099,5 +1032,72 @@ public class LastHero extends Functions implements ScriptFile, OnDeathListener, 
 				});
 			}
 		}
+	}
+	
+	@Override
+	public void onLoad()
+	{
+		CharListenerList.addGlobal(this);
+		
+		_zones.put("[colosseum_battle]", ReflectionUtils.getZone("[colosseum_battle]").getTemplate());
+		for (final int doorId : doors)
+		{
+			_doors.put(doorId, ReflectionUtils.getDoor(doorId).getTemplate());
+		}
+		reflection.init(_doors, _zones);
+		_zone = reflection.getZone("[colosseum_battle]");
+		_zone.addListener(_zoneListener);
+		
+		_active = ServerVariables.getString("LastHero", "off").equals("on");
+		
+		if (isActive())
+		{
+			scheduleEventStart();
+		}
+		
+		int i = 0;
+		
+		if (Config.EVENT_LHBuffPlayers && (Config.EVENT_LHMageBuffs.length != 0))
+		{
+			for (String skill : Config.EVENT_LHMageBuffs)
+			{
+				String[] splitSkill = skill.split(",");
+				mage_buffs[i][0] = Integer.parseInt(splitSkill[0]);
+				mage_buffs[i][1] = Integer.parseInt(splitSkill[1]);
+				i++;
+			}
+		}
+		
+		i = 0;
+		
+		if (Config.EVENT_LHBuffPlayers && (Config.EVENT_LHFighterBuffs.length != 0))
+		{
+			for (String skill : Config.EVENT_LHFighterBuffs)
+			{
+				String[] splitSkill = skill.split(",");
+				fighter_buffs[i][0] = Integer.parseInt(splitSkill[0]);
+				fighter_buffs[i][1] = Integer.parseInt(splitSkill[1]);
+				i++;
+			}
+		}
+		
+		_log.info("Loaded Event: Last Hero");
+	}
+	
+	@Override
+	public void onReload()
+	{
+		_zone.removeListener(_zoneListener);
+		if (_startTask != null)
+		{
+			_startTask.cancel(false);
+			_startTask = null;
+		}
+	}
+	
+	@Override
+	public void onShutdown()
+	{
+		onReload();
 	}
 }

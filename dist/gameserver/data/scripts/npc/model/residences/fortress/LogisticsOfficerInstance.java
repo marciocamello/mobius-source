@@ -70,7 +70,7 @@ public final class LogisticsOfficerInstance extends FacilityManagerInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("guardInfo"))
+		if (command.equals("guardInfo"))
 		{
 			if (fortress.getContractState() != Fortress.CONTRACT_WITH_CASTLE)
 			{
@@ -80,7 +80,7 @@ public final class LogisticsOfficerInstance extends FacilityManagerInstance
 			
 			showChatWindow(player, "residence2/fortress/fortress_supply_officer002.htm", "%guard_buff_level%", fortress.getFacilityLevel(Fortress.GUARD_BUFF));
 		}
-		else if (command.equalsIgnoreCase("supplyInfo"))
+		else if (command.equals("supplyInfo"))
 		{
 			if (fortress.getContractState() != Fortress.CONTRACT_WITH_CASTLE)
 			{
@@ -90,11 +90,11 @@ public final class LogisticsOfficerInstance extends FacilityManagerInstance
 			
 			showChatWindow(player, "residence2/fortress/fortress_supply_officer009.htm", "%supply_count%", fortress.getSupplyCount());
 		}
-		else if (command.equalsIgnoreCase("rewardInfo"))
+		else if (command.equals("rewardInfo"))
 		{
 			showChatWindow(player, "residence2/fortress/fortress_supply_officer010.htm", "%blood_oaths%", fortress.getRewardCount());
 		}
-		else if (command.equalsIgnoreCase("receiveSupply"))
+		else if (command.equals("receiveSupply"))
 		{
 			String filename;
 			
@@ -114,7 +114,7 @@ public final class LogisticsOfficerInstance extends FacilityManagerInstance
 			html.setFile(filename);
 			player.sendPacket(html);
 		}
-		else if (command.equalsIgnoreCase("receiveRewards"))
+		else if (command.equals("receiveRewards"))
 		{
 			String filename;
 			int count = fortress.getRewardCount();
@@ -136,11 +136,11 @@ public final class LogisticsOfficerInstance extends FacilityManagerInstance
 			html.setFile(filename);
 			player.sendPacket(html);
 		}
-		else if (command.equalsIgnoreCase("toLevel1"))
+		else if (command.equals("toLevel1"))
 		{
 			buyFacility(player, Fortress.GUARD_BUFF, 1, 100000);
 		}
-		else if (command.equalsIgnoreCase("toLevel2"))
+		else if (command.equals("toLevel2"))
 		{
 			buyFacility(player, Fortress.GUARD_BUFF, 2, 150000);
 		}

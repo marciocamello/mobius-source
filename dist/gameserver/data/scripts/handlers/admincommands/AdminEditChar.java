@@ -733,7 +733,7 @@ public class AdminEditChar implements IAdminCommandHandler, ScriptFile
 				activeChar.sendMessage("Target is not a pet.");
 			}
 		}
-		else if (fullString.equalsIgnoreCase("admin_unsummon"))
+		else if (fullString.equals("admin_unsummon"))
 		{
 			Object target = activeChar.getTarget();
 			if (target == null)
@@ -750,7 +750,7 @@ public class AdminEditChar implements IAdminCommandHandler, ScriptFile
 				activeChar.sendMessage("Usable only with Pets/Summons");
 			}
 		}
-		else if (fullString.equalsIgnoreCase("admin_show_pet_inv"))
+		else if (fullString.equals("admin_show_pet_inv"))
 		{
 			Object target = activeChar.getTarget();
 			if (target == null)

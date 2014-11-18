@@ -64,27 +64,6 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 	private static boolean _active = false;
 	
 	/**
-	 * Method onLoad.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
-	 */
-	@Override
-	public void onLoad()
-	{
-		CharListenerList.addGlobal(this);
-		
-		if (isActive())
-		{
-			_active = true;
-			spawnEventManagers();
-			_log.info("Loaded Event: Christmas [state: activated]");
-		}
-		else
-		{
-			_log.info("Loaded Event: Christmas [state: deactivated]");
-		}
-	}
-	
-	/**
 	 * Method isActive.
 	 * @return boolean
 	 */
@@ -315,26 +294,6 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 	}
 	
 	/**
-	 * Method onReload.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
-	 */
-	@Override
-	public void onReload()
-	{
-		unSpawnEventManagers();
-	}
-	
-	/**
-	 * Method onShutdown.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
-	 */
-	@Override
-	public void onShutdown()
-	{
-		unSpawnEventManagers();
-	}
-	
-	/**
 	 * Method onDeath.
 	 * @param cha Creature
 	 * @param killer Creature
@@ -381,7 +340,7 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 			return;
 		}
 		
-		if (var[0].equalsIgnoreCase("0"))
+		if (var[0].equals("0"))
 		{
 			if ((getItemCount(player, 5556) >= 4) && (getItemCount(player, 5557) >= 4) && (getItemCount(player, 5558) >= 10) && (getItemCount(player, 5559) >= 1))
 			{
@@ -396,7 +355,7 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 		}
 		
-		if (var[0].equalsIgnoreCase("1"))
+		if (var[0].equals("1"))
 		{
 			if (getItemCount(player, 5560) >= 10)
 			{
@@ -408,7 +367,7 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 		}
 		
-		if (var[0].equalsIgnoreCase("2"))
+		if (var[0].equals("2"))
 		{
 			if (getItemCount(player, 5560) >= 10)
 			{
@@ -420,7 +379,7 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 		}
 		
-		if (var[0].equalsIgnoreCase("3"))
+		if (var[0].equals("3"))
 		{
 			if (getItemCount(player, 5560) >= 10)
 			{
@@ -432,7 +391,7 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 		}
 		
-		if (var[0].equalsIgnoreCase("4"))
+		if (var[0].equals("4"))
 		{
 			if (getItemCount(player, 5560) >= 20)
 			{
@@ -457,5 +416,46 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 		{
 			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.Christmas.AnnounceEventStarted", null);
 		}
+	}
+	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
+	@Override
+	public void onLoad()
+	{
+		CharListenerList.addGlobal(this);
+		
+		if (isActive())
+		{
+			_active = true;
+			spawnEventManagers();
+			_log.info("Loaded Event: Christmas [state: activated]");
+		}
+		else
+		{
+			_log.info("Loaded Event: Christmas [state: deactivated]");
+		}
+	}
+	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
+	@Override
+	public void onReload()
+	{
+		unSpawnEventManagers();
+	}
+	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
+	@Override
+	public void onShutdown()
+	{
+		unSpawnEventManagers();
 	}
 }

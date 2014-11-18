@@ -50,7 +50,7 @@ public final class AdminTeam implements IAdminCommandHandler, ScriptFile
 		{
 			for (TeamType t : TeamType.values())
 			{
-				if (wordList[1].equalsIgnoreCase(t.name()))
+				if (wordList[1].equals(t.name()))
 				{
 					team = t;
 				}

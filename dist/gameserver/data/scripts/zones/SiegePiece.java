@@ -33,27 +33,6 @@ public final class SiegePiece implements ScriptFile
 	private static ZoneListener _zoneListener;
 	ResidenceSide _side;
 	
-	@Override
-	public void onLoad()
-	{
-		_zoneListener = new ZoneListener();
-		
-		for (Zone zone : ReflectionUtils.getZonesByType(ZoneType.Peace))
-		{
-			zone.addListener(_zoneListener);
-		}
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public void broadcastPacket(int value, boolean b)
 	{
 		L2GameServerPacket trigger = new EventTrigger(value, b);
@@ -115,5 +94,26 @@ public final class SiegePiece implements ScriptFile
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
 		}
+	}
+	
+	@Override
+	public void onLoad()
+	{
+		_zoneListener = new ZoneListener();
+		
+		for (Zone zone : ReflectionUtils.getZonesByType(ZoneType.Peace))
+		{
+			zone.addListener(_zoneListener);
+		}
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

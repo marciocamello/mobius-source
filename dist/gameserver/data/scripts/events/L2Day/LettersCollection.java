@@ -71,27 +71,6 @@ public class LettersCollection extends Functions implements ScriptFile, OnDeathL
 	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
 	
 	/**
-	 * Method onLoad.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
-	 */
-	@Override
-	public void onLoad()
-	{
-		CharListenerList.addGlobal(this);
-		
-		if (isActive())
-		{
-			_active = true;
-			spawnEventManagers();
-			_log.info("Loaded Event: " + _name + " [state: activated]");
-		}
-		else
-		{
-			_log.info("Loaded Event: " + _name + " [state: deactivated]");
-		}
-	}
-	
-	/**
 	 * Method isActive.
 	 * @return boolean
 	 */
@@ -114,26 +93,6 @@ public class LettersCollection extends Functions implements ScriptFile, OnDeathL
 	private void unSpawnEventManagers()
 	{
 		deSpawnNPCs(_spawns);
-	}
-	
-	/**
-	 * Method onReload.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
-	 */
-	@Override
-	public void onReload()
-	{
-		unSpawnEventManagers();
-	}
-	
-	/**
-	 * Method onShutdown.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
-	 */
-	@Override
-	public void onShutdown()
-	{
-		unSpawnEventManagers();
 	}
 	
 	/**
@@ -301,5 +260,46 @@ public class LettersCollection extends Functions implements ScriptFile, OnDeathL
 		}
 		
 		return append.toString();
+	}
+	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
+	@Override
+	public void onLoad()
+	{
+		CharListenerList.addGlobal(this);
+		
+		if (isActive())
+		{
+			_active = true;
+			spawnEventManagers();
+			_log.info("Loaded Event: " + _name + " [state: activated]");
+		}
+		else
+		{
+			_log.info("Loaded Event: " + _name + " [state: deactivated]");
+		}
+	}
+	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
+	@Override
+	public void onReload()
+	{
+		unSpawnEventManagers();
+	}
+	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
+	@Override
+	public void onShutdown()
+	{
+		unSpawnEventManagers();
 	}
 }

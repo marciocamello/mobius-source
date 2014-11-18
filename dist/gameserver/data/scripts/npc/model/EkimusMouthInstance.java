@@ -57,7 +57,7 @@ public final class EkimusMouthInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("hos_enter"))
+		if (command.equals("hos_enter"))
 		{
 			Reflection r = player.getActiveReflection();
 			
@@ -90,7 +90,7 @@ public final class EkimusMouthInstance extends NpcInstance
 				}
 			}
 		}
-		else if (command.equalsIgnoreCase("hoe_enter"))
+		else if (command.equals("hoe_enter"))
 		{
 			Reflection r = player.getActiveReflection();
 			

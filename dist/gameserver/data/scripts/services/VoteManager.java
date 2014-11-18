@@ -218,11 +218,11 @@ public final class VoteManager extends Functions implements IVoicedCommandHandle
 			
 			for (Node n2 = doc2.getFirstChild(); n2 != null; n2 = n2.getNextSibling())
 			{
-				if ("list".equalsIgnoreCase(n2.getNodeName()))
+				if ("list".equals(n2.getNodeName()))
 				{
 					for (Node d2 = n2.getFirstChild(); d2 != null; d2 = d2.getNextSibling())
 					{
-						if ("vote".equalsIgnoreCase(d2.getNodeName()))
+						if ("vote".equals(d2.getNodeName()))
 						{
 							Vote v = new Vote();
 							v.id = Integer.parseInt(d2.getAttributes().getNamedItem("id").getNodeValue());
@@ -232,7 +232,7 @@ public final class VoteManager extends Functions implements IVoicedCommandHandle
 							
 							for (Node i = d2.getFirstChild(); i != null; i = i.getNextSibling())
 							{
-								if ("variant".equalsIgnoreCase(i.getNodeName()))
+								if ("variant".equals(i.getNodeName()))
 								{
 									v.variants.put(Integer.parseInt(i.getAttributes().getNamedItem("id").getNodeValue()), i.getAttributes().getNamedItem("desc").getNodeValue());
 								}
@@ -302,7 +302,7 @@ public final class VoteManager extends Functions implements IVoicedCommandHandle
 	@Override
 	public boolean useVoicedCommand(String command, Player activeChar, String args)
 	{
-		if (command.equalsIgnoreCase("vote"))
+		if (command.equals("vote"))
 		{
 			return vote(command, activeChar, args);
 		}

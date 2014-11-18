@@ -71,7 +71,7 @@ public final class AbyssGazeInstance extends NpcInstance
 				return;
 			}
 		}
-		else if (command.equalsIgnoreCase("request_ekimus"))
+		else if (command.equals("request_ekimus"))
 		{
 			if (SoIManager.getCurrentStage() == 2)
 			{
@@ -90,7 +90,7 @@ public final class AbyssGazeInstance extends NpcInstance
 				}
 			}
 		}
-		else if (command.equalsIgnoreCase("enter_seed"))
+		else if (command.equals("enter_seed"))
 		{
 			if (SoIManager.getCurrentStage() == 3)
 			{
@@ -98,7 +98,7 @@ public final class AbyssGazeInstance extends NpcInstance
 				return;
 			}
 		}
-		else if (command.equalsIgnoreCase("hoi_defence"))
+		else if (command.equals("hoi_defence"))
 		{
 			if (SoIManager.getCurrentStage() == 5)
 			{

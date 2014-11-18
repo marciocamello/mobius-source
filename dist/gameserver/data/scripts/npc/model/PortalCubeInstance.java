@@ -41,11 +41,11 @@ public final class PortalCubeInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("register"))
+		if (command.equals("register"))
 		{
 			players.put(player.getObjectId(), player.getObjectId());
 		}
-		else if (command.equalsIgnoreCase("exit"))
+		else if (command.equals("exit"))
 		{
 			for (Player p : ((SpezionNormal) getReflection()).getPlayers())
 			{
@@ -58,7 +58,7 @@ public final class PortalCubeInstance extends NpcInstance
 				((SpezionNormal) getReflection()).SecondRoom();
 			}
 		}
-		else if (command.equalsIgnoreCase("opengate"))
+		else if (command.equals("opengate"))
 		{
 			if (getId() == 32951)
 			{
@@ -73,11 +73,11 @@ public final class PortalCubeInstance extends NpcInstance
 				((SpezionNormal) getReflection()).openGate(26190005);
 			}
 		}
-		else if (command.equalsIgnoreCase("stage_third"))
+		else if (command.equals("stage_third"))
 		{
 			((SpezionNormal) getReflection()).thirdStage();
 		}
-		else if (command.equalsIgnoreCase("spawn_spezion"))
+		else if (command.equals("spawn_spezion"))
 		{
 			((SpezionNormal) getReflection()).spazionSpawn();
 		}

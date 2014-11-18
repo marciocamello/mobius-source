@@ -113,20 +113,20 @@ public class Dwarvs extends Fighter
 	{
 		super.onEvtScriptEvent(event, arg1, arg2);
 		
-		if (event.equalsIgnoreCase("SHOUT_ALL_1"))
+		switch (event)
 		{
-			final int msg = MESSAGES_1[Rnd.get(MESSAGES_1.length)];
-			Functions.npcSayInRange(getActor(), 1500, NpcString.valueOf(msg));
-			startBattle = true;
-		}
-		else if (event.equalsIgnoreCase("SHOUT_ALL_2"))
-		{
-			final int msg = MESSAGES_2[Rnd.get(MESSAGES_2.length)];
-			Functions.npcSayInRange(getActor(), 1500, NpcString.valueOf(msg));
-		}
-		else if (event.equalsIgnoreCase("TENTACLE_DIE"))
-		{
-			diedTentacle++;
+			case "SHOUT_ALL_1":
+				Functions.npcSayInRange(getActor(), 1500, NpcString.valueOf(MESSAGES_1[Rnd.get(MESSAGES_1.length)]));
+				startBattle = true;
+				break;
+			
+			case "SHOUT_ALL_2":
+				Functions.npcSayInRange(getActor(), 1500, NpcString.valueOf(MESSAGES_2[Rnd.get(MESSAGES_2.length)]));
+				break;
+			
+			case "TENTACLE_DIE":
+				diedTentacle++;
+				break;
 		}
 	}
 	

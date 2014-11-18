@@ -50,7 +50,7 @@ public final class AllenosInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("enter_seed"))
+		if (command.equals("enter_seed"))
 		{
 			if (SoDManager.isAttackStage())
 			{

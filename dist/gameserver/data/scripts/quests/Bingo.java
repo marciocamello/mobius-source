@@ -128,7 +128,7 @@ class Bingo
 		}
 		else
 		{
-			result = result.replaceFirst("%msg%", _msg.equalsIgnoreCase("") ? msg_next : _msg);
+			result = result.replaceFirst("%msg%", _msg.equals("") ? msg_next : _msg);
 		}
 		
 		result = result.replaceFirst("%choicenum%", nums[guesses.size()]);

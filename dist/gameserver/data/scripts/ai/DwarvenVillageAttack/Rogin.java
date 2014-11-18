@@ -84,17 +84,19 @@ public final class Rogin extends Dwarvs
 	@Override
 	protected void onEvtScriptEvent(String event, Object arg1, Object arg2)
 	{
-		if (event.equalsIgnoreCase("ROGIN_1"))
+		switch (event)
 		{
-			addTimer(3, 1600);
-		}
-		else if (event.equalsIgnoreCase("SHOUT_ALL"))
-		{
-			Functions.npcSayInRange(getActor(), 1500, NpcString.CHIEF_);
-		}
-		else
-		{
-			super.onEvtScriptEvent(event, arg1, arg2);
+			case "ROGIN_1":
+				addTimer(3, 1600);
+				break;
+			
+			case "SHOUT_ALL":
+				Functions.npcSayInRange(getActor(), 1500, NpcString.CHIEF_);
+				break;
+			
+			default:
+				super.onEvtScriptEvent(event, arg1, arg2);
+				break;
 		}
 	}
 	

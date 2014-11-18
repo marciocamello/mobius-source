@@ -47,7 +47,7 @@ public final class CommissionAuctioneerInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("ShowCommission"))
+		if (command.equals("ShowCommission"))
 		{
 			CommissionShopManager.getInstance().showCommission(player);
 		}

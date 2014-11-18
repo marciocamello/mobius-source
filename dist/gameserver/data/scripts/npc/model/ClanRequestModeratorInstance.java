@@ -36,15 +36,15 @@ public class ClanRequestModeratorInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("guild_1"))
+		if (command.equals("guild_1"))
 		{
 			player.sendPacket(new ExPledgeUnionState(0, 1));
 		}
-		else if (command.equalsIgnoreCase("guild_2"))
+		else if (command.equals("guild_2"))
 		{
 			player.sendPacket(new ExPledgeUnionState(0, 2));
 		}
-		else if (command.equalsIgnoreCase("guild_3"))
+		else if (command.equals("guild_3"))
 		{
 			player.sendPacket(new ExPledgeUnionState(0, 3));
 		}

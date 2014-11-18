@@ -157,19 +157,19 @@ public final class Bash extends Functions implements IAdminCommandHandler, Scrip
 		
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
-			if ("rss".equalsIgnoreCase(n.getNodeName()))
+			if ("rss".equals(n.getNodeName()))
 			{
 				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 				{
-					if ("channel".equalsIgnoreCase(d.getNodeName()))
+					if ("channel".equals(d.getNodeName()))
 					{
 						for (Node i = d.getFirstChild(); i != null; i = i.getNextSibling())
 						{
-							if ("item".equalsIgnoreCase(i.getNodeName()))
+							if ("item".equals(i.getNodeName()))
 							{
 								for (Node z = i.getFirstChild(); z != null; z = z.getNextSibling())
 								{
-									if ("description".equalsIgnoreCase(z.getNodeName()))
+									if ("description".equals(z.getNodeName()))
 									{
 										quotes.add(z.getTextContent().replaceAll("\\\\", "").replaceAll("\\$", ""));
 										quotesCounter++;

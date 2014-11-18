@@ -23,6 +23,11 @@ import lineage2.gameserver.model.instances.NpcInstance;
  */
 public final class Aenkinel extends Fighter
 {
+	private static final int Aenkinel1 = 25694;
+	private static final int Aenkinel2 = 25695;
+	private static final int NihilInvaderTreasureChest = 18820;
+	private static final int MutantTreasureChest = 18823;
+	
 	/**
 	 * Constructor for Aenkinel.
 	 * @param actor NpcInstance
@@ -41,24 +46,24 @@ public final class Aenkinel extends Fighter
 	{
 		final NpcInstance actor = getActor();
 		
-		if ((actor.getId() == 25694) || (actor.getId() == 25695))
+		if ((actor.getId() == Aenkinel1) || (actor.getId() == Aenkinel2))
 		{
 			final Reflection ref = actor.getReflection();
 			ref.setReenterTime(System.currentTimeMillis());
 		}
 		
-		if (actor.getId() == 25694)
+		if (actor.getId() == Aenkinel1)
 		{
 			for (int i = 0; i < 4; i++)
 			{
-				actor.getReflection().addSpawnWithoutRespawn(18820, actor.getLoc(), 250);
+				actor.getReflection().addSpawnWithoutRespawn(NihilInvaderTreasureChest, actor.getLoc(), 250);
 			}
 		}
-		else if (actor.getId() == 25695)
+		else if (actor.getId() == Aenkinel2)
 		{
 			for (int i = 0; i < 4; i++)
 			{
-				actor.getReflection().addSpawnWithoutRespawn(18823, actor.getLoc(), 250);
+				actor.getReflection().addSpawnWithoutRespawn(MutantTreasureChest, actor.getLoc(), 250);
 			}
 		}
 		

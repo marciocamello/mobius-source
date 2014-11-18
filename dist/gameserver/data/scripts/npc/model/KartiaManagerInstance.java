@@ -57,7 +57,7 @@ public final class KartiaManagerInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("request_zellaka_solo"))
+		if (command.equals("request_zellaka_solo"))
 		{
 			Reflection r = player.getActiveReflection();
 			
@@ -74,7 +74,7 @@ public final class KartiaManagerInstance extends NpcInstance
 			}
 		}
 		
-		if (command.equalsIgnoreCase("request_zellaka_party"))
+		if (command.equals("request_zellaka_party"))
 		{
 			Reflection r = player.getActiveReflection();
 			
@@ -91,7 +91,7 @@ public final class KartiaManagerInstance extends NpcInstance
 			}
 		}
 		
-		if (command.equalsIgnoreCase("request_pelline_solo"))
+		if (command.equals("request_pelline_solo"))
 		{
 			Reflection r = player.getActiveReflection();
 			
@@ -108,7 +108,7 @@ public final class KartiaManagerInstance extends NpcInstance
 			}
 		}
 		
-		if (command.equalsIgnoreCase("request_pelline_party"))
+		if (command.equals("request_pelline_party"))
 		{
 			Reflection r = player.getActiveReflection();
 			
@@ -125,7 +125,7 @@ public final class KartiaManagerInstance extends NpcInstance
 			}
 		}
 		
-		if (command.equalsIgnoreCase("request_kalios_solo"))
+		if (command.equals("request_kalios_solo"))
 		{
 			Reflection r = player.getActiveReflection();
 			
@@ -142,7 +142,7 @@ public final class KartiaManagerInstance extends NpcInstance
 			}
 		}
 		
-		if (command.equalsIgnoreCase("request_kalios_party"))
+		if (command.equals("request_kalios_party"))
 		{
 			Reflection r = player.getActiveReflection();
 			

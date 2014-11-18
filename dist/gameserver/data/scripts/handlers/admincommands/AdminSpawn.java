@@ -175,7 +175,7 @@ public class AdminSpawn implements IAdminCommandHandler, ScriptFile
 				
 				try
 				{
-					if (!aiName.equalsIgnoreCase("npc"))
+					if (!aiName.equals("npc"))
 					{
 						aiConstructor = Class.forName("lineage2.gameserver.ai." + aiName).getConstructors()[0];
 					}

@@ -70,7 +70,7 @@ public final class ManagerInstance extends ResidenceManager
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("receive_report"))
+		if (command.equals("receive_report"))
 		{
 			int ownedTime = (int) ((System.currentTimeMillis() - getFortress().getOwnDate().getTimeInMillis()) / 60000L);
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);

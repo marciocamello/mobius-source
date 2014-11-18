@@ -52,15 +52,15 @@ public final class ChangeOfHeart extends Functions implements ScriptFile, OnDeat
 	{
 		{
 			"Rock",
-			"�?амен�?"
+			"Rock"
 		},
 		{
 			"Scissors",
-			"�?ожницы"
+			"Scissors"
 		},
 		{
 			"Paper",
-			"Бумага"
+			"Paper"
 		}
 	};
 	static
@@ -208,7 +208,7 @@ public final class ChangeOfHeart extends Functions implements ScriptFile, OnDeat
 		
 		if (!haveAllHearts(player))
 		{
-			if (var[0].equalsIgnoreCase("Quit"))
+			if (var[0].equals("Quit"))
 			{
 				show("scripts/events/heart/hearts_00b.htm", player);
 			}
@@ -220,7 +220,7 @@ public final class ChangeOfHeart extends Functions implements ScriptFile, OnDeat
 			return;
 		}
 		
-		if (var[0].equalsIgnoreCase("Quit"))
+		if (var[0].equals("Quit"))
 		{
 			final int curr_guesses = getGuesses(player);
 			takeHeartsSet(player);

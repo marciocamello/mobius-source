@@ -66,7 +66,7 @@ public final class BanditMessagerInstance extends NpcInstance
 		ClanHallTeamBattleEvent siegeEvent = clanHall.getSiegeEvent();
 		Clan clan = player.getClan();
 		
-		if (command.equalsIgnoreCase("registrationMenu"))
+		if (command.equals("registrationMenu"))
 		{
 			if (!checkCond(player, true))
 			{
@@ -75,7 +75,7 @@ public final class BanditMessagerInstance extends NpcInstance
 			
 			showChatWindow(player, "residence2/clanhall/agit_oel_mahum_messeger_1.htm");
 		}
-		else if (command.equalsIgnoreCase("registerAsClan"))
+		else if (command.equals("registerAsClan"))
 		{
 			if (!checkCond(player, false))
 			{
@@ -102,7 +102,7 @@ public final class BanditMessagerInstance extends NpcInstance
 			questState.exitCurrentQuest(true);
 			register(player);
 		}
-		else if (command.equalsIgnoreCase("registerByOffer"))
+		else if (command.equals("registerByOffer"))
 		{
 			if (!checkCond(player, false))
 			{
@@ -126,7 +126,7 @@ public final class BanditMessagerInstance extends NpcInstance
 			
 			register(player);
 		}
-		else if (command.equalsIgnoreCase("viewNpc"))
+		else if (command.equals("viewNpc"))
 		{
 			CTBSiegeClanObject siegeClan = siegeEvent.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan());
 			
@@ -193,7 +193,7 @@ public final class BanditMessagerInstance extends NpcInstance
 			SiegeClanDAO.getInstance().update(clanHall, siegeClan);
 			showChatWindow(player, "residence2/clanhall/agit_oel_mahum_messeger_9.htm");
 		}
-		else if (command.equalsIgnoreCase("registerAsMember"))
+		else if (command.equals("registerAsMember"))
 		{
 			CTBSiegeClanObject siegeClan = siegeEvent.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan());
 			
@@ -226,7 +226,7 @@ public final class BanditMessagerInstance extends NpcInstance
 				showChatWindow(player, "residence2/clanhall/agit_oel_mahum_messeger_9.htm");
 			}
 		}
-		else if (command.equalsIgnoreCase("listClans"))
+		else if (command.equals("listClans"))
 		{
 			NpcHtmlMessage msg = new NpcHtmlMessage(player, this);
 			msg.setFile("residence2/clanhall/azit_messenger003.htm");

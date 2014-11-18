@@ -134,92 +134,6 @@ public class TeamVsTeam extends Functions implements ScriptFile, OnDeathListener
 	private static int redPoints = 0;
 	private static TIntObjectHashMap<MutableInt> score = new TIntObjectHashMap<>();
 	
-	@Override
-	public void onLoad()
-	{
-		CharListenerList.addGlobal(this);
-		
-		_zones.put("[colosseum_battle]", ReflectionUtils.getZone("[colosseum_battle]").getTemplate());
-		_zones.put("[cleft_tvt]", ReflectionUtils.getZone("[cleft_tvt]").getTemplate());
-		_zones.put("[cleft_tvt]", ReflectionUtils.getZone("[cleft_tvt]").getTemplate());
-		
-		for (final int doorId : doors)
-		{
-			_doors.put(doorId, ReflectionUtils.getDoor(doorId).getTemplate());
-		}
-		
-		int geoIndex = GeoEngine.NextGeoIndex(24, 19, reflection.getId());
-		reflection.setGeoIndex(geoIndex);
-		reflection.init(_doors, _zones);
-		
-		_zone = reflection.getZone("[cleft_tvt]");
-		_zone1 = reflection.getZone("[cleft_tvt]");
-		_active = ServerVariables.getString("TvT", "off").equalsIgnoreCase("on");
-		if (isActive())
-		{
-			scheduleEventStart();
-		}
-		
-		_zone.addListener(_zoneListener);
-		_zone1.addListener(_zoneListener);
-		
-		int i = 0;
-		
-		if (Config.EVENT_TvTBuffPlayers && (Config.EVENT_TvTMageBuffs.length != 0))
-		{
-			for (String skill : Config.EVENT_TvTMageBuffs)
-			{
-				String[] splitSkill = skill.split(",");
-				mage_buffs[i][0] = Integer.parseInt(splitSkill[0]);
-				mage_buffs[i][1] = Integer.parseInt(splitSkill[1]);
-				i++;
-			}
-		}
-		
-		i = 0;
-		
-		if (Config.EVENT_TvTBuffPlayers && (Config.EVENT_TvTMageBuffs.length != 0))
-		{
-			for (String skill : Config.EVENT_TvTFighterBuffs)
-			{
-				String[] splitSkill = skill.split(",");
-				fighter_buffs[i][0] = Integer.parseInt(splitSkill[0]);
-				fighter_buffs[i][1] = Integer.parseInt(splitSkill[1]);
-				i++;
-			}
-		}
-		
-		i = 0;
-		if (Config.EVENT_TvTRewards.length != 0)
-		{
-			for (String reward : Config.EVENT_TvTRewards)
-			{
-				String[] splitReward = reward.split(",");
-				rewards[i][0] = Integer.parseInt(splitReward[0]);
-				rewards[i][1] = Integer.parseInt(splitReward[1]);
-				i++;
-			}
-		}
-		
-		_log.info("Loaded Event: TvT");
-	}
-	
-	@Override
-	public void onReload()
-	{
-		if (_startTask != null)
-		{
-			_startTask.cancel(false);
-			_startTask = null;
-		}
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-		onReload();
-	}
-	
 	private static long getStarterTime()
 	{
 		return _startedTime;
@@ -494,10 +408,10 @@ public class TeamVsTeam extends Functions implements ScriptFile, OnDeathListener
 		
 		if (!Config.EVENT_TvTAllowMultiReg)
 		{
-			if ("IP".equalsIgnoreCase(Config.EVENT_TvTCheckWindowMethod))
+			if ("IP".equals(Config.EVENT_TvTCheckWindowMethod))
 			{
 				boxes.put(player.getStoredId(), player.getIP());
-				// if("HWid".equalsIgnoreCase(Config.EVENT_TvTCheckWindowMethod))
+				// if("HWid".equals(Config.EVENT_TvTCheckWindowMethod))
 				// boxes.put(player.getStoredId(), player.getNetConnection().getHWID());
 			}
 		}
@@ -1458,7 +1372,7 @@ public class TeamVsTeam extends Functions implements ScriptFile, OnDeathListener
 	{
 		if (!Config.EVENT_TvTAllowMultiReg)
 		{
-			if ("IP".equalsIgnoreCase(Config.EVENT_TvTCheckWindowMethod))
+			if ("IP".equals(Config.EVENT_TvTCheckWindowMethod))
 			{
 				if (boxes.containsValue(player.getIP()))
 				{
@@ -1466,7 +1380,7 @@ public class TeamVsTeam extends Functions implements ScriptFile, OnDeathListener
 					return false;
 				}
 			}
-			// else if ("HWid".equalsIgnoreCase(Config.EVENT_TvTCheckWindowMethod))
+			// else if ("HWid".equals(Config.EVENT_TvTCheckWindowMethod))
 			// {
 			// if (boxes.containsValue(player.getNetConnection().getHWID()))
 			// {
@@ -1540,5 +1454,91 @@ public class TeamVsTeam extends Functions implements ScriptFile, OnDeathListener
 			return true;
 		}
 		return false;
+	}
+	
+	@Override
+	public void onLoad()
+	{
+		CharListenerList.addGlobal(this);
+		
+		_zones.put("[colosseum_battle]", ReflectionUtils.getZone("[colosseum_battle]").getTemplate());
+		_zones.put("[cleft_tvt]", ReflectionUtils.getZone("[cleft_tvt]").getTemplate());
+		_zones.put("[cleft_tvt]", ReflectionUtils.getZone("[cleft_tvt]").getTemplate());
+		
+		for (final int doorId : doors)
+		{
+			_doors.put(doorId, ReflectionUtils.getDoor(doorId).getTemplate());
+		}
+		
+		int geoIndex = GeoEngine.NextGeoIndex(24, 19, reflection.getId());
+		reflection.setGeoIndex(geoIndex);
+		reflection.init(_doors, _zones);
+		
+		_zone = reflection.getZone("[cleft_tvt]");
+		_zone1 = reflection.getZone("[cleft_tvt]");
+		_active = ServerVariables.getString("TvT", "off").equals("on");
+		if (isActive())
+		{
+			scheduleEventStart();
+		}
+		
+		_zone.addListener(_zoneListener);
+		_zone1.addListener(_zoneListener);
+		
+		int i = 0;
+		
+		if (Config.EVENT_TvTBuffPlayers && (Config.EVENT_TvTMageBuffs.length != 0))
+		{
+			for (String skill : Config.EVENT_TvTMageBuffs)
+			{
+				String[] splitSkill = skill.split(",");
+				mage_buffs[i][0] = Integer.parseInt(splitSkill[0]);
+				mage_buffs[i][1] = Integer.parseInt(splitSkill[1]);
+				i++;
+			}
+		}
+		
+		i = 0;
+		
+		if (Config.EVENT_TvTBuffPlayers && (Config.EVENT_TvTMageBuffs.length != 0))
+		{
+			for (String skill : Config.EVENT_TvTFighterBuffs)
+			{
+				String[] splitSkill = skill.split(",");
+				fighter_buffs[i][0] = Integer.parseInt(splitSkill[0]);
+				fighter_buffs[i][1] = Integer.parseInt(splitSkill[1]);
+				i++;
+			}
+		}
+		
+		i = 0;
+		if (Config.EVENT_TvTRewards.length != 0)
+		{
+			for (String reward : Config.EVENT_TvTRewards)
+			{
+				String[] splitReward = reward.split(",");
+				rewards[i][0] = Integer.parseInt(splitReward[0]);
+				rewards[i][1] = Integer.parseInt(splitReward[1]);
+				i++;
+			}
+		}
+		
+		_log.info("Loaded Event: TvT");
+	}
+	
+	@Override
+	public void onReload()
+	{
+		if (_startTask != null)
+		{
+			_startTask.cancel(false);
+			_startTask = null;
+		}
+	}
+	
+	@Override
+	public void onShutdown()
+	{
+		onReload();
 	}
 }

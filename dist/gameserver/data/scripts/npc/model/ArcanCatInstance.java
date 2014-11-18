@@ -32,7 +32,7 @@ public final class ArcanCatInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("start_movie"))
+		if (command.equals("start_movie"))
 		{
 			player.showQuestMovie(104);
 		}

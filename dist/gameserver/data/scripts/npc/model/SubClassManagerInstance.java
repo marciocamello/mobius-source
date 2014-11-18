@@ -102,7 +102,7 @@ public final class SubClassManagerInstance extends NpcInstance
 		StringTokenizer st = new StringTokenizer(command, "_");
 		String cmd = st.nextToken();
 		
-		if (cmd.equalsIgnoreCase("subclass"))
+		if (cmd.equals("subclass"))
 		{
 			if (player.getSummonList().size() > 0)
 			{
@@ -130,7 +130,7 @@ public final class SubClassManagerInstance extends NpcInstance
 			
 			String cmd2 = st.nextToken();
 			
-			if (cmd2.equalsIgnoreCase("add"))
+			if (cmd2.equals("add"))
 			{
 				if (player.getSubClassList().size() >= SubClassList.MAX_SUB_COUNT)
 				{
@@ -174,7 +174,7 @@ public final class SubClassManagerInstance extends NpcInstance
 				
 				String cmd3 = st.nextToken();
 				
-				if (cmd3.equalsIgnoreCase("confirm"))
+				if (cmd3.equals("confirm"))
 				{
 					if (Config.ENABLE_OLYMPIAD && Olympiad.isRegisteredInComp(player))
 					{
@@ -195,7 +195,7 @@ public final class SubClassManagerInstance extends NpcInstance
 					return;
 				}
 			}
-			else if (cmd2.equalsIgnoreCase("change"))
+			else if (cmd2.equals("change"))
 			{
 				if (!player.getSubClassList().haveSubClasses())
 				{
@@ -209,7 +209,7 @@ public final class SubClassManagerInstance extends NpcInstance
 					return;
 				}
 			}
-			else if (cmd2.equalsIgnoreCase("cancel"))
+			else if (cmd2.equals("cancel"))
 			{
 				if (!player.getSubClassList().haveSubClasses())
 				{
@@ -274,7 +274,7 @@ public final class SubClassManagerInstance extends NpcInstance
 				
 				String cmd3 = st.nextToken();
 				
-				if (cmd3.equalsIgnoreCase("confirm"))
+				if (cmd3.equals("confirm"))
 				{
 					if (player.modifySubClass(cancelClassId, newSubClassId, false))
 					{
@@ -289,7 +289,7 @@ public final class SubClassManagerInstance extends NpcInstance
 					return;
 				}
 			}
-			else if (cmd2.equalsIgnoreCase("reawakendualclass"))
+			else if (cmd2.equals("reawakendualclass"))
 			{
 				if (!player.getActiveSubClass().isDual() || !player.isAwaking() || !(player.getLevel() > 84))
 				{
@@ -338,7 +338,7 @@ public final class SubClassManagerInstance extends NpcInstance
 				
 				String cmd3 = st.nextToken();
 				
-				if (cmd3.equalsIgnoreCase("confirm"))
+				if (cmd3.equals("confirm"))
 				{
 					long reawakeningCost = Math.round(_REAWAKENINGCOST.get(player.getLevel() < 95 ? player.getLevel() : 94) * 1000000);
 					
@@ -368,7 +368,7 @@ public final class SubClassManagerInstance extends NpcInstance
 					return;
 				}
 			}
-			else if (cmd2.equalsIgnoreCase("CertificationSkillList"))
+			else if (cmd2.equals("CertificationSkillList"))
 			{
 				if (CertificationFunctions.checkConditionSkillList(this, player, 65))
 				{
@@ -377,7 +377,7 @@ public final class SubClassManagerInstance extends NpcInstance
 				
 				return;
 			}
-			else if (cmd2.equalsIgnoreCase("DualCertificationSkillList"))
+			else if (cmd2.equals("DualCertificationSkillList"))
 			{
 				if (CertificationFunctions.checkConditionSkillList(this, player, 85))
 				{
@@ -386,12 +386,12 @@ public final class SubClassManagerInstance extends NpcInstance
 				
 				return;
 			}
-			else if (cmd2.equalsIgnoreCase("CancelRequest"))
+			else if (cmd2.equals("CancelRequest"))
 			{
 				showChatWindow(player, "default/" + getId() + "-cancelrequest.htm");
 				return;
 			}
-			else if (cmd2.equalsIgnoreCase("CertificationList"))
+			else if (cmd2.equals("CertificationList"))
 			{
 				if (!st.hasMoreTokens())
 				{
@@ -401,7 +401,7 @@ public final class SubClassManagerInstance extends NpcInstance
 				int levelCertification = Integer.parseInt(st.nextToken());
 				CertificationFunctions.showCertificationList(this, player, levelCertification);
 			}
-			else if (cmd2.equalsIgnoreCase("GetCertification"))
+			else if (cmd2.equals("GetCertification"))
 			{
 				if (!st.hasMoreTokens())
 				{
@@ -421,7 +421,7 @@ public final class SubClassManagerInstance extends NpcInstance
 					return;
 				}
 			}
-			else if (cmd2.equalsIgnoreCase("confirmCertification"))
+			else if (cmd2.equals("confirmCertification"))
 			{
 				if (!st.hasMoreTokens())
 				{
@@ -440,7 +440,7 @@ public final class SubClassManagerInstance extends NpcInstance
 					return;
 				}
 			}
-			else if (cmd2.equalsIgnoreCase("CertificationCancel"))
+			else if (cmd2.equals("CertificationCancel"))
 			{
 				if (!st.hasMoreTokens())
 				{
@@ -455,7 +455,7 @@ public final class SubClassManagerInstance extends NpcInstance
 					CertificationFunctions.cancelCertification(this, player, false, false);
 				}
 			}
-			else if (cmd2.equalsIgnoreCase("DualCertificationCancel"))
+			else if (cmd2.equals("DualCertificationCancel"))
 			{
 				if (!st.hasMoreTokens())
 				{

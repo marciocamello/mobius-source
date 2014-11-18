@@ -48,7 +48,7 @@ public class TerritoryManagerInstance extends NpcInstance
 		int npcId = getId();
 		int badgeId = 13676 + dominion.getId();
 		
-		if (command.equalsIgnoreCase("buyspecial"))
+		if (command.equals("buyspecial"))
 		{
 			if (Functions.getItemCount(player, badgeId) < 1)
 			{
@@ -59,7 +59,7 @@ public class TerritoryManagerInstance extends NpcInstance
 				MultiSellHolder.getInstance().SeparateAndSend(npcId, player, 0);
 			}
 		}
-		else if (command.equalsIgnoreCase("calculate"))
+		else if (command.equals("calculate"))
 		{
 			if (!player.isQuestContinuationPossible(true))
 			{
@@ -79,11 +79,11 @@ public class TerritoryManagerInstance extends NpcInstance
 			html.replace("%fame%", String.valueOf(rewards[2]));
 			player.sendPacket(html);
 		}
-		else if (command.equalsIgnoreCase("recivelater"))
+		else if (command.equals("recivelater"))
 		{
 			showChatWindow(player, getHtmlPath(npcId, 6, player));
 		}
-		else if (command.equalsIgnoreCase("recive"))
+		else if (command.equals("recive"))
 		{
 			int[] rewards = siegeEvent.calculateReward(player);
 			if ((rewards == null) || (rewards[0] == 0))

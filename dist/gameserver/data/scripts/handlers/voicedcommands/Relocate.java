@@ -40,7 +40,7 @@ public final class Relocate implements IVoicedCommandHandler, ScriptFile
 	@Override
 	public boolean useVoicedCommand(String command, Player activeChar, String target)
 	{
-		if (command.equalsIgnoreCase("summon_clan"))
+		if (command.equals("summon_clan"))
 		{
 			if (!activeChar.isClanLeader())
 			{

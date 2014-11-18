@@ -49,7 +49,7 @@ public final class MaguenTraderInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("request_collector"))
+		if (command.equals("request_collector"))
 		{
 			if (Functions.getItemCount(player, 15487) > 0)
 			{
@@ -60,7 +60,7 @@ public final class MaguenTraderInstance extends NpcInstance
 				Functions.addItem(player, 15487, 1);
 			}
 		}
-		else if (command.equalsIgnoreCase("request_maguen"))
+		else if (command.equals("request_maguen"))
 		{
 			NpcUtils.spawnSingle(18839, Location.findPointToStay(getSpawnedLoc(), 40, 100, getGeoIndex()), getReflection());
 			showChatWindow(player, "default/32735-3.htm");

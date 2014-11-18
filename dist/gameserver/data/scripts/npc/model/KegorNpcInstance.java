@@ -71,7 +71,7 @@ public final class KegorNpcInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("request_stone"))
+		if (command.equals("request_stone"))
 		{
 			if ((player.getInventory().getCountOf(15469) == 0) && (player.getInventory().getCountOf(15470) == 0))
 			{
