@@ -51,7 +51,7 @@ public final class PailakaGatekeeperInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("rimentrance"))
+		if (command.equals("rimentrance"))
 		{
 			Reflection r = player.getActiveReflection();
 			

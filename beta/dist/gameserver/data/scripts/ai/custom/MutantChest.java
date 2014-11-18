@@ -45,7 +45,7 @@ public final class MutantChest extends Fighter
 		
 		if (Rnd.chance(30))
 		{
-			Functions.npcSay(actor, "Враги! В�?�?ду враги! В�?е �?�?да, враги зде�?�?!");
+			Functions.npcSay(actor, "Enemies! Enemies everywhere! Everything here, the enemies here!");
 		}
 		
 		actor.deleteMe();

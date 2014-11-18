@@ -80,7 +80,7 @@ public final class BatracosInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("request_seer"))
+		if (command.equals("request_seer"))
 		{
 			Reflection r = player.getActiveReflection();
 			
@@ -96,7 +96,7 @@ public final class BatracosInstance extends NpcInstance
 				ReflectionUtils.enterReflection(player, urogosIzId);
 			}
 		}
-		else if (command.equalsIgnoreCase("leave"))
+		else if (command.equals("leave"))
 		{
 			if (!getReflection().isDefault())
 			{

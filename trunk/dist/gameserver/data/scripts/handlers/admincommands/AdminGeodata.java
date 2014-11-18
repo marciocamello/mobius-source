@@ -161,11 +161,11 @@ public class AdminGeodata implements IAdminCommandHandler, ScriptFile
 					return false;
 				}
 				
-				if (wordList[1].equalsIgnoreCase("on"))
+				if (wordList[1].equals("on"))
 				{
 					activeChar.setVar("trace", "1", -1);
 				}
-				else if (wordList[1].equalsIgnoreCase("off"))
+				else if (wordList[1].equals("off"))
 				{
 					activeChar.unsetVar("trace");
 				}

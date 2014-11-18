@@ -49,7 +49,7 @@ public final class Harnak extends Fighter
 	@Override
 	protected void onEvtScriptEvent(String event, Object arg1, Object arg2)
 	{
-		if (event.equalsIgnoreCase("SEAL_ACTIVATED"))
+		if (event.equals("SEAL_ACTIVATED"))
 		{
 			seal_active++;
 			

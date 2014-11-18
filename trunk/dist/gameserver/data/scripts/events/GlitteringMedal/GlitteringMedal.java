@@ -64,28 +64,6 @@ public final class GlitteringMedal extends Functions implements ScriptFile, OnDe
 	};
 	
 	/**
-	 * Method onLoad.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
-	 */
-	@Override
-	public void onLoad()
-	{
-		CharListenerList.addGlobal(this);
-		
-		if (isActive())
-		{
-			_active = true;
-			loadMultiSell();
-			spawnEventManagers();
-			_log.info("Loaded Event: L2 Medal Collection Event [state: activated]");
-		}
-		else
-		{
-			_log.info("Loaded Event: L2 Medal Collection Event [state: deactivated]");
-		}
-	}
-	
-	/**
 	 * Method isActive.
 	 * @return boolean
 	 */
@@ -382,36 +360,6 @@ public final class GlitteringMedal extends Functions implements ScriptFile, OnDe
 		}
 		
 		MultiSellLoaded = true;
-	}
-	
-	/**
-	 * Method onReload.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
-	 */
-	@Override
-	public void onReload()
-	{
-		unSpawnEventManagers();
-		
-		if (MultiSellLoaded)
-		{
-			for (File f : multiSellFiles)
-			{
-				MultiSellHolder.getInstance().remove(f);
-			}
-			
-			MultiSellLoaded = false;
-		}
-	}
-	
-	/**
-	 * Method onShutdown.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
-	 */
-	@Override
-	public void onShutdown()
-	{
-		// empty method
 	}
 	
 	/**
@@ -795,5 +743,57 @@ public final class GlitteringMedal extends Functions implements ScriptFile, OnDe
 		
 		show("scripts/events/glitmedal/event_col_agent2_q0996_26.htm", player);
 		return;
+	}
+	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
+	@Override
+	public void onLoad()
+	{
+		CharListenerList.addGlobal(this);
+		
+		if (isActive())
+		{
+			_active = true;
+			loadMultiSell();
+			spawnEventManagers();
+			_log.info("Loaded Event: L2 Medal Collection Event [state: activated]");
+		}
+		else
+		{
+			_log.info("Loaded Event: L2 Medal Collection Event [state: deactivated]");
+		}
+	}
+	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
+	@Override
+	public void onReload()
+	{
+		unSpawnEventManagers();
+		
+		if (MultiSellLoaded)
+		{
+			for (File f : multiSellFiles)
+			{
+				MultiSellHolder.getInstance().remove(f);
+			}
+			
+			MultiSellLoaded = false;
+		}
+	}
+	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
+	@Override
+	public void onShutdown()
+	{
+		// empty method
 	}
 }

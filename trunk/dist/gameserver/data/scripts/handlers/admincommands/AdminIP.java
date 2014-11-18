@@ -66,7 +66,7 @@ public class AdminIP implements IAdminCommandHandler, ScriptFile
 				
 				String ip_adr = pl.getIP();
 				
-				if (ip_adr.equalsIgnoreCase("<not connected>"))
+				if (ip_adr.equals("<not connected>"))
 				{
 					activeChar.sendMessage("Character " + wordList[1] + " not found.");
 					break;

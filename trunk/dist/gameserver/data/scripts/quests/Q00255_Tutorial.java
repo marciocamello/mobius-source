@@ -322,7 +322,7 @@ public class Q00255_Tutorial extends Quest implements ScriptFile, OnPlayerEnterL
 			case "TE":
 				qs.cancelQuestTimer("TE");
 				int event_id = 0;
-				if (!event.equalsIgnoreCase("TE"))
+				if (!event.equals("TE"))
 				{
 					event_id = Integer.valueOf(event.substring(2));
 				}

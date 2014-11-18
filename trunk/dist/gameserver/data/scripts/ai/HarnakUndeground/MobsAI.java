@@ -150,21 +150,21 @@ public final class MobsAI extends Fighter
 	{
 		super.onEvtScriptEvent(event, arg1, arg2);
 		
-		if (event.equalsIgnoreCase("ATTACK_HIM"))
+		if (event.equals("ATTACK_HIM"))
 		{
 			selected = false;
 			Creature attacker = (Creature) arg1;
 			getActor().getAggroList().addDamageHate(attacker, 1, 10000000);
 			addTaskAttack(attacker);
 		}
-		else if (event.equalsIgnoreCase("SELECT_ME"))
+		else if (event.equals("SELECT_ME"))
 		{
 			if (ROOM_ID == 1)
 			{
 				selectMe();
 			}
 		}
-		else if (event.equalsIgnoreCase("FAIL_INSTANCE"))
+		else if (event.equals("FAIL_INSTANCE"))
 		{
 			getActor().deleteMe();
 		}

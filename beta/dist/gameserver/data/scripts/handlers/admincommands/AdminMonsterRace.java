@@ -52,7 +52,7 @@ public class AdminMonsterRace implements IAdminCommandHandler, ScriptFile
 	@Override
 	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
 	{
-		if (fullString.equalsIgnoreCase("admin_mons"))
+		if (fullString.equals("admin_mons"))
 		{
 			if (!activeChar.getPlayerAccess().MonsterRace)
 			{

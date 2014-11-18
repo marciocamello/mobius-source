@@ -296,44 +296,6 @@ public final class GiftOfVitality extends Functions implements ScriptFile
 	}
 	
 	/**
-	 * Method onLoad.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
-	 */
-	@Override
-	public void onLoad()
-	{
-		if (isActive())
-		{
-			spawnEventManagers();
-			_log.info("Loaded Event: Gift Of Vitality [state: activated]");
-		}
-		else
-		{
-			_log.info("Loaded Event: Gift Of Vitality [state: deactivated]");
-		}
-	}
-	
-	/**
-	 * Method onReload.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
-	 */
-	@Override
-	public void onReload()
-	{
-		unSpawnEventManagers();
-	}
-	
-	/**
-	 * Method onShutdown.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
-	 */
-	@Override
-	public void onShutdown()
-	{
-		unSpawnEventManagers();
-	}
-	
-	/**
 	 * Method buffMe.
 	 * @param type BuffType
 	 */
@@ -425,5 +387,43 @@ public final class GiftOfVitality extends Functions implements ScriptFile
 	public void buffPlayer()
 	{
 		buffMe(BuffType.PLAYER);
+	}
+	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
+	@Override
+	public void onLoad()
+	{
+		if (isActive())
+		{
+			spawnEventManagers();
+			_log.info("Loaded Event: Gift Of Vitality [state: activated]");
+		}
+		else
+		{
+			_log.info("Loaded Event: Gift Of Vitality [state: deactivated]");
+		}
+	}
+	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
+	@Override
+	public void onReload()
+	{
+		unSpawnEventManagers();
+	}
+	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
+	@Override
+	public void onShutdown()
+	{
+		unSpawnEventManagers();
 	}
 }

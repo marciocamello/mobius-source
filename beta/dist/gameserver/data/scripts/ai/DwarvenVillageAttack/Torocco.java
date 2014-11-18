@@ -49,7 +49,7 @@ public final class Torocco extends Dwarvs
 	{
 		super.onEvtScriptEvent(event, arg1, arg2);
 		
-		if (event.equalsIgnoreCase("TOROCCO_1"))
+		if (event.equals("TOROCCO_1"))
 		{
 			addTimer(1, 1200);
 		}

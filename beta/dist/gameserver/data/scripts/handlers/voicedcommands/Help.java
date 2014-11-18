@@ -49,17 +49,17 @@ public class Help extends Functions implements IVoicedCommandHandler, ScriptFile
 	{
 		command = command.intern();
 		
-		if (command.equalsIgnoreCase("help"))
+		if (command.equals("help"))
 		{
 			return help(command, activeChar, args);
 		}
 		
-		if (command.equalsIgnoreCase("whereis"))
+		if (command.equals("whereis"))
 		{
 			return whereis(command, activeChar, args);
 		}
 		
-		if (command.equalsIgnoreCase("exp"))
+		if (command.equals("exp"))
 		{
 			return exp(command, activeChar, args);
 		}

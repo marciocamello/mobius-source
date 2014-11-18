@@ -33,8 +33,8 @@ import gnu.trove.map.hash.TIntObjectHashMap;
  */
 public final class Apherus extends Fighter
 {
-	final Skill GroundStrike; // TODO[K]
-	final Skill JumpAttack; // TODO[K]
+	final Skill GroundStrike;
+	final Skill JumpAttack;
 	static final int[] DOORS =
 	{
 		26210041,

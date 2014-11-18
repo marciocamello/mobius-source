@@ -58,27 +58,6 @@ public final class SeedOfHellfire extends DynamicQuest implements ScriptFile
 	private static final int ADAK_THE_ENGINEER = 23221; // 2
 	
 	@Override
-	public void onLoad()
-	{
-		_zoneListener = new ZoneListener();
-		zoneSouth = ReflectionUtils.getZone(QUEST_ZONE_SOUTH);
-		zoneSouth.addListener(_zoneListener);
-		zoneNorth = ReflectionUtils.getZone(QUEST_ZONE_NORTH);
-		zoneNorth.addListener(_zoneListener);
-		_log.info("Dynamic Quest: ID " + QUEST_ID + ". Name: Seed of Hellfire - Zone Quest");
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
-	@Override
 	protected boolean isZoneQuest()
 	{
 		return true;
@@ -328,5 +307,26 @@ public final class SeedOfHellfire extends DynamicQuest implements ScriptFile
 				}
 			}
 		}
+	}
+	
+	@Override
+	public void onLoad()
+	{
+		_zoneListener = new ZoneListener();
+		zoneSouth = ReflectionUtils.getZone(QUEST_ZONE_SOUTH);
+		zoneSouth.addListener(_zoneListener);
+		zoneNorth = ReflectionUtils.getZone(QUEST_ZONE_NORTH);
+		zoneNorth.addListener(_zoneListener);
+		_log.info("Dynamic Quest: ID " + QUEST_ID + ". Name: Seed of Hellfire - Zone Quest");
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

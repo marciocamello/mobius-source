@@ -102,7 +102,7 @@ public final class FairyCoconsInstance extends NpcInstance
 		
 		if (!GameTimeController.getInstance().isNowNight())
 		{
-			if (command.equalsIgnoreCase("1"))
+			if (command.equals("1"))
 			{
 				int npdId = getId();
 				
@@ -131,7 +131,7 @@ public final class FairyCoconsInstance extends NpcInstance
 					}
 				}
 			}
-			else if (command.equalsIgnoreCase("2"))
+			else if (command.equals("2"))
 			{
 				int npdId = getId();
 				

@@ -49,7 +49,7 @@ public final class GruffManInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("elcardia_enter"))
+		if (command.equals("elcardia_enter"))
 		{
 			Reflection r = player.getActiveReflection();
 			

@@ -74,22 +74,6 @@ public final class BatCountry extends DynamicQuest implements ScriptFile
 	}
 	
 	@Override
-	public void onLoad()
-	{
-		_log.info("Dynamic Quest: ID " + QUEST_ID + ". Name: Bat Country - Campaign");
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
-	@Override
 	protected void onStart()
 	{
 		_log.info("Dynamic Quest: " + QUEST_ID + ". Name: Bat Country - Campaign [STARTED]");
@@ -280,5 +264,21 @@ public final class BatCountry extends DynamicQuest implements ScriptFile
 				}
 			}
 		}
+	}
+	
+	@Override
+	public void onLoad()
+	{
+		_log.info("Dynamic Quest: ID " + QUEST_ID + ". Name: Bat Country - Campaign");
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

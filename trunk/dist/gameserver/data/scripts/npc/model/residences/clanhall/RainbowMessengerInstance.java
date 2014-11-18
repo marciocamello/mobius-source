@@ -60,7 +60,7 @@ public final class RainbowMessengerInstance extends NpcInstance
 		ClanHall clanHall = getClanHall();
 		ClanHallMiniGameEvent miniGameEvent = clanHall.getSiegeEvent();
 		
-		if (command.equalsIgnoreCase("register"))
+		if (command.equals("register"))
 		{
 			if (miniGameEvent.isRegistrationOver())
 			{
@@ -113,7 +113,7 @@ public final class RainbowMessengerInstance extends NpcInstance
 				showChatWindow(player, "residence2/clanhall/messenger_yetti009.htm");
 			}
 		}
-		else if (command.equalsIgnoreCase("cancel"))
+		else if (command.equals("cancel"))
 		{
 			if (miniGameEvent.isRegistrationOver())
 			{
@@ -149,7 +149,7 @@ public final class RainbowMessengerInstance extends NpcInstance
 				showChatWindow(player, "residence2/clanhall/messenger_yetti005.htm");
 			}
 		}
-		else if (command.equalsIgnoreCase("refund"))
+		else if (command.equals("refund"))
 		{
 			if (miniGameEvent.isRegistrationOver())
 			{

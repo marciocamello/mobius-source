@@ -54,7 +54,7 @@ public final class JiniaNpcInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("request_normalfreya"))
+		if (command.equals("request_normalfreya"))
 		{
 			Reflection r = player.getActiveReflection();
 			
@@ -70,7 +70,7 @@ public final class JiniaNpcInstance extends NpcInstance
 				ReflectionUtils.enterReflection(player, new FreyaNormal(), normalFreyaIzId);
 			}
 		}
-		else if (command.equalsIgnoreCase("request_extremefreya"))
+		else if (command.equals("request_extremefreya"))
 		{
 			Reflection r = player.getActiveReflection();
 			

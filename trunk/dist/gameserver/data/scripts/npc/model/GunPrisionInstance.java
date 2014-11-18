@@ -62,7 +62,7 @@ public final class GunPrisionInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("zalp"))
+		if (command.equals("zalp"))
 		{
 			if (!checkShot)
 			{
@@ -116,7 +116,7 @@ public final class GunPrisionInstance extends NpcInstance
 				monster.doDie(this);
 			}
 		}
-		else if (command.equalsIgnoreCase("spezion_bomb"))
+		else if (command.equals("spezion_bomb"))
 		{
 			if (!checkShot)
 			{

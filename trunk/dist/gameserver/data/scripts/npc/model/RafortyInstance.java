@@ -50,7 +50,7 @@ public final class RafortyInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("exchange_necklace_1"))
+		if (command.equals("exchange_necklace_1"))
 		{
 			if (ItemFunctions.getItemCount(player, FREYA_NECKLACE) > 0)
 			{
@@ -61,7 +61,7 @@ public final class RafortyInstance extends NpcInstance
 				showChatWindow(player, "default/" + getId() + "-ex6.htm");
 			}
 		}
-		else if (command.equalsIgnoreCase("exchange_necklace_2"))
+		else if (command.equals("exchange_necklace_2"))
 		{
 			if (ItemFunctions.getItemCount(player, BOTTLE_OF_FREYAS_SOUL) > 0)
 			{
@@ -72,7 +72,7 @@ public final class RafortyInstance extends NpcInstance
 				showChatWindow(player, "default/" + getId() + "-ex7.htm");
 			}
 		}
-		else if (command.equalsIgnoreCase("exchange_necklace_3"))
+		else if (command.equals("exchange_necklace_3"))
 		{
 			if ((ItemFunctions.getItemCount(player, FREYA_NECKLACE) > 0) && (ItemFunctions.getItemCount(player, BOTTLE_OF_FREYAS_SOUL) > 0))
 			{

@@ -99,19 +99,19 @@ public final class TullyWorkshopZone implements ScriptFile
 			
 			if (zone.isActive())
 			{
-				if (zone.getName().equalsIgnoreCase("[tully1]"))
+				if (zone.getName().equals("[tully1]"))
 				{
 					player.teleToLocation(TullyFloor2LocationPoint);
 				}
-				else if (zone.getName().equalsIgnoreCase("[tully2]"))
+				else if (zone.getName().equals("[tully2]"))
 				{
 					player.teleToLocation(TullyFloor4LocationPoint);
 				}
-				else if (zone.getName().equalsIgnoreCase("[tully3]"))
+				else if (zone.getName().equals("[tully3]"))
 				{
 					player.teleToLocation(TullyFloor3LocationPoint);
 				}
-				else if (zone.getName().equalsIgnoreCase("[tully4]"))
+				else if (zone.getName().equals("[tully4]"))
 				{
 					player.teleToLocation(TullyFloor5LocationPoint);
 				}

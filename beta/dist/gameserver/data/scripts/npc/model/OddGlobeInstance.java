@@ -54,7 +54,7 @@ public final class OddGlobeInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("monastery_enter"))
+		if (command.equals("monastery_enter"))
 		{
 			Reflection r = player.getActiveReflection();
 			

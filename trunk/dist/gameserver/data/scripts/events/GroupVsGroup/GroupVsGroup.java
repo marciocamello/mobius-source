@@ -119,37 +119,6 @@ public final class GroupVsGroup extends Functions implements ScriptFile
 	}
 	
 	/**
-	 * Method onLoad.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
-	 */
-	@Override
-	public void onLoad()
-	{
-		_log.info("Loaded Event: GvG");
-		initTimer();
-	}
-	
-	/**
-	 * Method onReload.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
-	 */
-	@Override
-	public void onReload()
-	{
-		// empty method
-	}
-	
-	/**
-	 * Method onShutdown.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
-	 */
-	@Override
-	public void onShutdown()
-	{
-		// empty method
-	}
-	
-	/**
 	 * Method initTimer.
 	 */
 	private static void initTimer()
@@ -664,5 +633,36 @@ public final class GroupVsGroup extends Functions implements ScriptFile
 		
 		leaderList.clear();
 		_log.info("GvG: Event started successfuly.");
+	}
+	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
+	@Override
+	public void onLoad()
+	{
+		_log.info("Loaded Event: GvG");
+		initTimer();
+	}
+	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
+	@Override
+	public void onReload()
+	{
+		// empty method
+	}
+	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
+	@Override
+	public void onShutdown()
+	{
+		// empty method
 	}
 }

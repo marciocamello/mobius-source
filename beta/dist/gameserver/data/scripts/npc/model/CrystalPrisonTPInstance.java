@@ -57,7 +57,7 @@ public final class CrystalPrisonTPInstance extends NpcInstance
 				ReflectionUtils.enterReflection(player, new Vullock(), VullockInstance);
 			}
 		}
-		else if (command.equalsIgnoreCase("request_Baylor"))
+		else if (command.equals("request_Baylor"))
 		{
 			Reflection r = player.getActiveReflection();
 			

@@ -122,7 +122,7 @@ public final class CourtInstance extends NpcInstance
 					showChatWindow(player, "castle/CourtMagician/CourtMagician-nogate.htm");
 				}
 			}
-			else if (command.equalsIgnoreCase("Cloak")) // Give Cloak of Light/Dark
+			else if (command.equals("Cloak")) // Give Cloak of Light/Dark
 			{
 				if (player.getClan() != null)
 				{

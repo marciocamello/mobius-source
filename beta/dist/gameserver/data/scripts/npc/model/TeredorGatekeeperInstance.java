@@ -36,7 +36,7 @@ public final class TeredorGatekeeperInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("teredorenterinst"))
+		if (command.equals("teredorenterinst"))
 		{
 			Reflection r = player.getActiveReflection();
 			

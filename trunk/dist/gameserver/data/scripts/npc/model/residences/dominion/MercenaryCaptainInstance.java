@@ -43,7 +43,7 @@ public class MercenaryCaptainInstance extends NpcInstance
 		
 		Dominion dominion = getDominion();
 		
-		if (command.equalsIgnoreCase("territory_register"))
+		if (command.equals("territory_register"))
 		{
 			player.sendPacket(new ExShowDominionRegistry(player, dominion));
 		}

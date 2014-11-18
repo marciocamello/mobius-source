@@ -68,7 +68,7 @@ public final class PriestAquilaniInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("teleport"))
+		if (command.equals("teleport"))
 		{
 			player.teleToLocation(new Location(118833, -80589, -2688));
 			return;

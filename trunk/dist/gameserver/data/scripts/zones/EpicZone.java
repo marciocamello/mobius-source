@@ -30,36 +30,6 @@ public final class EpicZone implements ScriptFile
 	private static ZoneListener _zoneListener;
 	
 	/**
-	 * Method onLoad.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
-	 */
-	@Override
-	public void onLoad()
-	{
-		_zoneListener = new ZoneListener();
-		Zone zone = ReflectionUtils.getZone("[queen_ant_epic]");
-		zone.addListener(_zoneListener);
-	}
-	
-	/**
-	 * Method onReload.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
-	 */
-	@Override
-	public void onReload()
-	{
-	}
-	
-	/**
-	 * Method onShutdown.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
-	 */
-	@Override
-	public void onShutdown()
-	{
-	}
-	
-	/**
 	 * @author Mobius
 	 */
 	public final class ZoneListener implements OnZoneEnterLeaveListener
@@ -99,5 +69,35 @@ public final class EpicZone implements ScriptFile
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
 		}
+	}
+	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
+	@Override
+	public void onLoad()
+	{
+		_zoneListener = new ZoneListener();
+		Zone zone = ReflectionUtils.getZone("[queen_ant_epic]");
+		zone.addListener(_zoneListener);
+	}
+	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
+	@Override
+	public void onReload()
+	{
+	}
+	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
+	@Override
+	public void onShutdown()
+	{
 	}
 }

@@ -54,22 +54,22 @@ public final class TransportationAssistantInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("goto1ln"))
+		if (command.equals("goto1ln"))
 		{
 			player.teleToLocation(-147711, 152768, -14056);
 		}
 		
-		if (command.equalsIgnoreCase("goto1ls"))
+		if (command.equals("goto1ls"))
 		{
 			player.teleToLocation(-147867, 250710, -14024);
 		}
 		
-		if (command.equalsIgnoreCase("goto2ln"))
+		if (command.equals("goto2ln"))
 		{
 			player.teleToLocation(-150131, 143145, -11960);
 		}
 		
-		if (command.equalsIgnoreCase("goto2ls"))
+		if (command.equals("goto2ls"))
 		{
 			player.teleToLocation(-150169, 241022, -11928);
 		}

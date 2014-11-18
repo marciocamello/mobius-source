@@ -137,7 +137,7 @@ public final class Seed extends ScriptItemHandler
 	
 	/**
 	 * Method getItemIds.
-	 * @return int[] * @see lineage2.gameserver.handlers.items.IItemHandler#getItemIds()
+	 * @return int[]
 	 */
 	@Override
 	public int[] getItemIds()

@@ -82,81 +82,6 @@ public final class KashaNegate implements ScriptFile
 	}
 	
 	/**
-	 * Method onLoad.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
-	 */
-	@Override
-	public void onLoad()
-	{
-		_zoneListener = new ZoneListener();
-		
-		for (String element : ZONES)
-		{
-			int random = Rnd.get(60 * 1000 * 1, 60 * 1000 * 7);
-			int message;
-			Zone zone = ReflectionUtils.getZone(element);
-			ThreadPoolManager.getInstance().schedule(new CampDestroyTask(zone), random);
-			
-			if (random > (5 * 60000))
-			{
-				message = random - (5 * 60000);
-				ThreadPoolManager.getInstance().schedule(new BroadcastMessageTask(0, zone), message);
-			}
-			
-			if (random > (3 * 60000))
-			{
-				message = random - (3 * 60000);
-				ThreadPoolManager.getInstance().schedule(new BroadcastMessageTask(0, zone), message);
-			}
-			
-			if (random > 60000)
-			{
-				message = random - 60000;
-				ThreadPoolManager.getInstance().schedule(new BroadcastMessageTask(0, zone), message);
-			}
-			
-			if (random > 15000)
-			{
-				message = random - 15000;
-				ThreadPoolManager.getInstance().schedule(new BroadcastMessageTask(1, zone), message);
-			}
-			
-			zone.addListener(_zoneListener);
-		}
-		
-		_buffTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new BuffTask(), TICK_BUFF_DELAY, TICK_BUFF_DELAY);
-	}
-	
-	/**
-	 * Method onReload.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
-	 */
-	@Override
-	public void onReload()
-	{
-		for (String element : ZONES)
-		{
-			Zone zone = ReflectionUtils.getZone(element);
-			zone.removeListener(_zoneListener);
-		}
-		
-		if (_buffTask != null)
-		{
-			_buffTask.cancel(false);
-			_buffTask = null;
-		}
-	}
-	
-	/**
-	 * Method onShutdown.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
-	 */
-	@Override
-	public void onShutdown()
-	{
-	}
-	
-	/**
 	 * Method changeAura.
 	 * @param actor NpcInstance
 	 * @param npcId int
@@ -536,5 +461,80 @@ public final class KashaNegate implements ScriptFile
 		}
 		
 		return npc.getId();
+	}
+	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
+	@Override
+	public void onLoad()
+	{
+		_zoneListener = new ZoneListener();
+		
+		for (String element : ZONES)
+		{
+			int random = Rnd.get(60 * 1000 * 1, 60 * 1000 * 7);
+			int message;
+			Zone zone = ReflectionUtils.getZone(element);
+			ThreadPoolManager.getInstance().schedule(new CampDestroyTask(zone), random);
+			
+			if (random > (5 * 60000))
+			{
+				message = random - (5 * 60000);
+				ThreadPoolManager.getInstance().schedule(new BroadcastMessageTask(0, zone), message);
+			}
+			
+			if (random > (3 * 60000))
+			{
+				message = random - (3 * 60000);
+				ThreadPoolManager.getInstance().schedule(new BroadcastMessageTask(0, zone), message);
+			}
+			
+			if (random > 60000)
+			{
+				message = random - 60000;
+				ThreadPoolManager.getInstance().schedule(new BroadcastMessageTask(0, zone), message);
+			}
+			
+			if (random > 15000)
+			{
+				message = random - 15000;
+				ThreadPoolManager.getInstance().schedule(new BroadcastMessageTask(1, zone), message);
+			}
+			
+			zone.addListener(_zoneListener);
+		}
+		
+		_buffTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new BuffTask(), TICK_BUFF_DELAY, TICK_BUFF_DELAY);
+	}
+	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
+	@Override
+	public void onReload()
+	{
+		for (String element : ZONES)
+		{
+			Zone zone = ReflectionUtils.getZone(element);
+			zone.removeListener(_zoneListener);
+		}
+		
+		if (_buffTask != null)
+		{
+			_buffTask.cancel(false);
+			_buffTask = null;
+		}
+	}
+	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
+	@Override
+	public void onShutdown()
+	{
 	}
 }

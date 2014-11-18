@@ -28,11 +28,11 @@ public final class EvilNpc extends DefaultAI
 	private long _lastAction;
 	private static final String[] _txt =
 	{
-		"от�?тан�?!",
-		"уйми�?�?!",
-		"�? тебе отомщу, потом буде�?�? прощени�? про�?ит�?!",
-		"у теб�? будут н��при�?тно�?ти!",
-		"�? на теб�? пожалу�?�?�?, теб�? аре�?ту�?т!"
+		"Leave me alone!",
+		"Calm down!",
+		"I will avenge you, then you will ask for forgiveness!",
+		"We'll be in trouble!",
+		"I will complain for you, you should be arrested!"
 	};
 	
 	/**

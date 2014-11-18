@@ -62,7 +62,7 @@ public class AdminScripts implements IAdminCommandHandler, ScriptFile
 				
 				String param = wordList[1];
 				
-				if (param.equalsIgnoreCase("all"))
+				if (param.equals("all"))
 				{
 					activeChar.sendMessage("Scripts reload starting...");
 					
@@ -75,7 +75,7 @@ public class AdminScripts implements IAdminCommandHandler, ScriptFile
 						activeChar.sendMessage("Scripts successfully reloaded. Loaded " + Scripts.getInstance().getClasses().size() + " classes.");
 					}
 				}
-				else if (param.equalsIgnoreCase("items"))
+				else if (param.equals("items"))
 				{
 					activeChar.sendMessage("Item reload starting...");
 					

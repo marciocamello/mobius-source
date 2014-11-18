@@ -360,7 +360,7 @@ public final class HuntersGuild extends Functions implements ScriptFile, IVoiced
 			return true;
 		}
 		
-		if (command.equalsIgnoreCase("gettask"))
+		if (command.equals("gettask"))
 		{
 			if (activeChar.getVar("bhMonstersId") != null)
 			{
@@ -381,7 +381,7 @@ public final class HuntersGuild extends Functions implements ScriptFile, IVoiced
 			return true;
 		}
 		
-		if (command.equalsIgnoreCase("declinetask"))
+		if (command.equals("declinetask"))
 		{
 			if (activeChar.getVar("bhMonstersId") == null)
 			{

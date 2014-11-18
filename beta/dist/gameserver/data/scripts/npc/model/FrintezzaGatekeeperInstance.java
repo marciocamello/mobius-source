@@ -52,7 +52,7 @@ public final class FrintezzaGatekeeperInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("request_frintezza"))
+		if (command.equals("request_frintezza"))
 		{
 			Reflection r = player.getActiveReflection();
 			

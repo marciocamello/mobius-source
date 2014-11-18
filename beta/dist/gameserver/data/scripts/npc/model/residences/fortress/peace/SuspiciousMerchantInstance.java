@@ -65,7 +65,7 @@ public final class SuspiciousMerchantInstance extends NpcInstance
 		Fortress fortress = getFortress();
 		FortressSiegeEvent siegeEvent = fortress.getSiegeEvent();
 		
-		if (command.equalsIgnoreCase("register"))
+		if (command.equals("register"))
 		{
 			Clan clan = player.getClan();
 			
@@ -168,7 +168,7 @@ public final class SuspiciousMerchantInstance extends NpcInstance
 			player.sendPacket(new SystemMessage2(SystemMsg.YOUR_CLAN_HAS_BEEN_REGISTERED_TO_S1S_FORTRESS_BATTLE).addResidenceName(fortress));
 			showChatWindow(player, "residence2/fortress/fortress_ordery005.htm");
 		}
-		else if (command.equalsIgnoreCase("cancel"))
+		else if (command.equals("cancel"))
 		{
 			Clan clan = player.getClan();
 			
@@ -192,7 +192,7 @@ public final class SuspiciousMerchantInstance extends NpcInstance
 				showChatWindow(player, "residence2/fortress/fortress_ordery011.htm");
 			}
 		}
-		else if (command.equalsIgnoreCase("state"))
+		else if (command.equals("state"))
 		{
 			int attackersSize = siegeEvent.getObjects(SiegeEvent.ATTACKERS).size();
 			

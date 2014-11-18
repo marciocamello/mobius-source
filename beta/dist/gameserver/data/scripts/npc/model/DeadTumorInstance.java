@@ -66,11 +66,11 @@ public final class DeadTumorInstance extends NpcInstance
 				deadTumors.remove(this);
 			}
 			
-			if (command.equalsIgnoreCase("examine_tumor"))
+			if (command.equals("examine_tumor"))
 			{
 				showChatWindow(player, 1);
 			}
-			else if (command.equalsIgnoreCase("showcheckpage"))
+			else if (command.equals("showcheckpage"))
 			{
 				if (!player.isInParty())
 				{
@@ -92,7 +92,7 @@ public final class DeadTumorInstance extends NpcInstance
 				
 				showChatWindow(player, 5);
 			}
-			else if (command.equalsIgnoreCase("warp"))
+			else if (command.equals("warp"))
 			{
 				if (ItemFunctions.getItemCount(player, 13797) < 1)
 				{
@@ -135,7 +135,7 @@ public final class DeadTumorInstance extends NpcInstance
 				deadTumors.remove(this);
 			}
 			
-			if (command.equalsIgnoreCase("examine_tumor"))
+			if (command.equals("examine_tumor"))
 			{
 				if (getId() == 32536)
 				{
@@ -146,7 +146,7 @@ public final class DeadTumorInstance extends NpcInstance
 					showChatWindow(player, 7);
 				}
 			}
-			else if (command.equalsIgnoreCase("warpechmus"))
+			else if (command.equals("warpechmus"))
 			{
 				if (!player.isInParty())
 				{
@@ -169,7 +169,7 @@ public final class DeadTumorInstance extends NpcInstance
 				
 				((HeartInfinityAttack) getReflection()).notifyEchmusEntrance(player.getParty().getPartyLeader());
 			}
-			else if (command.equalsIgnoreCase("showcheckpage"))
+			else if (command.equals("showcheckpage"))
 			{
 				if (!player.isInParty())
 				{
@@ -191,7 +191,7 @@ public final class DeadTumorInstance extends NpcInstance
 				
 				showChatWindow(player, 5);
 			}
-			else if (command.equalsIgnoreCase("warp"))
+			else if (command.equals("warp"))
 			{
 				if (ItemFunctions.getItemCount(player, 13797) < 1)
 				{
@@ -220,7 +220,7 @@ public final class DeadTumorInstance extends NpcInstance
 					}
 				}
 			}
-			else if (command.equalsIgnoreCase("reenterechmus"))
+			else if (command.equals("reenterechmus"))
 			{
 				if (ItemFunctions.getItemCount(player, 13797) < 3)
 				{

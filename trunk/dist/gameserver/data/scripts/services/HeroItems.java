@@ -299,7 +299,7 @@ public final class HeroItems extends Functions
 		boolean isKamael = player.getRace() == Race.kamael;
 		String htmltext = "";
 		
-		if (val[0].equalsIgnoreCase("list"))
+		if (val[0].equals("list"))
 		{
 			htmltext = "<html><body><font color=\"LEVEL\">List of Hero Weapons:</font><table border=0 width=270><tr><td>";
 			

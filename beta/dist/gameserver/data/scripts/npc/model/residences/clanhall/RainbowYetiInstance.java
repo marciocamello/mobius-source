@@ -456,7 +456,7 @@ public final class RainbowYetiInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("get"))
+		if (command.equals("get"))
 		{
 			NpcHtmlMessage msg = new NpcHtmlMessage(player, this);
 			boolean has = true;
@@ -541,7 +541,7 @@ public final class RainbowYetiInstance extends NpcInstance
 			
 			player.sendPacket(msg);
 		}
-		else if (command.equalsIgnoreCase("see"))
+		else if (command.equals("see"))
 		{
 			NpcHtmlMessage msg = new NpcHtmlMessage(player, this);
 			msg.setFile("residence2/clanhall/watering_manager005.htm");

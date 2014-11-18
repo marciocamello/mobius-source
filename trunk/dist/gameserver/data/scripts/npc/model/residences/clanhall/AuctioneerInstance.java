@@ -100,14 +100,14 @@ public final class AuctioneerInstance extends NpcInstance
 		StringTokenizer tokenizer = new StringTokenizer(command.replace("\r\n", "<br1>"));
 		String actualCommand = tokenizer.nextToken();
 		
-		if (actualCommand.equalsIgnoreCase("map"))
+		if (actualCommand.equals("map"))
 		{
 			NpcHtmlMessage msg = new NpcHtmlMessage(player, this);
 			msg.setFile(getMapDialog());
 			msg.replace("%lang%", player.getLang());
 			player.sendPacket(msg);
 		}
-		else if (actualCommand.equalsIgnoreCase("list_all"))
+		else if (actualCommand.equals("list_all"))
 		{
 			int page = Integer.parseInt(tokenizer.nextToken());
 			List<ClanHallAuctionEvent> events = new ArrayList<>();
@@ -178,7 +178,7 @@ public final class AuctioneerInstance extends NpcInstance
 			
 			player.sendPacket(msg);
 		}
-		else if (actualCommand.equalsIgnoreCase("info"))
+		else if (actualCommand.equals("info"))
 		{
 			String fileName = null;
 			ClanHall clanHall = null;
@@ -259,7 +259,7 @@ public final class AuctioneerInstance extends NpcInstance
 			
 			player.sendPacket(msg);
 		}
-		else if (actualCommand.equalsIgnoreCase("bidder_list"))
+		else if (actualCommand.equals("bidder_list"))
 		{
 			int id = Integer.parseInt(tokenizer.nextToken());
 			int page = Integer.parseInt(tokenizer.nextToken());
@@ -322,7 +322,7 @@ public final class AuctioneerInstance extends NpcInstance
 			
 			player.sendPacket(msg);
 		}
-		else if (actualCommand.equalsIgnoreCase("bid_start"))
+		else if (actualCommand.equals("bid_start"))
 		{
 			if (!firstChecks(player))
 			{
@@ -354,7 +354,7 @@ public final class AuctioneerInstance extends NpcInstance
 			msg.replace("%clan_adena%", String.valueOf(player.getClan().getWarehouse().getCountOf(ItemTemplate.ITEM_ID_ADENA)));
 			player.sendPacket(msg);
 		}
-		else if (actualCommand.equalsIgnoreCase("bid_next"))
+		else if (actualCommand.equals("bid_next"))
 		{
 			if (!firstChecks(player))
 			{
@@ -408,7 +408,7 @@ public final class AuctioneerInstance extends NpcInstance
 			msg.replace("%hour%", String.valueOf(c.get(Calendar.HOUR_OF_DAY)));
 			player.sendPacket(msg);
 		}
-		else if (actualCommand.equalsIgnoreCase("bid_confirm"))
+		else if (actualCommand.equals("bid_confirm"))
 		{
 			if (!firstChecks(player))
 			{
@@ -473,7 +473,7 @@ public final class AuctioneerInstance extends NpcInstance
 			player.sendPacket(SystemMsg.YOUR_BID_HAS_BEEN_SUCCESSFULLY_PLACED);
 			onBypassFeedback(player, "info");
 		}
-		else if (actualCommand.equalsIgnoreCase("cancel_bid"))
+		else if (actualCommand.equals("cancel_bid"))
 		{
 			if (!firstChecks(player))
 			{
@@ -505,7 +505,7 @@ public final class AuctioneerInstance extends NpcInstance
 			msg.replace("%return%", String.valueOf(returnVal));
 			player.sendPacket(msg);
 		}
-		else if (actualCommand.equalsIgnoreCase("cancel_bid_confirm"))
+		else if (actualCommand.equals("cancel_bid_confirm"))
 		{
 			if (!firstChecks(player))
 			{
@@ -536,7 +536,7 @@ public final class AuctioneerInstance extends NpcInstance
 			player.sendPacket(SystemMsg.YOU_HAVE_CANCELED_YOUR_BID);
 			showChatWindow(player, 0);
 		}
-		else if (actualCommand.equalsIgnoreCase("register_start"))
+		else if (actualCommand.equals("register_start"))
 		{
 			if (!firstChecks(player))
 			{
@@ -565,7 +565,7 @@ public final class AuctioneerInstance extends NpcInstance
 			msg.replace("%deposit%", String.valueOf(clanHall.getDeposit()));
 			player.sendPacket(msg);
 		}
-		else if (actualCommand.equalsIgnoreCase("register_next"))
+		else if (actualCommand.equals("register_next"))
 		{
 			if (!firstChecks(player))
 			{
@@ -594,7 +594,7 @@ public final class AuctioneerInstance extends NpcInstance
 			msg.replace("%last_bid%", String.valueOf(clanHall.getBaseMinBid())); // TODO [VISTALL] get last bid
 			player.sendPacket(msg);
 		}
-		else if (actualCommand.equalsIgnoreCase("register_next2"))
+		else if (actualCommand.equals("register_next2"))
 		{
 			if (!firstChecks(player))
 			{
@@ -656,7 +656,7 @@ public final class AuctioneerInstance extends NpcInstance
 			msg.replace("%date%", DATE_FORMAT.format(cal.getTimeInMillis()));
 			player.sendPacket(msg);
 		}
-		else if (actualCommand.equalsIgnoreCase("register_confirm"))
+		else if (actualCommand.equals("register_confirm"))
 		{
 			if (!firstChecks(player))
 			{

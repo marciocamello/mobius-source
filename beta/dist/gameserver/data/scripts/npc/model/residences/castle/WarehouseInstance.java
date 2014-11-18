@@ -112,7 +112,7 @@ public final class WarehouseInstance extends NpcInstance
 		{
 			WarehouseFunctions.showDepositWindowClan(player);
 		}
-		else if (command.equalsIgnoreCase("CheckHonoraryItems"))
+		else if (command.equals("CheckHonoraryItems"))
 		{
 			String filename;
 			
@@ -130,7 +130,7 @@ public final class WarehouseInstance extends NpcInstance
 			html.replace("%total_items%", String.valueOf(getCastle().getRewardCount()));
 			player.sendPacket(html);
 		}
-		else if (command.equalsIgnoreCase("ExchangeBloodAlli"))
+		else if (command.equals("ExchangeBloodAlli"))
 		{
 			if (!player.isClanLeader())
 			{
@@ -147,7 +147,7 @@ public final class WarehouseInstance extends NpcInstance
 				ItemFunctions.addItem(player, ITEM_BLOOD_OATH, 30, true);
 			}
 		}
-		else if (command.equalsIgnoreCase("ReciveBloodAlli"))
+		else if (command.equals("ReciveBloodAlli"))
 		{
 			Castle castle = getCastle();
 			String filename;

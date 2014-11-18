@@ -617,63 +617,6 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 		return true;
 	}
 	
-	/**
-	 * Method onLoad.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
-	 */
-	@Override
-	public void onLoad()
-	{
-		CharListenerList.addGlobal(this);
-		_zone.addListener(_zoneListener);
-		
-		for (String[] s : startTime)
-		{
-			Calendar cal = Calendar.getInstance();
-			cal.set(Calendar.HOUR_OF_DAY, Integer.valueOf(s[0].split(":")[0]));
-			cal.set(Calendar.MINUTE, Integer.valueOf(s[0].split(":")[1]));
-			cal.set(Calendar.SECOND, 0);
-			
-			while (cal.getTimeInMillis() < System.currentTimeMillis())
-			{
-				cal.add(Calendar.DAY_OF_YEAR, 1);
-			}
-			
-			ScheduledFuture<?> startTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new StartTask(s[1]), cal.getTimeInMillis() - System.currentTimeMillis(), 86400000);
-			startTasks.add(startTask);
-			spawnNpcs();
-		}
-		
-		_active = ServerVariables.getString("DestructionOfFlag", "off").equalsIgnoreCase("on");
-		_log.info("Loaded Event: DestructionOfFlag");
-	}
-	
-	/**
-	 * Method onReload.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
-	 */
-	@Override
-	public void onReload()
-	{
-		_zone.removeListener(_zoneListener);
-		
-		if (_startTask != null)
-		{
-			_startTask.cancel(false);
-			_startTask = null;
-		}
-	}
-	
-	/**
-	 * Method onShutdown.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
-	 */
-	@Override
-	public void onShutdown()
-	{
-		onReload();
-	}
-	
 	static boolean _active = false;
 	
 	/**
@@ -3211,5 +3154,62 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 				ThreadPoolManager.getInstance().schedule(new TeleportTask(cha, new Location(x, y, z)), 3000);
 			}
 		}
+	}
+	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
+	@Override
+	public void onLoad()
+	{
+		CharListenerList.addGlobal(this);
+		_zone.addListener(_zoneListener);
+		
+		for (String[] s : startTime)
+		{
+			Calendar cal = Calendar.getInstance();
+			cal.set(Calendar.HOUR_OF_DAY, Integer.valueOf(s[0].split(":")[0]));
+			cal.set(Calendar.MINUTE, Integer.valueOf(s[0].split(":")[1]));
+			cal.set(Calendar.SECOND, 0);
+			
+			while (cal.getTimeInMillis() < System.currentTimeMillis())
+			{
+				cal.add(Calendar.DAY_OF_YEAR, 1);
+			}
+			
+			ScheduledFuture<?> startTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new StartTask(s[1]), cal.getTimeInMillis() - System.currentTimeMillis(), 86400000);
+			startTasks.add(startTask);
+			spawnNpcs();
+		}
+		
+		_active = ServerVariables.getString("DestructionOfFlag", "off").equals("on");
+		_log.info("Loaded Event: DestructionOfFlag");
+	}
+	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
+	@Override
+	public void onReload()
+	{
+		_zone.removeListener(_zoneListener);
+		
+		if (_startTask != null)
+		{
+			_startTask.cancel(false);
+			_startTask = null;
+		}
+	}
+	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
+	@Override
+	public void onShutdown()
+	{
+		onReload();
 	}
 }

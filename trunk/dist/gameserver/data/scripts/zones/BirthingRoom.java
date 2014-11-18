@@ -42,22 +42,6 @@ public final class BirthingRoom implements ScriptFile
 		}
 	}
 	
-	@Override
-	public void onLoad()
-	{
-		init();
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	public final class ZoneListener implements OnZoneEnterLeaveListener
 	{
 		@Override
@@ -93,5 +77,21 @@ public final class BirthingRoom implements ScriptFile
 		public void onZoneLeave(Zone zone, Creature cha)
 		{
 		}
+	}
+	
+	@Override
+	public void onLoad()
+	{
+		init();
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

@@ -181,22 +181,6 @@ public final class MemorialService extends DynamicQuest implements ScriptFile
 		return false;
 	}
 	
-	@Override
-	public void onLoad()
-	{
-		_log.info("Dynamic Quest: ID " + QUEST_ID + ". Name: Memorial Service - Campaign");
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
 	private final class OnSocialActionListenerImpl implements OnSocialActionListener
 	{
 		public OnSocialActionListenerImpl()
@@ -230,5 +214,21 @@ public final class MemorialService extends DynamicQuest implements ScriptFile
 				}
 			}
 		}
+	}
+	
+	@Override
+	public void onLoad()
+	{
+		_log.info("Dynamic Quest: ID " + QUEST_ID + ". Name: Memorial Service - Campaign");
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

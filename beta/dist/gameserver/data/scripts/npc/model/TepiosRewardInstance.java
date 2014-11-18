@@ -70,7 +70,7 @@ public final class TepiosRewardInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("getreward"))
+		if (command.equals("getreward"))
 		{
 			if (_gotReward)
 			{

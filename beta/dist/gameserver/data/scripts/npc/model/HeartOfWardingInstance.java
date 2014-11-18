@@ -47,7 +47,7 @@ public final class HeartOfWardingInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("enter_lair"))
+		if (command.equals("enter_lair"))
 		{
 			AntharasManager.enterTheLair(player);
 			return;

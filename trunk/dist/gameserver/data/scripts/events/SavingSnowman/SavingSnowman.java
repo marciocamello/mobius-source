@@ -177,30 +177,6 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 	static boolean _active = false;
 	
 	/**
-	 * Method onLoad.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
-	 */
-	@Override
-	public void onLoad()
-	{
-		CharListenerList.addGlobal(this);
-		
-		if (isActive())
-		{
-			_active = true;
-			spawnEventManagers();
-			_log.info("Loaded Event: SavingSnowman [state: activated]");
-			_saveTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new SaveTask(), INITIAL_SAVE_DELAY, SAVE_INTERVAL);
-			_sayTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new SayTask(), SATNA_SAY_INTERVAL, SATNA_SAY_INTERVAL);
-			_snowmanState = SnowmanState.SAVED;
-		}
-		else
-		{
-			_log.info("Loaded Event: SavingSnowman [state: deactivated]");
-		}
-	}
-	
-	/**
 	 * Method isActive.
 	 * @return boolean
 	 */
@@ -477,41 +453,6 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 	private void unSpawnEventManagers()
 	{
 		deSpawnNPCs(_spawns);
-	}
-	
-	/**
-	 * Method onReload.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
-	 */
-	@Override
-	public void onReload()
-	{
-		unSpawnEventManagers();
-		
-		if (_saveTask != null)
-		{
-			_saveTask.cancel(false);
-		}
-		
-		_saveTask = null;
-		
-		if (_sayTask != null)
-		{
-			_sayTask.cancel(false);
-		}
-		
-		_sayTask = null;
-		_snowmanState = SnowmanState.SAVED;
-	}
-	
-	/**
-	 * Method onShutdown.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
-	 */
-	@Override
-	public void onShutdown()
-	{
-		unSpawnEventManagers();
 	}
 	
 	/**
@@ -1092,5 +1033,64 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 			
 			captureSnowman();
 		}
+	}
+	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
+	@Override
+	public void onLoad()
+	{
+		CharListenerList.addGlobal(this);
+		
+		if (isActive())
+		{
+			_active = true;
+			spawnEventManagers();
+			_log.info("Loaded Event: SavingSnowman [state: activated]");
+			_saveTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new SaveTask(), INITIAL_SAVE_DELAY, SAVE_INTERVAL);
+			_sayTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new SayTask(), SATNA_SAY_INTERVAL, SATNA_SAY_INTERVAL);
+			_snowmanState = SnowmanState.SAVED;
+		}
+		else
+		{
+			_log.info("Loaded Event: SavingSnowman [state: deactivated]");
+		}
+	}
+	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
+	@Override
+	public void onReload()
+	{
+		unSpawnEventManagers();
+		
+		if (_saveTask != null)
+		{
+			_saveTask.cancel(false);
+		}
+		
+		_saveTask = null;
+		
+		if (_sayTask != null)
+		{
+			_sayTask.cancel(false);
+		}
+		
+		_sayTask = null;
+		_snowmanState = SnowmanState.SAVED;
+	}
+	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
+	@Override
+	public void onShutdown()
+	{
+		unSpawnEventManagers();
 	}
 }

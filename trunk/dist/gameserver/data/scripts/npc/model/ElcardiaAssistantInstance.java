@@ -78,7 +78,7 @@ public final class ElcardiaAssistantInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("request_blessing"))
+		if (command.equals("request_blessing"))
 		{
 			List<Creature> target = new ArrayList<>();
 			target.add(player);

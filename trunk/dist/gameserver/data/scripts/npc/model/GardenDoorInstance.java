@@ -59,7 +59,7 @@ public final class GardenDoorInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("aphros_door_open"))
+		if (command.equals("aphros_door_open"))
 		{
 			if (timeRespwn1 == 0)
 			{
@@ -100,7 +100,7 @@ public final class GardenDoorInstance extends NpcInstance
 				}
 			}
 		}
-		else if (command.equalsIgnoreCase("garden_door_angel"))
+		else if (command.equals("garden_door_angel"))
 		{
 			if (timeRespwn2 == 0)
 			{
@@ -119,7 +119,7 @@ public final class GardenDoorInstance extends NpcInstance
 				showChatWindow(player, "aphros/keeper_no_respawn.htm");
 			}
 		}
-		else if (command.equalsIgnoreCase("garden_door_fountain"))
+		else if (command.equals("garden_door_fountain"))
 		{
 			if (timeRespwn3 == 0)
 			{
@@ -138,7 +138,7 @@ public final class GardenDoorInstance extends NpcInstance
 				showChatWindow(player, "aphros/keeper_no_respawn.htm");
 			}
 		}
-		else if (command.equalsIgnoreCase("garden_door_statue"))
+		else if (command.equals("garden_door_statue"))
 		{
 			if (timeRespwn4 == 0)
 			{

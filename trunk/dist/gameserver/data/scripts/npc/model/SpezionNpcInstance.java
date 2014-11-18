@@ -38,7 +38,7 @@ public final class SpezionNpcInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("normal_spezion"))
+		if (command.equals("normal_spezion"))
 		{
 			Reflection r = player.getActiveReflection();
 			

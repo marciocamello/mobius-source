@@ -98,7 +98,7 @@ public final class SirraInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("teleport_in"))
+		if (command.equals("teleport_in"))
 		{
 			for (NpcInstance n : getReflection().getNpcs())
 			{

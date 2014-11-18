@@ -86,7 +86,7 @@ public final class BaiumGatekeeperInstance extends NpcInstance
 		}
 		else if (command.startsWith("request_wakeup"))
 		{
-			if ((player.getVar("baiumPermission") == null) || !player.getVar("baiumPermission").equalsIgnoreCase("granted"))
+			if ((player.getVar("baiumPermission") == null) || !player.getVar("baiumPermission").equals("granted"))
 			{
 				showChatWindow(player, "default/29025-1.htm");
 				return;

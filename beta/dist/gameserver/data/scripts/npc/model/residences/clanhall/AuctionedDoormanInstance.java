@@ -62,7 +62,7 @@ public final class AuctionedDoormanInstance extends NpcInstance
 		
 		ClanHall clanHall = getClanHall();
 		
-		if (command.equalsIgnoreCase("openDoors"))
+		if (command.equals("openDoors"))
 		{
 			if (player.hasPrivilege(Privilege.CH_ENTER_EXIT) && (player.getClan().getHasHideout() == clanHall.getId()))
 			{
@@ -78,7 +78,7 @@ public final class AuctionedDoormanInstance extends NpcInstance
 				showChatWindow(player, "residence2/clanhall/noAuthority.htm");
 			}
 		}
-		else if (command.equalsIgnoreCase("closeDoors"))
+		else if (command.equals("closeDoors"))
 		{
 			if (player.hasPrivilege(Privilege.CH_ENTER_EXIT) && (player.getClan().getHasHideout() == clanHall.getId()))
 			{
@@ -94,7 +94,7 @@ public final class AuctionedDoormanInstance extends NpcInstance
 				showChatWindow(player, "residence2/clanhall/noAuthority.htm");
 			}
 		}
-		else if (command.equalsIgnoreCase("banish"))
+		else if (command.equals("banish"))
 		{
 			if (player.hasPrivilege(Privilege.CH_DISMISS))
 			{

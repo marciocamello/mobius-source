@@ -58,7 +58,7 @@ public final class SealControlDevice extends DefaultAI
 	@Override
 	protected void onEvtScriptEvent(String event, Object arg1, Object arg2)
 	{
-		if (event.equalsIgnoreCase("FAIL_INSTANCE"))
+		if (event.equals("FAIL_INSTANCE"))
 		{
 			getActor().deleteMe();
 		}

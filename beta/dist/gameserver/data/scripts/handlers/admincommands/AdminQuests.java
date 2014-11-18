@@ -75,22 +75,22 @@ public class AdminQuests implements IAdminCommandHandler, ScriptFile
 					return true;
 				}
 				
-				if ((wordList.length < 3) || wordList[2].equalsIgnoreCase("SHOW"))
+				if ((wordList.length < 3) || wordList[2].equals("SHOW"))
 				{
 					return cmd_Show(_quest, wordList, activeChar);
 				}
 				
-				if (wordList[2].equalsIgnoreCase("STATE"))
+				if (wordList[2].equals("STATE"))
 				{
 					return cmd_State(_quest, wordList, activeChar);
 				}
 				
-				if (wordList[2].equalsIgnoreCase("VAR"))
+				if (wordList[2].equals("VAR"))
 				{
 					return cmd_Var(_quest, wordList, activeChar);
 				}
 				
-				if (wordList[2].equalsIgnoreCase("CLEAR"))
+				if (wordList[2].equals("CLEAR"))
 				{
 					return cmd_Clear(_quest, wordList, activeChar);
 				}
@@ -190,7 +190,7 @@ public class AdminQuests implements IAdminCommandHandler, ScriptFile
 		
 		for (String key : vars.keySet())
 		{
-			if (!key.equalsIgnoreCase("<state>"))
+			if (!key.equals("<state>"))
 			{
 				replyMSG.append(fmtRow.sprintf(new Object[]
 				{
@@ -298,7 +298,7 @@ public class AdminQuests implements IAdminCommandHandler, ScriptFile
 			return false;
 		}
 		
-		if (wordList[4].equalsIgnoreCase("~") || wordList[4].equalsIgnoreCase("#"))
+		if (wordList[4].equals("~") || wordList[4].equals("#"))
 		{
 			qs.unset(wordList[3]);
 		}

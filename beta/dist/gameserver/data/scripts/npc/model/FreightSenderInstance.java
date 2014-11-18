@@ -48,11 +48,11 @@ public final class FreightSenderInstance extends MerchantInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("deposit_items"))
+		if (command.equals("deposit_items"))
 		{
 			player.sendPacket(new PackageToList(player));
 		}
-		else if (command.equalsIgnoreCase("withdraw_items"))
+		else if (command.equals("withdraw_items"))
 		{
 			WarehouseFunctions.showFreightWindow(player);
 		}

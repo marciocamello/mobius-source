@@ -175,7 +175,7 @@ public final class AdminResidence implements IAdminCommandHandler, ScriptFile
 				Clan clan = null;
 				final String clanName = wordList[2];
 				
-				if (!clanName.equalsIgnoreCase("npc"))
+				if (!clanName.equals("npc"))
 				{
 					clan = ClanTable.getInstance().getClanByName(clanName);
 					

@@ -41,7 +41,7 @@ public final class PowerfulDeviceInstance extends NpcInstance
 		{
 			return;
 		}
-		if (command.equalsIgnoreCase("Awaken"))
+		if (command.equals("Awaken"))
 		{
 			int essencesCount = AwakingManager.getInstance().giveGiantEssences(player, true);
 			NpcHtmlMessage htmlMessage = new NpcHtmlMessage(getObjectId());
@@ -50,13 +50,13 @@ public final class PowerfulDeviceInstance extends NpcInstance
 			htmlMessage.setFile("default/" + getId() + "-4.htm");
 			player.sendPacket(htmlMessage);
 		}
-		else if (command.equalsIgnoreCase("Awaken1"))
+		else if (command.equals("Awaken1"))
 		{
 			NpcHtmlMessage htmlMessage = new NpcHtmlMessage(getObjectId());
 			htmlMessage.setFile("awaken/" + player.getClassId().getId() + ".htm");
 			player.sendPacket(htmlMessage);
 		}
-		else if (command.equalsIgnoreCase("Awaken2"))
+		else if (command.equals("Awaken2"))
 		{
 			calculateNextClass(player);
 			player.setVar("AwakenPrepared", "true", -1);

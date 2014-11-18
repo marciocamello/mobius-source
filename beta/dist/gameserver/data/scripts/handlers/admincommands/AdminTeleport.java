@@ -206,11 +206,11 @@ public class AdminTeleport implements IAdminCommandHandler, ScriptFile
 			case "admin_teleto":
 			case "admin_tele_to":
 			case "admin_instant_move":
-				if ((wordList.length > 1) && wordList[1].equalsIgnoreCase("r"))
+				if ((wordList.length > 1) && wordList[1].equals("r"))
 				{
 					activeChar.setTeleMode(2);
 				}
-				else if ((wordList.length > 1) && wordList[1].equalsIgnoreCase("end"))
+				else if ((wordList.length > 1) && wordList[1].equals("end"))
 				{
 					activeChar.setTeleMode(0);
 				}

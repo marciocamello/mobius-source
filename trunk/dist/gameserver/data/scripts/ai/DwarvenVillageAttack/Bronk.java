@@ -49,11 +49,11 @@ public final class Bronk extends Dwarvs
 	@Override
 	protected void onEvtScriptEvent(String event, Object arg1, Object arg2)
 	{
-		if (event.equalsIgnoreCase("BRONK_1"))
+		if (event.equals("BRONK_1"))
 		{
 			addTimer(1, 1600);
 		}
-		else if (event.equalsIgnoreCase("BRONK_2"))
+		else if (event.equals("BRONK_2"))
 		{
 			addTimer(2, 1600);
 		}

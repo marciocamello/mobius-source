@@ -50,17 +50,17 @@ public final class GvGBoss extends Fighter
 		if ((actor.getCurrentHpPercents() < 50) && (!phrase1))
 		{
 			phrase1 = true;
-			Functions.npcSay(actor, "Вам не уда�?т�?�? похитит�? �?окровища Герал�?да!");
+			Functions.npcSay(actor, "You can not steal the treasures Herald!");
 		}
 		else if ((actor.getCurrentHpPercents() < 30) && (!phrase2))
 		{
 			phrase2 = true;
-			Functions.npcSay(actor, "Я тебе череп проломл�?!");
+			Functions.npcSay(actor, "I'll skull fractured!");
 		}
 		else if ((actor.getCurrentHpPercents() < 5) && (!phrase3))
 		{
 			phrase3 = true;
-			Functions.npcSay(actor, "Вы в�?е погибнете в �?тра�?ных муках! Уничтожу!");
+			Functions.npcSay(actor, "All of you will die in terrible agony! destroy!");
 		}
 		
 		super.onEvtAttacked(attacker, damage);

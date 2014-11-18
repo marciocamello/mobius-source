@@ -77,7 +77,7 @@ public final class EnvoyInstance extends NpcInstance
 				state;
 				final String fileName;
 				
-				if (command.equalsIgnoreCase("yes"))
+				if (command.equals("yes"))
 				{
 					Residence castle = ResidenceHolder.getInstance().getResidence(Castle.class, _castleId);
 					

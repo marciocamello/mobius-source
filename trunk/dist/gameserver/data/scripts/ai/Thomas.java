@@ -27,20 +27,20 @@ public final class Thomas extends Fighter
 	private long _lastSay;
 	private static final String[] _stay =
 	{
-		"Ха...Ха... Вы при�?ли �?па�?ти �?неговика?",
-		"Так про�?то �? вам его не отдам!",
-		"Чтобы �?па�?ти ва�?его �?неговика, вам придет�?�? убит�? мен�?!",
-		"Ха...Ха... Вы думаете �?то так про�?то?"
+		"Ha... Ha... You came to save the snowman?",
+		"So I just do not give it to you!",
+		"In order to save your snowman, you'll have to kill me!",
+		"Ha... Ha... You think it's that easy?"
 	};
 	private static final String[] _attacked =
 	{
-		"Вы должны в�?е умерет�?!",
-		"Снеговик мой и не будет у ва�? �?ового Года!",
-		"Я ва�? в�?ех уб�?�?!",
-		"Что так �?лабо б�?ете? �?��ло ка�?и ели? Ха... Ха...",
-		"�? �?то называет�?�? герои?",
-		"�?е видат�? вам �?неговика!",
-		"Тол�?ко древнее оружие �?по�?обно победит�? мен�?!"
+		"You should all die!",
+		"Snowman will not have any New Year!",
+		"I'll kill you all!",
+		"With so weak? Didn't eat any porridge? Ha... Ha...",
+		"And you are called heroes?",
+		"Don't you see the snowman!",
+		"Only an ancient weapon is capable of beating me!"
 	};
 	
 	/**

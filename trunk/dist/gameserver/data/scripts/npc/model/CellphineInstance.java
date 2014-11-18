@@ -50,7 +50,7 @@ public final class CellphineInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("Call_Hermuncus"))
+		if (command.equals("Call_Hermuncus"))
 		{
 			Reflection r = player.getActiveReflection();
 			

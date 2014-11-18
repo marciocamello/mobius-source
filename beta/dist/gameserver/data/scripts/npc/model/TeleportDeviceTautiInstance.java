@@ -42,7 +42,7 @@ public final class TeleportDeviceTautiInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("request_accept_tauti"))
+		if (command.equals("request_accept_tauti"))
 		{
 			/*
 			 * if(player.getParty() == null) { player.sendPacket(new SystemMessage(SystemMessage.ONLY_A_PARTY_LEADER_CAN_TRY_TO_ENTER)); return; } if(player.getParty().getCommandChannel() == null) { player.sendPacket(new
@@ -69,7 +69,7 @@ public final class TeleportDeviceTautiInstance extends NpcInstance
 				showChatWindow(player, "default/33678-nokey.htm");
 			}
 		}
-		else if (command.equalsIgnoreCase("request_tauti"))
+		else if (command.equals("request_tauti"))
 		{
 			// if(player.getParty().isLeader(player))
 			// {

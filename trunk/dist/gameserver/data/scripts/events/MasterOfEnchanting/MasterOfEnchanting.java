@@ -331,6 +331,20 @@ public final class MasterOfEnchanting extends Functions implements ScriptFile, O
 	}
 	
 	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)
+	 */
+	@Override
+	public void onPlayerEnter(Player player)
+	{
+		if (_active)
+		{
+			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.MasOfEnch.AnnounceEventStarted", null);
+		}
+	}
+	
+	/**
 	 * Method onLoad.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
 	 */
@@ -369,19 +383,5 @@ public final class MasterOfEnchanting extends Functions implements ScriptFile, O
 	public void onShutdown()
 	{
 		unSpawnEventManagers();
-	}
-	
-	/**
-	 * Method onPlayerEnter.
-	 * @param player Player
-	 * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)
-	 */
-	@Override
-	public void onPlayerEnter(Player player)
-	{
-		if (_active)
-		{
-			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.MasOfEnch.AnnounceEventStarted", null);
-		}
 	}
 }

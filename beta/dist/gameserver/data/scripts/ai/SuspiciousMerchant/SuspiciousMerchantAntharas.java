@@ -122,19 +122,19 @@ public final class SuspiciousMerchantAntharas extends DefaultAI
 						switch (Rnd.get(4))
 						{
 							case 0:
-								Functions.npcSay(actor, "�?ак погода?");
+								Functions.npcSay(actor, "How's the weather??");
 								break;
 							
 							case 1:
-								Functions.npcSay(actor, "�?ак жизн�??");
+								Functions.npcSay(actor, "As life?");
 								break;
 							
 							case 2:
-								Functions.npcSay(actor, "�?огода �?егодн�? хоро�?а�?.");
+								Functions.npcSay(actor, "The weather today is good.");
 								break;
 							
 							case 3:
-								Functions.npcSay(actor, "�? у ва�? крепкие ворота?");
+								Functions.npcSay(actor, "And you have strong doors?");
 								break;
 						}
 						
@@ -147,11 +147,11 @@ public final class SuspiciousMerchantAntharas extends DefaultAI
 				switch (current_point)
 				{
 					case 0:
-						Functions.npcSay(actor, "�?адо разведат�? об�?тановку...");
+						Functions.npcSay(actor, "It is necessary to explore the situation...");
 						break;
 					
 					case 5:
-						Functions.npcSay(actor, "�?ойду прогул�?�?�?�?...");
+						Functions.npcSay(actor, "Go for a walk...");
 						break;
 				}
 			}
@@ -166,12 +166,7 @@ public final class SuspiciousMerchantAntharas extends DefaultAI
 			}
 			
 			addTaskMove(points[current_point], false);
-			doTask()/**
-			 * Method onEvtAttacked.
-			 * @param attacker Creature
-			 * @param damage int
-			 */
-			;
+			doTask();
 			return true;
 		}
 		
@@ -180,20 +175,25 @@ public final class SuspiciousMerchantAntharas extends DefaultAI
 			return true;
 		}
 		
-		return /**
-		 * Method onEvtAggression.
-		 * @param target Creature
-		 * @param aggro int
-		 */
-		false;
+		return false;
 	}
 	
+	/**
+	 * Method onEvtAttacked.
+	 * @param attacker Creature
+	 * @param damage int
+	 */
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
 		// empty method
 	}
 	
+	/**
+	 * Method onEvtAggression.
+	 * @param target Creature
+	 * @param aggro int
+	 */
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{

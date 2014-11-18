@@ -94,11 +94,11 @@ public final class Kechi extends DefaultAI
 	};
 	private static final String[] chat = new String[]
 	{
-		"Стража, убейте их!",
-		"Стража!",
-		"Стража, на помощ�?!",
-		"Добейте их.",
-		"Вы в�?е умрете!"
+		"Guards, kill them!",
+		"Guards!",
+		"Guards, help!",
+		"Finish them off.",
+		"You will all die!"
 	};
 	private int stage = 0;
 	

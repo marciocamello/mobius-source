@@ -215,13 +215,13 @@ public abstract class ResidenceManager extends MerchantInstance
 				return;
 		}
 		
-		if (actualCommand.equalsIgnoreCase("banish"))
+		if (actualCommand.equals("banish"))
 		{
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			html.setFile("residence/Banish.htm");
 			sendHtmlMessage(player, html);
 		}
-		else if (actualCommand.equalsIgnoreCase("banish_foreigner"))
+		else if (actualCommand.equals("banish_foreigner"))
 		{
 			if (!isHaveRigths(player, getPrivDismiss()))
 			{
@@ -232,7 +232,7 @@ public abstract class ResidenceManager extends MerchantInstance
 			getResidence().banishForeigner();
 			return;
 		}
-		else if (actualCommand.equalsIgnoreCase("Buy"))
+		else if (actualCommand.equals("Buy"))
 		{
 			if (val.equals(""))
 			{
@@ -241,13 +241,13 @@ public abstract class ResidenceManager extends MerchantInstance
 			
 			showShopWindow(player, Integer.valueOf(val), true);
 		}
-		else if (actualCommand.equalsIgnoreCase("manage_vault"))
+		else if (actualCommand.equals("manage_vault"))
 		{
-			if (val.equalsIgnoreCase("deposit"))
+			if (val.equals("deposit"))
 			{
 				WarehouseFunctions.showDepositWindowClan(player);
 			}
-			else if (val.equalsIgnoreCase("withdraw"))
+			else if (val.equals("withdraw"))
 			{
 				int value = Integer.valueOf(st.nextToken());
 				
@@ -272,11 +272,11 @@ public abstract class ResidenceManager extends MerchantInstance
 			
 			return;
 		}
-		else if (actualCommand.equalsIgnoreCase("door"))
+		else if (actualCommand.equals("door"))
 		{
 			showChatWindow(player, "residence/door.htm");
 		}
-		else if (actualCommand.equalsIgnoreCase("openDoors"))
+		else if (actualCommand.equals("openDoors"))
 		{
 			if (isHaveRigths(player, getPrivDoors()))
 			{
@@ -292,7 +292,7 @@ public abstract class ResidenceManager extends MerchantInstance
 				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			}
 		}
-		else if (actualCommand.equalsIgnoreCase("closeDoors"))
+		else if (actualCommand.equals("closeDoors"))
 		{
 			if (isHaveRigths(player, getPrivDoors()))
 			{
@@ -308,7 +308,7 @@ public abstract class ResidenceManager extends MerchantInstance
 				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			}
 		}
-		else if (actualCommand.equalsIgnoreCase("functions"))
+		else if (actualCommand.equals("functions"))
 		{
 			if (!isHaveRigths(player, getPrivUseFunctions()))
 			{
@@ -316,7 +316,7 @@ public abstract class ResidenceManager extends MerchantInstance
 				return;
 			}
 			
-			if (val.equalsIgnoreCase("tele"))
+			if (val.equals("tele"))
 			{
 				if (!getResidence().isFunctionActive(ResidenceFunction.TELEPORT))
 				{
@@ -358,7 +358,7 @@ public abstract class ResidenceManager extends MerchantInstance
 				html.replace("%teleList%", teleport_list.toString());
 				sendHtmlMessage(player, html);
 			}
-			else if (val.equalsIgnoreCase("item_creation"))
+			else if (val.equals("item_creation"))
 			{
 				if (!getResidence().isFunctionActive(ResidenceFunction.ITEM_CREATE))
 				{
@@ -375,7 +375,7 @@ public abstract class ResidenceManager extends MerchantInstance
 				html.replace("%itemList%", template);
 				sendHtmlMessage(player, html);
 			}
-			else if (val.equalsIgnoreCase("support"))
+			else if (val.equals("support"))
 			{
 				if (!getResidence().isFunctionActive(ResidenceFunction.SUPPORT))
 				{
@@ -415,7 +415,7 @@ public abstract class ResidenceManager extends MerchantInstance
 				html.replace("%all%", Config.ALT_CH_ALL_BUFFS ? "<a action=\"bypass -h npc_%objectId%_support all\">Give all</a><br1><a action=\"bypass -h npc_%objectId%_support allW\">Give warrior</a><br1><a action=\"bypass -h npc_%objectId%_support allM\">Give mystic</a><br>" : "");
 				sendHtmlMessage(player, html);
 			}
-			else if (val.equalsIgnoreCase("back"))
+			else if (val.equals("back"))
 			{
 				showChatWindow(player, 0);
 			}
@@ -454,7 +454,7 @@ public abstract class ResidenceManager extends MerchantInstance
 				sendHtmlMessage(player, html);
 			}
 		}
-		else if (actualCommand.equalsIgnoreCase("manage"))
+		else if (actualCommand.equals("manage"))
 		{
 			if (!isHaveRigths(player, getPrivSetFunctions()))
 			{
@@ -462,22 +462,22 @@ public abstract class ResidenceManager extends MerchantInstance
 				return;
 			}
 			
-			if (val.equalsIgnoreCase("recovery"))
+			if (val.equals("recovery"))
 			{
 				if (st.countTokens() >= 1)
 				{
 					val = st.nextToken();
 					boolean success = true;
 					
-					if (val.equalsIgnoreCase("hp"))
+					if (val.equals("hp"))
 					{
 						success = getResidence().updateFunctions(ResidenceFunction.RESTORE_HP, Integer.valueOf(st.nextToken()));
 					}
-					else if (val.equalsIgnoreCase("mp"))
+					else if (val.equals("mp"))
 					{
 						success = getResidence().updateFunctions(ResidenceFunction.RESTORE_MP, Integer.valueOf(st.nextToken()));
 					}
-					else if (val.equalsIgnoreCase("exp"))
+					else if (val.equals("exp"))
 					{
 						success = getResidence().updateFunctions(ResidenceFunction.RESTORE_EXP, Integer.valueOf(st.nextToken()));
 					}
@@ -494,22 +494,22 @@ public abstract class ResidenceManager extends MerchantInstance
 				
 				showManageRecovery(player);
 			}
-			else if (val.equalsIgnoreCase("other"))
+			else if (val.equals("other"))
 			{
 				if (st.countTokens() >= 1)
 				{
 					val = st.nextToken();
 					boolean success = true;
 					
-					if (val.equalsIgnoreCase("item"))
+					if (val.equals("item"))
 					{
 						success = getResidence().updateFunctions(ResidenceFunction.ITEM_CREATE, Integer.valueOf(st.nextToken()));
 					}
-					else if (val.equalsIgnoreCase("tele"))
+					else if (val.equals("tele"))
 					{
 						success = getResidence().updateFunctions(ResidenceFunction.TELEPORT, Integer.valueOf(st.nextToken()));
 					}
-					else if (val.equalsIgnoreCase("support"))
+					else if (val.equals("support"))
 					{
 						success = getResidence().updateFunctions(ResidenceFunction.SUPPORT, Integer.valueOf(st.nextToken()));
 					}
@@ -526,18 +526,18 @@ public abstract class ResidenceManager extends MerchantInstance
 				
 				showManageOther(player);
 			}
-			else if (val.equalsIgnoreCase("deco"))
+			else if (val.equals("deco"))
 			{
 				if (st.countTokens() >= 1)
 				{
 					val = st.nextToken();
 					boolean success = true;
 					
-					if (val.equalsIgnoreCase("platform"))
+					if (val.equals("platform"))
 					{
 						success = getResidence().updateFunctions(ResidenceFunction.PLATFORM, Integer.valueOf(st.nextToken()));
 					}
-					else if (val.equalsIgnoreCase("curtain"))
+					else if (val.equals("curtain"))
 					{
 						success = getResidence().updateFunctions(ResidenceFunction.CURTAIN, Integer.valueOf(st.nextToken()));
 					}
@@ -554,7 +554,7 @@ public abstract class ResidenceManager extends MerchantInstance
 				
 				showManageDeco(player);
 			}
-			else if (val.equalsIgnoreCase("back"))
+			else if (val.equals("back"))
 			{
 				showChatWindow(player, 0);
 			}
@@ -567,7 +567,7 @@ public abstract class ResidenceManager extends MerchantInstance
 			
 			return;
 		}
-		else if (actualCommand.equalsIgnoreCase("support"))
+		else if (actualCommand.equals("support"))
 		{
 			if (!isHaveRigths(player, getPrivUseFunctions()))
 			{

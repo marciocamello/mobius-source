@@ -159,7 +159,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		// for(final int doorId : doors)
 		// _reflection.getDoor(doorId).closeMe();
 		
-		_active = ServerVariables.getString("CtF", "off").equalsIgnoreCase("on");
+		_active = ServerVariables.getString("CtF", "off").equals("on");
 		
 		if (isActive())
 		{
@@ -1439,7 +1439,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 	{
 		if (!Config.EVENT_CtFAllowMultiReg)
 		{
-			if ("IP".equalsIgnoreCase(Config.EVENT_CtFCheckWindowMethod))
+			if ("IP".equals(Config.EVENT_CtFCheckWindowMethod))
 			{
 				if (boxes.containsValue(player.getIP()))
 				{
@@ -1447,7 +1447,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 					return false;
 				}
 			}
-			// else if("HWid".equalsIgnoreCase(Config.EVENT_CtFCheckWindowMethod)) {
+			// else if("HWid".equals(Config.EVENT_CtFCheckWindowMethod)) {
 			// if(boxes.containsValue(player.getNetConnection().getHWID())) {
 			// show(new CustomMessage("scripts.events.CtF.CancelledBox", player), player);
 			// return false;

@@ -56,7 +56,7 @@ public class Q00726_LightWithinTheDarkness extends Quest implements ScriptFile
 				break;
 			
 			case "reward":
-				if ((cond == 1) && player.getVar("q726").equalsIgnoreCase("done"))
+				if ((cond == 1) && player.getVar("q726").equals("done"))
 				{
 					player.unsetVar("q726");
 					qs.giveItems(KnightsEpaulette, 200);
@@ -103,7 +103,7 @@ public class Q00726_LightWithinTheDarkness extends Quest implements ScriptFile
 		}
 		else if (cond == 1)
 		{
-			if ((player.getVar("q726") != null) && player.getVar("q726").equalsIgnoreCase("done"))
+			if ((player.getVar("q726") != null) && player.getVar("q726").equals("done"))
 			{
 				htmltext = "dcw_q726_6.htm";
 			}

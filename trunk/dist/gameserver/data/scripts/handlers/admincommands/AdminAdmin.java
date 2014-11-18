@@ -148,12 +148,12 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 				case "admin_tradeoff":
 					try
 					{
-						if (wordList[1].equalsIgnoreCase("on"))
+						if (wordList[1].equals("on"))
 						{
 							activeChar.setTradeRefusal(true);
 							Functions.sendDebugMessage(activeChar, "tradeoff enabled");
 						}
-						else if (wordList[1].equalsIgnoreCase("off"))
+						else if (wordList[1].equals("off"))
 						{
 							activeChar.setTradeRefusal(false);
 							Functions.sendDebugMessage(activeChar, "tradeoff disabled");

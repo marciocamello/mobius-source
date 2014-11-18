@@ -87,27 +87,6 @@ public final class LabyrinthOfHarnak extends DynamicQuest implements ScriptFile
 	}
 	
 	@Override
-	public void onLoad()
-	{
-		_zoneListener = new ZoneListener();
-		zoneFirstSecond = ReflectionUtils.getZone(QUEST_ZONE_FIRST_SECOND);
-		zoneFirstSecond.addListener(_zoneListener);
-		zoneThird = ReflectionUtils.getZone(QUEST_ZONE_THIRD);
-		zoneThird.addListener(_zoneListener);
-		_log.info("Dynamic Quest: ID " + QUEST_ID + ". Name: Labyrinth of Harnak - Zone Quest");
-	}
-	
-	@Override
-	public void onReload()
-	{
-	}
-	
-	@Override
-	public void onShutdown()
-	{
-	}
-	
-	@Override
 	protected void onStart()
 	{
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
@@ -362,5 +341,26 @@ public final class LabyrinthOfHarnak extends DynamicQuest implements ScriptFile
 		{
 			return true;
 		}
+	}
+	
+	@Override
+	public void onLoad()
+	{
+		_zoneListener = new ZoneListener();
+		zoneFirstSecond = ReflectionUtils.getZone(QUEST_ZONE_FIRST_SECOND);
+		zoneFirstSecond.addListener(_zoneListener);
+		zoneThird = ReflectionUtils.getZone(QUEST_ZONE_THIRD);
+		zoneThird.addListener(_zoneListener);
+		_log.info("Dynamic Quest: ID " + QUEST_ID + ". Name: Labyrinth of Harnak - Zone Quest");
+	}
+	
+	@Override
+	public void onReload()
+	{
+	}
+	
+	@Override
+	public void onShutdown()
+	{
 	}
 }

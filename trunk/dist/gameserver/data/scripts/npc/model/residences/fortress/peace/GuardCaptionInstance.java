@@ -55,7 +55,7 @@ public final class GuardCaptionInstance extends FacilityManagerInstance
 		
 		Fortress fortress = getFortress();
 		
-		if (command.equalsIgnoreCase("defenceInfo"))
+		if (command.equals("defenceInfo"))
 		{
 			if ((player.getClanPrivileges() & Clan.CP_CS_MANAGE_SIEGE) != Clan.CP_CS_MANAGE_SIEGE)
 			{
@@ -71,15 +71,15 @@ public final class GuardCaptionInstance extends FacilityManagerInstance
 			
 			showChatWindow(player, "residence2/fortress/fortress_garrison002.htm", "%facility_0%", fortress.getFacilityLevel(Fortress.REINFORCE), "%facility_2%", fortress.getFacilityLevel(Fortress.DOOR_UPGRADE), "%facility_3%", fortress.getFacilityLevel(Fortress.DWARVENS), "%facility_4%", fortress.getFacilityLevel(Fortress.SCOUT));
 		}
-		else if (command.equalsIgnoreCase("defenceUp1") || command.equalsIgnoreCase("defenceUp2"))
+		else if (command.equals("defenceUp1") || command.equals("defenceUp2"))
 		{
 			buyFacility(player, Fortress.REINFORCE, Integer.parseInt(command.substring(9, 10)), 100000);
 		}
-		else if (command.equalsIgnoreCase("deployScouts"))
+		else if (command.equals("deployScouts"))
 		{
 			buyFacility(player, Fortress.SCOUT, 1, 150000);
 		}
-		else if (command.equalsIgnoreCase("doorUpgrade"))
+		else if (command.equals("doorUpgrade"))
 		{
 			boolean buy = buyFacility(player, Fortress.DOOR_UPGRADE, 1, 200000);
 			
@@ -93,7 +93,7 @@ public final class GuardCaptionInstance extends FacilityManagerInstance
 				}
 			}
 		}
-		else if (command.equalsIgnoreCase("hireDwarves"))
+		else if (command.equals("hireDwarves"))
 		{
 			buyFacility(player, Fortress.DWARVENS, 1, 100000);
 		}

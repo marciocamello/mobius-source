@@ -63,7 +63,7 @@ public final class NickColor extends Functions
 			return;
 		}
 		
-		if (param[0].equalsIgnoreCase("FFFFFF"))
+		if (param[0].equals("FFFFFF"))
 		{
 			player.setNameColor(Integer.decode("0xFFFFFF"));
 			player.broadcastUserInfo();

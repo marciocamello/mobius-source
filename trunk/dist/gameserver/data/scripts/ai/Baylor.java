@@ -26,6 +26,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
+import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
@@ -156,7 +157,7 @@ public final class Baylor extends DefaultAI
 		{
 			_claw_count = 0;
 			actor.getEffectList().stopEffect(Invincible);
-			Functions.npcSay(actor, "Да как вы по�?мели! Я непоб��дим!!!");
+			Functions.npcSay(actor, NpcString.NO_ONE_IS_GOING_TO_SURVIVE);
 		}
 	}
 	
@@ -189,7 +190,7 @@ public final class Baylor extends DefaultAI
 		{
 			_isUsedInvincible = true;
 			addTaskBuff(actor, Invincible);
-			Functions.npcSay(actor, "�?хаха! Тепер�? вы в�?е умрете.");
+			Functions.npcSay(actor, NpcString.DEMON_KING_BELETH_GIVE_ME_THE_POWER_AAAHH);
 			return true;
 		}
 		
@@ -198,7 +199,7 @@ public final class Baylor extends DefaultAI
 		if ((rnd_per < 7) && (actor.getEffectList().getEffectsBySkill(Berserk) == null))
 		{
 			addTaskBuff(actor, Berserk);
-			Functions.npcSay(actor, "Beleth, дай мне �?илу!");
+			Functions.npcSay(actor, NpcString.DEMON_KING_BELETH_GIVE_ME_THE_POWER_AAAHH);
 			return true;
 		}
 		

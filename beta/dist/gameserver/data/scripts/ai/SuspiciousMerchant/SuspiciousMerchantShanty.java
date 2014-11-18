@@ -113,19 +113,19 @@ public final class SuspiciousMerchantShanty extends DefaultAI
 						switch (Rnd.get(4))
 						{
 							case 0:
-								Functions.npcSay(actor, "�?ак погода?");
+								Functions.npcSay(actor, "How's the weather??");
 								break;
 							
 							case 1:
-								Functions.npcSay(actor, "�?ак жизн�??");
+								Functions.npcSay(actor, "As life?");
 								break;
 							
 							case 2:
-								Functions.npcSay(actor, "�?огода �?егодн�? хоро�?а�?.");
+								Functions.npcSay(actor, "The weather today is good.");
 								break;
 							
 							case 3:
-								Functions.npcSay(actor, "�? у ва�? крепкие ворота?");
+								Functions.npcSay(actor, "And you have strong doors?");
 								break;
 						}
 						
@@ -134,7 +134,7 @@ public final class SuspiciousMerchantShanty extends DefaultAI
 						
 					case 12:
 						wait_timeout = System.currentTimeMillis() + 15000;
-						Functions.npcSay(actor, "�? где дорога?");
+						Functions.npcSay(actor, "And where the road?");
 						wait = true;
 						return true;
 				}
@@ -144,15 +144,15 @@ public final class SuspiciousMerchantShanty extends DefaultAI
 				switch (current_point)
 				{
 					case 0:
-						Functions.npcSay(actor, "�?адо разведат�? об�?тановку...");
+						Functions.npcSay(actor, "Надо разведать обстановку...");
 						break;
 					
 					case 2:
-						Functions.npcSay(actor, "�?ойду прогул�?�?�?�?...");
+						Functions.npcSay(actor, "It is necessary to explore the situation...");
 						break;
 					
 					case 12:
-						Functions.npcSay(actor, "�?уда мир катит�?�?...");
+						Functions.npcSay(actor, "Where the world is heading...");
 						break;
 				}
 			}

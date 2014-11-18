@@ -47,28 +47,6 @@ public final class TheFallHarvest extends Functions implements ScriptFile, OnDea
 	private static final File multiSellFile = new File(Config.DATAPACK_ROOT, "data/xml/other/event/TheFallHarvest/31255.xml");
 	
 	/**
-	 * Method onLoad.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
-	 */
-	@Override
-	public void onLoad()
-	{
-		CharListenerList.addGlobal(this);
-		
-		if (isActive())
-		{
-			_active = true;
-			loadMultiSell();
-			spawnEventManagers();
-			_log.info("Loaded Event: The Fall Harvest [state: activated]");
-		}
-		else
-		{
-			_log.info("Loaded Event: The Fall Harvest [state: deactivated]");
-		}
-	}
-	
-	/**
 	 * Method isActive.
 	 * @return boolean
 	 */
@@ -238,32 +216,6 @@ public final class TheFallHarvest extends Functions implements ScriptFile, OnDea
 	}
 	
 	/**
-	 * Method onReload.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
-	 */
-	@Override
-	public void onReload()
-	{
-		unSpawnEventManagers();
-		
-		if (MultiSellLoaded)
-		{
-			MultiSellHolder.getInstance().remove(multiSellFile);
-			MultiSellLoaded = false;
-		}
-	}
-	
-	/**
-	 * Method onShutdown.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
-	 */
-	@Override
-	public void onShutdown()
-	{
-		// empty method
-	}
-	
-	/**
 	 * Method onDeath.
 	 * @param cha Creature
 	 * @param killer Creature
@@ -290,5 +242,53 @@ public final class TheFallHarvest extends Functions implements ScriptFile, OnDea
 		{
 			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.TheFallHarvest.AnnounceEventStarted", null);
 		}
+	}
+	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
+	@Override
+	public void onLoad()
+	{
+		CharListenerList.addGlobal(this);
+		
+		if (isActive())
+		{
+			_active = true;
+			loadMultiSell();
+			spawnEventManagers();
+			_log.info("Loaded Event: The Fall Harvest [state: activated]");
+		}
+		else
+		{
+			_log.info("Loaded Event: The Fall Harvest [state: deactivated]");
+		}
+	}
+	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
+	@Override
+	public void onReload()
+	{
+		unSpawnEventManagers();
+		
+		if (MultiSellLoaded)
+		{
+			MultiSellHolder.getInstance().remove(multiSellFile);
+			MultiSellLoaded = false;
+		}
+	}
+	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
+	@Override
+	public void onShutdown()
+	{
+		// empty method
 	}
 }

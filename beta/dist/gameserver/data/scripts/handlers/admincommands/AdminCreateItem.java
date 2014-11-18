@@ -276,35 +276,35 @@ public class AdminCreateItem implements IAdminCommandHandler, ScriptFile
 	private int getCoinId(String name)
 	{
 		int id;
-		if (name.equalsIgnoreCase("adena"))
+		if (name.equals("adena"))
 		{
 			id = 57;
 		}
-		else if (name.equalsIgnoreCase("ancientadena"))
+		else if (name.equals("ancientadena"))
 		{
 			id = 5575;
 		}
-		else if (name.equalsIgnoreCase("festivaladena"))
+		else if (name.equals("festivaladena"))
 		{
 			id = 6673;
 		}
-		else if (name.equalsIgnoreCase("blueeva"))
+		else if (name.equals("blueeva"))
 		{
 			id = 4355;
 		}
-		else if (name.equalsIgnoreCase("goldeinhasad"))
+		else if (name.equals("goldeinhasad"))
 		{
 			id = 4356;
 		}
-		else if (name.equalsIgnoreCase("silvershilen"))
+		else if (name.equals("silvershilen"))
 		{
 			id = 4357;
 		}
-		else if (name.equalsIgnoreCase("bloodypaagrio"))
+		else if (name.equals("bloodypaagrio"))
 		{
 			id = 4358;
 		}
-		else if (name.equalsIgnoreCase("fantasyislecoin"))
+		else if (name.equals("fantasyislecoin"))
 		{
 			id = 13067;
 		}

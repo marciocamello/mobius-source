@@ -253,6 +253,35 @@ public final class March8 extends Functions implements ScriptFile, OnDeathListen
 	}
 	
 	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)
+	 */
+	@Override
+	public void onPlayerEnter(Player player)
+	{
+		if (_active)
+		{
+			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.March8.AnnounceEventStarted", null);
+		}
+	}
+	
+	/**
+	 * Method onDeath.
+	 * @param cha Creature
+	 * @param killer Creature
+	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
+	 */
+	@Override
+	public void onDeath(Creature cha, Creature killer)
+	{
+		if (_active && SimpleCheckDrop(cha, killer) && Rnd.chance(Config.EVENT_MARCH8_DROP_CHANCE * killer.getPlayer().getRateItems() * ((NpcInstance) cha).getTemplate().rateHp))
+		{
+			((NpcInstance) cha).dropItem(killer.getPlayer(), DROP[Rnd.get(DROP.length)], 1);
+		}
+	}
+	
+	/**
 	 * Method onLoad.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
 	 */
@@ -291,34 +320,5 @@ public final class March8 extends Functions implements ScriptFile, OnDeathListen
 	public void onShutdown()
 	{
 		unSpawnEventManagers();
-	}
-	
-	/**
-	 * Method onPlayerEnter.
-	 * @param player Player
-	 * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)
-	 */
-	@Override
-	public void onPlayerEnter(Player player)
-	{
-		if (_active)
-		{
-			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.March8.AnnounceEventStarted", null);
-		}
-	}
-	
-	/**
-	 * Method onDeath.
-	 * @param cha Creature
-	 * @param killer Creature
-	 * @see lineage2.gameserver.listener.actor.OnDeathListener#onDeath(Creature, Creature)
-	 */
-	@Override
-	public void onDeath(Creature cha, Creature killer)
-	{
-		if (_active && SimpleCheckDrop(cha, killer) && Rnd.chance(Config.EVENT_MARCH8_DROP_CHANCE * killer.getPlayer().getRateItems() * ((NpcInstance) cha).getTemplate().rateHp))
-		{
-			((NpcInstance) cha).dropItem(killer.getPlayer(), DROP[Rnd.get(DROP.length)], 1);
-		}
 	}
 }

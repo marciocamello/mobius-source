@@ -99,7 +99,6 @@ public final class Furance extends DefaultAI
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
-		// empty method
 	}
 	
 	/**

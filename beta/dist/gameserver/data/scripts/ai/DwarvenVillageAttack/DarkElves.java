@@ -57,7 +57,7 @@ public final class DarkElves extends DefaultAI
 	@Override
 	protected void onEvtScriptEvent(String event, Object arg1, Object arg2)
 	{
-		if (event.equalsIgnoreCase("START_DIE"))
+		if (event.equals("START_DIE"))
 		{
 			addTimer(1, 2500);
 		}

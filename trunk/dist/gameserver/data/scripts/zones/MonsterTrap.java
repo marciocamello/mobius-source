@@ -47,40 +47,6 @@ public final class MonsterTrap implements ScriptFile
 	};
 	
 	/**
-	 * Method onLoad.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
-	 */
-	@Override
-	public void onLoad()
-	{
-		_zoneListener = new ZoneListener();
-		
-		for (String s : zones)
-		{
-			Zone zone = ReflectionUtils.getZone(s);
-			zone.addListener(_zoneListener);
-		}
-	}
-	
-	/**
-	 * Method onReload.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
-	 */
-	@Override
-	public void onReload()
-	{
-	}
-	
-	/**
-	 * Method onShutdown.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
-	 */
-	@Override
-	public void onShutdown()
-	{
-	}
-	
-	/**
 	 * @author Mobius
 	 */
 	private class ZoneListener implements OnZoneEnterLeaveListener
@@ -205,5 +171,39 @@ public final class MonsterTrap implements ScriptFile
 		{
 			spawn.deleteAll();
 		}
+	}
+	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
+	@Override
+	public void onLoad()
+	{
+		_zoneListener = new ZoneListener();
+		
+		for (String s : zones)
+		{
+			Zone zone = ReflectionUtils.getZone(s);
+			zone.addListener(_zoneListener);
+		}
+	}
+	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
+	@Override
+	public void onReload()
+	{
+	}
+	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
+	@Override
+	public void onShutdown()
+	{
 	}
 }

@@ -46,7 +46,7 @@ public final class KatoSicanusInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equalsIgnoreCase("fight_lindvior"))
+		if (command.equals("fight_lindvior"))
 		{
 			LindviorManager.enterTheLair(player);
 			return;

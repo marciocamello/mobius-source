@@ -104,25 +104,36 @@ public final class Antharas extends DefaultAI
 		final double distance = actor.getDistance(target);
 		final double chp = actor.getCurrentHpPercents();
 		
-		if (_hpStage == 0)
+		switch (_hpStage)
 		{
-			actor.altOnMagicUseTimer(actor, s_regen1);
-			_hpStage = 1;
-		}
-		else if ((chp < 75) && (_hpStage == 1))
-		{
-			actor.altOnMagicUseTimer(actor, s_regen2);
-			_hpStage = 2;
-		}
-		else if ((chp < 50) && (_hpStage == 2))
-		{
-			actor.altOnMagicUseTimer(actor, s_regen3);
-			_hpStage = 3;
-		}
-		else if ((chp < 30) && (_hpStage == 3))
-		{
-			actor.altOnMagicUseTimer(actor, s_regen3);
-			_hpStage = 4;
+			case 0:
+				actor.altOnMagicUseTimer(actor, s_regen1);
+				_hpStage = 1;
+				break;
+			
+			case 1:
+				if (chp < 75)
+				{
+					actor.altOnMagicUseTimer(actor, s_regen2);
+					_hpStage = 2;
+				}
+				break;
+			
+			case 2:
+				if (chp < 50)
+				{
+					actor.altOnMagicUseTimer(actor, s_regen3);
+					_hpStage = 3;
+				}
+				break;
+			
+			case 3:
+				if (chp < 30)
+				{
+					actor.altOnMagicUseTimer(actor, s_regen3);
+					_hpStage = 4;
+				}
+				break;
 		}
 		
 		if ((_minionsSpawnDelay < System.currentTimeMillis()) && (getAliveMinionsCount() < 30) && Rnd.chance(5))

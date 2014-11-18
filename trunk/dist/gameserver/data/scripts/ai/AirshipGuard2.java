@@ -116,7 +116,6 @@ public final class AirshipGuard2 extends Guard
 	@Override
 	protected void onEvtAttacked(Creature attacker, int damage)
 	{
-		// empty method
 	}
 	
 	/**
@@ -127,6 +126,5 @@ public final class AirshipGuard2 extends Guard
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
-		// empty method
 	}
 }

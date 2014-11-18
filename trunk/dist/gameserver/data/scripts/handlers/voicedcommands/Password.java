@@ -47,12 +47,12 @@ public class Password extends Functions implements IVoicedCommandHandler, Script
 	{
 		command = command.intern();
 		
-		if (command.equalsIgnoreCase("password"))
+		if (command.equals("password"))
 		{
 			return password(command, activeChar, args);
 		}
 		
-		if (command.equalsIgnoreCase("check"))
+		if (command.equals("check"))
 		{
 			return check(command, activeChar, args);
 		}

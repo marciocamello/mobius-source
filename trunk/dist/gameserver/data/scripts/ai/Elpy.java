@@ -75,6 +75,5 @@ public final class Elpy extends Fighter
 	@Override
 	protected void onEvtAggression(Creature target, int aggro)
 	{
-		// empty method
 	}
 }

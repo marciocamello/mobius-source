@@ -65,7 +65,7 @@ public final class FarmMessengerInstance extends NpcInstance
 		ClanHallTeamBattleEvent siegeEvent = clanHall.getSiegeEvent();
 		Clan clan = player.getClan();
 		
-		if (command.equalsIgnoreCase("registrationMenu"))
+		if (command.equals("registrationMenu"))
 		{
 			if (!checkCond(player, true))
 			{
@@ -74,7 +74,7 @@ public final class FarmMessengerInstance extends NpcInstance
 			
 			showChatWindow(player, "residence2/clanhall/farm_kel_mahum_messenger_1.htm");
 		}
-		else if (command.equalsIgnoreCase("registerAsClan"))
+		else if (command.equals("registerAsClan"))
 		{
 			if (!checkCond(player, false))
 			{
@@ -101,7 +101,7 @@ public final class FarmMessengerInstance extends NpcInstance
 			questState.exitCurrentQuest(true);
 			register(player);
 		}
-		else if (command.equalsIgnoreCase("registerAsMember"))
+		else if (command.equals("registerAsMember"))
 		{
 			CTBSiegeClanObject siegeClan = siegeEvent.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan());
 			
@@ -162,7 +162,7 @@ public final class FarmMessengerInstance extends NpcInstance
 			SiegeClanDAO.getInstance().update(clanHall, siegeClan);
 			showChatWindow(player, "residence2/clanhall/agit_oel_mahum_messeger_9.htm");
 		}
-		else if (command.equalsIgnoreCase("setNpc"))
+		else if (command.equals("setNpc"))
 		{
 			CTBSiegeClanObject siegeClan = siegeEvent.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan());
 			
@@ -180,7 +180,7 @@ public final class FarmMessengerInstance extends NpcInstance
 			
 			showChatWindow(player, npcDialog(siegeClan));
 		}
-		else if (command.equalsIgnoreCase("viewNpc"))
+		else if (command.equals("viewNpc"))
 		{
 			CTBSiegeClanObject siegeClan = siegeEvent.getSiegeClan(SiegeEvent.ATTACKERS, player.getClan());
 			
@@ -203,7 +203,7 @@ public final class FarmMessengerInstance extends NpcInstance
 			
 			showChatWindow(player, file);
 		}
-		else if (command.equalsIgnoreCase("listClans"))
+		else if (command.equals("listClans"))
 		{
 			NpcHtmlMessage msg = new NpcHtmlMessage(player, this);
 			msg.setFile("residence2/clanhall/farm_messenger003.htm");

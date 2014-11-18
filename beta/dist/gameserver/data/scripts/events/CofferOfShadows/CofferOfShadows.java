@@ -277,6 +277,20 @@ public final class CofferOfShadows extends Functions implements ScriptFile, OnPl
 	}
 	
 	/**
+	 * Method onPlayerEnter.
+	 * @param player Player
+	 * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)
+	 */
+	@Override
+	public void onPlayerEnter(Player player)
+	{
+		if (_active)
+		{
+			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.CofferofShadows.AnnounceEventStarted", null);
+		}
+	}
+	
+	/**
 	 * Method onLoad.
 	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
 	 */
@@ -315,19 +329,5 @@ public final class CofferOfShadows extends Functions implements ScriptFile, OnPl
 	public void onShutdown()
 	{
 		unSpawnEventManagers();
-	}
-	
-	/**
-	 * Method onPlayerEnter.
-	 * @param player Player
-	 * @see lineage2.gameserver.listener.actor.player.OnPlayerEnterListener#onPlayerEnter(Player)
-	 */
-	@Override
-	public void onPlayerEnter(Player player)
-	{
-		if (_active)
-		{
-			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.CofferofShadows.AnnounceEventStarted", null);
-		}
 	}
 }

@@ -74,14 +74,14 @@ public abstract class DoormanInstance extends NpcInstance
 		switch (cond)
 		{
 			case COND_OWNER:
-				if (command.equalsIgnoreCase("openDoors"))
+				if (command.equals("openDoors"))
 				{
 					for (int i : _doors)
 					{
 						ReflectionUtils.getDoor(i).openMe();
 					}
 				}
-				else if (command.equalsIgnoreCase("closeDoors"))
+				else if (command.equals("closeDoors"))
 				{
 					for (int i : _doors)
 					{

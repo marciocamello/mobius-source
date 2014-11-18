@@ -102,42 +102,12 @@ public final class NewYearTimer implements ScriptFile
 	}
 	
 	/**
-	 * Method onLoad.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
-	 */
-	@Override
-	public void onLoad()
-	{
-		// empty method
-	}
-	
-	/**
-	 * Method onReload.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
-	 */
-	@Override
-	public void onReload()
-	{
-		// empty method
-	}
-	
-	/**
 	 * Method isActive.
 	 * @return boolean
 	 */
 	private static boolean isActive()
 	{
-		return ServerVariables.getString("Christmas", "off").equalsIgnoreCase("on");
-	}
-	
-	/**
-	 * Method onShutdown.
-	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
-	 */
-	@Override
-	public void onShutdown()
-	{
-		// empty method
+		return ServerVariables.getString("Christmas", "off").equals("on");
 	}
 	
 	/**
@@ -180,4 +150,32 @@ public final class NewYearTimer implements ScriptFile
 			new NewYearTimer();
 		}
 	}
+	
+	/**
+	 * Method onLoad.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onLoad()
+	 */
+	@Override
+	public void onLoad()
+	{
+	}
+	
+	/**
+	 * Method onReload.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onReload()
+	 */
+	@Override
+	public void onReload()
+	{
+	}
+	
+	/**
+	 * Method onShutdown.
+	 * @see lineage2.gameserver.scripts.ScriptFile#onShutdown()
+	 */
+	@Override
+	public void onShutdown()
+	{
+	}
+	
 }
