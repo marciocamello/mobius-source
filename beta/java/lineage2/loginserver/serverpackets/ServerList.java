@@ -35,22 +35,19 @@ public final class ServerList extends L2LoginServerPacket
 	private final int _lastServer;
 	private int _paddedBytes;
 	
-	/**
-	 * @author Mobius
-	 */
 	private static class ServerData
 	{
 		int _serverId;
 		InetAddress _ip;
 		int _port;
-		int _online;
+		int _onlinePlayers;
 		int _maxPlayers;
 		boolean _status;
 		boolean _pvp;
 		boolean _brackets;
-		int _type;
+		int _serverType;
 		int _ageLimit;
-		int _playerSize;
+		int _characterCount;
 		int[] _deleteChars;
 		
 		/**
@@ -60,26 +57,26 @@ public final class ServerList extends L2LoginServerPacket
 		 * @param port int
 		 * @param pvp boolean
 		 * @param brackets boolean
-		 * @param type int
-		 * @param online int
+		 * @param serverType int
+		 * @param onlinePlayers int
 		 * @param maxPlayers int
 		 * @param status boolean
-		 * @param playerSize int
+		 * @param characterCount int
 		 * @param ageLimit int
 		 * @param deleteChars int[]
 		 */
-		ServerData(int serverId, InetAddress ip, int port, boolean pvp, boolean brackets, int type, int online, int maxPlayers, boolean status, int playerSize, int ageLimit, int[] deleteChars)
+		ServerData(int serverId, InetAddress ip, int port, boolean pvp, boolean brackets, int serverType, int onlinePlayers, int maxPlayers, boolean status, int characterCount, int ageLimit, int[] deleteChars)
 		{
 			_serverId = serverId;
 			_ip = ip;
 			_port = port;
 			_pvp = pvp;
 			_brackets = brackets;
-			_type = type;
-			_online = online;
+			_serverType = serverType;
+			_onlinePlayers = onlinePlayers;
 			_maxPlayers = maxPlayers;
 			_status = status;
-			_playerSize = playerSize;
+			_characterCount = characterCount;
 			_ageLimit = ageLimit;
 			_deleteChars = deleteChars;
 		}
@@ -112,12 +109,11 @@ public final class ServerList extends L2LoginServerPacket
 		}
 	}
 	
-	/**
-	 * Method writeImpl.
-	 */
 	@Override
 	protected void writeImpl()
 	{
+		int charsOnServers = 0;
+		
 		writeC(0x04);
 		writeC(_servers.size());
 		writeC(_lastServer);
@@ -125,35 +121,51 @@ public final class ServerList extends L2LoginServerPacket
 		for (ServerData server : _servers)
 		{
 			writeC(server._serverId);
-			InetAddress i4 = server._ip;
-			byte[] raw = i4.getAddress();
+			
+			final InetAddress i4 = server._ip;
+			final byte[] raw = i4.getAddress();
 			writeC(raw[0] & 0xff);
 			writeC(raw[1] & 0xff);
 			writeC(raw[2] & 0xff);
 			writeC(raw[3] & 0xff);
+			
 			writeD(server._port);
-			writeC(server._ageLimit);
+			writeC(server._ageLimit); // Age Limit 0, 15, 18
 			writeC(server._pvp ? 0x01 : 0x00);
-			writeH(server._online);
+			writeH(server._onlinePlayers);
 			writeH(server._maxPlayers);
 			writeC(server._status ? 0x01 : 0x00);
-			writeD(server._type);
+			writeD(server._serverType); // 1: Normal, 2: Relax, 4: Public Test, 8: No Label, 16: Character Creation Restricted, 32: Event, 64: Free
 			writeC(server._brackets ? 0x01 : 0x00);
+			
+			charsOnServers += server._characterCount;
 		}
 		
 		writeH(_paddedBytes);
-		writeC(_servers.size());
-		
-		for (ServerData server : _servers)
+		if (charsOnServers > 0)
 		{
-			writeC(server._serverId);
-			writeC(server._playerSize);
-			writeC(server._deleteChars.length);
-			
-			for (int t : server._deleteChars)
+			writeC(charsOnServers);
+			for (ServerData server : _servers)
 			{
-				writeD((int) (t - (System.currentTimeMillis() / 1000L)));
+				writeC(server._serverId);
+				writeC(server._characterCount);
+				if (server._deleteChars.length == 0)
+				{
+					writeC(0x00);
+				}
+				else
+				{
+					writeC(server._deleteChars.length);
+					for (int deleteTime : server._deleteChars)
+					{
+						writeD((int) (deleteTime - (System.currentTimeMillis() / 1000L)));
+					}
+				}
 			}
+		}
+		else
+		{
+			writeC(0x00);
 		}
 	}
 }
