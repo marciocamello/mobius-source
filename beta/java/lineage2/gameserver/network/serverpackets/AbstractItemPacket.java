@@ -24,6 +24,7 @@ public abstract class AbstractItemPacket extends L2GameServerPacket
 	private int check_Augmentation;
 	private int check_ElementType;
 	private int check_EnchantOption;
+	private int check_Visual;
 	
 	protected void writeItem(TradeItem item)
 	{
@@ -40,9 +41,15 @@ public abstract class AbstractItemPacket extends L2GameServerPacket
 		check_Augmentation = 0;
 		check_ElementType = 0;
 		check_EnchantOption = 0;
+		check_Visual = 0;
+		
 		if (item.getAugmentationId() > 0)
 		{
 			check_Augmentation = 1;
+		}
+		if (item.getVisualId() > 0)
+		{
+			check_Visual = 8;
 		}
 		if (item.getAttackElement() > 0)
 		{
@@ -62,7 +69,11 @@ public abstract class AbstractItemPacket extends L2GameServerPacket
 				check_EnchantOption = 4;
 			}
 		}
-		writeC(check_Augmentation + check_ElementType + check_EnchantOption + 0);
+		// ddcQcchQccddc
+		// hh
+		// hhhhhhhh
+		// hhh
+		writeC(check_Augmentation + check_Visual + check_ElementType + check_EnchantOption + 0);
 		writeD(item.getObjectId()); // ObjectId
 		writeD(item.getId()); // ItemId
 		writeC(item.getEquipSlot()); // T1
@@ -79,6 +90,10 @@ public abstract class AbstractItemPacket extends L2GameServerPacket
 		if (check_Augmentation > 0)
 		{
 			writeD(item.getAugmentationId());
+		}
+		if (check_Visual > 0)
+		{
+			writeD(item.getVisualId());
 		}
 		writeItemElementalAndEnchant(item);
 	}
@@ -99,14 +114,9 @@ public abstract class AbstractItemPacket extends L2GameServerPacket
 		// Enchant Effects
 		if (check_EnchantOption > 0)
 		{
-			for (int op : item.getEnchantOptions())
-			{
-				writeH(op);
-			}
+			writeH(item.getEnchantOptions()[0]);
+			writeH(item.getEnchantOptions()[1]);
+			writeH(item.getEnchantOptions()[2]);
 		}
 	}
-	
-	/*
-	 * protected void writeInventoryBlock(PcInventory inventory) { if (inventory.hasInventoryBlock()) { writeH(inventory.getBlockItems().length); writeC(inventory.getBlockMode()); for (int i : inventory.getBlockItems()) { writeD(i); } } else { writeH(0x00); } }
-	 */
 }

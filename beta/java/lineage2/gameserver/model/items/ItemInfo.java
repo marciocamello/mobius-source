@@ -101,6 +101,7 @@ public class ItemInfo
 		setDefenceHoly(item.getDefenceHoly());
 		setDefenceUnholy(item.getDefenceUnholy());
 		setEnchantOptions(item.getEnchantOptions());
+		setVisualId(item.getVisualId());
 	}
 	
 	public ItemInfo(ItemInstance item, int change)
@@ -151,6 +152,7 @@ public class ItemInfo
 		setDefenceHoly(item.getDefenceHoly());
 		setDefenceUnholy(item.getDefenceUnholy());
 		setEnchantOptions(item.getEnchantOptions());
+		setVisualId(item.getVisualId());
 	}
 	
 	/**

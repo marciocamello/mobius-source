@@ -37,5 +37,6 @@ public class ExShapeShiftingResult extends L2GameServerPacket
 		writeD(_result); // Result
 		writeD(_targetItemId);
 		writeD(_extractItemId);
+		writeD(0x01); // unk
 	}
 }

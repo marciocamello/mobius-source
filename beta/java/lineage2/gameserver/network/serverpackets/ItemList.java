@@ -60,5 +60,9 @@ public class ItemList extends AbstractItemPacket
 				writeD(i);
 			}
 		}
+		else
+		{
+			writeH(0x00);
+		}
 	}
 }
