@@ -333,6 +333,10 @@ public class Recall extends Skill
 					case 22:
 						pcTarget.teleToLocation(8976, 252416, -1928, 0);
 						return;
+						
+					case 23: // Faeron Village town Id ???
+						pcTarget.teleToLocation(-80403, 247853, -3496, 0);
+						return;
 				}
 				
 				if (_castle)
