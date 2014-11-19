@@ -639,8 +639,7 @@ public class Config
 	public static boolean COMMUNITYBOARD_ENABLED;
 	public static boolean ALLOW_COMMUNITYBOARD_IN_COMBAT;
 	public static boolean COMMUNITYBOARD_BUFFER_ENABLED;
-	// public static boolean COMMUNITYBOARD_SELL_ENABLED;
-	// public static boolean COMMUNITYBOARD_SHOP_ENABLED;
+	public static boolean COMMUNITYBOARD_SHOP_ENABLED;
 	// public static boolean COMMUNITYBOARD_BUFFER_PET_ENABLED;
 	// public static boolean COMMUNITYBOARD_BUFFER_SAVE_ENABLED;
 	// public static boolean COMMUNITYBOARD_ABNORMAL_ENABLED;
@@ -652,7 +651,7 @@ public class Config
 	public static final List<Integer> COMMUNITYBOARD_BUFF_ALLOW = new ArrayList<>();
 	public static final List<Integer> COMMUNITI_LIST_MAGE_SUPPORT = new ArrayList<>();
 	public static final List<Integer> COMMUNITI_LIST_FIGHTER_SUPPORT = new ArrayList<>();
-	public static final List<String> COMMUNITYBOARD_MULTISELL_ALLOW = new ArrayList<>();
+	public static final List<Integer> COMMUNITYBOARD_MULTISELL_ALLOW = new ArrayList<>();
 	public static String BBS_DEFAULT;
 	public static String BBS_HOME_DIR;
 	public static boolean COMMUNITYBOARD_TELEPORT_ENABLED;
@@ -1148,12 +1147,11 @@ public class Config
 			// COMMUNITYBOARD_ABNORMAL_ENABLED = communitySettings.getProperty("AllowAbnormalState", false);
 			BBS_DEFAULT = communitySettings.getProperty("BBSStartPage", "_bbshome");
 			BBS_HOME_DIR = communitySettings.getProperty("BBSHomeDir", "scripts/services/community/");
-			// COMMUNITYBOARD_SHOP_ENABLED = communitySettings.getProperty("CommunityShopEnable", false);
-			// COMMUNITYBOARD_SELL_ENABLED = communitySettings.getProperty("CommunitySellEnable", false);
+			COMMUNITYBOARD_SHOP_ENABLED = communitySettings.getProperty("CommunityShopEnable", false);
 			
-			for (String name : communitySettings.getProperty("AllowMultisell", ArrayUtils.EMPTY_STRING_ARRAY))
+			for (int id : communitySettings.getProperty("AllowMultisell", new int[] {}))
 			{
-				COMMUNITYBOARD_MULTISELL_ALLOW.add(name);
+				COMMUNITYBOARD_MULTISELL_ALLOW.add(Integer.valueOf(id));
 			}
 			
 			COMMUNITYBOARD_BUFFER_ENABLED = communitySettings.getProperty("CommunityBufferEnable", false);

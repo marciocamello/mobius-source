@@ -230,7 +230,17 @@ public class MultiSellHolder
 		 */
 		public boolean isNpcAllowed(int npcId)
 		{
-			return (_npcsAllowed.isEmpty()) || _npcsAllowed.contains(npcId);
+			// Community Board
+			if (npcId == -1)
+			{
+				if (Config.COMMUNITYBOARD_SHOP_ENABLED && Config.COMMUNITYBOARD_MULTISELL_ALLOW.contains(getListId()))
+				{
+					return true;
+				}
+				return false;
+			}
+			
+			return (_npcsAllowed.isEmpty() || _npcsAllowed.contains(npcId));
 		}
 		
 		/**
