@@ -1,15 +1,3 @@
-/*
- * This program is free software: you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 3 of the License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package npc.model;
 
 import instances.TautiInstance;
@@ -24,14 +12,14 @@ import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
 
 /**
- * @author KilRoy FIXME[K] - Deprecated method getMembers()
+ * @author KilRoy & Bonux & Nache
  */
-public final class SizrakInstance extends NpcInstance
+public class AkuInstance extends NpcInstance
 {
-	private static final int TAUTI_NORMAL_INSTANCE_ID = 218;
+	private static final int TAUTI_EXTREME_INSTANCE_ID = 219;
 	private static final Location TAUTI_ROOM_TELEPORT = new Location(-147262, 211318, -10040);
 	
-	public SizrakInstance(int objectId, NpcTemplate template)
+	public AkuInstance(int objectId, NpcTemplate template)
 	{
 		super(objectId, template);
 	}
@@ -44,73 +32,66 @@ public final class SizrakInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.equals("request_tauti_normal_battle"))
+		if (command.equals("request_tauti_extreme_battle"))
 		{
+			
 			if (SoHManager.getCurrentStage() != 2)
 			{
-				showChatWindow(player, "tauti/sofa_sizraku002h.htm");
+				showChatWindow(player, "tauti/sofa_aku002h.htm");
 				return;
 			}
-			
 			if (player.getParty() == null)
 			{
 				player.sendPacket(new SystemMessage(SystemMessage.ONLY_A_PARTY_LEADER_CAN_TRY_TO_ENTER));
 				return;
 			}
-			
 			if (player.getParty().getCommandChannel() == null)
 			{
-				showChatWindow(player, "tauti/sofa_sizraku002e.htm");
+				showChatWindow(player, "tauti/sofa_aku002e.htm");
 				return;
 			}
-			
 			if (!player.getParty().getCommandChannel().isLeaderCommandChannel(player))
 			{
-				showChatWindow(player, "tauti/sofa_sizraku002d.htm");
+				showChatWindow(player, "tauti/sofa_aku002d.htm");
 				return;
 			}
-			
-			if (player.getParty().getCommandChannel().getMemberCount() > 35)
+			int channelMemberCount = player.getParty().getCommandChannel().getMemberCount();
+			if ((channelMemberCount > 35) || (channelMemberCount < 21))
 			{
-				showChatWindow(player, "tauti/sofa_sizraku002c.htm");
+				showChatWindow(player, "tauti/sofa_aku002c.htm");
 				return;
 			}
-			
 			for (Player commandChannel : player.getParty().getCommandChannel().getMembers())
 			{
 				if (commandChannel.getLevel() < 97)
 				{
-					showChatWindow(player, "tauti/sofa_sizraku002b.htm");
+					showChatWindow(player, "tauti/sofa_aku002b.htm");
 				}
-				
 				return;
 			}
 			
 			final Reflection reflection = player.getActiveReflection();
-			
 			if (reflection != null)
 			{
-				if (player.canReenterInstance(TAUTI_NORMAL_INSTANCE_ID))
+				if (player.canReenterInstance(TAUTI_EXTREME_INSTANCE_ID))
 				{
-					showChatWindow(player, "tauti/sofa_sizraku002g.htm");
+					showChatWindow(player, "tauti/sofa_aku002g.htm");
 				}
 			}
-			else if (player.canEnterInstance(TAUTI_NORMAL_INSTANCE_ID))
+			else if (player.canEnterInstance(TAUTI_EXTREME_INSTANCE_ID))
 			{
-				ReflectionUtils.enterReflection(player, new TautiInstance(), TAUTI_NORMAL_INSTANCE_ID);
-				showChatWindow(player, "tauti/sofa_sizraku002a.htm");
+				ReflectionUtils.enterReflection(player, new TautiInstance(), TAUTI_EXTREME_INSTANCE_ID);
+				showChatWindow(player, "tauti/sofa_aku002a.htm");
 			}
 		}
-		else if (command.equals("reenter_tauti_normal_battle"))
+		else if (command.equals("reenter_tauti_extreme_battle"))
 		{
 			final Reflection reflection = player.getActiveReflection();
-			
 			if (reflection != null)
 			{
-				if (player.canReenterInstance(TAUTI_NORMAL_INSTANCE_ID))
+				if (player.canReenterInstance(TAUTI_EXTREME_INSTANCE_ID))
 				{
 					TautiInstance instance = (TautiInstance) reflection;
-					
 					if (instance.getInstanceStage() == 2)
 					{
 						player.teleToLocation(TAUTI_ROOM_TELEPORT, reflection);
@@ -119,8 +100,7 @@ public final class SizrakInstance extends NpcInstance
 					{
 						player.teleToLocation(reflection.getTeleportLoc(), reflection);
 					}
-					
-					showChatWindow(player, "tauti/sofa_sizraku002f.htm");
+					showChatWindow(player, "tauti/sofa_aku002f.htm");
 				}
 			}
 		}
@@ -133,7 +113,7 @@ public final class SizrakInstance extends NpcInstance
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
-		player.sendPacket(new NpcHtmlMessage(player, this, "tauti/sofa_sizraku001.htm", val));
+		player.sendPacket(new NpcHtmlMessage(player, this, "tauti/sofa_aku001.htm", val));
 		return;
 	}
 }
