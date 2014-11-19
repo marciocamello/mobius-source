@@ -414,6 +414,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 			int enchantLevel = 0;
 			ItemAttributes attributes = null;
 			int augmentationId = 0;
+			int visualId = 0;
 			
 			for (ItemData id : items)
 			{
@@ -444,6 +445,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 								enchantLevel = id.getItem().getEnchantLevel();
 								attributes = id.getItem().getAttributes();
 								augmentationId = id.getItem().getAugmentationId();
+								visualId = id.getItem().getVisualId();
 							}
 							
 							activeChar.sendPacket(SystemMessage2.removeItems(id.getId(), count));
@@ -538,6 +540,11 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 										product.setAugmentationId(augmentationId);
 									}
 									
+									if (visualId != 0)
+									{
+										product.setVisualId(visualId);
+									}
+									
 									inventory.addItem(product);
 									activeChar.sendPacket(SystemMessage2.obtainItems(product));
 									break cycle1;
@@ -557,6 +564,11 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 								if (augmentationId != 0)
 								{
 									product.setAugmentationId(augmentationId);
+								}
+								
+								if (visualId != 0)
+								{
+									product.setVisualId(visualId);
 								}
 								
 								inventory.addItem(product);
