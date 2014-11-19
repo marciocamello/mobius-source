@@ -391,7 +391,7 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 			int cond = qs.getPlayer().getRace().ordinal() + 6;
 			qs.setCond(cond);
 		}
-		else if (event.startsWith("class_transfer"))
+		else if (event.startsWith("class_transfer") && (npc != null))
 		{
 			String[] params = event.split(" ");
 			
@@ -408,7 +408,7 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 			player.setClassId(classId, false, false);
 			player.sendPacket(SystemMsg.CONGRATULATIONS__YOUVE_COMPLETED_A_CLASS_TRANSFER);
 			player.broadcastPacket(new MagicSkillUse(player, player, 5103, 1, 1000, 0));
-			MultiSellHolder.getInstance().SeparateAndSend(PROOF_OF_COURAGE_MULTISELL_ID, qs.getPlayer(), 0);
+			MultiSellHolder.getInstance().SeparateAndSend(PROOF_OF_COURAGE_MULTISELL_ID, qs.getPlayer(), 0, npc.getId());
 			qs.showTutorialHTML(TutorialShowHtml.QT_009, TutorialShowHtml.TYPE_WINDOW);
 			qs.giveItems(ADENA_ID, 80000);
 			qs.giveItems(PROOF_OF_COURAGE, 40);

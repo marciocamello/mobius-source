@@ -146,6 +146,15 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 			return;
 		}
 		
+		NpcInstance merchant = activeChar.getLastNpc();
+		
+		if ((merchant != null) && !list1.isNpcAllowed(merchant.getId()))
+		{
+			activeChar.sendActionFailed();
+			activeChar.setMultisell(null);
+			return;
+		}
+		
 		if (list1.getListId() != _listId)
 		{
 			activeChar.sendActionFailed();
@@ -204,7 +213,6 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 		final List<ItemData> items = new ArrayList<>();
 		PcInventory inventory = activeChar.getInventory();
 		long totalPrice = 0;
-		NpcInstance merchant = activeChar.getLastNpc();
 		Castle castle = merchant != null ? merchant.getCastle(activeChar) : null;
 		inventory.writeLock();
 		

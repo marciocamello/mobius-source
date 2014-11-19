@@ -163,7 +163,7 @@ public final class CommunityBoard implements ScriptFile, ICommunityBoardHandler
 			}
 			
 			int listId = Integer.parseInt(mBypass[1]);
-			MultiSellHolder.getInstance().SeparateAndSend(listId, player, 0);
+			MultiSellHolder.getInstance().SeparateAndSend(listId, player, 0, -1);
 			return;
 		}
 		else if (bypass.startsWith("_bbssell"))

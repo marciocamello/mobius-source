@@ -56,7 +56,7 @@ public class MercenaryCaptainInstance extends NpcInstance
 			
 			if (player.getInventory().getCountOf(certification) > 0)
 			{
-				MultiSellHolder.getInstance().SeparateAndSend(multisell, player, getCastle().getTaxRate());
+				MultiSellHolder.getInstance().SeparateAndSend(multisell, player, getCastle().getTaxRate(), getId());
 			}
 			else
 			{

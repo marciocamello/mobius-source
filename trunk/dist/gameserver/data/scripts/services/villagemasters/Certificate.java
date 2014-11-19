@@ -43,7 +43,7 @@ public final class Certificate extends Functions
 				}
 				else if ((pl.isQuestCompleted("Q10331_StartOfFate")) && (pl.getClassLevel() == 2) && (pl.getRace() == Race.kamael))
 				{
-					MultiSellHolder.getInstance().SeparateAndSend(85555, pl, 0);
+					MultiSellHolder.getInstance().SeparateAndSend(85555, pl, 0, npc.getId());
 				}
 				else if ((pl.isQuestCompleted("Q10331_StartOfFate")) && (pl.getClassLevel() >= 2))
 				{
@@ -59,7 +59,7 @@ public final class Certificate extends Functions
 				}
 				else if ((pl.isQuestCompleted("Q10331_StartOfFate")) && (pl.getClassLevel() == 2) && (pl.getRace() == Race.elf))
 				{
-					MultiSellHolder.getInstance().SeparateAndSend(85555, pl, 0);
+					MultiSellHolder.getInstance().SeparateAndSend(85555, pl, 0, npc.getId());
 				}
 				else if ((pl.isQuestCompleted("Q10331_StartOfFate")) && (pl.getClassLevel() >= 2))
 				{
@@ -75,7 +75,7 @@ public final class Certificate extends Functions
 				}
 				else if ((pl.isQuestCompleted("Q10331_StartOfFate")) && (pl.getClassLevel() == 2) && (pl.getRace() == Race.orc))
 				{
-					MultiSellHolder.getInstance().SeparateAndSend(85555, pl, 0);
+					MultiSellHolder.getInstance().SeparateAndSend(85555, pl, 0, npc.getId());
 				}
 				else if ((pl.isQuestCompleted("Q10331_StartOfFate")) && (pl.getClassLevel() >= 2))
 				{
@@ -91,7 +91,7 @@ public final class Certificate extends Functions
 				}
 				else if ((pl.isQuestCompleted("Q10331_StartOfFate")) && (pl.getClassLevel() == 2) && (pl.getRace() == Race.human))
 				{
-					MultiSellHolder.getInstance().SeparateAndSend(85555, pl, 0);
+					MultiSellHolder.getInstance().SeparateAndSend(85555, pl, 0, npc.getId());
 				}
 				else if ((pl.isQuestCompleted("Q10331_StartOfFate")) && (pl.getClassLevel() >= 2))
 				{
@@ -107,7 +107,7 @@ public final class Certificate extends Functions
 				}
 				else if ((pl.isQuestCompleted("Q10331_StartOfFate")) && (pl.getClassLevel() == 2) && (pl.getRace() == Race.dwarf))
 				{
-					MultiSellHolder.getInstance().SeparateAndSend(85555, pl, 0);
+					MultiSellHolder.getInstance().SeparateAndSend(85555, pl, 0, npc.getId());
 				}
 				else if ((pl.isQuestCompleted("Q10331_StartOfFate")) && (pl.getClassLevel() >= 2))
 				{
@@ -123,7 +123,7 @@ public final class Certificate extends Functions
 				}
 				else if ((pl.isQuestCompleted("Q10331_StartOfFate")) && (pl.getClassLevel() == 2) && (pl.getRace() == Race.darkelf))
 				{
-					MultiSellHolder.getInstance().SeparateAndSend(85555, pl, 0);
+					MultiSellHolder.getInstance().SeparateAndSend(85555, pl, 0, npc.getId());
 				}
 				else if ((pl.isQuestCompleted("Q10331_StartOfFate")) && (pl.getClassLevel() >= 2))
 				{
@@ -153,7 +153,7 @@ public final class Certificate extends Functions
 				}
 				else if ((pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.elf) && ((pl.getClassId() == ClassId.TEMPLE_KNIGHT) || (pl.getClassId() == ClassId.SWORDSINGER) || (pl.getClassId() == ClassId.PLAIN_WALKER) || (pl.getClassId() == ClassId.SILVER_RANGER)))
 				{
-					MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0);
+					MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0, npc.getId());
 				}
 				else if ((pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() >= 3))
 				{
@@ -169,7 +169,7 @@ public final class Certificate extends Functions
 				}
 				else if ((pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.human) && ((pl.getClassId() == ClassId.GLADIATOR) || (pl.getClassId() == ClassId.WARLORD) || (pl.getClassId() == ClassId.PALADIN) || (pl.getClassId() == ClassId.DARK_AVENGER) || (pl.getClassId() == ClassId.TREASURE_HUNTER) || (pl.getClassId() == ClassId.HAWKEYE)))
 				{
-					MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0);
+					MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0, npc.getId());
 				}
 				else if ((pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() >= 3))
 				{
@@ -185,7 +185,7 @@ public final class Certificate extends Functions
 				}
 				else if ((pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.human) && ((pl.getClassId() == ClassId.SORCERER) || (pl.getClassId() == ClassId.NECROMANCER) || (pl.getClassId() == ClassId.WARLOCK) || (pl.getClassId() == ClassId.BISHOP) || (pl.getClassId() == ClassId.PROPHET)))
 				{
-					MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0);
+					MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0, npc.getId());
 				}
 				else if ((pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() >= 3))
 				{
@@ -201,7 +201,7 @@ public final class Certificate extends Functions
 				}
 				else if ((pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.elf) && ((pl.getClassId() == ClassId.SPELLSINGER) || (pl.getClassId() == ClassId.ELEMENTAL_SUMMONER) || (pl.getClassId() == ClassId.ELDER)))
 				{
-					MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0);
+					MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0, npc.getId());
 				}
 				else if ((pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() >= 3))
 				{
@@ -217,7 +217,7 @@ public final class Certificate extends Functions
 				}
 				else if ((pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.darkelf))
 				{
-					MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0);
+					MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0, npc.getId());
 				}
 				else if ((pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() >= 3))
 				{
@@ -233,7 +233,7 @@ public final class Certificate extends Functions
 				}
 				else if ((pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.orc))
 				{
-					MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0);
+					MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0, npc.getId());
 				}
 				else if ((pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() >= 3))
 				{
@@ -249,7 +249,7 @@ public final class Certificate extends Functions
 				}
 				else if ((pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.kamael))
 				{
-					MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0);
+					MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0, npc.getId());
 				}
 				else if ((pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() >= 3))
 				{
@@ -265,7 +265,7 @@ public final class Certificate extends Functions
 				}
 				else if ((pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() == 3) && (pl.getRace() == Race.dwarf))
 				{
-					MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0);
+					MultiSellHolder.getInstance().SeparateAndSend(85556, pl, 0, npc.getId());
 				}
 				else if ((pl.isQuestCompleted("Q10360_CertificationOfFate")) && (pl.getClassLevel() >= 3))
 				{

@@ -334,7 +334,7 @@ public final class CaravanTraderInstance extends NpcInstance
 		}
 		else if (command.startsWith("secret_med"))
 		{
-			MultiSellHolder.getInstance().SeparateAndSend(250980014, player, 0);
+			MultiSellHolder.getInstance().SeparateAndSend(250980014, player, 0, getId());
 			return;
 		}
 		else if (command.startsWith("get_third"))
@@ -355,7 +355,7 @@ public final class CaravanTraderInstance extends NpcInstance
 		}
 		else if (command.startsWith("s80_trade"))
 		{
-			MultiSellHolder.getInstance().SeparateAndSend(250980013, player, 0);
+			MultiSellHolder.getInstance().SeparateAndSend(250980013, player, 0, getId());
 			return;
 		}
 		else if (command.startsWith("try_open_door"))

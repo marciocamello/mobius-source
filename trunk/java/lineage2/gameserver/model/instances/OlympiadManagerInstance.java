@@ -140,11 +140,11 @@ public class OlympiadManagerInstance extends NpcInstance
 					break;
 				
 				case 7:
-					MultiSellHolder.getInstance().SeparateAndSend(102, player, 0);
+					MultiSellHolder.getInstance().SeparateAndSend(102, player, 0, getId());
 					break;
 				
 				case 9:
-					MultiSellHolder.getInstance().SeparateAndSend(103, player, 0);
+					MultiSellHolder.getInstance().SeparateAndSend(103, player, 0, getId());
 					break;
 				
 				default:

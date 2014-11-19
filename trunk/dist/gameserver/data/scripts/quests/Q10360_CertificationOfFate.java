@@ -256,7 +256,7 @@ public class Q10360_CertificationOfFate extends Quest implements ScriptFile
 			player.sendPacket(new SystemMessage(SystemMessage.CONGRATULATIONS_YOU_HAVE_TRANSFERRED_TO_A_NEW_CLASS));
 			player.setClassId(newClassId, false, false);
 			player.broadcastCharInfo();
-			MultiSellHolder.getInstance().SeparateAndSend(85556, qs.getPlayer(), 0);
+			MultiSellHolder.getInstance().SeparateAndSend(85556, qs.getPlayer(), 0, npc.getId());
 			qs.getPlayer().addExpAndSp(2700000, 250000);
 			qs.giveItems(17822, 40);
 			qs.giveItems(32777, 1);

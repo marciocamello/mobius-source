@@ -60,7 +60,7 @@ public final class BuyTransformation implements IBypassHandler, ScriptFile
 		}
 		
 		Castle castle = npc.getCastle(player);
-		MultiSellHolder.getInstance().SeparateAndSend(32323, player, castle != null ? castle.getTaxRate() : 0);
+		MultiSellHolder.getInstance().SeparateAndSend(32323, player, castle != null ? castle.getTaxRate() : 0, npc.getId());
 		player.sendActionFailed();
 	}
 	

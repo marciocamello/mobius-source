@@ -218,7 +218,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 			}
 			else if (bp.bypass.startsWith("multisell "))
 			{
-				MultiSellHolder.getInstance().SeparateAndSend(Integer.parseInt(bp.bypass.substring(10)), activeChar, 0);
+				MultiSellHolder.getInstance().SeparateAndSend(Integer.parseInt(bp.bypass.substring(10)), activeChar, 0, npc != null ? npc.getId() : -1);
 			}
 			else if (bp.bypass.startsWith("menu_select?"))
 			{
