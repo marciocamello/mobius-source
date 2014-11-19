@@ -67,65 +67,6 @@ public class Strings
 		return !String.valueOf(x).isEmpty();
 	}
 	
-	private static String[] tr;
-	private static String[] trb;
-	private static String[] trcode;
-	
-	/**
-	 * Method reload.
-	 */
-	public static void reload()
-	{
-		// TODO: DROP STRINGS.JAVA!
-		/*
-		 * try { String[] pairs = FileUtils.readFileToString(new File(Config.DATAPACK_ROOT, "data/translit.txt")).split("\n"); tr = new String[pairs.length * 2]; for (int i = 0; i < pairs.length; i++) { String[] ss = pairs[i].split(" +"); tr[i * 2] = ss[0]; tr[(i * 2) + 1] = ss[1]; } pairs =
-		 * FileUtils.readFileToString(new File(Config.DATAPACK_ROOT, "data/translit_back.txt")).split("\n"); trb = new String[pairs.length * 2]; for (int i = 0; i < pairs.length; i++) { String[] ss = pairs[i].split(" +"); trb[i * 2] = ss[0]; trb[(i * 2) + 1] = ss[1]; } pairs =
-		 * FileUtils.readFileToString(new File(Config.DATAPACK_ROOT, "data/transcode.txt")).split("\n"); trcode = new String[pairs.length * 2]; for (int i = 0; i < pairs.length; i++) { String[] ss = pairs[i].split(" +"); trcode[i * 2] = ss[0]; trcode[(i * 2) + 1] = ss[1]; } } catch (IOException e) {
-		 * _log.error("", e); } _log.info("Loaded " + (tr.length + tr.length + trcode.length) + " translit entries.");
-		 */
-	}
-	
-	/**
-	 * Method translit.
-	 * @param s String
-	 * @return String
-	 */
-	public static String translit(String s)
-	{
-		for (int i = 0; i < tr.length; i += 2)
-		{
-			s = s.replace(tr[i], tr[i + 1]);
-		}
-		
-		return s;
-	}
-	
-	/**
-	 * Method fromTranslit.
-	 * @param s String
-	 * @param type int
-	 * @return String
-	 */
-	public static String fromTranslit(String s, int type)
-	{
-		if (type == 1)
-		{
-			for (int i = 0; i < trb.length; i += 2)
-			{
-				s = s.replace(trb[i], trb[i + 1]);
-			}
-		}
-		else if (type == 2)
-		{
-			for (int i = 0; i < trcode.length; i += 2)
-			{
-				s = s.replace(trcode[i], trcode[i + 1]);
-			}
-		}
-		
-		return s;
-	}
-	
 	/**
 	 * Method replace.
 	 * @param str String

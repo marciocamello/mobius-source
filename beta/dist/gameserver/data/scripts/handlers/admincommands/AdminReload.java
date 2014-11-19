@@ -36,7 +36,6 @@ import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.FishTable;
 import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.tables.SkillTable;
-import lineage2.gameserver.utils.Strings;
 
 /**
  * @author Mobius
@@ -58,7 +57,6 @@ public class AdminReload implements IAdminCommandHandler, ScriptFile
 		"admin_reload_spawn",
 		"admin_reload_fish",
 		"admin_reload_abuse",
-		"admin_reload_translit",
 		"admin_reload_shops",
 		"admin_reload_static",
 		"admin_reload_pets",
@@ -230,12 +228,6 @@ public class AdminReload implements IAdminCommandHandler, ScriptFile
 			case "admin_reload_abuse":
 			{
 				Config.abuseLoad();
-				break;
-			}
-			
-			case "admin_reload_translit":
-			{
-				Strings.reload();
 				break;
 			}
 			
