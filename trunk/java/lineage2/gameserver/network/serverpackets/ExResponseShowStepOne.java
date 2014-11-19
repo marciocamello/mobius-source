@@ -28,7 +28,7 @@ public class ExResponseShowStepOne extends L2GameServerPacket
 	
 	public ExResponseShowStepOne(Player player)
 	{
-		_language = player.getLanguage();
+		_language = Language.ENGLISH;
 	}
 	
 	@Override

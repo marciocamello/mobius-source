@@ -104,7 +104,6 @@ public final class AuctioneerInstance extends NpcInstance
 		{
 			NpcHtmlMessage msg = new NpcHtmlMessage(player, this);
 			msg.setFile(getMapDialog());
-			msg.replace("%lang%", player.getLang());
 			player.sendPacket(msg);
 		}
 		else if (actualCommand.equals("list_all"))

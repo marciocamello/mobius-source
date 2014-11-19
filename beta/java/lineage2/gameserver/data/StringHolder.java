@@ -57,8 +57,7 @@ public final class StringHolder extends AbstractHolder
 	 */
 	String getNullable(Player player, String name)
 	{
-		Language lang = player == null ? Language.ENGLISH : player.getLanguage();
-		return get(lang, name);
+		return get(Language.ENGLISH, name);
 	}
 	
 	/**
@@ -69,12 +68,12 @@ public final class StringHolder extends AbstractHolder
 	 */
 	public String getNotNull(Player player, String name)
 	{
-		Language lang = player == null ? Language.ENGLISH : player.getLanguage();
-		String text = get(lang, name);
+		final Language lang = Language.ENGLISH;
 		
+		String text = get(lang, name);
 		if ((text == null) && (player != null))
 		{
-			text = "Not find string: " + name + "; for lang: " + lang;
+			text = "String not found: " + name;
 			_strings.get(lang).put(name, text);
 		}
 		
@@ -102,11 +101,11 @@ public final class StringHolder extends AbstractHolder
 		for (Language lang : Language.VALUES)
 		{
 			_strings.put(lang, new HashMap<String, String>());
-			File f = new File(Config.DATAPACK_ROOT, "data/string/strings_" + lang.getShortName() + ".properties");
+			File f = new File(Config.DATAPACK_ROOT, "config/lang/strings_" + lang.getShortName() + ".ini");
 			
 			if (!f.exists())
 			{
-				warn("Not find file: " + f.getAbsolutePath());
+				warn("File not found: " + f.getAbsolutePath());
 				continue;
 			}
 			
@@ -180,7 +179,7 @@ public final class StringHolder extends AbstractHolder
 	{
 		for (Map.Entry<Language, Map<String, String>> entry : _strings.entrySet())
 		{
-			info("load strings: " + entry.getValue().size() + " for lang: " + entry.getKey());
+			info("Loaded " + entry.getValue().size() + " strings.");
 		}
 	}
 	

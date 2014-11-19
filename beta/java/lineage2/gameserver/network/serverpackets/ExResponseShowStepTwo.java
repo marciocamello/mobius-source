@@ -29,7 +29,7 @@ public class ExResponseShowStepTwo extends L2GameServerPacket
 	
 	public ExResponseShowStepTwo(Player player, PetitionMainGroup gr)
 	{
-		_language = player.getLanguage();
+		_language = Language.ENGLISH;
 		_petitionMainGroup = gr;
 	}
 	

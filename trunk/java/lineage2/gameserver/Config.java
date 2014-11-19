@@ -479,7 +479,6 @@ public class Config
 	public static int MAX_PROTOCOL_REVISION;
 	public static int MIN_NPC_ANIMATION;
 	public static int MAX_NPC_ANIMATION;
-	public static String DEFAULT_LANG;
 	static String RESTART_AT_TIME;
 	public static int GAME_SERVER_LOGIN_PORT;
 	// public static boolean GAME_SERVER_LOGIN_CRYPT;
@@ -998,7 +997,6 @@ public class Config
 			counter++;
 		}
 		CHATFILTER_WORK_TYPE = serverSettings.getProperty("ChatFilterWorkType", 1);
-		DEFAULT_LANG = serverSettings.getProperty("DefaultLang", "ru");
 		RESTART_AT_TIME = serverSettings.getProperty("AutoRestartAt", "0 5 * * *");
 		SHIFT_BY = serverSettings.getProperty("HShift", 12);
 		SHIFT_BY_Z = serverSettings.getProperty("VShift", 11);
