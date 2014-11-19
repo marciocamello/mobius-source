@@ -14,7 +14,6 @@ package lineage2.gameserver.data.xml.holder;
 
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.model.beautyshop.BeautyShopSet;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
@@ -50,107 +49,101 @@ public final class BeautyShopHolder extends AbstractHolder
 	{
 		int id = -1;
 		
-		if (player.getRace() == Race.human)
+		switch (player.getRace())
 		{
-			if (!(player.getClassId().isMage()))
-			{
-				switch (player.getSex())
+			case human:
+				if (!(player.getClassId().isMage()))
 				{
-					case 0:
+					if (player.getSex() == 0)
+					{
 						id = 1;
-						break;
-					
-					case 1:
+					}
+					else
+					{
 						id = 0;
+					}
 				}
-			}
-			else
-			{
-				switch (player.getSex())
+				else
 				{
-					case 0:
+					if (player.getSex() == 0)
+					{
 						id = 9;
-						break;
-					
-					case 1:
+					}
+					else
+					{
 						id = 8;
+					}
 				}
-			}
-		}
-		else if (player.getRace() == Race.darkelf)
-		{
-			switch (player.getSex())
-			{
-				case 0:
+				break;
+			
+			case darkelf:
+				if (player.getSex() == 0)
+				{
 					id = 3;
-					break;
-				
-				case 1:
+				}
+				else
+				{
 					id = 2;
-			}
-		}
-		else if (player.getRace() == Race.dwarf)
-		{
-			switch (player.getSex())
-			{
-				case 0:
+				}
+				break;
+			
+			case dwarf:
+				if (player.getSex() == 0)
+				{
 					id = 5;
-					break;
-				
-				case 1:
+				}
+				else
+				{
 					id = 4;
-			}
-		}
-		else if (player.getRace() == Race.elf)
-		{
-			switch (player.getSex())
-			{
-				case 0:
+				}
+				break;
+			
+			case elf:
+				if (player.getSex() == 0)
+				{
 					id = 7;
-					break;
-				
-				case 1:
+				}
+				else
+				{
 					id = 6;
-			}
-		}
-		else if (player.getRace() == Race.orc)
-		{
-			if (!(player.getClassId().isMage()))
-			{
-				switch (player.getSex())
+				}
+				break;
+			
+			case orc:
+				if (!(player.getClassId().isMage()))
 				{
-					case 0:
+					if (player.getSex() == 0)
+					{
 						id = 11;
-						break;
-					
-					case 1:
+					}
+					else
+					{
 						id = 10;
+					}
 				}
-			}
-			else
-			{
-				switch (player.getSex())
+				else
 				{
-					case 0:
+					if (player.getSex() == 0)
+					{
 						id = 13;
-						break;
-					
-					case 1:
+					}
+					else
+					{
 						id = 12;
+					}
 				}
-			}
-		}
-		else if (player.getRace() == Race.kamael)
-		{
-			switch (player.getSex())
-			{
-				case 0:
+				break;
+			
+			case kamael:
+				if (player.getSex() == 0)
+				{
 					id = 15;
-					break;
-				
-				case 1:
+				}
+				else
+				{
 					id = 14;
-			}
+				}
+				break;
 		}
 		
 		return getSet(id);

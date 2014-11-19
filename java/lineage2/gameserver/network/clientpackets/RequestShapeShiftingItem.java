@@ -310,14 +310,10 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 			
 			inventory.destroyItem(stone, 1L);
 			player.reduceAdena(cost);
-			// TODO Check
-			// boolean equipped = false;
-			// if (equipped = targetItem.isEquipped()) ???
-			boolean equipped = targetItem.isEquipped();
 			
-			if (!equipped)
+			final boolean equipped = targetItem.isEquipped();
+			if (equipped)
 			{
-				inventory.isRefresh = true;
 				inventory.unEquipItem(targetItem);
 			}
 			
@@ -349,7 +345,6 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 			if (equipped)
 			{
 				inventory.equipItem(targetItem);
-				inventory.isRefresh = false;
 			}
 			
 			player.sendPacket(new SystemMessage2(SystemMsg.YOU_HAVE_SPENT_S1_ON_A_SUCCESSFUL_APPEARANCE_MODIFICATION).addLong(cost));
