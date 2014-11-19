@@ -17,6 +17,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.petition.PetitionMainGroup;
 import lineage2.gameserver.model.petition.PetitionSubGroup;
 import lineage2.gameserver.network.serverpackets.ExResponseShowContents;
+import lineage2.gameserver.utils.Language;
 
 /**
  * @author Mobius
@@ -62,6 +63,6 @@ public class RequestExShowStepThree extends L2GameClientPacket
 			return;
 		}
 		
-		player.sendPacket(new ExResponseShowContents(subGroup.getDescription(player.getLanguage())));
+		player.sendPacket(new ExResponseShowContents(subGroup.getDescription(Language.ENGLISH)));
 	}
 }

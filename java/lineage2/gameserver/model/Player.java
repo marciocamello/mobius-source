@@ -301,7 +301,6 @@ import lineage2.gameserver.utils.AntiFlood;
 import lineage2.gameserver.utils.EffectsComparator;
 import lineage2.gameserver.utils.GameStats;
 import lineage2.gameserver.utils.ItemFunctions;
-import lineage2.gameserver.utils.Language;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.MentorUtil;
@@ -9924,11 +9923,6 @@ public final class Player extends Playable implements PlayerGroup
 				String value = Strings.stripSlashes(rs.getString("value"));
 				user_variables.put(name, value);
 			}
-			
-			if (getVar("lang@") == null)
-			{
-				setVar("lang@", Config.DEFAULT_LANG, -1);
-			}
 		}
 		catch (Exception e)
 		{
@@ -9975,24 +9969,6 @@ public final class Player extends Playable implements PlayerGroup
 			DbUtils.closeQuietly(con, offline, rs);
 		}
 		return value;
-	}
-	
-	/**
-	 * Method getLang.
-	 * @return String
-	 */
-	public String getLang()
-	{
-		return getVar("lang@");
-	}
-	
-	/**
-	 * Method getLanguage.
-	 * @return Language
-	 */
-	public Language getLanguage()
-	{
-		return Language.ENGLISH;
 	}
 	
 	/**

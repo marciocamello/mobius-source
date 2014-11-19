@@ -72,56 +72,40 @@ public class HtmCache
 		switch (Config.HTM_CACHE_MODE)
 		{
 			case ENABLED:
-				for (Language lang : Language.VALUES)
+				File root = new File(Config.DATAPACK_ROOT, "data/html");
+				if (!root.exists())
 				{
-					File root;
-					
-					if (lang.getShortName().equals("en"))
-					{
-						root = new File(Config.DATAPACK_ROOT, "data/html");
-					}
-					else
-					{
-						root = new File(Config.DATAPACK_ROOT, "data/html-" + lang.getShortName());
-					}
-					
-					if (!root.exists())
-					{
-						_log.info("HtmCache: Not find html dir for lang: " + lang);
-						continue;
-					}
-					
-					load(lang, root, root.getAbsolutePath() + "/");
+					_log.info("HtmCache: Could not find html folder!");
 				}
 				
-				for (int i = 0; i < _cache.length; i++)
+				load(root, root.getAbsolutePath() + "/");
+				
+				for (Cache c : _cache)
 				{
-					Cache c = _cache[i];
-					_log.info(String.format("HtmCache: parsing %d documents; lang: %s.", c.getSize(), Language.VALUES[i]));
+					_log.info(String.format("HtmCache: Parsed %d documents.", c.getSize()));
 				}
 				break;
 			
 			case LAZY:
-				_log.info("HtmCache: lazy cache mode.");
+				_log.info("HtmCache: Lazy cache mode.");
 				break;
 			
 			case DISABLED:
-				_log.info("HtmCache: disabled.");
+				_log.info("HtmCache: Disabled.");
 				break;
 		}
 	}
 	
 	/**
 	 * Method load.
-	 * @param lang Language
 	 * @param f File
 	 * @param rootPath String
 	 */
-	private void load(Language lang, File f, final String rootPath)
+	private void load(File f, final String rootPath)
 	{
 		if (!f.exists())
 		{
-			_log.info("HtmCache: dir not exists: " + f);
+			_log.info("HtmCache: Could not find file: " + f);
 			return;
 		}
 		
@@ -131,7 +115,7 @@ public class HtmCache
 		{
 			if (file.isDirectory())
 			{
-				load(lang, file, rootPath);
+				load(file, rootPath);
 			}
 			else
 			{
@@ -140,7 +124,7 @@ public class HtmCache
 				{
 					try
 					{
-						putContent(lang, file, rootPath);
+						putContent(file, rootPath);
 					}
 					catch (IOException e)
 					{
@@ -153,16 +137,15 @@ public class HtmCache
 	
 	/**
 	 * Method putContent.
-	 * @param lang Language
 	 * @param f File
 	 * @param rootPath String
 	 * @throws IOException
 	 */
-	private void putContent(Language lang, File f, final String rootPath) throws IOException
+	private void putContent(File f, final String rootPath) throws IOException
 	{
 		String content = FileUtils.readFileToString(f, "UTF-8");
 		String path = f.getAbsolutePath().substring(rootPath.length()).replace("\\", "/");
-		_cache[lang.ordinal()].put(new Element(path.toLowerCase(), Strings.bbParse(content)));
+		_cache[Language.ENGLISH.ordinal()].put(new Element(path.toLowerCase(), Strings.bbParse(content)));
 	}
 	
 	/**
@@ -173,12 +156,11 @@ public class HtmCache
 	 */
 	public String getNotNull(String fileName, Player player)
 	{
-		Language lang = player == null ? Language.ENGLISH : player.getLanguage();
-		String cache = getCache(fileName, lang);
+		String cache = getCache(fileName);
 		
 		if (StringUtils.isEmpty(cache))
 		{
-			cache = "Dialog not found: " + fileName + "; Lang: " + lang;
+			cache = "Dialog not found: " + fileName;
 		}
 		
 		return cache;
@@ -192,8 +174,7 @@ public class HtmCache
 	 */
 	public String getNullable(String fileName, Player player)
 	{
-		Language lang = player == null ? Language.ENGLISH : player.getLanguage();
-		String cache = getCache(fileName, lang);
+		String cache = getCache(fileName);
 		
 		if (StringUtils.isEmpty(cache))
 		{
@@ -206,18 +187,16 @@ public class HtmCache
 	/**
 	 * Method getCache.
 	 * @param file String
-	 * @param lang Language
 	 * @return String
 	 */
-	private String getCache(String file, Language lang)
+	private String getCache(String file)
 	{
 		if (file == null)
 		{
 			return null;
 		}
 		
-		final String fileLower = file.toLowerCase();
-		String cache = get(lang, fileLower);
+		String cache = get(file.toLowerCase());
 		
 		if (cache == null)
 		{
@@ -227,21 +206,11 @@ public class HtmCache
 					break;
 				
 				case LAZY:
-					cache = loadLazy(lang, file);
-					
-					if ((cache == null) && (lang != Language.ENGLISH))
-					{
-						cache = loadLazy(Language.ENGLISH, file);
-					}
+					cache = loadLazy(file);
 					break;
 				
 				case DISABLED:
-					cache = loadDisabled(lang, file);
-					
-					if ((cache == null) && (lang != Language.ENGLISH))
-					{
-						cache = loadDisabled(Language.ENGLISH, file);
-					}
+					cache = loadDisabled(file);
 					break;
 			}
 		}
@@ -251,23 +220,13 @@ public class HtmCache
 	
 	/**
 	 * Method loadDisabled.
-	 * @param lang Language
 	 * @param file String
 	 * @return String
 	 */
-	private String loadDisabled(Language lang, String file)
+	private String loadDisabled(String file)
 	{
 		String cache = null;
-		File f;
-		
-		if (lang.getShortName().equals("en"))
-		{
-			f = new File(Config.DATAPACK_ROOT, "data/html/" + file);
-		}
-		else
-		{
-			f = new File(Config.DATAPACK_ROOT, "data/html-" + lang.getShortName() + "/" + file);
-		}
+		File f = new File(Config.DATAPACK_ROOT, "data/html/" + file);
 		
 		if (f.exists())
 		{
@@ -278,7 +237,7 @@ public class HtmCache
 			}
 			catch (IOException e)
 			{
-				_log.info("HtmCache: File error: " + file + " lang: " + lang);
+				_log.info("HtmCache: File error: " + file);
 			}
 		}
 		
@@ -287,23 +246,13 @@ public class HtmCache
 	
 	/**
 	 * Method loadLazy.
-	 * @param lang Language
 	 * @param file String
 	 * @return String
 	 */
-	private String loadLazy(Language lang, String file)
+	private String loadLazy(String file)
 	{
 		String cache = null;
-		File f;
-		
-		if (lang.getShortName().equals("en"))
-		{
-			f = new File(Config.DATAPACK_ROOT, "data/html/" + file);
-		}
-		else
-		{
-			f = new File(Config.DATAPACK_ROOT, "data/html-" + lang.getShortName() + "/" + file);
-		}
+		File f = new File(Config.DATAPACK_ROOT, "data/html/" + file);
 		
 		if (f.exists())
 		{
@@ -311,11 +260,11 @@ public class HtmCache
 			{
 				cache = FileUtils.readFileToString(f, "UTF-8");
 				cache = Strings.bbParse(cache);
-				_cache[lang.ordinal()].put(new Element(file, cache));
+				_cache[Language.ENGLISH.ordinal()].put(new Element(file, cache));
 			}
 			catch (IOException e)
 			{
-				_log.info("HtmCache: File error: " + file + " lang: " + lang);
+				_log.info("HtmCache: File error: " + file);
 			}
 		}
 		
@@ -324,19 +273,12 @@ public class HtmCache
 	
 	/**
 	 * Method get.
-	 * @param lang Language
 	 * @param f String
 	 * @return String
 	 */
-	private String get(Language lang, String f)
+	private String get(String f)
 	{
-		Element element = _cache[lang.ordinal()].get(f);
-		
-		if (element == null)
-		{
-			element = _cache[Language.ENGLISH.ordinal()].get(f);
-		}
-		
+		final Element element = _cache[Language.ENGLISH.ordinal()].get(f);
 		return element == null ? null : (String) element.getObjectValue();
 	}
 	
