@@ -362,7 +362,7 @@
 	<skill id="15042" levels="1" name="Tauti Push">
 		<!-- Tauti Easy-Mode -->
 		<table name="#magicLevel">99</table>
-		<set name="magicLevel" val="#magicLevel"/>		
+		<set name="magicLevel" val="#magicLevel"/>
 		<set name="reuseDelay" val="6000"/>
 		<set name="hitTime" val="2500"/>
 		<set name="icon" val="icon.skill15042"/>
@@ -370,8 +370,8 @@
 		<set name="target" val="TARGET_AREA"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="trait" val="KNOCKDOWN"/>
-		<set name="ignoreShield" val="true"/>	
-		<set name="nextAction" val="attack"/>		
+		<set name="ignoreShield" val="true"/>
+		<set name="nextAction" val="attack"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitRange" val="100"/>
 		<set name="effectRange" val="400"/>
@@ -380,7 +380,7 @@
 			<effect name="KnockDown" time="5" val="0" stackOrder="1" stackType="KnockDown">
 				<mul order="0x30" stat="pDef" val="0.80"/>
 			</effect>
-		</for>		
+		</for>
 	</skill>
 	<skill id="15043" levels="1" name="Tauti Push">
 		<!-- Tauti Hard-Mode Level 99 -->
@@ -393,8 +393,8 @@
 		<set name="target" val="TARGET_AREA"/>
 		<set name="skillType" val="PDAM"/>
 		<set name="trait" val="KNOCKDOWN"/>
-		<set name="ignoreShield" val="true"/>	
-		<set name="nextAction" val="attack"/>		
+		<set name="ignoreShield" val="true"/>
+		<set name="nextAction" val="attack"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitRange" val="100"/>
 		<set name="effectRange" val="400"/>
@@ -403,17 +403,17 @@
 			<effect name="KnockDown" time="5" val="0" stackOrder="1" stackType="KnockDown">
 				<mul order="0x30" stat="pDef" val="0.70"/>
 			</effect>
-		</for>		
+		</for>
 	</skill>
 	<skill id="15044" levels="1" name="Tauti Whirlwind">
 		<table name="#magicLevel">99</table>
 		<table name="#power">26003</table>
 		<table name="#rCrit">40 42 45 48</table>
-		<set name="icon" val="icon.skill15044"/>		
+		<set name="icon" val="icon.skill15044"/>
 		<set name="reuseDelay" val="10000"/>
 		<set name="power" val="#power"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="hitTime" val="1800"/>
+		<set name="hitTime" val="2000"/>
 		<set name="target" val="TARGET_AURA"/>
 		<set name="skillRadius" val="500"/>
 		<set name="overHit" val="true"/>
@@ -421,7 +421,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="shieldignore" val="true"/>
-		<set name="activateRate" val="80"/>		
+		<set name="activateRate" val="80"/>
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="5" val="0"/>
 		</for>
@@ -430,11 +430,11 @@
 		<table name="#magicLevel">99</table>
 		<table name="#power">30000</table>
 		<table name="#rCrit">40 42 45 48</table>
-		<set name="icon" val="icon.skill15045"/>		
+		<set name="icon" val="icon.skill15045"/>
 		<set name="reuseDelay" val="10000"/>
 		<set name="power" val="#power"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="hitTime" val="1800"/>
+		<set name="hitTime" val="2000"/>
 		<set name="target" val="TARGET_AURA"/>
 		<set name="skillRadius" val="500"/>
 		<set name="overHit" val="true"/>
@@ -442,21 +442,21 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="shieldignore" val="true"/>
-		<set name="activateRate" val="80"/>		
+		<set name="activateRate" val="80"/>
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="5" val="0"/>
 		</for>
 	</skill>
 	<skill id="15046" levels="1" name="Tauti Shock Wave">
 		<table name="#magicLevel">99</table>
-		<table name="#power">25000</table>		
+		<table name="#power">25000</table>
 		<set name="magicType" val="MAGIC"/>
 		<set name="icon" val="icon.skill15046"/>
 		<set name="reuseDelay" val="5000"/>
 		<set name="power" val="#power"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="castRange" val="900"/>
-		<set name="hitTime" val="2000"/>
+		<set name="hitTime" val="2500"/>
 		<set name="hitCancelTime" val="500000"/>
 		<set name="target" val="TARGET_AREA"/>
 		<set name="skillRadius" val="200"/>
@@ -465,13 +465,13 @@
 		<set name="operateType" val="OP_ACTIVE"/>
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="5" val="0"/>
-		</for>		
+		</for>
 	</skill>
 	<skill id="15047" levels="1" name="Tauti Rush">
 		<table name="#magicLevel">99</table>
 		<table name="#reuseDelay">10000</table>
 		<table name="#activateRate">75</table>
-		<set name="icon" val="icon.skill15047"/>		
+		<set name="icon" val="icon.skill15047"/>
 		<set name="reuseDelay" val="#reuseDelay"/>
 		<set name="nextAction" val="attack"/>
 		<set name="castRange" val="100"/>
@@ -490,7 +490,7 @@
 		<for>
 			<effect name="Stun" time="3" val="0" effectPower="100" effectType="STUN" stackOrder="1" stackType="stun"/>
 		</for>
-	</skill>		
+	</skill>
 	<skill id="15048" levels="1" name="Tauti Leap Attack">
 		<table name="#power">50000</table>
 		<table name="#magicLevel">99</table>
@@ -514,7 +514,7 @@
 				<mul order="0x30" stat="runSpd" val="0.7"/>
 			</effect>
 		</for>
-	</skill>		
+	</skill>
 	<skill id="15049" levels="1" name="Tauti Axe Throw (up/chain)">
 		<set name="coolTime" val="500"/>
 		<set name="icon" val="icon.skill3080"/>

@@ -12,7 +12,7 @@
  */
 package npc.model;
 
-import instances.TautiNormal;
+import instances.TautiInstance;
 import lineage2.gameserver.instancemanager.SoHManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
@@ -28,7 +28,7 @@ import lineage2.gameserver.utils.ReflectionUtils;
  */
 public final class SizrakInstance extends NpcInstance
 {
-	private static final int normalTautiInstanceId = 218;
+	private static final int TAUTI_NORMAL_INSTANCE_ID = 218;
 	private static final Location TAUTI_ROOM_TELEPORT = new Location(-147262, 211318, -10040);
 	
 	public SizrakInstance(int objectId, NpcTemplate template)
@@ -44,7 +44,7 @@ public final class SizrakInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.startsWith("request_tauti_normal_battle"))
+		if (command.equals("request_tauti_normal_battle"))
 		{
 			if (SoHManager.getCurrentStage() != 2)
 			{
@@ -86,31 +86,30 @@ public final class SizrakInstance extends NpcInstance
 				return;
 			}
 			
-			Reflection reflection = player.getActiveReflection();
+			final Reflection reflection = player.getActiveReflection();
 			
 			if (reflection != null)
 			{
-				if (player.canReenterInstance(normalTautiInstanceId))
+				if (player.canReenterInstance(TAUTI_NORMAL_INSTANCE_ID))
 				{
 					showChatWindow(player, "tauti/sofa_sizraku002g.htm");
 				}
 			}
-			else if (player.canEnterInstance(normalTautiInstanceId))
+			else if (player.canEnterInstance(TAUTI_NORMAL_INSTANCE_ID))
 			{
-				ReflectionUtils.enterReflection(player, new TautiNormal(), normalTautiInstanceId);
+				ReflectionUtils.enterReflection(player, new TautiInstance(), TAUTI_NORMAL_INSTANCE_ID);
 				showChatWindow(player, "tauti/sofa_sizraku002a.htm");
 			}
 		}
-		
-		if (command.startsWith("reenter_tauti_normal_battle"))
+		else if (command.equals("reenter_tauti_normal_battle"))
 		{
-			Reflection reflection = player.getActiveReflection();
+			final Reflection reflection = player.getActiveReflection();
 			
 			if (reflection != null)
 			{
-				if (player.canReenterInstance(normalTautiInstanceId))
+				if (player.canReenterInstance(TAUTI_NORMAL_INSTANCE_ID))
 				{
-					TautiNormal instance = (TautiNormal) reflection;
+					TautiInstance instance = (TautiInstance) reflection;
 					
 					if (instance.getInstanceStage() == 2)
 					{

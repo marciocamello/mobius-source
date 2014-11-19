@@ -1625,14 +1625,66 @@
 		</attributes>
 	</npc>
 	<npc id="29233" name="Tauti" title="">
+		<set name="aggroRange" value="0"/>
 		<set name="collision_radius" value="40.0"/>
-		<set name="aggroRange" value="100"/>
 		<set name="collision_height" value="90.0"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="type" value="ReflectionBoss"/>
+		<set name="ai_type" value="Tauti.Tauti"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="98413151"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseMpMax" value="2958"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="20"/>
+		<set name="rewardExp" value="5659322035"/>
+		<set name="rewardRp" value="1000"/>
+		<set name="rewardSp" value="233111760"/>
+		<set name="basePAtk" value="4687"/>
+		<set name="basePDef" value="802"/>
+		<set name="baseMAtk" value="2173"/>
+		<set name="baseMDef" value="713"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseCritRate" value="4"/>
+		<set name="baseMAtkSpd" value="333"/>
+		<set name="baseRunSpd" value="186"/>
+		<set name="baseWalkSpd" value="50"/>
+		<faction name="tauti_group" range="900"/>
+		<skills>
+			<skill id="4416" level="9"/>
+			<skill id="4435" level="5"/>
+			<skill id="4438" level="5"/>
+			<skill id="4439" level="5"/>
+			<skill id="4440" level="5"/>
+			<skill id="4441" level="5"/>
+			<skill id="5467" level="1"/>
+			<skill id="15047" level="1"/>
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="300"/>
+			<defence attribute="water" value="300"/>
+			<defence attribute="wind" value="300"/>
+			<defence attribute="earth" value="300"/>
+			<defence attribute="holy" value="267"/>
+			<defence attribute="unholy" value="464"/>
+			<attack attribute="unholy" value="33"/>
+		</attributes>
+	</npc>
+	<npc id="29234" name="Tauti" title="">
+		<set name="aggroRange" value="0"/>
+		<set name="collision_radius" value="40.0"/>
+		<set name="collision_height" value="90.0"/>
+		<set name="level" value="99"/>
+		<set name="type" value="ReflectionBoss"/>
+		<set name="ai_type" value="Tauti.Tauti"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="238200786"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseHpReg" value="13"/>
 		<set name="baseMpMax" value="2958"/>
@@ -1655,62 +1707,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="30.74">
-				<reward item_id="18237" min="1" max="1" chance="37.40"/>
-			</group>
-			<group chance="30.53">
-				<reward item_id="18236" min="1" max="1" chance="37.19"/>
-				<reward item_id="18238" min="1" max="1" chance="36.42"/>
-			</group>
-			<group chance="4.151">
-				<reward item_id="18210" min="1" max="1" chance="5.060"/>
-				<reward item_id="18213" min="1" max="1" chance="5.046"/>
-				<reward item_id="18215" min="1" max="1" chance="5.041"/>
-				<reward item_id="18207" min="1" max="1" chance="5.032"/>
-				<reward item_id="18214" min="1" max="1" chance="5.027"/>
-				<reward item_id="18212" min="1" max="1" chance="4.977"/>
-				<reward item_id="18209" min="1" max="1" chance="4.973"/>
-				<reward item_id="18206" min="1" max="1" chance="4.971"/>
-				<reward item_id="18211" min="1" max="1" chance="4.953"/>
-				<reward item_id="18208" min="1" max="1" chance="4.942"/>
-				<reward item_id="18205" min="1" max="1" chance="4.939"/>
-			</group>
-			<group chance="3.249">
-				<reward item_id="18219" min="1" max="1" chance="3.955"/>
-				<reward item_id="18235" min="1" max="1" chance="3.931"/>
-				<reward item_id="18224" min="1" max="1" chance="3.931"/>
-				<reward item_id="18231" min="1" max="1" chance="3.921"/>
-				<reward item_id="18234" min="1" max="1" chance="3.920"/>
-				<reward item_id="18230" min="1" max="1" chance="3.915"/>
-				<reward item_id="18225" min="1" max="1" chance="3.888"/>
-				<reward item_id="18232" min="1" max="1" chance="3.876"/>
-				<reward item_id="18227" min="1" max="1" chance="3.875"/>
-				<reward item_id="18221" min="1" max="1" chance="3.872"/>
-				<reward item_id="18229" min="1" max="1" chance="3.871"/>
-				<reward item_id="18220" min="1" max="1" chance="3.869"/>
-				<reward item_id="18228" min="1" max="1" chance="3.878"/>
-				<reward item_id="18226" min="1" max="1" chance="3.863"/>
-				<reward item_id="18222" min="1" max="1" chance="3.860"/>
-				<reward item_id="18223" min="1" max="1" chance="3.835"/>
-				<reward item_id="18233" min="1" max="1" chance="3.824"/>
-			</group>
-			<group chance="0.5">
-				<reward item_id="35570" min="1" max="1" chance="1.000"/>
-			</group>
-			<group chance="48.58">
-				<reward item_id="19446" min="1" max="1" chance="53.58"/>
-				<reward item_id="22648" min="1" max="1" chance="53.50"/>
-			</group>
-		</rewardlist>
-		<attributes>
-			<defence attribute="fire" value="300"/>
-			<defence attribute="water" value="300"/>
-			<defence attribute="wind" value="300"/>
-			<defence attribute="earth" value="300"/>
-			<defence attribute="holy" value="267"/>
-			<defence attribute="unholy" value="464"/>
-		</attributes>
+		<faction name="tauti_group" range="900"/>
 		<skills>
 			<skill id="4416" level="9"/>
 			<skill id="4435" level="5"/>
@@ -1719,87 +1716,8 @@
 			<skill id="4440" level="5"/>
 			<skill id="4441" level="5"/>
 			<skill id="5467" level="1"/>
+			<skill id="15047" level="1"/>
 		</skills>
-	</npc>
-	<npc id="29234" name="Tauti" title="">
-		<set name="collision_radius" value="40.0"/>
-		<set name="collision_height" value="90.0"/>
-		<set name="aggroRange" value="100"/>
-		<set name="level" value="99"/>
-		<set name="type" value="Monster"/>
-		<set name="ai_type" value="Fighter"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="183231374"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2958"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4687"/>
-		<set name="basePDef" value="802"/>
-		<set name="baseMAtk" value="2173"/>
-		<set name="baseMDef" value="713"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseRunSpd" value="186"/>
-		<set name="baseWalkSpd" value="50"/>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="30.74">
-				<reward item_id="18237" min="1" max="1" chance="37.40"/>
-			</group>
-			<group chance="30.53">
-				<reward item_id="18236" min="1" max="1" chance="37.19"/>
-				<reward item_id="18238" min="1" max="1" chance="36.42"/>
-			</group>
-			<group chance="4.151">
-				<reward item_id="18210" min="1" max="1" chance="5.060"/>
-				<reward item_id="18213" min="1" max="1" chance="5.046"/>
-				<reward item_id="18215" min="1" max="1" chance="5.041"/>
-				<reward item_id="18207" min="1" max="1" chance="5.032"/>
-				<reward item_id="18214" min="1" max="1" chance="5.027"/>
-				<reward item_id="18212" min="1" max="1" chance="4.977"/>
-				<reward item_id="18209" min="1" max="1" chance="4.973"/>
-				<reward item_id="18206" min="1" max="1" chance="4.971"/>
-				<reward item_id="18211" min="1" max="1" chance="4.953"/>
-				<reward item_id="18208" min="1" max="1" chance="4.942"/>
-				<reward item_id="18205" min="1" max="1" chance="4.939"/>
-			</group>
-			<group chance="3.249">
-				<reward item_id="18219" min="1" max="1" chance="3.955"/>
-				<reward item_id="18235" min="1" max="1" chance="3.931"/>
-				<reward item_id="18224" min="1" max="1" chance="3.931"/>
-				<reward item_id="18231" min="1" max="1" chance="3.921"/>
-				<reward item_id="18234" min="1" max="1" chance="3.920"/>
-				<reward item_id="18230" min="1" max="1" chance="3.915"/>
-				<reward item_id="18225" min="1" max="1" chance="3.888"/>
-				<reward item_id="18232" min="1" max="1" chance="3.876"/>
-				<reward item_id="18227" min="1" max="1" chance="3.875"/>
-				<reward item_id="18221" min="1" max="1" chance="3.872"/>
-				<reward item_id="18229" min="1" max="1" chance="3.871"/>
-				<reward item_id="18220" min="1" max="1" chance="3.869"/>
-				<reward item_id="18228" min="1" max="1" chance="3.878"/>
-				<reward item_id="18226" min="1" max="1" chance="3.863"/>
-				<reward item_id="18222" min="1" max="1" chance="3.860"/>
-				<reward item_id="18223" min="1" max="1" chance="3.835"/>
-				<reward item_id="18233" min="1" max="1" chance="3.824"/>
-			</group>
-			<group chance="0.5">
-				<reward item_id="35570" min="1" max="1" chance="1.000"/>
-			</group>
-			<group chance="48.58">
-				<reward item_id="19446" min="1" max="1" chance="53.58"/>
-				<reward item_id="22648" min="1" max="1" chance="53.50"/>
-			</group>
-		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -1807,16 +1725,8 @@
 			<defence attribute="earth" value="300"/>
 			<defence attribute="holy" value="267"/>
 			<defence attribute="unholy" value="464"/>
+			<attack attribute="unholy" value="33"/>
 		</attributes>
-		<skills>
-			<skill id="4416" level="9"/>
-			<skill id="4435" level="5"/>
-			<skill id="4438" level="5"/>
-			<skill id="4439" level="5"/>
-			<skill id="4440" level="5"/>
-			<skill id="4441" level="5"/>
-			<skill id="5467" level="1"/>
-		</skills>
 	</npc>
 	<npc id="29235" name="Tauti" title="">
 		<set name="collision_radius" value="40.0"/>
@@ -1849,54 +1759,6 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="30.74">
-				<reward item_id="18237" min="1" max="1" chance="37.40"/>
-			</group>
-			<group chance="30.53">
-				<reward item_id="18236" min="1" max="1" chance="37.19"/>
-				<reward item_id="18238" min="1" max="1" chance="36.42"/>
-			</group>
-			<group chance="4.151">
-				<reward item_id="18210" min="1" max="1" chance="5.060"/>
-				<reward item_id="18213" min="1" max="1" chance="5.046"/>
-				<reward item_id="18215" min="1" max="1" chance="5.041"/>
-				<reward item_id="18207" min="1" max="1" chance="5.032"/>
-				<reward item_id="18214" min="1" max="1" chance="5.027"/>
-				<reward item_id="18212" min="1" max="1" chance="4.977"/>
-				<reward item_id="18209" min="1" max="1" chance="4.973"/>
-				<reward item_id="18206" min="1" max="1" chance="4.971"/>
-				<reward item_id="18211" min="1" max="1" chance="4.953"/>
-				<reward item_id="18208" min="1" max="1" chance="4.942"/>
-				<reward item_id="18205" min="1" max="1" chance="4.939"/>
-			</group>
-			<group chance="3.249">
-				<reward item_id="18219" min="1" max="1" chance="3.955"/>
-				<reward item_id="18235" min="1" max="1" chance="3.931"/>
-				<reward item_id="18224" min="1" max="1" chance="3.931"/>
-				<reward item_id="18231" min="1" max="1" chance="3.921"/>
-				<reward item_id="18234" min="1" max="1" chance="3.920"/>
-				<reward item_id="18230" min="1" max="1" chance="3.915"/>
-				<reward item_id="18225" min="1" max="1" chance="3.888"/>
-				<reward item_id="18232" min="1" max="1" chance="3.876"/>
-				<reward item_id="18227" min="1" max="1" chance="3.875"/>
-				<reward item_id="18221" min="1" max="1" chance="3.872"/>
-				<reward item_id="18229" min="1" max="1" chance="3.871"/>
-				<reward item_id="18220" min="1" max="1" chance="3.869"/>
-				<reward item_id="18228" min="1" max="1" chance="3.878"/>
-				<reward item_id="18226" min="1" max="1" chance="3.863"/>
-				<reward item_id="18222" min="1" max="1" chance="3.860"/>
-				<reward item_id="18223" min="1" max="1" chance="3.835"/>
-				<reward item_id="18233" min="1" max="1" chance="3.824"/>
-			</group>
-			<group chance="0.5">
-				<reward item_id="35570" min="1" max="1" chance="1.000"/>
-			</group>
-			<group chance="48.58">
-				<reward item_id="19446" min="1" max="1" chance="53.58"/>
-				<reward item_id="22648" min="1" max="1" chance="53.50"/>
-			</group>
-		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -1915,12 +1777,12 @@
 			<skill id="5467" level="1"/>
 		</skills>
 	</npc>
-	<npc id="29236" name="Tauti" title="">
+	<npc id="29236" name="Tauti" title="Axe">
+		<set name="aggroRange" value="0"/>
 		<set name="collision_radius" value="24.0"/>
-		<set name="aggroRange" value="100"/>
 		<set name="collision_height" value="77.0"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/>
+		<set name="type" value="ReflectionBoss"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="98413151"/>
@@ -1934,9 +1796,9 @@
 		<set name="baseINT" value="21"/>
 		<set name="baseWIT" value="70"/>
 		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
+		<set name="rewardExp" value="12833899848"/>
+		<set name="rewardRp" value="1000"/>
+		<set name="rewardSp" value="20534239"/>
 		<set name="basePAtk" value="4687"/>
 		<set name="basePDef" value="802"/>
 		<set name="baseMAtk" value="2173"/>
@@ -1946,62 +1808,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="30.74">
-				<reward item_id="18237" min="1" max="1" chance="37.40"/>
-			</group>
-			<group chance="30.53">
-				<reward item_id="18236" min="1" max="1" chance="37.19"/>
-				<reward item_id="18238" min="1" max="1" chance="36.42"/>
-			</group>
-			<group chance="4.151">
-				<reward item_id="18210" min="1" max="1" chance="5.060"/>
-				<reward item_id="18213" min="1" max="1" chance="5.046"/>
-				<reward item_id="18215" min="1" max="1" chance="5.041"/>
-				<reward item_id="18207" min="1" max="1" chance="5.032"/>
-				<reward item_id="18214" min="1" max="1" chance="5.027"/>
-				<reward item_id="18212" min="1" max="1" chance="4.977"/>
-				<reward item_id="18209" min="1" max="1" chance="4.973"/>
-				<reward item_id="18206" min="1" max="1" chance="4.971"/>
-				<reward item_id="18211" min="1" max="1" chance="4.953"/>
-				<reward item_id="18208" min="1" max="1" chance="4.942"/>
-				<reward item_id="18205" min="1" max="1" chance="4.939"/>
-			</group>
-			<group chance="3.249">
-				<reward item_id="18219" min="1" max="1" chance="3.955"/>
-				<reward item_id="18235" min="1" max="1" chance="3.931"/>
-				<reward item_id="18224" min="1" max="1" chance="3.931"/>
-				<reward item_id="18231" min="1" max="1" chance="3.921"/>
-				<reward item_id="18234" min="1" max="1" chance="3.920"/>
-				<reward item_id="18230" min="1" max="1" chance="3.915"/>
-				<reward item_id="18225" min="1" max="1" chance="3.888"/>
-				<reward item_id="18232" min="1" max="1" chance="3.876"/>
-				<reward item_id="18227" min="1" max="1" chance="3.875"/>
-				<reward item_id="18221" min="1" max="1" chance="3.872"/>
-				<reward item_id="18229" min="1" max="1" chance="3.871"/>
-				<reward item_id="18220" min="1" max="1" chance="3.869"/>
-				<reward item_id="18228" min="1" max="1" chance="3.878"/>
-				<reward item_id="18226" min="1" max="1" chance="3.863"/>
-				<reward item_id="18222" min="1" max="1" chance="3.860"/>
-				<reward item_id="18223" min="1" max="1" chance="3.835"/>
-				<reward item_id="18233" min="1" max="1" chance="3.824"/>
-			</group>
-			<group chance="0.5">
-				<reward item_id="35570" min="1" max="1" chance="1.000"/>
-			</group>
-			<group chance="48.58">
-				<reward item_id="19446" min="1" max="1" chance="53.58"/>
-				<reward item_id="22648" min="1" max="1" chance="53.50"/>
-			</group>
-		</rewardlist>
-		<attributes>
-			<defence attribute="fire" value="300"/>
-			<defence attribute="water" value="300"/>
-			<defence attribute="wind" value="300"/>
-			<defence attribute="earth" value="300"/>
-			<defence attribute="holy" value="267"/>
-			<defence attribute="unholy" value="464"/>
-		</attributes>
+		<faction name="tauti_group" range="900"/>
 		<skills>
 			<skill id="4416" level="9"/>
 			<skill id="4435" level="5"/>
@@ -2011,94 +1818,84 @@
 			<skill id="4441" level="5"/>
 			<skill id="5467" level="1"/>
 		</skills>
+		<attributes>
+			<defence attribute="fire" value="300"/>
+			<defence attribute="water" value="300"/>
+			<defence attribute="wind" value="300"/>
+			<defence attribute="earth" value="300"/>
+			<defence attribute="holy" value="267"/>
+			<defence attribute="unholy" value="464"/>
+			<attack attribute="unholy" value="33"/>
+		</attributes>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="21.7047">
+				<reward item_id="18214" min="1" max="1" chance="5.5231"/>
+				<reward item_id="18211" min="1" max="1" chance="5.2342"/>
+				<reward item_id="18209" min="1" max="1" chance="5.3425"/>
+				<reward item_id="18215" min="1" max="1" chance="5.5234"/>
+				<reward item_id="18206" min="1" max="1" chance="5.1321"/>
+				<reward item_id="18207" min="1" max="1" chance="5.3456"/>
+				<reward item_id="18213" min="1" max="1" chance="5.4523"/>
+				<reward item_id="18210" min="1" max="1" chance="5.4352"/>
+				<reward item_id="18235" min="1" max="1" chance="3.3452"/>
+				<reward item_id="18224" min="1" max="1" chance="3.4532"/>
+			</group>
+			<group chance="62.8633">
+				<reward item_id="18238" min="1" max="1" chance="16.1321"/>
+				<reward item_id="18236" min="1" max="1" chance="15.7832"/>
+				<reward item_id="18237" min="1" max="1" chance="15.5812"/>
+				<reward item_id="18219" min="1" max="1" chance="3.1325"/>
+				<reward item_id="18231" min="1" max="1" chance="3.2579"/>
+				<reward item_id="18222" min="1" max="1" chance="3.1123"/>
+				<reward item_id="18221" min="1" max="1" chance="3.1325"/>
+				<reward item_id="18230" min="1" max="1" chance="3.2182"/>
+				<reward item_id="18226" min="1" max="1" chance="3.1781"/>
+				<reward item_id="18229" min="1" max="1" chance="3.1231"/>
+				<reward item_id="18228" min="1" max="1" chance="3.1282"/>
+				<reward item_id="18232" min="1" max="1" chance="3.2182"/>
+				<reward item_id="18227" min="1" max="1" chance="3.1832"/>
+				<reward item_id="18223" min="1" max="1" chance="3.1327"/>
+				<reward item_id="18234" min="1" max="1" chance="3.2132"/>
+				<reward item_id="35570" min="1" max="1" chance="1.1321"/>
+			</group>
+			<group chance="64.8705">
+				<reward item_id="19446" min="1" max="1" chance="47.6341"/>
+				<reward item_id="19448" min="1" max="1" chance="46.5187"/>
+			</group>
+		</rewardlist>
 	</npc>
-	<npc id="29237" name="Tauti" title="">
+	<npc id="29237" name="Tauti" title="Axe">
+		<set name="aggroRange" value="0"/>
 		<set name="collision_radius" value="24.0"/>
 		<set name="collision_height" value="77.0"/>
 		<set name="level" value="99"/>
-		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="100"/>
+		<set name="type" value="ReflectionBoss"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="621600000"/>
+		<set name="baseHpMax" value="100042329"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="2025740"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseSTR" value="98"/>
-		<set name="baseCON" value="87"/>
-		<set name="baseDEX" value="83"/>
-		<set name="baseINT" value="11"/>
-		<set name="baseWIT" value="115"/>
-		<set name="baseMEN" value="5"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="4900"/>
-		<set name="basePDef" value="3840"/>
-		<set name="baseMAtk" value="2550"/>
-		<set name="baseMDef" value="825"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseMpMax" value="2958"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="20"/>
+		<set name="rewardExp" value="16977958668"/>
+		<set name="rewardRp" value="1000"/>
+		<set name="rewardSp" value="27164733"/>
+		<set name="basePAtk" value="4687"/>
+		<set name="basePDef" value="802"/>
+		<set name="baseMAtk" value="2173"/>
+		<set name="baseMDef" value="713"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="30.74">
-				<reward item_id="18237" min="1" max="1" chance="37.40"/>
-			</group>
-			<group chance="30.53">
-				<reward item_id="18236" min="1" max="1" chance="37.19"/>
-				<reward item_id="18238" min="1" max="1" chance="36.42"/>
-			</group>
-			<group chance="4.151">
-				<reward item_id="18210" min="1" max="1" chance="5.060"/>
-				<reward item_id="18213" min="1" max="1" chance="5.046"/>
-				<reward item_id="18215" min="1" max="1" chance="5.041"/>
-				<reward item_id="18207" min="1" max="1" chance="5.032"/>
-				<reward item_id="18214" min="1" max="1" chance="5.027"/>
-				<reward item_id="18212" min="1" max="1" chance="4.977"/>
-				<reward item_id="18209" min="1" max="1" chance="4.973"/>
-				<reward item_id="18206" min="1" max="1" chance="4.971"/>
-				<reward item_id="18211" min="1" max="1" chance="4.953"/>
-				<reward item_id="18208" min="1" max="1" chance="4.942"/>
-				<reward item_id="18205" min="1" max="1" chance="4.939"/>
-			</group>
-			<group chance="3.249">
-				<reward item_id="18219" min="1" max="1" chance="3.955"/>
-				<reward item_id="18235" min="1" max="1" chance="3.931"/>
-				<reward item_id="18224" min="1" max="1" chance="3.931"/>
-				<reward item_id="18231" min="1" max="1" chance="3.921"/>
-				<reward item_id="18234" min="1" max="1" chance="3.920"/>
-				<reward item_id="18230" min="1" max="1" chance="3.915"/>
-				<reward item_id="18225" min="1" max="1" chance="3.888"/>
-				<reward item_id="18232" min="1" max="1" chance="3.876"/>
-				<reward item_id="18227" min="1" max="1" chance="3.875"/>
-				<reward item_id="18221" min="1" max="1" chance="3.872"/>
-				<reward item_id="18229" min="1" max="1" chance="3.871"/>
-				<reward item_id="18220" min="1" max="1" chance="3.869"/>
-				<reward item_id="18228" min="1" max="1" chance="3.878"/>
-				<reward item_id="18226" min="1" max="1" chance="3.863"/>
-				<reward item_id="18222" min="1" max="1" chance="3.860"/>
-				<reward item_id="18223" min="1" max="1" chance="3.835"/>
-				<reward item_id="18233" min="1" max="1" chance="3.824"/>
-			</group>
-			<group chance="0.5">
-				<reward item_id="35570" min="1" max="1" chance="1.000"/>
-			</group>
-			<group chance="48.58">
-				<reward item_id="19446" min="1" max="1" chance="53.58"/>
-				<reward item_id="22648" min="1" max="1" chance="53.50"/>
-			</group>
-		</rewardlist>
-		<attributes>
-			<defence attribute="fire" value="300"/>
-			<defence attribute="water" value="300"/>
-			<defence attribute="wind" value="300"/>
-			<defence attribute="earth" value="300"/>
-			<defence attribute="holy" value="267"/>
-			<defence attribute="unholy" value="464"/>
-		</attributes>
+		<faction name="tauti_group" range="900"/>
 		<skills>
 			<skill id="4416" level="9"/>
 			<skill id="4435" level="5"/>
@@ -2108,6 +1905,51 @@
 			<skill id="4441" level="5"/>
 			<skill id="5467" level="1"/>
 		</skills>
+		<attributes>
+			<defence attribute="fire" value="300"/>
+			<defence attribute="water" value="300"/>
+			<defence attribute="wind" value="300"/>
+			<defence attribute="earth" value="300"/>
+			<defence attribute="holy" value="267"/>
+			<defence attribute="unholy" value="464"/>
+			<attack attribute="unholy" value="33"/>
+		</attributes>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="21.7047">
+				<reward item_id="18214" min="1" max="1" chance="5.5231"/>
+				<reward item_id="18211" min="1" max="1" chance="5.2342"/>
+				<reward item_id="18209" min="1" max="1" chance="5.3425"/>
+				<reward item_id="18215" min="1" max="1" chance="5.5234"/>
+				<reward item_id="18206" min="1" max="1" chance="5.1321"/>
+				<reward item_id="18207" min="1" max="1" chance="5.3456"/>
+				<reward item_id="18213" min="1" max="1" chance="5.4523"/>
+				<reward item_id="18210" min="1" max="1" chance="5.4352"/>
+				<reward item_id="18235" min="1" max="1" chance="3.3452"/>
+				<reward item_id="18224" min="1" max="1" chance="3.4532"/>
+			</group>
+			<group chance="62.8633">
+				<reward item_id="18238" min="1" max="1" chance="16.1321"/>
+				<reward item_id="18236" min="1" max="1" chance="15.7832"/>
+				<reward item_id="18237" min="1" max="1" chance="15.5812"/>
+				<reward item_id="18219" min="1" max="1" chance="3.1325"/>
+				<reward item_id="18231" min="1" max="1" chance="3.2579"/>
+				<reward item_id="18222" min="1" max="1" chance="3.1123"/>
+				<reward item_id="18221" min="1" max="1" chance="3.1325"/>
+				<reward item_id="18230" min="1" max="1" chance="3.2182"/>
+				<reward item_id="18226" min="1" max="1" chance="3.1781"/>
+				<reward item_id="18229" min="1" max="1" chance="3.1231"/>
+				<reward item_id="18228" min="1" max="1" chance="3.1282"/>
+				<reward item_id="18232" min="1" max="1" chance="3.2182"/>
+				<reward item_id="18227" min="1" max="1" chance="3.1832"/>
+				<reward item_id="18223" min="1" max="1" chance="3.1327"/>
+				<reward item_id="18234" min="1" max="1" chance="3.2132"/>
+				<reward item_id="35570" min="1" max="1" chance="1.1321"/>
+			</group>
+			<group chance="64.8705">
+				<reward item_id="19446" min="1" max="1" chance="47.6341"/>
+				<reward item_id="19448" min="1" max="1" chance="46.5187"/>
+			</group>
+		</rewardlist>
 	</npc>
 	<npc id="29238" name="Tauti" title="">
 		<set name="collision_radius" value="24.0"/>
@@ -2140,54 +1982,6 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="30.74">
-				<reward item_id="18237" min="1" max="1" chance="37.40"/>
-			</group>
-			<group chance="30.53">
-				<reward item_id="18236" min="1" max="1" chance="37.19"/>
-				<reward item_id="18238" min="1" max="1" chance="36.42"/>
-			</group>
-			<group chance="4.151">
-				<reward item_id="18210" min="1" max="1" chance="5.060"/>
-				<reward item_id="18213" min="1" max="1" chance="5.046"/>
-				<reward item_id="18215" min="1" max="1" chance="5.041"/>
-				<reward item_id="18207" min="1" max="1" chance="5.032"/>
-				<reward item_id="18214" min="1" max="1" chance="5.027"/>
-				<reward item_id="18212" min="1" max="1" chance="4.977"/>
-				<reward item_id="18209" min="1" max="1" chance="4.973"/>
-				<reward item_id="18206" min="1" max="1" chance="4.971"/>
-				<reward item_id="18211" min="1" max="1" chance="4.953"/>
-				<reward item_id="18208" min="1" max="1" chance="4.942"/>
-				<reward item_id="18205" min="1" max="1" chance="4.939"/>
-			</group>
-			<group chance="3.249">
-				<reward item_id="18219" min="1" max="1" chance="3.955"/>
-				<reward item_id="18235" min="1" max="1" chance="3.931"/>
-				<reward item_id="18224" min="1" max="1" chance="3.931"/>
-				<reward item_id="18231" min="1" max="1" chance="3.921"/>
-				<reward item_id="18234" min="1" max="1" chance="3.920"/>
-				<reward item_id="18230" min="1" max="1" chance="3.915"/>
-				<reward item_id="18225" min="1" max="1" chance="3.888"/>
-				<reward item_id="18232" min="1" max="1" chance="3.876"/>
-				<reward item_id="18227" min="1" max="1" chance="3.875"/>
-				<reward item_id="18221" min="1" max="1" chance="3.872"/>
-				<reward item_id="18229" min="1" max="1" chance="3.871"/>
-				<reward item_id="18220" min="1" max="1" chance="3.869"/>
-				<reward item_id="18228" min="1" max="1" chance="3.878"/>
-				<reward item_id="18226" min="1" max="1" chance="3.863"/>
-				<reward item_id="18222" min="1" max="1" chance="3.860"/>
-				<reward item_id="18223" min="1" max="1" chance="3.835"/>
-				<reward item_id="18233" min="1" max="1" chance="3.824"/>
-			</group>
-			<group chance="0.5">
-				<reward item_id="35570" min="1" max="1" chance="1.000"/>
-			</group>
-			<group chance="48.58">
-				<reward item_id="19446" min="1" max="1" chance="53.58"/>
-				<reward item_id="22648" min="1" max="1" chance="53.50"/>
-			</group>
-		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -2237,54 +2031,6 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="30.74">
-				<reward item_id="18237" min="1" max="1" chance="37.40"/>
-			</group>
-			<group chance="30.53">
-				<reward item_id="18236" min="1" max="1" chance="37.19"/>
-				<reward item_id="18238" min="1" max="1" chance="36.42"/>
-			</group>
-			<group chance="4.151">
-				<reward item_id="18210" min="1" max="1" chance="5.060"/>
-				<reward item_id="18213" min="1" max="1" chance="5.046"/>
-				<reward item_id="18215" min="1" max="1" chance="5.041"/>
-				<reward item_id="18207" min="1" max="1" chance="5.032"/>
-				<reward item_id="18214" min="1" max="1" chance="5.027"/>
-				<reward item_id="18212" min="1" max="1" chance="4.977"/>
-				<reward item_id="18209" min="1" max="1" chance="4.973"/>
-				<reward item_id="18206" min="1" max="1" chance="4.971"/>
-				<reward item_id="18211" min="1" max="1" chance="4.953"/>
-				<reward item_id="18208" min="1" max="1" chance="4.942"/>
-				<reward item_id="18205" min="1" max="1" chance="4.939"/>
-			</group>
-			<group chance="3.249">
-				<reward item_id="18219" min="1" max="1" chance="3.955"/>
-				<reward item_id="18235" min="1" max="1" chance="3.931"/>
-				<reward item_id="18224" min="1" max="1" chance="3.931"/>
-				<reward item_id="18231" min="1" max="1" chance="3.921"/>
-				<reward item_id="18234" min="1" max="1" chance="3.920"/>
-				<reward item_id="18230" min="1" max="1" chance="3.915"/>
-				<reward item_id="18225" min="1" max="1" chance="3.888"/>
-				<reward item_id="18232" min="1" max="1" chance="3.876"/>
-				<reward item_id="18227" min="1" max="1" chance="3.875"/>
-				<reward item_id="18221" min="1" max="1" chance="3.872"/>
-				<reward item_id="18229" min="1" max="1" chance="3.871"/>
-				<reward item_id="18220" min="1" max="1" chance="3.869"/>
-				<reward item_id="18228" min="1" max="1" chance="3.878"/>
-				<reward item_id="18226" min="1" max="1" chance="3.863"/>
-				<reward item_id="18222" min="1" max="1" chance="3.860"/>
-				<reward item_id="18223" min="1" max="1" chance="3.835"/>
-				<reward item_id="18233" min="1" max="1" chance="3.824"/>
-			</group>
-			<group chance="0.5">
-				<reward item_id="35570" min="1" max="1" chance="1.000"/>
-			</group>
-			<group chance="48.58">
-				<reward item_id="19446" min="1" max="1" chance="53.58"/>
-				<reward item_id="22648" min="1" max="1" chance="53.50"/>
-			</group>
-		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>

@@ -4,11 +4,11 @@
 		<table name="#magicLevel">99</table>
 		<table name="#power">35000</table>
 		<table name="#rCrit">40 42 45 48</table>
-		<set name="icon" val="icon.skill15044"/>		
+		<set name="icon" val="icon.skill15044"/>
 		<set name="reuseDelay" val="10000"/>
 		<set name="power" val="#power"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="hitTime" val="1800"/>
+		<set name="hitTime" val="2000"/>
 		<set name="target" val="TARGET_AURA"/>
 		<set name="skillRadius" val="500"/>
 		<set name="overHit" val="true"/>
@@ -16,7 +16,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="shieldignore" val="true"/>
-		<set name="activateRate" val="80"/>		
+		<set name="activateRate" val="80"/>
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="5" val="0"/>
 		</for>
@@ -25,11 +25,11 @@
 		<table name="#magicLevel">99</table>
 		<table name="#power">35000</table>
 		<table name="#rCrit">40 42 45 48</table>
-		<set name="icon" val="icon.skill15044"/>		
+		<set name="icon" val="icon.skill15044"/>
 		<set name="reuseDelay" val="10000"/>
 		<set name="power" val="#power"/>
 		<set name="magicLevel" val="#magicLevel"/>
-		<set name="hitTime" val="1800"/>
+		<set name="hitTime" val="2000"/>
 		<set name="target" val="TARGET_AURA"/>
 		<set name="skillRadius" val="500"/>
 		<set name="overHit" val="true"/>
@@ -37,7 +37,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="shieldignore" val="true"/>
-		<set name="activateRate" val="80"/>		
+		<set name="activateRate" val="80"/>
 		<for>
 			<effect count="1" name="Stun" stackOrder="-1" stackType="Stun" time="5" val="0"/>
 		</for>
@@ -57,7 +57,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="shieldignore" val="true"/>
-		<set name="activateRate" val="80"/>		
+		<set name="activateRate" val="80"/>
 		<for>
 			<effect count="1" name="KnockBack" stackOrder="-1" stackType="KnockBack" time="0" val="0"/>
 		</for>
@@ -77,7 +77,7 @@
 		<set name="skillType" val="PDAM"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="shieldignore" val="true"/>
-		<set name="activateRate" val="80"/>		
+		<set name="activateRate" val="80"/>
 		<for>
 			<effect count="1" name="KnockBack" stackOrder="-1" stackType="KnockBack" time="0" val="0"/>
 		</for>

@@ -221,12 +221,12 @@
 		<set name="reuseDelay" val="2000"/>
 	</skill>
 	<skill id="14625" levels="1" name="Release of Power">
-		<table name="#dot">100</table>
+		<table name="#dot">1428</table>
 		<table name="#magicLevel">99</table>
 		<set name="icon" val="skill15174"/>
 		<set name="magicType" val="MAGIC"/>
 		<set name="reuseDelay" val="20000"/>
-		<set name="hitTime" val="100000"/>
+		<set name="hitTime" val="10000"/>
 		<set name="castRange" val="1100"/>
 		<set name="magicLevel" val="#magicLevel"/>
 		<set name="power" val="#dot"/>
@@ -236,10 +236,6 @@
 		<set name="absorbPart" val="1"/>
 		<set name="isUsingWhileCasting" val="true"/>
 		<set name="isSkillTimePermanent" val="true"/>
-		<enchant1 levels="10" name="Cost"/>
-		<enchant2 levels="10" name="Power">
-			<table name="#dot">101 102 103 104 105 106 107 108 109 110</table>
-		</enchant2>
 		<for>
 			<effect count="1" name="Heal" time="100" val="0">
 				<mul order="0x30" stat="regHp" val="1.50"/>

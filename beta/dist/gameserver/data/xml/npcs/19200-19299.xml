@@ -2672,8 +2672,8 @@
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Tauti.KundaGuard"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1536018"/>
 		<set name="baseHpRate" value="1"/>
@@ -2698,6 +2698,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<faction name="kunda_attacker" range="400"/>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -2721,7 +2722,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="ai_type" value="Tauti.KundaGuard"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1536018"/>
 		<set name="baseHpRate" value="1"/>
@@ -2746,6 +2747,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<faction name="kunda_attacker" range="400"/>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -2769,7 +2771,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Fighter"/>
+		<set name="ai_type" value="Tauti.KundaGuard"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1536018"/>
 		<set name="baseHpRate" value="1"/>
@@ -2794,6 +2796,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<faction name="kunda_attacker" range="400"/>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -2842,6 +2845,10 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<faction name="kunda_attacker" range="900"/>
+		<ai_params>
+			<set name="noRandomWalk" value="true"/>
+		</ai_params>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -2886,6 +2893,10 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
+		<faction name="kunda_attacker" range="900"/>
+		<ai_params>
+			<set name="noRandomWalk" value="true"/>
+		</ai_params>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -2898,6 +2909,11 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
+		<rewardlist type="NOT_RATED_GROUPED">
+			<group chance="100.0">
+				<reward item_id="34899" min="1" max="1" chance="100.0000" />
+			</group>
+		</rewardlist>
 	</npc>
 	<npc id="19267" name="Mysterious Box" title="">
 		<set name="collision_radius" value="8.5"/>

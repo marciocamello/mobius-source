@@ -12,7 +12,7 @@
  */
 package quests;
 
-import instances.TautiNormal;
+import instances.TautiInstance;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -75,7 +75,7 @@ public class Q10382_DayOfLiberation extends Quest implements ScriptFile
 					}
 					else if (player.canEnterInstance(normalTautiInstanceId))
 					{
-						ReflectionUtils.enterReflection(player, new TautiNormal(), normalTautiInstanceId);
+						ReflectionUtils.enterReflection(player, new TautiInstance(), normalTautiInstanceId);
 					}
 					
 					return "";
