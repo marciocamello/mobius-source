@@ -52,7 +52,7 @@ public final class Multisell implements IBypassHandler, ScriptFile
 	{
 		String listId = command.substring(9).trim();
 		Castle castle = npc.getCastle(player);
-		MultiSellHolder.getInstance().SeparateAndSend(Integer.parseInt(listId), player, castle != null ? castle.getTaxRate() : 0);
+		MultiSellHolder.getInstance().SeparateAndSend(Integer.parseInt(listId), player, castle != null ? castle.getTaxRate() : 0, npc.getId());
 	}
 	
 	/**

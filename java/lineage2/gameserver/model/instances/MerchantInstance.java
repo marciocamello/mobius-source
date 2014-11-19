@@ -223,7 +223,7 @@ public class MerchantInstance extends NpcInstance
 				}
 				int val2 = Integer.parseInt(st.nextToken());
 				Castle castle = getCastle(player);
-				MultiSellHolder.getInstance().SeparateAndSend(val2, player, castle != null ? castle.getTaxRate() : 0);
+				MultiSellHolder.getInstance().SeparateAndSend(val2, player, castle != null ? castle.getTaxRate() : 0, getId());
 				break;
 			
 			case "ReceivePremium":

@@ -56,7 +56,7 @@ public class TerritoryManagerInstance extends NpcInstance
 			}
 			else
 			{
-				MultiSellHolder.getInstance().SeparateAndSend(npcId, player, 0);
+				MultiSellHolder.getInstance().SeparateAndSend(npcId, player, 0, getId());
 			}
 		}
 		else if (command.equals("calculate"))

@@ -100,10 +100,11 @@ public class MultiSellHolder
 		private int _listId;
 		private boolean _isnew = false;
 		private boolean _showall = true;
-		private boolean keep_enchanted = false;
-		private boolean is_dutyfree = false;
-		private boolean nokey = false;
-		final List<MultiSellEntry> entries = new ArrayList<>();
+		private boolean _keepEnchanted = false;
+		private boolean _isDutyFree = false;
+		private boolean _noKey = false;
+		List<Integer> _npcsAllowed = new ArrayList<>();
+		List<MultiSellEntry> _entries = new ArrayList<>();
 		
 		/**
 		 * Method setListId.
@@ -165,7 +166,7 @@ public class MultiSellHolder
 		 */
 		public void setNoTax(boolean bool)
 		{
-			is_dutyfree = bool;
+			_isDutyFree = bool;
 		}
 		
 		/**
@@ -174,7 +175,7 @@ public class MultiSellHolder
 		 */
 		public boolean isNoTax()
 		{
-			return is_dutyfree;
+			return _isDutyFree;
 		}
 		
 		/**
@@ -183,7 +184,7 @@ public class MultiSellHolder
 		 */
 		public void setNoKey(boolean bool)
 		{
-			nokey = bool;
+			_noKey = bool;
 		}
 		
 		/**
@@ -192,7 +193,7 @@ public class MultiSellHolder
 		 */
 		public boolean isNoKey()
 		{
-			return nokey;
+			return _noKey;
 		}
 		
 		/**
@@ -201,7 +202,7 @@ public class MultiSellHolder
 		 */
 		public void setKeepEnchant(boolean bool)
 		{
-			keep_enchanted = bool;
+			_keepEnchanted = bool;
 		}
 		
 		/**
@@ -210,7 +211,26 @@ public class MultiSellHolder
 		 */
 		public boolean isKeepEnchant()
 		{
-			return keep_enchanted;
+			return _keepEnchanted;
+		}
+		
+		/**
+		 * Method allowNpc.
+		 * @param npcId int
+		 */
+		public void allowNpc(int npcId)
+		{
+			_npcsAllowed.add(npcId);
+		}
+		
+		/**
+		 * Method isNpcAllowed.
+		 * @param npcId int
+		 * @return boolean
+		 */
+		public boolean isNpcAllowed(int npcId)
+		{
+			return (_npcsAllowed.isEmpty()) || _npcsAllowed.contains(npcId);
 		}
 		
 		/**
@@ -219,7 +239,7 @@ public class MultiSellHolder
 		 */
 		public void addEntry(MultiSellEntry e)
 		{
-			entries.add(e);
+			_entries.add(e);
 		}
 		
 		/**
@@ -228,7 +248,7 @@ public class MultiSellHolder
 		 */
 		public List<MultiSellEntry> getEntries()
 		{
-			return entries;
+			return _entries;
 		}
 		
 		/**
@@ -237,7 +257,7 @@ public class MultiSellHolder
 		 */
 		public boolean isEmpty()
 		{
-			return entries.isEmpty();
+			return _entries.isEmpty();
 		}
 	}
 	
@@ -393,12 +413,23 @@ public class MultiSellHolder
 				{
 					if ("item".equalsIgnoreCase(d.getNodeName()))
 					{
-						MultiSellEntry e = parseEntry(d, id);
+						final MultiSellEntry e = parseEntry(d, id);
 						
 						if (e != null)
 						{
 							e.setEntryId(entId++);
 							list.addEntry(e);
+						}
+					}
+					else if ("npcs".equalsIgnoreCase(d.getNodeName()))
+					{
+						for (Node b = d.getFirstChild(); b != null; b = b.getNextSibling())
+						{
+							if ("npc".equalsIgnoreCase(b.getNodeName()))
+							{
+								final int npc = Integer.parseInt(b.getTextContent());
+								list.allowNpc(npc);
+							}
 						}
 					}
 					else if ("config".equalsIgnoreCase(d.getNodeName()))
@@ -629,8 +660,9 @@ public class MultiSellHolder
 	 * @param listId int
 	 * @param player Player
 	 * @param taxRate double
+	 * @param npcId
 	 */
-	public void SeparateAndSend(int listId, Player player, double taxRate)
+	public void SeparateAndSend(int listId, Player player, double taxRate, int npcId)
 	{
 		for (int i : Config.ALT_DISABLED_MULTISELL)
 		{
@@ -646,6 +678,11 @@ public class MultiSellHolder
 		if (list == null)
 		{
 			player.sendMessage(new CustomMessage("common.Disabled", player));
+			return;
+		}
+		
+		if (!list.isNpcAllowed(npcId))
+		{
 			return;
 		}
 		
@@ -761,7 +798,7 @@ public class MultiSellHolder
 			
 			if (showall)
 			{
-				list.entries.add(ent);
+				list._entries.add(ent);
 			}
 			else
 			{
@@ -850,7 +887,7 @@ public class MultiSellHolder
 									possibleEntry.addIngredient(ig);
 								}
 								
-								list.entries.add(possibleEntry);
+								list._entries.add(possibleEntry);
 								break;
 							}
 						}
