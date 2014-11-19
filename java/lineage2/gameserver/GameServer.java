@@ -88,7 +88,6 @@ import lineage2.gameserver.tables.SubClassTable;
 import lineage2.gameserver.taskmanager.ItemsAutoDestroy;
 import lineage2.gameserver.taskmanager.TaskManager;
 import lineage2.gameserver.taskmanager.tasks.RestoreOfflineTraders;
-import lineage2.gameserver.utils.Strings;
 import net.sf.ehcache.CacheManager;
 
 import org.slf4j.Logger;
@@ -197,7 +196,6 @@ public class GameServer
 		CrystallizationManager.load();
 		Scripts.getInstance();
 		GeoEngine.load();
-		Strings.reload();
 		GameTimeController.getInstance();
 		World.init();
 		Parsers.parseAll();

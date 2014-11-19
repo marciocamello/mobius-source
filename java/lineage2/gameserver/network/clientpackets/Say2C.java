@@ -35,7 +35,6 @@ import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.tables.FakePlayersTable;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.MapUtils;
-import lineage2.gameserver.utils.Strings;
 import lineage2.gameserver.utils.Util;
 
 import org.apache.commons.lang3.StringUtils;
@@ -50,7 +49,6 @@ public class Say2C extends L2GameClientPacket
 {
 	private static final Logger _log = LoggerFactory.getLogger(Say2C.class);
 	private static final Pattern EX_ITEM_LINK_PATTERN = Pattern.compile("[\b]\tType=[0-9]+[\\s]+\tID=([0-9]+)[\\s]+\tColor=[0-9]+[\\s]+\tUnderline=[0-9]+[\\s]+\tTitle=\u001B(.[^\u001B]*)[^\b]");
-	private static final Pattern SKIP_ITEM_LINK_PATTERN = Pattern.compile("[\b]\tType=[0-9]+(.[^\b]*)[\b]");
 	private String _text;
 	private ChatType _type;
 	private String _target;
@@ -209,23 +207,6 @@ public class Say2C extends L2GameClientPacket
 			}
 			
 			ItemInfoCache.getInstance().put(item);
-		}
-		
-		String translit = activeChar.getVar("translit");
-		
-		if (translit != null)
-		{
-			m = SKIP_ITEM_LINK_PATTERN.matcher(_text);
-			StringBuilder sb = new StringBuilder();
-			int end = 0;
-			
-			while (m.find())
-			{
-				sb.append(Strings.fromTranslit(_text.substring(end, end = m.start()), translit.equals("tl") ? 1 : 2));
-				sb.append(_text.substring(end, end = m.end()));
-			}
-			
-			_text = sb.append(Strings.fromTranslit(_text.substring(end, _text.length()), translit.equals("tl") ? 1 : 2)).toString();
 		}
 		
 		Log.LogChat(_type.name(), activeChar.getName(), _target, _text);
