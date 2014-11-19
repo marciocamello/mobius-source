@@ -626,4 +626,43 @@
 		<face id="20004" adena="0" coins="2" reset_price="500000"/>
 		<face id="20005" adena="0" coins="2" reset_price="500000" />
 	</set>
+	<set id="17">
+		<hair id="10001" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10002" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10003" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10004" adena="0" coins="4" reset_price="1000000">
+			<color id="101" adena="3000000" coins="0" />
+			<color id="102" adena="0" coins="1" />
+			<color id="103" adena="0" coins="1" />
+			<color id="104" adena="0" coins="1" />
+			<color id="105" adena="0" coins="1" />
+			<color id="106" adena="0" coins="1" />
+			<color id="107" adena="0" coins="1" />
+			<color id="108" adena="0" coins="1" />
+			<color id="109" adena="0" coins="1" />
+			<color id="110" adena="0" coins="1" />
+		</hair>
+		<hair id="10005" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10006" adena="15000000" coins="0" reset_price="1000000"/>
+		<hair id="10007" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10008" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10009" adena="0" coins="3" reset_price="1000000"/>
+		<hair id="10010" adena="0" coins="3" reset_price="1000000"/>
+		<face id="20001" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20002" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20003" adena="2000000" coins="0" reset_price="500000" />
+		<face id="20004" adena="0" coins="2" reset_price="500000"/>
+		<face id="20005" adena="0" coins="2" reset_price="500000" />
+	</set>
 </list>

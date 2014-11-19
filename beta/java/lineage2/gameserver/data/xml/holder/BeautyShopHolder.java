@@ -152,6 +152,10 @@ public final class BeautyShopHolder extends AbstractHolder
 					id = 14;
 			}
 		}
+		else if (player.getRace() == Race.ertheia)
+		{
+			id = 17;
+		}
 		
 		return getSet(id);
 	}
