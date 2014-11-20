@@ -65,6 +65,15 @@
 		<item id="255" name="Fox Claw Gloves"/>
 		<item id="256" name="Cestus"/>
 	</tradelist>
+	<tradelist npc="33935" shop="777784" markup="15">
+		<item id="7" name="Apprentice's Rod"/>
+		<item id="308" name="Buffalo's Horn"/>
+		<item id="8" name="Willow Staff"/>
+		<item id="99" name="Apprentice's Spellbook"/>
+		<item id="9" name="Cedar Staff"/>
+		<item id="176" name="Journeyman's Staff"/>
+		<item id="310" name="Relic of the Saints"/>
+	</tradelist>
 	<tradelist npc="32164" shop="321642" markup="15">
 		<item id="7" name="Apprentice's Rod"/>
 		<item id="308" name="Buffalo's Horn"/>
@@ -76,12 +85,109 @@
 		<item id="9577" name="Cotton Shirt"/>
 		<item id="9583" name="Striped Cotton Shirt"/>
 	</tradelist>
+	<tradelist npc="33935" shop="777783" markup="15">
+		<item id="1" name="Short Sword"/>
+		<item id="4" name="Club"/>
+		<item id="11" name="Bone Dagger"/>
+		<item id="13" name="Short Bow"/>
+		<item id="253" name="Spiked Gloves"/>
+		<item id="152" name="Heavy Chisel"/>
+		<item id="3" name="Broadsword"/>
+		<item id="12" name="Knife"/>
+		<item id="215" name="Doom Dagger"/>
+		<item id="14" name="Bow"/>
+		<item id="5" name="Mace"/>
+		<item id="254" name="Iron Gloves"/>
+		<item id="153" name="Sickle"/>
+		<item id="1333" name="Brandish"/>
+		<item id="66" name="Gladius"/>
+		<item id="122" name="Handmade Sword"/>
+		<item id="154" name="Dwarven Mace"/>
+		<item id="216" name="Dirk"/>
+		<item id="271" name="Hunting Bow"/>
+		<item id="2" name="Long Sword"/>
+		<item id="218" name="Throwing Knife"/>
+		<item id="272" name="Forest Bow"/>
+		<item id="15" name="Short Spear"/>
+		<item id="256" name="Cestus"/>
+		<item id="5284" name="Zweihander"/>
+	</tradelist>
+	<tradelist npc="33934" shop="777785" markup="15">
+		<item id="1121" name="Apprentice's Shoes"/>
+		<item id="28" name="Pants"/>
+		<item id="21" name="Shirt"/>
+		<item id="18" name="Leather Shield"/>
+		<item id="48" name="Short Gloves"/>
+		<item id="35" name="Cloth Shoes"/>
+		<item id="36" name="Leather Sandals"/>
+		<item id="41" name="Cloth Cap"/>
+		<item id="29" name="Leather Pants"/>
+		<item id="22" name="Leather Shirt"/>
+		<item id="19" name="Small Shield"/>
+		<item id="1119" name="Short Leather Gloves"/>
+		<item id="1129" name="Crude Leather Shoes"/>
+		<item id="1122" name="Cotton Shoes"/>
+		<item id="42" name="Leather Cap"/>
+		<item id="30" name="Durable Leather Pants"/>
+		<item id="2386" name="Wooden Gaiters"/>
+		<item id="23" name="Wooden Breastplate"/>
+		<item id="20" name="Buckler"/>
+		<item id="49" name="Gloves"/>
+		<item id="37" name="Leather Shoes"/>
+		<item id="43" name="Wooden Helmet"/>
+		<item id="390" name="Cotton Shirt"/>
+		<item id="412" name="Cotton Pants"/>
+		<item id="9577" name="Cotton Shirt"/>
+		<item id="24" name="Bone Breastplate"/>
+		<item id="31" name="Bone Gaiters"/>
+		<item id="102" name="Round Shield"/>
+		<item id="50" name="Leather Gloves"/>
+		<item id="38" name="Low Boots"/>
+		<item id="42" name="Leather Cap"/>
+		<item id="9583" name="Striped Cotton Shirt"/>
+	</tradelist>
+	<tradelist npc="33934" shop="777786" markup="15">
+		<item id="1121" name="Apprentice's Shoes"/>
+		<item id="462" name="Stockings"/>
+		<item id="426" name="Tunic"/>
+		<item id="18" name="Leather Shield"/>
+		<item id="48" name="Short Gloves"/>
+		<item id="48" name="Short Gloves"/>
+		<item id="35" name="Cloth Shoes"/>
+		<item id="36" name="Leather Sandals"/>
+		<item id="41" name="Cloth Cap"/>
+		<item id="36" name="Leather Sandals"/>
+		<item id="41" name="Cloth Cap"/>
+		<item id="1103" name="Cotton Stockings"/>
+		<item id="1100" name="Cotton Tunic"/>
+		<item id="463" name="Feriotic Stockings"/>
+		<item id="428" name="Feriotic Tunic"/>
+		<item id="19" name="Small Shield"/>
+		<item id="1119" name="Short Leather Gloves"/>
+		<item id="1129" name="Crude Leather Shoes"/>
+		<item id="1122" name="Cotton Shoes"/>
+		<item id="42" name="Leather Cap"/>
+		<item id="464" name="Leather Stockings"/>
+		<item id="429" name="Leather Tunic"/>
+		<item id="20" name="Buckler"/>
+		<item id="49" name="Gloves"/>
+		<item id="37" name="Leather Shoes"/>
+		<item id="43" name="Wooden Helmet"/>
+		<item id="9577" name="Cotton Shirt"/>
+		<item id="1104" name="Stockings of Devotion"/>
+		<item id="1101" name="Tunic of Devotion"/>
+		<item id="102" name="Round Shield"/>
+		<item id="50" name="Leather Gloves"/>
+		<item id="38" name="Low Boots"/>
+		<item id="44" name="Leather Helmet"/>
+		<item id="9583" name="Striped Cotton Shirt"/>
+	</tradelist>
 	<tradelist npc="30002" shop="3" markup="15">
 		<item id="28" name="Pants"/>
 		<item id="21" name="Shirt"/>
 		<item id="29" name="Leather Pants"/>
 		<item id="22" name="Leather Shirt"/>
-		<item id="30" name="Hard Leather Pants"/>
+		<item id="30" name="Durable Leather Pants"/>
 		<item id="2386" name="Wooden Gaiters"/>
 		<item id="23" name="Wooden Breastplate"/>
 		<item id="412" name="Cotton Pants"/>
@@ -210,6 +316,21 @@
 		<item id="9577" name="Cotton Shirt"/>
 		<item id="9583" name="Striped Cotton Shirt"/>
 	</tradelist>
+	<tradelist npc="33937" shop="777788" markup="15">
+		<item id="118" name="Magic Necklace"/>
+		<item id="906" name="Necklace of Knowledge"/>
+		<item id="907" name="Necklace of Anguish"/>
+		<item id="908" name="Necklace of Wisdom"/>
+		<item id="112" name="Apprentice's Earring"/>
+		<item id="113" name="Mage Earring"/>
+		<item id="114" name="Earring of Strength"/>
+		<item id="115" name="Earring of Wisdom"/>
+		<item id="845" name="Cat's Eye Earring"/>
+		<item id="116" name="Magic Ring"/>
+		<item id="875" name="Ring of Knowledge"/>
+		<item id="876" name="Ring of Anguish"/>
+		<item id="877" name="Ring of Wisdom"/>
+	</tradelist>
 	<tradelist npc="32166" shop="321661" markup="15">
 		<item id="118" name="Necklace of Magic"/>
 		<item id="906" name="Necklace of Knowledge"/>
@@ -294,6 +415,56 @@
 		<item id="32260" name="Infinite Mithril Bolt Quiver"/>
 		<item id="32261" name="Infinite Shining Bolt Quiver"/>
 		<item id="32262" name="Infinite Orichalcum Bolt Quiver"/>
+	</tradelist>
+	<tradelist npc="33936" shop="777789" markup="15">
+		<item id="1835" name="Soulshot: No Grade"/>
+		<item id="2509" name="Spiritshot: No Grade"/>
+		<item id="3947" name="Blessed Spiritshot: No Grade"/>
+		<item id="5146" name="Compressed Package of Blessed Spiritshots: No Grade"/>
+		<item id="5140" name="Compressed Package of Spiritshots: No Grade"/>
+		<item id="5134" name="Compressed Package of Soulshots: No Grade"/>
+		<item id="5262" name="Greater Compressed Package of Blessed Spiritshots: No-grade"/>
+		<item id="5256" name="Greater Compressed Package of Spiritshots: No-grade"/>
+		<item id="5250" name="Greater Compressed Package of Soulshots: No-grade"/>
+		<item id="17" name="Wooden Arrow"/>
+		<item id="1341" name="Bone Arrow"/>
+		<item id="1060" name="Healing Potion"/>
+		<item id="1061" name="Major Healing Potion"/>
+		<item id="1540" name="Quick Healing Potion"/>
+		<item id="1831" name="Antidote"/>
+		<item id="1833" name="Bandage"/>
+		<item id="734" name="Wind Walk Potion"/>
+		<item id="735" name="Haste Potion"/>
+		<item id="6035" name="Magic Haste Potion"/>
+		<item id="736" name="Scroll of Escape"/>
+		<item id="737" name="Scroll of Resurrection"/>
+		<item id="3031" name="Spirit Ore"/>
+		<item id="1785" name="Soul Ore"/>
+		<item id="5589" name="Momentum Stone"/>
+		<item id="1661" name="Thief Key"/>
+		<item id="5192" name="Magic Rope (D-grade)"/>
+		<item id="9633" name="Bone Bolt"/>
+		<item id="8622" name="Elixir of Life (No Grade)"/>
+		<item id="8623" name="Elixir of Life (D-Grade)"/>
+		<item id="8628" name="Elixir of Mind (No Grade)"/>
+		<item id="8629" name="Elixir of Mind (D-Grade)"/>
+		<item id="8634" name="Elixir of CP (No Grade)"/>
+		<item id="8635" name="Elixir of CP (D-Grade)"/>
+		<item id="8615" name="Summoning Crystal"/>
+		<item id="4625" name="Dice (Heart)"/>
+		<item id="4626" name="Dice (Spade)"/>
+		<item id="4627" name="Dice (Clover)"/>
+		<item id="4628" name="Dice (Diamond)"/>
+		<item id="32249" name="Infinite Wooden Quiver"/>
+		<item id="32250" name="Infinite Bone Quiver"/>
+		<item id="32257" name="Infinite Bone Bolt Quiver"/>
+		<item id="36598" name="Scroll: Restore Equipment (R-grade)"/>
+		<item id="36599" name="Scroll: Restore Equipment (S-grade)"/>
+		<item id="36600" name="Scroll: Restore Equipment (A-grade)"/>
+		<item id="36601" name="Scroll: Restore Equipment (B-grade)"/>
+		<item id="36602" name="Scroll: Restore Equipment (C-grade)"/>
+		<item id="36603" name="Scroll: Restore Equipment (D-grade)"/>
+		<item id="32256" name="Infinite Wooden Bolt Quiver"/>
 	</tradelist>
 	<tradelist npc="30047" shop="8" markup="20">
 		<item id="1074" name="Boat Ticket: Talking Island to Gludin"/>
