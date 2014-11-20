@@ -1785,11 +1785,11 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 									break;
 								
 								case 0xA3:
-									msg = new RequestWorldStatistics();
+									// msg = new RequestWorldStatistics(); -- Removed with Lindvior
 									break;
 								
 								case 0xA4:
-									msg = new RequestUserStatistics();
+									// msg = new RequestUserStatistics(); -- Removed with Lindvior
 									break;
 								
 								case 0xA5:

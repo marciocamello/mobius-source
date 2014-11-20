@@ -47,7 +47,6 @@ import lineage2.gameserver.data.xml.parser.SkillAcquireParser;
 import lineage2.gameserver.data.xml.parser.SoulCrystalParser;
 import lineage2.gameserver.data.xml.parser.SpawnParser;
 import lineage2.gameserver.data.xml.parser.StaticObjectParser;
-import lineage2.gameserver.data.xml.parser.StatuesSpawnParser;
 import lineage2.gameserver.data.xml.parser.WalkerRoutesParser;
 import lineage2.gameserver.data.xml.parser.ZoneParser;
 import lineage2.gameserver.instancemanager.ReflectionManager;
@@ -106,7 +105,6 @@ public abstract class Parsers
 		PlayerTemplateParser.getInstance().load();
 		ClassDataParser.getInstance().load();
 		LevelBonusParser.getInstance().load();
-		StatuesSpawnParser.getInstance().load();
 		BeautyShopParser.getInstance().load();
 	}
 }

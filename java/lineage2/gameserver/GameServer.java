@@ -55,7 +55,6 @@ import lineage2.gameserver.instancemanager.SoDManager;
 import lineage2.gameserver.instancemanager.SoHManager;
 import lineage2.gameserver.instancemanager.SoIManager;
 import lineage2.gameserver.instancemanager.SpawnManager;
-import lineage2.gameserver.instancemanager.WorldStatisticsManager;
 import lineage2.gameserver.instancemanager.commission.CommissionShopManager;
 import lineage2.gameserver.instancemanager.games.FishingChampionShipManager;
 import lineage2.gameserver.instancemanager.games.LotteryManager;
@@ -275,7 +274,6 @@ public class GameServer
 		AwakingManager.getInstance();
 		FindPartyManager.getInstance().load();
 		ArcanManager.getInstance();
-		WorldStatisticsManager.getInstance();
 		SubClassTable.getInstance();
 		DualClassTable.getInstance();
 		
