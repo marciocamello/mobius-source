@@ -48,10 +48,9 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest implements Scr
 		super(false);
 		addStartNpc(Panteleon);
 		addTalkId(Panteleon);
-		addFirstTalkId(Table);
+		addFirstTalkId(Table, Tairen);
 		addQuestItem(Book);
 		addSkillUseId(Assasin);
-		addFirstTalkId(Tairen);
 		addKillId(Assasin);
 		addAttackId(Assasin);
 		addLevelCheck(1, 20);
@@ -230,23 +229,26 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest implements Scr
 	{
 		Functions.npcSayToPlayer(_tairen, qs.getPlayer(), NpcString.ENOUGH_OF_THIS_COME_AT_ME, ChatType.NPC_SAY);
 		
-		if (npc.getId() == Assasin)
+		if (_tairen != null)
 		{
-			if (_tairen != null)
-			{
-				_tairen.getAggroList().addDamageHate(npc, 0, 5000);
-			}
-			
-			if (killedassasin >= 1)
+			_tairen.getAggroList().addDamageHate(npc, 0, 5000);
+		}
+		
+		return null;
+	}
+	
+	@Override
+	public String onKill(NpcInstance npc, QuestState qs)
+	{
+		killedassasin++;
+		
+		if (qs.getCond() < 3)
+		{
+			if (killedassasin >= 2)
 			{
 				qs.setCond(3);
-				qs.cancelQuestTimer("attak");
 				qs.playSound(SOUND_MIDDLE);
-				killedassasin = 0;
-			}
-			else
-			{
-				killedassasin++;
+				qs.cancelQuestTimer("attak");
 			}
 		}
 		

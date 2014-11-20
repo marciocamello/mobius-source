@@ -20,14 +20,14 @@ import lineage2.gameserver.scripts.ScriptFile;
 public class Q10326_RespectYourElders extends Quest implements ScriptFile
 {
 	// Npcs
-	private static final int GALLINT = 32980;
-	private static final int PANTEON = 32972;
+	private static final int Gallint = 32980;
+	private static final int Pantheon = 32972;
 	
 	public Q10326_RespectYourElders()
 	{
 		super(false);
-		addStartNpc(GALLINT);
-		addTalkId(PANTEON);
+		addStartNpc(Gallint);
+		addTalkId(Gallint, Pantheon);
 		addLevelCheck(1, 20);
 		addQuestCompletedCheck(Q10325_SearchingForNewPower.class);
 	}
@@ -40,7 +40,7 @@ public class Q10326_RespectYourElders extends Quest implements ScriptFile
 		switch (event)
 		{
 			case "3.htm":
-				qs.set("cond", "1", true);
+				qs.setCond(1);
 				qs.setState(STARTED);
 				qs.playSound(SOUND_ACCEPT);
 				break;
@@ -64,7 +64,7 @@ public class Q10326_RespectYourElders extends Quest implements ScriptFile
 		
 		switch (npc.getId())
 		{
-			case GALLINT:
+			case Gallint:
 				if ((cond == 0) && isAvailableFor(qs.getPlayer()))
 				{
 					htmltext = "1.htm";
@@ -89,7 +89,7 @@ public class Q10326_RespectYourElders extends Quest implements ScriptFile
 				}
 				break;
 			
-			case PANTEON:
+			case Pantheon:
 				if (cond == 1)
 				{
 					htmltext = "4.htm";

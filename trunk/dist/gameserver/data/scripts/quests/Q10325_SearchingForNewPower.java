@@ -40,13 +40,7 @@ public class Q10325_SearchingForNewPower extends Quest implements ScriptFile
 	{
 		super(false);
 		addStartNpc(GALLINT);
-		addTalkId(GALLINT);
-		addTalkId(BLACK);
-		addTalkId(KINCAID);
-		addTalkId(CINDET);
-		addTalkId(TALBOT);
-		addTalkId(HERZ);
-		addTalkId(XONIA);
+		addTalkId(GALLINT, BLACK, KINCAID, CINDET, TALBOT, HERZ, XONIA);
 	}
 	
 	@Override

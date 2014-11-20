@@ -160,7 +160,7 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 							}
 							else if (e_wizard)
 							{
-								htmltext = "Go To Ayanthe 33943-8.htm";
+								htmltext = "33943-8.htm";
 							}
 						}
 						break;
@@ -205,7 +205,7 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 						{
 							if (e_warrior)
 							{
-								htmltext = "Go To Katalin 33942-8.htm";
+								htmltext = "33942-8.htm";
 							}
 							else if (e_wizard)
 							{
