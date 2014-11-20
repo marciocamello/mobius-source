@@ -112,8 +112,6 @@ public final class ServerList extends L2LoginServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		int charsOnServers = 0;
-		
 		writeC(0x04);
 		writeC(_servers.size());
 		writeC(_lastServer);
@@ -137,35 +135,21 @@ public final class ServerList extends L2LoginServerPacket
 			writeC(server._status ? 0x01 : 0x00);
 			writeD(server._serverType); // 1: Normal, 2: Relax, 4: Public Test, 8: No Label, 16: Character Creation Restricted, 32: Event, 64: Free
 			writeC(server._brackets ? 0x01 : 0x00);
-			
-			charsOnServers += server._characterCount;
 		}
 		
 		writeH(_paddedBytes);
-		if (charsOnServers > 0)
+		writeC(_servers.size());
+		
+		for (ServerData server : _servers)
 		{
-			writeC(charsOnServers);
-			for (ServerData server : _servers)
+			writeC(server._serverId);
+			writeC(server._characterCount);
+			writeC(server._deleteChars.length);
+			
+			for (int deleteTime : server._deleteChars)
 			{
-				writeC(server._serverId);
-				writeC(server._characterCount);
-				if (server._deleteChars.length == 0)
-				{
-					writeC(0x00);
-				}
-				else
-				{
-					writeC(server._deleteChars.length);
-					for (int deleteTime : server._deleteChars)
-					{
-						writeD((int) (deleteTime - (System.currentTimeMillis() / 1000L)));
-					}
-				}
+				writeD((int) (deleteTime - (System.currentTimeMillis() / 1000L)));
 			}
-		}
-		else
-		{
-			writeC(0x00);
 		}
 	}
 }
