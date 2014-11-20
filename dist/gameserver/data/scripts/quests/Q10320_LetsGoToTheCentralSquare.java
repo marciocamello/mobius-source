@@ -21,15 +21,14 @@ import lineage2.gameserver.scripts.ScriptFile;
 public class Q10320_LetsGoToTheCentralSquare extends Quest implements ScriptFile
 {
 	// Npcs
-	private static final int Teodor = 32975;
-	private static final int Panteleon = 32972;
+	private static final int Pantheon = 32972;
+	private static final int Theodore = 32975;
 	
 	public Q10320_LetsGoToTheCentralSquare()
 	{
 		super(false);
-		addStartNpc(Panteleon);
-		addTalkId(Panteleon);
-		addTalkId(Teodor);
+		addStartNpc(Pantheon);
+		addTalkId(Pantheon, Theodore);
 		addLevelCheck(1, 20);
 	}
 	
@@ -68,7 +67,7 @@ public class Q10320_LetsGoToTheCentralSquare extends Quest implements ScriptFile
 		
 		switch (npc.getId())
 		{
-			case Panteleon:
+			case Pantheon:
 				if (qs.isCompleted())
 				{
 					htmltext = "0-c.htm";
@@ -83,7 +82,7 @@ public class Q10320_LetsGoToTheCentralSquare extends Quest implements ScriptFile
 				}
 				break;
 			
-			case Teodor:
+			case Theodore:
 				if (qs.isCompleted())
 				{
 					htmltext = "1-c.htm";

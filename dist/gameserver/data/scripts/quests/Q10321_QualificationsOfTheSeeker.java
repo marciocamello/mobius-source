@@ -20,15 +20,14 @@ import lineage2.gameserver.scripts.ScriptFile;
 public class Q10321_QualificationsOfTheSeeker extends Quest implements ScriptFile
 {
 	// Npcs
-	private static final int TEODOR = 32975;
-	private static final int SHENON = 32974;
+	private static final int Theodore = 32975;
+	private static final int Shannon = 32974;
 	
 	public Q10321_QualificationsOfTheSeeker()
 	{
 		super(false);
-		addStartNpc(TEODOR);
-		addTalkId(SHENON);
-		addTalkId(TEODOR);
+		addStartNpc(Theodore);
+		addTalkId(Theodore, Shannon);
 		addLevelCheck(1, 20);
 		addQuestCompletedCheck(Q10320_LetsGoToTheCentralSquare.class);
 	}
@@ -67,7 +66,7 @@ public class Q10321_QualificationsOfTheSeeker extends Quest implements ScriptFil
 		
 		switch (npc.getId())
 		{
-			case TEODOR:
+			case Theodore:
 				if (qs.isCompleted())
 				{
 					htmltext = "0-c.htm";
@@ -86,7 +85,7 @@ public class Q10321_QualificationsOfTheSeeker extends Quest implements ScriptFil
 				}
 				break;
 			
-			case SHENON:
+			case Shannon:
 				if (qs.isCompleted())
 				{
 					htmltext = "1-c.htm";
