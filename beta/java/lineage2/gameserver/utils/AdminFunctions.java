@@ -39,7 +39,7 @@ public final class AdminFunctions
 	 * Method kick.
 	 * @param player String
 	 * @param reason String
-	 * @return boolean
+	 * @return true, if successful
 	 */
 	public static boolean kick(String player, String reason)
 	{
@@ -57,7 +57,7 @@ public final class AdminFunctions
 	 * Method kick.
 	 * @param player Player
 	 * @param reason String
-	 * @return boolean
+	 * @return true, if successful
 	 */
 	private static boolean kick(Player player, String reason)
 	{
@@ -116,7 +116,7 @@ public final class AdminFunctions
 		}
 		else if (CharacterDAO.getInstance().getObjectIdByName(charName) == 0)
 		{
-			return "�?грок " + charName + " не найден.";
+			return "Player " + charName + " not found.";
 		}
 		
 		if (((adminName == null) || adminName.isEmpty()) && (adminChar != null))
@@ -126,7 +126,7 @@ public final class AdminFunctions
 		
 		if ((reason == null) || reason.isEmpty())
 		{
-			reason = "не указана";
+			reason = "Unknown";
 		}
 		
 		String result, announce = null;
@@ -135,57 +135,51 @@ public final class AdminFunctions
 		{
 			if ((adminChar != null) && !adminChar.getPlayerAccess().CanUnBanChat)
 			{
-				return "Вы не имеете прав на �?н�?тие бана чата.";
+				return "You have no right to withdraw the ban chat.";
 			}
 			
 			if (Config.BANCHAT_ANNOUNCE)
 			{
-				announce = Config.BANCHAT_ANNOUNCE_NICK && (adminName != null) && !adminName.isEmpty() ? adminName + " �?н�?л бан чата �? игрока " + charName + "." : "С игрока " + charName + " �?н�?т бан чата.";
+				announce = Config.BANCHAT_ANNOUNCE_NICK && (adminName != null) && !adminName.isEmpty() ? adminName + " lifted ban chat Player " + charName + "." : "With Player " + charName + " Remove ban chat.";
 			}
 			
-			Log.add(adminName + " �?н�?л бан чата �? игрока " + charName + ".", "banchat", adminChar);
-			result = "Вы �?н�?ли бан чата �? игрока " + charName + ".";
+			Log.add(adminName + " lifted ban chat Player " + charName + ".", "banchat", adminChar);
+			result = "You removed the ban chat Player " + charName + ".";
 		}
 		else if (val < 0)
 		{
 			if ((adminChar != null) && (adminChar.getPlayerAccess().BanChatMaxValue > 0))
 			{
-				return "Вы можете банит�? не более чем на " + adminChar.getPlayerAccess().BanChatMaxValue + " минут.";
+				return "You can ban for no more than " + adminChar.getPlayerAccess().BanChatMaxValue + " minute.";
 			}
 			
 			if (Config.BANCHAT_ANNOUNCE)
 			{
-				announce = Config.BANCHAT_ANNOUNCE_NICK && (adminName != null) && !adminName.isEmpty() ? adminName + " забанил чат игроку " + charName + " на бе�?�?рочный период, причина: " + reason + "." : "Забанен чат игроку " + charName + " на бе�?�?рочный период, причина: " + reason + ".";
+				announce = Config.BANCHAT_ANNOUNCE_NICK && (adminName != null) && !adminName.isEmpty() ? adminName + " Chat ban player " + charName + " for an indefinite period, the reason: " + reason + "." : "Banned Chat Player " + charName + " for an indefinite period, the reason: " + reason + ".";
 			}
 			
-			Log.add(adminName + " забанил чат игроку " + charName + " на бе�?�?рочный период, причина: " + reason + ".", "banchat", adminChar);
-			result = "Вы забанили чат игроку " + charName + " на бе�?�?рочный период.";
+			Log.add(adminName + " Chat banned Player " + charName + " for an indefinite period, the reason: " + reason + ".", "banchat", adminChar);
+			result = "You are banned from chat Player " + charName + " for an indefinite period.";
 		}
 		else
 		{
 			if ((adminChar != null) && !adminChar.getPlayerAccess().CanUnBanChat && ((player == null) || (player.getNoChannel() != 0)))
 			{
-				return "Вы не имеете права измен�?т�? врем�? бана.";
+				return "You may not change the ban time.";
 			}
 			
 			if ((adminChar != null) && (adminChar.getPlayerAccess().BanChatMaxValue != -1) && (val > adminChar.getPlayerAccess().BanChatMaxValue))
 			{
-				return "Вы можете банит�? не более чем на " + adminChar.getPlayerAccess().BanChatMaxValue + " минут.";
+				return "You can ban for no more than " + adminChar.getPlayerAccess().BanChatMaxValue + " minute.";
 			}
 			
 			if (Config.BANCHAT_ANNOUNCE)
 			{
-				announce = Config.BANCHAT_ANNOUNCE_NICK && (adminName != null) && !adminName.isEmpty() ? adminName + " забанил чат игроку " + charName + " на " + val + " минут, причина: " + reason + "." : "Забанен чат игроку " + charName + " на " + val + " минут, причина: " + reason + ".";
+				announce = Config.BANCHAT_ANNOUNCE_NICK && (adminName != null) && !adminName.isEmpty() ? adminName + " Chat banned Player " + charName + " on " + val + " minute, cause: " + reason + "." : "Banned Chat Player " + charName + " on " + val + " minute, reasons: " + reason + ".";
 			}
 			
-			Log.add(adminName + " забанил чат игроку " + charName + " на " + val + " минут, причина: " + reason + ".", "banchat", adminChar);
-			result /**
-			 * Method updateNoChannel.
-			 * @param player Player
-			 * @param time int
-			 * @param reason String
-			 */
-			= "Вы забанили чат игроку " + charName + " на " + val + " минут.";
+			Log.add(adminName + " Chat banned Player " + charName + " on " + val + " minute, reasons: " + reason + ".", "banchat", adminChar);
+			result = "You are banned from chat Player " + charName + " on " + val + " minute.";
 		}
 		
 		if (player != null)
@@ -212,13 +206,19 @@ public final class AdminFunctions
 		return result;
 	}
 	
+	/**
+	 * Method updateNoChannel.
+	 * @param player Player
+	 * @param time int
+	 * @param reason String
+	 */
 	private static void updateNoChannel(Player player, int time, String reason)
 	{
 		player.updateNoChannel(time * 60000);
 		
 		if (time == 0)
 		{
-			player.sendMessage("You are unbanned all chats.");
+			player.sendMessage("You are unbanned for all chats.");
 		}
 		else if (time > 0)
 		{
