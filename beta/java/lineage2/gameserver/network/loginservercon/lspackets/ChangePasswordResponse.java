@@ -16,7 +16,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.GameClient;
 import lineage2.gameserver.network.loginservercon.LoginServerCommunication;
 import lineage2.gameserver.network.loginservercon.ReceivablePacket;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -60,11 +59,11 @@ public class ChangePasswordResponse extends ReceivablePacket
 		
 		if (changed)
 		{
-			Functions.show(new CustomMessage("scripts.commands.user.password.ResultTrue", activeChar), activeChar);
+			Functions.show("Password changed.", activeChar);
 		}
 		else
 		{
-			Functions.show(new CustomMessage("scripts.commands.user.password.ResultFalse", activeChar), activeChar);
+			Functions.show("Password not changed.", activeChar);
 		}
 	}
 }

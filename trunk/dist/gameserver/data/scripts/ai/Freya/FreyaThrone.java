@@ -21,7 +21,6 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.tables.SkillTable;
 
@@ -201,7 +200,7 @@ public final class FreyaThrone extends Fighter
 			{
 				for (Player p : ref.getPlayers())
 				{
-					p.sendMessage(new CustomMessage("scripts.ai.freya.FreyaFailure", p));
+					p.sendMessage("Freya has won the battle and banished the intruders.");
 				}
 				
 				ref.collapse();

@@ -17,7 +17,6 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.GameStats;
 import lineage2.gameserver.utils.Util;
@@ -434,14 +433,14 @@ public final class Roulette extends Functions
 			player.sendMessage("Roulette balance: " + Util.formatAdena(GameStats.getRouletteSum()));
 		}
 		
-		ret = ret.replace("%bettype%", new CustomMessage("Roulette." + type.toString(), player).toString());
-		ret = ret.replace("%betnumber%", type == GameType.StraightUp ? betID : new CustomMessage("Roulette." + betID, player).toString());
+		ret = ret.replace("%bettype%", "Roulette." + type.toString());
+		ret = ret.replace("%betnumber%", type == GameType.StraightUp ? betID : "Roulette." + betID);
 		ret = ret.replace("%number%", roll[0]);
-		ret = ret.replace("%color%", new CustomMessage("Roulette." + roll[1], player).toString());
-		ret = ret.replace("%evenness%", new CustomMessage("Roulette." + roll[4], player).toString());
-		ret = ret.replace("%column%", new CustomMessage("Roulette." + roll[3], player).toString());
-		ret = ret.replace("%dozen%", new CustomMessage("Roulette." + roll[2], player).toString());
-		ret = ret.replace("%highness%", new CustomMessage("Roulette." + roll[5], player).toString());
+		ret = ret.replace("%color%", "Roulette." + roll[1]);
+		ret = ret.replace("%evenness%", "Roulette." + roll[4]);
+		ret = ret.replace("%column%", "Roulette." + roll[3]);
+		ret = ret.replace("%dozen%", "Roulette." + roll[2]);
+		ret = ret.replace("%highness%", "Roulette." + roll[5]);
 		ret = ret.replace("%param%", param[0] + " " + param[1] + " " + param[2]);
 		show(ret, player);
 	}
@@ -567,11 +566,9 @@ public final class Roulette extends Functions
 	 */
 	public String getHtmlAppends(Integer val)
 	{
-		Player player = getSelf();
-		
 		if (Config.SERVICES_ALLOW_ROULETTE)
 		{
-			return "<br><a action=\"bypass -h scripts_services.Roulette:dialog\">" + new CustomMessage("Roulette.dialog", player).toString() + "</a>";
+			return "<br><a action=\"bypass -h scripts_services.Roulette:dialog\">Play roulette</a>";
 		}
 		
 		return "";

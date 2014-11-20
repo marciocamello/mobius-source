@@ -24,7 +24,6 @@ import lineage2.gameserver.model.base.MultiSellEntry;
 import lineage2.gameserver.model.base.MultiSellIngredient;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.MultiSellList;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.XMLUtil;
 
@@ -678,7 +677,7 @@ public class MultiSellHolder
 		{
 			if (i == listId)
 			{
-				player.sendMessage(new CustomMessage("common.Disabled", player));
+				player.sendMessage("Function disabled.");
 				return;
 			}
 		}
@@ -687,7 +686,7 @@ public class MultiSellHolder
 		
 		if (list == null)
 		{
-			player.sendMessage(new CustomMessage("common.Disabled", player));
+			player.sendMessage("Function disabled.");
 			return;
 		}
 		

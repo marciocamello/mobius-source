@@ -19,7 +19,6 @@ import lineage2.gameserver.network.serverpackets.CharacterSelectionInfo;
 import lineage2.gameserver.network.serverpackets.ExLoginVitalityEffectInfo;
 import lineage2.gameserver.network.serverpackets.RestartResponse;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
 /**
  * @author Mobius
@@ -68,7 +67,7 @@ public class RequestRestart extends L2GameClientPacket
 		
 		if (activeChar.isBlocked() && !activeChar.isFlying())
 		{
-			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestRestart.OutOfControl", activeChar));
+			activeChar.sendMessage("Your character is out of control now.");
 			activeChar.sendPacket(RestartResponse.FAIL, ActionFail.STATIC);
 			return;
 		}

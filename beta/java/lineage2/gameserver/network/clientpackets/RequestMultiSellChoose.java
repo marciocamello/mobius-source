@@ -32,7 +32,6 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.PcInventory;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 
@@ -461,7 +460,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 			{
 				if (castle != null)
 				{
-					activeChar.sendMessage(new CustomMessage("trade.HavePaidTax", activeChar).addNumber(tax));
+					activeChar.sendMessage("You have paid the trade tax at a rate of " + tax + " adena.");
 					
 					if ((merchant != null) && (merchant.getReflection() == ReflectionManager.DEFAULT))
 					{

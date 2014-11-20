@@ -40,7 +40,6 @@ import lineage2.gameserver.network.serverpackets.ConfirmDlg;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SetupGauge;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.skills.AbnormalEffect;
@@ -88,7 +87,8 @@ public class Wedding implements IVoicedCommandHandler, ScriptFile
 			}
 			
 			CoupleManager.getInstance().createCouple(player1, player2);
-			player1.sendMessage(new CustomMessage("lineage2.gameserver.model.L2Player.EngageAnswerYes", player2));
+			player1.sendMessage("Engage accepted.");
+			player2.sendMessage("Engage accepted.");
 		}
 		
 		/**
@@ -105,7 +105,8 @@ public class Wedding implements IVoicedCommandHandler, ScriptFile
 				return;
 			}
 			
-			player1.sendMessage(new CustomMessage("lineage2.gameserver.model.L2Player.EngageAnswerNo", player2));
+			player1.sendMessage("Engage declined.");
+			player2.sendMessage("Engage declined.");
 		}
 	}
 	
@@ -166,13 +167,13 @@ public class Wedding implements IVoicedCommandHandler, ScriptFile
 		
 		if (activeChar.isMaried())
 		{
-			activeChar.sendMessage(new CustomMessage("voicedcommandhandlers.Wedding.Divorced", activeChar));
+			activeChar.sendMessage("You are divorced now.");
 			AdenaAmount = Math.abs(((activeChar.getAdena() / 100) * Config.WEDDING_DIVORCE_COSTS) - 10);
 			activeChar.reduceAdena(AdenaAmount, true);
 		}
 		else
 		{
-			activeChar.sendMessage(new CustomMessage("voicedcommandhandlers.Wedding.Disengaged", activeChar));
+			activeChar.sendMessage("You are disengaged now.");
 		}
 		
 		activeChar.setMaried(false);
@@ -188,11 +189,11 @@ public class Wedding implements IVoicedCommandHandler, ScriptFile
 			
 			if (partner.isMaried())
 			{
-				partner.sendMessage(new CustomMessage("voicedcommandhandlers.Wedding.PartnerDivorce", partner));
+				partner.sendMessage("Your Partner has decided to divorce from you.");
 			}
 			else
 			{
-				partner.sendMessage(new CustomMessage("voicedcommandhandlers.Wedding.PartnerDisengage", partner));
+				partner.sendMessage("Your Partner has decided to disengage.");
 			}
 			
 			partner.setMaried(false);
@@ -215,19 +216,19 @@ public class Wedding implements IVoicedCommandHandler, ScriptFile
 	{
 		if (activeChar.getTarget() == null)
 		{
-			activeChar.sendMessage(new CustomMessage("voicedcommandhandlers.Wedding.NoneTargeted", activeChar));
+			activeChar.sendMessage("You have none targeted.");
 			return false;
 		}
 		
 		if (!activeChar.getTarget().isPlayer())
 		{
-			activeChar.sendMessage(new CustomMessage("voicedcommandhandlers.Wedding.OnlyAnotherPlayer", activeChar));
+			activeChar.sendMessage("You can only ask another Player for partnership.");
 			return false;
 		}
 		
 		if (activeChar.getPartnerId() != 0)
 		{
-			activeChar.sendMessage(new CustomMessage("voicedcommandhandlers.Wedding.AlreadyEngaged", activeChar));
+			activeChar.sendMessage("You are already engaged.");
 			
 			if (Config.WEDDING_PUNISH_INFIDELITY)
 			{
@@ -265,19 +266,19 @@ public class Wedding implements IVoicedCommandHandler, ScriptFile
 		
 		if (ptarget.getObjectId() == activeChar.getObjectId())
 		{
-			activeChar.sendMessage(new CustomMessage("voicedcommandhandlers.Wedding.EngagingYourself", activeChar));
+			activeChar.sendMessage("Engaging with yourself?");
 			return false;
 		}
 		
 		if (ptarget.isMaried())
 		{
-			activeChar.sendMessage(new CustomMessage("voicedcommandhandlers.Wedding.PlayerAlreadyMarried", activeChar));
+			activeChar.sendMessage("Already married.");
 			return false;
 		}
 		
 		if (ptarget.getPartnerId() != 0)
 		{
-			activeChar.sendMessage(new CustomMessage("voicedcommandhandlers.Wedding.PlayerAlreadyEngaged", activeChar));
+			activeChar.sendMessage("Is already engaged with someone else.");
 			return false;
 		}
 		
@@ -285,19 +286,19 @@ public class Wedding implements IVoicedCommandHandler, ScriptFile
 		
 		if ((entry != null) && (entry.getValue() instanceof CoupleAnswerListener))
 		{
-			activeChar.sendMessage(new CustomMessage("voicedcommandhandlers.Wedding.PlayerAlreadyAsked", activeChar));
+			activeChar.sendMessage("Already asked by someone else.");
 			return false;
 		}
 		
 		if (ptarget.getPartnerId() != 0)
 		{
-			activeChar.sendMessage(new CustomMessage("voicedcommandhandlers.Wedding.PlayerAlreadyEngaged", activeChar));
+			activeChar.sendMessage("Is already engaged with someone else.");
 			return false;
 		}
 		
 		if ((ptarget.getSex() == activeChar.getSex()) && !Config.WEDDING_SAMESEX)
 		{
-			activeChar.sendMessage(new CustomMessage("voicedcommandhandlers.Wedding.SameSex", activeChar));
+			activeChar.sendMessage("You can't ask partners of same sex.");
 			return false;
 		}
 		
@@ -336,7 +337,7 @@ public class Wedding implements IVoicedCommandHandler, ScriptFile
 		
 		if (!FoundOnFriendList)
 		{
-			activeChar.sendMessage(new CustomMessage("voicedcommandhandlers.Wedding.NotInFriendlist", activeChar));
+			activeChar.sendMessage("The person you want to ask hasn't added you on the friendlist.");
 			return false;
 		}
 		
@@ -354,13 +355,13 @@ public class Wedding implements IVoicedCommandHandler, ScriptFile
 	{
 		if (!activeChar.isMaried())
 		{
-			activeChar.sendMessage(new CustomMessage("voicedcommandhandlers.Wedding.YoureNotMarried", activeChar));
+			activeChar.sendMessage("You are not married.");
 			return false;
 		}
 		
 		if (activeChar.getPartnerId() == 0)
 		{
-			activeChar.sendMessage(new CustomMessage("voicedcommandhandlers.Wedding.PartnerNotInDB", activeChar));
+			activeChar.sendMessage("Couldn't find your Partner in Database - Inform a Gamemaster.");
 			return false;
 		}
 		
@@ -368,19 +369,19 @@ public class Wedding implements IVoicedCommandHandler, ScriptFile
 		
 		if (partner == null)
 		{
-			activeChar.sendMessage(new CustomMessage("voicedcommandhandlers.Wedding.PartnerOffline", activeChar));
+			activeChar.sendMessage("Your Partner is not online.");
 			return false;
 		}
 		
 		if (partner.isInOlympiadMode() || activeChar.isMovementDisabled() || activeChar.isMuted(null) || activeChar.isInOlympiadMode() || activeChar.isInDuel() || activeChar.getPlayer().isTerritoryFlagEquipped() || partner.isInZone(NoSummon))
 		{
-			activeChar.sendMessage(new CustomMessage("common.TryLater", activeChar));
+			activeChar.sendMessage("Try later.");
 			return false;
 		}
 		
 		if ((activeChar.getTeleMode() != 0) || (activeChar.getReflection() != ReflectionManager.DEFAULT))
 		{
-			activeChar.sendMessage(new CustomMessage("common.TryLater", activeChar));
+			activeChar.sendMessage("Try later.");
 			return false;
 		}
 		
@@ -402,7 +403,7 @@ public class Wedding implements IVoicedCommandHandler, ScriptFile
 		activeChar.sendActionFailed();
 		activeChar.stopMove();
 		activeChar.startParalyzed();
-		activeChar.sendMessage(new CustomMessage("voicedcommandhandlers.Wedding.Teleport", activeChar).addNumber(teleportTimer / 60));
+		activeChar.sendMessage("After " + (teleportTimer / 60) + " min. you will be teleported to your Love.");
 		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 		activeChar.broadcastPacket(new MagicSkillUse(activeChar, activeChar, 1050, 1, teleportTimer, 0));
 		activeChar.sendPacket(new SetupGauge(activeChar, SetupGauge.BLUE_DUAL, teleportTimer));

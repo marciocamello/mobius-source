@@ -18,7 +18,6 @@ import lineage2.gameserver.handlers.VoicedCommandHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.loginservercon.LoginServerCommunication;
 import lineage2.gameserver.network.loginservercon.gspackets.ChangePassword;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 
@@ -81,7 +80,7 @@ public class Password extends Functions implements IVoicedCommandHandler, Script
 	
 	/**
 	 * Method getVoicedCommandList.
-	 * @return String[] * @see lineage2.gameserver.handlers.voicedcommands.IVoicedCommandHandler#getVoicedCommandList()
+	 * @return String[]
 	 */
 	@Override
 	public String[] getVoicedCommandList()
@@ -102,30 +101,30 @@ public class Password extends Functions implements IVoicedCommandHandler, Script
 		
 		if (parts.length != 3)
 		{
-			show(new CustomMessage("scripts.commands.user.password.IncorrectValues", activeChar), activeChar);
+			show("Password wasn't changed. Please use [.password oldpass newpass newpass].", activeChar);
 			return false;
 		}
 		
 		if (!parts[1].equals(parts[2]))
 		{
-			show(new CustomMessage("scripts.commands.user.password.IncorrectConfirmation", activeChar), activeChar);
+			show("Confirmation of new password has failed.", activeChar);
 			return false;
 		}
 		
 		if (parts[1].equals(parts[0]))
 		{
-			show(new CustomMessage("scripts.commands.user.password.NewPassIsOldPass", activeChar), activeChar);
+			show("Old password equals new password! Operation aborted.", activeChar);
 			return false;
 		}
 		
 		if ((parts[1].length() < 5) || (parts[1].length() > 20))
 		{
-			show(new CustomMessage("scripts.commands.user.password.IncorrectSize", activeChar), activeChar);
+			show("Password length must be more than 4 and less than 21 characters.", activeChar);
 			return false;
 		}
 		
 		LoginServerCommunication.getInstance().sendPacket(new ChangePassword(activeChar.getAccountName(), parts[0], parts[1], "null"));
-		show(new CustomMessage("scripts.commands.user.password.ResultTrue", activeChar), activeChar);
+		show("Password changed.", activeChar);
 		return true;
 	}
 	

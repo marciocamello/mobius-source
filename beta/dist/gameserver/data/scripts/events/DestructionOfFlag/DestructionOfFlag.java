@@ -49,7 +49,6 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.Revive;
 import lineage2.gameserver.network.serverpackets.SkillList;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.skills.effects.EffectTemplate;
@@ -464,7 +463,7 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 		{
 			live_list.remove(player.getStoredId());
 			player.setTeam(TeamType.NONE);
-			show(new CustomMessage("scripts.events.LastHero.YouLose", player), player);
+			show("You lose! Please wait event end.", player);
 		}
 	}
 	
@@ -660,7 +659,7 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 			
 			ServerVariables.set("DestructionOfFlag", "on");
 			_log.info("Event 'DestructionOfFlag' activated.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.DestructionOfFlag.AnnounceEventStarted", null);
+			Announcements.getInstance().announceToAll("The event 'Destruction Of Flag' started.");
 		}
 		else
 		{
@@ -688,7 +687,7 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 			startTasks.clear();
 			ServerVariables.unset("DestructionOfFlag");
 			_log.info("Event 'DestructionOfFlag' deactivated.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.DestructionOfFlag.AnnounceEventStoped", null);
+			Announcements.getInstance().announceToAll("The event 'Destruction Of Flag' stopped.");
 		}
 		else
 		{
@@ -909,13 +908,8 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 		greenFlag.decayMe();
 		yellowFlag.decayMe();
 		blackFlag.decayMe();
-		String[] param =
-		{
-			String.valueOf(_time_to_start),
-			String.valueOf(_minLevel),
-			String.valueOf(_maxLevel)
-		};
-		sayToAll("scripts.events.DestructionOfFlag.AnnouncePreStart", param);
+		
+		sayToAll("Destruction Of Flag: Start in " + String.valueOf(_time_to_start) + " min. for levels " + String.valueOf(_minLevel) + "-" + String.valueOf(_maxLevel) + ". Information in the community board (alt+b).");
 		executeTask("events.DestructionOfFlag.DestructionOfFlag", "question", new Object[0], 10000);
 		executeTask("events.DestructionOfFlag.DestructionOfFlag", "announce", new Object[]
 		{
@@ -926,11 +920,10 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 	/**
 	 * Method sayToAll.
 	 * @param address String
-	 * @param replacements String[]
 	 */
-	public static void sayToAll(String address, String[] replacements)
+	public static void sayToAll(String address)
 	{
-		Announcements.getInstance().announceByCustomMessage(address, replacements, ChatType.CRITICAL_ANNOUNCE);
+		Announcements.getInstance().announceToAll(address, ChatType.CRITICAL_ANNOUNCE);
 	}
 	
 	/**
@@ -942,7 +935,7 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 		{
 			if ((player != null) && (player.getLevel() >= _minLevel) && (player.getLevel() <= _maxLevel) && (player.getReflection().getId() <= 0) && !player.isInOlympiadMode())
 			{
-				player.scriptRequest(new CustomMessage("scripts.events.DestructionOfFlag.AskPlayer", player).toString(), "events.DestructionOfFlag.DestructionOfFlag:addPlayer", new Object[0]);
+				player.scriptRequest("Participate in the Destruvtion of Flag event?", "events.DestructionOfFlag.DestructionOfFlag:addPlayer", new Object[0]);
 			}
 		}
 	}
@@ -955,7 +948,7 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 	{
 		if (players_list1.isEmpty() || players_list2.isEmpty())
 		{
-			sayToAll("scripts.events.DestructionOfFlag.AnnounceEventCancelled", null);
+			sayToAll("Destruction Of Flag: Event cancelled, not enough players.");
 			_isRegistrationActive = false;
 			_status = 0;
 			executeTask("events.DestructionOfFlag.DestructionOfFlag", "autoContinue", new Object[0], 10000);
@@ -965,13 +958,8 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 		if (_time_to_start > 1)
 		{
 			_time_to_start--;
-			String[] param =
-			{
-				String.valueOf(_time_to_start),
-				String.valueOf(_minLevel),
-				String.valueOf(_maxLevel)
-			};
-			sayToAll("scripts.events.DestructionOfFlag.AnnouncePreStart", param);
+			
+			sayToAll("TvT: Start in " + String.valueOf(_time_to_start) + " min. for levels " + String.valueOf(_minLevel) + "-" + String.valueOf(_maxLevel) + ". Information in the community board (alt+b).");
 			executeTask("events.DestructionOfFlag.DestructionOfFlag", "announce", new Object[]
 			{
 				s
@@ -981,7 +969,7 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 		{
 			_status = 1;
 			_isRegistrationActive = false;
-			sayToAll("scripts.events.DestructionOfFlag.AnnounceEventStarting", null);
+			sayToAll("Destruction Of Flag: Registration ended, teleporting players...");
 			executeTask("events.DestructionOfFlag.DestructionOfFlag", "prepare", new Object[]
 			{
 				s
@@ -1016,7 +1004,7 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 			players_list3.add(player.getStoredId());
 		}
 		
-		show(new CustomMessage("scripts.events.DestructionOfFlag.Registered", player), player);
+		show("You have registered in the Destruction of Flag event.", player);
 	}
 	
 	/**
@@ -1030,49 +1018,49 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 	{
 		if (first && (!_isRegistrationActive || player.isDead()))
 		{
-			show(new CustomMessage("scripts.events.Late", player), player);
+			show("Event is already running, registration closed.", player);
 			return false;
 		}
 		
 		if (first && players_list.contains(player.getStoredId()))
 		{
-			show(new CustomMessage("scripts.events.LastHero.Cancelled", player), player);
+			show("Registration canceled.", player);
 			return false;
 		}
 		
 		if ((player.getLevel() < _minLevel) || (player.getLevel() > _maxLevel))
 		{
-			show(new CustomMessage("scripts.events.LastHero.CancelledLevel", player), player);
+			show("Registration canceled. Inconsistent level.", player);
 			return false;
 		}
 		
 		if (player.isMounted())
 		{
-			show(new CustomMessage("scripts.events.LastHero.Cancelled", player), player);
+			show("Registration canceled. You can't participate while in duel state.", player);
 			return false;
 		}
 		
 		if (player.isInDuel())
 		{
-			show(new CustomMessage("scripts.events.LastHero.CancelledDuel", player), player);
+			show("Registration canceled. You can't participate while a duel.", player);
 			return false;
 		}
 		
 		if (player.getTeam() != TeamType.NONE)
 		{
-			show(new CustomMessage("scripts.events.LastHero.CancelledOtherEvent", player), player);
+			show("Registration canceled. You are already participating other event.", player);
 			return false;
 		}
 		
 		if ((player.getOlympiadGame() != null) || (first && Olympiad.isRegistered(player)))
 		{
-			show(new CustomMessage("scripts.events.LastHero.CancelledOlympiad", player), player);
+			show("Registration canceled. You are registered in the olympiad.", player);
 			return false;
 		}
 		
 		if (player.isTeleporting())
 		{
-			show(new CustomMessage("scripts.events.LastHero.CancelledTeleport", player), player);
+			show("Registration canceled. You are in teleport state.", player);
 			return false;
 		}
 		
@@ -1115,7 +1103,7 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 		{
 			s
 		}, 60000);
-		sayToAll("scripts.events.DestructionOfFlag.AnnounceFinalCountdown", null);
+		sayToAll("Destruction Of Flag: 1 minute to start.");
 	}
 	
 	/**
@@ -1134,7 +1122,7 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 		_status = 2;
 		upParalyzePlayers();
 		clearArena();
-		sayToAll("scripts.events.DestructionOfFlag.AnnounceFight", null);
+		sayToAll("Destruction O fFlag: >>> FIGHT!!! <<<");
 		Calendar cal = Calendar.getInstance();
 		cal.set(Calendar.HOUR_OF_DAY, Integer.valueOf(s.split(":")[0]));
 		cal.set(Calendar.MINUTE, Integer.valueOf(s.split(":")[1]));
@@ -1220,7 +1208,7 @@ public final class DestructionOfFlag extends Functions implements ScriptFile, On
 			Announcements.getInstance().announceToAll("You Did Not Win");
 		}
 		
-		sayToAll("scripts.events.DestructionOfFlag.AnnounceEnd", null);
+		sayToAll("Destruction Of Flag: Event ended. 30 sec countdown before teleporting players back.");
 		end();
 		_isRegistrationActive = false;
 	}

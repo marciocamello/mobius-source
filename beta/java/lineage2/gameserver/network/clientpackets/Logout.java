@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
 /**
@@ -59,21 +58,21 @@ public class Logout extends L2GameClientPacket
 		
 		if (activeChar.isBlocked() && !activeChar.isFlying())
 		{
-			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.Logout.OutOfControl", activeChar));
+			activeChar.sendMessage("Your character is out of control now.");
 			activeChar.sendActionFailed();
 			return;
 		}
 		
 		if (activeChar.isInOlympiadMode())
 		{
-			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.Logout.Olympiad", activeChar));
+			activeChar.sendMessage("You can't disconnect while in Olympiad.");
 			activeChar.sendActionFailed();
 			return;
 		}
 		
 		if (activeChar.isInObserverMode())
 		{
-			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.Logout.Observer", activeChar));
+			activeChar.sendMessage("You can't disconnect while in observer mode.");
 			activeChar.sendActionFailed();
 			return;
 		}

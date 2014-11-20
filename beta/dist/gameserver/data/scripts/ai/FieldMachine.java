@@ -55,7 +55,7 @@ public final class FieldMachine extends DefaultAI
 		if ((System.currentTimeMillis() - _lastAction) > 15000)
 		{
 			_lastAction = System.currentTimeMillis();
-			Functions.npcSayCustomMessage(actor, "scripts.ai.FieldMachine." + actor.getId());
+			Functions.npcSay(actor, "Alarm! System damaged!.");
 			final List<NpcInstance> around = actor.getAroundNpc(1500, 300);
 			
 			if ((around != null) && !around.isEmpty())

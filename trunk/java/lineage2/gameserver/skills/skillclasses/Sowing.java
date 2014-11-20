@@ -24,7 +24,6 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.templates.StatsSet;
 
 /**
@@ -104,7 +103,7 @@ public class Sowing extends Skill
 				
 				if (player.isGM())
 				{
-					activeChar.sendMessage(new CustomMessage("lineage2.gameserver.skills.skillclasses.Sowing.Chance", player).addNumber((long) SuccessRate));
+					activeChar.sendMessage("Sowing chance: " + (long) SuccessRate + "%.");
 				}
 				
 				if (Rnd.chance(SuccessRate) && monster.setSeeded(player, seedId, altSeed))

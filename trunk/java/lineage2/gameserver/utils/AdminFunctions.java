@@ -19,7 +19,6 @@ import lineage2.gameserver.instancemanager.CursedWeaponsManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
 /**
  * @author Mobius
@@ -219,26 +218,26 @@ public final class AdminFunctions
 		
 		if (time == 0)
 		{
-			player.sendMessage(new CustomMessage("common.ChatUnBanned", player));
+			player.sendMessage("You are unbanned all chats.");
 		}
 		else if (time > 0)
 		{
 			if ((reason == null) || reason.isEmpty())
 			{
-				player.sendMessage(new CustomMessage("common.ChatBanned", player).addNumber(time));
+				player.sendMessage("You are banned in all chats, time remained " + time + " min.");
 			}
 			else
 			{
-				player.sendMessage(new CustomMessage("common.ChatBannedWithReason", player).addNumber(time).addString(reason));
+				player.sendMessage("You are banned in all chats, reason: " + reason + ", time remained " + time + " min.");
 			}
 		}
 		else if ((reason == null) || reason.isEmpty())
 		{
-			player.sendMessage(new CustomMessage("common.ChatBannedPermanently", player));
+			player.sendMessage("You are banned in all chats permanently.");
 		}
 		else
 		{
-			player.sendMessage(new CustomMessage("common.ChatBannedPermanentlyWithReason", player).addString(reason));
+			player.sendMessage("You are banned in all chats permanently, reason: " + reason + ".");
 		}
 	}
 }

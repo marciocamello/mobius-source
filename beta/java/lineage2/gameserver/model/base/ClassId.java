@@ -18,7 +18,6 @@ import java.util.Map;
 
 import lineage2.gameserver.data.xml.holder.ClassDataHolder;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.templates.player.ClassData;
 
 /**
@@ -498,7 +497,7 @@ public enum ClassId
 	
 	public final String getName(Player player)
 	{
-		return new CustomMessage(player.getClassId().name(), player, new Object[0]).toString();
+		return player.getClassId().name().toString();
 	}
 	
 	/**

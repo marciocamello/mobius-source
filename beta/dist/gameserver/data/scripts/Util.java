@@ -17,7 +17,6 @@ import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
@@ -278,7 +277,7 @@ public final class Util extends Functions
 		
 		if (!Config.ALT_ALLOW_SHADOW_WEAPONS)
 		{
-			show(new CustomMessage("common.Disabled", player), player);
+			show("Function disabled.", player);
 			return;
 		}
 		
@@ -318,7 +317,7 @@ public final class Util extends Functions
 		
 		if (!Config.ALT_ALLOW_SHADOW_WEAPONS)
 		{
-			show(new CustomMessage("common.Disabled", player), player);
+			show("Function disabled.", player);
 			return;
 		}
 		

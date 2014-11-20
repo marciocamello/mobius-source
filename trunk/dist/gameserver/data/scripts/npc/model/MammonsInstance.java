@@ -17,7 +17,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
@@ -64,12 +63,12 @@ public final class MammonsInstance extends NpcInstance
 					}
 					catch (NumberFormatException e)
 					{
-						player.sendMessage(new CustomMessage("common.IntegerAmount", player, new Object[0]));
+						player.sendMessage("You must enter an integer amount.");
 						return;
 					}
 					catch (StringIndexOutOfBoundsException e)
 					{
-						player.sendMessage(new CustomMessage("common.IntegerAmount", player, new Object[0]));
+						player.sendMessage("You must enter an integer amount.");
 						return;
 					}
 					

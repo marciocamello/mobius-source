@@ -23,7 +23,6 @@ import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.reward.RewardItem;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.ItemFunctions;
 
@@ -95,7 +94,7 @@ public class Harvesting extends Skill
 				
 				if (player.isGM())
 				{
-					player.sendMessage(new CustomMessage("lineage2.gameserver.skills.skillclasses.Harvesting.Chance", player).addNumber((long) SuccessRate));
+					player.sendMessage("Harvesting chance: " + (long) SuccessRate + "%.");
 				}
 				
 				if (!Rnd.chance(SuccessRate))

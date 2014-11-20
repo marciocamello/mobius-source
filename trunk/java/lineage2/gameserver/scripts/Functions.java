@@ -39,7 +39,6 @@ import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.NpcSay;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
@@ -55,7 +54,7 @@ import lineage2.gameserver.utils.Strings;
 public class Functions
 {
 	public HardReference<Player> self = HardReferences.emptyRef();
-	public HardReference<NpcInstance> npc = HardReferences.emptyRef();
+	public static HardReference<NpcInstance> npc = HardReferences.emptyRef();
 	
 	/**
 	 * Method executeTask.
@@ -164,7 +163,7 @@ public class Functions
 	 * @param text String
 	 * @param self Player
 	 */
-	public void show(String text, Player self)
+	public static void show(String text, Player self)
 	{
 		show(text, self, getNpc());
 	}
@@ -206,16 +205,6 @@ public class Functions
 	}
 	
 	/**
-	 * Method show.
-	 * @param message CustomMessage
-	 * @param self Player
-	 */
-	public static void show(CustomMessage message, Player self)
-	{
-		show(message.toString(), self, null);
-	}
-	
-	/**
 	 * Method sendMessage.
 	 * @param text String
 	 * @param self Player
@@ -223,16 +212,6 @@ public class Functions
 	public static void sendMessage(String text, Player self)
 	{
 		self.sendMessage(text);
-	}
-	
-	/**
-	 * Method sendMessage.
-	 * @param message CustomMessage
-	 * @param self Player
-	 */
-	public static void sendMessage(CustomMessage message, Player self)
-	{
-		self.sendMessage(message);
 	}
 	
 	/**
@@ -290,40 +269,6 @@ public class Functions
 	public static void npcSay(NpcInstance npc, NpcString npcString, String... params)
 	{
 		npcSayInRange(npc, 1500, npcString, params);
-	}
-	
-	/**
-	 * Method npcSayInRangeCustomMessage.
-	 * @param npc NpcInstance
-	 * @param range int
-	 * @param address String
-	 * @param replacements Object[]
-	 */
-	public static void npcSayInRangeCustomMessage(NpcInstance npc, int range, String address, Object... replacements)
-	{
-		if (npc == null)
-		{
-			return;
-		}
-		
-		for (Player player : World.getAroundPlayers(npc, range, Math.max(range / 2, 200)))
-		{
-			if (npc.getReflection() == player.getReflection())
-			{
-				player.sendPacket(new NpcSay(npc, ChatType.NPC_SAY, new CustomMessage(address, player, replacements).toString()));
-			}
-		}
-	}
-	
-	/**
-	 * Method npcSayCustomMessage.
-	 * @param npc NpcInstance
-	 * @param address String
-	 * @param replacements Object[]
-	 */
-	public static void npcSayCustomMessage(NpcInstance npc, String address, Object... replacements)
-	{
-		npcSayInRangeCustomMessage(npc, 1500, address, replacements);
 	}
 	
 	/**
@@ -413,40 +358,6 @@ public class Functions
 			if ((tx >= (rx - offset)) && (tx <= (rx + offset)) && (ty >= (ry - offset)) && (ty <= (ry + offset)))
 			{
 				player.sendPacket(cs);
-			}
-		}
-	}
-	
-	/**
-	 * Method npcShoutCustomMessage.
-	 * @param npc NpcInstance
-	 * @param address String
-	 * @param replacements Object[]
-	 */
-	public static void npcShoutCustomMessage(NpcInstance npc, String address, Object... replacements)
-	{
-		if (npc == null)
-		{
-			return;
-		}
-		
-		int rx = MapUtils.regionX(npc);
-		int ry = MapUtils.regionY(npc);
-		int offset = Config.SHOUT_OFFSET;
-		
-		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
-		{
-			if (player.getReflection() != npc.getReflection())
-			{
-				continue;
-			}
-			
-			int tx = MapUtils.regionX(player);
-			int ty = MapUtils.regionY(player);
-			
-			if (((tx >= (rx - offset)) && (tx <= (rx + offset)) && (ty >= (ry - offset)) && (ty <= (ry + offset))) || npc.isInRange(player, Config.CHAT_RANGE))
-			{
-				player.sendPacket(new NpcSay(npc, ChatType.SHOUT, new CustomMessage(address, player, replacements).toString()));
 			}
 		}
 	}
@@ -597,7 +508,7 @@ public class Functions
 	 * Method getNpc.
 	 * @return NpcInstance
 	 */
-	public NpcInstance getNpc()
+	public static NpcInstance getNpc()
 	{
 		return npc.get();
 	}

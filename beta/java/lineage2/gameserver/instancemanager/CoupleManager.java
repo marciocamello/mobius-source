@@ -25,7 +25,6 @@ import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Couple;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -168,7 +167,7 @@ public class CoupleManager
 			
 			if (partner != null)
 			{
-				partner.sendMessage(new CustomMessage("lineage2.gameserver.instancemanager.CoupleManager.PartnerEntered", partner));
+				partner.sendMessage("Your partner has logged in.");
 			}
 		}
 	}

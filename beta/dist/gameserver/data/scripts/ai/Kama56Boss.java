@@ -112,7 +112,7 @@ public final class Kama56Boss extends Fighter
 		
 		final Player target = alive.get(Rnd.get(alive.size()));
 		_lastMinionsTargetRef = target.getRef();
-		Functions.npcSayCustomMessage(actor, "Kama56Boss.attack", target.getName());
+		Functions.npcSay(actor, "You " + target.getName() + "! Attack them!");
 		
 		for (MinionInstance m : ml.getAliveMinions())
 		{

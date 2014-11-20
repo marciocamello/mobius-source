@@ -16,7 +16,6 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.utils.Location;
 
 /**
@@ -67,7 +66,7 @@ public class RequestDropItem extends L2GameClientPacket
 		
 		if (!Config.ALLOW_DISCARDITEM)
 		{
-			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestDropItem.Disallowed", activeChar));
+			activeChar.sendMessage("Unable to discard item, use 'destroy item' instead.");
 			return;
 		}
 		

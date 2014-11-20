@@ -23,7 +23,6 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.TradeItem;
 import lineage2.gameserver.model.worldstatistics.CategoryType;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.TradeHelper;
 
@@ -261,7 +260,7 @@ public class RequestPrivateStoreBuy extends L2GameClientPacket
 				if (tax > 0)
 				{
 					totalCost -= tax;
-					seller.sendMessage(new CustomMessage("trade.HavePaidTax", seller).addNumber(tax));
+					seller.sendMessage("You have paid the trade tax at a rate of " + tax + " adena.");
 				}
 				
 				seller.addAdena(totalCost);

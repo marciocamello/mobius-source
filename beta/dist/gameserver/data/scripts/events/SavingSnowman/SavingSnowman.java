@@ -37,6 +37,7 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.reward.RewardList;
 import lineage2.gameserver.network.serverpackets.CharMoveToLocation;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
+import lineage2.gameserver.network.serverpackets.NpcSay;
 import lineage2.gameserver.network.serverpackets.RadarControl;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
@@ -207,7 +208,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		{
 			spawnEventManagers();
 			System.out.println("Event 'SavingSnowman' started.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.SavingSnowman.AnnounceEventStarted", null);
+			Announcements.getInstance().announceToAll("The event 'Saving Snowman' started.");
 			
 			if (_saveTask == null)
 			{
@@ -257,7 +258,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 			}
 			
 			System.out.println("Event 'SavingSnowman' stopped.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.SavingSnowman.AnnounceEventStoped", null);
+			Announcements.getInstance().announceToAll("The event 'Saving Snowman' stopped.");
 			
 			if (_saveTask != null)
 			{
@@ -520,7 +521,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		rewarder.setLoc(spawnLoc);
 		rewarder.setHeading((int) (Math.atan2(spawnLoc.getY() - rewarded.getY(), spawnLoc.getX() - rewarded.getX()) * Creature.HEADINGS_IN_PI) + 32768);
 		rewarder.spawnMe();
-		Functions.npcSayCustomMessage(rewarder, "scripts.events.SavingSnowman.RewarderPhrase1");
+		Functions.npcSay(rewarder, "Happy holidays! Keep up the good work.");
 		Location targetLoc = Location.findFrontPosition(rewarded, rewarded, 40, 50);
 		rewarder.setSpawnedLoc(targetLoc);
 		rewarder.broadcastPacket(new CharMoveToLocation(rewarder.getObjectId(), rewarder.getLoc(), targetLoc));
@@ -543,7 +544,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 			return;
 		}
 		
-		Functions.npcSayCustomMessage(rewarder, "scripts.events.SavingSnowman.RewarderPhrase2", rewarded.getName());
+		Functions.npcSay(rewarder, "I have a gift for " + rewarded.getName() + ".");
 		Functions.addItem(rewarded, 14616, 1);
 		executeTask("events.SavingSnowman.SavingSnowman", "removeRewarder", new Object[]
 		{
@@ -562,7 +563,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 			return;
 		}
 		
-		Functions.npcSayCustomMessage(rewarder, "scripts.events.SavingSnowman.RewarderPhrase3");
+		Functions.npcSay(rewarder, "Take a look at your inventory. Perhaps there might be a big present!");
 		Location loc = rewarder.getSpawnedLoc();
 		double radian = PositionUtils.convertHeadingToRadian(rewarder.getHeading());
 		int x = loc.getX() - (int) (Math.sin(radian) * 300);
@@ -646,7 +647,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		if (_snowman != null)
 		{
 			player.sendPacket(new RadarControl(2, 2, _snowman.getLoc()), new RadarControl(0, 1, _snowman.getLoc()));
-			player.sendPacket(new SystemMessage(SystemMessage.S2_S1).addZoneName(_snowman.getLoc()).addString("�?щите Снеговика в "));
+			player.sendPacket(new SystemMessage(SystemMessage.S2_S1).addZoneName(_snowman.getLoc()).addString("Look for the Snowman."));
 		}
 		else
 		{
@@ -807,7 +808,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 	{
 		if (_active)
 		{
-			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.SavingSnowman.AnnounceEventStarted", null);
+			Announcements.getInstance().announceToAll("The event 'Saving Snowman' started.");
 		}
 	}
 	
@@ -829,8 +830,8 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
-			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.SavingSnowman.AnnounceSnowmanCaptured", null, ChatType.CRITICAL_ANNOUNCE);
-			player.sendPacket(new SystemMessage(SystemMessage.S2_S1).addZoneName(spawnPoint).addString("�?щите Снеговика в "));
+			Announcements.getInstance().announceToAll("Malicious Thomas D. Turkey captured Santa Claus' assistant - Snowman! Hurry up to save him!", ChatType.CRITICAL_ANNOUNCE);
+			player.sendPacket(new SystemMessage(SystemMessage.S2_S1).addZoneName(spawnPoint).addString("Look for the Snowman."));
 			player.sendPacket(new RadarControl(2, 2, spawnPoint), new RadarControl(0, 1, spawnPoint));
 		}
 		
@@ -904,10 +905,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 			return;
 		}
 		
-		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
-		{
-			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.SavingSnowman.AnnounceSnowmanKilled", null, ChatType.CRITICAL_ANNOUNCE);
-		}
+		Announcements.getInstance().announceToAll("You do not have time to save the Snowman - Santa Claus is upset.", ChatType.CRITICAL_ANNOUNCE);
 		
 		_snowmanState = SnowmanState.KILLED;
 		
@@ -932,10 +930,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 			return;
 		}
 		
-		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
-		{
-			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.SavingSnowman.AnnounceSnowmanSaved", null, ChatType.CRITICAL_ANNOUNCE);
-		}
+		Announcements.getInstance().announceToAll("Snowman saved! Santa Claus is pleased rescue assistant, all interested can get a New Year's buff.", ChatType.CRITICAL_ANNOUNCE);
 		
 		_snowmanState = SnowmanState.SAVED;
 		
@@ -952,7 +947,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		}
 		
 		Player player = topDamager.getPlayer();
-		Functions.npcSayCustomMessage(_snowman, "scripts.events.SavingSnowman.SnowmanSayTnx", player.getName());
+		Functions.npcSay(_snowman, "Thank you, " + player.getName() + ", you are more than all the efforts exerted to save me!");
 		addItem(player, 20034, 3);
 		addItem(player, 20338, 1);
 		addItem(player, 20344, 1);
@@ -987,7 +982,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 			{
 				if (s.getCurrentNpcId() == EVENT_MANAGER_ID)
 				{
-					Functions.npcSayCustomMessage(s.getLastSpawn(), "scripts.events.SavingSnowman.SantaSay");
+					Functions.npcSay(s.getLastSpawn(), "Ho, ho, ho! Happy holidays!");
 				}
 			}
 		}
@@ -1010,7 +1005,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 				return;
 			}
 			
-			Functions.npcShoutCustomMessage(_snowman, "scripts.events.SavingSnowman.SnowmanShout");
+			_snowman.broadcastPacket(new NpcSay(_snowman, ChatType.SHOUT, "Help me! Save me!!!"));
 		}
 	}
 	

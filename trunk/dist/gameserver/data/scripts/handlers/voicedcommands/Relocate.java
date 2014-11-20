@@ -18,7 +18,6 @@ import lineage2.gameserver.handlers.IVoicedCommandHandler;
 import lineage2.gameserver.handlers.VoicedCommandHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.skills.skillclasses.Call;
 import lineage2.gameserver.utils.Location;
@@ -58,7 +57,7 @@ public final class Relocate implements IVoicedCommandHandler, ScriptFile
 			
 			if (activeChar.isAlikeDead())
 			{
-				activeChar.sendMessage(new CustomMessage("scripts.commands.voiced.Relocate.Dead", activeChar));
+				activeChar.sendMessage("Cannot summon while dead.");
 				return false;
 			}
 			

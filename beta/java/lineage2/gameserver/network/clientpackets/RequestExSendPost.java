@@ -30,7 +30,6 @@ import lineage2.gameserver.model.mail.Mail;
 import lineage2.gameserver.network.serverpackets.ExNoticePostArrived;
 import lineage2.gameserver.network.serverpackets.ExReplyWritePost;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.item.ItemTemplate;
@@ -141,7 +140,7 @@ public class RequestExSendPost extends L2GameClientPacket
 		
 		if (!Config.ALLOW_MAIL)
 		{
-			activeChar.sendMessage(new CustomMessage("mail.Disabled", activeChar));
+			activeChar.sendMessage("Mail disabled.");
 			activeChar.sendActionFailed();
 			return;
 		}
@@ -209,11 +208,11 @@ public class RequestExSendPost extends L2GameClientPacket
 			{
 				if (tradeBan.equals("-1"))
 				{
-					activeChar.sendMessage(new CustomMessage("common.TradeBannedPermanently", activeChar));
+					activeChar.sendMessage("The administrator has forbidden you to trade permanently.");
 				}
 				else
 				{
-					activeChar.sendMessage(new CustomMessage("common.TradeBanned", activeChar).addString(Util.formatTime((int) ((Long.parseLong(tradeBan) / 1000L) - (System.currentTimeMillis() / 1000L)))));
+					activeChar.sendMessage("Your trade is banned! Expires: " + Util.formatTime((int) ((Long.parseLong(tradeBan) / 1000L) - (System.currentTimeMillis() / 1000L))) + ".");
 				}
 				
 				return;

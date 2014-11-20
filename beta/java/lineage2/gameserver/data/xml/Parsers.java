@@ -12,7 +12,6 @@
  */
 package lineage2.gameserver.data.xml;
 
-import lineage2.gameserver.data.StringHolder;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.data.xml.holder.BuyListHolder;
 import lineage2.gameserver.data.xml.holder.ManorDataHolder;
@@ -68,7 +67,6 @@ public abstract class Parsers
 	public static void parseAll()
 	{
 		HtmCache.getInstance().reload();
-		StringHolder.getInstance().load();
 		SkillTable.getInstance().load();
 		RestorationInfoParser.getInstance().load();
 		OptionDataParser.getInstance().load();

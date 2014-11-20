@@ -18,7 +18,6 @@ import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import lineage2.gameserver.dao.OlympiadHistoryDAO;
-import lineage2.gameserver.data.StringHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Hero;
 import lineage2.gameserver.model.entity.olympiad.OlympiadHistory;
@@ -141,7 +140,7 @@ public class OlympiadHistoryManager
 		
 		NpcHtmlMessage html = new NpcHtmlMessage(player, null);
 		html.setFile("olympiad/monument_hero_info.htm");
-		html.replace("%title%", StringHolder.getInstance().getNotNull(player, "hero.history"));
+		html.replace("%title%", "<font color=\"LEVEL\">Total score: </font> %wins% Wins %ties% Ties %losses% Losses");
 		int allStatWinner = 0;
 		int allStatLoss = 0;
 		int allStatTie = 0;

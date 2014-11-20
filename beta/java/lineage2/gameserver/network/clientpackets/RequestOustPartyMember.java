@@ -15,7 +15,6 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
 /**
  * @author Mobius
@@ -79,7 +78,7 @@ public class RequestOustPartyMember extends L2GameClientPacket
 		
 		if (r != null)
 		{
-			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestOustPartyMember.CantOustInDungeon", activeChar));
+			activeChar.sendMessage("You can't kick a party member when you are in dungeon.");
 		}
 		else
 		{

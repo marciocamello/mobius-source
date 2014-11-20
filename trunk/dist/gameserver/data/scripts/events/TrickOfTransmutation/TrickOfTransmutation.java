@@ -86,7 +86,7 @@ public final class TrickOfTransmutation extends Functions implements ScriptFile,
 		{
 			spawnEventManagers();
 			System.out.println("Event 'Trick of Transmutation' started.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.TrickOfTrans.AnnounceEventStarted", null);
+			Announcements.getInstance().announceToAll("Event 'Trick Of Transmutation' started.");
 		}
 		else
 		{
@@ -113,7 +113,7 @@ public final class TrickOfTransmutation extends Functions implements ScriptFile,
 		{
 			unSpawnEventManagers();
 			System.out.println("Event 'Trick of Transmutation' stopped.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.TrickOfTrans.AnnounceEventStoped", null);
+			Announcements.getInstance().announceToAll("Event 'Trick Of Transmutation' stopped.");
 		}
 		else
 		{
@@ -134,7 +134,7 @@ public final class TrickOfTransmutation extends Functions implements ScriptFile,
 	{
 		if (_active)
 		{
-			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.TrickOfTrans.AnnounceEventStarted", null);
+			Announcements.getInstance().announceToAll("Event 'Trick Of Transmutation' started.");
 		}
 	}
 	

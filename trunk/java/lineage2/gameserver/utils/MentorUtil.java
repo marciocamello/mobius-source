@@ -25,7 +25,6 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.mail.Mail;
 import lineage2.gameserver.network.serverpackets.ExNoticePostArrived;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.skills.effects.EffectTemplate;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.tables.SkillTable;
@@ -322,18 +321,18 @@ public class MentorUtil
 		int lvl = World.getPlayer(mentee).getLevel();
 		Mail mail = new Mail();
 		mail.setSenderId(1);
-		mail.setSenderName(new CustomMessage("Mentor.npc", receiver, new Object[0]).toString());
+		mail.setSenderName("Mentor Guide");
 		mail.setReceiverId(receiver.getObjectId());
 		mail.setReceiverName(receiver.getName());
-		mail.setTopic(new CustomMessage("Mentor.title", receiver, new Object[0]).toString());
+		mail.setTopic("Mentee Coin from Mentee Leveling");
 		
 		if (lvl < 50)
 		{
-			mail.setBody(new CustomMessage("Mentor.text1", receiver, new Object[0]).addNumber(lvl).addNumber(lvl + 1).addString(mentee).toString());
+			mail.setBody("Your mentee " + mentee + " has reached level " + lvl + "~" + lvl + 1 + ", so you are receiving some Mentee Coin. After Mentee Coin has successfully been removed and placed into your inventory please be sure to delete this letter. If your mailbox is full when any future letters are sent to you they cannot be delivered and you will not receive these items.");
 		}
 		else
 		{
-			mail.setBody(new CustomMessage("Mentor.text2", receiver, new Object[0]).addNumber(lvl).addString(mentee).toString());
+			mail.setBody("Your mentee " + mentee + " has reached level " + lvl + ", so you are receiving some Mentee Coin. After Mentee Coin has successfully been removed and placed into your inventory please be sure to delete this letter. If your mailbox is full when any future letters are sent to you they cannot be delivered and you will not receive these items.");
 		}
 		
 		for (Map.Entry<Integer, Long> itm : items.entrySet())

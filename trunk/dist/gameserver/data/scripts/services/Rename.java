@@ -32,7 +32,6 @@ import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.SubUnit;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.ClanTable;
@@ -66,11 +65,11 @@ public final class Rename extends Functions
 		
 		String append = "!Rename";
 		append += "<br>";
-		append += "<font color=\"LEVEL\">" + new CustomMessage("scripts.services.Rename.RenameFor", getSelf()).addString(Util.formatAdena(Config.SERVICES_CHANGE_NICK_PRICE)).addItemName(Config.SERVICES_CHANGE_NICK_ITEM) + "</font>";
+		append += "<font color=\"LEVEL\">Rename character for " + Util.formatAdena(Config.SERVICES_CHANGE_NICK_PRICE) + " " + Config.SERVICES_CHANGE_NICK_ITEM + ".</font>";
 		append += "<table>";
-		append += "<tr><td>" + new CustomMessage("scripts.services.Rename.NewName", getSelf()) + " <edit var=\"new_name\" width=80></td></tr>";
+		append += "<tr><td>New name: <edit var=\"new_name\" width=80></td></tr>";
 		append += "<tr><td></td></tr>";
-		append += "<tr><td><button value=\"" + new CustomMessage("scripts.services.Rename.RenameButton", getSelf()) + "\" action=\"bypass -h scripts_services.Rename:rename $new_name\" width=80 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>";
+		append += "<tr><td><button value=\"Rename\" action=\"bypass -h scripts_services.Rename:rename $new_name\" width=80 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>";
 		append += "</table>";
 		show(append, player);
 	}
@@ -95,9 +94,9 @@ public final class Rename extends Functions
 		
 		String append = "!Change Character Sex";
 		append += "<br>";
-		append += "<font color=\"LEVEL\">" + new CustomMessage("scripts.services.SexChange.SexChangeFor", player).addString(Util.formatAdena(Config.SERVICES_CHANGE_SEX_PRICE)).addItemName(Config.SERVICES_CHANGE_SEX_ITEM) + "</font>";
+		append += "<font color=\"LEVEL\">" + "Change character sex for " + Util.formatAdena(Config.SERVICES_CHANGE_SEX_PRICE) + " " + Config.SERVICES_CHANGE_SEX_ITEM + ". Not available for Kamael.</font>";
 		append += "<table>";
-		append += "<tr><td><button value=\"" + new CustomMessage("scripts.services.SexChange.Button", player) + "\" action=\"bypass -h scripts_services.Rename:changesex\" width=80 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>";
+		append += "<tr><td><button value=\"Change\" action=\"bypass -h scripts_services.Rename:changesex\" width=80 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>";
 		append += "</table>";
 		show(append, player);
 	}
@@ -140,7 +139,7 @@ public final class Rename extends Functions
 		
 		String append = "!Seperate Subclass";
 		append += "<br>";
-		append += "<font color=\"LEVEL\">" + new CustomMessage("scripts.services.Separate.Price", player).addString(Util.formatAdena(Config.SERVICES_SEPARATE_SUB_PRICE)).addItemName(Config.SERVICES_SEPARATE_SUB_ITEM) + "</font>&nbsp;";
+		append += "<font color=\"LEVEL\">" + "Separate subclass for " + Util.formatAdena(Config.SERVICES_SEPARATE_SUB_PRICE) + " " + Config.SERVICES_SEPARATE_SUB_ITEM + ". Inspector and Judicator can't be separated. You must specify name of existing level 1 character from same account:</font>&nbsp;";
 		append += "<edit var=\"name\" width=80 height=15 /><br>";
 		append += "<table>";
 		
@@ -148,7 +147,7 @@ public final class Rename extends Functions
 		{
 			if (!s.isBase() && (s.getClassId() != ClassId.INSPECTOR.getId()) && (s.getClassId() != ClassId.JUDICATOR.getId()))
 			{
-				append += "<tr><td><button value=\"" + new CustomMessage("scripts.services.Separate.Button", player).addString(ClassId.VALUES[s.getClassId()].toString()) + "\" action=\"bypass -h scripts_services.Rename:separate " + s.getClassId() + " $name\" width=200 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>";
+				append += "<tr><td><button value=\"" + "Separate " + ClassId.VALUES[s.getClassId()].toString() + "\" action=\"bypass -h scripts_services.Rename:separate " + s.getClassId() + " $name\" width=200 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>";
 			}
 		}
 		
@@ -281,7 +280,7 @@ public final class Rename extends Functions
 		
 		String append = "!Change Base Class";
 		append += "<br>";
-		append += "<font color=\"LEVEL\">" + new CustomMessage("scripts.services.BaseChange.Price", player).addString(Util.formatAdena(Config.SERVICES_CHANGE_BASE_PRICE)).addItemName(Config.SERVICES_CHANGE_BASE_ITEM) + "</font>";
+		append += "<font color=\"LEVEL\">Change character base class " + Util.formatAdena(Config.SERVICES_CHANGE_BASE_PRICE) + " " + Config.SERVICES_CHANGE_BASE_ITEM + ". Not available for some classes.</font>";
 		append += "<table>";
 		List<SubClass> possible = new ArrayList<>();
 		
@@ -304,13 +303,13 @@ public final class Rename extends Functions
 		
 		if (possible.isEmpty())
 		{
-			append += "<tr><td width=300>" + new CustomMessage("scripts.services.BaseChange.NotPossible", player) + "</td></tr>";
+			append += "<tr><td width=300>Not available.</td></tr>";
 		}
 		else
 		{
 			for (SubClass s : possible)
 			{
-				append += "<tr><td><button value=\"" + new CustomMessage("scripts.services.BaseChange.Button", player).addString(ClassId.VALUES[s.getClassId()].toString()) + "\" action=\"bypass -h scripts_services.Rename:changebase " + s.getClassId() + "\" width=200 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>";
+				append += "<tr><td><button value=\"" + "Change to " + ClassId.VALUES[s.getClassId()].toString() + "\" action=\"bypass -h scripts_services.Rename:changebase " + s.getClassId() + "\" width=200 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>";
 			}
 		}
 		
@@ -400,13 +399,13 @@ public final class Rename extends Functions
 		
 		if (args.length != 1)
 		{
-			show(new CustomMessage("scripts.services.Rename.incorrectinput", player), player);
+			show("Incorrect input.", player);
 			return;
 		}
 		
 		if (player.getEvent(SiegeEvent.class) != null)
 		{
-			show(new CustomMessage("scripts.services.Rename.SiegeNow", player), player);
+			show("Can't do that because siege in progress.", player);
 			return;
 		}
 		
@@ -414,7 +413,7 @@ public final class Rename extends Functions
 		
 		if (!Util.isMatchingRegexp(name, Config.CNAME_TEMPLATE))
 		{
-			show(new CustomMessage("scripts.services.Rename.incorrectinput", player), player);
+			show("Incorrect input.", player);
 			return;
 		}
 		
@@ -434,7 +433,7 @@ public final class Rename extends Functions
 		
 		if (CharacterDAO.getInstance().getObjectIdByName(name) > 0)
 		{
-			show(new CustomMessage("scripts.services.Rename.Thisnamealreadyexists", player), player);
+			show("This name already exists.", player);
 			return;
 		}
 		
@@ -442,7 +441,7 @@ public final class Rename extends Functions
 		String oldName = player.getName();
 		player.reName(name, true);
 		Log.add("Character " + oldName + " renamed to " + name, "renames");
-		show(new CustomMessage("scripts.services.Rename.changedname", player).addString(oldName).addString(name), player);
+		show("You changed name from " + oldName + " to " + name, player);
 	}
 	
 	/**
@@ -505,7 +504,7 @@ public final class Rename extends Functions
 		catch (Exception e)
 		{
 			e.printStackTrace();
-			show(new CustomMessage("common.Error", player), player);
+			show("Error.", player);
 			return;
 		}
 		
@@ -531,11 +530,11 @@ public final class Rename extends Functions
 		
 		String append = "!Rename Clan";
 		append += "<br>";
-		append += "<font color=\"LEVEL\">" + new CustomMessage("scripts.services.Rename.RenameFor", getSelf()).addString(Util.formatAdena(Config.SERVICES_CHANGE_CLAN_NAME_PRICE)).addItemName(Config.SERVICES_CHANGE_CLAN_NAME_ITEM) + "</font>";
+		append += "<font color=\"LEVEL\">Rename character for " + Util.formatAdena(Config.SERVICES_CHANGE_CLAN_NAME_PRICE) + " " + Config.SERVICES_CHANGE_CLAN_NAME_ITEM + ".</font>";
 		append += "<table>";
-		append += "<tr><td>" + new CustomMessage("scripts.services.Rename.NewName", getSelf()) + ": <edit var=\"new_name\" width=80></td></tr>";
+		append += "<tr><td>New name: <edit var=\"new_name\" width=80></td></tr>";
 		append += "<tr><td></td></tr>";
-		append += "<tr><td><button value=\"" + new CustomMessage("scripts.services.Rename.RenameButton", getSelf()) + "\" action=\"bypass -h scripts_services.Rename:rename_clan $new_name\" width=80 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>";
+		append += "<tr><td><button value=\"Rename\" action=\"bypass -h scripts_services.Rename:rename_clan $new_name\" width=80 height=15 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td></tr>";
 		append += "</table>";
 		show(append, player);
 	}
@@ -561,7 +560,7 @@ public final class Rename extends Functions
 		
 		if (player.getEvent(SiegeEvent.class) != null)
 		{
-			show(new CustomMessage("scripts.services.Rename.SiegeNow", player), player);
+			show("Can't do that because siege in progress.", player);
 			return;
 		}
 		
@@ -591,7 +590,7 @@ public final class Rename extends Functions
 			return;
 		}
 		
-		show(new CustomMessage("scripts.services.Rename.changedname", player).addString(player.getClan().getName()).addString(param[0]), player);
+		show("You changed name from " + param[0] + " to " + player.getClan().getName(), player);
 		SubUnit sub = player.getClan().getSubUnit(Clan.SUBUNIT_MAIN_CLAN);
 		sub.setName(param[0], true);
 		removeItem(player, Config.SERVICES_CHANGE_CLAN_NAME_ITEM, Config.SERVICES_CHANGE_CLAN_NAME_PRICE);

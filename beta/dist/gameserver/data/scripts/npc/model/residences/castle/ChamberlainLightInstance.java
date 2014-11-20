@@ -40,7 +40,6 @@ import lineage2.gameserver.network.serverpackets.ExShowSeedInfo;
 import lineage2.gameserver.network.serverpackets.ExShowSeedSetting;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.item.ItemTemplate;
@@ -521,7 +520,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 			
 			if ((price == 0) || (upgradeHp < 0))
 			{
-				player.sendMessage(new CustomMessage("common.Error", player));
+				player.sendMessage("Error.");
 				return;
 			}
 			

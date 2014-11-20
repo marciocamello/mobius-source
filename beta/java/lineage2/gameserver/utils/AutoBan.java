@@ -24,7 +24,6 @@ import lineage2.gameserver.dao.CharacterDAO;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -298,7 +297,7 @@ public final class AutoBan
 		
 		if (plyr != null)
 		{
-			plyr.sendMessage(new CustomMessage("lineage2.Util.AutoBan.ChatBan", plyr).addString(GM).addNumber(period));
+			plyr.sendMessage("You chat banned by GM " + GM + " for " + period + " min.");
 			plyr.updateNoChannel(NoChannel);
 		}
 		else
@@ -347,7 +346,7 @@ public final class AutoBan
 		
 		if (plyr != null)
 		{
-			plyr.sendMessage(new CustomMessage("lineage2.Util.AutoBan.ChatUnBan", plyr).addString(GM));
+			plyr.sendMessage("You chat unbanned by " + GM + ".");
 			plyr.updateNoChannel(0);
 		}
 		else

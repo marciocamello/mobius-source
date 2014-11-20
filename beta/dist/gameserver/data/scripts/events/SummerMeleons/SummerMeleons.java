@@ -72,7 +72,7 @@ public final class SummerMeleons extends Functions implements ScriptFile, OnDeat
 			loadMultiSell();
 			spawnEventManagers();
 			System.out.println("Event 'Summer Meleons' started.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.SummerMeleons.AnnounceEventStarted", null);
+			Announcements.getInstance().announceToAll("The event 'Summer Meleons' started.");
 		}
 		else
 		{
@@ -99,7 +99,7 @@ public final class SummerMeleons extends Functions implements ScriptFile, OnDeat
 		{
 			unSpawnEventManagers();
 			System.out.println("Event 'Summer Meleons' stopped.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.SummerMeleons.AnnounceEventStoped", null);
+			Announcements.getInstance().announceToAll("The event 'Summer Meleons' stopped.");
 		}
 		else
 		{
@@ -240,7 +240,7 @@ public final class SummerMeleons extends Functions implements ScriptFile, OnDeat
 	{
 		if (_active)
 		{
-			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.SummerMeleons.AnnounceEventStarted", null);
+			Announcements.getInstance().announceToAll("The event 'Summer Meleons' started.");
 		}
 	}
 	

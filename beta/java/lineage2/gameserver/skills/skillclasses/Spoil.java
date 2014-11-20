@@ -22,7 +22,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.stats.Formulas;
 import lineage2.gameserver.stats.Formulas.AttackInfo;
 import lineage2.gameserver.templates.StatsSet;
@@ -101,7 +100,7 @@ public class Spoil extends Skill
 							
 							if (((Player) activeChar).isGM())
 							{
-								activeChar.sendMessage(new CustomMessage("lineage2.gameserver.skills.skillclasses.Spoil.Chance", (Player) activeChar).addNumber((long) rateOfSpoil));
+								activeChar.sendMessage("Spoil chance: " + (long) rateOfSpoil + "%.");
 							}
 							
 							success = Rnd.chance(rateOfSpoil);

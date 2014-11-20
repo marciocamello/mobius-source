@@ -49,7 +49,7 @@ public final class FreyaQuest extends Fighter
 			this.notifyEvent(CtrlEvent.EVT_ATTACKED, p, 300);
 		}
 		
-		Functions.npcSayCustomMessage(getActor(), "scripts.ai.freya.FreyaQuest.onEvtSpawn");
+		Functions.npcSay(getActor(), "Further delay is simply impossible.");
 	}
 	
 	/**

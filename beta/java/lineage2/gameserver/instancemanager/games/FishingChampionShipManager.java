@@ -32,7 +32,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -177,7 +176,7 @@ public class FishingChampionShipManager
 					if (fisher.getLength() < len)
 					{
 						fisher.setLength(len);
-						pl.sendMessage(new CustomMessage("lineage2.gameserver.instancemanager.games.FishingChampionShipManager.ResultImproveOn", pl));
+						pl.sendMessage("You have improved their results at the Royal Tournament anglers.");
 						recalculateMinLength();
 					}
 					
@@ -186,7 +185,7 @@ public class FishingChampionShipManager
 			}
 			
 			_tmpPlayers.add(new Fisher(pl.getName(), len, 0));
-			pl.sendMessage(new CustomMessage("lineage2.gameserver.instancemanager.games.FishingChampionShipManager.YouInAPrizeList", pl));
+			pl.sendMessage("You have got a list of winners of the Royal Tournament anglers.");
 			recalculateMinLength();
 		}
 		else if (_minFishLength < len)
@@ -198,7 +197,7 @@ public class FishingChampionShipManager
 					if (fisher.getLength() < len)
 					{
 						fisher.setLength(len);
-						pl.sendMessage(new CustomMessage("lineage2.gameserver.instancemanager.games.FishingChampionShipManager.ResultImproveOn", pl));
+						pl.sendMessage("You have improved their results at the Royal Tournament anglers.");
 						recalculateMinLength();
 					}
 					
@@ -220,7 +219,7 @@ public class FishingChampionShipManager
 			
 			_tmpPlayers.remove(minFisher);
 			_tmpPlayers.add(new Fisher(pl.getName(), len, 0));
-			pl.sendMessage(new CustomMessage("lineage2.gameserver.instancemanager.games.FishingChampionShipManager.YouInAPrizeList", pl));
+			pl.sendMessage("You have got a list of winners of the Royal Tournament anglers.");
 			recalculateMinLength();
 		}
 	}

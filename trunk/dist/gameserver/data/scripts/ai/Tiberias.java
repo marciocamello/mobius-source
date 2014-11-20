@@ -15,7 +15,8 @@ package ai;
 import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.scripts.Functions;
+import lineage2.gameserver.network.serverpackets.NpcSay;
+import lineage2.gameserver.network.serverpackets.components.ChatType;
 
 /**
  * @author Mobius
@@ -40,7 +41,7 @@ public final class Tiberias extends Fighter
 	protected void onEvtDead(Creature killer)
 	{
 		final NpcInstance actor = getActor();
-		Functions.npcShoutCustomMessage(actor, "scripts.ai.Tiberias.kill");
+		actor.broadcastPacket(new NpcSay(actor, ChatType.SHOUT, "Your skills are impressive, I think that you can pass. Take a key and leave this place."));
 		super.onEvtDead(killer);
 	}
 }

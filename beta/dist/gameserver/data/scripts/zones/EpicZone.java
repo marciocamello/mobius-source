@@ -14,9 +14,7 @@ package zones;
 
 import lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener;
 import lineage2.gameserver.model.Creature;
-import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Zone;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
@@ -52,7 +50,7 @@ public final class EpicZone implements ScriptFile
 			{
 				if (cha.isPlayer())
 				{
-					cha.getPlayer().sendMessage(new CustomMessage("scripts.zones.epic.banishMsg", (Player) cha));
+					cha.getPlayer().sendMessage("Your level is too high to access this zone. You've been banished out.");
 				}
 				
 				cha.teleToLocation(Location.parseLoc(zone.getParams().getString("tele")));

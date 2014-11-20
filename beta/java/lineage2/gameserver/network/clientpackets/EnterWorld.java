@@ -17,7 +17,6 @@ import java.util.Calendar;
 import lineage2.gameserver.Announcements;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.dao.MailDAO;
-import lineage2.gameserver.data.StringHolder;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.instancemanager.AwakingManager;
 import lineage2.gameserver.instancemanager.CoupleManager;
@@ -255,11 +254,11 @@ public class EnterWorld extends L2GameClientPacket
 				{
 					Mail mail = new Mail();
 					mail.setSenderId(1);
-					mail.setSenderName(StringHolder.getInstance().getNotNull(activeChar, "birthday.npc"));
+					mail.setSenderName("Alegria");
 					mail.setReceiverId(activeChar.getObjectId());
 					mail.setReceiverName(activeChar.getName());
-					mail.setTopic(StringHolder.getInstance().getNotNull(activeChar, "birthday.title"));
-					mail.setBody(StringHolder.getInstance().getNotNull(activeChar, "birthday.text"));
+					mail.setTopic("Happy Birthday!");
+					mail.setBody("Hello Adventurer!! Seeing as you're one year older now, I thought I would send you some birthday cheer:) Please find your birthday pack attached. May these gifts bring you joy and happiness on this very special day. \nSincerely, Alegria");
 					ItemInstance item = ItemFunctions.createItem(21169);
 					item.setLocation(ItemInstance.ItemLocation.MAIL);
 					item.setCount(1L);

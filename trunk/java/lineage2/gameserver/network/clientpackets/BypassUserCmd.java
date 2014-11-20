@@ -15,7 +15,6 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.handlers.IUserCommandHandler;
 import lineage2.gameserver.handlers.UserCommandHandler;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
 /**
  * @author Mobius
@@ -51,7 +50,7 @@ public class BypassUserCmd extends L2GameClientPacket
 		
 		if (handler == null)
 		{
-			activeChar.sendMessage(new CustomMessage("common.S1NotImplemented", activeChar).addString(String.valueOf(_command)));
+			activeChar.sendMessage(String.valueOf(_command) + " is not implemented yet.");
 		}
 		else
 		{

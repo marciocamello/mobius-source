@@ -88,7 +88,7 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 		{
 			spawnEventManagers();
 			System.out.println("Event 'Christmas' started.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.Christmas.AnnounceEventStarted", null);
+			Announcements.getInstance().announceToAll("The event 'Christmas' started.");
 		}
 		else
 		{
@@ -115,7 +115,7 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 		{
 			unSpawnEventManagers();
 			System.out.println("Event 'Christmas' stopped.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.Christmas.AnnounceEventStoped", null);
+			Announcements.getInstance().announceToAll("The event 'Christmas' stopped.");
 		}
 		else
 		{
@@ -414,7 +414,7 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 	{
 		if (_active)
 		{
-			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.Christmas.AnnounceEventStarted", null);
+			Announcements.getInstance().announceToAll("The event 'Christmas' started.");
 		}
 	}
 	

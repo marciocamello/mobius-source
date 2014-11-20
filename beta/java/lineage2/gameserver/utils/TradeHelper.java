@@ -19,7 +19,6 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.items.TradeItem;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
 /**
  * @author Mobius
@@ -50,7 +49,7 @@ public final class TradeHelper
 		
 		if (player.getLevel() < Config.SERVICES_TRADE_MIN_LEVEL)
 		{
-			player.sendMessage(new CustomMessage("trade.NotHavePermission", player).addNumber(Config.SERVICES_TRADE_MIN_LEVEL));
+			player.sendMessage("To open private store/craft you should be level " + Config.SERVICES_TRADE_MIN_LEVEL + ".");
 			return false;
 		}
 		
@@ -110,7 +109,7 @@ public final class TradeHelper
 			
 			if (tradenear)
 			{
-				player.sendMessage(new CustomMessage("trade.OtherTradersNear", player));
+				player.sendMessage("There are other traders near you. You cannot trade here.");
 				return false;
 			}
 		}

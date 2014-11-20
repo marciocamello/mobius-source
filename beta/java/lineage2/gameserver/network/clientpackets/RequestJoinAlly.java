@@ -19,7 +19,6 @@ import lineage2.gameserver.model.Request;
 import lineage2.gameserver.model.Request.L2RequestType;
 import lineage2.gameserver.network.serverpackets.AskJoinAlliance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
 /**
@@ -117,7 +116,7 @@ public class RequestJoinAlly extends L2GameClientPacket
 		
 		if (!activeChar.getAlliance().canInvite())
 		{
-			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestJoinAlly.InvitePenalty", activeChar));
+			activeChar.sendMessage("After a clan is dismissed from an alliance, the alliance must wait at least a day before accepting a new member.");
 			return;
 		}
 		

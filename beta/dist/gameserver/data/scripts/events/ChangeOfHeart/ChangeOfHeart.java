@@ -131,7 +131,7 @@ public final class ChangeOfHeart extends Functions implements ScriptFile, OnDeat
 		{
 			spawnEventManagers();
 			System.out.println("Event 'Change of Heart' started.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.ChangeofHeart.AnnounceEventStarted", null);
+			Announcements.getInstance().announceToAll("The event 'Change of Heart' started. Please speak with Buzz the Cat.");
 		}
 		else
 		{
@@ -158,7 +158,7 @@ public final class ChangeOfHeart extends Functions implements ScriptFile, OnDeat
 		{
 			unSpawnEventManagers();
 			System.out.println("Event 'Change of Heart' stopped.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.ChangeofHeart.AnnounceEventStoped", null);
+			Announcements.getInstance().announceToAll("The event 'Change of Heart' stopped.");
 		}
 		else
 		{
@@ -467,7 +467,7 @@ public final class ChangeOfHeart extends Functions implements ScriptFile, OnDeat
 	{
 		if (_active)
 		{
-			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.ChangeofHeart.AnnounceEventStarted", null);
+			Announcements.getInstance().announceToAll("The event 'Change of Heart' started. Please speak with Buzz the Cat.");
 		}
 	}
 	

@@ -264,7 +264,6 @@ import lineage2.gameserver.network.serverpackets.TargetSelected;
 import lineage2.gameserver.network.serverpackets.TargetUnselected;
 import lineage2.gameserver.network.serverpackets.TeleportToLocation;
 import lineage2.gameserver.network.serverpackets.UserInfo;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 import lineage2.gameserver.network.serverpackets.components.SceneMovie;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
@@ -6587,7 +6586,7 @@ public final class Player extends Playable implements PlayerGroup
 							{
 								if (((System.currentTimeMillis() / 1000L) - player.getLastAccess()) > zone.getRestartTime())
 								{
-									player.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.EnterWorld.TeleportedReasonNoRestart", player));
+									player.sendMessage("You have been teleported to the nearest town due to you being in an No Restart zone.");
 									player.setLoc(TeleportUtils.getRestartLocation(player, RestartType.TO_VILLAGE));
 								}
 							}
@@ -8533,16 +8532,6 @@ public final class Player extends Playable implements PlayerGroup
 	public void teleToClanhall()
 	{
 		teleToLocation(TeleportUtils.getRestartLocation(this, RestartType.TO_CLANHALL), ReflectionManager.DEFAULT);
-	}
-	
-	/**
-	 * Method sendMessage.
-	 * @param message CustomMessage
-	 */
-	@Override
-	public void sendMessage(CustomMessage message)
-	{
-		sendMessage(message.toString());
 	}
 	
 	/**

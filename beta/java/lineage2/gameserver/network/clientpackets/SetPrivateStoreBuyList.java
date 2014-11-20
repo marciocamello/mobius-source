@@ -22,7 +22,6 @@ import lineage2.gameserver.model.items.TradeItem;
 import lineage2.gameserver.network.serverpackets.PrivateStoreManageListBuy;
 import lineage2.gameserver.network.serverpackets.PrivateStoreMsgBuy;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.TradeHelper;
 
@@ -117,7 +116,7 @@ public class SetPrivateStoreBuyList extends L2GameClientPacket
 				
 				if ((item.getReferencePrice() / 2) > price)
 				{
-					buyer.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.SetPrivateStoreBuyList.TooLowPrice", buyer).addItemName(item).addNumber(item.getReferencePrice() / 2));
+					buyer.sendMessage("Your price for " + item.getName() + " is too low. Minimal buy price is " + (item.getReferencePrice() / 2) + " adena.");
 					continue;
 				}
 				

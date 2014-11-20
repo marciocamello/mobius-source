@@ -19,7 +19,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.base.Experience;
 import lineage2.gameserver.network.serverpackets.RadarControl;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 
@@ -78,12 +77,12 @@ public class Help extends Functions implements IVoicedCommandHandler, ScriptFile
 	{
 		if (activeChar.getLevel() >= (activeChar.isBaseClassActive() ? Experience.getMaxSubLevel() : Experience.getMaxLevel()))
 		{
-			activeChar.sendMessage(new CustomMessage("voicedcommandhandlers.Help.MaxLevel", activeChar));
+			activeChar.sendMessage("You are at maximum level.");
 		}
 		else
 		{
 			long exp = Experience.LEVEL[activeChar.getLevel() + 1] - activeChar.getExp();
-			activeChar.sendMessage(new CustomMessage("voicedcommandhandlers.Help.ExpLeft", activeChar).addNumber(exp));
+			activeChar.sendMessage("You have " + exp + " experience left to reach next level.");
 		}
 		
 		return true;

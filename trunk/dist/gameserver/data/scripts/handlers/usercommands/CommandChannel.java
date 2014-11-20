@@ -18,7 +18,6 @@ import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExMultiPartyCommandChannelInfo;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
@@ -53,7 +52,7 @@ public class CommandChannel implements IUserCommandHandler, ScriptFile
 		switch (id)
 		{
 			case 92:
-				activeChar.sendMessage(new CustomMessage("usercommandhandlers.CommandChannel", activeChar));
+				activeChar.sendMessage("Use /channelinvite <player> to create a Command Channel.");
 				break;
 			
 			case 93:

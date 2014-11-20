@@ -39,7 +39,6 @@ import lineage2.gameserver.network.serverpackets.ExPCCafePointInfo;
 import lineage2.gameserver.network.serverpackets.GMViewItemList;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.HtmlUtils;
@@ -559,7 +558,7 @@ public class AdminEditChar implements IAdminCommandHandler, ScriptFile
 				
 				if (!player.addSubClass(classId, true, 0, 0, false, 0))
 				{
-					activeChar.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.SubclassCouldNotBeAdded", activeChar));
+					activeChar.sendMessage("The sub class could not be added.");
 					return false;
 				}
 				
@@ -1315,7 +1314,7 @@ public class AdminEditChar implements IAdminCommandHandler, ScriptFile
 		}
 		else
 		{
-			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.NoSubAtThisTime", activeChar));
+			activeChar.sendMessage("There are no subclasses available at this time.");
 			return;
 		}
 		

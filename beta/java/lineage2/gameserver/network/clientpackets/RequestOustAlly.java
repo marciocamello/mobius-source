@@ -16,7 +16,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.tables.ClanTable;
 
 /**
@@ -100,7 +99,7 @@ public class RequestOustAlly extends L2GameClientPacket
 			alliance.broadcastAllyStatus();
 			alliance.removeAllyMember(clan.getClanId());
 			alliance.setExpelledMember();
-			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestOustAlly.ClanDismissed", activeChar).addString(clan.getName()).addString(alliance.getAllyName()));
+			activeChar.sendMessage("Clan " + clan.getName() + " has been dismissed from ally " + alliance.getAllyName() + ".");
 		}
 	}
 }

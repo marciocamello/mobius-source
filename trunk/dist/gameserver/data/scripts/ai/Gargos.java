@@ -53,7 +53,7 @@ public final class Gargos extends Fighter
 		if ((System.currentTimeMillis() - _lastFire) > 60000L)
 		{
 			final NpcInstance actor = getActor();
-			Functions.npcSayCustomMessage(actor, "scripts.ai.Gargos.fire");
+			Functions.npcSay(actor, "Forward!");
 			actor.doCast(SkillTable.getInstance().getInfo(5705, 1), actor, false);
 			_lastFire = System.currentTimeMillis();
 			return true;

@@ -15,7 +15,6 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.UnitMember;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
 /**
  * @author Mobius
@@ -89,12 +88,12 @@ public class RequestPledgeSetMemberPowerGrade extends L2GameClientPacket
 			}
 			else
 			{
-				activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeSetMemberPowerGrade.NotBelongClan", activeChar));
+				activeChar.sendMessage("The target doesn't belong to your clan.");
 			}
 		}
 		else
 		{
-			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeSetMemberPowerGrade.HaveNotAuthority", activeChar));
+			activeChar.sendMessage("You don't have the authority to change this members power grade.");
 		}
 	}
 }

@@ -19,7 +19,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.residences.SiegeFlagInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.templates.StatsSet;
 
@@ -157,15 +156,15 @@ public class HealWithCp extends Skill
 					{
 						if (activeChar == target)
 						{
-							owner.sendMessage(new CustomMessage("YOU_HAVE_RESTORED_S1_HP_OF_YOUR_PET", owner, new Object[0]).addNumber(Math.round(addToHp)));
+							owner.sendMessage("You have restored " + Math.round(addToHp) + " HP of your pet.");
 						}
 						else if (owner == activeChar)
 						{
-							owner.sendMessage(new CustomMessage("YOU_HAVE_RESTORED_S1_HP_OF_YOUR_PET", owner, new Object[0]).addNumber(Math.round(addToHp)));
+							owner.sendMessage("You have restored " + Math.round(addToHp) + " HP of your pet.");
 						}
 						else
 						{
-							owner.sendMessage(new CustomMessage("S1_HAS_BEEN_RESTORED_S2_HP_OF_YOUR_PET", owner, new Object[0]).addString(activeChar.getName()).addNumber(Math.round(addToHp)));
+							owner.sendMessage(activeChar.getName() + " has been restored " + Math.round(addToHp) + " HP of your pet.");
 						}
 					}
 				}

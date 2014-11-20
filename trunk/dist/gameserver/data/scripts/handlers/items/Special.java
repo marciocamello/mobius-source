@@ -23,7 +23,6 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
@@ -315,7 +314,7 @@ public final class Special extends SimpleItemHandler
 		}
 		else
 		{
-			player.sendMessage(new CustomMessage("Quest.Q00464_Oath.QuestCannotBeTaken", player));
+			player.sendMessage("This quest available only for characters higher than 82 level and not carrying the same quest.");
 			return false;
 		}
 		

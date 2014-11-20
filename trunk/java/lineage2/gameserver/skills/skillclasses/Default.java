@@ -15,9 +15,7 @@ package lineage2.gameserver.skills.skillclasses;
 import java.util.List;
 
 import lineage2.gameserver.model.Creature;
-import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.templates.StatsSet;
 
 import org.slf4j.Logger;
@@ -50,7 +48,7 @@ public class Default extends Skill
 	{
 		if (activeChar.isPlayer())
 		{
-			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.skills.skillclasses.Default.NotImplemented", (Player) activeChar).addNumber(getId()).addString("" + getSkillType()));
+			activeChar.sendMessage("Skill not implemented yet.  Skill ID: " + getId() + " / Skill Type: " + getSkillType() + ".");
 		}
 		
 		_log.warn("NOTDONE skill: " + getId() + ", used by " + activeChar);

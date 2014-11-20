@@ -18,7 +18,6 @@ import lineage2.gameserver.model.pledge.UnitMember;
 import lineage2.gameserver.network.serverpackets.PledgeReceiveMemberInfo;
 import lineage2.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
 /**
  * @author Mobius
@@ -77,13 +76,13 @@ public class RequestPledgeSetAcademyMaster extends L2GameClientPacket
 				{
 					if (sponsor.hasApprentice())
 					{
-						activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestOustAlly.MemberAlreadyHasApprentice", activeChar));
+						activeChar.sendMessage("This member already has an apprentice, dismiss it first.");
 						return;
 					}
 					
 					if (apprentice.hasSponsor())
 					{
-						activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestOustAlly.ApprenticeAlreadyHasSponsor", activeChar));
+						activeChar.sendMessage("This apprentice already has a sponsor.");
 						return;
 					}
 					
@@ -95,7 +94,7 @@ public class RequestPledgeSetAcademyMaster extends L2GameClientPacket
 				{
 					if (!sponsor.hasApprentice())
 					{
-						activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestOustAlly.MemberHasNoApprentice", activeChar));
+						activeChar.sendMessage("This member has no apprentice.");
 						return;
 					}
 					
@@ -114,7 +113,7 @@ public class RequestPledgeSetAcademyMaster extends L2GameClientPacket
 		}
 		else
 		{
-			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestOustAlly.NoMasterRights", activeChar));
+			activeChar.sendMessage("You do not have master rights.");
 		}
 	}
 }

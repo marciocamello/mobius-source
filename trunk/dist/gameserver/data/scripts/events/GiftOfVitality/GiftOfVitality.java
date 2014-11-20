@@ -259,7 +259,7 @@ public final class GiftOfVitality extends Functions implements ScriptFile
 		{
 			spawnEventManagers();
 			System.out.println("Event: 'Gift Of Vitality' started.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.GiftOfVitality.AnnounceEventStarted", null);
+			Announcements.getInstance().announceToAll("The evil has come to the lands of Aden! Jack the Sage has returned to help all adventurers in fight. Visit him at all major towns to receive the Gift of Vitality.");
 		}
 		else
 		{
@@ -285,7 +285,7 @@ public final class GiftOfVitality extends Functions implements ScriptFile
 		{
 			unSpawnEventManagers();
 			System.out.println("Event: 'Gift Of Vitality' stopped.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.GiftOfVitality.AnnounceEventStoped", null);
+			Announcements.getInstance().announceToAll("Jack the Sage has left the world for now and Gift of Vitality event has ended.");
 		}
 		else
 		{

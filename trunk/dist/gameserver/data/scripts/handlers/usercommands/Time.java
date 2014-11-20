@@ -23,7 +23,6 @@ import lineage2.gameserver.handlers.IUserCommandHandler;
 import lineage2.gameserver.handlers.UserCommandHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
@@ -76,7 +75,7 @@ public class Time implements IUserCommandHandler, ScriptFile
 		
 		if (Config.ALT_SHOW_SERVER_TIME)
 		{
-			activeChar.sendMessage(new CustomMessage("usercommandhandlers.Time.ServerTime", activeChar, sf.format(new Date(System.currentTimeMillis()))));
+			activeChar.sendMessage("Server time is " + sf.format(new Date(System.currentTimeMillis())) + ".");
 		}
 		
 		return true;

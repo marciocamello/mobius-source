@@ -18,7 +18,6 @@ import lineage2.gameserver.model.pledge.SubUnit;
 import lineage2.gameserver.model.pledge.UnitMember;
 import lineage2.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
 /**
  * @author Mobius
@@ -70,7 +69,7 @@ public class RequestPledgeReorganizeMember extends L2GameClientPacket
 		
 		if (!activeChar.isClanLeader())
 		{
-			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeReorganizeMember.ChangeAffiliations", activeChar));
+			activeChar.sendMessage("Only clan leader can change affiliations.");
 			activeChar.sendActionFailed();
 			return;
 		}
@@ -79,35 +78,35 @@ public class RequestPledgeReorganizeMember extends L2GameClientPacket
 		
 		if (subject == null)
 		{
-			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeReorganizeMember.NotInYourClan", activeChar));
+			activeChar.sendMessage("The target doesn't belong to your clan.");
 			activeChar.sendActionFailed();
 			return;
 		}
 		
 		if (subject.getPledgeType() == _targetUnit)
 		{
-			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeReorganizeMember.AlreadyInThatCombatUnit", activeChar));
+			activeChar.sendMessage("The target is already in that combat unit.");
 			activeChar.sendActionFailed();
 			return;
 		}
 		
 		if ((_targetUnit != 0) && (clan.getSubUnit(_targetUnit) == null))
 		{
-			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeReorganizeMember.NoSuchCombatUnit", activeChar));
+			activeChar.sendMessage("There is no such combat unit in your clan.");
 			activeChar.sendActionFailed();
 			return;
 		}
 		
 		if (Clan.isAcademy(_targetUnit))
 		{
-			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeReorganizeMember.AcademyViaInvitation", activeChar));
+			activeChar.sendMessage("The Academy can accept new members only via invitation.");
 			activeChar.sendActionFailed();
 			return;
 		}
 		
 		if (Clan.isAcademy(subject.getPledgeType()))
 		{
-			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeReorganizeMember.CantMoveAcademyMember", activeChar));
+			activeChar.sendMessage("You can't move an Academy Member.");
 			activeChar.sendActionFailed();
 			return;
 		}
@@ -120,21 +119,21 @@ public class RequestPledgeReorganizeMember extends L2GameClientPacket
 			
 			if (replacement == null)
 			{
-				activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeReorganizeMember.CharacterNotBelongClan", activeChar));
+				activeChar.sendMessage("The replacement character doesn't belong to your clan.");
 				activeChar.sendActionFailed();
 				return;
 			}
 			
 			if (replacement.getPledgeType() != _targetUnit)
 			{
-				activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeReorganizeMember.CharacterNotBelongCombatUnit", activeChar));
+				activeChar.sendMessage("The replacement character doesn't belong to combat unit given.");
 				activeChar.sendActionFailed();
 				return;
 			}
 			
 			if (replacement.isSubLeader() != 0)
 			{
-				activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeReorganizeMember.CharacterLeaderAnotherCombatUnit", activeChar));
+				activeChar.sendMessage("The replacement is a leader of another unit and can't be moved.");
 				activeChar.sendActionFailed();
 				return;
 			}
@@ -158,7 +157,7 @@ public class RequestPledgeReorganizeMember extends L2GameClientPacket
 			
 			if (subject.isSubLeader() != 0)
 			{
-				activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestPledgeReorganizeMember.MemberLeaderAnotherUnit", activeChar));
+				activeChar.sendMessage("This member is a leader of another unit and can't be moved.");
 				activeChar.sendActionFailed();
 				return;
 			}

@@ -56,7 +56,7 @@ public final class CaughtMystic extends Mystic
 		
 		if (Rnd.chance(75))
 		{
-			Functions.npcSayCustomMessage(getActor(), "scripts.ai.CaughtMob.spawn");
+			Functions.npcSay(getActor(), "Mm-m-m, your bait was delicious!");
 		}
 	}
 	
@@ -69,7 +69,7 @@ public final class CaughtMystic extends Mystic
 	{
 		if (Rnd.chance(75))
 		{
-			Functions.npcSayCustomMessage(getActor(), "scripts.ai.CaughtMob.death");
+			Functions.npcSay(getActor(), "Mm-m-m, your bait was delicious!");
 		}
 		
 		super.onEvtDead(killer);

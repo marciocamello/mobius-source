@@ -89,7 +89,7 @@ public final class GlitteringMedal extends Functions implements ScriptFile, OnDe
 			loadMultiSell();
 			spawnEventManagers();
 			System.out.println("Event 'L2 Medal Collection Event' started.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.glitmedal.AnnounceEventStarted", null);
+			Announcements.getInstance().announceToAll("The event 'L2 Medal Collection Event' started.");
 		}
 		else
 		{
@@ -116,7 +116,7 @@ public final class GlitteringMedal extends Functions implements ScriptFile, OnDe
 		{
 			unSpawnEventManagers();
 			System.out.println("Event 'L2 Medal Collection Event' stopped.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.glitmedal.AnnounceEventStoped", null);
+			Announcements.getInstance().announceToAll("The event 'L2 Medal Collection Event' stopped.");
 		}
 		else
 		{
@@ -137,7 +137,7 @@ public final class GlitteringMedal extends Functions implements ScriptFile, OnDe
 	{
 		if (_active)
 		{
-			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.glitmedal.AnnounceEventStarted", null);
+			Announcements.getInstance().announceToAll("The event 'L2 Medal Collection Event' started.");
 		}
 	}
 	

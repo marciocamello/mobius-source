@@ -16,7 +16,6 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.handlers.IVoicedCommandHandler;
 import lineage2.gameserver.handlers.VoicedCommandHandler;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
@@ -60,12 +59,12 @@ public class Debug implements IVoicedCommandHandler, ScriptFile
 		if (player.isDebug())
 		{
 			player.setDebug(false);
-			player.sendMessage(new CustomMessage("voicedcommandhandlers.Debug.Disabled", player));
+			player.sendMessage("Debug mode disabled.");
 		}
 		else
 		{
 			player.setDebug(true);
-			player.sendMessage(new CustomMessage("voicedcommandhandlers.Debug.Enabled", player));
+			player.sendMessage("Debug mode enabled.");
 		}
 		
 		return true;

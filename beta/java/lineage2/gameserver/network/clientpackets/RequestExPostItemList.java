@@ -15,7 +15,6 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExReplyPostItemList;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
 /**
  * @author Mobius
@@ -51,7 +50,7 @@ public class RequestExPostItemList extends L2GameClientPacket
 		
 		if (!Config.ALLOW_MAIL)
 		{
-			activeChar.sendMessage(new CustomMessage("mail.Disabled", activeChar));
+			activeChar.sendMessage("Mail disabled.");
 			activeChar.sendActionFailed();
 			return;
 		}

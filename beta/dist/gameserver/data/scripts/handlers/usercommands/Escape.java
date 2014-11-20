@@ -18,7 +18,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
 
@@ -55,7 +54,7 @@ public class Escape implements IUserCommandHandler, ScriptFile
 		
 		if ((activeChar.getTeleMode() != 0) || !activeChar.getPlayerAccess().UseTeleport)
 		{
-			activeChar.sendMessage(new CustomMessage("common.TryLater", activeChar));
+			activeChar.sendMessage("Try later.");
 			return false;
 		}
 		
@@ -67,7 +66,7 @@ public class Escape implements IUserCommandHandler, ScriptFile
 		
 		if (activeChar.isInDuel() || (activeChar.getTeam() != TeamType.NONE))
 		{
-			activeChar.sendMessage(new CustomMessage("common.RecallInDuel", activeChar));
+			activeChar.sendMessage("You cannot use escape skills during a duel or during event participation.");
 			return false;
 		}
 		

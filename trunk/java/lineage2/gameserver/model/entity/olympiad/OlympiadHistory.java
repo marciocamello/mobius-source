@@ -12,7 +12,6 @@
  */
 package lineage2.gameserver.model.entity.olympiad;
 
-import lineage2.gameserver.data.StringHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.TimeUtils;
 
@@ -112,15 +111,15 @@ public class OlympiadHistory
 		
 		if (_gameStatus == 0)
 		{
-			main = StringHolder.getInstance().getNotNull(player, "hero.history.tie");
+			main = "<font color=\"LEVEL\">%date%</font><br1> vs %name% (<ClassID>%classId%</ClassID>) (%time%) <font color=\"00ff00\">draw</font>  %victory_count% victory %tie_count% draw %loss_count% loss";
 		}
 		else if (team == _gameStatus)
 		{
-			main = StringHolder.getInstance().getNotNull(player, "hero.history.win");
+			main = "<font color=\"LEVEL\">%date%</font><br1> vs %name% (<ClassID>%classId%</ClassID>) (%time%) <font color=\"0000ff\">victory</font>  %victory_count% victory %tie_count% draw %loss_count% loss<br>";
 		}
 		else
 		{
-			main = StringHolder.getInstance().getNotNull(player, "hero.history.loss");
+			main = "<font color=\"LEVEL\">%date%</font><br1> vs %name% (<ClassID>%classId%</ClassID>) (%time%) <font color=\"ff0000\">loss</font>  %victory_count% victory %tie_count% draw %loss_count% loss";
 		}
 		
 		main = main.replace("%classId%", String.valueOf(team == 1 ? _classId2 : _classId1));

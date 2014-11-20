@@ -40,7 +40,6 @@ import lineage2.gameserver.network.serverpackets.ExChangeNpcState;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
 import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.tables.PetDataTable;
@@ -83,7 +82,7 @@ public class PetInstance extends Summon
 			}
 			else if (getCurrentFed() <= (0.10 * getMaxFed()))
 			{
-				owner.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2PetInstance.UnSummonHungryPet", owner));
+				owner.sendMessage("Your pet is too hungry to stay summoned.");
 				owner.getSummonList().unsummonPet(false);
 				return;
 			}
@@ -354,7 +353,7 @@ public class PetInstance extends Summon
 		
 		if (old_level < _level)
 		{
-			owner.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2PetInstance.PetLevelUp", owner).addNumber(_level));
+			owner.sendMessage("Your pet has increased it's level to " + _level + ".");
 			broadcastPacket(new SocialAction(getObjectId(), SocialAction.LEVEL_UP));
 			setCurrentHpMp(getMaxHp(), getMaxMp());
 		}

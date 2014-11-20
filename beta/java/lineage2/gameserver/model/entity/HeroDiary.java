@@ -17,7 +17,6 @@ import java.util.AbstractMap;
 import java.util.Map;
 
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.utils.HtmlUtils;
 
 /**
@@ -54,26 +53,26 @@ public class HeroDiary
 	 */
 	public Map.Entry<String, String> toString(Player player)
 	{
-		CustomMessage message = null;
+		String message = "";
 		
 		switch (_id)
 		{
 			case ACTION_RAID_KILLED:
-				message = new CustomMessage("lineage2.gameserver.model.entity.Hero.RaidBossKilled", player).addString(HtmlUtils.htmlNpcName(_param));
+				message = HtmlUtils.htmlNpcName(_param) + " was defeated.";
 				break;
 			
 			case ACTION_HERO_GAINED:
-				message = new CustomMessage("lineage2.gameserver.model.entity.Hero.HeroGained", player);
+				message = "Gained Hero status.";
 				break;
 			
 			case ACTION_CASTLE_TAKEN:
-				message = new CustomMessage("lineage2.gameserver.model.entity.Hero.CastleTaken", player).addString(HtmlUtils.htmlResidenceName(_param));
+				message = HtmlUtils.htmlResidenceName(_param) + " was successfully taken.";
 				break;
 			
 			default:
 				return null;
 		}
 		
-		return new AbstractMap.SimpleEntry<>(SIMPLE_FORMAT.format(_time), message.toString());
+		return new AbstractMap.SimpleEntry<>(SIMPLE_FORMAT.format(_time), message);
 	}
 }

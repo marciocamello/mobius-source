@@ -28,7 +28,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.ItemInstance.ItemLocation;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 
@@ -73,7 +72,7 @@ public class Repair extends Functions implements IVoicedCommandHandler, ScriptFi
 		{
 			if (activeChar.getName().equals(target))
 			{
-				sendMessage(new CustomMessage("voicedcommandhandlers.Repair.YouCantRepairYourself", activeChar), activeChar);
+				sendMessage("You cannot repair yourself.", activeChar);
 				return false;
 			}
 			
@@ -90,12 +89,12 @@ public class Repair extends Functions implements IVoicedCommandHandler, ScriptFi
 			
 			if (objId == 0)
 			{
-				sendMessage(new CustomMessage("voicedcommandhandlers.Repair.YouCanRepairOnlyOnSameAccount", activeChar), activeChar);
+				sendMessage("You can repair character only on same account.", activeChar);
 				return false;
 			}
 			else if (World.getPlayer(objId) != null)
 			{
-				sendMessage(new CustomMessage("voicedcommandhandlers.Repair.CharIsOnline", activeChar), activeChar);
+				sendMessage("Character is still online.", activeChar);
 				return false;
 			}
 			
@@ -145,7 +144,7 @@ public class Repair extends Functions implements IVoicedCommandHandler, ScriptFi
 				statement.setInt(1, objId);
 				statement.execute();
 				DbUtils.close(statement);
-				sendMessage(new CustomMessage("voicedcommandhandlers.Repair.RepairDone", activeChar), activeChar);
+				sendMessage("Character successfully repaired.", activeChar);
 				return true;
 			}
 			catch (Exception e)

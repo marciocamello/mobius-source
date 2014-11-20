@@ -36,7 +36,6 @@ import lineage2.gameserver.model.entity.olympiad.tasks.ValidationTask;
 import lineage2.gameserver.model.entity.olympiad.tasks.WeeklyTask;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.Location;
@@ -299,7 +298,7 @@ public class Olympiad
 		
 		if (getNoblePoints(noble.getObjectId()) < 3)
 		{
-			noble.sendMessage(new CustomMessage("lineage2.gameserver.model.entity.Olympiad.LessPoints", noble));
+			noble.sendMessage("Can't register when you have less than 3 points.");
 			return false;
 		}
 		

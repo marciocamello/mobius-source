@@ -26,7 +26,6 @@ import lineage2.gameserver.model.SimpleSpawner;
 import lineage2.gameserver.model.actor.listener.CharListenerList;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Util;
@@ -164,7 +163,7 @@ public final class March8 extends Functions implements ScriptFile, OnDeathListen
 		{
 			spawnEventManagers();
 			System.out.println("Event: March 8 started.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.March8.AnnounceEventStarted", null);
+			Announcements.getInstance().announceToAll("Event began on March 8. Congratulations to the female population of the server on a holiday!");
 		}
 		else
 		{
@@ -191,7 +190,7 @@ public final class March8 extends Functions implements ScriptFile, OnDeathListen
 		{
 			unSpawnEventManagers();
 			System.out.println("Event: March 8 stopped.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.March8.AnnounceEventStoped", null);
+			Announcements.getInstance().announceToAll("Event on March 8 has ended.");
 		}
 		else
 		{
@@ -247,7 +246,7 @@ public final class March8 extends Functions implements ScriptFile, OnDeathListen
 		String append = "";
 		price = Util.formatAdena((long) (RECIPE_PRICE * Config.EVENT_MARCH8_PRICE_RATE));
 		append += "<br><a action=\"bypass -h scripts_events.March8.March8:buyrecipe\">";
-		append += new CustomMessage("scripts.events.March8.buyrecipe", getSelf()).addString(price);
+		append += "Buy recipe for " + price + " Adena.";
 		append += "</a><br>";
 		return append;
 	}
@@ -262,7 +261,7 @@ public final class March8 extends Functions implements ScriptFile, OnDeathListen
 	{
 		if (_active)
 		{
-			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.March8.AnnounceEventStarted", null);
+			Announcements.getInstance().announceToAll("Event began on March 8. Congratulations to the female population of the server on a holiday!");
 		}
 	}
 	
