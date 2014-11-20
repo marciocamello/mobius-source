@@ -93,7 +93,6 @@ import lineage2.gameserver.network.serverpackets.StopMove;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.TeleportToLocation;
 import lineage2.gameserver.network.serverpackets.ValidateLocation;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.skills.AbnormalEffect;
@@ -6720,14 +6719,6 @@ public abstract class Creature extends GameObject
 	public boolean onTeleported()
 	{
 		return isTeleporting.compareAndSet(true, false);
-	}
-	
-	/**
-	 * Method sendMessage.
-	 * @param message CustomMessage
-	 */
-	public void sendMessage(CustomMessage message)
-	{
 	}
 	
 	/**

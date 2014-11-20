@@ -20,7 +20,6 @@ import lineage2.gameserver.model.instances.DoorInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.DoorTemplate;
 import gnu.trove.set.hash.TIntHashSet;
@@ -103,7 +102,7 @@ public final class Keys extends ScriptItemHandler
 		}
 		
 		player.sendPacket(SystemMessage2.removeItems(item.getId(), 1));
-		player.sendMessage(new CustomMessage("lineage2.gameserver.skills.skillclasses.Unlock.Success", player));
+		player.sendMessage("Successfully opened!");
 		door.openMe(player, true);
 		return true;
 	}

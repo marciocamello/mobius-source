@@ -27,7 +27,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.Say2;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 import lineage2.gameserver.utils.MapUtils;
 
@@ -315,76 +314,6 @@ public class Announcements
 		{
 			player.sendPacket(sm);
 		}
-	}
-	
-	/**
-	 * Method announceByCustomMessage.
-	 * @param address String
-	 * @param replacements String[]
-	 */
-	public void announceByCustomMessage(String address, String[] replacements)
-	{
-		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
-		{
-			announceToPlayerByCustomMessage(player, address, replacements);
-		}
-	}
-	
-	/**
-	 * Method announceByCustomMessage.
-	 * @param address String
-	 * @param replacements String[]
-	 * @param type ChatType
-	 */
-	public void announceByCustomMessage(String address, String[] replacements, ChatType type)
-	{
-		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
-		{
-			announceToPlayerByCustomMessage(player, address, replacements, type);
-		}
-	}
-	
-	/**
-	 * Method announceToPlayerByCustomMessage.
-	 * @param player Player
-	 * @param address String
-	 * @param replacements String[]
-	 */
-	public void announceToPlayerByCustomMessage(Player player, String address, String[] replacements)
-	{
-		CustomMessage cm = new CustomMessage(address, player);
-		
-		if (replacements != null)
-		{
-			for (String s : replacements)
-			{
-				cm.addString(s);
-			}
-		}
-		
-		player.sendPacket(new Say2(0, ChatType.ANNOUNCEMENT, "", cm.toString()));
-	}
-	
-	/**
-	 * Method announceToPlayerByCustomMessage.
-	 * @param player Player
-	 * @param address String
-	 * @param replacements String[]
-	 * @param type ChatType
-	 */
-	public void announceToPlayerByCustomMessage(Player player, String address, String[] replacements, ChatType type)
-	{
-		CustomMessage cm = new CustomMessage(address, player);
-		
-		if (replacements != null)
-		{
-			for (String s : replacements)
-			{
-				cm.addString(s);
-			}
-		}
-		
-		player.sendPacket(new Say2(0, type, "", cm.toString()));
 	}
 	
 	/**

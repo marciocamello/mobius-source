@@ -29,7 +29,6 @@ import lineage2.gameserver.network.loginservercon.LoginServerCommunication;
 import lineage2.gameserver.network.loginservercon.gspackets.ChangeAccessLevel;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.AdminFunctions;
@@ -476,7 +475,7 @@ public class AdminBan implements IAdminCommandHandler, ScriptFile
 			
 			if (plyr != null)
 			{
-				plyr.sendMessage(new CustomMessage("admincommandhandlers.YoureBannedByGM", plyr));
+				plyr.sendMessage("You are banned by a GM.");
 				plyr.setAccessLevel(-100);
 				AutoBan.Banned(plyr, time, msg, activeChar.getName());
 				plyr.kick();

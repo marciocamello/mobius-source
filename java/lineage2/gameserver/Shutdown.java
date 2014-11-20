@@ -89,12 +89,8 @@ public class Shutdown extends Thread
 				case 180:
 				case 120:
 				case 60:
-					Announcements.getInstance().announceByCustomMessage("THE_SERVER_WILL_BE_COMING_DOWN_IN_S1_MINUTES", new String[]
-					{
-						String.valueOf(shutdownCounter / 60)
-					});
-					break;
-				
+					Announcements.getInstance().announceToAll("The server will be coming down in " + String.valueOf(shutdownCounter / 60) + " minute(s).");
+					
 				case 30:
 				case 20:
 				case 10:

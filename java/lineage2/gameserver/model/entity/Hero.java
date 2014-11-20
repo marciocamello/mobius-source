@@ -25,7 +25,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.data.StringHolder;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.database.mysql;
 import lineage2.gameserver.model.Player;
@@ -480,7 +479,7 @@ public class Hero
 		{
 			NpcHtmlMessage html = new NpcHtmlMessage(activeChar, null);
 			html.setFile("olympiad/monument_hero_info.htm");
-			html.replace("%title%", StringHolder.getInstance().getNotNull(activeChar, "hero.diary"));
+			html.replace("%title%", "Hero %heroname%'s Message: %message%");
 			html.replace("%heroname%", Olympiad.getNobleName(charid));
 			html.replace("%message%", _heroMessage.get(charid));
 			List<HeroDiary> list = new ArrayList<>(mainlist);

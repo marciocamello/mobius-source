@@ -390,8 +390,23 @@ public class ItemAuctionInstance
 					
 					if (Config.ALT_ITEM_AUCTION_START_ANNOUNCE)
 					{
-						String[] params = {};
-						Announcements.getInstance().announceByCustomMessage("lineage2.gameserver.model.instances.L2ItemAuctionBrokerInstance.announce." + _auction.getInstanceId(), params);
+						String town = "";
+						switch (_auction.getInstanceId())
+						{
+							case 32320:
+								town = "Giran";
+								break;
+							
+							case 32321:
+								town = "Aden";
+								break;
+							
+							case 32322:
+								town = "Rune";
+								break;
+						}
+						
+						Announcements.getInstance().announceToAll("Item auction started in " + town + ", details on Item Broker.");
 					}
 					
 					checkAndSetCurrentAndNextAuction();

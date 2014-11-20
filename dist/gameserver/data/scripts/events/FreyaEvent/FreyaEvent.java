@@ -268,8 +268,8 @@ public final class FreyaEvent extends Functions implements ScriptFile, OnDeathLi
 		}
 	};
 	private static final String _name = "Freya Celebration";
-	private static final String _msgStarted = "scripts.events.FreyaEvent.AnnounceEventStarted";
-	private static final String _msgEnded = "scripts.events.FreyaEvent.AnnounceEventStoped";
+	private static final String _msgStarted = "The event 'Freya Celebration' started.";
+	private static final String _msgEnded = "The event 'Freya Celebration' stopped.";
 	private static final Logger _log = LoggerFactory.getLogger(FreyaEvent.class);
 	private static final List<SimpleSpawner> _spawns = new ArrayList<>();
 	private static boolean _active = false;
@@ -335,7 +335,7 @@ public final class FreyaEvent extends Functions implements ScriptFile, OnDeathLi
 		{
 			spawnEventManagers();
 			System.out.println("Event '" + _name + "' started.");
-			Announcements.getInstance().announceByCustomMessage(_msgStarted, null);
+			Announcements.getInstance().announceToAll(_msgStarted);
 		}
 		else
 		{
@@ -362,7 +362,7 @@ public final class FreyaEvent extends Functions implements ScriptFile, OnDeathLi
 		{
 			unSpawnEventManagers();
 			System.out.println("Event '" + _name + "' stopped.");
-			Announcements.getInstance().announceByCustomMessage(_msgEnded, null);
+			Announcements.getInstance().announceToAll(_msgEnded);
 		}
 		else
 		{
@@ -383,7 +383,7 @@ public final class FreyaEvent extends Functions implements ScriptFile, OnDeathLi
 	{
 		if (_active)
 		{
-			Announcements.getInstance().announceToPlayerByCustomMessage(player, _msgStarted, null);
+			Announcements.getInstance().announceToAll(_msgStarted);
 		}
 	}
 	

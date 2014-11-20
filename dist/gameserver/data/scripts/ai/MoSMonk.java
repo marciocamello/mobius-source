@@ -45,7 +45,7 @@ public final class MoSMonk extends Fighter
 		
 		if ((getIntention() == CtrlIntention.AI_INTENTION_ACTIVE) && Rnd.chance(20))
 		{
-			Functions.npcSayCustomMessage(getActor(), "scripts.ai.MoSMonk.onIntentionAttack");
+			Functions.npcSay(getActor(), "You cannot carry a weapon without authorization!");
 		}
 		
 		super.onIntentionAttack(target);

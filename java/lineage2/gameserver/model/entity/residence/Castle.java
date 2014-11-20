@@ -39,7 +39,6 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.EventTrigger;
 import lineage2.gameserver.network.serverpackets.ExCastleState;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.ItemTemplate;
@@ -410,7 +409,7 @@ public class Castle extends Residence
 		
 		if (activeChar != null)
 		{
-			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.model.entity.Castle.OutOfControl.CastleTaxChangetTo", activeChar).addString(getName()).addNumber(taxPercent));
+			activeChar.sendMessage(getName() + " castle tax changed to " + taxPercent + "%.");
 		}
 	}
 	

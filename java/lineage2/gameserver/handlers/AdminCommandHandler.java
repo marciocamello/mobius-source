@@ -18,7 +18,6 @@ import java.util.Set;
 
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.utils.Log;
 
 /**
@@ -85,7 +84,7 @@ public class AdminCommandHandler extends AbstractHolder
 	{
 		if (!(activeChar.isGM() || activeChar.getPlayerAccess().CanUseGMCommand))
 		{
-			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.SendBypassBuildCmd.NoCommandOrAccess", activeChar).addString(adminCommand));
+			activeChar.sendMessage("No access to use command, or command " + adminCommand + " not recognized.");
 			return;
 		}
 		

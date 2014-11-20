@@ -72,7 +72,7 @@ public final class TheFallHarvest extends Functions implements ScriptFile, OnDea
 			loadMultiSell();
 			spawnEventManagers();
 			System.out.println("Event 'The Fall Harvest' started.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.TheFallHarvest.AnnounceEventStarted", null);
+			Announcements.getInstance().announceToAll("The event 'The Fall Harvest' started.");
 		}
 		else
 		{
@@ -99,7 +99,7 @@ public final class TheFallHarvest extends Functions implements ScriptFile, OnDea
 		{
 			unSpawnEventManagers();
 			System.out.println("Event 'The Fall Harvest' stopped.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.TheFallHarvest.AnnounceEventStoped", null);
+			Announcements.getInstance().announceToAll("The event 'The Fall Harvest' stopped.");
 		}
 		else
 		{
@@ -240,7 +240,7 @@ public final class TheFallHarvest extends Functions implements ScriptFile, OnDea
 	{
 		if (_active)
 		{
-			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.TheFallHarvest.AnnounceEventStarted", null);
+			Announcements.getInstance().announceToAll("The event 'The Fall Harvest' started.");
 		}
 	}
 	

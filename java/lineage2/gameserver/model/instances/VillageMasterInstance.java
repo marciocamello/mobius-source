@@ -32,7 +32,6 @@ import lineage2.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import lineage2.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import lineage2.gameserver.network.serverpackets.PledgeStatusChanged;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.ClanTable;
@@ -248,7 +247,7 @@ public final class VillageMasterInstance extends NpcInstance
 		
 		if (leader.getEvent(SiegeEvent.class) != null)
 		{
-			leader.sendMessage(new CustomMessage("scripts.services.Rename.SiegeNow", leader));
+			leader.sendMessage("Can't do that because siege in progress.");
 			return;
 		}
 		
@@ -264,7 +263,7 @@ public final class VillageMasterInstance extends NpcInstance
 		
 		if (member.getLeaderOf() != Clan.SUBUNIT_NONE)
 		{
-			leader.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.CannotAssignUnitLeader", leader));
+			leader.sendMessage("Subunit leader cannot be assigned as new Clan Leader.");
 			return;
 		}
 		
@@ -280,7 +279,7 @@ public final class VillageMasterInstance extends NpcInstance
 	 */
 	public static void setLeader(Player player, Clan clan, SubUnit unit, UnitMember newLeader)
 	{
-		player.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.ClanLeaderWillBeChangedFromS1ToS2", player).addString(clan.getLeaderName()).addString(newLeader.getName()));
+		player.sendMessage("Clan leader will be changed from " + clan.getLeaderName() + " to " + newLeader.getName() + ". New clan leader will enter the duties after the closest maintenance period.");
 		unit.setLeader(newLeader, true);
 		clan.broadcastClanStatus(true, true, false);
 	}
@@ -341,12 +340,12 @@ public final class VillageMasterInstance extends NpcInstance
 			
 			if (subLeader == null)
 			{
-				player.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.PlayerCantBeAssignedAsSubUnitLeader", player));
+				player.sendMessage("The selected player can't be assigned as sub-unit leader: he isn't a direct member of your clan.");
 				return;
 			}
 			else if (subLeader.getLeaderOf() != Clan.SUBUNIT_NONE)
 			{
-				player.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.ItCantBeSubUnitLeader", player));
+				player.sendMessage("You can't be a sub-unit leader.");
 				return;
 			}
 		}
@@ -407,7 +406,7 @@ public final class VillageMasterInstance extends NpcInstance
 		
 		if (clan == null)
 		{
-			player.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.ClanDoesntExist", player));
+			player.sendMessage("The clan doesn't exist.");
 			return;
 		}
 		
@@ -434,7 +433,7 @@ public final class VillageMasterInstance extends NpcInstance
 		
 		if (targetUnit == null)
 		{
-			player.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.SubUnitNotFound", player));
+			player.sendMessage("Sub-unit not found.");
 			return;
 		}
 		
@@ -443,13 +442,13 @@ public final class VillageMasterInstance extends NpcInstance
 		
 		if (subLeader == null)
 		{
-			player.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.PlayerCantBeAssignedAsSubUnitLeader", player));
+			player.sendMessage("The selected player can't be assigned as sub-unit leader: he isn't a direct member of your clan.");
 			return;
 		}
 		
 		if (subLeader.getLeaderOf() != Clan.SUBUNIT_NONE)
 		{
-			player.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.ItCantBeSubUnitLeader", player));
+			player.sendMessage("You can't be a sub-unit leader.");
 			return;
 		}
 		
@@ -463,7 +462,7 @@ public final class VillageMasterInstance extends NpcInstance
 			subLeader.getPlayer().broadcastCharInfo();
 		}
 		
-		player.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2VillageMasterInstance.NewSubUnitLeaderHasBeenAssigned", player));
+		player.sendMessage("New sub-unit leader has been assigned.");
 	}
 	
 	/**

@@ -19,7 +19,6 @@ import lineage2.gameserver.model.Request;
 import lineage2.gameserver.model.Request.L2RequestType;
 import lineage2.gameserver.network.serverpackets.SendTradeRequest;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Util;
 
@@ -96,11 +95,11 @@ public class TradeRequest extends L2GameClientPacket
 		{
 			if (tradeBan.equals("-1"))
 			{
-				activeChar.sendMessage(new CustomMessage("common.TradeBannedPermanently", activeChar));
+				activeChar.sendMessage("The administrator has forbidden you to trade permanently.");
 			}
 			else
 			{
-				activeChar.sendMessage(new CustomMessage("common.TradeBanned", activeChar).addString(Util.formatTime((int) ((Long.parseLong(tradeBan) / 1000L) - (System.currentTimeMillis() / 1000L)))));
+				activeChar.sendMessage("Your trade is banned! Expires: " + Util.formatTime((int) ((Long.parseLong(tradeBan) / 1000L) - (System.currentTimeMillis() / 1000L))) + ".");
 			}
 			
 			return;

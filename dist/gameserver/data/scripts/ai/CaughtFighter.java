@@ -56,7 +56,7 @@ public final class CaughtFighter extends Fighter
 		
 		if (Rnd.chance(75))
 		{
-			Functions.npcSayCustomMessage(getActor(), "scripts.ai.CaughtMob.spawn");
+			Functions.npcSay(getActor(), "Mm-m-m, your bait was delicious!");
 		}
 	}
 	
@@ -69,7 +69,7 @@ public final class CaughtFighter extends Fighter
 	{
 		if (Rnd.chance(75))
 		{
-			Functions.npcSayCustomMessage(getActor(), "scripts.ai.CaughtMob.death");
+			Functions.npcSay(getActor(), "I will tell fishes not to take your bait!");
 		}
 		
 		super.onEvtDead(killer);

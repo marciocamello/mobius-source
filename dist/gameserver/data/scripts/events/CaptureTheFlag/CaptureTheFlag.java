@@ -54,7 +54,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.Revive;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.skills.EffectType;
@@ -259,7 +258,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 			
 			ServerVariables.set("CtF", "on");
 			_log.info("Event 'CtF' activated.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.CtF.AnnounceEventStarted", null);
+			Announcements.getInstance().announceToAll("Event 'CtF' activated.");
 		}
 		else
 		{
@@ -288,7 +287,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 			}
 			ServerVariables.unset("CtF");
 			_log.info("Event 'CtF' deactivated.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.CtF.AnnounceEventStoped", null);
+			Announcements.getInstance().announceToAll("Event 'CtF' deactivated.");
 		}
 		else
 		{
@@ -349,7 +348,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		Player player = getSelf();
 		if (var.length != 4)
 		{
-			show(new CustomMessage("common.Error", player), player);
+			show("Error.", player);
 			return;
 		}
 		
@@ -357,7 +356,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		
 		if (player.isDead() || (npc == null) || !player.isInRange(npc, 200))
 		{
-			show(new CustomMessage("common.Error", player), player);
+			show("Error.", player);
 			return;
 		}
 		
@@ -375,13 +374,13 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		catch (Exception e)
 		{
 			e.printStackTrace();
-			show(new CustomMessage("common.Error", player), player);
+			show("Error.", player);
 			return;
 		}
 		
 		if ((add1.intValue() + add2.intValue()) != summ.intValue())
 		{
-			show(new CustomMessage("common.Error", player), player);
+			show("Error.", player);
 			return;
 		}
 		
@@ -483,7 +482,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		Player player = getSelf();
 		if (var.length != 2)
 		{
-			show(new CustomMessage("common.Error", player), player);
+			show("Error.", player);
 			return;
 		}
 		
@@ -496,7 +495,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		}
 		catch (Exception e)
 		{
-			show(new CustomMessage("common.Error", player), player);
+			show("Error.", player);
 			return;
 		}
 		
@@ -516,7 +515,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		
 		if (_endTask != null)
 		{
-			show(new CustomMessage("common.TryLater", player), player);
+			show("Try later.", player);
 			return;
 		}
 		
@@ -541,22 +540,16 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		redFlag.decayMe();
 		blueFlag.decayMe();
 		
-		String[] param =
-		{
-			String.valueOf(_time_to_start),
-			String.valueOf(_minLevel),
-			String.valueOf(_maxLevel)
-		};
-		sayToAll("scripts.events.CtF.AnnouncePreStart", param);
+		sayToAll("CtF: Start in " + String.valueOf(_time_to_start) + " min. for levels " + String.valueOf(_minLevel) + "-" + String.valueOf(_maxLevel) + ". Information in the community board (alt+b).");
 		
 		executeTask("events.CaptureTheFlag.CaptureTheFlag", "question", new Object[0], 10000);
 		executeTask("events.CaptureTheFlag.CaptureTheFlag", "announce", new Object[0], 60000);
 		_log.info("CtF: start event [" + _category + "-" + _autoContinue + "]");
 	}
 	
-	public static void sayToAll(String address, String[] replacements)
+	public static void sayToAll(String address)
 	{
-		Announcements.getInstance().announceByCustomMessage(address, replacements, ChatType.CRITICAL_ANNOUNCE);
+		Announcements.getInstance().announceToAll(address, ChatType.CRITICAL_ANNOUNCE);
 	}
 	
 	public static void question()
@@ -565,7 +558,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		{
 			if ((player != null) && !player.isDead() && (player.getLevel() >= _minLevel) && (player.getLevel() <= _maxLevel) && player.getReflection().isDefault() && !player.isInOlympiadMode() && !player.isInObserverMode())
 			{
-				player.scriptRequest(new CustomMessage("scripts.events.CtF.AskPlayer", player).toString(), "events.CaptureTheFlag.CaptureTheFlag:addPlayer", new Object[0]);
+				player.scriptRequest("Do you want to participate in 'CtF'?", "events.CaptureTheFlag.CaptureTheFlag:addPlayer", new Object[0]);
 			}
 		}
 	}
@@ -574,7 +567,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 	{
 		if (players_list1.isEmpty() || players_list2.isEmpty())
 		{
-			sayToAll("scripts.events.CtF.AnnounceEventCancelled", null);
+			sayToAll("CtF: Event cancelled, not enough players.");
 			_isRegistrationActive = false;
 			_status = 0;
 			executeTask("events.CaptureTheFlag.CaptureTheFlag", "autoContinue", new Object[0], 10000);
@@ -584,20 +577,14 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		if (_time_to_start > 1)
 		{
 			_time_to_start--;
-			String[] param =
-			{
-				String.valueOf(_time_to_start),
-				String.valueOf(_minLevel),
-				String.valueOf(_maxLevel)
-			};
-			sayToAll("scripts.events.CtF.AnnouncePreStart", param);
+			sayToAll("CtF: Start in " + String.valueOf(_time_to_start) + " min. for levels " + String.valueOf(_minLevel) + "-" + String.valueOf(_maxLevel) + ". Information in the community board (alt+b).");
 			executeTask("events.CaptureTheFlag.CaptureTheFlag", "announce", new Object[0], 60000);
 		}
 		else
 		{
 			_status = 1;
 			_isRegistrationActive = false;
-			sayToAll("scripts.events.CtF.AnnounceEventStarting", null);
+			sayToAll("CtF: Registration ended, teleporting players...");
 			executeTask("events.CaptureTheFlag.CaptureTheFlag", "prepare", new Object[0], 5000);
 		}
 	}
@@ -627,19 +614,19 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		
 		if (!checkCountTeam(team))
 		{
-			show(new CustomMessage("scripts.events.CtF.MaxCountTeam", player), player);
+			show("Max Team members count.", player);
 			return;
 		}
 		
 		if (team == 1)
 		{
 			players_list1.add(player.getStoredId());
-			show(new CustomMessage("scripts.events.CtF.Registered", player), player);
+			show("You have been registered in the CtF event. Please, do not register in other events and avoid duels until countdown end.", player);
 		}
 		else if (team == 2)
 		{
 			players_list2.add(player.getStoredId());
-			show(new CustomMessage("scripts.events.CtF.Registered", player), player);
+			show("You have been registered in the CtF event. Please, do not register in other events and avoid duels until countdown end.", player);
 		}
 		else
 		{
@@ -666,14 +653,14 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 	{
 		if (first && !_isRegistrationActive)
 		{
-			show(new CustomMessage("scripts.events.Late", player), player);
+			show("Event is already running, registration closed.", player);
 			return false;
 		}
 		
 		if (first && (players_list1.contains(player.getStoredId()) || players_list2.contains(player.getStoredId())))
 		{
 			player.setRegisteredInEvent(false);
-			show(new CustomMessage("scripts.events.CtF.Cancelled", player), player);
+			show("Registration cancelled.", player);
 			if (players_list1.contains(player.getStoredId()))
 			{
 				players_list1.remove(player.getStoredId());
@@ -696,49 +683,49 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		
 		if (first && (players_list1.contains(player.getStoredId()) || players_list2.contains(player.getStoredId())))
 		{
-			show(new CustomMessage("scripts.events.CtF.Cancelled", player), player);
+			show("Registration cancelled.", player);
 			return false;
 		}
 		
 		if (player.isCursedWeaponEquipped())
 		{
-			show(new CustomMessage("scripts.events.CtF.Cancelled", player), player);
+			show("Registration cancelled.", player);
 			return false;
 		}
 		
 		if ((player.getLevel() < _minLevel) || (player.getLevel() > _maxLevel))
 		{
-			show(new CustomMessage("scripts.events.CtF.CancelledLevel", player), player);
+			show("Registration cancelled. Inconsistent level.", player);
 			return false;
 		}
 		
 		if (player.isMounted())
 		{
-			show(new CustomMessage("scripts.events.CtF.Cancelled", player), player);
+			show("Registration cancelled.", player);
 			return false;
 		}
 		
 		if (player.isInDuel())
 		{
-			show(new CustomMessage("scripts.events.CtF.CancelledDuel", player), player);
+			show("Registration cancelled. You can't participate while in a duel.", player);
 			return false;
 		}
 		
 		if (player.getTeam() != TeamType.NONE)
 		{
-			show(new CustomMessage("scripts.events.CtF.CancelledOtherEvent", player), player);
+			show("Registration cancelled. You are already participating other event.", player);
 			return false;
 		}
 		
 		if (player.isInOlympiadMode() || (first && Olympiad.isRegistered(player)))
 		{
-			show(new CustomMessage("scripts.events.CtF.CancelledOlympiad", player), player);
+			show("Registration cancelled. You are registered in the olympiad.", player);
 			return false;
 		}
 		
 		if (player.isTeleporting())
 		{
-			show(new CustomMessage("scripts.events.CtF.CancelledTeleport", player), player);
+			show("Registration cancelled. You are are teleporting.", player);
 			return false;
 		}
 		
@@ -770,7 +757,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		}
 		executeTask("events.CaptureTheFlag.CaptureTheFlag", "go", new Object[0], 60000);
 		
-		sayToAll("scripts.events.CtF.AnnounceFinalCountdown", null);
+		sayToAll("CtF: 1 minute to start.");
 	}
 	
 	public static void go()
@@ -778,7 +765,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		_status = 2;
 		upParalyzePlayers();
 		clearArena();
-		sayToAll("scripts.events.CtF.AnnounceFight", null);
+		sayToAll("CtF: >>> FIGHT!!! <<<");
 		for (Zone z : _reflection.getZones())
 		{
 			z.setType(ZoneType.Battle);
@@ -826,20 +813,22 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 		switch (win)
 		{
 			case 1:
-				sayToAll("scripts.events.CtF.AnnounceFinishedRedWins", null);
+				sayToAll("CtF: Blue wins.");
 				giveItemsToWinner(false, true, 1);
 				break;
+			
 			case 2:
-				sayToAll("scripts.events.CtF.AnnounceFinishedBlueWins", null);
+				sayToAll("CtF: Red wins.");
 				giveItemsToWinner(true, false, 1);
 				break;
+			
 			case 3:
-				sayToAll("scripts.events.CtF.AnnounceFinishedDraw", null);
+				sayToAll("CtF: Draw.");
 				giveItemsToWinner(true, true, 0);
 				break;
 		}
 		
-		sayToAll("scripts.events.CtF.AnnounceEnd", null);
+		sayToAll("CtF: Event ended. 30 sec countdown before teleporting players back.");
 		executeTask("events.CaptureTheFlag.CaptureTheFlag", "end", new Object[0], 30000);
 		_isRegistrationActive = false;
 	}
@@ -1443,7 +1432,7 @@ public class CaptureTheFlag extends Functions implements ScriptFile, OnDeathList
 			{
 				if (boxes.containsValue(player.getIP()))
 				{
-					show(new CustomMessage("scripts.events.CtF.CancelledBox", player), player);
+					show("You cannot register your second windows in this event.", player);
 					return false;
 				}
 			}

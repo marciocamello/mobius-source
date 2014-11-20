@@ -17,7 +17,6 @@ import lineage2.gameserver.handlers.UserCommandHandler;
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
@@ -88,7 +87,7 @@ public class PartyInfo implements IUserCommandHandler, ScriptFile
 		}
 		
 		activeChar.sendPacket(new SystemMessage(SystemMessage.PARTY_LEADER_S1).addString(partyLeader.getName()));
-		activeChar.sendMessage(new CustomMessage("scripts.commands.user.PartyInfo.Members", activeChar).addNumber(memberCount));
+		activeChar.sendMessage("Members: " + memberCount + "/9.");
 		activeChar.sendPacket(new SystemMessage(SystemMessage.__DASHES__));
 		return true;
 	}

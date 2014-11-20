@@ -27,7 +27,6 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Skill.SkillTargetType;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.NpcInfo;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.taskmanager.EffectTaskManager;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
@@ -109,7 +108,7 @@ public final class TrapInstance extends NpcInstance
 						
 						if (target.isPlayer())
 						{
-							target.sendMessage(new CustomMessage("common.Trap", target.getPlayer()));
+							target.sendMessage("Trap!!!");
 						}
 						
 						trap.deleteMe();

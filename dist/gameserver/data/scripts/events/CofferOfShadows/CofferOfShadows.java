@@ -23,7 +23,6 @@ import lineage2.gameserver.model.SimpleSpawner;
 import lineage2.gameserver.model.actor.listener.CharListenerList;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Util;
@@ -154,7 +153,7 @@ public final class CofferOfShadows extends Functions implements ScriptFile, OnPl
 		{
 			spawnEventManagers();
 			System.out.println("Event: Coffer of Shadows started.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.CofferofShadows.AnnounceEventStarted", null);
+			Announcements.getInstance().announceToAll("The event 'Coffer of Shadows' started. Please speak with Omega's Cat, which you can find it the town.");
 		}
 		else
 		{
@@ -181,7 +180,7 @@ public final class CofferOfShadows extends Functions implements ScriptFile, OnPl
 		{
 			unSpawnEventManagers();
 			System.out.println("Event: Coffer of Shadows stopped.");
-			Announcements.getInstance().announceByCustomMessage("scripts.events.CofferofShadows.AnnounceEventStoped", null);
+			Announcements.getInstance().announceToAll("The event 'Coffer of Shadows' stopped.");
 		}
 		else
 		{
@@ -263,11 +262,11 @@ public final class CofferOfShadows extends Functions implements ScriptFile, OnPl
 			
 			if (cnt == 1)
 			{
-				append += new CustomMessage("scripts.events.CofferofShadows.buycoffer", getSelf()).addString(price);
+				append += "Buy Coffer of Shadows for " + price + " Adena.";
 			}
 			else
 			{
-				append += new CustomMessage("scripts.events.CofferofShadows.buycoffers", getSelf()).addNumber(cnt).addString(price);
+				append += "Buy " + cnt + " Coffers of Shadows for " + price + " Adena.";
 			}
 			
 			append += "</a><br>";
@@ -286,7 +285,7 @@ public final class CofferOfShadows extends Functions implements ScriptFile, OnPl
 	{
 		if (_active)
 		{
-			Announcements.getInstance().announceToPlayerByCustomMessage(player, "scripts.events.CofferofShadows.AnnounceEventStarted", null);
+			Announcements.getInstance().announceToAll("The event 'Coffer of Shadows' started. Please speak with Omega's Cat, which you can find it the town.");
 		}
 	}
 	

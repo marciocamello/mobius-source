@@ -23,7 +23,6 @@ import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.network.serverpackets.ConfirmDlg;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.templates.StatsSet;
 
@@ -71,7 +70,7 @@ public class SummonMentor extends Skill
 			
 			if (p.isInDuel() || (p.getTeam() != TeamType.NONE))
 			{
-				activeChar.sendMessage(new CustomMessage("common.RecallInDuel", p));
+				activeChar.sendMessage("You cannot use escape skills during a duel or during event participation.");
 				return false;
 			}
 			
@@ -86,7 +85,7 @@ public class SummonMentor extends Skill
 		{
 			if (activeChar.isPlayer())
 			{
-				activeChar.sendMessage(new CustomMessage("lineage2.gameserver.skills.skillclasses.Recall.Here", (Player) activeChar));
+				activeChar.sendMessage("You may not use an escape skill here.");
 			}
 			
 			return false;

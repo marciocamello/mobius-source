@@ -22,7 +22,6 @@ import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
@@ -103,21 +102,17 @@ public class WeddingManagerInstance extends NpcInstance
 			player.setMaryAccepted(true);
 			Couple couple = CoupleManager.getInstance().getCouple(player.getCoupleId());
 			couple.marry();
-			player.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2WeddingManagerMessage", player));
+			player.sendMessage("Congratulations! You are married!");
 			player.setMaried(true);
 			player.setMaryRequest(false);
-			ptarget.sendMessage(new CustomMessage("lineage2.gameserver.model.instances.L2WeddingManagerMessage", ptarget));
+			ptarget.sendMessage("Congratulations, " + player.getName() + " and " + ptarget.getName() + " are married.");
 			ptarget.setMaried(true);
 			ptarget.setMaryRequest(false);
 			player.broadcastPacket(new MagicSkillUse(player, player, 2230, 1, 1, 0));
 			ptarget.broadcastPacket(new MagicSkillUse(ptarget, ptarget, 2230, 1, 1, 0));
 			player.broadcastPacket(new MagicSkillUse(player, player, 025, 1, 1, 0));
 			ptarget.broadcastPacket(new MagicSkillUse(ptarget, ptarget, 2025, 1, 1, 0));
-			Announcements.getInstance().announceByCustomMessage("lineage2.gameserver.model.instances.L2WeddingManagerMessage.announce", new String[]
-			{
-				player.getName(),
-				ptarget.getName()
-			});
+			Announcements.getInstance().announceToAll("Congratulations, " + player.getName() + " and " + ptarget.getName() + " have married.");
 			filename = "wedding/accepted.htm";
 			replace = ptarget.getName();
 			sendHtmlMessage(ptarget, filename, replace);

@@ -94,7 +94,7 @@ public final class Kama26BossInstance extends KamalokaBossInstance
 			if (!isDead() && !getMinionList().hasAliveMinions())
 			{
 				getMinionList().spawnMinions();
-				Functions.npcSayCustomMessage(Kama26BossInstance.this, "Kama26Boss.helpme");
+				Functions.npcSay(Kama26BossInstance.this, "What are you doing? Hurry up and help me!");
 			}
 		}
 	}

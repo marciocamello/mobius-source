@@ -87,14 +87,14 @@ public final class MasterYogi extends DefaultAI
 		if (System.currentTimeMillis() > wait_timeout1)
 		{
 			wait_timeout1 = System.currentTimeMillis() + 180000;
-			Functions.npcSayInRangeCustomMessage(actor, range, "scripts.ai.MasterYogi.Hey");
+			Functions.npcSay(actor, /* range, */"Hey~ Don't you want an S80 weapon?");
 			return true;
 		}
 		
 		if (System.currentTimeMillis() > wait_timeout2)
 		{
 			wait_timeout2 = System.currentTimeMillis() + 300000;
-			Functions.npcSayInRangeCustomMessage(actor, range, "scripts.ai.MasterYogi.Hohoho");
+			Functions.npcSay(actor, /* range, */"Hohoho... Are you brave enough to test fate?");
 			return true;
 		}
 		

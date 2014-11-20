@@ -77,7 +77,6 @@ import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.NpcInfo;
 import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.stats.Stats;
@@ -1721,7 +1720,7 @@ public class NpcInstance extends Creature
 				NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 				StringBuilder sb = new StringBuilder();
 				sb.append("<html><head><body>");
-				sb.append(new CustomMessage("lineage2.gameserver.model.instances.L2NpcInstance.WrongTeacherClass", player));
+				sb.append("I cannot teach you any skills.<br>You must find your current class teachers.");
 				sb.append("</body></html>");
 				html.setHtml(sb.toString());
 				player.sendPacket(html);

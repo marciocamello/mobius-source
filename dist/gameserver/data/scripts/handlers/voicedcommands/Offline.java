@@ -18,7 +18,6 @@ import lineage2.gameserver.handlers.VoicedCommandHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 
@@ -57,31 +56,31 @@ public class Offline extends Functions implements IVoicedCommandHandler, ScriptF
 		
 		if (activeChar.getLevel() < Config.SERVICES_OFFLINE_TRADE_MIN_LEVEL)
 		{
-			show(new CustomMessage("voicedcommandhandlers.Offline.LowLevel", activeChar).addNumber(Config.SERVICES_OFFLINE_TRADE_MIN_LEVEL), activeChar);
+			show("Minimal level to use this service is " + Config.SERVICES_OFFLINE_TRADE_MIN_LEVEL, activeChar);
 			return false;
 		}
 		
 		if (!activeChar.isInZone(Zone.ZoneType.Offshore) && Config.SERVICES_OFFLINE_TRADE_ALLOW_OFFSHORE)
 		{
-			show(new CustomMessage("trade.OfflineNoTradeZoneOnlyOffshore", activeChar), activeChar);
+			show("You cannot trade offline in this zone. Offline trade allowed only in Giran Harbor or Parnassus.", activeChar);
 			return false;
 		}
 		
 		if (!activeChar.isInStoreMode())
 		{
-			show(new CustomMessage("voicedcommandhandlers.Offline.IncorrectUse", activeChar), activeChar);
+			show("This command usable only in private store mode.", activeChar);
 			return false;
 		}
 		
 		if (activeChar.getNoChannelRemained() > 0)
 		{
-			show(new CustomMessage("voicedcommandhandlers.Offline.BanChat", activeChar), activeChar);
+			show("You can't use this service while your chat is banned.", activeChar);
 			return false;
 		}
 		
 		if (activeChar.isActionBlocked(Zone.BLOCKED_ACTION_PRIVATE_STORE))
 		{
-			show(new CustomMessage("trade.OfflineNoTradeZone", activeChar), activeChar);
+			show("You cannot trade offline in this zone.", activeChar);
 			return false;
 		}
 		
@@ -89,7 +88,7 @@ public class Offline extends Functions implements IVoicedCommandHandler, ScriptF
 		{
 			if (getItemCount(activeChar, Config.SERVICES_OFFLINE_TRADE_PRICE_ITEM) < Config.SERVICES_OFFLINE_TRADE_PRICE)
 			{
-				show(new CustomMessage("voicedcommandhandlers.Offline.NotEnough", activeChar).addItemName(Config.SERVICES_OFFLINE_TRADE_PRICE_ITEM).addNumber(Config.SERVICES_OFFLINE_TRADE_PRICE), activeChar);
+				show("Price of this service " + Config.SERVICES_OFFLINE_TRADE_PRICE_ITEM + " x " + Config.SERVICES_OFFLINE_TRADE_PRICE, activeChar);
 				return false;
 			}
 			

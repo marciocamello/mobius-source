@@ -70,7 +70,7 @@ public final class Kama63Minion extends Fighter
 		else if (!_spawned)
 		{
 			_spawned = true;
-			Functions.npcSayCustomMessage(_boss, "Kama63Boss");
+			Functions.npcSay(_boss, "Come out! My subordinate! I summon you to drive them out!");
 			final NpcInstance minion = getActor();
 			minion.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, _boss.getAggroList().getRandomHated(), Rnd.get(1, 100));
 			_dieTask = ThreadPoolManager.getInstance().schedule(new DieScheduleTimerTask(minion, _boss), MINION_DIE_TIME);
@@ -158,7 +158,7 @@ public final class Kama63Minion extends Fighter
 				_master.setCurrentHp(_master.getCurrentHp() + (_minion.getCurrentHp() * 5), false);
 			}
 			
-			Functions.npcSayCustomMessage(_minion, "Kama63Minion");
+			Functions.npcSay(_minion, "There's not much I can do, but I will risk my life to help you!");
 			_minion.doDie(_minion);
 		}
 	}

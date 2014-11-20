@@ -37,7 +37,6 @@ import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.Revive;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.skills.EffectType;
 import lineage2.gameserver.stats.Stats;
@@ -271,7 +270,7 @@ public abstract class Playable extends Creature
 		
 		if (player.isInObserverMode())
 		{
-			player.sendMessage(new CustomMessage("lineage2.gameserver.model.L2Playable.OutOfControl.ObserverNoAttack", player));
+			player.sendMessage("Can't attack in observer mode.");
 			return;
 		}
 		

@@ -18,7 +18,6 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.UnitMember;
 import lineage2.gameserver.network.serverpackets.NickNameChanged;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.utils.Util;
 
 /**
@@ -91,7 +90,7 @@ public class RequestGiveNickName extends L2GameClientPacket
 		}
 		else
 		{
-			activeChar.sendMessage(new CustomMessage("lineage2.gameserver.clientpackets.RequestGiveNickName.NotInClan", activeChar));
+			activeChar.sendMessage("Target does not belong to your clan.");
 		}
 	}
 }

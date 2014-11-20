@@ -28,7 +28,6 @@ import lineage2.gameserver.model.base.AcquireType;
 import lineage2.gameserver.model.base.SubClassType;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -230,7 +229,7 @@ public class CertificationFunctions
 		
 		if (!isDualClassReset)
 		{
-			Functions.show(new CustomMessage("scripts.services.SubclassSkills.SkillsDeleted", player), player);
+			Functions.show("Skills deleted", player);
 		}
 	}
 	

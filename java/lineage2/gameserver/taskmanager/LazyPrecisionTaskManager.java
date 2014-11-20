@@ -26,7 +26,6 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExBR_PremiumState;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
-import lineage2.gameserver.network.serverpackets.components.CustomMessage;
 
 /**
  * @author Mobius
@@ -109,7 +108,7 @@ public class LazyPrecisionTaskManager extends SteppingRunnableQueueManager
 					player.getParty().recalculatePartyData();
 				}
 				
-				String msg = new CustomMessage("scripts.services.RateBonus.LuckEnded", player).toString();
+				String msg = "Your luck is now at normal value.";
 				player.sendPacket(new ExShowScreenMessage(msg, 10000, ScreenMessageAlign.TOP_CENTER, true), new ExBR_PremiumState(player, false));
 				player.sendMessage(msg);
 				

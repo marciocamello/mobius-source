@@ -173,9 +173,9 @@ public final class SquashAI extends Fighter
 	private final static int Squash_Poisoned = 4514;
 	private static final String[] textOnSpawn = new String[]
 	{
-		"scripts.events.TheFallHarvest.SquashAI.textOnSpawn.0",
-		"scripts.events.TheFallHarvest.SquashAI.textOnSpawn.1",
-		"scripts.events.TheFallHarvest.SquashAI.textOnSpawn.2"
+		"I only have to drink nectar to be able to grow up...",
+		"Come, believe me, sprinkle a nectar! I can certainly turn the big pumpkin!!!",
+		"Take nectar to come, pumpkin nectar!"
 	};
 	private static final String[] textOnAttack = new String[]
 	{
@@ -278,7 +278,7 @@ public final class SquashAI extends Fighter
 	{
 		super(actor);
 		_npcId = getActor().getId();
-		Functions.npcSayCustomMessage(getActor(), textOnSpawn[Rnd.get(textOnSpawn.length)]);
+		Functions.npcSay(getActor(), textOnSpawn[Rnd.get(textOnSpawn.length)]);
 		_timeToUnspawn = System.currentTimeMillis() + 120000;
 	}
 	
