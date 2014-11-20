@@ -94,7 +94,6 @@ import lineage2.gameserver.instancemanager.CursedWeaponsManager;
 import lineage2.gameserver.instancemanager.MatchingRoomManager;
 import lineage2.gameserver.instancemanager.QuestManager;
 import lineage2.gameserver.instancemanager.ReflectionManager;
-import lineage2.gameserver.instancemanager.WorldStatisticsManager;
 import lineage2.gameserver.instancemanager.games.HandysBlockCheckerManager;
 import lineage2.gameserver.instancemanager.games.HandysBlockCheckerManager.ArenaParticipantsHolder;
 import lineage2.gameserver.listener.actor.player.OnAnswerListener;
@@ -185,7 +184,6 @@ import lineage2.gameserver.model.pledge.UnitMember;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestEventType;
 import lineage2.gameserver.model.quest.QuestState;
-import lineage2.gameserver.model.worldstatistics.CategoryType;
 import lineage2.gameserver.network.GameClient;
 import lineage2.gameserver.network.serverpackets.AbnormalStatusUpdate;
 import lineage2.gameserver.network.serverpackets.AutoAttackStart;
@@ -3165,7 +3163,6 @@ public final class Player extends Playable implements PlayerGroup
 			_pet.broadcastStatusUpdate();
 		}
 		
-		WorldStatisticsManager.getInstance().updateStat(this, CategoryType.EXP_ADDED, addToExp);
 		updateStats();
 	}
 	
@@ -4343,14 +4340,6 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 		
-		if ((item.getId() == ItemTemplate.ITEM_ID_ADENA))
-		{
-			if (item.getOwnerId() == 0)
-			{
-				WorldStatisticsManager.getInstance().updateStat(this, CategoryType.ADENA_ADDED, item.getCount());
-			}
-		}
-		
 		Log.LogItem(this, log, item);
 		sendPacket(SystemMessage2.obtainItems(item));
 		getInventory().addItem(item);
@@ -4526,10 +4515,6 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if (attacker.isPlayer() && (Math.abs(attacker.getLevel() - getLevel()) > 10))
 		{
-			WorldStatisticsManager.getInstance().updateStat(attacker.getPlayer(), CategoryType.DAMAGE_TO_PC, (long) damage);
-			WorldStatisticsManager.getInstance().updateStat(attacker.getPlayer(), CategoryType.DAMAGE_TO_PC_MAX, getActiveClassId(), (long) damage);
-			WorldStatisticsManager.getInstance().updateStat(this, CategoryType.DAMAGE_FROM_PC, (long) damage);
-			
 			if ((attacker.getKarma() > 0) && (getEffectList().getEffectsBySkillId(5182) != null) && !isInZone(ZoneType.Siege))
 			{
 				return;
@@ -4542,11 +4527,6 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		
 		super.reduceCurrentHp(damage, reflectableDamage, attacker, skill, awake, standUp, directHp, canReflect, transferDamage, isDot, sendMessage);
-		
-		if (attacker.getPlayer() == null)
-		{
-			WorldStatisticsManager.getInstance().updateStat(this, CategoryType.DAMAGE_FROM_MONSTERS, getClassId().getId(), (long) damage);
-		}
 	}
 	
 	/**
@@ -4684,8 +4664,6 @@ public final class Player extends Playable implements PlayerGroup
 		final int pkCountMulti = Math.max(killer.getPkKills() / 2, 1);
 		killer.decreaseKarma(Config.KARMA_MIN_KARMA * pkCountMulti);
 		killer.setPkKills(killer.getPkKills() + 1);
-		WorldStatisticsManager.getInstance().updateStat(killer, CategoryType.PK_COUNT, 1);
-		WorldStatisticsManager.getInstance().updateStat(this, CategoryType.KILLED_BY_PK_COUNT, 1);
 	}
 	
 	/**
@@ -4706,7 +4684,6 @@ public final class Player extends Playable implements PlayerGroup
 			}
 			
 			killer.setNameColor(Config.PK_KILLER_NAME_COLOR);
-			WorldStatisticsManager.getInstance().updateStat(killer, CategoryType.PVP_COUNT, 1);
 		}
 	}
 	
@@ -4791,8 +4768,6 @@ public final class Player extends Playable implements PlayerGroup
 			if ((_pvpFlag > 0) || war)
 			{
 				pk.setPvpKills(pk.getPvpKills() + 1);
-				WorldStatisticsManager.getInstance().updateStat(pk, CategoryType.PVP_COUNT, 1);
-				WorldStatisticsManager.getInstance().updateStat(this, CategoryType.KILLED_IN_PVP_COUNT, 1);
 			}
 			else
 			{
@@ -5000,13 +4975,6 @@ public final class Player extends Playable implements PlayerGroup
 			{
 				processQuestEvent(q.getName(), "CE30", null);
 			}
-		}
-		
-		WorldStatisticsManager.getInstance().updateStat(this, CategoryType.DIE_COUNT, 1);
-		
-		if ((killer != null) && (killer.getPlayer() == null))
-		{
-			WorldStatisticsManager.getInstance().updateStat(this, CategoryType.KILLED_BY_MONSTER_COUNT, 1);
 		}
 		
 		super.onDeath(killer);
@@ -6811,12 +6779,6 @@ public final class Player extends Playable implements PlayerGroup
 				statement.setLong(20, getDeleteClanTime() / 1000L);
 				statement.setLong(21, _NoChannel > 0 ? getNoChannelRemained() / 1000 : _NoChannel);
 				statement.setInt(22, (int) (_onlineBeginTime > 0 ? ((_onlineTime + System.currentTimeMillis()) - _onlineBeginTime) / 1000L : _onlineTime / 1000L));
-				
-				if (_onlineBeginTime > 0L)
-				{
-					WorldStatisticsManager.getInstance().updateStat(this, CategoryType.TIME_PLAYED, (System.currentTimeMillis() - _onlineBeginTime) / 1000);
-				}
-				
 				statement.setInt(23, getPledgeType());
 				statement.setInt(24, getPowerGrade());
 				statement.setInt(25, getLvlJoinedAcademy());
@@ -10080,9 +10042,6 @@ public final class Player extends Playable implements PlayerGroup
 			pkt.addName(reviver).addString(Math.round(percent) + " percent");
 			ask(pkt, new ReviveAnswerListener(this, percent, pet));
 		}
-		
-		WorldStatisticsManager.getInstance().updateStat(reviver, CategoryType.RESURRECTED_CHAR_COUNT, 1);
-		WorldStatisticsManager.getInstance().updateStat(this, CategoryType.RESURRECTED_BY_OTHER_COUNT, 1);
 	}
 	
 	/**

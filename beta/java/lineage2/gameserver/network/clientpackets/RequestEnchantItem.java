@@ -15,14 +15,12 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.instancemanager.WorldStatisticsManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.PcInventory;
 import lineage2.gameserver.model.items.etcitems.EnchantScrollInfo;
 import lineage2.gameserver.model.items.etcitems.EnchantScrollManager;
 import lineage2.gameserver.model.items.etcitems.EnchantScrollType;
-import lineage2.gameserver.model.worldstatistics.CategoryType;
 import lineage2.gameserver.network.serverpackets.EnchantResult;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
@@ -220,15 +218,6 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 			
 			chance = Math.min(chance, 100);
 			
-			if (item.isArmor())
-			{
-				WorldStatisticsManager.getInstance().updateStat(player, CategoryType.ARMOR_ENCHANT_TRY, item.getCrystalType().ordinal(), item.getEnchantLevel() + 1);
-			}
-			else if (item.isWeapon())
-			{
-				WorldStatisticsManager.getInstance().updateStat(player, CategoryType.WEAPON_ENCHANT_TRY, item.getCrystalType().ordinal(), item.getEnchantLevel() + 1);
-			}
-			
 			if (Rnd.chance(chance))
 			{
 				item.setEnchantLevel(item.getEnchantLevel() + _EnchantAmount);
@@ -245,16 +234,6 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 				InventoryUpdate iu = new InventoryUpdate();
 				iu.addModifiedItem(item);
 				player.sendPacket(iu);
-				
-				if (item.isArmor())
-				{
-					WorldStatisticsManager.getInstance().updateStat(player, CategoryType.ARMOR_ENCHANT_MAX, item.getCrystalType().ordinal(), item.getEnchantLevel());
-				}
-				
-				if (item.isWeapon())
-				{
-					WorldStatisticsManager.getInstance().updateStat(player, CategoryType.WEAPON_ENCHANT_MAX, item.getCrystalType().ordinal(), item.getEnchantLevel());
-				}
 				
 				player.sendPacket(new EnchantResult(0, 0, 0L, item.getEnchantLevel()));
 				

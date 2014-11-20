@@ -29,13 +29,11 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.instancemanager.ReflectionManager;
-import lineage2.gameserver.instancemanager.WorldStatisticsManager;
 import lineage2.gameserver.model.base.Experience;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.items.ItemInstance;
-import lineage2.gameserver.model.worldstatistics.CategoryType;
 import lineage2.gameserver.network.serverpackets.ExAskModifyPartyLooting;
 import lineage2.gameserver.network.serverpackets.ExMPCCClose;
 import lineage2.gameserver.network.serverpackets.ExMPCCOpen;
@@ -435,11 +433,6 @@ public class Party implements PlayerGroup
 		boolean dissolve = false;
 		synchronized (_members)
 		{
-			if (_members.size() == 7)
-			{
-				WorldStatisticsManager.getInstance().updateStat(player, CategoryType.TIME_IN_FULLPARTY, (System.currentTimeMillis() - player.getStartingTimeInFullParty()) / 1000);
-			}
-			
 			if (!_members.remove(player))
 			{
 				return false;
@@ -450,7 +443,6 @@ public class Party implements PlayerGroup
 		removeTacticalSigns(player);
 		player.getListeners().onPartyLeave();
 		player.setParty(null);
-		WorldStatisticsManager.getInstance().updateStat(player, CategoryType.TIME_IN_PARTY, (System.currentTimeMillis() - player.getStartingTimeInParty()) / 1000);
 		recalculatePartyData();
 		List<L2GameServerPacket> pplayer = new ArrayList<>(4 + (_members.size() * 2));
 		
@@ -527,16 +519,6 @@ public class Party implements PlayerGroup
 					{
 						leader.broadcastPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(1));
 					}
-				}
-			}
-			
-			if (leader != null)
-			{
-				WorldStatisticsManager.getInstance().updateStat(leader, CategoryType.TIME_IN_PARTY, (System.currentTimeMillis() - leader.getStartingTimeInParty()) / 1000);
-				
-				if (leader.getStartingTimeInFullParty() != 0)
-				{
-					WorldStatisticsManager.getInstance().updateStat(leader, CategoryType.TIME_IN_FULLPARTY, (System.currentTimeMillis() - leader.getStartingTimeInFullParty()) / 1000);
 				}
 			}
 			
