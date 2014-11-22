@@ -1,9 +1,6 @@
-Pantheon:
-
-Welcome to the Talking Island! Ask me anything you need to know.
-
-[scripts_Util:Gatekeeper -114711 243911 -7968 0|Move to Museum]<br1>
-
-[npc_%objectId%_Chat 1|"Tell me about this place!"]<br1>
-
-[npc_%objectId%_Quest|Quest]
+<html><body>Pantheon:<br>
+Welcome to the Talking Island! Ask me anything you need to know.<br>
+<Button ALIGN=LEFT ICON="TELEPORT" action="bypass -h scripts_Util:Gatekeeper -114711 243911 -7968 0">Move to Museum</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_Chat 1">"Tell me about this place!"</Button>
+<Button ALIGN=LEFT ICON="QUEST" action="bypass -h npc_%objectId%_Quest">Quest</Button>
+</body></html>

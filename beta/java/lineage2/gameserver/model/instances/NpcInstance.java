@@ -1305,25 +1305,25 @@ public class NpcInstance extends Creature
 						}
 					}
 					
-					sb.append("[scripts_Util:Gatekeeper ").append(tl.getX()).append(' ').append(tl.getY()).append(' ').append(tl.getZ());
+					sb.append("<Button ALIGN=LEFT ICON=\"TELEPORT\" action=\"bypass -h scripts_Util:Gatekeeper ").append(tl.getX()).append(' ').append(tl.getY()).append(' ').append(tl.getZ());
 					
 					if (tl.getCastleId() != 0)
 					{
 						sb.append(' ').append(tl.getCastleId());
 					}
 					
-					sb.append(' ').append((long) (tl.getPrice() * pricemod)).append(" @811;F;").append(tl.getName()).append('|').append(HtmlUtils.htmlNpcString(tl.getName()));
+					sb.append(' ').append((long) (tl.getPrice() * pricemod)).append(" @811;F;").append(tl.getName()).append("\">").append(HtmlUtils.htmlNpcString(tl.getName()));
 					
 					if ((tl.getPrice() * pricemod) > 0)
 					{
 						sb.append(" - ").append((long) (tl.getPrice() * pricemod)).append(' ').append(HtmlUtils.htmlItemName(ItemTemplate.ITEM_ID_ADENA));
 					}
 					
-					sb.append("]<br1>\n");
+					sb.append("</Button>");
 				}
 				else
 				{
-					sb.append("[scripts_Util:QuestGatekeeper ").append(tl.getX()).append(' ').append(tl.getY()).append(' ').append(tl.getZ()).append(' ').append(tl.getPrice()).append(' ').append(tl.getItem().getId()).append(" @811;F;").append('|').append(HtmlUtils.htmlNpcString(tl.getName())).append(" - ").append(tl.getPrice()).append(' ').append(HtmlUtils.htmlItemName(tl.getItem().getId())).append("]<br1>\n");
+					sb.append("<Button ALIGN=LEFT ICON=\"TELEPORT\" action=\"bypass -h scripts_Util:Gatekeeper ").append(tl.getX()).append(' ').append(tl.getY()).append(' ').append(tl.getZ()).append(' ').append(tl.getPrice()).append(' ').append(tl.getItem().getId()).append(" @811;F;\">").append(HtmlUtils.htmlNpcString(tl.getName())).append(" - ").append(tl.getPrice()).append(' ').append(HtmlUtils.htmlItemName(tl.getItem().getId())).append("</Button>");
 				}
 			}
 		}
@@ -1689,16 +1689,7 @@ public class NpcInstance extends Creature
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			StringBuilder sb = new StringBuilder();
 			sb.append("<html><head><body>");
-			
-			if (player.getVar("lang@").equalsIgnoreCase("en"))
-			{
-				sb.append("I cannot teach you. My class list is empty.<br> Ask admin to fix it. <br>NpcId:" + npcId + ", Your classId:" + player.getClassId().getId() + "<br>");
-			}
-			else
-			{
-				sb.append("Я не могу обучит�? теб�?. Дл�? твоего кла�?�?а мой �?пи�?ок пу�?т.<br> Св�?жи�?�? �? админом дл�? фик�?а �?того. <br>NpcId:" + npcId + ", твой classId:" + player.getClassId().getId() + "<br>");
-			}
-			
+			sb.append("I cannot teach you. My class list is empty.<br> Ask admin to fix it. <br>NpcId:" + npcId + ", Your classId:" + player.getClassId().getId() + "<br>");
 			sb.append("</body></html>");
 			html.setHtml(sb.toString());
 			player.sendPacket(html);

@@ -1689,16 +1689,7 @@ public class NpcInstance extends Creature
 			NpcHtmlMessage html = new NpcHtmlMessage(player, this);
 			StringBuilder sb = new StringBuilder();
 			sb.append("<html><head><body>");
-			
-			if (player.getVar("lang@").equalsIgnoreCase("en"))
-			{
-				sb.append("I cannot teach you. My class list is empty.<br> Ask admin to fix it. <br>NpcId:" + npcId + ", Your classId:" + player.getClassId().getId() + "<br>");
-			}
-			else
-			{
-				sb.append("Я не могу обучит�? теб�?. Дл�? твоего кла�?�?а мой �?пи�?ок пу�?т.<br> Св�?жи�?�? �? админом дл�? фик�?а �?того. <br>NpcId:" + npcId + ", твой classId:" + player.getClassId().getId() + "<br>");
-			}
-			
+			sb.append("I cannot teach you. My class list is empty.<br> Ask admin to fix it. <br>NpcId:" + npcId + ", Your classId:" + player.getClassId().getId() + "<br>");
 			sb.append("</body></html>");
 			html.setHtml(sb.toString());
 			player.sendPacket(html);

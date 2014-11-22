@@ -1,11 +1,8 @@
-Смотритель Склада Руйман:
-
-*[Личный склад]*
-
-[npc_%objectId%_DepositP|Положить предмет]
-
-[npc_%objectId%_WithdrawP 0|Забрать предмет (Список)]
-
-[npc_%objectId%_WithdrawP 99|Забрать предмет (Выбор)]
-
-[npc_%objectId%_Chat 0|Назад]
+<html><body>Warehouse Keeper Ruiman:<br>
+<center>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_DepositP">Deposit an item. (Private Warehouse)</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_WithdrawP 0">Withdraw an item. (Private Warehouse) (List all)</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_WithdrawP 99">Withdraw an item. (Private Warehouse) (Select)</Button>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_Chat 0">Return</Button>
+</center>
+</body></html>
