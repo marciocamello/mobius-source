@@ -427,4 +427,436 @@
 		<set name="icon" value="icon.etc_ev_draco_exp_up"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
+	<armor id="35761" name="Rabbit Ears" add_name="CON">
+		<set name="icon" value="icon.accessory_rabbit_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="CON" order="0x10" value="3"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35762" name="Rabbit Ears" add_name="MEN">
+		<set name="icon" value="icon.accessory_rabbit_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="MEN" order="0x10" value="3"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35763" name="Rabbit Ears" add_name="INT">
+		<set name="icon" value="icon.accessory_rabbit_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="INT" order="0x10" value="3"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35764" name="Rabbit Ears" add_name="WIT">
+		<set name="icon" value="icon.accessory_rabbit_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="WIT" order="0x10" value="3"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35765" name="Rabbit Ears" add_name="Critical Rate">
+		<set name="icon" value="icon.accessory_rabbit_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="rCrit" order="0x10" value="50"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35766" name="Rabbit Ears" add_name="Critical Damage">
+		<set name="icon" value="icon.accessory_rabbit_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="cAtk" order="0x10" value="90"/>
+			<add stat="mCritDamage" order="0x10" value="68"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35767" name="Rabbit Ears" add_name="P.Def">
+		<set name="icon" value="icon.accessory_rabbit_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<mul stat="pDef" order="0x30" value="1.05"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35768" name="Rabbit Ears" add_name="M.Def">
+		<set name="icon" value="icon.accessory_rabbit_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<mul stat="mDef" order="0x30" value="1.05"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35769" name="Rabbit Ears" add_name="Evasion">
+		<set name="icon" value="icon.accessory_rabbit_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="rEvas" order="0x10" value="5"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35770" name="Rabbit Ears" add_name="P.Atk">
+		<set name="icon" value="icon.accessory_rabbit_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<mul stat="pAtk" order="0x30" value="1.05"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35771" name="Rabbit Ears" add_name="M.Atk">
+		<set name="icon" value="icon.accessory_rabbit_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<mul stat="mAtk" order="0x30" value="1.10"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35772" name="Rabbit Ears" add_name="Accuracy">
+		<set name="icon" value="icon.accessory_rabbit_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="accCombat" order="0x10" value="5"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35773" name="Raccoon Ears" add_name="STR">
+		<set name="icon" value="icon.accessory_racoon_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="STR" order="0x10" value="3"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35774" name="Raccoon Ears" add_name="DEX">
+		<set name="icon" value="icon.accessory_racoon_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="DEX" order="0x10" value="3"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35775" name="Raccoon Ears" add_name="INT">
+		<set name="icon" value="icon.accessory_racoon_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="INT" order="0x10" value="3"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35776" name="Raccoon Ears" add_name="WIT">
+		<set name="icon" value="icon.accessory_racoon_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="WIT" order="0x10" value="3"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35777" name="Raccoon Ears" add_name="Critical Rate">
+		<set name="icon" value="icon.accessory_racoon_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="rCrit" order="0x10" value="50"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35778" name="Raccoon Ears" add_name="Critical Damage">
+		<set name="icon" value="icon.accessory_racoon_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="cAtk" order="0x10" value="90"/>
+			<add stat="mCritDamage" order="0x10" value="68"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35779" name="Raccoon Ears" add_name="P.Def">
+		<set name="icon" value="icon.accessory_racoon_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<mul stat="pDef" order="0x30" value="1.05"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35780" name="Raccoon Ears" add_name="M.Def">
+		<set name="icon" value="icon.accessory_racoon_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<mul stat="mDef" order="0x30" value="1.05"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35781" name="Raccoon Ears" add_name="Evasion">
+		<set name="icon" value="icon.accessory_racoon_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="rEvas" order="0x10" value="5"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35782" name="Raccoon Ears" add_name="P.Atk">
+		<set name="icon" value="icon.accessory_racoon_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<mul stat="pAtk" order="0x30" value="1.05"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35783" name="Raccoon Ears" add_name="M.Atk">
+		<set name="icon" value="icon.accessory_racoon_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<mul stat="mAtk" order="0x30" value="1.10"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35784" name="Raccoon Ears" add_name="Accuracy">
+		<set name="icon" value="icon.accessory_racoon_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="accCombat" order="0x10" value="5"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35785" name="Cat Ears" add_name="STR">
+		<set name="icon" value="icon.accessory_cat_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="STR" order="0x10" value="3"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35786" name="Cat Ears" add_name="DEX">
+		<set name="icon" value="icon.accessory_cat_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="DEX" order="0x10" value="3"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35787" name="Cat Ears" add_name="CON">
+		<set name="icon" value="icon.accessory_cat_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="CON" order="0x10" value="3"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35788" name="Cat Ears" add_name="MEN">
+		<set name="icon" value="icon.accessory_cat_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="MEN" order="0x10" value="3"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35789" name="Cat Ears" add_name="Critical Rate">
+		<set name="icon" value="icon.accessory_cat_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="rCrit" order="0x10" value="50"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35790" name="Cat Ears" add_name="Critical Damage">
+		<set name="icon" value="icon.accessory_cat_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="cAtk" order="0x10" value="90"/>
+			<add stat="mCritDamage" order="0x10" value="68"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35791" name="Cat Ears" add_name="P.Def">
+		<set name="icon" value="icon.accessory_cat_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<mul stat="pDef" order="0x30" value="1.05"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35792" name="Cat Ears" add_name="M.Def">
+		<set name="icon" value="icon.accessory_cat_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<mul stat="mDef" order="0x30" value="1.05"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35793" name="Cat Ears" add_name="Evasion">
+		<set name="icon" value="icon.accessory_cat_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="rEvas" order="0x10" value="5"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35794" name="Cat Ears" add_name="P.Atk">
+		<set name="icon" value="icon.accessory_cat_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<mul stat="pAtk" order="0x30" value="1.05"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35795" name="Cat Ears" add_name="M.Atk">
+		<set name="icon" value="icon.accessory_cat_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<mul stat="mAtk" order="0x30" value="1.10"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35796" name="Cat Ears" add_name="Accuracy">
+		<set name="icon" value="icon.accessory_cat_ear_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR"/>
+		</equip>
+		<for>
+			<add stat="accCombat" order="0x10" value="5"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35797" name="Romantic Chapeau" add_name="STR">
+		<set name="icon" value="icon.accessory_romantic_chaperon_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+		<for>
+			<add stat="STR" order="0x10" value="3"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35798" name="Romantic Chapeau" add_name="DEX">
+		<set name="icon" value="icon.accessory_romantic_chaperon_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+		<for>
+			<add stat="DEX" order="0x10" value="3"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
+	<armor id="35799" name="Romantic Chapeau" add_name="CON">
+		<set name="icon" value="icon.accessory_romantic_chaperon_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+		<for>
+			<add stat="CON" order="0x10" value="3"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
 </list>
