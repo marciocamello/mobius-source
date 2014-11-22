@@ -1,6 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
+	<armor id="35900" name="Refined Devil Horn" add_name="Evasion">
+		<set name="icon" value="icon.accessory_devil_horn_i00"/>
+		<set name="type" value="NONE"/>
+		<equip>
+			<slot id="HAIR_ALL"/>
+		</equip>
+		<for>
+			<add stat="rEvas" order="0x10" value="5"/>
+		</for>
+		<set name="weight" value="10"/>
+	</armor>
 	<etcitem id="35901" name="STR Pendant">
 		<set name="icon" value="icon.etc_hairacc_pandent_i00"/>
 		<set name="weight" value="10"/>
@@ -94,6 +105,9 @@
 		<equip>
 			<slot id="HAIR_ALL"/>
 		</equip>
+		<for>
+			<add stat="STR" order="0x10" value="3"/>
+		</for>
 	</armor>
 	<armor id="35916" name="Draco's Hat" add_name="DEX (Event)">
 		<set name="crystal_type" value="NONE"/>
@@ -104,6 +118,9 @@
 		<equip>
 			<slot id="HAIR_ALL"/>
 		</equip>
+		<for>
+			<add stat="DEX" order="0x10" value="3"/>
+		</for>
 	</armor>
 	<armor id="35917" name="Draco's Hat" add_name="CON (Event)">
 		<set name="crystal_type" value="NONE"/>
@@ -114,6 +131,9 @@
 		<equip>
 			<slot id="HAIR_ALL"/>
 		</equip>
+		<for>
+			<add stat="CON" order="0x10" value="3"/>
+		</for>
 	</armor>
 	<armor id="35918" name="Draco's Hat" add_name="MEN (Event)">
 		<set name="crystal_type" value="NONE"/>
@@ -124,6 +144,9 @@
 		<equip>
 			<slot id="HAIR_ALL"/>
 		</equip>
+		<for>
+			<add stat="MEN" order="0x10" value="3"/>
+		</for>
 	</armor>
 	<armor id="35919" name="Draco's Hat" add_name="INT (Event)">
 		<set name="crystal_type" value="NONE"/>
@@ -134,6 +157,9 @@
 		<equip>
 			<slot id="HAIR_ALL"/>
 		</equip>
+		<for>
+			<add stat="INT" order="0x10" value="3"/>
+		</for>
 	</armor>
 	<armor id="35920" name="Draco's Hat" add_name="WIT (Event)">
 		<set name="crystal_type" value="NONE"/>
@@ -144,6 +170,9 @@
 		<equip>
 			<slot id="HAIR_ALL"/>
 		</equip>
+		<for>
+			<add stat="WIT" order="0x10" value="3"/>
+		</for>
 	</armor>
 	<armor id="35921" name="Draco's Hat" add_name="Critical Rate (Event)">
 		<set name="crystal_type" value="NONE"/>
@@ -154,6 +183,9 @@
 		<equip>
 			<slot id="HAIR_ALL"/>
 		</equip>
+		<for>
+			<add stat="rCrit" order="0x10" value="50"/>
+		</for>
 	</armor>
 	<armor id="35922" name="Draco's Hat" add_name="Critical Damage (Event)">
 		<set name="crystal_type" value="NONE"/>
@@ -164,8 +196,12 @@
 		<equip>
 			<slot id="HAIR_ALL"/>
 		</equip>
+		<for>
+			<add stat="cAtk" order="0x10" value="90"/>
+			<add stat="mCritDamage" order="0x10" value="68"/>
+		</for>
 	</armor>
-	<armor id="35923" name="Draco's Hat" add_name="P. Def. (Event)">
+	<armor id="35923" name="Draco's Hat" add_name="P. Def (Event)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_ev_draco_hair_acc"/>
 		<set name="price" value="500000"/>
@@ -174,8 +210,11 @@
 		<equip>
 			<slot id="HAIR_ALL"/>
 		</equip>
+		<for>
+			<mul stat="pDef" order="0x30" value="1.05"/>
+		</for>
 	</armor>
-	<armor id="35924" name="Draco's Hat" add_name="M. Def. (Event)">
+	<armor id="35924" name="Draco's Hat" add_name="M. Def (Event)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_ev_draco_hair_acc"/>
 		<set name="price" value="500000"/>
@@ -184,6 +223,9 @@
 		<equip>
 			<slot id="HAIR_ALL"/>
 		</equip>
+		<for>
+			<mul stat="mDef" order="0x30" value="1.05"/>
+		</for>
 	</armor>
 	<armor id="35925" name="Draco's Hat" add_name="Evasion (Event)">
 		<set name="crystal_type" value="NONE"/>
@@ -194,8 +236,11 @@
 		<equip>
 			<slot id="HAIR_ALL"/>
 		</equip>
+		<for>
+			<add stat="rEvas" order="0x10" value="5"/>
+		</for>
 	</armor>
-	<armor id="35926" name="Draco's Hat" add_name="P. Atk. (Event)">
+	<armor id="35926" name="Draco's Hat" add_name="P. Atk (Event)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_ev_draco_hair_acc"/>
 		<set name="price" value="500000"/>
@@ -204,8 +249,11 @@
 		<equip>
 			<slot id="HAIR_ALL"/>
 		</equip>
+		<for>
+			<mul stat="pAtk" order="0x30" value="1.05"/>
+		</for>
 	</armor>
-	<armor id="35927" name="Draco's Hat" add_name="M. Atk. (Event)">
+	<armor id="35927" name="Draco's Hat" add_name="M. Atk (Event)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_ev_draco_hair_acc"/>
 		<set name="price" value="500000"/>
@@ -214,6 +262,9 @@
 		<equip>
 			<slot id="HAIR_ALL"/>
 		</equip>
+		<for>
+			<mul stat="mAtk" order="0x30" value="1.10"/>
+		</for>
 	</armor>
 	<armor id="35928" name="Draco's Hat" add_name="Accuracy (Event)">
 		<set name="crystal_type" value="NONE"/>
@@ -224,6 +275,9 @@
 		<equip>
 			<slot id="HAIR_ALL"/>
 		</equip>
+		<for>
+			<add stat="accCombat" order="0x10" value="5"/>
+		</for>
 	</armor>
 	<armor id="35929" name="Mysterious Ring">
 		<set name="crystal_type" value="NONE"/>

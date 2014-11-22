@@ -81,3 +81,4 @@ ID		Item	Grade Type	Item Name
 11081	Armors	R99	Dark	<!-- Dark Eternal Armors (Improved Attack) -->
 11082	Armors	R99	Dark	<!-- Dark Eternal Armors (Improved Defense) -->
 11083	Jewels	R	Blessed	<!-- Blessed Awakening Boss Jewels -->
+11084	Hair Accessories II 
