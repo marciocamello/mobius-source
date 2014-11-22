@@ -220,7 +220,13 @@ public final class ItemFunctions
 		
 		if (!player.isAwaking())
 		{
-			if ((player.getRace() == Race.kamael) && ((item.getItemType() == ArmorType.HEAVY) || (item.getItemType() == ArmorType.MAGIC) || (item.getItemType() == ArmorType.SIGIL) || (item.getItemType() == WeaponType.NONE)))
+			// Ertheia Update - Kamael can use robes and heavy armors.
+			if ((player.getRace() == Race.kamael) && ((item.getItemType() == ArmorType.SIGIL) || (item.getItemType() == WeaponType.NONE)))
+			{
+				return new SystemMessage(SystemMessage.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+			}
+			// Ertheia Update - Ertheia Wizards cannot equip shields and sigils.
+			if (((player.getRace() == Race.ertheia) && (player.isMageClass())) && ((item.getItemType() == ArmorType.SIGIL) || (item.getItemType() == WeaponType.NONE)))
 			{
 				return new SystemMessage(SystemMessage.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 			}
