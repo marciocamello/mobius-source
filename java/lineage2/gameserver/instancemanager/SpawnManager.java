@@ -191,9 +191,12 @@ public class SpawnManager
 			// }
 		}
 		
-		_log.info("SpawnManager: Spawned " + npcSpawnCount + " npcs.");
-		_log.info("SpawnManager: Spawn size: " + spawnerList.size());
-		_log.info("SpawnManager: Spawn group: " + group);
+		if (Config.DEBUG_SPAWN_MANAGER || Config.DEBUG)
+		{
+			_log.info("SpawnManager: Spawned " + npcSpawnCount + " npcs.");
+			_log.info("SpawnManager: Spawn size: " + spawnerList.size());
+			_log.info("SpawnManager: Spawn group: " + group);
+		}
 	}
 	
 	/**
