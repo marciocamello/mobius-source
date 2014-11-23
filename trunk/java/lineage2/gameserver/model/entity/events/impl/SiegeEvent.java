@@ -22,6 +22,7 @@ import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.commons.util.Rnd;
+import lineage2.gameserver.Config;
 import lineage2.gameserver.dao.SiegeClanDAO;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.instancemanager.ReflectionManager;
@@ -566,20 +567,23 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	@Override
 	protected void printInfo()
 	{
-		final long startSiegeMillis = startTimeMillis();
-		
-		/*
-		 * if (startSiegeMillis == 0) { info(getName() + " time - undefined"); } else { info(getName() + " time - " + TimeUtils.toSimpleFormat(startSiegeMillis)); }
-		 */
-		
-		info(getName());
-		if (startSiegeMillis == 0)
+		if (Config.DEBUG_EVENT_SCHEDULES || Config.DEBUG)
 		{
-			info("Time: Undefined");
-		}
-		else
-		{
-			info("Time: " + TimeUtils.toSimpleFormat(startSiegeMillis));
+			final long startSiegeMillis = startTimeMillis();
+			
+			/*
+			 * if (startSiegeMillis == 0) { info(getName() + " time - undefined"); } else { info(getName() + " time - " + TimeUtils.toSimpleFormat(startSiegeMillis)); }
+			 */
+			
+			info(getName());
+			if (startSiegeMillis == 0)
+			{
+				info("Time: Undefined");
+			}
+			else
+			{
+				info("Time: " + TimeUtils.toSimpleFormat(startSiegeMillis));
+			}
 		}
 	}
 	

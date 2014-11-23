@@ -25,6 +25,7 @@ import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.listener.Listener;
 import lineage2.commons.listener.ListenerList;
 import lineage2.commons.logging.LoggerObject;
+import lineage2.gameserver.Config;
 import lineage2.gameserver.dao.ItemsDAO;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.listener.event.OnStartStopListener;
@@ -170,8 +171,11 @@ public abstract class GlobalEvent extends LoggerObject
 	protected void printInfo()
 	{
 		// info(getName() + " time - " + TimeUtils.toSimpleFormat(startTimeMillis()));
-		info(getName());
-		info("Time: " + TimeUtils.toSimpleFormat(startTimeMillis()));
+		if (Config.DEBUG_EVENT_SCHEDULES || Config.DEBUG)
+		{
+			info(getName());
+			info("Time: " + TimeUtils.toSimpleFormat(startTimeMillis()));
+		}
 	}
 	
 	/**

@@ -206,6 +206,8 @@ public class Config
 	public static boolean SECOND_AUTH_ENABLED;
 	public static int SECOND_AUTH_MAX_ATTEMPTS;
 	public static int SECOND_AUTH_BAN_TIME;
+	public static boolean DEBUG_SPAWN_MANAGER;
+	public static boolean DEBUG_EVENT_SCHEDULES;
 	public static double ALT_RAID_RESPAWN_MULTIPLIER;
 	public static boolean ALT_ALLOW_AUGMENT_ALL;
 	public static boolean ALT_ALLOW_DROP_AUGMENTED;
@@ -906,6 +908,8 @@ public class Config
 		SECOND_AUTH_ENABLED = serverSettings.getProperty("SecondAuth", false);
 		SECOND_AUTH_MAX_ATTEMPTS = serverSettings.getProperty("SecondAuthMaxEnter", 5);
 		SECOND_AUTH_BAN_TIME = serverSettings.getProperty("SecondAuthBanTime", 480);
+		DEBUG_SPAWN_MANAGER = serverSettings.getProperty("DebugSpawnManager", false);
+		DEBUG_EVENT_SCHEDULES = serverSettings.getProperty("DebugEventSchedules", false);
 		// HIDE_GM_STATUS = serverSettings.getProperty("HideGMStatus", false);
 		SHOW_GM_LOGIN = serverSettings.getProperty("ShowGMLogin", true);
 		SAVE_GM_EFFECTS = serverSettings.getProperty("SaveGMEffects", false);
