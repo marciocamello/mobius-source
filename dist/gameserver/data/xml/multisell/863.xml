@@ -1,24 +1,22 @@
 <?xml version="1.0"?>
 <list xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" type="1" ns0:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+	<config showall="true" notax="true" keepenchanted="false" isnew="true" isnewProduction="true"/>
 	<item>
 		<ingredient count="1" id="34984"/>
 		<ingredient count="25" id="35562"/>
 		<ingredient count="30" id="35563"/>
-		<production count="1" id="34985" chance="0"/>
 		<production count="1" id="34985" chance="100"/>
 	</item>
 	<item>
 		<ingredient count="1" id="34985"/>
 		<ingredient count="25" id="35562"/>
 		<ingredient count="30" id="35563"/>
-		<production count="1" id="34986" chance="0"/>
 		<production count="1" id="34986" chance="100"/>
 	</item>
 	<item>
 		<ingredient count="1" id="34986"/>
 		<ingredient count="25" id="35562"/>
 		<ingredient count="30" id="35563"/>
-		<production count="1" id="34987" chance="0"/>
 		<production count="1" id="34987" chance="30"/>
 		<production count="1" id="34986" chance="50"/>
 		<production count="1" id="34985" chance="20"/>
@@ -27,7 +25,6 @@
 		<ingredient count="1" id="34987"/>
 		<ingredient count="30" id="35562"/>
 		<ingredient count="60" id="35563"/>
-		<production count="1" id="34988" chance="0"/>
 		<production count="1" id="34988" chance="20"/>
 		<production count="1" id="34987" chance="60"/>
 		<production count="1" id="34986" chance="20"/>
@@ -36,7 +33,6 @@
 		<ingredient count="1" id="34988"/>
 		<ingredient count="35" id="35562"/>
 		<ingredient count="70" id="35563"/>
-		<production count="1" id="34989" chance="0"/>
 		<production count="1" id="34989" chance="10"/>
 		<production count="1" id="34988" chance="50"/>
 		<production count="1" id="34987" chance="40"/>

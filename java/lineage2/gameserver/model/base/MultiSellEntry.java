@@ -15,6 +15,8 @@ package lineage2.gameserver.model.base;
 import java.util.ArrayList;
 import java.util.List;
 
+import lineage2.commons.util.Rnd;
+
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
@@ -148,17 +150,48 @@ public class MultiSellEntry
 	public MultiSellEntry clone()
 	{
 		MultiSellEntry ret = new MultiSellEntry(_entryId);
-		
 		for (MultiSellIngredient i : _ingredients)
 		{
 			ret.addIngredient(i.clone());
 		}
-		
 		for (MultiSellIngredient i : _production)
 		{
 			ret.addProduct(i.clone());
 		}
-		
 		return ret;
+	}
+	
+	public List<MultiSellIngredient> getProduction(boolean isNew)
+	{
+		if (isNew)
+		{
+			int chance = 0;
+			
+			for (final MultiSellIngredient igr : _production)
+			{
+				chance += igr.getChance();
+			}
+			
+			final int[] temp = new int[chance];
+			int counter = 0;
+			
+			for (int i = 0; i < _production.size(); i++)
+			{
+				for (int var = 0; var < _production.get(i).getChance(); var++)
+				{
+					temp[counter] = i;
+					
+					counter++;
+				}
+			}
+			
+			final MultiSellIngredient req = _production.get(temp[Rnd.get(temp.length)]);
+			List<MultiSellIngredient> rqa = new ArrayList<>(1);
+			
+			rqa.add(req);
+			return rqa;
+		}
+		
+		return _production;
 	}
 }
