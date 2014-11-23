@@ -27,25 +27,20 @@ public class MultiSellList extends L2GameServerPacket
 	private final int _page;
 	private final int _finished;
 	private final int _listId;
+	private final boolean _isnew;
+	private final boolean _isNewProduction;
 	private final List<MultiSellEntry> _list;
 	
-	/**
-	 * Constructor for MultiSellList.
-	 * @param list MultiSellListContainer
-	 * @param page int
-	 * @param finished int
-	 */
-	public MultiSellList(MultiSellListContainer list, int page, int finished)
+	public MultiSellList(MultiSellListContainer list, int page, int finished, boolean isNew, boolean isNewProduction)
 	{
 		_list = list.getEntries();
 		_listId = list.getListId();
 		_page = page;
 		_finished = finished;
+		_isnew = isNew;
+		_isNewProduction = isNewProduction;
 	}
 	
-	/**
-	 * Method writeImpl.
-	 */
 	@Override
 	protected final void writeImpl()
 	{
@@ -55,60 +50,83 @@ public class MultiSellList extends L2GameServerPacket
 		writeD(_finished);
 		writeD(Config.MULTISELL_SIZE);
 		writeD(_list.size());
-		writeC(0x00);
+		writeC(_isnew ? 0x01 : 0x00);
 		List<MultiSellIngredient> ingredients;
-		
+		List<MultiSellIngredient> production;
 		for (MultiSellEntry ent : _list)
 		{
 			ingredients = fixIngredients(ent.getIngredients());
-			writeD(ent.getEntryId());
-			writeC(!ent.getProduction().isEmpty() && ent.getProduction().get(0).isStackable() ? 1 : 0);
-			writeH(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeItemElements();
-			writeH(ent.getProduction().size());
-			writeH(ingredients.size());
+			production = ent.getProduction();
 			
-			for (MultiSellIngredient prod : ent.getProduction())
+			writeD(ent.getEntryId());
+			
+			final MultiSellIngredient firstEntry = ent.getProduction().get(0);
+			if (firstEntry == null)
 			{
-				int itemId = prod.getItemId();
-				ItemTemplate template = itemId > 0 ? ItemHolder.getInstance().getTemplate(prod.getItemId()) : null;
-				writeD(itemId);
-				writeD((itemId > 0) && (template != null) ? template.getBodyPart() : 0);
-				writeH((itemId > 0) && (template != null) ? template.getType2ForPackets() : 0);
-				writeQ(prod.getItemCount());
-				writeH(prod.getItemEnchant());
-				writeD(prod.getChance());
+				writeC(0x00);
+				writeH(0x00);
 				writeD(0x00);
 				writeD(0x00);
-				writeItemElements(prod);
+				writeItemElements();
+			}
+			else
+			{
+				writeC(firstEntry.isStackable() ? 1 : 0);
+				writeH(firstEntry.getItemEnchant());
+				writeAugmentationInfo(firstEntry);
+				writeItemElements(firstEntry);
 			}
 			
-			for (MultiSellIngredient i : ingredients)
+			writeH(_isnew ? production.size() + 1 : production.size());
+			writeH(ingredients.size());
+			
+			if (_isnew && _isNewProduction)
 			{
-				int itemId = i.getItemId();
-				final ItemTemplate item = itemId > 0 ? ItemHolder.getInstance().getTemplate(i.getItemId()) : null;
-				writeD(itemId);
-				writeH((itemId > 0) && (item != null) ? item.getType2() : 0xffff);
-				writeQ(i.getItemCount());
-				writeH(i.getItemEnchant());
-				writeD(0x00);
-				writeD(0x00);
-				writeItemElements(i);
+				writeInfo(production.get(0), true);
+			}
+			else if (_isnew && !_isNewProduction)
+			{
+				writeInfo(ingredients.get(0), true);
+			}
+			
+			for (final MultiSellIngredient prod : ent.getProduction())
+			{
+				writeInfo(prod, true);
+			}
+			
+			for (final MultiSellIngredient i : ingredients)
+			{
+				writeInfo(i, false);
 			}
 		}
 	}
 	
-	/**
-	 * Method fixIngredients.
-	 * @param ingredients List<MultiSellIngredient>
-	 * @return List<MultiSellIngredient>
-	 */
+	protected void writeInfo(MultiSellIngredient ingr, boolean product)
+	{
+		final int itemId = ingr.getItemId();
+		final ItemTemplate template = (itemId > 0) ? ItemHolder.getInstance().getTemplate(ingr.getItemId()) : null;
+		
+		writeD(itemId);
+		
+		if (product)
+		{
+			writeD((itemId > 0) && (template != null) ? template.getBodyPart() : 0);
+		}
+		writeH((itemId > 0) && (template != null) ? template.getType2ForPackets() : 0);
+		writeQ(ingr.getItemCount());
+		writeH(ingr.getItemEnchant());
+		
+		if (product)
+		{
+			writeD(ingr.getChance(true));
+		}
+		writeAugmentationInfo(ingr);
+		writeItemElements(ingr);
+	}
+	
 	private static List<MultiSellIngredient> fixIngredients(List<MultiSellIngredient> ingredients)
 	{
 		int needFix = 0;
-		
 		for (MultiSellIngredient ingredient : ingredients)
 		{
 			if (ingredient.getItemCount() > Integer.MAX_VALUE)
@@ -124,11 +142,9 @@ public class MultiSellList extends L2GameServerPacket
 		
 		MultiSellIngredient temp;
 		List<MultiSellIngredient> result = new ArrayList<>(ingredients.size() + needFix);
-		
 		for (MultiSellIngredient ingredient : ingredients)
 		{
 			ingredient = ingredient.clone();
-			
 			while (ingredient.getItemCount() > Integer.MAX_VALUE)
 			{
 				temp = ingredient.clone();
@@ -136,7 +152,6 @@ public class MultiSellList extends L2GameServerPacket
 				result.add(temp);
 				ingredient.setItemCount(ingredient.getItemCount() - 2000000000);
 			}
-			
 			if (ingredient.getItemCount() > 0)
 			{
 				result.add(ingredient);
@@ -144,5 +159,21 @@ public class MultiSellList extends L2GameServerPacket
 		}
 		
 		return result;
+	}
+	
+	private void writeAugmentationInfo(final MultiSellIngredient ingr)
+	{
+		if (ingr.getAugmentationId() != 0)
+		{
+			final int augm = ingr.getAugmentationId();
+			
+			writeD(augm & 0x0000FFFF);
+			writeD(augm >> 16);
+		}
+		else
+		{
+			writeD(0x00);
+			writeD(0x00);
+		}
 	}
 }
