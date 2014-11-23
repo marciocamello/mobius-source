@@ -1497,7 +1497,7 @@ public class NpcInstance extends Creature
 				continue;
 			}
 			
-			sb.append("<a action=\"bypass -h npc_").append(getObjectId()).append("_Quest ").append(q.getName()).append("\">").append(q.getDescr(player, info.isStart())).append("</a><br>");
+			sb.append(q.getDescr(player, info.isStart()));
 		}
 		
 		sb.append("</body></html>");
