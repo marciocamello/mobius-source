@@ -2172,7 +2172,10 @@ public class Config
 			
 			ABUSEWORD_LIST = tmp.toArray(new Pattern[tmp.size()]);
 			tmp.clear();
-			_log.info("Abuse: Loaded " + ABUSEWORD_LIST.length + " abuse words.");
+			if (DEBUG)
+			{
+				_log.info("Abuse: Loaded " + ABUSEWORD_LIST.length + " abuse words.");
+			}
 		}
 		catch (IOException e1)
 		{
