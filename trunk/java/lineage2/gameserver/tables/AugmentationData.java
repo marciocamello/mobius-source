@@ -154,9 +154,12 @@ public class AugmentationData
 		_log.info("AugmentationData: Loaded: " + (_augStats[0].size() * 4) + " augmentation stats.");
 		_log.info("AugmentationData: Loaded: " + (_augAccStats[0].size() * 4) + " accessory augmentation stats.");
 		
-		for (int i = 0; i < 10; i++)
+		if (Config.DEBUG)
 		{
-			_log.info("Loaded " + _blueSkills[i].size() + " blue, " + _purpleSkills[i].size() + " purple and " + _redSkills[i].size() + " red skills for lifestone lv" + i);
+			for (int i = 0; i < 10; i++)
+			{
+				_log.info("Loaded " + _blueSkills[i].size() + " blue, " + _purpleSkills[i].size() + " purple and " + _redSkills[i].size() + " red skills for lifestone lv" + i);
+			}
 		}
 	}
 	

@@ -660,7 +660,7 @@ public final class FourSepulchersManager extends Functions implements ScriptFile
 			}
 			
 			time.set(Calendar.MINUTE, _newCycleMin);
-			_log.info("FourSepulchersManager: Entry time: " + time.getTime());
+			_log.info("FourSepulchersManager: Entry: " + time.getTime());
 			
 			if (_firstTimeRun)
 			{

@@ -98,13 +98,13 @@ public final class StatsUtils
 		double cachedMem = allocatedMem - usedMem;
 		double useableMem = maxMem - usedMem;
 		StringBuilder list = new StringBuilder();
-		list.append("AllowedMemory: ........... ").append((int) maxMem).append(" KB").append('\n');
-		list.append("     Allocated: .......... ").append((int) allocatedMem).append(" KB (").append(((double) Math.round((allocatedMem / maxMem) * 1000000) / 10000)).append("%)").append('\n');
-		list.append("     Non-Allocated: ...... ").append((int) nonAllocatedMem).append(" KB (").append((double) Math.round((nonAllocatedMem / maxMem) * 1000000) / 10000).append("%)").append('\n');
-		list.append("AllocatedMemory: ......... ").append((int) allocatedMem).append(" KB").append('\n');
-		list.append("     Used: ............... ").append((int) usedMem).append(" KB (").append((double) Math.round((usedMem / maxMem) * 1000000) / 10000).append("%)").append('\n');
-		list.append("     Unused (cached): .... ").append((int) cachedMem).append(" KB (").append((double) Math.round((cachedMem / maxMem) * 1000000) / 10000).append("%)").append('\n');
-		list.append("UseableMemory: ........... ").append((int) useableMem).append(" KB (").append((double) Math.round((useableMem / maxMem) * 1000000) / 10000).append("%)").append('\n');
+		list.append("AllowedMemory: ........................ ").append((int) maxMem).append(" KB").append('\n');
+		list.append("     Allocated: ....................... ").append((int) allocatedMem).append(" KB (").append(((double) Math.round((allocatedMem / maxMem) * 1000000) / 10000)).append("%)").append('\n');
+		list.append("     Non-Allocated: ................... ").append((int) nonAllocatedMem).append(" KB (").append((double) Math.round((nonAllocatedMem / maxMem) * 1000000) / 10000).append("%)").append('\n');
+		list.append("AllocatedMemory: ...................... ").append((int) allocatedMem).append(" KB").append('\n');
+		list.append("     Used: ............................ ").append((int) usedMem).append(" KB (").append((double) Math.round((usedMem / maxMem) * 1000000) / 10000).append("%)").append('\n');
+		list.append("     Unused (cached): ................. ").append((int) cachedMem).append(" KB (").append((double) Math.round((cachedMem / maxMem) * 1000000) / 10000).append("%)").append('\n');
+		list.append("UseableMemory: ........................ ").append((int) useableMem).append(" KB (").append((double) Math.round((useableMem / maxMem) * 1000000) / 10000).append("%)").append('\n');
 		return list;
 	}
 	
