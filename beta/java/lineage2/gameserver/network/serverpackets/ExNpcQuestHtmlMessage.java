@@ -14,6 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.regex.Matcher;
 
+import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.scripts.Functions;
@@ -44,7 +45,7 @@ public class ExNpcQuestHtmlMessage extends NpcHtmlMessage
 		
 		if (_file != null)
 		{
-			if (player.isGM())
+			if (Config.HTM_DEBUG_MODE && player.isGM())
 			{
 				Functions.sendDebugMessage(player, "HTML: " + _file);
 			}

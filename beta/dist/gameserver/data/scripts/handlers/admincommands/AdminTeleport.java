@@ -17,6 +17,7 @@ import java.sql.PreparedStatement;
 
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.commons.lang.ArrayUtils;
+import lineage2.gameserver.Config;
 import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.dao.CharacterDAO;
 import lineage2.gameserver.database.DatabaseFactory;
@@ -516,7 +517,7 @@ public class AdminTeleport implements IAdminCommandHandler, ScriptFile
 		target.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 		target.teleToLocation(loc, ref);
 		
-		if (target.equals(activeChar))
+		if (target.equals(activeChar) && Config.DEBUG)
 		{
 			activeChar.sendMessage("You have been teleported to " + loc + ", reflection id: " + ref);
 		}
