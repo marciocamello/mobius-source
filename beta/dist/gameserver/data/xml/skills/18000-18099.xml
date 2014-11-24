@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="18024" levels="24" name="Venir's Talisman">
+		<table name="#MEN">1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3 3</table>
+		<table name="#WIT">0 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 3 3 3 3 3 3 3</table>
+		<table name="#CON">0 0 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 3 3 3 3 3 3</table>
+		<table name="#INT">0 0 0 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 3 3 3 3 3</table>
+		<table name="#DEX">0 0 0 0 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 3 3 3 3</table>
+		<table name="#STR">0 0 0 0 0 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 3 3 3</table>
+		<table name="#LUC">0 0 0 0 0 0 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 3 3</table>
+		<table name="#CHA">0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 3</table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x10" stat="MEN" val="#MEN"/>
+			<add order="0x10" stat="WIT" val="#WIT"/>
+			<add order="0x10" stat="CON" val="#CON"/>
+			<add order="0x10" stat="INT" val="#INT"/>
+			<add order="0x10" stat="DEX" val="#DEX"/>
+			<add order="0x10" stat="STR" val="#STR"/>
+			<add order="0x10" stat="LUC" val="#LUC"/>
+			<add order="0x10" stat="CHA" val="#CHA"/>
+		</for>
+	</skill>
+</list>
