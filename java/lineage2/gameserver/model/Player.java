@@ -6013,18 +6013,22 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if (Config.EVERYONE_HAS_ADMIN_RIGHTS)
 		{
-			_playerAccess = Config.GM_ACCESS.get(Config.DEFAULT_ACCESS_FOR_EVERYONE);
+			_playerAccess = Config.PLAYER_ACCESS.get(Config.DEFAULT_ACCESS_FOR_EVERYONE);
 		}
-		else if (Config.GM_ACCESS.get(_accessLevel) != null)
+		else if (Config.PLAYER_ACCESS.get(_accessLevel) != null)
 		{
-			_playerAccess = Config.GM_ACCESS.get(_accessLevel);
+			_playerAccess = Config.PLAYER_ACCESS.get(_accessLevel);
 		}
 		else
 		{
-			_playerAccess = Config.GM_ACCESS.get(0);
+			_playerAccess = Config.PLAYER_ACCESS.get(0);
 		}
 		
 		_isGM = _playerAccess.IsGM;
+		if (_isGM)
+		{
+			_log.warn("Character " + getName() + " logged in game with access level " + _accessLevel + "!");
+		}
 	}
 	
 	/**
@@ -8870,7 +8874,7 @@ public final class Player extends Playable implements PlayerGroup
 			return;
 		}
 		
-		if (Config.GM_ACCESS.containsKey(getAccessLevel()) && Config.GM_ACCESS.get(getAccessLevel()).IsGM)
+		if (Config.PLAYER_ACCESS.containsKey(getAccessLevel()) && Config.PLAYER_ACCESS.get(getAccessLevel()).IsGM)
 		{
 			sendPacket(new SystemMessage(SystemMessage.YOU_MAY_NOT_IMPOSE_A_BLOCK_ON_A_GM));
 			return;
