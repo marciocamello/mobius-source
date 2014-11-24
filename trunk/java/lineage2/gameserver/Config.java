@@ -74,7 +74,7 @@ public class Config
 	public static final String OLYMPIAD_DATA_FILE = "config/olympiad.ini";
 	private static final String ANUSEWORDS_CONFIG_FILE = "config/abusewords.txt";
 	public static final String FAKE_PLAYERS_LIST = "config/fake_players.list";
-	public static final String GM_ACCESS_FILES_DIR = "config/xml/AccessLevels/";
+	public static final String PLAYER_ACCESS_FILES_DIR = "config/xml/AccessLevels/";
 	public static int HTM_CACHE_MODE;
 	public static boolean HTM_DEBUG_MODE;
 	public static int[] PORTS_GAME;
@@ -395,7 +395,7 @@ public class Config
 	public static boolean OLYMPIAD_OLDSTYLE_STAT;
 	public static long NONOWNER_ITEM_PICKUP_DELAY;
 	public static boolean LOG_CHAT;
-	public static final Map<Integer, PlayerAccess> GM_ACCESS = new HashMap<>();
+	public static final Map<Integer, PlayerAccess> PLAYER_ACCESS = new HashMap<>();
 	public static double RATE_XP;
 	public static double RATE_SP;
 	public static double RATE_QUESTS_REWARD;
@@ -2137,7 +2137,7 @@ public class Config
 		loadExtSettings();
 		loadCommunityConfig();
 		abuseLoad();
-		loadGMAccess();
+		loadPlayerAccess();
 	}
 	
 	/**
@@ -2198,12 +2198,12 @@ public class Config
 	}
 	
 	/**
-	 * Method loadGMAccess.
+	 * Method loadPlayerAccess.
 	 */
-	public static void loadGMAccess()
+	public static void loadPlayerAccess()
 	{
-		GM_ACCESS.clear();
-		File dir = new File(GM_ACCESS_FILES_DIR);
+		PLAYER_ACCESS.clear();
+		File dir = new File(PLAYER_ACCESS_FILES_DIR);
 		
 		if (!dir.exists() || !dir.isDirectory())
 		{
@@ -2215,16 +2215,16 @@ public class Config
 		{
 			if (!file.isDirectory() && file.getName().endsWith(".xml"))
 			{
-				loadGMAccess(file);
+				loadPlayerAccess(file);
 			}
 		}
 	}
 	
 	/**
-	 * Method loadGMAccess.
+	 * Method loadPlayerAccess.
 	 * @param file File
 	 */
-	public static void loadGMAccess(File file)
+	public static void loadPlayerAccess(File file)
 	{
 		try
 		{
@@ -2275,7 +2275,7 @@ public class Config
 						}
 					}
 					
-					GM_ACCESS.put(access.AccessLevel, access);
+					PLAYER_ACCESS.put(access.AccessLevel, access);
 				}
 			}
 		}

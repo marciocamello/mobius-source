@@ -107,7 +107,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler, ScriptFile
 					count = Integer.parseInt(wordList[2]);
 				}
 				
-				String reason = "не указана";
+				String reason = "not available";
 				
 				if (wordList.length > 3)
 				{
@@ -166,7 +166,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler, ScriptFile
 	{
 		NpcHtmlMessage reply = new NpcHtmlMessage(5);
 		String html = "Moderators managment panel.<br>";
-		File dir = new File(Config.GM_ACCESS_FILES_DIR);
+		File dir = new File(Config.PLAYER_ACCESS_FILES_DIR);
 		
 		if (!dir.exists() || !dir.isDirectory())
 		{

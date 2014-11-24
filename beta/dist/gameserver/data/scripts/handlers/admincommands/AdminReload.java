@@ -120,7 +120,7 @@ public class AdminReload implements IAdminCommandHandler, ScriptFile
 			{
 				try
 				{
-					Config.loadGMAccess();
+					Config.loadPlayerAccess();
 					
 					for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 					{
