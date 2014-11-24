@@ -175,4 +175,16 @@
 		<point x="-81560" y="242232" z="-3579" h="50504"/>
 		<npc id="23484"/>
 	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-80117" y="237528" z="-3281" h="0"/>
+		<npc id="33995"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-80338" y="237491" z="-3280" h="0"/>
+		<npc id="33995"/>
+	</spawn>
+	<spawn count="1" respawn="10" respawn_random="0" period_of_day="none">
+		<point x="-81208" y="237954" z="-3282" h="0"/>
+		<npc id="33995"/>
+	</spawn>
 </list>
