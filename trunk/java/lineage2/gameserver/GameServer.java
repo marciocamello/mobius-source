@@ -284,10 +284,12 @@ public class GameServer
 			_log.info(line);
 		}
 		_log.info("==============================================================");
-		GamePacketHandler gph = new GamePacketHandler();
+		_log.info("Server loaded in " + uptime() + " seconds.");
+		_log.info("==============================================================");
 		
 		InetAddress serverAddr = Config.GAMESERVER_HOSTNAME.equals("*") ? null : InetAddress.getByName(Config.GAMESERVER_HOSTNAME);
 		_selectorThreads = new SelectorThread[Config.PORTS_GAME.length];
+		GamePacketHandler gph = new GamePacketHandler();
 		for (int i = 0; i < Config.PORTS_GAME.length; i++)
 		{
 			_selectorThreads[i] = new SelectorThread<>(Config.SELECTOR_CONFIG, gph, gph, gph, null);
