@@ -94,6 +94,18 @@ public enum AbnormalEffect
 	TALISMAN_POWER3("talismanpower3", 0x300000, 74),
 	TALISMAN_POWER4("talismanpower4", 0x400000, 75),
 	TALISMAN_POWER5("talismanpower5", 0x500000, 76),
+	// NEW ERTHEIA EFFECTS
+	U_ER_WI_WINDSTUN_AVE("windstun_ave", 0x000001, 112),
+	U_ER_WI_STORMSIGN2_AVE("stormsign2_ave", 0x000001, 113),
+	U_ER_WI_STORMSIGN1_AVE("stormsign1_ave", 0x000001, 114),
+	U_ER_WI_WINDHIDE_AVE("windhide_ave", 0x000001, 115),
+	U_ER_WI_PSYPOWER_AVE("psypower_ave", 0x000001, 116),
+	U_ER_WI_SQUALL_AVE("squall_ave", 0x000001, 117),
+	U_ER_WI_ILLUWIND_AVE("illuwind_ave", 0x000001, 118),
+	U_ER_WI_HOLD_AVE("hold_ave", 0x000001, 125),
+	U_ER_WI_LIGHTNINT2_AVE("lightning2_ave", 0x000001, 125),
+	U_ER_WA_SPACEREF_AVE("spaceref_ave", 0x000001, 127),
+	U_HE_ASPECT_AVE("aspect_ave", 0x000001, 128),
 	// event effects
 	E_AFRO_1("afrobaguette1", 0x000001, 0),
 	E_AFRO_2("afrobaguette2", 0x000002, 0),

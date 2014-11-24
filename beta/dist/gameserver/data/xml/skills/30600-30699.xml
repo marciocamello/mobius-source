@@ -41,7 +41,7 @@
 		<set name="isAuraSkill" val="true"/>
 		<set name="isMusic" val="true"/>
 		<for>
-			<effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelAura" stackOrder="1">
+			<effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="EvisceratorAura" stackOrder="1">
 				<def name="forceSkillId" val="30603"/>
 			</effect>
 		</for>
@@ -55,7 +55,7 @@
 		<set name="skillRadius" val="1000"/>
 		<set name="isMusic" val="true"/>
 		<for>
-			<effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelForce" stackOrder="1">
+			<effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="EvisceratorForce" stackOrder="1">
 				<def name="auraSkillId" val="30602"/>
 				<mul order="0x30" stat="PhysSkillDmgStatic" val="1.01"/>
 			</effect>
@@ -74,7 +74,7 @@
 		<set name="isAuraSkill" val="true"/>
 		<set name="isMusic" val="true"/>
 		<for>
-			<effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelAura" stackOrder="1">
+			<effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SayhaAura" stackOrder="1">
 				<def name="forceSkillId" val="30606"/>
 			</effect>
 		</for>
@@ -88,7 +88,7 @@
 		<set name="skillRadius" val="1000"/>
 		<set name="isMusic" val="true"/>
 		<for>
-			<effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelForce" stackOrder="1">
+			<effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SayhaForce" stackOrder="1">
 				<def name="auraSkillId" val="30605"/>
 				<mul order="0x30" stat="mCritRate" val="1.01"/>
 			</effect>
