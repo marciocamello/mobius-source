@@ -244,7 +244,6 @@ public class GameServer
 		UserCommandHandler.getInstance();
 		VoicedCommandHandler.getInstance();
 		TaskManager.getInstance();
-		Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
 		ResidenceHolder.getInstance().callInit();
 		EventHolder.getInstance().callInit();
 		BoatHolder.getInstance().spawnAll();
@@ -272,7 +271,10 @@ public class GameServer
 		 * !npc.getTitle().equals("Double Spawn") && !npcInst.getName().contains("Star Stone") && !npcInst.getName().contains("Wisp")) { npcInst.setTitle("Double Spawn"); npc.setTitle("Double Spawn"); _log.info("Probable double spawn: NpcId " + npc.getId() + " Location " + npc.getSpawnedLoc().getX()
 		 * + " " + npc.getSpawnedLoc().getY() + " " + npc.getSpawnedLoc().getZ() + " " + npc.getSpawnedLoc().getHeading()); } } } }
 		 */
+		_log.info("==============================================================");
 		_log.info("GameServer Started");
+		_log.info("==============================================================");
+		Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
 		Shutdown.getInstance().schedule(Config.RESTART_AT_TIME, Shutdown.RESTART);
 		_log.info("Maximum Numbers of Connected Players: " + Config.MAXIMUM_ONLINE_USERS);
 		_log.info("IdFactory: Free Object IDs remaining: " + IdFactory.getInstance().size());
