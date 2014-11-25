@@ -43,8 +43,10 @@ public class IstinaInstance extends Reflection
 	// Npcs
 	public static final int ISTINA_LIGHT = 29195;
 	public static final int ISTINA_HARD = 29196;
-	public static final int ACID_ERUPTION_CAMERA = 18919;
+	public static final int ACID_ERUPTION_CAMERA = 18920;
 	public static final int BALLISTA = 19021;
+	private static final int ISTINAS_CREATION = 23125;
+	private static final int SEALING_ENERGY = 19036;
 	public static final int RUMIESE_OUTSIDE = 33293;
 	public static final int RUMIESE_INSIDE = 33151;
 	
@@ -156,6 +158,10 @@ public class IstinaInstance extends Reflection
 		for (Player player : getPlayers())
 		{
 			player.showQuestMovie(ExStartScenePlayer.SCENE_BOSS_ISTHINA_BRIDGE);
+		}
+		if ((npc.getId() == ACID_ERUPTION_CAMERA) && (npc.getId() == ISTINAS_CREATION) && (npc.getId() == SEALING_ENERGY))
+		{
+			npc.deleteMe();
 		}
 		ThreadPoolManager.getInstance().schedule(new SpawnBallista(npc), 7200L); // 7.2 secs for movie
 	}
