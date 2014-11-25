@@ -70,6 +70,63 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
+        <armor id="37714" name="Talisman - Lilith">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.lilith_talisman_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="true"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<skills>
+			<skill id="13569" level="1"/>
+		</skills>
+	</armor>
+        <armor id="37715" name="Talisman - Anakim">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.anakim_talisman_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="true"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<skills>
+			<skill id="13569" level="2"/>
+		</skills>
+	</armor>
+        <etcitem id="37716" name="Seven Signs' Energy">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.sevensign_energy_i00"/>
+		<set name="type" value="OTHER"/>
+		<set name="weight" value="0"/>
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="true"/>
+	</etcitem>
+        <armor id="37717" name="Talisman - Seven Signs">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.sevensign_talisman_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="tradeable" value="true"/>
+		<equip>
+			<slot id="TALISMAN"/>
+		</equip>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<skills>
+			<skill id="13569" level="3"/>
+		</skills>
+	</armor>
 	<armor id="37725" name="NC Dinos Uniform">
 		<set name="crystal_type" value="NONE"/>
 		<set name="price" value="0"/>

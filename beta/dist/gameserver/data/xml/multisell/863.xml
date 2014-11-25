@@ -17,24 +17,96 @@
 		<ingredient count="1" id="34986"/>
 		<ingredient count="25" id="35562"/>
 		<ingredient count="30" id="35563"/>
-		<production count="1" id="34987" chance="30"/>
-		<production count="1" id="34986" chance="50"/>
-		<production count="1" id="34985" chance="20"/>
+		<production count="1" id="34987" chance="50"/>
+		<production count="1" id="34986" chance="70"/>
+		<production count="1" id="34985" chance="50"/>
+	</item>
+        <item>
+		<ingredient count="1" id="34986"/>
+		<ingredient count="25" id="35562"/>
+                <ingredient count="1" id="36184"/>
+		<ingredient count="30" id="35563"/>
+		<production count="1" id="34987" chance="50"/>
+		<production count="1" id="34986" chance="70"/>
+	</item>
+        <item>
+		<ingredient count="1" id="34986"/>
+		<ingredient count="25" id="35562"/>
+                <ingredient count="1" id="36515"/>
+		<ingredient count="30" id="35563"/>
+		<production count="1" id="34987" chance="50"/>
+		<production count="1" id="34986" chance="70"/>
+	</item>
+        <item>
+		<ingredient count="1" id="34986"/>
+		<ingredient count="25" id="35562"/>
+                <ingredient count="3" id="36515"/>
+		<ingredient count="30" id="35563"/>
+		<production count="1" id="34987" chance="70"/>
+		<production count="1" id="34986" chance="70"/>
 	</item>
 	<item>
 		<ingredient count="1" id="34987"/>
 		<ingredient count="30" id="35562"/>
 		<ingredient count="60" id="35563"/>
-		<production count="1" id="34988" chance="20"/>
-		<production count="1" id="34987" chance="60"/>
-		<production count="1" id="34986" chance="20"/>
+		<production count="1" id="34988" chance="50"/>
+		<production count="1" id="34987" chance="70"/>
+		<production count="1" id="34986" chance="50"/>
+	</item>
+        <item>
+		<ingredient count="1" id="34987"/>
+		<ingredient count="30" id="35562"/>
+                <ingredient count="1" id="36185"/>
+		<ingredient count="60" id="35563"/>
+		<production count="1" id="34988" chance="50"/>
+		<production count="1" id="34987" chance="70"/>
+	</item>
+        <item>
+		<ingredient count="1" id="34987"/>
+		<ingredient count="30" id="35562"/>
+                <ingredient count="8" id="36515"/>
+		<ingredient count="60" id="35563"/>
+		<production count="1" id="34988" chance="50"/>
+		<production count="1" id="34987" chance="70"/>
+	</item>
+        <item>
+		<ingredient count="1" id="34987"/>
+		<ingredient count="30" id="35562"/>
+                <ingredient count="12" id="36515"/>
+		<ingredient count="60" id="35563"/>
+		<production count="1" id="34988" chance="70"/>
+		<production count="1" id="34987" chance="70"/>
 	</item>
 	<item>
 		<ingredient count="1" id="34988"/>
 		<ingredient count="35" id="35562"/>
 		<ingredient count="70" id="35563"/>
 		<production count="1" id="34989" chance="10"/>
-		<production count="1" id="34988" chance="50"/>
-		<production count="1" id="34987" chance="40"/>
+		<production count="1" id="34988" chance="70"/>
+		<production count="1" id="34987" chance="70"/>
+	</item>
+        <item>
+		<ingredient count="1" id="34988"/>
+		<ingredient count="35" id="35562"/>
+                <ingredient count="1" id="36186"/>
+		<ingredient count="70" id="35563"/>
+		<production count="1" id="34989" chance="20"/>
+		<production count="1" id="34988" chance="70"/>
+	</item>
+        <item>
+		<ingredient count="1" id="34988"/>
+		<ingredient count="35" id="35562"/>
+                <ingredient count="16" id="36515"/>
+		<ingredient count="70" id="35563"/>
+		<production count="1" id="34989" chance="30"/>
+		<production count="1" id="34988" chance="70"/>
+	</item>
+        <item>
+		<ingredient count="1" id="34988"/>
+		<ingredient count="35" id="35562"/>
+                <ingredient count="32" id="36515"/>
+		<ingredient count="70" id="35563"/>
+		<production count="1" id="34989" chance="70"/>
+		<production count="1" id="34988" chance="70"/>
 	</item>
 </list>

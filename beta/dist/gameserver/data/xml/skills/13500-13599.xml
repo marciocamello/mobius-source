@@ -499,4 +499,33 @@
 		<set name="skillType" val="NOTDONE"/>
 		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
+        <skill id="13569" levels="3" name="Talisman - Seven Signs">
+                <table name="#mDef">552 0 736 </table>
+		<table name="#pDef">0 971 1126 </table>
+		<table name="#regMp">3 0 4 </table>
+		<table name="#regHp">0 6 8 </table>
+		<table name="#defenceFire">0 0 10 </table>
+                <table name="#defenceWater">0 0 10 </table>
+		<table name="#defenceWind">0 0 10 </table>
+		<table name="#defenceEarth">0 0 10 </table>
+		<table name="#defenceHoly">0 10 10 </table>
+		<table name="#defenceUnholy">10 10 10 </table>
+                <table name="#reflectDam">6 6 14 </table>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="mDef" val="#mDef"/>
+			<add order="0x40" stat="pDef" val="#pDef"/>
+			<add order="0x40" stat="regMp" val="#regMp"/>
+			<add order="0x40" stat="regHp" val="#regHp"/>
+			<add order="0x40" stat="defenceFire" val="#defenceFire"/>
+                        <add order="0x40" stat="defenceWater" val="#defenceWater"/>
+                        <add order="0x40" stat="defenceWind" val="#defenceWind"/>
+                        <add order="0x40" stat="defenceEarth" val="#defenceEarth"/>
+                        <add order="0x40" stat="defenceHoly" val="#defenceHoly"/>
+			<add order="0x40" stat="defenceUnholy" val="#defenceUnholy"/>
+			<add order="0x40" stat="reflectDam" val="#reflectDam"/>
+		</for>
+	</skill>
 </list>

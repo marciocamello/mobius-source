@@ -127,4 +127,17 @@
 			<skill id="8864" level="6"/>
 		</skills>
 	</armor>
+        <etcitem id="39573" name="Sealed Talisman - Insanity">
+		<set name="icon" value="icon.accessory_punishment_talisman_i01"/>
+		<set name="class" value="OTHER"/>
+		<set name="type" value="OTHER"/>
+		<set name="weight" value="100"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="stackable" value="true"/>
+		<skills>
+			<skill id="12903" level="1"/>
+		</skills>
+		<set name="capsuled" value="true"/>
+	</etcitem>
 </list>

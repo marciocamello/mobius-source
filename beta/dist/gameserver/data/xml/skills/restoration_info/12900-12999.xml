@@ -19,4 +19,9 @@
 			<item id="34989" min_count="1" max_count="1"/>
 		</group>
 	</restoration>
+        <restoration skill_id="12903" skill_level="1" name="Check Item">
+		<group chance="100.0">
+			<item id="39572" min_count="1" max_count="1"/>
+		</group>
+	</restoration>
 </list>

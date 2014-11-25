@@ -3,7 +3,13 @@
 	<item>
 		<ingredient count="1" id="34989"/>
 		<ingredient count="72" id="35562"/>
-		<ingredient count="1000" id="19440"/>
+		<ingredient count="200" id="35563"/>
 		<production count="1" id="35649"/>
+	</item>
+        <item>
+		<ingredient count="1" id="39572"/>
+		<ingredient count="100" id="35562"/>
+		<ingredient count="900" id="35563"/>
+		<production count="1" id="39573"/>
 	</item>
 </list>
