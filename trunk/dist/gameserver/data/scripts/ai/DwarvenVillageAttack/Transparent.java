@@ -19,7 +19,6 @@ import lineage2.gameserver.tables.SkillTable;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public final class Transparent extends DefaultAI
 {

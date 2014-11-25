@@ -1242,9 +1242,9 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="18919" name="Acid Eruption Camera" title="">
+	<npc id="18919" name="" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Istina"/>
+		<set name="ai_type" value="DwarvenVillageAttack.Transparent"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -1275,13 +1275,7 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Monster"/>
-		<ai_params>
-			<set name="noRandomWalk" value="true" />
-			<set name="targetable" value="false" />
-			<set name="show_name" value="false" />
-			<set name="showTitle" value="false" />
-		</ai_params>
+		<set name="type" value="Npc"/>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>
@@ -1291,9 +1285,9 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="18920" name="" title="">
+	<npc id="18920" name="Acid Eruption Camera" title="">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Istina"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -1324,7 +1318,13 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="Monster"/>
+		<ai_params>
+			<set name="noRandomWalk" value="true" />
+			<set name="targetable" value="false" />
+			<set name="show_name" value="false" />
+			<set name="showTitle" value="false" />
+		</ai_params>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>

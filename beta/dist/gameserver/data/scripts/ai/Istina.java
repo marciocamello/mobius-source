@@ -45,7 +45,6 @@ public class Istina extends Fighter
 	// Npcs
 	private static final int ISTINA_LIGHT = 29195;
 	private static final int ISTINA_HARD = 29196;
-	private static final int ERUPTION_CAMERA_NPC = 18919;
 	private static final int ISTINAS_CREATION = 23125;
 	private static final int SEALING_ENERGY = 19036;
 	
@@ -232,10 +231,6 @@ public class Istina extends Fighter
 			}
 			if (refl != null)
 			{
-				if ((npcId == ERUPTION_CAMERA_NPC) || (npcId == ISTINAS_CREATION) || (npcId == SEALING_ENERGY))
-				{
-					npc.deleteMe();
-				}
 				refl.presentBallista(npc);
 			}
 			
