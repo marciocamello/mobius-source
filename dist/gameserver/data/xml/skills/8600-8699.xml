@@ -134,7 +134,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x60" stat="pAtk" val="37"/>
+			<add order="0x40" stat="pAtk" val="37"/>
 		</for>
 	</skill>
 	<skill id="8609" levels="1" name="Talisman (R90-grade) - P. Atk.">
@@ -143,7 +143,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x60" stat="pAtk" val="43"/>
+			<add order="0x40" stat="pAtk" val="43"/>
 		</for>
 	</skill>
 	<skill id="8610" levels="1" name="Talisman (R95-grade) - P. Atk.">
@@ -152,7 +152,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x60" stat="pAtk" val="52"/>
+			<add order="0x40" stat="pAtk" val="52"/>
 		</for>
 	</skill>
 	<skill id="8611" levels="1" name="Talisman (R99-grade) - P. Atk.">
@@ -161,7 +161,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x60" stat="pAtk" val="60"/>
+			<add order="0x40" stat="pAtk" val="60"/>
 		</for>
 	</skill>
 	<skill id="8612" levels="1" name="Talisman (R-grade) - P. Def.">
@@ -170,7 +170,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x60" stat="pDef" val="38"/>
+			<add order="0x40" stat="pDef" val="38"/>
 		</for>
 	</skill>
 	<skill id="8613" levels="1" name="Talisman (R90-grade) - P. Def.">
@@ -179,7 +179,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x60" stat="pDef" val="43"/>
+			<add order="0x40" stat="pDef" val="43"/>
 		</for>
 	</skill>
 	<skill id="8614" levels="1" name="Talisman (R95-grade) - P. Def.">
@@ -188,7 +188,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x60" stat="pDef" val="49"/>
+			<add order="0x40" stat="pDef" val="49"/>
 		</for>
 	</skill>
 	<skill id="8615" levels="1" name="Talisman (R99-grade) - P. Def.">
@@ -197,7 +197,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x60" stat="pDef" val="54"/>
+			<add order="0x40" stat="pDef" val="54"/>
 		</for>
 	</skill>
 	<skill id="8616" levels="1" name="Talisman (R-grade) - M. Atk.">
@@ -206,7 +206,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x60" stat="mAtk" val="37"/>
+			<add order="0x40" stat="mAtk" val="37"/>
 		</for>
 	</skill>
 	<skill id="8617" levels="1" name="Talisman (R90-grade) - M. Atk.">
@@ -215,7 +215,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x60" stat="mAtk" val="46"/>
+			<add order="0x40" stat="mAtk" val="46"/>
 		</for>
 	</skill>
 	<skill id="8618" levels="1" name="Talisman (R95-grade) - M. Atk.">
@@ -224,7 +224,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x60" stat="mAtk" val="56"/>
+			<add order="0x40" stat="mAtk" val="56"/>
 		</for>
 	</skill>
 	<skill id="8619" levels="1" name="Talisman (R99-grade) - M. Atk.">
@@ -233,7 +233,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x60" stat="mAtk" val="66"/>
+			<add order="0x40" stat="mAtk" val="66"/>
 		</for>
 	</skill>
 	<skill id="8620" levels="1" name="Talisman (R-grade) - M. Def.">
@@ -242,7 +242,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x60" stat="mDef" val="21"/>
+			<add order="0x40" stat="mDef" val="21"/>
 		</for>
 	</skill>
 	<skill id="8621" levels="1" name="Talisman (R90-grade) - M. Def.">
@@ -251,7 +251,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x60" stat="mDef" val="24"/>
+			<add order="0x40" stat="mDef" val="24"/>
 		</for>
 	</skill>
 	<skill id="8622" levels="1" name="Talisman (R95-grade) - M. Def.">
@@ -260,7 +260,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x60" stat="mDef" val="28"/>
+			<add order="0x40" stat="mDef" val="28"/>
 		</for>
 	</skill>
 	<skill id="8623" levels="1" name="Talisman (R99-grade) - M. Def.">
@@ -269,7 +269,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x60" stat="mDef" val="32"/>
+			<add order="0x40" stat="mDef" val="32"/>
 		</for>
 	</skill>
 	<skill id="8624" levels="1" name="Talisman (R-grade) - Max HP">
@@ -317,88 +317,136 @@
 		</for>			
 	</skill>
 	<skill id="8628" levels="1" name="Talisman (R-grade) - Max MP">
+		<table name="#MP">109</table>
 		<set name="magicLevel" val="85"/>
 		<set name="icon" val="icon.r85_talisman_mp_up_passive"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxMp" val="#MP"/>
+		</for>
 	</skill>
 	<skill id="8629" levels="1" name="Talisman (R90-grade) - Max MP">
+		<table name="#MP">119</table>
 		<set name="magicLevel" val="90"/>
 		<set name="icon" val="icon.r85_talisman_mp_up_passive"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxMp" val="#MP"/>
+		</for>
 	</skill>
 	<skill id="8630" levels="1" name="Talisman (R95-grade) - Max MP">
+		<table name="#MP">130</table>
 		<set name="magicLevel" val="95"/>
 		<set name="icon" val="icon.r85_talisman_mp_up_passive"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxMp" val="#MP"/>
+		</for>
 	</skill>
 	<skill id="8631" levels="1" name="Talisman (R99-grade) - Max MP">
+		<table name="#MP">139</table>
 		<set name="magicLevel" val="99"/>
 		<set name="icon" val="icon.r85_talisman_mp_up_passive"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxMp" val="#MP"/>
+		</for>
 	</skill>
 	<skill id="8632" levels="1" name="Talisman (R-grade) - Max CP">
+		<table name="#CP">99</table>
 		<set name="magicLevel" val="85"/>
 		<set name="icon" val="icon.r85_talisman_cp_up_passive"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxCp" val="#CP"/>
+		</for>
 	</skill>
 	<skill id="8633" levels="1" name="Talisman (R90-grade) - Max CP">
+		<table name="#CP">108</table>
 		<set name="magicLevel" val="90"/>
 		<set name="icon" val="icon.r85_talisman_cp_up_passive"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxCp" val="#CP"/>
+		</for>
 	</skill>
 	<skill id="8634" levels="1" name="Talisman (R95-grade) - Max CP">
+		<table name="#CP">116</table>
 		<set name="magicLevel" val="95"/>
 		<set name="icon" val="icon.r85_talisman_cp_up_passive"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxCp" val="#CP"/>
+		</for>
 	</skill>
 	<skill id="8635" levels="1" name="Talisman (R99-grade) - Max CP">
+		<table name="#CP">124</table>
 		<set name="magicLevel" val="99"/>
 		<set name="icon" val="icon.r85_talisman_cp_up_passive"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maxCp" val="#CP"/>
+		</for>
 	</skill>
 	<skill id="8636" levels="1" name="Talisman (R-grade) - Critical Damage">
+		<table name="#Crit">135</table>
 		<set name="magicLevel" val="85"/>
 		<set name="icon" val="icon.r85_talisman_ca_up_passive"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="baseCrit" val="#Crit"/>
+		</for>
 	</skill>
 	<skill id="8637" levels="1" name="Talisman (R90-grade) - Critical Damage">
+		<table name="#Crit">142</table>
 		<set name="magicLevel" val="90"/>
 		<set name="icon" val="icon.r85_talisman_ca_up_passive"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="baseCrit" val="#Crit"/>
+		</for>
 	</skill>
 	<skill id="8638" levels="1" name="Talisman (R95-grade) - Critical Damage">
+		<table name="#Crit">149</table>
 		<set name="magicLevel" val="95"/>
 		<set name="icon" val="icon.r85_talisman_ca_up_passive"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="baseCrit" val="#Crit"/>
+		</for>
 	</skill>
 	<skill id="8639" levels="1" name="Talisman (R99-grade) - Critical Damage">
+		<table name="#Crit">155</table>
 		<set name="magicLevel" val="99"/>
 		<set name="icon" val="icon.r85_talisman_ca_up_passive"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="baseCrit" val="#Crit"/>
+		</for>
 	</skill>
 	<skill id="8640" levels="1" name="Talisman (R-grade) - Critical P. Def.">
 		<set name="magicLevel" val="85"/>
@@ -406,6 +454,9 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="critDamRcpt" val="135"/>
+		</for>
 	</skill>
 	<skill id="8641" levels="1" name="Talisman (R90-grade) - Critical P. Def.">
 		<set name="magicLevel" val="90"/>
@@ -413,6 +464,9 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="critDamRcpt" val="142"/>
+		</for>
 	</skill>
 	<skill id="8642" levels="1" name="Talisman (R95-grade) - Critical P. Def.">
 		<set name="magicLevel" val="95"/>
@@ -420,6 +474,9 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="critDamRcpt" val="149"/>
+		</for>
 	</skill>
 	<skill id="8643" levels="1" name="Talisman (R99-grade) - Critical P. Def.">
 		<set name="magicLevel" val="99"/>
@@ -427,6 +484,9 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="critDamRcpt" val="155"/>
+		</for>
 	</skill>
 	<skill id="8644" levels="1" name="Talisman (R-grade) - M. Critical Rate">
 		<set name="magicLevel" val="85"/>
@@ -434,6 +494,9 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="mCritRate" val="1.02"/>
+		</for>		
 	</skill>
 	<skill id="8645" levels="1" name="Talisman (R-grade) - P. Accuracy">
 		<set name="magicLevel" val="85"/>
@@ -441,6 +504,9 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="accCombat" val="2"/>
+		</for>		
 	</skill>
 	<skill id="8646" levels="1" name="Talisman (R-grade) - M. Accuracy">
 		<set name="magicLevel" val="85"/>
@@ -448,6 +514,9 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="maccCombat" val="2"/>
+		</for>			
 	</skill>
 	<skill id="8647" levels="1" name="Talisman (R-grade) - P. Evasion">
 		<set name="magicLevel" val="85"/>
@@ -455,6 +524,9 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="rEvas" val="2"/>
+		</for>	
 	</skill>
 	<skill id="8648" levels="1" name="Talisman (R-grade) - M. Evasion">
 		<set name="magicLevel" val="85"/>
@@ -462,6 +534,9 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="mEvas" val="2"/>
+		</for>	
 	</skill>
 	<skill id="8649" levels="1" name="Talisman (R-grade) - P. Critical Rate">
 		<set name="magicLevel" val="85"/>
@@ -469,6 +544,9 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="rCrit" val="2"/>
+		</for>
 	</skill>
 	<skill id="8650" levels="1" name="Talisman (R-grade) - P. Critical Evasion">
 		<set name="magicLevel" val="85"/>
@@ -476,350 +554,611 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="critDamRcpt" val="1.02"/>
+		</for>
 	</skill>
 	<skill id="8651" levels="1" name="Talisman (R-grade) - P. Atk. (Active)">
 		<set name="icon" val="icon.r85_talisman_pa_up_active"/>
+		<set name="coolTime" val="0"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" stackType="talisman" time="120" val="0">
+				<add order="0x40" stat="pAtk" val="111"/>
+			</effect>
+		</for>		
 	</skill>
 	<skill id="8652" levels="1" name="Talisman (R90-grade) - P. Atk. (Active)">
 		<set name="icon" val="icon.r85_talisman_pa_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
+		<set name="coolTime" val="0"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" stackType="talisman" time="120" val="0">
+				<add order="0x40" stat="pAtk" val="129"/>
+			</effect>
+		</for>			
 	</skill>
 	<skill id="8653" levels="1" name="Talisman (R95-grade) - P. Atk. (Active)">
 		<set name="icon" val="icon.r85_talisman_pa_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" stackType="talisman" time="120" val="0">
+				<add order="0x40" stat="pAtk" val="156"/>
+			</effect>
+		</for>	
 	</skill>
 	<skill id="8654" levels="1" name="Talisman (R99-grade) - P. Atk. (Active)">
 		<set name="icon" val="icon.r85_talisman_pa_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="pAtk" val="156"/>
+			</effect>
+		</for>			
 	</skill>
 	<skill id="8655" levels="1" name="Talisman (R-grade) - P. Def. (Active)">
 		<set name="icon" val="icon.r85_talisman_pd_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="pDef" val="114"/>
+			</effect>
+		</for>		
 	</skill>
 	<skill id="8656" levels="1" name="Talisman (R90-grade) - P. Def. (Active)">
 		<set name="icon" val="icon.r85_talisman_pd_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="pDef" val="129"/>
+			</effect>
+		</for>	
 	</skill>
 	<skill id="8657" levels="1" name="Talisman (R95-grade) - P. Def. (Active)">
 		<set name="icon" val="icon.r85_talisman_pd_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="pDef" val="147"/>
+			</effect>
+		</for>	
 	</skill>
 	<skill id="8658" levels="1" name="Talisman (R99-grade) - P. Def. (Active)">
 		<set name="icon" val="icon.r85_talisman_pd_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="pDef" val="162"/>
+			</effect>
+		</for>	
 	</skill>
 	<skill id="8659" levels="1" name="Talisman (R-grade) - M. Atk. (Active)">
 		<set name="icon" val="icon.r85_talisman_ma_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="mAtk" val="111"/>
+			</effect>
+		</for>			
 	</skill>
 	<skill id="8660" levels="1" name="Talisman (R90-grade) - M. Atk. (Active)">
 		<set name="icon" val="icon.r85_talisman_ma_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="mAtk" val="138"/>
+			</effect>
+		</for>	
 	</skill>
 	<skill id="8661" levels="1" name="Talisman (R95-grade) - M. Atk. (Active)">
 		<set name="icon" val="icon.r85_talisman_ma_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="mAtk" val="168"/>
+			</effect>
+		</for>	
 	</skill>
 	<skill id="8662" levels="1" name="Talisman (R99-grade) - M. Atk. (Active)">
 		<set name="icon" val="icon.r85_talisman_ma_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="mAtk" val="198"/>
+			</effect>
+		</for>	
 	</skill>
 	<skill id="8663" levels="1" name="Talisman (R-grade) - M. Def. (Active)">
 		<set name="icon" val="icon.r85_talisman_md_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="mDef" val="63"/>
+			</effect>
+		</for>	
 	</skill>
 	<skill id="8664" levels="1" name="Talisman (R90-grade) - M. Def. (Active)">
 		<set name="icon" val="icon.r85_talisman_md_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="mDef" val="72"/>
+			</effect>
+		</for>	
 	</skill>
 	<skill id="8665" levels="1" name="Talisman (R95-grade) - M. Def. (Active)">
 		<set name="icon" val="icon.r85_talisman_md_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="mDef" val="84"/>
+			</effect>
+		</for>	
 	</skill>
 	<skill id="8666" levels="1" name="Talisman (R99-grade) - M. Def. (Active)">
 		<set name="icon" val="icon.r85_talisman_md_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="mDef" val="96"/>
+			</effect>
+		</for>	
 	</skill>
 	<skill id="8667" levels="1" name="Talisman (R-grade) - Max HP (Active)">
 		<set name="icon" val="icon.r85_talisman_hp_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="maxHp" val="657"/>
+			</effect>
+		</for>	
 	</skill>
 	<skill id="8668" levels="1" name="Talisman (R90-grade) - Max HP (Active)">
 		<set name="icon" val="icon.r85_talisman_hp_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="maxHp" val="738"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8669" levels="1" name="Talisman (R95-grade) - Max HP (Active)">
 		<set name="icon" val="icon.r85_talisman_hp_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="maxHp" val="831"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8670" levels="1" name="Talisman (R99-grade) - Max HP (Active)">
 		<set name="icon" val="icon.r85_talisman_hp_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="maxHp" val="915"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8671" levels="1" name="Talisman (R-grade) - Max MP (Active)">
 		<set name="icon" val="icon.r85_talisman_mp_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="maxMp" val="327"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8672" levels="1" name="Talisman (R90-grade) - Max MP (Active)">
 		<set name="icon" val="icon.r85_talisman_mp_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="maxMp" val="357"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8673" levels="1" name="Talisman (R95-grade) - Max MP (Active)">
 		<set name="icon" val="icon.r85_talisman_mp_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="maxMp" val="390"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8674" levels="1" name="Talisman (R99-grade) - Max MP (Active)">
 		<set name="icon" val="icon.r85_talisman_mp_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="maxMp" val="417"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8675" levels="1" name="Talisman (R-grade) - Max CP (Active)">
 		<set name="icon" val="icon.r85_talisman_cp_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="maxCp" val="297"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8676" levels="1" name="Talisman (R90-grade) - Max CP (Active)">
 		<set name="icon" val="icon.r85_talisman_cp_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="maxCp" val="324"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8677" levels="1" name="Talisman (R95-grade) - Max CP (Active)">
 		<set name="icon" val="icon.r85_talisman_cp_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="maxCp" val="390"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8678" levels="1" name="Talisman (R99-grade) - Max CP (Active)">
 		<set name="icon" val="icon.r85_talisman_cp_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="maxCp" val="417"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8679" levels="1" name="Talisman (R-grade) - Critical Damage (Active)">
 		<set name="icon" val="icon.r85_talisman_ca_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="cAtk" val="405"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8680" levels="1" name="Talisman (R90-grade) - Critical Damage (Active)">
 		<set name="icon" val="icon.r85_talisman_ca_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="cAtk" val="426"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8681" levels="1" name="Talisman (R95-grade) - Critical Damage (Active)">
 		<set name="icon" val="icon.r85_talisman_ca_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="cAtk" val="447"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8682" levels="1" name="Talisman (R99-grade) - Critical Damage (Active)">
 		<set name="icon" val="icon.r85_talisman_ca_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="cAtk" val="465"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8683" levels="1" name="Talisman (R-grade) - Critical P. Def. (Active)">
 		<set name="icon" val="icon.r85_talisman_ca_down_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="critDamRcpt" val="405"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8684" levels="1" name="Talisman (R90-grade) - Critical P. Def. (Active)">
 		<set name="icon" val="icon.r85_talisman_ca_down_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="critDamRcpt" val="426"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8685" levels="1" name="Talisman (R95-grade) - Critical P. Def. (Active)">
 		<set name="icon" val="icon.r85_talisman_ca_down_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="critDamRcpt" val="447"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8686" levels="1" name="Talisman (R99-grade) - Critical P. Def. (Active)">
 		<set name="icon" val="icon.r85_talisman_ca_down_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="critDamRcpt" val="465"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8687" levels="1" name="Talisman (R-grade) - M. Critical Rate (Active)">
 		<set name="icon" val="icon.r_talisman_mc_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<mul order="0x30" stat="mCritRate" val="1.04"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8688" levels="1" name="Talisman (R-grade) - P. Accuracy (Active)">
 		<set name="icon" val="icon.r_talisman_ph_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="accCombat" val="4"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8689" levels="1" name="Talisman (R-grade) - M. Accuracy (Active)">
 		<set name="icon" val="icon.r_talisman_mh_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="maccCombat" val="4"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8690" levels="1" name="Talisman (R-grade) - P. Evasion (Active)">
 		<set name="icon" val="icon.r_talisman_pm_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="rEvas" val="4"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8691" levels="1" name="Talisman (R-grade) - M. Evasion (Active)">
 		<set name="icon" val="icon.r_talisman_mm_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<add order="0x40" stat="mEvas" val="4"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8692" levels="1" name="Talisman (R-grade) - P. Critical Rate (Active)">
 		<set name="icon" val="icon.r_talisman_cr_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<mul order="0x30" stat="rCrit" val="1.04"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8693" levels="1" name="Talisman (R-grade) - P. Critical Evasion (Active)">
 		<set name="icon" val="icon.r_talisman_cm_up_active"/>
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
-		<set name="operateType" val="OP_PASSIVE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 		<set name="hitTime" val="4000"/>
 		<set name="reuseDelay" val="360000"/>
+		<set name="coolTime" val="0"/>		
+		<for>
+			<effect count="1" name="Buff" stackOrder="1" time="120" val="0">
+				<mul order="0x30" stat="absorbDam" val="1.04"/>
+			</effect>
+		</for>
 	</skill>
 	<skill id="8694" levels="1" name="Special Talisman (R-grade) - Shield Defense">
 		<set name="icon" val="icon.r85_talisman_pd_up_passive"/>
