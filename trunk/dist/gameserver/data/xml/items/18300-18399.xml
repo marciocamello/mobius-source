@@ -5,11 +5,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_cp_up_passive"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8635" level="1"/>
+		</skills>		
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -19,11 +22,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ca_up_passive"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8636" level="1"/>
+		</skills>		
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -33,11 +39,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ca_up_passive"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8637" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -47,11 +56,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ca_up_passive"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8638" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -61,11 +73,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ca_up_passive"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8639" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -75,11 +90,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ca_down_passive"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8640" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -89,11 +107,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ca_down_passive"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8641" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -103,11 +124,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ca_down_passive"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8642" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -117,11 +141,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ca_down_passive"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8643" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -131,11 +158,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r_talisman_mc_up_passive"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8644" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -145,11 +175,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r_talisman_ph_up_passive"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8645" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -159,11 +192,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r_talisman_mh_up_passive"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8646" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -173,11 +209,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r_talisman_pm_up_passive"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8647" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -187,11 +226,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r_talisman_mm_up_passive"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8648" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -201,11 +243,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r_talisman_cr_up_passive"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8649" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -215,11 +260,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r_talisman_cm_up_passive"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8650" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -229,11 +277,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_pa_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8651" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -243,11 +294,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_pa_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8652" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -257,11 +311,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_pa_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8653" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -271,11 +328,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_pa_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8654" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -285,11 +345,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_pd_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8655" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -299,11 +362,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_pd_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8656" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -313,11 +379,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_pd_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8657" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -327,11 +396,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_pd_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8658" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -341,11 +413,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ma_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8659" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -355,11 +430,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ma_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8660" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -369,11 +447,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ma_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8661" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -383,11 +464,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ma_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8662" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -397,11 +481,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_md_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8663" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -411,11 +498,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_md_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8664" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -425,11 +515,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_md_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8665" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -439,11 +532,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_md_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8666" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -453,11 +549,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_hp_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8667" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -467,11 +566,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_hp_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8668" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -481,11 +583,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_hp_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8669" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -495,11 +600,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_hp_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8670" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -509,11 +617,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_mp_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8671" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -523,11 +634,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_mp_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8672" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -537,11 +651,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_mp_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8673" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -551,11 +668,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_mp_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8674" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -565,11 +685,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_cp_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8675" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -579,11 +702,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_cp_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8676" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -593,11 +719,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_cp_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8677" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -607,11 +736,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_cp_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8678" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -621,11 +753,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ca_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8679" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -635,11 +770,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ca_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8680" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -649,11 +787,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ca_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8681" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -663,11 +804,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ca_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8682" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -677,11 +821,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ca_down_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8683" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -691,11 +838,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ca_down_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8684" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -705,11 +855,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ca_down_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8685" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -719,11 +872,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ca_down_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8686" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -733,11 +889,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r_talisman_mc_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8687" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -747,11 +906,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r_talisman_ph_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8688" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -761,11 +923,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r_talisman_mh_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8689" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -775,11 +940,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r_talisman_pm_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8690" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -789,11 +957,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r_talisman_mm_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8691" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -803,11 +974,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r_talisman_cr_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8692" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -817,11 +991,14 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r_talisman_cm_up_active"/>
 		<set name="type" value="NONE"/>
 		<set name="weight" value="150"/>
+		<skills>
+			<skill id="8693" level="1"/>
+		</skills>
 		<equip>
 			<slot id="TALISMAN"/>
 		</equip>
@@ -831,7 +1008,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_sd_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -845,7 +1022,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_sd_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -859,7 +1036,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_sd_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -873,7 +1050,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_sd_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -887,7 +1064,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_sd_up_active"/>
 		<set name="type" value="NONE"/>
@@ -901,7 +1078,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_sd_up_active"/>
 		<set name="type" value="NONE"/>
@@ -915,7 +1092,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_sd_up_active"/>
 		<set name="type" value="NONE"/>
@@ -929,7 +1106,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_sd_up_active"/>
 		<set name="type" value="NONE"/>
@@ -943,7 +1120,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_eg_rf_passive"/>
 		<set name="type" value="NONE"/>
@@ -957,7 +1134,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_eg_rf_passive"/>
 		<set name="type" value="NONE"/>
@@ -971,7 +1148,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_eg_rf_passive"/>
 		<set name="type" value="NONE"/>
@@ -985,7 +1162,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_eg_rf_passive"/>
 		<set name="type" value="NONE"/>
@@ -999,7 +1176,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_eg_rf_active"/>
 		<set name="type" value="NONE"/>
@@ -1013,7 +1190,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_eg_rf_active"/>
 		<set name="type" value="NONE"/>
@@ -1027,7 +1204,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_eg_rf_active"/>
 		<set name="type" value="NONE"/>
@@ -1041,7 +1218,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_eg_rf_active"/>
 		<set name="type" value="NONE"/>
@@ -1055,7 +1232,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_dr_mp_active"/>
 		<set name="type" value="NONE"/>
@@ -1069,7 +1246,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_dr_mp_active"/>
 		<set name="type" value="NONE"/>
@@ -1083,7 +1260,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_dr_mp_active"/>
 		<set name="type" value="NONE"/>
@@ -1097,7 +1274,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_dr_mp_active"/>
 		<set name="type" value="NONE"/>
@@ -1111,7 +1288,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_dr_hp_active"/>
 		<set name="type" value="NONE"/>
@@ -1125,7 +1302,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_dr_hp_active"/>
 		<set name="type" value="NONE"/>
@@ -1139,7 +1316,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_dr_hp_active"/>
 		<set name="type" value="NONE"/>
@@ -1153,7 +1330,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_dr_hp_active"/>
 		<set name="type" value="NONE"/>
@@ -1167,7 +1344,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_ad_ex_passive"/>
 		<set name="type" value="NONE"/>
@@ -1181,7 +1358,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_ad_ex_passive"/>
 		<set name="type" value="NONE"/>
@@ -1195,7 +1372,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_ad_ex_passive"/>
 		<set name="type" value="NONE"/>
@@ -1209,7 +1386,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_ad_ex_passive"/>
 		<set name="type" value="NONE"/>
@@ -1223,7 +1400,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_ad_ex_active"/>
 		<set name="type" value="NONE"/>
@@ -1237,7 +1414,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_ad_ex_active"/>
 		<set name="type" value="NONE"/>
@@ -1251,7 +1428,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_ad_ex_active"/>
 		<set name="type" value="NONE"/>
@@ -1265,7 +1442,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_ad_ex_active"/>
 		<set name="type" value="NONE"/>
@@ -1279,7 +1456,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_sm_st_active"/>
 		<set name="type" value="NONE"/>
@@ -1293,7 +1470,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_sm_st_active"/>
 		<set name="type" value="NONE"/>
@@ -1307,7 +1484,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_sm_st_active"/>
 		<set name="type" value="NONE"/>
@@ -1321,7 +1498,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_sm_st_active"/>
 		<set name="type" value="NONE"/>
@@ -1335,7 +1512,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r_sp_talisman_sm_rt_active"/>
 		<set name="type" value="NONE"/>
@@ -1349,7 +1526,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r_sp_talisman_mg_rs_passive"/>
 		<set name="type" value="NONE"/>
@@ -1363,7 +1540,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r_sp_talisman_mg_cc_active"/>
 		<set name="type" value="NONE"/>
@@ -1377,7 +1554,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_mp_rg_passive"/>
 		<set name="type" value="NONE"/>
@@ -1391,7 +1568,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_sp_talisman_mp_rg_passive"/>
 		<set name="type" value="NONE"/>

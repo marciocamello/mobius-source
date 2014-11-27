@@ -847,7 +847,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_pa_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -864,7 +864,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_pa_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -881,7 +881,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_pa_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -898,7 +898,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_pa_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -915,7 +915,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_pd_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -932,7 +932,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_pd_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -949,7 +949,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_pd_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -966,7 +966,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_pd_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -983,7 +983,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ma_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -1000,7 +1000,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ma_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -1017,7 +1017,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ma_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -1034,7 +1034,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_ma_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -1051,7 +1051,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_md_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -1068,7 +1068,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_md_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -1085,7 +1085,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_md_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -1102,7 +1102,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_md_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -1119,7 +1119,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_hp_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -1136,7 +1136,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_hp_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -1153,7 +1153,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_hp_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -1170,7 +1170,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_hp_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -1187,7 +1187,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_mp_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -1204,7 +1204,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_mp_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -1221,7 +1221,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_mp_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -1238,7 +1238,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_mp_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -1255,7 +1255,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_cp_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -1272,7 +1272,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_cp_up_passive"/>
 		<set name="type" value="NONE"/>
@@ -1289,7 +1289,7 @@
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
-		<set name="durability" value="60"/>
+		<set name="durability" value="120"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r85_talisman_cp_up_passive"/>
 		<set name="type" value="NONE"/>
