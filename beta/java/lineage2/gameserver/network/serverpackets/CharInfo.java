@@ -204,8 +204,7 @@ public class CharInfo extends L2GameServerPacket
 			writeC(0);
 			writeC(0);
 			writeH(0);
-			// writeS(_activeChar.getTitle());
-			writeS("");
+			writeS(_activeChar.getTitle());
 			if ((template.getLHandId() > 0) || (template.getRHandId() > 0) || (template.getChestId() > 0))
 			{
 				writeH(68);
@@ -280,20 +279,15 @@ public class CharInfo extends L2GameServerPacket
 			
 			writeC(_activeChar.getTalismanCount());
 			
-			// for (int slot : PAPERDOLL_ORDER)
-			// {
-			// writeD(_activeChar.getInventory().getPaperdollItemId(slot));
-			// }
-			
-			writeD(0); // Visible Weapon
-			writeD(0); // Visible Shield [Sigil]
-			writeD(0); // Visible Weapon / Two Handed
-			writeD(0); // Visible Gloves
-			writeD(0); // Visible Upper Body
-			writeD(0); // Visible Lower Body
-			writeD(0); // Visible Boots
-			writeD(0); // Visible Hair Accessory (top)
-			writeD(0); // Visible Hair Accessory (bottom)
+			writeD(_activeChar.getInventory().getVisualItemId(Inventory.PAPERDOLL_RHAND));
+			writeD(_activeChar.getInventory().getVisualItemId(Inventory.PAPERDOLL_LHAND));
+			writeD(0x00);
+			writeD(_activeChar.getInventory().getVisualItemId(Inventory.PAPERDOLL_GLOVES));
+			writeD(_activeChar.getInventory().getVisualItemId(Inventory.PAPERDOLL_CHEST));
+			writeD(_activeChar.getInventory().getVisualItemId(Inventory.PAPERDOLL_LEGS));
+			writeD(_activeChar.getInventory().getVisualItemId(Inventory.PAPERDOLL_FEET));
+			writeD(_activeChar.getInventory().getVisualItemId(Inventory.PAPERDOLL_HAIR));
+			writeD(_activeChar.getInventory().getVisualItemId(Inventory.PAPERDOLL_DHAIR));
 			
 			writeC(_activeChar.getPvpFlag());
 			int Karma = 0 - _activeChar.getKarma();
