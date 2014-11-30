@@ -438,16 +438,17 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 			case MOKA:
 			case VALFAR:
 				String prefix = getStartNpcPrefix(npcId);
-				if (cond == 0)
+				if (checkSC(qs.getPlayer()))
 				{
-					if (checkSC(qs.getPlayer()))
-					{
-						htmltext = prefix + "_q10331_1.htm";
-					}
-					else
-					{
-						htmltext = prefix + "_q10331_0.htm";
-					}
+					htmltext = prefix + "_q10331_1.htm";
+				}
+				else if (!checkSC(qs.getPlayer()))
+				{
+					htmltext = prefix + "_q10331_0.htm";
+				}
+				else if (qs.getPlayer().getLevel() >= 18)
+				{
+					htmltext = prefix + "_q10331_3.htm";
 				}
 				else if (cond == 1)
 				{
