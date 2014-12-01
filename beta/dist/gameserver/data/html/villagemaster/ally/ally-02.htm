@@ -1,7 +1,6 @@
 <html><body>Create Alliance:<br>
 Enter Alliance Name:<br>
-<edit var="name" width=80>
-	
-<button value="Enter" action="bypass -h npc_%objectId%_create_ally $name" width=40 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF"><br>
-<button value="Cancel" action="bypass -h Link villagemaster/ally/ally-01.htm" width=40 height=15 back="L2UI_CT1.Button_DF_Down" fore="L2UI_CT1.Button_DF">
+<edit var="name" width=80><br>
+<Button ALIGN=LEFT ICON="NORMAL" action="bypass -h npc_%objectId%_create_ally $name">Enter</Button>
+<Button ALIGN=LEFT ICON="RETURN" action="bypass -h npc_%objectId%_Link villagemaster/ally/ally-01.htm">Cancel</Button>
 </body></html>
