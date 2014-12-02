@@ -8,11 +8,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="9261"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="1043"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -22,12 +22,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="1272"/>
+		<set name="basePDef" value="994"/>
+		<set name="baseMAtk" value="317"/>
+		<set name="baseMDef" value="1259"/>
+		<set name="basePAtkSpd" value="415"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -40,6 +40,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11343" level="3"/>
+			<skill id="11344" level="3"/>
+		</skills>			
 	</npc>
 	<npc id="15101" name="Wynn Spectral Lord" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -48,11 +52,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="9479"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="1080"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -62,12 +66,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="1350"/>
+		<set name="basePDef" value="1035"/>
+		<set name="baseMAtk" value="336"/>
+		<set name="baseMDef" value="1322"/>
+		<set name="basePAtkSpd" value="415"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -80,6 +84,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11343" level="4"/>
+			<skill id="11344" level="4"/>
+		</skills>			
 	</npc>
 	<npc id="15102" name="Wynn Spectral Lord" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -88,11 +96,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="9701"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="1119"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -102,12 +110,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="1432"/>
+		<set name="basePDef" value="1076"/>
+		<set name="baseMAtk" value="357"/>
+		<set name="baseMDef" value="1390"/>
+		<set name="basePAtkSpd" value="415"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -120,6 +128,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11343" level="5"/>
+			<skill id="11344" level="5"/>
+		</skills>		
 	</npc>
 	<npc id="15103" name="Wynn Spectral Lord" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -128,11 +140,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="12220"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="1157"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -142,12 +154,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="2026"/>
+		<set name="basePDef" value="1306"/>
+		<set name="baseMAtk" value="674"/>
+		<set name="baseMDef" value="1703"/>
+		<set name="basePAtkSpd" value="415"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -160,6 +172,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11343" level="6"/>
+			<skill id="11344" level="6"/>
+		</skills>			
 	</npc>
 	<npc id="15104" name="Wynn Spectral Lord" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -168,11 +184,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="12945"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="1197"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -182,12 +198,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="2150"/>
+		<set name="basePDef" value="1359"/>
+		<set name="baseMAtk" value="715"/>
+		<set name="baseMDef" value="1790"/>
+		<set name="basePAtkSpd" value="415"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -200,6 +216,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11343" level="7"/>
+			<skill id="11344" level="7"/>
+		</skills>			
 	</npc>
 	<npc id="15105" name="Wynn Spectral Lord" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -208,11 +228,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="13073"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="1236"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -222,12 +242,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="2281"/>
+		<set name="basePDef" value="1414"/>
+		<set name="baseMAtk" value="758"/>
+		<set name="baseMDef" value="1880"/>
+		<set name="basePAtkSpd" value="415"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -240,6 +260,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11343" level="8"/>
+			<skill id="11344" level="8"/>
+		</skills>			
 	</npc>
 	<npc id="15106" name="Wynn Soulless" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -248,11 +272,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="6317"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="692"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -262,12 +286,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="1129"/>
+		<set name="basePDef" value="656"/>
+		<set name="baseMAtk" value="280"/>
+		<set name="baseMDef" value="814"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -280,6 +304,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11345" level="1"/>
+			<skill id="11346" level="1"/>
+		</skills>		
 	</npc>
 	<npc id="15107" name="Wynn Soulless" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -288,11 +316,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="6464"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="718"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -302,12 +330,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="1198"/>
+		<set name="basePDef" value="682"/>
+		<set name="baseMAtk" value="299"/>
+		<set name="baseMDef" value="856"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -320,6 +348,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11345" level="2"/>
+			<skill id="11346" level="2"/>
+		</skills>		
 	</npc>
 	<npc id="15108" name="Wynn Soulless" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -328,11 +360,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="6615"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="745"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -342,12 +374,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="1271"/>
+		<set name="basePDef" value="710"/>
+		<set name="baseMAtk" value="317"/>
+		<set name="baseMDef" value="899"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -360,6 +392,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11345" level="3"/>
+			<skill id="11346" level="3"/>
+		</skills>		
 	</npc>
 	<npc id="15109" name="Wynn Soulless" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -368,11 +404,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="6771"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="772"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -382,12 +418,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="1349"/>
+		<set name="basePDef" value="738"/>
+		<set name="baseMAtk" value="336"/>
+		<set name="baseMDef" value="944"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -400,6 +436,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11345" level="4"/>
+			<skill id="11346" level="4"/>
+		</skills>
 	</npc>
 	<npc id="15110" name="Wynn Soulless" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -408,11 +448,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="6929"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="799"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -422,12 +462,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="1431"/>
+		<set name="basePDef" value="768"/>
+		<set name="baseMAtk" value="357"/>
+		<set name="baseMDef" value="992"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -440,6 +480,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11345" level="5"/>
+			<skill id="11346" level="5"/>
+		</skills>
 	</npc>
 	<npc id="15111" name="Wynn Soulless" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -448,11 +492,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="8729"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="827"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -462,12 +506,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="2026"/>
+		<set name="basePDef" value="933"/>
+		<set name="baseMAtk" value="674"/>
+		<set name="baseMDef" value="1217"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -480,6 +524,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11345" level="6"/>
+			<skill id="11346" level="6"/>
+		</skills>
 	</npc>
 	<npc id="15112" name="Wynn Soulless" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -488,11 +536,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="9246"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="855"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -502,12 +550,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="2148"/>
+		<set name="basePDef" value="971"/>
+		<set name="baseMAtk" value="715"/>
+		<set name="baseMDef" value="1279"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -520,6 +568,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11345" level="7"/>
+			<skill id="11346" level="7"/>
+		</skills>
 	</npc>
 	<npc id="15113" name="Wynn Soulless" title="">
 		<set name="collision_radius" value="9.5"/>
@@ -528,11 +580,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="1000"/>
-		<set name="baseHpMax" value="16154"/>
+		<set name="baseHpMax" value="9338"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1337"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="883"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -542,11 +594,11 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="5782"/>
-		<set name="basePDef" value="1900"/>
-		<set name="baseMAtk" value="4313"/>
-		<set name="baseMDef" value="3827"/>
-		<set name="basePAtkSpd" value="491"/>
+		<set name="basePAtk" value="2279"/>
+		<set name="basePDef" value="1010"/>
+		<set name="baseMAtk" value="758"/>
+		<set name="baseMDef" value="1343"/>
+		<set name="basePAtkSpd" value="290"/>
 		<set name="baseCritRate" value="142"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="198"/>
@@ -560,6 +612,10 @@
 			<defence attribute="holy" value="280"/>
 			<defence attribute="unholy" value="280"/>
 		</attributes>
+		<skills>
+			<skill id="11345" level="8"/>
+			<skill id="11346" level="8"/>
+		</skills>
 	</npc>
 	<npc id="15114" name="Wynn Merrow" title="">
 		<set name="collision_radius" value="13.5"/>
@@ -570,9 +626,9 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3067"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
+		<set name="baseHpReg" value="7.5"/>
 		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -586,8 +642,8 @@
 		<set name="basePDef" value="364"/>
 		<set name="baseMAtk" value="679"/>
 		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -610,9 +666,9 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3067"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
+		<set name="baseHpReg" value="7.5"/>
 		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -626,8 +682,8 @@
 		<set name="basePDef" value="364"/>
 		<set name="baseMAtk" value="679"/>
 		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -650,9 +706,9 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3067"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
+		<set name="baseHpReg" value="7.5"/>
 		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -666,8 +722,8 @@
 		<set name="basePDef" value="364"/>
 		<set name="baseMAtk" value="679"/>
 		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -690,9 +746,9 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3067"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
+		<set name="baseHpReg" value="7.5"/>
 		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -706,8 +762,8 @@
 		<set name="basePDef" value="364"/>
 		<set name="baseMAtk" value="679"/>
 		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -730,9 +786,9 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3067"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
+		<set name="baseHpReg" value="7.5"/>
 		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -746,8 +802,8 @@
 		<set name="basePDef" value="364"/>
 		<set name="baseMAtk" value="679"/>
 		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -770,9 +826,9 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3067"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
+		<set name="baseHpReg" value="7.5"/>
 		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -786,8 +842,8 @@
 		<set name="basePDef" value="364"/>
 		<set name="baseMAtk" value="679"/>
 		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -810,9 +866,9 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3067"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
+		<set name="baseHpReg" value="7.5"/>
 		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -826,8 +882,8 @@
 		<set name="basePDef" value="364"/>
 		<set name="baseMAtk" value="679"/>
 		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -850,9 +906,9 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="3067"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
+		<set name="baseHpReg" value="7.5"/>
 		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -866,8 +922,8 @@
 		<set name="basePDef" value="364"/>
 		<set name="baseMAtk" value="679"/>
 		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -888,11 +944,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="8843"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="968"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -902,12 +958,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="1131"/>
+		<set name="basePDef" value="918"/>
+		<set name="baseMAtk" value="280"/>
+		<set name="baseMDef" value="1139"/>
+		<set name="basePAtkSpd" value="415"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -920,6 +976,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11334" level="1"/>
+			<skill id="11335" level="1"/>
+		</skills>		
 	</npc>
 	<npc id="15123" name="Wynn Magnus" title="">
 		<set name="collision_radius" value="13.5"/>
@@ -928,11 +988,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="9050"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="1005"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -942,12 +1002,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="1199"/>
+		<set name="basePDef" value="955"/>
+		<set name="baseMAtk" value="299"/>
+		<set name="baseMDef" value="1198"/>
+		<set name="basePAtkSpd" value="415"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -960,6 +1020,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11334" level="2"/>
+			<skill id="11335" level="2"/>
+		</skills>			
 	</npc>
 	<npc id="15124" name="Wynn Magnus" title="">
 		<set name="collision_radius" value="13.5"/>
@@ -968,11 +1032,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="9261"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="1043"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -982,12 +1046,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="1272"/>
+		<set name="basePDef" value="994"/>
+		<set name="baseMAtk" value="317"/>
+		<set name="baseMDef" value="1259"/>
+		<set name="basePAtkSpd" value="415"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -1000,6 +1064,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11334" level="3"/>
+			<skill id="11335" level="3"/>
+		</skills>			
 	</npc>
 	<npc id="15125" name="Wynn Magnus" title="">
 		<set name="collision_radius" value="13.5"/>
@@ -1008,11 +1076,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="9479"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="1080"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -1022,12 +1090,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="1350"/>
+		<set name="basePDef" value="1035"/>
+		<set name="baseMAtk" value="336"/>
+		<set name="baseMDef" value="1322"/>
+		<set name="basePAtkSpd" value="415"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -1040,6 +1108,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11334" level="4"/>
+			<skill id="11335" level="4"/>
+		</skills>			
 	</npc>
 	<npc id="15126" name="Wynn Magnus" title="">
 		<set name="collision_radius" value="13.5"/>
@@ -1048,11 +1120,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="9701"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="1119"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -1062,12 +1134,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="1432"/>
+		<set name="basePDef" value="1076"/>
+		<set name="baseMAtk" value="357"/>
+		<set name="baseMDef" value="1390"/>
+		<set name="basePAtkSpd" value="415"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -1080,6 +1152,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11334" level="5"/>
+			<skill id="11335" level="5"/>
+		</skills>		
 	</npc>
 	<npc id="15127" name="Wynn Magnus" title="">
 		<set name="collision_radius" value="13.5"/>
@@ -1088,11 +1164,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="12220"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="1157"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -1102,12 +1178,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="2026"/>
+		<set name="basePDef" value="1306"/>
+		<set name="baseMAtk" value="674"/>
+		<set name="baseMDef" value="1703"/>
+		<set name="basePAtkSpd" value="415"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -1120,6 +1196,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11334" level="6"/>
+			<skill id="11335" level="6"/>
+		</skills>		
 	</npc>
 	<npc id="15128" name="Wynn Magnus" title="">
 		<set name="collision_radius" value="13.5"/>
@@ -1128,11 +1208,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="12945"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="1197"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -1142,12 +1222,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="2150"/>
+		<set name="basePDef" value="1359"/>
+		<set name="baseMAtk" value="715"/>
+		<set name="baseMDef" value="1359"/>
+		<set name="basePAtkSpd" value="415"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -1160,19 +1240,23 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11334" level="7"/>
+			<skill id="11335" level="7"/>
+		</skills>		
 	</npc>
 	<npc id="15129" name="Wynn Magnus" title="">
 		<set name="collision_radius" value="13.5"/>
 		<set name="collision_height" value="27.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Pet"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="13073"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="1236"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -1182,16 +1266,16 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="2281"/>
+		<set name="basePDef" value="1414"/>
+		<set name="baseMAtk" value="758"/>
+		<set name="baseMDef" value="1880"/>
+		<set name="basePAtkSpd" value="415"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
-		<set name="aggroRange" value="0"/>
+		<set name="aggroRange" value="0"/>		
 		<attributes>
 			<defence attribute="fire" value="100"/>
 			<defence attribute="water" value="100"/>
@@ -1200,6 +1284,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11334" level="8"/>
+			<skill id="11335" level="8"/>
+		</skills>		
 	</npc>
 	<npc id="15130" name="Wynn Seraphim" title="">
 		<set name="collision_radius" value="13.5"/>
@@ -1208,11 +1296,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="6317"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="692"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -1222,12 +1310,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="1129"/>
+		<set name="basePDef" value="656"/>
+		<set name="baseMAtk" value="280"/>
+		<set name="baseMDef" value="814"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -1240,6 +1328,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11336" level="1"/>
+			<skill id="11337" level="1"/>
+		</skills>		
 	</npc>
 	<npc id="15131" name="Wynn Seraphim" title="">
 		<set name="collision_radius" value="13.5"/>
@@ -1248,11 +1340,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="6464"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="718"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -1262,12 +1354,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="1198"/>
+		<set name="basePDef" value="682"/>
+		<set name="baseMAtk" value="299"/>
+		<set name="baseMDef" value="856"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -1280,6 +1372,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11336" level="2"/>
+			<skill id="11337" level="2"/>
+		</skills>			
 	</npc>
 	<npc id="15132" name="Wynn Seraphim" title="">
 		<set name="collision_radius" value="13.5"/>
@@ -1288,11 +1384,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="6615"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="745"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -1302,12 +1398,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="1271"/>
+		<set name="basePDef" value="710"/>
+		<set name="baseMAtk" value="317"/>
+		<set name="baseMDef" value="899"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -1320,6 +1416,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11336" level="3"/>
+			<skill id="11337" level="3"/>
+		</skills>		
 	</npc>
 	<npc id="15133" name="Wynn Seraphim" title="">
 		<set name="collision_radius" value="13.5"/>
@@ -1328,11 +1428,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="6771"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="772"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -1342,12 +1442,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="1349"/>
+		<set name="basePDef" value="738"/>
+		<set name="baseMAtk" value="336"/>
+		<set name="baseMDef" value="944"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -1360,6 +1460,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11336" level="4"/>
+			<skill id="11337" level="4"/>
+		</skills>			
 	</npc>
 	<npc id="15134" name="Wynn Seraphim" title="">
 		<set name="collision_radius" value="13.5"/>
@@ -1368,11 +1472,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="6929"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="799"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -1382,12 +1486,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="1431"/>
+		<set name="basePDef" value="768"/>
+		<set name="baseMAtk" value="357"/>
+		<set name="baseMDef" value="992"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -1400,6 +1504,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11336" level="5"/>
+			<skill id="11337" level="5"/>
+		</skills>		
 	</npc>
 	<npc id="15135" name="Wynn Seraphim" title="">
 		<set name="collision_radius" value="13.5"/>
@@ -1408,11 +1516,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="8729"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="827"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -1422,12 +1530,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="2026"/>
+		<set name="basePDef" value="933"/>
+		<set name="baseMAtk" value="674"/>
+		<set name="baseMDef" value="1217"/>
+		<set name="basePAtkSpd" value="190"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -1440,6 +1548,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11336" level="6"/>
+			<skill id="11337" level="6"/>
+		</skills>		
 	</npc>
 	<npc id="15136" name="Wynn Seraphim" title="">
 		<set name="collision_radius" value="13.5"/>
@@ -1448,11 +1560,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="9246"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="855"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -1462,12 +1574,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="2148"/>
+		<set name="basePDef" value="971"/>
+		<set name="baseMAtk" value="715"/>
+		<set name="baseMDef" value="1279"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -1480,6 +1592,10 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11336" level="7"/>
+			<skill id="11337" level="7"/>
+		</skills>			
 	</npc>
 	<npc id="15137" name="Wynn Seraphim" title="">
 		<set name="collision_radius" value="13.5"/>
@@ -1488,11 +1604,11 @@
 		<set name="type" value="Pet"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="3067"/>
+		<set name="baseHpMax" value="9338"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1870"/>
-		<set name="baseMpReg" value="6"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseMpMax" value="883"/>
+		<set name="baseMpReg" value="2.7"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="73"/>
 		<set name="baseDEX" value="40"/>
@@ -1502,12 +1618,12 @@
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="994"/>
-		<set name="basePDef" value="364"/>
-		<set name="baseMAtk" value="679"/>
-		<set name="baseMDef" value="267"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="basePAtk" value="2279"/>
+		<set name="basePDef" value="1010"/>
+		<set name="baseMAtk" value="758"/>
+		<set name="baseMDef" value="1343"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseCritRate" value="12"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="180"/>
 		<set name="baseWalkSpd" value="160"/>
@@ -1520,49 +1636,52 @@
 			<defence attribute="holy" value="100"/>
 			<defence attribute="unholy" value="100"/>
 		</attributes>
+		<skills>
+			<skill id="11336" level="8"/>
+			<skill id="11337" level="8"/>
+		</skills>		
 	</npc>
 	<npc id="15138" name="Blood Panther" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="collision_height" value="14.5"/>
 		<set name="collision_radius" value="20.0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="basePAtkSpd" value="720"/>
-		<set name="baseMAtkSpd" value="879"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="baseShldDef" value="0.0"/>
-		<set name="baseShldRate" value="0.0"/>
-		<set name="baseRunSpd" value="198"/>
-		<set name="baseMpMax" value="387"/>
-		<set name="baseHpMax" value="4063"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseHpMax" value="8843"/>
+		<set name="baseMpMax" value="968"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="basePAtk" value="791"/>
+		<set name="baseMAtk" value="280"/>
+		<set name="basePDef" value="787"/>
+		<set name="baseMDef" value="651"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseShldDef" value="0"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
-		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="baseMDef" value="87"/>
-		<set name="basePDef" value="130"/>
-		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="texture" value=""/>
-		<set name="shots" value="NONE"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="8"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="rndDam" value="30"/>
+		<set name="baseEvasionRate" value="0"/>
+		<set name="baseAccuracyRate" value="0"/>
+		<set name="baseMevasionRate" value="0"/>
+		<set name="baseMaccuracyRate" value="0"/>
+		<set name="baseMCritRate" value="0"/>
 		<set name="type" value="Pet"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="level" value="85"/>
+		<set name="baseHpRate" value="1.61051"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>
@@ -1571,49 +1690,52 @@
 			<defence attribute="holy" value="20"/>
 			<defence attribute="unholy" value="20"/>
 		</attributes>
+		<skills>
+			<skill id="10087" level="1"/>
+			<skill id="10088" level="1"/>
+		</skills>		
 	</npc>
 	<npc id="15139" name="Blood Panther" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="collision_height" value="14.5"/>
 		<set name="collision_radius" value="20.0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="basePAtkSpd" value="720"/>
-		<set name="baseMAtkSpd" value="879"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="baseShldDef" value="0.0"/>
-		<set name="baseShldRate" value="0.0"/>
-		<set name="baseRunSpd" value="198"/>
-		<set name="baseMpMax" value="387"/>
-		<set name="baseHpMax" value="4063"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseHpMax" value="9479"/>
+		<set name="baseMpMax" value="1080"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="basePAtk" value="944"/>
+		<set name="baseMAtk" value="336"/>
+		<set name="basePDef" value="886"/>
+		<set name="baseMDef" value="755"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseShldDef" value="0"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
-		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="baseMDef" value="87"/>
-		<set name="basePDef" value="130"/>
-		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="texture" value=""/>
-		<set name="shots" value="NONE"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="8"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="rndDam" value="30"/>
+		<set name="baseEvasionRate" value="0"/>
+		<set name="baseAccuracyRate" value="0"/>
+		<set name="baseMevasionRate" value="0"/>
+		<set name="baseMaccuracyRate" value="0"/>
+		<set name="baseMCritRate" value="0"/>
 		<set name="type" value="Pet"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="level" value="90"/>
+		<set name="baseHpRate" value="1.61051"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>
@@ -1622,49 +1744,52 @@
 			<defence attribute="holy" value="20"/>
 			<defence attribute="unholy" value="20"/>
 		</attributes>
+		<skills>
+			<skill id="10087" level="2"/>
+			<skill id="10088" level="2"/>
+		</skills>		
 	</npc>
 	<npc id="15140" name="Blood Panther" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="collision_height" value="14.5"/>
 		<set name="collision_radius" value="20.0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="basePAtkSpd" value="720"/>
-		<set name="baseMAtkSpd" value="879"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="baseShldDef" value="0.0"/>
-		<set name="baseShldRate" value="0.0"/>
-		<set name="baseRunSpd" value="198"/>
-		<set name="baseMpMax" value="387"/>
-		<set name="baseHpMax" value="4063"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseHpMax" value="12220"/>
+		<set name="baseMpMax" value="1157"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="basePAtk" value="1417"/>
+		<set name="baseMAtk" value="674"/>
+		<set name="basePDef" value="1119"/>
+		<set name="baseMDef" value="973"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseShldDef" value="0"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
-		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="baseMDef" value="87"/>
-		<set name="basePDef" value="130"/>
-		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="texture" value=""/>
-		<set name="shots" value="NONE"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="8"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="rndDam" value="30"/>
+		<set name="baseEvasionRate" value="0"/>
+		<set name="baseAccuracyRate" value="0"/>
+		<set name="baseMevasionRate" value="0"/>
+		<set name="baseMaccuracyRate" value="0"/>
+		<set name="baseMCritRate" value="0"/>
 		<set name="type" value="Pet"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="level" value="95"/>
+		<set name="baseHpRate" value="1.61051"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>
@@ -1673,49 +1798,52 @@
 			<defence attribute="holy" value="20"/>
 			<defence attribute="unholy" value="20"/>
 		</attributes>
+		<skills>
+			<skill id="10087" level="3"/>
+			<skill id="10088" level="3"/>
+		</skills>		
 	</npc>
 	<npc id="15141" name="Blood Panther" title="">
 		<set name="aggroRange" value="0"/>
 		<set name="collision_height" value="14.5"/>
 		<set name="collision_radius" value="20.0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="basePAtkSpd" value="720"/>
-		<set name="baseMAtkSpd" value="879"/>
-		<set name="baseWalkSpd" value="50"/>
-		<set name="baseShldDef" value="0.0"/>
-		<set name="baseShldRate" value="0.0"/>
-		<set name="baseRunSpd" value="198"/>
-		<set name="baseMpMax" value="387"/>
-		<set name="baseHpMax" value="4063"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
+		<set name="baseSTR" value="78"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="41"/>
+		<set name="baseINT" value="42"/>
+		<set name="baseWIT" value="78"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseHpMax" value="13073"/>
+		<set name="baseMpMax" value="1236"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="basePAtk" value="1596"/>
+		<set name="baseMAtk" value="758"/>
+		<set name="basePDef" value="1212"/>
+		<set name="baseMDef" value="1074"/>
+		<set name="basePAtkSpd" value="290"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseShldDef" value="0"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
-		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="baseMDef" value="87"/>
-		<set name="basePDef" value="130"/>
-		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="texture" value=""/>
-		<set name="shots" value="NONE"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="8"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="rndDam" value="30"/>
+		<set name="baseEvasionRate" value="0"/>
+		<set name="baseAccuracyRate" value="0"/>
+		<set name="baseMevasionRate" value="0"/>
+		<set name="baseMaccuracyRate" value="0"/>
+		<set name="baseMCritRate" value="0"/>
 		<set name="type" value="Pet"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<set name="ai_type" value="CharacterAI"/>
+		<set name="level" value="99"/>
+		<set name="baseHpRate" value="1.61051"/>
+		<set name="rewardExp" value="0"/>
+		<set name="rewardSp" value="0"/>
+		<set name="rewardRp" value="0"/>
+		<set name="aggroRange" value="0"/>
+		<set name="shots" value="NONE"/>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>
@@ -1724,5 +1852,9 @@
 			<defence attribute="holy" value="20"/>
 			<defence attribute="unholy" value="20"/>
 		</attributes>
+		<skills>
+			<skill id="10087" level="4"/>
+			<skill id="10088" level="4"/>
+		</skills>		
 	</npc>
 </list>
