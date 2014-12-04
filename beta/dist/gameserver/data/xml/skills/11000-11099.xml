@@ -134,6 +134,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CONT"/>
 		<set name="operateType" val="OP_TOGGLE"/>
+		<set name="isAwakeningToggle" val="true"/>			
 		<for>
 			<effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="isaElement" time="5" val="#mp">
 				<add order="0x40" stat="attackFire" val="20"/>
@@ -149,6 +150,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CONT"/>
 		<set name="operateType" val="OP_TOGGLE"/>
+		<set name="isAwakeningToggle" val="true"/>			
 		<for>
 			<effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="isaElement" time="5" val="#mp">
 				<add order="0x40" stat="attackWater" val="20"/>
@@ -164,6 +166,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CONT"/>
 		<set name="operateType" val="OP_TOGGLE"/>
+		<set name="isAwakeningToggle" val="true"/>			
 		<for>
 			<effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="isaElement" time="5" val="#mp">
 				<add order="0x40" stat="attackWind" val="20"/>
@@ -179,6 +182,7 @@
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CONT"/>
 		<set name="operateType" val="OP_TOGGLE"/>
+		<set name="isAwakeningToggle" val="true"/>			
 		<for>
 			<effect count="0x7fffffff" name="LDManaDamOverTime" stackOrder="1" stackType="isaElement" time="5" val="#mp">
 				<add order="0x40" stat="attackEarth" val="20"/>

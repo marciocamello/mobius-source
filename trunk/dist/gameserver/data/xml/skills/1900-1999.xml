@@ -343,6 +343,7 @@
 		<set name="operateType" val="OP_ACTIVE_TOGGLE"/>
 		<set name="isAuraSkill" val="true"/>
 		<set name="isMusic" val="true"/>
+		<set name="isAwakeningToggle" val="true"/>		
 		<for>
 			<effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="SigelAura" stackOrder="1">
 				<def name="forceSkillId" val="1928"/>
@@ -376,6 +377,7 @@
 		<set name="operateType" val="OP_ACTIVE_TOGGLE"/>
 		<set name="isMusic" val="true"/>
 		<set name="isAuraSkill" val="true"/>
+		<set name="isAwakeningToggle" val="true"/>		
 		<for>
 			<effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="TyrrAura" stackOrder="1">
 				<def name="forceSkillId" val="1930"/>
@@ -409,6 +411,7 @@
 		<set name="operateType" val="OP_ACTIVE_TOGGLE"/>
 		<set name="isMusic" val="true"/>
 		<set name="isAuraSkill" val="true"/>
+		<set name="isAwakeningToggle" val="true"/>		
 		<for>
 			<effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="OthellAura" stackOrder="1">
 				<def name="forceSkillId" val="1932"/>
@@ -435,11 +438,13 @@
 		<table name="#magicLevel">85</table>
 		<set name="effectPoint" val="467"/>
 		<set name="magicLevel" val="#magicLevel"/>
+		<set name="effectPoint" val="495"/>		
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="CONT"/>
 		<set name="skillRadius" val="1000"/>
 		<set name="reuseDelay" val="5000"/>
 		<set name="operateType" val="OP_ACTIVE_TOGGLE"/>
+		<set name="isAwakeningToggle" val="true"/>		
 		<set name="isMusic" val="true"/>
 		<set name="isAuraSkill" val="true"/>
 		<for>
@@ -475,6 +480,7 @@
 		<set name="operateType" val="OP_ACTIVE_TOGGLE"/>
 		<set name="isMusic" val="true"/>
 		<set name="isAuraSkill" val="true"/>
+		<set name="isAwakeningToggle" val="true"/>			
 		<for>
 			<effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="FeohAura" stackOrder="1">
 				<def name="forceSkillId" val="1936"/>
@@ -508,6 +514,7 @@
 		<set name="operateType" val="OP_ACTIVE_TOGGLE"/>
 		<set name="isMusic" val="true"/>
 		<set name="isAuraSkill" val="true"/>
+		<set name="isAwakeningToggle" val="true"/>		
 		<for>
 			<effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="WynnAura" stackOrder="1">
 				<def name="forceSkillId" val="1938"/>
@@ -542,6 +549,7 @@
 		<set name="operateType" val="OP_ACTIVE_TOGGLE"/>
 		<set name="isMusic" val="true"/>
 		<set name="isAuraSkill" val="true"/>
+		<set name="isAwakeningToggle" val="true"/>			
 		<for>
 			<effect count="0x7fffffff" name="GiantForceAura" time="5" val="10" stackType="AeoreAura" stackOrder="1">
 				<def name="forceSkillId" val="1940"/>

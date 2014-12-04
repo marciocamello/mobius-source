@@ -1453,6 +1453,7 @@
 		<set name="relationSkillsId" val="221;"/>
 		<set name="skillType" val="CONT"/>
 		<set name="target" val="TARGET_SELF"/>
+		<set name="isAwakeningToggle" val="true"/>			
 		<for>
 			<effect count="0x7fffffff" name="SilentMove" stackOrder="1" stackType="SilentMove" time="3" val="5">
 				<mul order="0x30" stat="pDef" val="0.8"/>
