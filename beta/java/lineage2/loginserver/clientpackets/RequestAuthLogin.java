@@ -35,7 +35,8 @@ import lineage2.loginserver.utils.Log;
  */
 public class RequestAuthLogin extends L2LoginClientPacket
 {
-	private final byte[] _raw = new byte[128];
+	private final byte[] _raw1 = new byte[128];
+	private final byte[] _raw2 = new byte[128];
 	
 	/**
 	 * Method readImpl.
@@ -43,15 +44,8 @@ public class RequestAuthLogin extends L2LoginClientPacket
 	@Override
 	protected void readImpl()
 	{
-		readB(_raw);
-		readD();
-		readD();
-		readD();
-		readD();
-		readD();
-		readD();
-		readH();
-		readC();
+		readB(_raw1);
+		readB(_raw2);
 	}
 	
 	/**
@@ -62,13 +56,15 @@ public class RequestAuthLogin extends L2LoginClientPacket
 	protected void runImpl() throws Exception
 	{
 		L2LoginClient client = getClient();
-		byte[] decrypted;
+		byte[] decrypted1 = null;
+		byte[] decrypted2 = null;
 		
 		try
 		{
 			Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
 			rsaCipher.init(Cipher.DECRYPT_MODE, client.getRSAPrivateKey());
-			decrypted = rsaCipher.doFinal(_raw, 0x00, 0x80);
+			decrypted1 = rsaCipher.doFinal(_raw1, 0x00, _raw1.length);
+			decrypted2 = rsaCipher.doFinal(_raw2, 0x00, _raw2.length);
 		}
 		catch (Exception e)
 		{
@@ -76,9 +72,9 @@ public class RequestAuthLogin extends L2LoginClientPacket
 			return;
 		}
 		
-		String user = new String(decrypted, 0x5E, 14).trim();
+		String user = new String(decrypted1, 0x4E, 14).trim();
 		user = user.toLowerCase();
-		String password = new String(decrypted, 0x6C, 16).trim();
+		String password = new String(decrypted2, 0x5C, 16).trim();
 		int currentTime = (int) (System.currentTimeMillis() / 1000L);
 		Account account = new Account(user);
 		account.restore();
