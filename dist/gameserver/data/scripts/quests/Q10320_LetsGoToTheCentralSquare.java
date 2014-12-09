@@ -50,7 +50,7 @@ public class Q10320_LetsGoToTheCentralSquare extends Quest implements ScriptFile
 			case "qet_rev":
 				htmltext = "1-2.htm";
 				qs.getPlayer().addExpAndSp(30, 100);
-				qs.giveItems(57, 3000);
+				qs.giveItems(57, 29);
 				qs.exitCurrentQuest(false);
 				qs.playSound(SOUND_FINISH);
 				break;

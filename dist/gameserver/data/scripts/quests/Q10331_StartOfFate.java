@@ -410,9 +410,9 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 			player.broadcastPacket(new MagicSkillUse(player, player, 5103, 1, 1000, 0));
 			MultiSellHolder.getInstance().SeparateAndSend(PROOF_OF_COURAGE_MULTISELL_ID, qs.getPlayer(), 0, npc.getId());
 			qs.showTutorialHTML(TutorialShowHtml.QT_009, TutorialShowHtml.TYPE_WINDOW);
-			qs.giveItems(ADENA_ID, 80000);
+			qs.giveItems(ADENA_ID, 789);
 			qs.giveItems(PROOF_OF_COURAGE, 40);
-			qs.addExpAndSp(200000, 40000);
+			qs.addExpAndSp(200000, 4000);
 			qs.setState(COMPLETED);
 			qs.exitCurrentQuest(false);
 			qs.playSound(SOUND_FANFARE2);
@@ -438,7 +438,11 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 			case MOKA:
 			case VALFAR:
 				String prefix = getStartNpcPrefix(npcId);
-				if (checkSC(qs.getPlayer()))
+				if (cond >= 6)
+				{
+					htmltext = getAvailableClassList(qs.getPlayer(), prefix + "_q10331_5.htm", prefix + "_q10331_6.htm");
+				}
+				else if (checkSC(qs.getPlayer()))
 				{
 					htmltext = prefix + "_q10331_1.htm";
 				}
@@ -453,10 +457,6 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 				else if (cond == 1)
 				{
 					htmltext = prefix + "_q10331_4.htm";
-				}
-				else if (cond >= 6)
-				{
-					htmltext = getAvailableClassList(qs.getPlayer(), prefix + "_q10331_5.htm", prefix + "_q10331_6.htm");
 				}
 				break;
 			

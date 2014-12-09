@@ -257,11 +257,10 @@ public class Q10360_CertificationOfFate extends Quest implements ScriptFile
 			player.setClassId(newClassId, false, false);
 			player.broadcastCharInfo();
 			MultiSellHolder.getInstance().SeparateAndSend(85556, qs.getPlayer(), 0, npc.getId());
-			qs.getPlayer().addExpAndSp(2700000, 250000);
+			qs.getPlayer().addExpAndSp(2700000, 25000);
 			qs.giveItems(17822, 40);
 			qs.giveItems(32777, 1);
-			qs.giveItems(33800, 1);
-			qs.giveItems(ADENA_ID, 110000);
+			qs.giveItems(ADENA_ID, 1100);
 			qs.exitCurrentQuest(false);
 			qs.takeAllItems(Stone);
 			qs.playSound(SOUND_FINISH);

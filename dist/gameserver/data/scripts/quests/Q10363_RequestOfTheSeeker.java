@@ -154,8 +154,8 @@ public class Q10363_RequestOfTheSeeker extends Quest implements ScriptFile
 			
 			case "qet_rev":
 				htmltext = "1-3.htm";
-				qs.getPlayer().addExpAndSp(70200, 8100);
-				qs.giveItems(57, 48000);
+				qs.getPlayer().addExpAndSp(70200, 810);
+				qs.giveItems(57, 479);
 				qs.giveItems(1060, 100);
 				qs.giveItems(43, 1);
 				qs.exitCurrentQuest(false);

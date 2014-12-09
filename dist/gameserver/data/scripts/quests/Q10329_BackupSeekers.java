@@ -64,8 +64,8 @@ public class Q10329_BackupSeekers extends Quest implements ScriptFile
 			case "qet_rev":
 				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.GOING_INTO_REAL_WAR_SOULSHOTS_ADDED, 4500, ScreenMessageAlign.TOP_CENTER));
 				htmltext = "1-2.htm";
-				qs.getPlayer().addExpAndSp(16900, 5000);
-				qs.giveItems(57, 25000);
+				qs.getPlayer().addExpAndSp(16900, 500);
+				qs.giveItems(57, 249);
 				qs.giveItems(875, 2);
 				qs.giveItems(906, 1);
 				despawnsoldier();

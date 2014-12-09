@@ -29,7 +29,6 @@ public class Q10391_SuspiciousHelper extends Quest implements ScriptFile
 	// Items
 	private static final int Forged_Card = 36707;
 	private static final int Exp_Material = 36708;
-	private static final int ARMOR_ENCHANT_C = 952;
 	private static final int STEEL_COINS = 37045;
 	
 	public Q10391_SuspiciousHelper()
@@ -63,9 +62,8 @@ public class Q10391_SuspiciousHelper extends Quest implements ScriptFile
 			
 			case "33859-04.htm":
 				qs.takeItems(36708, 1);
-				qs.giveItems(ARMOR_ENCHANT_C, 1, true);
 				qs.giveItems(STEEL_COINS, 1, true);
-				qs.addExpAndSp(388290, 93);
+				qs.addExpAndSp(388290, 3882);
 				qs.playSound(SOUND_FINISH);
 				qs.exitCurrentQuest(false);
 		}
