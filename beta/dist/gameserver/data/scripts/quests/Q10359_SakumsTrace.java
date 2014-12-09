@@ -73,8 +73,8 @@ public class Q10359_SakumsTrace extends Quest implements ScriptFile
 				break;
 			
 			case "qet_rev":
-				qs.getPlayer().addExpAndSp(670000, 220000);
-				qs.giveItems(57, 108000);
+				qs.getPlayer().addExpAndSp(900000, 22000);
+				qs.giveItems(57, 1080);
 				qs.exitCurrentQuest(false);
 				qs.playSound(SOUND_FINISH);
 				switch (qs.getPlayer().getRace())

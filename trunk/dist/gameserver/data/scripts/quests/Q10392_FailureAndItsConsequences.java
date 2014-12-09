@@ -28,7 +28,6 @@ public class Q10392_FailureAndItsConsequences extends Quest implements ScriptFil
 	private static final int Iason = 33859;
 	// Items
 	private static final int Sus_frag = 36709;
-	private static final int ARMOR_ENCHANT_C = 952;
 	private static final int STEEL_COINS = 37045;
 	// Mobs
 	private static final int[] Swamp_Tribe =
@@ -68,9 +67,8 @@ public class Q10392_FailureAndItsConsequences extends Quest implements ScriptFil
 				break;
 			
 			case "33858-04.htm":
-				qs.giveItems(ARMOR_ENCHANT_C, 5, true);
 				qs.giveItems(STEEL_COINS, 17, true);
-				qs.addExpAndSp(2329740, 559);
+				qs.addExpAndSp(2329740, 23297);
 				qs.playSound(SOUND_FINISH);
 				qs.exitCurrentQuest(false);
 		}

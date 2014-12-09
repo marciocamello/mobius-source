@@ -62,8 +62,8 @@ public class Q10364_ObligationsOfTheSeeker extends Quest implements ScriptFile
 			case "quest_rev":
 				qs.takeAllItems(papper);
 				htmltext = "2-4.htm";
-				qs.getPlayer().addExpAndSp(95000, 10000);
-				qs.giveItems(57, 55000);
+				qs.getPlayer().addExpAndSp(95000, 1000);
+				qs.giveItems(57, 549);
 				qs.giveItems(1060, 50);
 				qs.giveItems(37, 1);
 				qs.exitCurrentQuest(false);

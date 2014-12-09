@@ -31,7 +31,6 @@ public class Q10390_KekropusLetter extends Quest implements ScriptFile
 	private static final int LETTER_OF_KEKROPUS = 36706;
 	private static final int TELEPORT_HIENE = 37112;
 	private static final int TELEPORT_ALLIGATOR_ISLAND = 37025;
-	private static final int WEAPON_ENCHANT_C = 951;
 	private static final int STEEL_COINS = 37045;
 	
 	public Q10390_KekropusLetter()
@@ -76,9 +75,8 @@ public class Q10390_KekropusLetter extends Quest implements ScriptFile
 				break;
 			
 			case "33858-02.htm":
-				qs.giveItems(WEAPON_ENCHANT_C, 3, true);
-				qs.giveItems(STEEL_COINS, 10, true);
-				qs.addExpAndSp(370440, 88);
+				qs.giveItems(STEEL_COINS, 22, true);
+				qs.addExpAndSp(370440, 3704);
 				qs.playSound(SOUND_FINISH);
 				qs.exitCurrentQuest(false);
 		}

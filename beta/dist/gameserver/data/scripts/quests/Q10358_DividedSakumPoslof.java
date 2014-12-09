@@ -58,8 +58,8 @@ public class Q10358_DividedSakumPoslof extends Quest implements ScriptFile
 			case "qet_rev":
 				htmltext = "1-3.htm";
 				qs.takeAllItems(17585);
-				qs.getPlayer().addExpAndSp(450000, 180000);
-				qs.giveItems(57, 105000);
+				qs.getPlayer().addExpAndSp(750000, 15000);
+				qs.giveItems(57, 1050);
 				qs.exitCurrentQuest(false);
 				qs.playSound(SOUND_FINISH);
 				break;

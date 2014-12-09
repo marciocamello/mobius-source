@@ -46,8 +46,8 @@ public class Q10326_RespectYourElders extends Quest implements ScriptFile
 				break;
 			
 			case "5.htm":
-				qs.giveItems(57, 14000);
-				qs.addExpAndSp(5300, 2800);
+				qs.giveItems(57, 139);
+				qs.addExpAndSp(5300, 280);
 				qs.playSound(SOUND_FINISH);
 				qs.exitCurrentQuest(false);
 				break;

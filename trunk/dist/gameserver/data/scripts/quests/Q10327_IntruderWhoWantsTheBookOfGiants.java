@@ -90,8 +90,8 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest implements Scr
 			case "qet_rev":
 				player.sendPacket(new ExShowScreenMessage(NpcString.ACCESSORIES_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
 				htmltext = "0-5.htm";
-				qs.getPlayer().addExpAndSp(7800, 3500);
-				qs.giveItems(57, 16000);
+				qs.getPlayer().addExpAndSp(7800, 350);
+				qs.giveItems(57, 159);
 				qs.giveItems(112, 2);
 				qs.exitCurrentQuest(false);
 				qs.playSound(SOUND_FINISH);

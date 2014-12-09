@@ -48,8 +48,8 @@ public class Q10332_ToughRoad extends Quest implements ScriptFile
 			
 			case "qet_rev":
 				htmltext = "1-3.htm";
-				qs.getPlayer().addExpAndSp(90000, 30000);
-				qs.giveItems(57, 70000);
+				qs.getPlayer().addExpAndSp(90000, 3000);
+				qs.giveItems(57, 700);
 				qs.takeAllItems(17582);
 				qs.exitCurrentQuest(false);
 				qs.playSound(SOUND_FINISH);

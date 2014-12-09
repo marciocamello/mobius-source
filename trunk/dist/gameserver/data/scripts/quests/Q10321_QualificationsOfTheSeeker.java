@@ -48,8 +48,8 @@ public class Q10321_QualificationsOfTheSeeker extends Quest implements ScriptFil
 			
 			case "qet_rev":
 				htmltext = "1-2.htm";
-				qs.getPlayer().addExpAndSp(40, 500);
-				qs.giveItems(57, 5000);
+				qs.getPlayer().addExpAndSp(40, 50);
+				qs.giveItems(57, 49);
 				qs.playSound(SOUND_FINISH);
 				qs.exitCurrentQuest(false);
 				break;

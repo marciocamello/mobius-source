@@ -59,8 +59,8 @@ public class Q10333_DisappearedSakum extends Quest implements ScriptFile
 			
 			case "qet_rev":
 				htmltext = "2-3.htm";
-				qs.getPlayer().addExpAndSp(130000, 50000);
-				qs.giveItems(57, 80000);
+				qs.getPlayer().addExpAndSp(180000, 5000);
+				qs.giveItems(57, 799);
 				qs.takeAllItems(Mark);
 				qs.exitCurrentQuest(false);
 				qs.playSound(SOUND_FINISH);

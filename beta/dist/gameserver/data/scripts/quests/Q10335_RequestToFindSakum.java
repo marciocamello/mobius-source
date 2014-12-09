@@ -62,8 +62,8 @@ public class Q10335_RequestToFindSakum extends Quest implements ScriptFile
 			
 			case "qet_rev":
 				htmltext = "2-3.htm";
-				qs.getPlayer().addExpAndSp(250000, 100000);
-				qs.giveItems(57, 90000);
+				qs.getPlayer().addExpAndSp(350000, 10000);
+				qs.giveItems(57, 899);
 				qs.exitCurrentQuest(false);
 				qs.playSound(SOUND_FINISH);
 				break;

@@ -66,8 +66,8 @@ public class Q10365_SeekerEscort extends Quest implements ScriptFile
 			
 			case "qet_rev":
 				htmltext = "1-2.htm";
-				qs.getPlayer().addExpAndSp(120000, 20000);
-				qs.giveItems(57, 65000);
+				qs.getPlayer().addExpAndSp(120000, 2000);
+				qs.giveItems(57, 649);
 				qs.exitCurrentQuest(false);
 				qs.playSound(SOUND_FINISH);
 				break;

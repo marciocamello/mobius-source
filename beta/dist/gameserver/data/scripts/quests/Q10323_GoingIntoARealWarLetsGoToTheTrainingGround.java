@@ -76,8 +76,8 @@ public class Q10323_GoingIntoARealWarLetsGoToTheTrainingGround extends Quest imp
 			
 			case "qet_rev":
 				htmltext = "3-2.htm";
-				qs.getPlayer().addExpAndSp(300, 1500);
-				qs.giveItems(57, 9000);
+				qs.getPlayer().addExpAndSp(300, 150);
+				qs.giveItems(57, 89);
 				qs.takeAllItems(17574);
 				qs.exitCurrentQuest(false);
 				qs.playSound(SOUND_FINISH);

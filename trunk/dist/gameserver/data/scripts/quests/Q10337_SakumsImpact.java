@@ -59,8 +59,8 @@ public class Q10337_SakumsImpact extends Quest implements ScriptFile
 			
 			case "qet_rev":
 				htmltext = "2-2.htm";
-				qs.getPlayer().addExpAndSp(470000, 160000);
-				qs.giveItems(57, 103000);
+				qs.getPlayer().addExpAndSp(650000, 16000);
+				qs.giveItems(57, 1030);
 				qs.exitCurrentQuest(false);
 				qs.playSound(SOUND_FINISH);
 				break;

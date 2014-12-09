@@ -52,8 +52,8 @@ public class Q10336_DividedSakumKanilov extends Quest implements ScriptFile
 			case "qet_rev":
 				htmltext = "1-3.htm";
 				qs.takeAllItems(17584);
-				qs.getPlayer().addExpAndSp(350000, 150000);
-				qs.giveItems(57, 100000);
+				qs.getPlayer().addExpAndSp(500000, 1500);
+				qs.giveItems(57, 999);
 				qs.giveItems(955, 3);
 				qs.exitCurrentQuest(false);
 				qs.playSound(SOUND_FINISH);
