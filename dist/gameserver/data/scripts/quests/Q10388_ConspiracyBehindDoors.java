@@ -60,7 +60,7 @@ public class Q10388_ConspiracyBehindDoors extends Quest implements ScriptFile
 				qs.exitCurrentQuest(false);
 				qs.playSound(SOUND_FINISH);
 				qs.giveItems(ADENA_ID, 65136);
-				qs.addExpAndSp(29638350, 2963835);
+				qs.addExpAndSp(29638350, 7113);
 				break;
 		}
 		
