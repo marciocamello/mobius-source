@@ -68,7 +68,7 @@ public final class KartiaGuard extends Fighter
 		}
 		
 		// if master exit from instance delete me
-		if (actor.getReflectionId() != master.getReflectionId())
+		if ((actor.getReflectionId() != master.getReflectionId()) || (master == null))
 		{
 			actor.deleteMe();
 		}
