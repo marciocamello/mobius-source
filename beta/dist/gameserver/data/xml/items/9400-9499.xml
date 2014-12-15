@@ -1518,7 +1518,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="9479" name="Dynasty Earring (Not in Use)" add_name="Dark Attack Resistance">
+	<armor id="9479" name="Dynasty Earring (Not in Use)" add_name="Dark Resistance">
 		<set name="crystal_count" value="285"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -1537,7 +1537,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="9480" name="Dynasty Necklace (Not in Use)" add_name="Dark Attack Resistance">
+	<armor id="9480" name="Dynasty Necklace (Not in Use)" add_name="Dark Resistance">
 		<set name="crystal_count" value="381"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>
@@ -1555,7 +1555,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="9481" name="Dynasty Ring (Not in Use)" add_name="Dark Attack Resistance">
+	<armor id="9481" name="Dynasty Ring (Not in Use)" add_name="Dark Resistance">
 		<set name="crystal_count" value="190"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>

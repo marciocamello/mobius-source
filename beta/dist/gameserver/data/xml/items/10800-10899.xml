@@ -924,7 +924,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<etcitem id="10836" name="Pathfinder Supplies (Level 2)">
+	<etcitem id="10836" name="Pathfinder Supplies (Lv. 2)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -939,7 +939,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10837" name="Pathfinder Supplies (Level 4)">
+	<etcitem id="10837" name="Pathfinder Supplies (Lv. 4)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -954,7 +954,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10838" name="Pathfinder Supplies (Level 5)">
+	<etcitem id="10838" name="Pathfinder Supplies (Lv. 5)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -969,7 +969,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10839" name="Pathfinder Supplies (Level 6)">
+	<etcitem id="10839" name="Pathfinder Supplies (Lv. 6)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -984,7 +984,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10840" name="Pathfinder Supplies (Level 7)">
+	<etcitem id="10840" name="Pathfinder Supplies (Lv. 7)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -999,7 +999,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10841" name="Pathfinder Supplies (Level 8)">
+	<etcitem id="10841" name="Pathfinder Supplies (Lv. 8)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1014,7 +1014,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10842" name="Pathfinder Supplies (Level 11)">
+	<etcitem id="10842" name="Pathfinder Supplies (Lv. 11)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1029,7 +1029,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10843" name="Pathfinder Supplies (Level 12)">
+	<etcitem id="10843" name="Pathfinder Supplies (Lv. 12)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1044,7 +1044,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10844" name="Pathfinder Supplies (Level 13)">
+	<etcitem id="10844" name="Pathfinder Supplies (Lv. 13)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1059,7 +1059,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10845" name="Pathfinder Supplies (Level 14)">
+	<etcitem id="10845" name="Pathfinder Supplies (Lv. 14)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1074,7 +1074,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10846" name="Pathfinder Supplies (Level 15)">
+	<etcitem id="10846" name="Pathfinder Supplies (Lv. 15)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1089,7 +1089,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10847" name="Pathfinder Supplies (Level 18)">
+	<etcitem id="10847" name="Pathfinder Supplies (Lv. 18)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1104,7 +1104,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10848" name="Pathfinder Supplies (Level 19)">
+	<etcitem id="10848" name="Pathfinder Supplies (Lv. 19)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1119,7 +1119,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10849" name="Pathfinder Supplies (Level 20)">
+	<etcitem id="10849" name="Pathfinder Supplies (Lv. 20)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1134,7 +1134,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10850" name="Pathfinder Supplies (Level 21)">
+	<etcitem id="10850" name="Pathfinder Supplies (Lv. 21)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1149,7 +1149,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10851" name="Pathfinder Supplies (Level 22)">
+	<etcitem id="10851" name="Pathfinder Supplies (Lv. 22)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1164,7 +1164,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10852" name="Pathfinder Supplies (Level 25)">
+	<etcitem id="10852" name="Pathfinder Supplies (Lv. 25)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1179,7 +1179,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10853" name="Pathfinder Supplies (Level 26)">
+	<etcitem id="10853" name="Pathfinder Supplies (Lv. 26)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1194,7 +1194,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10854" name="Pathfinder Supplies (Level 27)">
+	<etcitem id="10854" name="Pathfinder Supplies (Lv. 27)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1209,7 +1209,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10855" name="Pathfinder Supplies (Level 28)">
+	<etcitem id="10855" name="Pathfinder Supplies (Lv. 28)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1224,7 +1224,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10856" name="Pathfinder Supplies (Level 29)">
+	<etcitem id="10856" name="Pathfinder Supplies (Lv. 29)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1239,7 +1239,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10857" name="Pathfinder Supplies (Level 32)">
+	<etcitem id="10857" name="Pathfinder Supplies (Lv. 32)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1254,7 +1254,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10858" name="Pathfinder Supplies (Level 33)">
+	<etcitem id="10858" name="Pathfinder Supplies (Lv. 33)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1269,7 +1269,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10859" name="Pathfinder Supplies (Level 34)">
+	<etcitem id="10859" name="Pathfinder Supplies (Lv. 34)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1284,7 +1284,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10860" name="Pathfinder Supplies (Level 35)">
+	<etcitem id="10860" name="Pathfinder Supplies (Lv. 35)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1299,7 +1299,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10861" name="Pathfinder Supplies (Level 36)">
+	<etcitem id="10861" name="Pathfinder Supplies (Lv. 36)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1314,7 +1314,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10862" name="Pathfinder Supplies (Level 38)">
+	<etcitem id="10862" name="Pathfinder Supplies (Lv. 38)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1329,7 +1329,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10863" name="Pathfinder Supplies (Level 39)">
+	<etcitem id="10863" name="Pathfinder Supplies (Lv. 39)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1344,7 +1344,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10864" name="Pathfinder Supplies (Level 40)">
+	<etcitem id="10864" name="Pathfinder Supplies (Lv. 40)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1359,7 +1359,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="10865" name="Pathfinder Supplies (Level 41)">
+	<etcitem id="10865" name="Pathfinder Supplies (Lv. 41)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

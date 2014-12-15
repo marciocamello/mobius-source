@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="37832" name="Valentine Appearance Stone: Dagger" add_name="(15-Day)">
+	<etcitem id="37832" name="Valentine Appearance Stone: Dagger" add_name="15-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -17,7 +17,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="37833" name="Valentine Appearance Stone: Sword" add_name="(15-Day)">
+	<etcitem id="37833" name="Valentine Appearance Stone: One-handed Sword" add_name="15-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -33,7 +33,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="37834" name="Valentine Appearance Stone: Two-handed Sword" add_name="(15-Day)">
+	<etcitem id="37834" name="Valentine Appearance Stone: Two-handed Sword" add_name="15-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -49,7 +49,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="37835" name="Valentine Appearance Stone: One-handed Blunt Weapon" add_name="(15-Day)">
+	<etcitem id="37835" name="Valentine Appearance Stone: One-handed Blunt Weapon" add_name="15-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -65,7 +65,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="37836" name="Valentine Appearance Stone: Fist Weapon" add_name="(15-Day)">
+	<etcitem id="37836" name="Valentine Appearance Stone: Fist Weapon" add_name="15-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -81,7 +81,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="37837" name="Valentine Appearance Stone: Spear" add_name="(15-Day)">
+	<etcitem id="37837" name="Valentine Appearance Stone: Spear" add_name="15-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -97,7 +97,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="37838" name="Valentine Appearance Stone: Bow" add_name="(15-Day)">
+	<etcitem id="37838" name="Valentine Appearance Stone: Bow" add_name="15-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -113,7 +113,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="37839" name="Valentine Appearance Stone: Crossbow" add_name="(15-Day)">
+	<etcitem id="37839" name="Valentine Appearance Stone: Crossbow" add_name="15-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -129,7 +129,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="37840" name="Valentine Appearance Stone: One-Handed Magic Sword" add_name="(15-Day)">
+	<etcitem id="37840" name="Valentine Appearance Stone: One-handed Magic Sword" add_name="15-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -145,7 +145,7 @@
 			</not>
 		</cond>
 	</etcitem>	
-	<etcitem id="37841" name="Valentine Appearance Stone: One-handed Magic Blunt Weapon" add_name="(15-Day)">
+	<etcitem id="37841" name="Valentine Appearance Stone: One-handed Magic Blunt Weapon" add_name="15-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -161,7 +161,7 @@
 			</not>
 		</cond>
 	</etcitem>	
-	<etcitem id="37842" name="Valentine Appearance Stone: Two-handed Magic Blunt Weapon" add_name="(15-Day)">
+	<etcitem id="37842" name="Valentine Appearance Stone: Two-handed Magic Blunt Weapon" add_name="15-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -177,7 +177,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="37843" name="Valentine Appearance Stone: Dualsword" add_name="(15-Day)">
+	<etcitem id="37843" name="Valentine Appearance Stone: Dualsword" add_name="15-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -193,7 +193,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="37844" name="Valentine Appearance Stone: Dual Dagger" add_name="(15-Day)">
+	<etcitem id="37844" name="Valentine Appearance Stone: Dual Dagger" add_name="15-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -209,7 +209,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="37845" name="Valentine Appearance Stone: Dual Blunt Weapon" add_name="(15-Day)">
+	<etcitem id="37845" name="Valentine Appearance Stone: Dual Blunt Weapon" add_name="15-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -225,7 +225,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="37846" name="Valentine Appearance Stone: Shield" add_name="(15-Day)">
+	<etcitem id="37846" name="Valentine Appearance Stone: Shield" add_name="15-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -241,7 +241,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="37847" name="Valentine Appearance Stone: Sigil" add_name="(15-Day)">
+	<etcitem id="37847" name="Valentine Appearance Stone: Sigil" add_name="15-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>

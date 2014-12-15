@@ -502,7 +502,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="10638" name="Rough Black Cubic Piece">
+	<etcitem id="10638" name="Rough Black Cube Fragment">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -588,7 +588,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="10647" name="Fine Black Cubic Piece">
+	<etcitem id="10647" name="Fine Black Cube Fragment">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

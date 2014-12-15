@@ -451,7 +451,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="15431" name="Event - Scroll: Summon Uldie">
+	<etcitem id="15431" name="Event - Summon Scroll: Uldie">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -467,7 +467,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="15432" name="Event - Scroll: Summon Belldandy">
+	<etcitem id="15432" name="Event - Summon Scroll: Belldandy">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -483,7 +483,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="15433" name="Event - Scroll: Summon Skooldie">
+	<etcitem id="15433" name="Event - Summon Scroll: Skooldie">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -574,7 +574,7 @@
 			<skill id="9068" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="15439" name="Scroll: 10,000 SP">
+	<etcitem id="15439" name="Scroll: 1,000 SP">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_sp_scroll3_i00"/>
@@ -1241,7 +1241,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<armor id="15484" name="High-level Angel Circlet">
+	<armor id="15484" name="Archangel Circlet">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_highangel_circlet_i00"/>
 		<set name="price" value="0"/>

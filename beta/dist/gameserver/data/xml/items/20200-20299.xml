@@ -581,7 +581,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20228" name="Agathion - One-eyed Bat Drove Pack (7-day)" add_name="Dark Attack Resistance">
+	<etcitem id="20228" name="Agathion - One-eyed Bat Drove Pack (7-day)" add_name="Dark Resistance">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -624,7 +624,7 @@
 			<skill id="23033" level="1"/>
 		</skills>
 	</armor>
-	<armor id="20231" name="Agathion - One-eyed Bat Drove" add_name="Dark Attack Resistance (7-day)">
+	<armor id="20231" name="Agathion - One-eyed Bat Drove" add_name="Dark Resistance (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>

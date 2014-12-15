@@ -9,7 +9,7 @@
 			<slot id="NONE"/>
 		</equip>
 	</armor>
-	<etcitem id="24134" name="Dark Assassin Suit Appearance Stone">
+	<etcitem id="24134" name="Appearance Stone: Dark Assassin Suit">
 		<set name="type" value="OTHER"/>
 		<set name="stackable" value="true"/>
 		<set name="weight" value="0"/>

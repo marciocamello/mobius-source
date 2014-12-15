@@ -1549,7 +1549,7 @@
 		</cond>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="20386" name="Scroll of Escape: Hunters Village">
+	<etcitem id="20386" name="Scroll of Escape: Hunter's Village">
 		<set name="freightable" value="true"/>
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>

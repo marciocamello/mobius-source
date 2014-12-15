@@ -1139,7 +1139,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
 	</etcitem>
-	<armor id="33470" name="Special M. Def. Talisman (Active)">
+	<armor id="33470" name="Special Talisman - M. Def. (Active)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1153,7 +1153,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="33471" name="Special Ranged Attack Resistance Talisman (Active)">
+	<armor id="33471" name="Special Talisman - Ranged Attack Resistance (Active)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1167,7 +1167,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="33472" name="Special M. Def. Talisman (Active)">
+	<armor id="33472" name="Special Talisman - M. Def. (Active)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -1181,7 +1181,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="33473" name="Special Ranged Attack Resistance Talisman (Active)">
+	<armor id="33473" name="Special Talisman - Ranged Attack Resistance (Active)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>

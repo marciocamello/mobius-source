@@ -484,7 +484,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="12821" name="Accessory Life Stone - Level 80">
+	<etcitem id="12821" name="Life Stone: Accessory - Lv. 80">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i03"/>
@@ -493,7 +493,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="12822" name="Accessory Life Stone - Level 82">
+	<etcitem id="12822" name="Life Stone: Accessory - Lv. 82">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i03"/>
@@ -512,7 +512,7 @@
 		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="12824" name="Pathfinder Supplies (Level 1)">
+	<etcitem id="12824" name="Pathfinder Supplies (Lv. 1)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -527,7 +527,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="12825" name="Pathfinder Supplies (Level 3)">
+	<etcitem id="12825" name="Pathfinder Supplies (Lv. 3)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -542,7 +542,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="12826" name="Pathfinder Supplies (Level 9)">
+	<etcitem id="12826" name="Pathfinder Supplies (Lv. 9)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -557,7 +557,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="12827" name="Pathfinder Supplies (Level 10)">
+	<etcitem id="12827" name="Pathfinder Supplies (Lv. 10)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -572,7 +572,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="12828" name="Pathfinder Supplies (Level 16)">
+	<etcitem id="12828" name="Pathfinder Supplies (Lv. 16)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -587,7 +587,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="12829" name="Pathfinder Supplies (Level 17)">
+	<etcitem id="12829" name="Pathfinder Supplies (Lv. 17)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -602,7 +602,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="12830" name="Pathfinder Supplies (Level 23)">
+	<etcitem id="12830" name="Pathfinder Supplies (Lv. 23)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -617,7 +617,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="12831" name="Pathfinder Supplies (Level 24)">
+	<etcitem id="12831" name="Pathfinder Supplies (Lv. 24)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -632,7 +632,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="12832" name="Pathfinder Supplies (Level 30)">
+	<etcitem id="12832" name="Pathfinder Supplies (Lv. 30)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -647,7 +647,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="12833" name="Pathfinder Supplies (Level 31)">
+	<etcitem id="12833" name="Pathfinder Supplies (Lv. 31)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -662,7 +662,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="12834" name="Pathfinder Supplies (Level 37)">
+	<etcitem id="12834" name="Pathfinder Supplies (Lv. 37)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -745,7 +745,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<etcitem id="12840" name="Accessory Life Stone - Level 46">
+	<etcitem id="12840" name="Life Stone: Accessory - Lv. 46">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i00"/>
@@ -754,7 +754,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="12841" name="Accessory Life Stone - Level 49">
+	<etcitem id="12841" name="Life Stone: Accessory - Lv. 49">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i00"/>
@@ -763,7 +763,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="12842" name="Accessory Life Stone - Level 52">
+	<etcitem id="12842" name="Life Stone: Accessory - Lv. 52">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i00"/>
@@ -772,7 +772,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="12843" name="Accessory Life Stone - Level 55">
+	<etcitem id="12843" name="Life Stone: Accessory - Lv. 55">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i00"/>
@@ -781,7 +781,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="12844" name="Accessory Life Stone - Level 58">
+	<etcitem id="12844" name="Life Stone: Accessory - Lv. 58">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i01"/>
@@ -790,7 +790,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="12845" name="Accessory Life Stone - Level 61">
+	<etcitem id="12845" name="Life Stone: Accessory - Lv. 61">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i01"/>
@@ -799,7 +799,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="12846" name="Accessory Life Stone - Level 64">
+	<etcitem id="12846" name="Life Stone: Accessory - Lv. 64">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i02"/>
@@ -808,7 +808,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="12847" name="Accessory Life Stone - Level 67">
+	<etcitem id="12847" name="Life Stone: Accessory - Lv. 67">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i02"/>
@@ -817,7 +817,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="12848" name="Accessory Life Stone - Level 70">
+	<etcitem id="12848" name="Life Stone: Accessory - Lv. 70">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i02"/>
@@ -826,7 +826,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="12849" name="Accessory Life Stone - Level 76">
+	<etcitem id="12849" name="Life Stone: Accessory - Lv. 76">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i03"/>
@@ -835,7 +835,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="12850" name="Accessory Life Stone - Level 80">
+	<etcitem id="12850" name="Life Stone: Accessory - Lv. 80">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i03"/>
@@ -844,7 +844,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="12851" name="Accessory Life Stone - Level 82">
+	<etcitem id="12851" name="Life Stone: Accessory - Lv. 82">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i03"/>

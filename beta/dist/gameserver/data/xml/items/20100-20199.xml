@@ -22,7 +22,7 @@
 			<skill id="21016" level="1"/>
 		</skills>
 	</armor>
-	<etcitem id="20101" name="Santa Claus' Gift Set">
+	<etcitem id="20101" name="Santa's Gift Set">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -30,7 +30,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20102" name="Santa Claus' Gift Set">
+	<etcitem id="20102" name="Santa's Gift Set">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -118,7 +118,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20107" name="Santa Claus' Weapon Exchange Ticket" add_name="12-hour">
+	<etcitem id="20107" name="Santa's Weapon Coupon" add_name="12-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -130,7 +130,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1"/>
 	</etcitem>
-	<etcitem id="20108" name="Santa Claus' Weapon Exchange Ticket" add_name="12-hour">
+	<etcitem id="20108" name="Santa's Weapon Coupon" add_name="12-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

@@ -1,469 +1,469 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-    <etcitem id="23000" name="Lv. 2 STR Symbol - Giant Dye" add_name="STR + 4 / DEX - 3">
+    <etcitem id="23000" name="Lv. 2 Giant STR Dye" add_name="STR + 4 / DEX - 3">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23001" name="Lv. 2 DEX Symbol - Giant Dye" add_name="DEX + 4 / CON - 3">
+    <etcitem id="23001" name="Lv. 2 Giant DEX Dye" add_name="DEX + 4 / CON - 3">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23002" name="Lv. 2 CON Symbol - Giant Dye" add_name="CON + 4 / STR - 3">
+    <etcitem id="23002" name="Lv. 2 Giant CON Dye" add_name="CON + 4 / STR - 3">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23003" name="Lv. 2 INT Symbol - Giant Dye" add_name="INT + 4 / WIT - 3">
+    <etcitem id="23003" name="Lv. 2 Giant INT Dye" add_name="INT + 4 / WIT - 3">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23004" name="Lv. 2 WIT Symbol - Giant Dye" add_name="WIT + 4 / MEN - 3">
+    <etcitem id="23004" name="Lv. 2 Giant WIT Dye" add_name="WIT + 4 / MEN - 3">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23005" name="Lv. 2 MEN Symbol - Giant Dye" add_name="MEN + 4 / INT - 3">
+    <etcitem id="23005" name="Lv. 2 Giant MEN Dye" add_name="MEN + 4 / INT - 3">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23006" name="Lv. 2 STR Symbol - Ancient Dye" add_name="STR + 4 / DEX - 3 / Fire Resistance + 10">
+    <etcitem id="23006" name="Lv. 2 Ancient STR Dye" add_name="STR + 4 / DEX - 3 / Fire Resistance + 10">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23007" name="Lv. 2 DEX Symbol - Ancient Dye" add_name="DEX + 4 / CON - 3 / Earth Resistance + 10">
+    <etcitem id="23007" name="Lv. 2 Ancient DEX Dye" add_name="DEX + 4 / CON - 3 / Earth Resistance + 10">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23008" name="Lv. 2 CON Symbol - Ancient Dye" add_name="CON + 4 / STR - 3 / Dark Attack Resistance + 10">
+    <etcitem id="23008" name="Lv. 2 Ancient CON Dye" add_name="CON + 4 / STR - 3 / Dark Resistance + 10">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23009" name="Lv. 2 INT Symbol - Ancient Dye" add_name="INT + 4 / WIT - 3 / Water Resistance + 10">
+    <etcitem id="23009" name="Lv. 2 Ancient INT Dye" add_name="INT + 4 / WIT - 3 / Water Resistance + 10">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23010" name="Lv. 2 WIT Symbol - Ancient Dye" add_name="WIT + 4 / MEN - 3 / Wind Resistance + 10">
+    <etcitem id="23010" name="Lv. 2 Ancient WIT Dye" add_name="WIT + 4 / MEN - 3 / Wind Resistance + 10">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23011" name="Lv. 2 MEN Symbol - Ancient Dye" add_name="MEN + 4 / INT - 3 / Holy Attack Resistance + 10">
+    <etcitem id="23011" name="Lv. 2 Ancient MEN Dye" add_name="MEN + 4 / INT - 3 / Holy Resistance + 10">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23012" name="Lv. 2 STR Symbol - Legendary Dye" add_name="STR + 4 / DEX - 2 / Fire Resistance + 10">
+    <etcitem id="23012" name="Lv. 2 Legendary STR Dye" add_name="STR + 4 / DEX - 2 / Fire Resistance + 10">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23013" name="Lv. 2 DEX Symbol - Legendary Dye" add_name="DEX + 4 / CON - 2 / Earth Resistance + 10">
+    <etcitem id="23013" name="Lv. 2 Legendary DEX Dye" add_name="DEX + 4 / CON - 2 / Earth Resistance + 10">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23014" name="Lv. 2 CON Symbol - Legendary Dye" add_name="CON + 4 / STR - 2 / Dark Attack Resistance + 10">
+    <etcitem id="23014" name="Lv. 2 Legendary CON Dye" add_name="CON + 4 / STR - 2 / Dark Resistance + 10">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23015" name="Lv. 2 INT Symbol - Legendary Dye" add_name="INT + 4 / WIT - 2 / Water Resistance + 10">
+    <etcitem id="23015" name="Lv. 2 Legendary INT Dye" add_name="INT + 4 / WIT - 2 / Water Resistance + 10">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23016" name="Lv. 2 WIT Symbol - Legendary Dye" add_name="WIT + 4 / MEN - 2 / Wind Resistance + 10">
+    <etcitem id="23016" name="Lv. 2 Legendary WIT Dye" add_name="WIT + 4 / MEN - 2 / Wind Resistance + 10">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23017" name="Lv. 2 MEN Symbol - Legendary Dye" add_name="MEN + 4 / INT - 2 / Holy Attack Resistance + 10">
+    <etcitem id="23017" name="Lv. 2 Legendary MEN Dye" add_name="MEN + 4 / INT - 2 / Holy Resistance + 10">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23018" name="Lv. 3 STR Symbol - Giant Dye" add_name="STR + 5 / DEX - 4">
+    <etcitem id="23018" name="Lv. 3 Giant STR Dye" add_name="STR + 5 / DEX - 4">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23019" name="Lv. 3 DEX Symbol - Giant Dye" add_name="DEX + 5 / CON - 4">
+    <etcitem id="23019" name="Lv. 3 Giant DEX Dye" add_name="DEX + 5 / CON - 4">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23020" name="Lv. 3 CON Symbol - Giant Dye" add_name="CON + 5 / STR - 4">
+    <etcitem id="23020" name="Lv. 3 Giant CON Dye" add_name="CON + 5 / STR - 4">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23021" name="Lv. 3 INT Symbol - Giant Dye" add_name="INT + 5 / WIT - 4">
+    <etcitem id="23021" name="Lv. 3 Giant INT Dye" add_name="INT + 5 / WIT - 4">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23022" name="Lv. 3 WIT Symbol - Giant Dye" add_name="WIT + 5 / MEN - 4">
+    <etcitem id="23022" name="Lv. 3 Giant WIT Dye" add_name="WIT + 5 / MEN - 4">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23023" name="Lv. 3 MEN Symbol - Giant Dye" add_name="MEN + 5 / INT - 4">
+    <etcitem id="23023" name="Lv. 3 Giant MEN Dye" add_name="MEN + 5 / INT - 4">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23024" name="Lv. 3 STR Symbol - Ancient Dye" add_name="STR + 5 / DEX - 4 / Fire Resistance + 15">
+    <etcitem id="23024" name="Lv. 3 Ancient STR Dye" add_name="STR + 5 / DEX - 4 / Fire Resistance + 15">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23025" name="Lv. 3 DEX Symbol - Ancient Dye" add_name="DEX + 5 / CON - 4 / Earth Resistance + 15">
+    <etcitem id="23025" name="Lv. 3 Ancient DEX Dye" add_name="DEX + 5 / CON - 4 / Earth Resistance + 15">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23026" name="Lv. 3 CON Symbol - Ancient Dye" add_name="CON + 5 / STR - 4 / Dark Attack Resistance + 15">
+    <etcitem id="23026" name="Lv. 3 Ancient CON Dye" add_name="CON + 5 / STR - 4 / Dark Resistance + 15">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23027" name="Lv. 3 INT Symbol - Ancient Dye" add_name="INT + 5 / WIT - 4 / Water Resistance + 15">
+    <etcitem id="23027" name="Lv. 3 Ancient INT Dye" add_name="INT + 5 / WIT - 4 / Water Resistance + 15">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23028" name="Lv. 3 WIT Symbol - Ancient Dye" add_name="WIT + 5 / MEN - 4 / Wind Resistance + 15">
+    <etcitem id="23028" name="Lv. 3 Ancient WIT Dye" add_name="WIT + 5 / MEN - 4 / Wind Resistance + 15">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23029" name="Lv. 3 MEN Symbol - Ancient Dye" add_name="MEN + 5 / INT - 4 / Holy Attack Resistance + 15">
+    <etcitem id="23029" name="Lv. 3 Ancient MEN Dye" add_name="MEN + 5 / INT - 4 / Holy Resistance + 15">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23030" name="Lv. 3 STR Symbol - Legendary Dye" add_name="STR + 5 / DEX - 3 / Fire Resistance + 15">
+    <etcitem id="23030" name="Lv. 3 Legendary STR Dye" add_name="STR + 5 / DEX - 3 / Fire Resistance + 15">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23031" name="Lv. 3 DEX Symbol - Legendary Dye" add_name="DEX + 5 / CON - 3 / Earth Resistance + 15">
+    <etcitem id="23031" name="Lv. 3 Legendary DEX Dye" add_name="DEX + 5 / CON - 3 / Earth Resistance + 15">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23032" name="Lv. 3 CON Symbol - Legendary Dye" add_name="CON + 5 / STR - 3 / Dark Attack Resistance + 15">
+    <etcitem id="23032" name="Lv. 3 Legendary CON Dye" add_name="CON + 5 / STR - 3 / Dark Resistance + 15">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23033" name="Lv. 3 INT Symbol - Legendary Dye" add_name="INT + 5 / WIT - 3 / Water Resistance + 15">
+    <etcitem id="23033" name="Lv. 3 Legendary INT Dye" add_name="INT + 5 / WIT - 3 / Water Resistance + 15">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23034" name="Lv. 3 WIT Symbol - Legendary Dye" add_name="WIT + 5 / MEN - 3 / Wind Resistance + 15">
+    <etcitem id="23034" name="Lv. 3 Legendary WIT Dye" add_name="WIT + 5 / MEN - 3 / Wind Resistance + 15">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23035" name="Lv. 3 MEN Symbol - Legendary Dye" add_name="MEN + 5 / INT - 3 / Holy Attack Resistance + 15">
+    <etcitem id="23035" name="Lv. 3 Legendary MEN Dye" add_name="MEN + 5 / INT - 3 / Holy Resistance + 15">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23036" name="Lv. 4 STR Symbol - Giant Dye" add_name="STR + 5 / DEX - 2">
+    <etcitem id="23036" name="Lv. 4 Giant STR Dye" add_name="STR + 5 / DEX - 2">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23037" name="Lv. 4 DEX Symbol - Giant Dye" add_name="DEX + 5 / CON - 2">
+    <etcitem id="23037" name="Lv. 4 Giant DEX Dye" add_name="DEX + 5 / CON - 2">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23038" name="Lv. 4 CON Symbol - Giant Dye" add_name="CON + 5 / STR - 2">
+    <etcitem id="23038" name="Lv. 4 Giant CON Dye" add_name="CON + 5 / STR - 2">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23039" name="Lv. 4 INT Symbol - Giant Dye" add_name="INT + 5 / WIT - 2">
+    <etcitem id="23039" name="Lv. 4 Giant INT Dye" add_name="INT + 5 / WIT - 2">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23040" name="Lv. 4 WIT Symbol - Giant Dye" add_name="WIT + 5 / MEN - 2">
+    <etcitem id="23040" name="Lv. 4 Giant WIT Dye" add_name="WIT + 5 / MEN - 2">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23041" name="Lv. 4 MEN Symbol - Giant Dye" add_name="MEN + 5 / INT - 2">
+    <etcitem id="23041" name="Lv. 4 Giant MEN Dye" add_name="MEN + 5 / INT - 2">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23042" name="Lv. 4 STR Symbol - Ancient Dye" add_name="STR + 5 / DEX - 2 / Fire Resistance + 20">
+    <etcitem id="23042" name="Lv. 4 Ancient STR Dye" add_name="STR + 5 / DEX - 2 / Fire Resistance + 20">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23043" name="Lv. 4 DEX Symbol - Ancient Dye" add_name="DEX + 5 / CON - 2 / Earth Resistance + 20">
+    <etcitem id="23043" name="Lv. 4 Ancient DEX Dye" add_name="DEX + 5 / CON - 2 / Earth Resistance + 20">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23044" name="Lv. 4 CON Symbol - Ancient Dye" add_name="CON + 5 / STR - 2 / Dark Attack Resistance + 20">
+    <etcitem id="23044" name="Lv. 4 Ancient CON Dye" add_name="CON + 5 / STR - 2 / Dark Resistance + 20">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23045" name="Lv. 4 INT Symbol - Ancient Dye" add_name="INT + 5 / WIT - 2 / Water Resistance + 20">
+    <etcitem id="23045" name="Lv. 4 Ancient INT Dye" add_name="INT + 5 / WIT - 2 / Water Resistance + 20">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23046" name="Lv. 4 WIT Symbol - Ancient Dye" add_name="WIT + 5 / MEN - 2 / Wind Resistance + 20">
+    <etcitem id="23046" name="Lv. 4 Ancient WIT Dye" add_name="WIT + 5 / MEN - 2 / Wind Resistance + 20">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23047" name="Lv. 4 MEN Symbol - Ancient Dye" add_name="MEN + 5 / INT - 2 / Holy Attack Resistance + 20">
+    <etcitem id="23047" name="Lv. 4 Ancient MEN Dye" add_name="MEN + 5 / INT - 2 / Holy Resistance + 20">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23048" name="Lv. 4 STR Symbol - Legendary Dye" add_name="STR + 5 / DEX - 1 / Fire Resistance + 20">
+    <etcitem id="23048" name="Lv. 4 Legendary STR Dye" add_name="STR + 5 / DEX - 1 / Fire Resistance + 20">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23049" name="Lv. 4 DEX Symbol - Legendary Dye" add_name="DEX + 5 / CON - 1 / Earth Resistance + 20">
+    <etcitem id="23049" name="Lv. 4 Legendary DEX Dye" add_name="DEX + 5 / CON - 1 / Earth Resistance + 20">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23050" name="Lv. 4 CON Symbol - Legendary Dye" add_name="CON + 5 / STR - 1 / Dark Attack Resistance + 20">
+    <etcitem id="23050" name="Lv. 4 Legendary CON Dye" add_name="CON + 5 / STR - 1 / Dark Resistance + 20">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23051" name="Lv. 4 INT Symbol - Legendary Dye" add_name="INT + 5 / WIT - 1 / Water Resistance + 20">
+    <etcitem id="23051" name="Lv. 4 Legendary INT Dye" add_name="INT + 5 / WIT - 1 / Water Resistance + 20">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23052" name="Lv. 4 WIT Symbol - Legendary Dye" add_name="WIT + 5 / MEN - 1 / Wind Resistance + 20">
+    <etcitem id="23052" name="Lv. 4 Legendary WIT Dye" add_name="WIT + 5 / MEN - 1 / Wind Resistance + 20">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23053" name="Lv. 4 MEN Symbol - Legendary Dye" add_name="MEN + 5 / INT - 1 / Holy Attack Resistance + 20">
+    <etcitem id="23053" name="Lv. 4 Legendary MEN Dye" add_name="MEN + 5 / INT - 1 / Holy Resistance + 20">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23054" name="Lv. 5 STR Symbol - Giant Dye" add_name="STR + 5">
+    <etcitem id="23054" name="Lv. 5 Giant STR Dye" add_name="STR + 5">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23055" name="Lv. 5 DEX Symbol - Giant Dye" add_name="DEX + 5">
+    <etcitem id="23055" name="Lv. 5 Giant DEX Dye" add_name="DEX + 5">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23056" name="Lv. 5 CON Symbol - Giant Dye" add_name="CON + 5">
+    <etcitem id="23056" name="Lv. 5 Giant CON Dye" add_name="CON + 5">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23057" name="Lv. 5 INT Symbol - Giant Dye" add_name="INT + 5">
+    <etcitem id="23057" name="Lv. 5 Giant INT Dye" add_name="INT + 5">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23058" name="Lv. 5 WIT Symbol - Giant Dye" add_name="Wit + 5">
+    <etcitem id="23058" name="Lv. 5 Giant WIT Dye" add_name="Wit + 5">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23059" name="Lv. 5 MEN Symbol - Giant Dye" add_name="Men + 5">
+    <etcitem id="23059" name="Lv. 5 Giant MEN Dye" add_name="Men + 5">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23060" name="Lv. 5 STR Symbol - Ancient Dye" add_name="STR + 5 / Fire Resistance + 25">
+    <etcitem id="23060" name="Lv. 5 Ancient STR Dye" add_name="STR + 5 / Fire Resistance + 25">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23061" name="Lv. 5 DEX Symbol - Ancient Dye" add_name="DEX + 5 / Earth Resistance + 25">
+    <etcitem id="23061" name="Lv. 5 Ancient DEX Dye" add_name="DEX + 5 / Earth Resistance + 25">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23062" name="Lv. 5 CON Symbol - Ancient Dye" add_name="CON + 5 / Dark Attack Resistance + 25">
+    <etcitem id="23062" name="Lv. 5 Ancient CON Dye" add_name="CON + 5 / Dark Resistance + 25">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23063" name="Lv. 5 INT Symbol - Ancient Dye" add_name="INT + 5 / Water Resistance + 25">
+    <etcitem id="23063" name="Lv. 5 Ancient INT Dye" add_name="INT + 5 / Water Resistance + 25">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23064" name="Lv. 5 WIT Symbol - Ancient Dye" add_name="WIT + 5 / Wind Resistance + 25">
+    <etcitem id="23064" name="Lv. 5 Ancient WIT Dye" add_name="WIT + 5 / Wind Resistance + 25">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23065" name="Lv. 5 MEN Symbol - Ancient Dye" add_name="MEN + 5 / Holy Attack Resistance + 25">
+    <etcitem id="23065" name="Lv. 5 Ancient MEN Dye" add_name="MEN + 5 / Holy Resistance + 25">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23066" name="Lv. 5 STR Symbol - Legendary Dye" add_name="STR + 5 / DEX + 1 / Fire Resistance + 25">
+    <etcitem id="23066" name="Lv. 5 Legendary STR Dye" add_name="STR + 5 / DEX + 1 / Fire Resistance + 25">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23067" name="Lv. 5 DEX Symbol - Legendary Dye" add_name="DEX + 5 / CON + 1 / Earth Resistance + 25">
+    <etcitem id="23067" name="Lv. 5 Legendary DEX Dye" add_name="DEX + 5 / CON + 1 / Earth Resistance + 25">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23068" name="Lv. 5 CON Symbol - Legendary Dye" add_name="CON + 5 / STR + 1 / Dark Attack Resistance + 25">
+    <etcitem id="23068" name="Lv. 5 Legendary CON Dye" add_name="CON + 5 / STR + 1 / Dark Resistance + 25">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23069" name="Lv. 5 INT Symbol - Legendary Dye" add_name="INT + 5 / WIT + 1 / Water Resistance + 25">
+    <etcitem id="23069" name="Lv. 5 Legendary INT Dye" add_name="INT + 5 / WIT + 1 / Water Resistance + 25">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23070" name="Lv. 5 WIT Symbol - Legendary Dye" add_name="WIT + 5 / MEN + 1 / Wind Resistance + 25">
+    <etcitem id="23070" name="Lv. 5 Legendary WIT Dye" add_name="WIT + 5 / MEN + 1 / Wind Resistance + 25">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23071" name="Lv. 5 MEN Symbol - Legendary Dye" add_name="MEN + 5 / INT + 1 / Holy Attack Resistance + 25">
+    <etcitem id="23071" name="Lv. 5 Legendary MEN Dye" add_name="MEN + 5 / INT + 1 / Holy Resistance + 25">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23072" name="STR Symbol - Dye Pack (R-grade)">
+    <etcitem id="23072" name="STR Dye - Dye Pack (R-grade)">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23073" name="DEX Symbol - Dye Pack (R-grade)">
+    <etcitem id="23073" name="DEX Dye - Dye Pack (R-grade)">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23074" name="CON Symbol - Dye Pack (R-grade)">
+    <etcitem id="23074" name="CON Dye - Dye Pack (R-grade)">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23075" name="INT Symbol - Dye Pack (R-grade)">
+    <etcitem id="23075" name="INT Dye - Dye Pack (R-grade)">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23076" name="WIT Symbol - Dye Pack (R-grade)">
+    <etcitem id="23076" name="WIT Dye - Dye Pack (R-grade)">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23077" name="MEN Symbol - Dye Pack (R-grade)">
+    <etcitem id="23077" name="MEN Dye - Dye Pack (R-grade)">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>

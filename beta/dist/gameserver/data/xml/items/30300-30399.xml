@@ -356,7 +356,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="30331" name="Top-grade Dion Holy Attack Resistance Necklace">
+	<armor id="30331" name="Top-grade Dion Holy Resistance Necklace">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
 		<set name="type" value="NONE"/>
@@ -388,7 +388,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="30333" name="Top-grade Oren Dark Attack Resistance Necklace">
+	<armor id="30333" name="Top-grade Oren Dark Resistance Necklace">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
 		<set name="type" value="NONE"/>
@@ -501,7 +501,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="30340" name="Top-grade Dion Holy Attack Resistance Earring">
+	<armor id="30340" name="Top-grade Dion Holy Resistance Earring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
 		<set name="type" value="NONE"/>
@@ -535,7 +535,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="30342" name="Top-grade Oren Dark Attack Resistance Earring">
+	<armor id="30342" name="Top-grade Oren Dark Resistance Earring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_earing_i00"/>
 		<set name="type" value="NONE"/>
@@ -705,7 +705,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="30352" name="Top-grade Aden Holy Attack Resistance Ring">
+	<armor id="30352" name="Top-grade Aden Holy Resistance Ring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -722,7 +722,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="30353" name="Top-grade Innadril Holy Attack Resistance Ring">
+	<armor id="30353" name="Top-grade Innadril Holy Resistance Ring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -739,7 +739,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="30354" name="Top-grade Goddard Dark Attack Resistance Ring">
+	<armor id="30354" name="Top-grade Goddard Dark Resistance Ring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
 		<set name="type" value="NONE"/>
@@ -773,7 +773,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="30356" name="Top-grade Schuttgart Dark Attack Resistance Ring">
+	<armor id="30356" name="Top-grade Schuttgart Dark Resistance Ring">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
 		<set name="type" value="NONE"/>

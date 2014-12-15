@@ -595,7 +595,7 @@
 			<set stat="baseCrit" order="0x08" value="80"/>
 		</for>
 	</weapon>
-	<weapon id="37058" name="Thesakar's Axe">
+	<weapon id="37058" name="Thesakar's Spear">
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.Summon_orc_pole_wp_i00"/>
 		<set name="price" value="0"/>
@@ -943,7 +943,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="37078" name="Monster Weapon Appearance Stone: Thesakar's Axe">
+	<etcitem id="37078" name="Monster Weapon Appearance Stone: Thesakar's Spear">
 		<set name="icon" value="icon.shape_shifting_pole_i00"/>
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>

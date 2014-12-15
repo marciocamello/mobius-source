@@ -64,7 +64,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="6905" name="Lady's Hair Pin Piece">
+	<etcitem id="6905" name="Lady's Hairpin Fragment">
 		<set name="class" value="PIECES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_broken_crystal_green_i00"/>
@@ -91,7 +91,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="6908" name="Fish Oil">
+	<etcitem id="6908" name="Corroded Fish Oil">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_fish_oil_i00"/>
@@ -100,7 +100,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6909" name="Greater Fish Oil">
+	<etcitem id="6909" name="Corroded Greater Fish Oil">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_fish_oil_i01"/>
@@ -109,7 +109,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6910" name="Premium Fish Oil">
+	<etcitem id="6910" name="Corroded Premium Fish Oil">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_fish_oil_i02"/>
@@ -118,7 +118,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6911" name="Fish Scale">
+	<etcitem id="6911" name="Corroded Fish Scale">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_fish_scale_i00"/>
@@ -127,7 +127,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6912" name="Shiny Fish Scale">
+	<etcitem id="6912" name="Corroded Shiny Fish Scale">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_fish_scale_i01"/>
@@ -136,7 +136,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6913" name="Fish Gem">
+	<etcitem id="6913" name="Corroded Fish Gem">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_fish_gem_i00"/>
@@ -145,7 +145,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6914" name="Shiny Fish Gem">
+	<etcitem id="6914" name="Corroded Shiny Fish Gem">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_fish_gem_i01"/>
@@ -154,7 +154,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6915" name="Thin Fish Bone">
+	<etcitem id="6915" name="Corroded Thin Fish Bone">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_fang_gray_i00"/>
@@ -163,7 +163,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6916" name="Thick Fish Bone">
+	<etcitem id="6916" name="Corroded Thick Fish Bone">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_fang_ivory_i00"/>
@@ -227,7 +227,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</weapon>
-	<etcitem id="6920" name="Recipe: Greater Fish Oil">
+	<etcitem id="6920" name="Recipe: Corroded Greater Fish Oil">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -237,7 +237,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6921" name="Recipe: Premium Fish Oil">
+	<etcitem id="6921" name="Recipe: Corroded Premium Fish Oil">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>
@@ -257,7 +257,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="6923" name="Recipe: Lady's Hair Pin">
+	<etcitem id="6923" name="Recipe: Lady's Hairpin">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_green_i00"/>

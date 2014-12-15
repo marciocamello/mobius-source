@@ -851,7 +851,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="9573" name="Life Stone - Level 80">
+	<etcitem id="9573" name="Life Stone - Lv. 80">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i03"/>
@@ -860,7 +860,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="9574" name="Mid-grade Life Stone - Level 80">
+	<etcitem id="9574" name="Mid-grade Life Stone - Lv. 80">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_special_i03"/>
@@ -869,7 +869,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="9575" name="High-grade Life Stone - Level 80">
+	<etcitem id="9575" name="High-grade Life Stone - Lv. 80">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_rare_i03"/>
@@ -878,7 +878,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="9576" name="Top-grade Life Stone - Level 80">
+	<etcitem id="9576" name="Top-grade Life Stone - Lv. 80">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_unique_i03"/>

@@ -349,7 +349,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<armor id="38219" name="Starfish: Sigil" add_name="Robe">
+	<armor id="38219" name="Starfish: Sigil">
 		<set name="crystal_type" value="D"/>
 		<set name="crystal_count" value="0"/>
 		<set name="type" value="SIGIL"/>

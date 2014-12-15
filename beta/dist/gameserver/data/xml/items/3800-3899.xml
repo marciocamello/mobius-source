@@ -654,7 +654,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="3875" name="Letter - A">
+	<etcitem id="3875" name="Letter - A" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -662,7 +662,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="3876" name="Letter - C">
+	<etcitem id="3876" name="Letter - C" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -670,7 +670,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="3877" name="Letter - E">
+	<etcitem id="3877" name="Letter - E" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -678,7 +678,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="3878" name="Letter - F">
+	<etcitem id="3878" name="Letter - F" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -686,7 +686,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="3879" name="Letter - G">
+	<etcitem id="3879" name="Letter - G" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -694,7 +694,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="3880" name="Letter - H">
+	<etcitem id="3880" name="Letter - H" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -702,7 +702,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="3881" name="Letter - I">
+	<etcitem id="3881" name="Letter - I" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -710,7 +710,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="3882" name="Letter - L">
+	<etcitem id="3882" name="Letter - L" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -718,7 +718,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="3883" name="Letter - N">
+	<etcitem id="3883" name="Letter - N" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -726,7 +726,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="3884" name="Letter - O">
+	<etcitem id="3884" name="Letter - O" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -734,7 +734,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="3885" name="Letter - R">
+	<etcitem id="3885" name="Letter - R" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -742,7 +742,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="3886" name="Letter - S">
+	<etcitem id="3886" name="Letter - S" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -750,7 +750,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="3887" name="Letter - T">
+	<etcitem id="3887" name="Letter - T" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -758,7 +758,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="3888" name="Letter - II">
+	<etcitem id="3888" name="Letter - II" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

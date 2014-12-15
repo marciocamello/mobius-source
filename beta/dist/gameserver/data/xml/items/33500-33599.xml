@@ -161,7 +161,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.cursed_free_r95"/>
 	</etcitem>
-	<etcitem id="33518" name="Blessed Scroll of Resurrection" add_name="Campaign">
+	<etcitem id="33518" name="Blessed Scroll of Resurrection">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

@@ -43,7 +43,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="37614" name="Hero's Enchant Stone Pack" add_name="Western Winds">
+	<etcitem id="37614" name="Hero's Lucky Enchant Stone Pack" add_name="Western Winds">
 		<set name="capsuled" value="true"/>
 		<set name="weight" value="10"/>
 		<set name="stackable" value="true"/>

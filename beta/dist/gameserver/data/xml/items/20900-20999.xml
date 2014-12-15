@@ -1005,7 +1005,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<armor id="20970" name="Agathion - Three-headed Dragon" add_name="Wind Walk">
+	<armor id="20970" name="Agathion - Three-headed Dragon" add_name="Premium">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys2.icon.br_aga_threehead_i00"/>

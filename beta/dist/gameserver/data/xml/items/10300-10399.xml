@@ -190,7 +190,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<armor id="10314" name="Beleth' Ring">
+	<armor id="10314" name="Beleth's Ring">
 		<set name="crystal_count" value="152"/>
 		<set name="crystal_type" value="S"/>
 		<set name="crystallizable" value="true"/>

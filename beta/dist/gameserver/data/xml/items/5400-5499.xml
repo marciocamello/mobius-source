@@ -793,7 +793,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="5472" name="Recipe: Metallic Thread">
+	<etcitem id="5472" name="Recipe: Corroded Metallic Thread">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -804,7 +804,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="5473" name="Recipe: Reinforced Metal Plate">
+	<etcitem id="5473" name="Recipe: Corroded Reinforced Metal Plate">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -815,7 +815,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="5474" name="Recipe: Reorin's Mold">
+	<etcitem id="5474" name="Recipe: Corroded Reorin's Mold">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -826,7 +826,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="5475" name="Recipe: Warsmith' Mold">
+	<etcitem id="5475" name="Recipe: Corroded Warsmith' Mold">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -837,7 +837,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="5476" name="Recipe: Arcsmith' Anvil">
+	<etcitem id="5476" name="Recipe: Corroded Arcsmith' Anvil">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>
@@ -848,7 +848,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="5477" name="Recipe: Warsmith' Holder">
+	<etcitem id="5477" name="Recipe: Corroded Warsmith' Holder">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="durability" value="90"/>

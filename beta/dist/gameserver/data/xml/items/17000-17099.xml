@@ -25,7 +25,7 @@
 		<set name="icon" value="icon.etc_jewel_box_i00"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="17003" name="Santa Claus' Gift" add_name="Event">
+	<etcitem id="17003" name="Santa's Gift" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1020,7 +1020,7 @@
 			</not>
 		</cond>
 	</armor>
-	<etcitem id="17062" name="Event - Scroll: Summon Baby White Tiger">
+	<etcitem id="17062" name="Event - Summon Scroll: Baby White Tiger">
 		<set name="reuse_delay" value="10000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -1034,7 +1034,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="17063" name="Event - Scroll: Summon Gloomy Baby White Tiger">
+	<etcitem id="17063" name="Event - Summon Scroll: Gloomy Baby White Tiger">
 		<set name="reuse_delay" value="10000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -1048,7 +1048,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="17064" name="Event - Scroll: Summon Baby White Tiger Captain">
+	<etcitem id="17064" name="Event - Summon Scroll: Baby White Tiger Captain">
 		<set name="reuse_delay" value="10000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -1062,7 +1062,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="17065" name="Event - Scroll: Summon Gloomy Baby White Tiger Captain">
+	<etcitem id="17065" name="Event - Summon Scroll: Gloomy Baby White Tiger Captain">
 		<set name="reuse_delay" value="10000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

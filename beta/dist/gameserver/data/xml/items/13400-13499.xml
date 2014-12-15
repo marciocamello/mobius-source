@@ -127,7 +127,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="13409" name="Scroll of Escape: Hunters Village">
+	<etcitem id="13409" name="Scroll of Escape: Hunter's Village">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="true"/>
@@ -1516,7 +1516,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13490" name="Arrow-Pierced Apple">
+	<armor id="13490" name="Arrow-pierced Apple">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_arrow_apple_i00"/>
 		<set name="price" value="2000000"/>

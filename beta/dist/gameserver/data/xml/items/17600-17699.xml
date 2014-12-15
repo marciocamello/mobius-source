@@ -227,7 +227,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.token_of_oman"/>
 	</etcitem>
-	<etcitem id="17625" name="Lv. 1 STR Symbol - Giant Dye" add_name="STR + 3 / DEX - 2">
+	<etcitem id="17625" name="Lv. 1 Giant STR Dye" add_name="STR + 3 / DEX - 2">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -236,7 +236,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv1_1_dye_str"/>
 	</etcitem>
-	<etcitem id="17626" name="Lv. 1 DEX Symbol - Giant Dye" add_name="DEX + 3 / CON - 2">
+	<etcitem id="17626" name="Lv. 1 Giant DEX Dye" add_name="DEX + 3 / CON - 2">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -245,7 +245,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv1_1_dye_dex"/>
 	</etcitem>
-	<etcitem id="17627" name="Lv. 1 CON Symbol - Giant Dye" add_name="CON + 3 / STR - 2">
+	<etcitem id="17627" name="Lv. 1 Giant CON Dye" add_name="CON + 3 / STR - 2">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -254,7 +254,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv1_1_dye_con"/>
 	</etcitem>
-	<etcitem id="17628" name="Lv. 1 INT Symbol - Giant Dye" add_name="INT + 3 / WIT - 2">
+	<etcitem id="17628" name="Lv. 1 Giant INT Dye" add_name="INT + 3 / WIT - 2">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -263,7 +263,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv1_1_dye_int"/>
 	</etcitem>
-	<etcitem id="17629" name="Lv. 1 WIT Symbol - Giant Dye" add_name="WIT + 3 / MEN - 2">
+	<etcitem id="17629" name="Lv. 1 Giant WIT Dye" add_name="WIT + 3 / MEN - 2">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -272,7 +272,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv1_1_dye_wit"/>
 	</etcitem>
-	<etcitem id="17630" name="Lv. 1 MEN Symbol - Giant Dye" add_name="MEN + 3 / INT - 2">
+	<etcitem id="17630" name="Lv. 1 Giant MEN Dye" add_name="MEN + 3 / INT - 2">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -281,7 +281,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv1_1_dye_men"/>
 	</etcitem>
-	<etcitem id="17631" name="Lv. 1 STR Symbol - Ancient Dye" add_name="STR + 3 / DEX - 2 / Fire Resistance + 5">
+	<etcitem id="17631" name="Lv. 1 Ancient STR Dye" add_name="STR + 3 / DEX - 2 / Fire Resistance + 5">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -290,7 +290,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv1_2_dye_str"/>
 	</etcitem>
-	<etcitem id="17632" name="Lv. 1 DEX Symbol - Ancient Dye" add_name="DEX + 3 / CON - 2 / Earth Resistance + 5">
+	<etcitem id="17632" name="Lv. 1 Ancient DEX Dye" add_name="DEX + 3 / CON - 2 / Earth Resistance + 5">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -299,7 +299,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv1_2_dye_dex"/>
 	</etcitem>
-	<etcitem id="17633" name="Lv. 1 CON Symbol - Ancient Dye" add_name="CON + 3 / STR - 2 / Dark Attack Resistance + 5">
+	<etcitem id="17633" name="Lv. 1 Ancient CON Dye" add_name="CON + 3 / STR - 2 / Dark Resistance + 5">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -308,7 +308,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv1_2_dye_con"/>
 	</etcitem>
-	<etcitem id="17634" name="Lv. 1 INT Symbol - Ancient Dye" add_name="INT + 3 / WIT - 2 / Water Resistance + 5">
+	<etcitem id="17634" name="Lv. 1 Ancient INT Dye" add_name="INT + 3 / WIT - 2 / Water Resistance + 5">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -317,7 +317,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv1_2_dye_int"/>
 	</etcitem>
-	<etcitem id="17635" name="Lv. 1 WIT Symbol - Ancient Dye" add_name="WIT + 3 / MEN - 2 / Wind Resistance + 5">
+	<etcitem id="17635" name="Lv. 1 Ancient WIT Dye" add_name="WIT + 3 / MEN - 2 / Wind Resistance + 5">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -326,7 +326,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv1_2_dye_wit"/>
 	</etcitem>
-	<etcitem id="17636" name="Lv. 1 MEN Symbol - Ancient Dye" add_name="MEN + 3 / INT - 2 / Holy Attack Resistance + 5">
+	<etcitem id="17636" name="Lv. 1 Ancient MEN Dye" add_name="MEN + 3 / INT - 2 / Holy Resistance + 5">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -335,7 +335,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv1_2_dye_men"/>
 	</etcitem>
-	<etcitem id="17637" name="Lv. 1 STR Symbol - Legendary Dye" add_name="STR + 3 / DEX - 1 / Fire Resistance + 5">
+	<etcitem id="17637" name="Lv. 1 Legendary STR Dye" add_name="STR + 3 / DEX - 1 / Fire Resistance + 5">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -344,7 +344,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv1_3_dye_str"/>
 	</etcitem>
-	<etcitem id="17638" name="Lv. 1 DEX Symbol - Legendary Dye" add_name="DEX + 3 / CON - 1 / Earth Resistance + 5">
+	<etcitem id="17638" name="Lv. 1 Legendary DEX Dye" add_name="DEX + 3 / CON - 1 / Earth Resistance + 5">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -353,7 +353,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv1_3_dye_dex"/>
 	</etcitem>
-	<etcitem id="17639" name="Lv. 1 CON Symbol - Legendary Dye" add_name="CON + 3 / STR - 1 / Dark Attack Resistance + 5">
+	<etcitem id="17639" name="Lv. 1 Legendary CON Dye" add_name="CON + 3 / STR - 1 / Dark Resistance + 5">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -362,7 +362,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv1_3_dye_con"/>
 	</etcitem>
-	<etcitem id="17640" name="Lv. 1 INT Symbol - Legendary Dye" add_name="INT + 3 / WIT - 1 / Water Resistance + 5">
+	<etcitem id="17640" name="Lv. 1 Legendary INT Dye" add_name="INT + 3 / WIT - 1 / Water Resistance + 5">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -371,7 +371,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv1_3_dye_int"/>
 	</etcitem>
-	<etcitem id="17641" name="Lv. 1 WIT Symbol - Legendary Dye" add_name="WIT + 3 / MEN - 1 / Wind Resistance + 5">
+	<etcitem id="17641" name="Lv. 1 Legendary WIT Dye" add_name="WIT + 3 / MEN - 1 / Wind Resistance + 5">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -380,7 +380,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv1_3_dye_wit"/>
 	</etcitem>
-	<etcitem id="17642" name="Lv. 1 MEN Symbol - Legendary Dye" add_name="MEN + 3 / INT - 1 / Holy Attack Resistance + 5">
+	<etcitem id="17642" name="Lv. 1 Legendary MEN Dye" add_name="MEN + 3 / INT - 1 / Holy Resistance + 5">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -389,7 +389,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv1_3_dye_men"/>
 	</etcitem>
-	<etcitem id="17643" name="Lv. 2 STR Symbol - Giant Dye" add_name="STR + 4 / DEX - 3">
+	<etcitem id="17643" name="Lv. 2 Giant STR Dye" add_name="STR + 4 / DEX - 3">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -398,7 +398,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv2_1_dye_str"/>
 	</etcitem>
-	<etcitem id="17644" name="Lv. 2 DEX Symbol - Giant Dye" add_name="DEX + 4 / CON - 3">
+	<etcitem id="17644" name="Lv. 2 Giant DEX Dye" add_name="DEX + 4 / CON - 3">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -407,7 +407,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv2_1_dye_dex"/>
 	</etcitem>
-	<etcitem id="17645" name="Lv. 2 CON Symbol - Giant Dye" add_name="CON + 4 / STR - 3">
+	<etcitem id="17645" name="Lv. 2 Giant CON Dye" add_name="CON + 4 / STR - 3">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -416,7 +416,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv2_1_dye_con"/>
 	</etcitem>
-	<etcitem id="17646" name="Lv. 2 INT Symbol - Giant Dye" add_name="INT + 4 / WIT - 3">
+	<etcitem id="17646" name="Lv. 2 Giant INT Dye" add_name="INT + 4 / WIT - 3">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -425,7 +425,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv2_1_dye_int"/>
 	</etcitem>
-	<etcitem id="17647" name="Lv. 2 WIT Symbol - Giant Dye" add_name="WIT + 4 / MEN - 3">
+	<etcitem id="17647" name="Lv. 2 Giant WIT Dye" add_name="WIT + 4 / MEN - 3">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -434,7 +434,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv2_1_dye_wit"/>
 	</etcitem>
-	<etcitem id="17648" name="Lv. 2 MEN Symbol - Giant Dye" add_name="MEN + 4 / INT - 3">
+	<etcitem id="17648" name="Lv. 2 Giant MEN Dye" add_name="MEN + 4 / INT - 3">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -443,7 +443,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv2_1_dye_men"/>
 	</etcitem>
-	<etcitem id="17649" name="Lv. 2 STR Symbol - Ancient Dye" add_name="STR + 4 / DEX - 3 / Fire Resistance + 10">
+	<etcitem id="17649" name="Lv. 2 Ancient STR Dye" add_name="STR + 4 / DEX - 3 / Fire Resistance + 10">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -452,7 +452,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv2_2_dye_str"/>
 	</etcitem>
-	<etcitem id="17650" name="Lv. 2 DEX Symbol - Ancient Dye" add_name="DEX + 4 / CON - 3 / Earth Resistance + 10">
+	<etcitem id="17650" name="Lv. 2 Ancient DEX Dye" add_name="DEX + 4 / CON - 3 / Earth Resistance + 10">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -461,7 +461,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv2_2_dye_dex"/>
 	</etcitem>
-	<etcitem id="17651" name="Lv. 2 CON Symbol - Ancient Dye" add_name="CON + 4 / STR - 3 / Dark Attack Resistance + 10">
+	<etcitem id="17651" name="Lv. 2 Ancient CON Dye" add_name="CON + 4 / STR - 3 / Dark Resistance + 10">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -470,7 +470,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv2_2_dye_con"/>
 	</etcitem>
-	<etcitem id="17652" name="Lv. 2 INT Symbol - Ancient Dye" add_name="INT + 4 / WIT - 3 / Water Resistance + 10">
+	<etcitem id="17652" name="Lv. 2 Ancient INT Dye" add_name="INT + 4 / WIT - 3 / Water Resistance + 10">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -479,7 +479,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv2_2_dye_int"/>
 	</etcitem>
-	<etcitem id="17653" name="Lv. 2 WIT Symbol - Ancient Dye" add_name="WIT + 4 / MEN - 3 / Wind Resistance + 10">
+	<etcitem id="17653" name="Lv. 2 Ancient WIT Dye" add_name="WIT + 4 / MEN - 3 / Wind Resistance + 10">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -488,7 +488,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv2_2_dye_wit"/>
 	</etcitem>
-	<etcitem id="17654" name="Lv. 2 MEN Symbol - Ancient Dye" add_name="MEN + 4 / INT - 3 / Holy Attack Resistance + 10">
+	<etcitem id="17654" name="Lv. 2 Ancient MEN Dye" add_name="MEN + 4 / INT - 3 / Holy Resistance + 10">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -497,7 +497,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv2_2_dye_men"/>
 	</etcitem>
-	<etcitem id="17655" name="Lv. 2 STR Symbol - Legendary Dye" add_name="STR + 4 / DEX - 2 / Fire Resistance + 10">
+	<etcitem id="17655" name="Lv. 2 Legendary STR Dye" add_name="STR + 4 / DEX - 2 / Fire Resistance + 10">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -506,7 +506,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv2_3_dye_str"/>
 	</etcitem>
-	<etcitem id="17656" name="Lv. 2 DEX Symbol - Legendary Dye" add_name="DEX + 4 / CON - 2 / Earth Resistance + 10">
+	<etcitem id="17656" name="Lv. 2 Legendary DEX Dye" add_name="DEX + 4 / CON - 2 / Earth Resistance + 10">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -515,7 +515,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv2_3_dye_dex"/>
 	</etcitem>
-	<etcitem id="17657" name="Lv. 2 CON Symbol - Legendary Dye" add_name="CON + 4 / STR - 2 / Dark Attack Resistance + 10">
+	<etcitem id="17657" name="Lv. 2 Legendary CON Dye" add_name="CON + 4 / STR - 2 / Dark Resistance + 10">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -524,7 +524,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv2_3_dye_con"/>
 	</etcitem>
-	<etcitem id="17658" name="Lv. 2 INT Symbol - Legendary Dye" add_name="INT + 4 / WIT - 2 / Water Resistance + 10">
+	<etcitem id="17658" name="Lv. 2 Legendary INT Dye" add_name="INT + 4 / WIT - 2 / Water Resistance + 10">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -533,7 +533,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv2_3_dye_int"/>
 	</etcitem>
-	<etcitem id="17659" name="Lv. 2 WIT Symbol - Legendary Dye" add_name="WIT + 4 / MEN - 2 / Wind Resistance + 10">
+	<etcitem id="17659" name="Lv. 2 Legendary WIT Dye" add_name="WIT + 4 / MEN - 2 / Wind Resistance + 10">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -542,7 +542,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv2_3_dye_wit"/>
 	</etcitem>
-	<etcitem id="17660" name="Lv. 2 MEN Symbol - Legendary Dye" add_name="MEN + 4 / INT - 2 / Holy Attack Resistance + 10">
+	<etcitem id="17660" name="Lv. 2 Legendary MEN Dye" add_name="MEN + 4 / INT - 2 / Holy Resistance + 10">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -551,7 +551,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv2_3_dye_men"/>
 	</etcitem>
-	<etcitem id="17661" name="Lv. 3 STR Symbol - Giant Dye" add_name="STR + 5 / DEX - 4">
+	<etcitem id="17661" name="Lv. 3 Giant STR Dye" add_name="STR + 5 / DEX - 4">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -560,7 +560,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv3_1_dye_str"/>
 	</etcitem>
-	<etcitem id="17662" name="Lv. 3 DEX Symbol - Giant Dye" add_name="DEX + 5 / CON - 4">
+	<etcitem id="17662" name="Lv. 3 Giant DEX Dye" add_name="DEX + 5 / CON - 4">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -569,7 +569,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv3_1_dye_dex"/>
 	</etcitem>
-	<etcitem id="17663" name="Lv. 3 CON Symbol - Giant Dye" add_name="CON + 5 / STR - 4">
+	<etcitem id="17663" name="Lv. 3 Giant CON Dye" add_name="CON + 5 / STR - 4">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -578,7 +578,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv3_1_dye_con"/>
 	</etcitem>
-	<etcitem id="17664" name="Lv. 3 INT Symbol - Giant Dye" add_name="INT + 5 / WIT - 4">
+	<etcitem id="17664" name="Lv. 3 Giant INT Dye" add_name="INT + 5 / WIT - 4">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -587,7 +587,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv3_1_dye_int"/>
 	</etcitem>
-	<etcitem id="17665" name="Lv. 3 WIT Symbol - Giant Dye" add_name="WIT + 5 / MEN - 4">
+	<etcitem id="17665" name="Lv. 3 Giant WIT Dye" add_name="WIT + 5 / MEN - 4">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -596,7 +596,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv3_1_dye_wit"/>
 	</etcitem>
-	<etcitem id="17666" name="Lv. 3 MEN Symbol - Giant Dye" add_name="MEN + 5 / INT - 4">
+	<etcitem id="17666" name="Lv. 3 Giant MEN Dye" add_name="MEN + 5 / INT - 4">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -605,7 +605,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv3_1_dye_men"/>
 	</etcitem>
-	<etcitem id="17667" name="Lv. 3 STR Symbol - Ancient Dye" add_name="STR + 5 / DEX - 4 / Fire Resistance + 15">
+	<etcitem id="17667" name="Lv. 3 Ancient STR Dye" add_name="STR + 5 / DEX - 4 / Fire Resistance + 15">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -614,7 +614,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv3_2_dye_str"/>
 	</etcitem>
-	<etcitem id="17668" name="Lv. 3 DEX Symbol - Ancient Dye" add_name="DEX + 5 / CON - 4 / Earth Resistance + 15">
+	<etcitem id="17668" name="Lv. 3 Ancient DEX Dye" add_name="DEX + 5 / CON - 4 / Earth Resistance + 15">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -623,7 +623,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv3_2_dye_dex"/>
 	</etcitem>
-	<etcitem id="17669" name="Lv. 3 CON Symbol - Ancient Dye" add_name="CON + 5 / STR - 4 / Dark Attack Resistance + 15">
+	<etcitem id="17669" name="Lv. 3 Ancient CON Dye" add_name="CON + 5 / STR - 4 / Dark Resistance + 15">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -632,7 +632,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv3_2_dye_con"/>
 	</etcitem>
-	<etcitem id="17670" name="Lv. 3 INT Symbol - Ancient Dye" add_name="INT + 5 / WIT - 4 / Water Resistance + 15">
+	<etcitem id="17670" name="Lv. 3 Ancient INT Dye" add_name="INT + 5 / WIT - 4 / Water Resistance + 15">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -641,7 +641,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv3_2_dye_int"/>
 	</etcitem>
-	<etcitem id="17671" name="Lv. 3 WIT Symbol - Ancient Dye" add_name="WIT + 5 / MEN - 4 / Wind Resistance + 15">
+	<etcitem id="17671" name="Lv. 3 Ancient WIT Dye" add_name="WIT + 5 / MEN - 4 / Wind Resistance + 15">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -650,7 +650,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv3_2_dye_wit"/>
 	</etcitem>
-	<etcitem id="17672" name="Lv. 3 MEN Symbol - Ancient Dye" add_name="MEN + 5 / INT - 4 / Holy Attack Resistance + 15">
+	<etcitem id="17672" name="Lv. 3 Ancient MEN Dye" add_name="MEN + 5 / INT - 4 / Holy Resistance + 15">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -659,7 +659,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv3_2_dye_men"/>
 	</etcitem>
-	<etcitem id="17673" name="Lv. 3 STR Symbol - Legendary Dye" add_name="STR + 5 / DEX - 3 / Fire Resistance + 15">
+	<etcitem id="17673" name="Lv. 3 Legendary STR Dye" add_name="STR + 5 / DEX - 3 / Fire Resistance + 15">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -668,7 +668,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv3_3_dye_str"/>
 	</etcitem>
-	<etcitem id="17674" name="Lv. 3 DEX Symbol - Legendary Dye" add_name="DEX + 5 / CON - 3 / Earth Resistance + 15">
+	<etcitem id="17674" name="Lv. 3 Legendary DEX Dye" add_name="DEX + 5 / CON - 3 / Earth Resistance + 15">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -677,7 +677,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv3_3_dye_dex"/>
 	</etcitem>
-	<etcitem id="17675" name="Lv. 3 CON Symbol - Legendary Dye" add_name="CON + 5 / STR - 3 / Dark Attack Resistance + 15">
+	<etcitem id="17675" name="Lv. 3 Legendary CON Dye" add_name="CON + 5 / STR - 3 / Dark Resistance + 15">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -686,7 +686,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv3_3_dye_con"/>
 	</etcitem>
-	<etcitem id="17676" name="Lv. 3 INT Symbol - Legendary Dye" add_name="INT + 5 / WIT - 3 / Water Resistance + 15">
+	<etcitem id="17676" name="Lv. 3 Legendary INT Dye" add_name="INT + 5 / WIT - 3 / Water Resistance + 15">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -695,7 +695,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv3_3_dye_int"/>
 	</etcitem>
-	<etcitem id="17677" name="Lv. 3 WIT Symbol - Legendary Dye" add_name="WIT + 5 / MEN - 3 / Wind Resistance + 15">
+	<etcitem id="17677" name="Lv. 3 Legendary WIT Dye" add_name="WIT + 5 / MEN - 3 / Wind Resistance + 15">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -704,7 +704,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv3_3_dye_wit"/>
 	</etcitem>
-	<etcitem id="17678" name="Lv. 3 MEN Symbol - Legendary Dye" add_name="MEN + 5 / INT - 3 / Holy Attack Resistance + 15">
+	<etcitem id="17678" name="Lv. 3 Legendary MEN Dye" add_name="MEN + 5 / INT - 3 / Holy Resistance + 15">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -713,7 +713,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv3_3_dye_men"/>
 	</etcitem>
-	<etcitem id="17679" name="Lv. 4 STR Symbol - Giant Dye" add_name="STR + 5 / DEX - 2">
+	<etcitem id="17679" name="Lv. 4 Giant STR Dye" add_name="STR + 5 / DEX - 2">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -722,7 +722,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv4_1_dye_str"/>
 	</etcitem>
-	<etcitem id="17680" name="Lv. 4 DEX Symbol - Giant Dye" add_name="DEX + 5 / CON - 2">
+	<etcitem id="17680" name="Lv. 4 Giant DEX Dye" add_name="DEX + 5 / CON - 2">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -731,7 +731,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv4_1_dye_dex"/>
 	</etcitem>
-	<etcitem id="17681" name="Lv. 4 CON Symbol - Giant Dye" add_name="CON + 5 / STR - 2">
+	<etcitem id="17681" name="Lv. 4 Giant CON Dye" add_name="CON + 5 / STR - 2">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -740,7 +740,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv4_1_dye_con"/>
 	</etcitem>
-	<etcitem id="17682" name="Lv. 4 INT Symbol - Giant Dye" add_name="INT + 5 / WIT - 2">
+	<etcitem id="17682" name="Lv. 4 Giant INT Dye" add_name="INT + 5 / WIT - 2">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -749,7 +749,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv4_1_dye_int"/>
 	</etcitem>
-	<etcitem id="17683" name="Lv. 4 WIT Symbol - Giant Dye" add_name="WIT + 5 / MEN - 2">
+	<etcitem id="17683" name="Lv. 4 Giant WIT Dye" add_name="WIT + 5 / MEN - 2">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -758,7 +758,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv4_1_dye_wit"/>
 	</etcitem>
-	<etcitem id="17684" name="Lv. 4 MEN Symbol - Giant Dye" add_name="MEN + 5 / INT - 2">
+	<etcitem id="17684" name="Lv. 4 Giant MEN Dye" add_name="MEN + 5 / INT - 2">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -767,7 +767,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv4_1_dye_men"/>
 	</etcitem>
-	<etcitem id="17685" name="Lv. 4 STR Symbol - Ancient Dye" add_name="STR + 5 / DEX - 2 / Fire Resistance + 20">
+	<etcitem id="17685" name="Lv. 4 Ancient STR Dye" add_name="STR + 5 / DEX - 2 / Fire Resistance + 20">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -776,7 +776,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv4_2_dye_str"/>
 	</etcitem>
-	<etcitem id="17686" name="Lv. 4 DEX Symbol - Ancient Dye" add_name="DEX + 5 / CON - 2 / Earth Resistance + 20">
+	<etcitem id="17686" name="Lv. 4 Ancient DEX Dye" add_name="DEX + 5 / CON - 2 / Earth Resistance + 20">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -785,7 +785,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv4_2_dye_dex"/>
 	</etcitem>
-	<etcitem id="17687" name="Lv. 4 CON Symbol - Ancient Dye" add_name="CON + 5 / STR - 2 / Dark Attack Resistance + 20">
+	<etcitem id="17687" name="Lv. 4 Ancient CON Dye" add_name="CON + 5 / STR - 2 / Dark Resistance + 20">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -794,7 +794,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv4_2_dye_con"/>
 	</etcitem>
-	<etcitem id="17688" name="Lv. 4 INT Symbol - Ancient Dye" add_name="INT + 5 / WIT - 2 / Water Resistance + 20">
+	<etcitem id="17688" name="Lv. 4 Ancient INT Dye" add_name="INT + 5 / WIT - 2 / Water Resistance + 20">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -803,7 +803,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv4_2_dye_int"/>
 	</etcitem>
-	<etcitem id="17689" name="Lv. 4 WIT Symbol - Ancient Dye" add_name="WIT + 5 / MEN - 2 / Wind Resistance + 20">
+	<etcitem id="17689" name="Lv. 4 Ancient WIT Dye" add_name="WIT + 5 / MEN - 2 / Wind Resistance + 20">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -812,7 +812,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv4_2_dye_wit"/>
 	</etcitem>
-	<etcitem id="17690" name="Lv. 4 MEN Symbol - Ancient Dye" add_name="MEN + 5 / INT - 2 / Holy Attack Resistance + 20">
+	<etcitem id="17690" name="Lv. 4 Ancient MEN Dye" add_name="MEN + 5 / INT - 2 / Holy Resistance + 20">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -821,7 +821,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv4_2_dye_men"/>
 	</etcitem>
-	<etcitem id="17691" name="Lv. 4 STR Symbol - Legendary Dye" add_name="STR + 5 / DEX - 1 / Fire Resistance + 20">
+	<etcitem id="17691" name="Lv. 4 Legendary STR Dye" add_name="STR + 5 / DEX - 1 / Fire Resistance + 20">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -830,7 +830,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv4_3_dye_str"/>
 	</etcitem>
-	<etcitem id="17692" name="Lv. 4 DEX Symbol - Legendary Dye" add_name="DEX + 5 / CON - 1 / Earth Resistance + 20">
+	<etcitem id="17692" name="Lv. 4 Legendary DEX Dye" add_name="DEX + 5 / CON - 1 / Earth Resistance + 20">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -839,7 +839,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv4_3_dye_dex"/>
 	</etcitem>
-	<etcitem id="17693" name="Lv. 4 CON Symbol - Legendary Dye" add_name="CON + 5 / STR - 1 / Dark Attack Resistance + 20">
+	<etcitem id="17693" name="Lv. 4 Legendary CON Dye" add_name="CON + 5 / STR - 1 / Dark Resistance + 20">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -848,7 +848,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv4_3_dye_con"/>
 	</etcitem>
-	<etcitem id="17694" name="Lv. 4 INT Symbol - Legendary Dye" add_name="INT + 5 / WIT - 1 / Water Resistance + 20">
+	<etcitem id="17694" name="Lv. 4 Legendary INT Dye" add_name="INT + 5 / WIT - 1 / Water Resistance + 20">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -857,7 +857,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv4_3_dye_int"/>
 	</etcitem>
-	<etcitem id="17695" name="Lv. 4 WIT Symbol - Legendary Dye" add_name="WIT + 5 / MEN - 1 / Wind Resistance + 20">
+	<etcitem id="17695" name="Lv. 4 Legendary WIT Dye" add_name="WIT + 5 / MEN - 1 / Wind Resistance + 20">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -866,7 +866,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv4_3_dye_wit"/>
 	</etcitem>
-	<etcitem id="17696" name="Lv. 4 MEN Symbol - Legendary Dye" add_name="MEN + 5 / INT - 1 / Holy Attack Resistance + 20">
+	<etcitem id="17696" name="Lv. 4 Legendary MEN Dye" add_name="MEN + 5 / INT - 1 / Holy Resistance + 20">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -875,7 +875,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv4_3_dye_men"/>
 	</etcitem>
-	<etcitem id="17697" name="Lv. 5 STR Symbol - Giant Dye" add_name="STR + 5">
+	<etcitem id="17697" name="Lv. 5 Giant STR Dye" add_name="STR + 5">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -884,7 +884,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv5_1_dye_str"/>
 	</etcitem>
-	<etcitem id="17698" name="Lv. 5 DEX Symbol - Giant Dye" add_name="DEX + 5">
+	<etcitem id="17698" name="Lv. 5 Giant DEX Dye" add_name="DEX + 5">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -893,7 +893,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.lv5_1_dye_dex"/>
 	</etcitem>
-	<etcitem id="17699" name="Lv. 5 CON Symbol - Giant Dye" add_name="CON + 5">
+	<etcitem id="17699" name="Lv. 5 Giant CON Dye" add_name="CON + 5">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

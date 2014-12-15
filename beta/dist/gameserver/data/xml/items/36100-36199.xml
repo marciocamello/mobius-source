@@ -197,42 +197,42 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
 	</etcitem>
-	<etcitem id="36137" name="Lv. 5 MEN Symbol - Legendary Dye 10-unit Pack">
+	<etcitem id="36137" name="Lv. 5 Legendary MEN Dye 10-unit Pack">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
 	</etcitem>
-	<etcitem id="36138" name="Lv. 5 WIT Symbol - Legendary Dye 10-unit Pack">
+	<etcitem id="36138" name="Lv. 5 Legendary WIT Dye 10-unit Pack">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
 	</etcitem>
-	<etcitem id="36139" name="Lv. 5 DEX Symbol - Legendary Dye 10-unit Pack">
+	<etcitem id="36139" name="Lv. 5 Legendary DEX Dye 10-unit Pack">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
 	</etcitem>
-	<etcitem id="36140" name="Lv. 5 CON Symbol - Legendary Dye 10-unit Pack">
+	<etcitem id="36140" name="Lv. 5 Legendary CON Dye 10-unit Pack">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
 	</etcitem>
-	<etcitem id="36141" name="Lv. 5 INT Symbol - Legendary Dye 10-unit Pack">
+	<etcitem id="36141" name="Lv. 5 Legendary INT Dye 10-unit Pack">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
 	</etcitem>
-	<etcitem id="36142" name="Lv. 5 STR Symbol - Legendary Dye 10-unit Pack">
+	<etcitem id="36142" name="Lv. 5 Legendary STR Dye 10-unit Pack">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
@@ -351,14 +351,14 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_jewel_box_i00"/>
 	</etcitem>
-	<etcitem id="36159" name="Scroll of Blessing (R(1)-grade)">
+	<etcitem id="36159" name="Scroll of Blessing (R1-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.bless_scroll_r1"/>
 	</etcitem>
-	<etcitem id="36160" name="Scroll of Blessing (R(2)-grade)">
+	<etcitem id="36160" name="Scroll of Blessing (R2-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
@@ -547,7 +547,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_spirit_kalie_i00"/>
 	</etcitem>
-	<etcitem id="36186" name="Kaliel's Energy" add_name="desire">
+	<etcitem id="36186" name="Kaliel's Energy" add_name="Desire">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>

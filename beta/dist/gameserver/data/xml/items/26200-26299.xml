@@ -332,7 +332,7 @@
 			<enchant stat="pDef" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<armor id="26271" name="Halloween Sigil" add_name="Robe">
+	<armor id="26271" name="Halloween Sigil">
 		<set name="crystal_type" value="D"/>
 		<set name="crystal_count" value="0"/>
 		<set name="type" value="SIGIL"/>

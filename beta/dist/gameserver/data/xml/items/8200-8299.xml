@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="8200" name="Fisherman's Potion - White">
+	<etcitem id="8200" name="Corroded Fisherman's Potion - White">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -20,7 +20,7 @@
 		</cond>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8201" name="Fisherman's Potion - Black">
+	<etcitem id="8201" name="Corroded Fisherman's Potion - Black">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -39,7 +39,7 @@
 		</cond>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8202" name="Fisherman's Recovery Potion">
+	<etcitem id="8202" name="Corroded Fisherman's Recovery Potion">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

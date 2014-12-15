@@ -391,7 +391,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="13728" name="Expert Text - Star Stone Extraction Skill. Level 1">
+	<etcitem id="13728" name="Expert Text - Star Stone Extraction Skill. Lv. 1">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -400,7 +400,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="13729" name="Expert Text - Star Stone Extraction Skill. Level 2">
+	<etcitem id="13729" name="Expert Text - Star Stone Extraction Skill. Lv. 2">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -408,7 +408,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="13730" name="Expert Text - Star Stone Extraction Skill. Level 3">
+	<etcitem id="13730" name="Expert Text - Star Stone Extraction Skill. Lv. 3">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -515,7 +515,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="13741" name="Dion Holy Attack Resistance Necklace">
+	<armor id="13741" name="Dion Holy Resistance Necklace">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
@@ -551,7 +551,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="13743" name="Oren Dark Attack Resistance Necklace">
+	<armor id="13743" name="Oren Dark Resistance Necklace">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>

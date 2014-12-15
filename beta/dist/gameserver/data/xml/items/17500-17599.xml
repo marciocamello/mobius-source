@@ -1192,7 +1192,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.yogi_stick_i00"/>
 	</etcitem>
-	<etcitem id="17591" name="Beleth' Mark">
+	<etcitem id="17591" name="Beleth's Mark">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1200,7 +1200,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_orcish_talisman_i00"/>
 	</etcitem>
-	<etcitem id="17592" name="Beleth' Contract">
+	<etcitem id="17592" name="Beleth's Contract">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

@@ -116,7 +116,7 @@
 		</skills>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="35713" name="Refined Romantic Chapeau containing the GM's Sincerity" add_name="Magic Use">
+	<armor id="35713" name="Refined Romantic Chapeau containing the GM's Sincerity" add_name="Wizards Only">
 		<set name="type" value="NONE"/>
 		<set name="icon" value="icon.accessory_archer_hat2_i00"/>
 		<set name="weight" value="10"/>
@@ -155,7 +155,7 @@
 		</skills>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="35716" name="Refined Romantic Chapeau containing the GM's Blessing" add_name="Magic Use">
+	<armor id="35716" name="Refined Romantic Chapeau containing the GM's Blessing" add_name="Wizards Only">
 		<set name="type" value="NONE"/>
 		<set name="icon" value="icon.accessory_archer_hat2_i00"/>
 		<set name="weight" value="10"/>
@@ -271,7 +271,7 @@
 		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="35741" name="Scroll: PK (Low-grade)" add_name="Event">
+	<etcitem id="35741" name="Scroll: PK (Low-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="type" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -281,7 +281,7 @@
 		<set name="icon" value="icon.etc_ev_draco_pk_count_down"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="35742" name="Scroll: Reputation (Low-grade)" add_name="Event">
+	<etcitem id="35742" name="Scroll: Reputation (Low-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="type" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -355,7 +355,7 @@
 		<set name="icon" value="icon.etc_ev_draco_gift_box"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="35752" name="Scroll: PK (Mid-grade)" add_name="Event">
+	<etcitem id="35752" name="Scroll: PK (Mid-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="type" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -363,7 +363,7 @@
 		<set name="icon" value="icon.etc_ev_draco_pk_count_down"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="35753" name="Scroll: PK (High-grade)" add_name="Event">
+	<etcitem id="35753" name="Scroll: PK (High-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="type" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -371,7 +371,7 @@
 		<set name="icon" value="icon.etc_ev_draco_pk_count_down"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="35754" name="Scroll: PK (Top-grade)" add_name="Event">
+	<etcitem id="35754" name="Scroll: PK (Top-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="type" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -379,7 +379,7 @@
 		<set name="icon" value="icon.etc_ev_draco_pk_count_down"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="35755" name="Scroll: Reputation (Mid-grade)" add_name="Event">
+	<etcitem id="35755" name="Scroll: Reputation (Mid-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="type" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -387,7 +387,7 @@
 		<set name="icon" value="icon.etc_ev_draco_karma_down"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="35756" name="Scroll: Reputation (High-grade)" add_name="Event">
+	<etcitem id="35756" name="Scroll: Reputation (High-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="type" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -395,7 +395,7 @@
 		<set name="icon" value="icon.etc_ev_draco_karma_down"/>
 		<set name="stackable" value="true"/>
 	</etcitem>
-	<etcitem id="35757" name="Scroll: Reputation (Top-grade)" add_name="Event">
+	<etcitem id="35757" name="Scroll: Reputation (Top-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="type" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -494,7 +494,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35767" name="Rabbit Ears" add_name="P.Def">
+	<armor id="35767" name="Rabbit Ears" add_name="P. Def.">
 		<set name="icon" value="icon.accessory_rabbit_ear_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -505,7 +505,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35768" name="Rabbit Ears" add_name="M.Def">
+	<armor id="35768" name="Rabbit Ears" add_name="M. Def.">
 		<set name="icon" value="icon.accessory_rabbit_ear_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -527,7 +527,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35770" name="Rabbit Ears" add_name="P.Atk">
+	<armor id="35770" name="Rabbit Ears" add_name="P. Atk.">
 		<set name="icon" value="icon.accessory_rabbit_ear_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -538,7 +538,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35771" name="Rabbit Ears" add_name="M.Atk">
+	<armor id="35771" name="Rabbit Ears" add_name="M. Atk.">
 		<set name="icon" value="icon.accessory_rabbit_ear_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -627,7 +627,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35779" name="Raccoon Ears" add_name="P.Def">
+	<armor id="35779" name="Raccoon Ears" add_name="P. Def.">
 		<set name="icon" value="icon.accessory_racoon_ear_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -638,7 +638,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35780" name="Raccoon Ears" add_name="M.Def">
+	<armor id="35780" name="Raccoon Ears" add_name="M. Def.">
 		<set name="icon" value="icon.accessory_racoon_ear_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -660,7 +660,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35782" name="Raccoon Ears" add_name="P.Atk">
+	<armor id="35782" name="Raccoon Ears" add_name="P. Atk.">
 		<set name="icon" value="icon.accessory_racoon_ear_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -671,7 +671,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35783" name="Raccoon Ears" add_name="M.Atk">
+	<armor id="35783" name="Raccoon Ears" add_name="M. Atk.">
 		<set name="icon" value="icon.accessory_racoon_ear_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -760,7 +760,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35791" name="Cat Ears" add_name="P.Def">
+	<armor id="35791" name="Cat Ears" add_name="P. Def.">
 		<set name="icon" value="icon.accessory_cat_ear_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -771,7 +771,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35792" name="Cat Ears" add_name="M.Def">
+	<armor id="35792" name="Cat Ears" add_name="M. Def.">
 		<set name="icon" value="icon.accessory_cat_ear_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -793,7 +793,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35794" name="Cat Ears" add_name="P.Atk">
+	<armor id="35794" name="Cat Ears" add_name="P. Atk.">
 		<set name="icon" value="icon.accessory_cat_ear_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -804,7 +804,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35795" name="Cat Ears" add_name="M.Atk">
+	<armor id="35795" name="Cat Ears" add_name="M. Atk.">
 		<set name="icon" value="icon.accessory_cat_ear_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>

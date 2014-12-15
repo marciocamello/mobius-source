@@ -624,7 +624,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="37373" name="Fragment of Chaos">
+	<etcitem id="37373" name="Chaos Fragment">
 		<set name="icon" value="icon.etc_debris_i00"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
@@ -790,7 +790,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="37395" name="Scroll: 100,000,000 SP" add_name="Event">
+	<etcitem id="37395" name="Scroll: 10,000,000 SP" add_name="Event">
 		<set name="icon" value="icon.etc_sp_scroll3_i00"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="8500" name="Aden Luminous Bait">
+	<etcitem id="8500" name="Corroded Aden Luminous Bait">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -13,7 +13,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8501" name="Innadril Luminous Bait">
+	<etcitem id="8501" name="Corroded Innadril Luminous Bait">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -25,7 +25,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8502" name="Goddard Luminous Bait">
+	<etcitem id="8502" name="Corroded Goddard Luminous Bait">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -37,7 +37,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8503" name="Rune Luminous Bait">
+	<etcitem id="8503" name="Corroded Rune Luminous Bait">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -49,7 +49,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8504" name="Schuttgart Luminous Bait">
+	<etcitem id="8504" name="Corroded Schuttgart Luminous Bait">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -61,7 +61,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8505" name="Luminous Green Bait (Low-grade)">
+	<etcitem id="8505" name="Corroded Luminous Green Bait (Low-grade)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -73,7 +73,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8506" name="Luminous Green Bait">
+	<etcitem id="8506" name="Corroded Luminous Green Bait">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i00"/>
@@ -85,7 +85,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8507" name="Luminous Green Bait (High-grade)">
+	<etcitem id="8507" name="Corroded Luminous Green Bait (High-grade)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -97,7 +97,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8508" name="Luminous Purple Bait (Low-grade)">
+	<etcitem id="8508" name="Corroded Luminous Purple Bait (Low-grade)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -109,7 +109,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8509" name="Luminous Purple Bait">
+	<etcitem id="8509" name="Corroded Luminous Purple Bait">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i01"/>
@@ -121,7 +121,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8510" name="Luminous Purple Bait (High-grade)">
+	<etcitem id="8510" name="Corroded Luminous Purple Bait (High-grade)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -133,7 +133,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8511" name="Luminous Yellow Bait (Low-grade)">
+	<etcitem id="8511" name="Corroded Luminous Yellow Bait (Low-grade)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -145,7 +145,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8512" name="Luminous Yellow Bait">
+	<etcitem id="8512" name="Corroded Luminous Yellow Bait">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i02"/>
@@ -157,7 +157,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8513" name="Luminous Yellow Bait (High-grade)">
+	<etcitem id="8513" name="Corroded Luminous Yellow Bait (High-grade)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>

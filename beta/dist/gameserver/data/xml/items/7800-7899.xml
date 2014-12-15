@@ -99,7 +99,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="7807" name="Green Bait (Novice)">
+	<etcitem id="7807" name="Corroded Green Bait (Novice)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i00"/>
@@ -111,7 +111,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="7808" name="Purple Bait (Novice)">
+	<etcitem id="7808" name="Corroded Purple Bait (Novice)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i01"/>
@@ -123,7 +123,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="7809" name="Yellow Bait (Novice)">
+	<etcitem id="7809" name="Corroded Yellow Bait (Novice)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i02"/>
@@ -923,7 +923,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="7847" name="Lady's Hair Pin (Event)">
+	<armor id="7847" name="Lady's Hairpin (Event)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
 		<set name="icon" value="icon.accessory_hairpin_i00"/>

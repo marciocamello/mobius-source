@@ -512,7 +512,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<armor id="4234" name="Hatchling's Level 65 Armor">
+	<armor id="4234" name="Hatchling's Lv. 65 Armor">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pet_armor_i06"/>
 		<set name="price" value="3132000"/>
@@ -530,7 +530,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="4235" name="Hatchling's Level 75 Armor">
+	<armor id="4235" name="Hatchling's Lv. 75 Armor">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pet_armor_i07"/>
 		<set name="price" value="9586000"/>
@@ -566,7 +566,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<weapon id="4237" name="Hatchling's Level 65 Weapon">
+	<weapon id="4237" name="Hatchling's Lv. 65 Weapon">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pet_arms_i04"/>
 		<set name="price" value="5628000"/>
@@ -587,7 +587,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="4238" name="Hatchling's Level 75 Weapon">
+	<weapon id="4238" name="Hatchling's Lv. 75 Weapon">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pet_arms_i04"/>
 		<set name="price" value="19073000"/>
@@ -806,7 +806,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="4261" name="Orc Heads Bouquet -1">
+	<etcitem id="4261" name="Orc Heads Bouquet - 1">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

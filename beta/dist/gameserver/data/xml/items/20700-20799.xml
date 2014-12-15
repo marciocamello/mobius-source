@@ -86,7 +86,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20707" name="Scroll: Summon Uldie (Event)">
+	<etcitem id="20707" name="Summon Scroll: Uldie (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -100,7 +100,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20708" name="Scroll: Summon Belldandy (Event)">
+	<etcitem id="20708" name="Summon Scroll: Belldandy (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -114,7 +114,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20709" name="Scroll: Summon Skooldie (Event)">
+	<etcitem id="20709" name="Summon Scroll: Skooldie (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -563,7 +563,7 @@
 			</not>
 		</cond>
 	</armor>
-	<etcitem id="20728" name="Scroll: Summon Lucky Lamp">
+	<etcitem id="20728" name="Summon Scroll: Lucky Lamp">
 		<set name="reuse_delay" value="14400000"/>
 		<set name="delay_share_group" value="101"/>
 		<set name="class" value="OTHER"/>
@@ -580,7 +580,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20729" name="Scroll: Summon Ambience Sky Lantern">
+	<etcitem id="20729" name="Summon Scroll: Ambience Sky Lantern">
 		<set name="reuse_delay" value="14400000"/>
 		<set name="delay_share_group" value="101"/>
 		<set name="class" value="OTHER"/>
@@ -597,7 +597,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20730" name="Scroll: Summon Rolling Lamp">
+	<etcitem id="20730" name="Summon Scroll: Rolling Lamp">
 		<set name="reuse_delay" value="14400000"/>
 		<set name="delay_share_group" value="101"/>
 		<set name="class" value="OTHER"/>
@@ -614,7 +614,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20731" name="Scroll: Summon Comfort Sky Lantern">
+	<etcitem id="20731" name="Summon Scroll: Comfort Sky Lantern">
 		<set name="reuse_delay" value="14400000"/>
 		<set name="delay_share_group" value="101"/>
 		<set name="class" value="OTHER"/>
@@ -1353,7 +1353,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20762" name="Rudolph Pet Exchange Ticket" add_name="7-day">
+	<etcitem id="20762" name="Rudolph Pet Coupon" add_name="7-day">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

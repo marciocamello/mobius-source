@@ -1193,7 +1193,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<weapon id="13978" name="Monster Only (Mounted Troops High Level Leader)">
+	<weapon id="13978" name="Monster Only (Dragontroop Commander)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.mon_dragon_centurion_spear_i00"/>
 		<set name="price" value="188000"/>
@@ -1219,7 +1219,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13979" name="Monster Only (Dragon Steed Troop Battle Infantry Sword)">
+	<weapon id="13979" name="Monster Only (Dragontroop Commando)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.weapon_mon_dragon_legionaries_sword_i00"/>
 		<set name="price" value="105000"/>
@@ -1241,7 +1241,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13980" name="Monster Only (Dragon Steed Troop Battle Infantry Shield)">
+	<weapon id="13980" name="Monster Only (Dragontroop Defender)">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.shield_mon_dragon_legionaries_shield_i00"/>
 		<set name="price" value="30"/>
@@ -1261,7 +1261,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="13981" name="Monster Only (Mounted Troops Tactics)">
+	<weapon id="13981" name="Monster Only (Dragontoop Tactician)">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.weapon_mon_dragon_mage_staff_i00"/>

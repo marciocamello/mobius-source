@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="34000" name="Lv. 5 MEN Symbol - Legendary Dye" add_name="MEN + 5 / INT + 1 / Holy Attack Resistance + 25 (Event)">
+	<etcitem id="34000" name="Lv. 5 Legendary MEN Dye" add_name="MEN + 5 / INT + 1 / Holy Resistance + 25 (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

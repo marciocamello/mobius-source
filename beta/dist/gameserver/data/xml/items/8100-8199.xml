@@ -1912,7 +1912,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8193" name="Fisherman's Potion - Green">
+	<etcitem id="8193" name="Corroded Fisherman's Potion - Green">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1931,7 +1931,7 @@
 		</cond>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8194" name="Fisherman's Potion - Jade">
+	<etcitem id="8194" name="Corroded Fisherman's Potion - Jade">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1950,7 +1950,7 @@
 		</cond>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8195" name="Fisherman's Potion - Blue">
+	<etcitem id="8195" name="Corroded Fisherman's Potion - Blue">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1969,7 +1969,7 @@
 		</cond>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8196" name="Fisherman's Potion - Yellow">
+	<etcitem id="8196" name="Corroded Fisherman's Potion - Yellow">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1988,7 +1988,7 @@
 		</cond>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8197" name="Fisherman's Potion - Orange">
+	<etcitem id="8197" name="Corroded Fisherman's Potion - Orange">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -2007,7 +2007,7 @@
 		</cond>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8198" name="Fisherman's Potion - Purple">
+	<etcitem id="8198" name="Corroded Fisherman's Potion - Purple">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -2026,7 +2026,7 @@
 		</cond>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8199" name="Fisherman's Potion - Red">
+	<etcitem id="8199" name="Corroded Fisherman's Potion - Red">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

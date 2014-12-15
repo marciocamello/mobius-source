@@ -188,7 +188,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="37918" name="Scarecrow Sword Appearance Stone: One-handed Magic Sword">
+	<weapon id="37918" name="Scarecrow Sword">
 		<set name="weight" value="144"/>
 		<set name="rnd_dam" value="10"/>
 		<equip>

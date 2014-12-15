@@ -174,7 +174,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="5"/>
 	</etcitem>
-	<etcitem id="13015" name="My Teleport Scroll">
+	<etcitem id="13015" name="My Teleport Book">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -196,7 +196,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="5"/>
 	</etcitem>
-	<etcitem id="13017" name="White Weasel Minion Whistle">
+	<etcitem id="13017" name="White Weasel Minion Necklace">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -211,7 +211,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="13018" name="Fairy Princess Minion Whistle">
+	<etcitem id="13018" name="Fairy Princess Minion Necklace">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -226,7 +226,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="13019" name="Wild Beast Fighter Minion Whistle">
+	<etcitem id="13019" name="Wild Beast Fighter Minion Necklace">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -241,7 +241,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="13020" name="Fox Shaman Minion Whistle">
+	<etcitem id="13020" name="Fox Shaman Minion Necklace">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1262,7 +1262,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<etcitem id="13079" name="My Teleport Scroll Pack">
+	<etcitem id="13079" name="My Teleport Book Pack">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

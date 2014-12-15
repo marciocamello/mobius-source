@@ -199,7 +199,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="60"/>
 	</etcitem>
-	<etcitem id="4122" name="Recipe: Maestro Holder">
+	<etcitem id="4122" name="Recipe: Corroded Maestro Holder">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -209,7 +209,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="4123" name="Recipe: Maestro Anvil Lock">
+	<etcitem id="4123" name="Recipe: Corroded Maestro Anvil Lock">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -219,7 +219,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="4124" name="Recipe: Craftsman Mold">
+	<etcitem id="4124" name="Recipe: Corroded Craftsman Mold">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>
@@ -229,7 +229,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="4125" name="Recipe: Maestro Mold">
+	<etcitem id="4125" name="Recipe: Corroded Maestro Mold">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_yellow_i00"/>

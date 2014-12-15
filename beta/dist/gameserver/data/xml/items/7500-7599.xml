@@ -153,7 +153,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="7519" name="Red Bean Slushie">
+	<etcitem id="7519" name="Summer Slushie">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -845,7 +845,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="7583" name="Pet Exchange Ticket: Buffalo">
+	<etcitem id="7583" name="Pet Coupon: Buffalo">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -855,7 +855,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="7584" name="Pet Exchange Ticket: Cougar">
+	<etcitem id="7584" name="Pet Coupon: Cougar">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -865,7 +865,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="7585" name="Pet Exchange Ticket: Kookaburra">
+	<etcitem id="7585" name="Pet Coupon: Kookaburra">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

@@ -172,7 +172,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="23921" name="Tears Two-handed Blunt Weapon">
+	<weapon id="23921" name="Tears Magic Sword">
 		<set name="weight" value="101"/>
 		<set name="rnd_dam" value="20"/>
 		<equip>
@@ -311,7 +311,7 @@
 			<enchant stat="pDef" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<armor id="23928" name="Tears Sigil" add_name="Robe">
+	<armor id="23928" name="Tears Sigil">
 		<set name="crystal_type" value="D"/>
 		<set name="crystal_count" value="0"/>
 		<set name="type" value="SIGIL"/>
@@ -326,7 +326,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>	
-	<etcitem id="23929" name="Tears Weapon Appearance Stone: Sword" add_name="(7-Day)">
+	<etcitem id="23929" name="Tears One-handed Sword Appearance Stone" add_name="7-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -342,7 +342,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="23930" name="Tears Weapon Appearance Stone: Dagger" add_name="(7-Day)">
+	<etcitem id="23930" name="Tears Dagger Appearance Stone" add_name="7-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -358,7 +358,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="23931" name="Tears Weapon Appearance Stone: Two-handed Sword" add_name="(7-Day)">
+	<etcitem id="23931" name="Tears Two-handed Sword Appearance Stone" add_name="7-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -374,7 +374,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="23932" name="Tears Weapon Appearance Stone: Fist Weapon" add_name="(7-Day)">
+	<etcitem id="23932" name="Tears Fist Weapon Appearance Stone" add_name="7-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -390,7 +390,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="23933" name="Tears Weapon Appearance Stone: Spear" add_name="(7-Day)">
+	<etcitem id="23933" name="Tears Spear Appearance Stone" add_name="7-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -406,7 +406,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="23934" name="Tears Weapon Appearance Stone: Bow" add_name="(7-Day)">
+	<etcitem id="23934" name="Tears Bow Appearance Stone" add_name="7-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -422,7 +422,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="23935" name="Tears Weapon Appearance Stone: Crossbow" add_name="(7-Day)">
+	<etcitem id="23935" name="Tears Crossbow Appearance Stone" add_name="7-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -438,7 +438,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="23936" name="Tears Weapon Appearance Stone: One-handed Blunt Weapon" add_name="(7-Day)">
+	<etcitem id="23936" name="Tears One-handed Blunt Weapon Appearance Stone" add_name="7-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -454,7 +454,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="23937" name="Tears Weapon Appearance Stone: Two-handed Blunt Weapon" add_name="(7-Day)">
+	<etcitem id="23937" name="Tears Magic Sword Appearance Stone" add_name="7-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -470,7 +470,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="23938" name="Tears Weapon Appearance Stone: One-handed Magic Blunt Weapon" add_name="(7-Day)">
+	<etcitem id="23938" name="Tears One-handed Magic Blunt Weapon Appearance Stone" add_name="7-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -486,7 +486,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="23939" name="Tears Weapon Appearance Stone: Two-handed Magic Blunt Weapon" add_name="(7-Day)">
+	<etcitem id="23939" name="Tears Two-handed Magic Blunt Weapon Appearance Stone" add_name="7-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -502,7 +502,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="23940" name="Tears Weapon Appearance Stone: Dualsword" add_name="(7-Day)">
+	<etcitem id="23940" name="Tears Dualsword Appearance Stone" add_name="7-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -518,7 +518,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="23941" name="Tears Weapon Appearance Stone: Dual Dagger" add_name="(7-Day)">
+	<etcitem id="23941" name="Tears Dual Dagger Appearance Stone" add_name="7-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -534,7 +534,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="23942" name="Tears Weapon Appearance Stone: Dual Blunt Weapon" add_name="(7-Day)">
+	<etcitem id="23942" name="Tears Dual Blunt Weapon Appearance Stone" add_name="7-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -550,7 +550,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="23943" name="Tears Weapon Appearance Stone: Shield" add_name="(7-Day)">
+	<etcitem id="23943" name="Tears Shield Appearance Stone" add_name="7-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>
@@ -566,7 +566,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="23944" name="Tears Weapon Appearance Stone: Sigil" add_name="(7-Day)">
+	<etcitem id="23944" name="Tears Sigil Appearance Stone" add_name="7-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
 		<set name="dropable" value="false"/>

@@ -204,7 +204,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="13518" name="Top Hat">
+	<armor id="13518" name="Event - Top Hat">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.accessory_magicial_cap_i00"/>
@@ -585,7 +585,7 @@
 			<set stat="atkBaseSpeed" order="0x08" value="325"/>
 		</for>
 	</weapon>
-	<weapon id="13539" name="Staff of Master Yogi">
+	<weapon id="13539" name="Master Yogi's Staff">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.yogi_stick_i00"/>

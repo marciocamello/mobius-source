@@ -197,7 +197,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<armor id="5216" name="Wolf's Level 75 Armor">
+	<armor id="5216" name="Wolf's Lv. 75 Armor">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pet_armor_i02"/>
 		<set name="price" value="9586000"/>
@@ -215,7 +215,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<weapon id="5217" name="Wolf's Level 75 Weapon">
+	<weapon id="5217" name="Wolf's Lv. 75 Weapon">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_pet_arms_i02"/>
 		<set name="price" value="61084"/>
@@ -367,7 +367,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="5231" name="Recipe: Metal Hardener">
+	<etcitem id="5231" name="Recipe: Corroded Metal Hardener">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>

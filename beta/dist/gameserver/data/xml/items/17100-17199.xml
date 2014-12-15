@@ -533,7 +533,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="17137" name="White Valentine's Day Candy (Event)">
+	<etcitem id="17137" name="Valentine's Day Candy (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -747,7 +747,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17152" name="Arrow-Pierced Apple" add_name="Promotion">
+	<armor id="17152" name="Arrow-pierced Apple" add_name="Promotion">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.accessory_arrow_apple_i00"/>
@@ -1198,7 +1198,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<etcitem id="17184" name="Scroll: 50,000 SP">
+	<etcitem id="17184" name="Scroll: 5,000 SP">
 		<set name="icon" value="icon.etc_sp_scroll3_i00"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>
@@ -1210,7 +1210,7 @@
 			<skill id="2167" level="6"/>
 		</skills>
 	</etcitem>
-	<etcitem id="17185" name="Scroll: 100,000 SP">
+	<etcitem id="17185" name="Scroll: 10,000 SP">
 		<set name="icon" value="icon.etc_sp_scroll3_i00"/>
 		<set name="weight" value="30"/>
 		<set name="stackable" value="true"/>

@@ -71,7 +71,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17807" name="Orc Mage Female Wig - A">
+	<armor id="17807" name="Orc Female Shaman Wig - A">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
 		<set name="type" value="NONE"/>
@@ -81,7 +81,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17808" name="Orc Mage Female Wig - B">
+	<armor id="17808" name="Orc Female Shaman Wig - B">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
 		<set name="type" value="NONE"/>
@@ -91,7 +91,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17809" name="Orc Mage Female Wig - C">
+	<armor id="17809" name="Orc Female Shaman Wig - C">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
 		<set name="type" value="NONE"/>
@@ -101,7 +101,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="17810" name="Orc Mage Female Wig - D">
+	<armor id="17810" name="Orc Female Shaman Wig - D">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.icon.br_plastic_hair_f_i00"/>
 		<set name="type" value="NONE"/>
@@ -225,7 +225,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.item_normal52"/>
 	</etcitem>
-	<etcitem id="17823" name="Life Stone: Hair Accessory" add_name="Fighter">
+	<etcitem id="17823" name="Life Stone: Hair Accessory" add_name="Warrior">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -234,7 +234,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_mineral_general_i00"/>
 	</etcitem>
-	<etcitem id="17824" name="Life Stone: Hair Accessory" add_name="Mystic">
+	<etcitem id="17824" name="Life Stone: Hair Accessory" add_name="Wizard">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -270,7 +270,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_con_hena_i02"/>
 	</etcitem>
-	<etcitem id="17828" name="Dye of INT">
+	<etcitem id="17828" name="INT Dye">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

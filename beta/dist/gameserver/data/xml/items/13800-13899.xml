@@ -594,7 +594,7 @@
 		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="13853" name="Destroyed Darkness Fragment Powder">
+	<etcitem id="13853" name="Shards of Broken Darkness">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -607,7 +607,7 @@
 			<skill id="2615" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="13854" name="Destroyed Light Fragment Powder">
+	<etcitem id="13854" name="Shards of Broken Light">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -724,7 +724,7 @@
 		<set name="tradeable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="13867" name="Tiat Charm">
+	<etcitem id="13867" name="Tiat's Breath">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

@@ -394,7 +394,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
 	</etcitem>
-	<armor id="32742" name="Rabbit Ears" add_name="Str">
+	<armor id="32742" name="Rabbit Ears" add_name="STR">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_rabbit_ear_i00"/>
 		<set name="type" value="NONE"/>
@@ -446,7 +446,7 @@
 			<add stat="MEN" order="0x10" value="3"/>
 		</for>
 	</armor>
-	<armor id="32746" name="Cat Ears" add_name="Int">
+	<armor id="32746" name="Cat Ears" add_name="INT">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_cat_ear_i00"/>
 		<set name="type" value="NONE"/>

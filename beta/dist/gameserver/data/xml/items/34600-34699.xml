@@ -427,7 +427,7 @@
 		</skills>
 		<set name="icon" value="icon.event_hero_treasure_box_i00"/>
 	</etcitem>
-	<etcitem id="34694" name="Hero's Enchant Stone Pack">
+	<etcitem id="34694" name="Hero's Lucky Enchant Stone Pack">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="22600" name="Mysterious Spiritshot Large Pack (C-grade)">
+	<etcitem id="22600" name="Mysterious Blessed Spiritshot Pack (10000) (C-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -10,7 +10,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="br_cashtex.item.br_cash_pack_of_spiritshot_c_i00"/>
 	</etcitem>
-	<etcitem id="22601" name="Mysterious Spiritshot Pack (C-grade)">
+	<etcitem id="22601" name="Mysterious Blessed Spiritshot Pack (5000) (C-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -19,7 +19,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="br_cashtex.item.br_cash_pack_of_spiritshot_c_i00"/>
 	</etcitem>
-	<etcitem id="22602" name="Mysterious Spiritshot Large Pack (B-grade)">
+	<etcitem id="22602" name="Mysterious Blessed Spiritshot Pack (10000) (B-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -28,7 +28,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="br_cashtex.item.br_cash_pack_of_spiritshot_b_i00"/>
 	</etcitem>
-	<etcitem id="22603" name="Mysterious Spiritshot Pack (B-grade)">
+	<etcitem id="22603" name="Mysterious Blessed Spiritshot Pack (5000) (B-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -37,7 +37,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="br_cashtex.item.br_cash_pack_of_spiritshot_b_i00"/>
 	</etcitem>
-	<etcitem id="22604" name="Mysterious Spiritshot Large Pack (A-grade)">
+	<etcitem id="22604" name="Mysterious Blessed Spiritshot Pack (10000) (A-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -46,7 +46,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="br_cashtex.item.br_cash_pack_of_spiritshot_a_i00"/>
 	</etcitem>
-	<etcitem id="22605" name="Mysterious Spiritshot Pack (A-grade)">
+	<etcitem id="22605" name="Mysterious Blessed Spiritshot Pack (5000) (A-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -55,7 +55,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="br_cashtex.item.br_cash_pack_of_spiritshot_a_i00"/>
 	</etcitem>
-	<etcitem id="22606" name="Mysterious Spiritshot Large Pack (S-grade)">
+	<etcitem id="22606" name="Mysterious Blessed Spiritshot Pack (10000) (S-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -64,7 +64,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="br_cashtex.item.br_cash_pack_of_spiritshot_s_i00"/>
 	</etcitem>
-	<etcitem id="22607" name="Mysterious Spiritshot Pack (S-grade)">
+	<etcitem id="22607" name="Mysterious Blessed Spiritshot Pack (5000) (S-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

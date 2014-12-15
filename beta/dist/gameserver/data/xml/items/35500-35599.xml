@@ -519,7 +519,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="35556" name="Entrance Pass: Kartia's Labyrinth Level 85 Solo">
+	<etcitem id="35556" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Solo">
 		<set name="icon" value="icon.etc_ticket_red_i00"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -528,7 +528,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="35557" name="Entrance Pass: Kartia's Labyrinth Level 90 Solo">
+	<etcitem id="35557" name="Entrance Pass: Kartia's Labyrinth Lv. 90 Solo">
 		<set name="icon" value="icon.etc_ticket_red_i00"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -537,7 +537,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="35558" name="Entrance Pass: Kartia's Labyrinth Level 95 Solo">
+	<etcitem id="35558" name="Entrance Pass: Kartia's Labyrinth Lv. 95 Solo">
 		<set name="icon" value="icon.etc_ticket_red_i00"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -546,7 +546,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="35559" name="Entrance Pass: Kartia's Labyrinth Level 85 Party">
+	<etcitem id="35559" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Party">
 		<set name="icon" value="icon.etc_ticket_red_i00"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -555,7 +555,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="35560" name="Entrance Pass: Kartia's Labyrinth Level 90 Party">
+	<etcitem id="35560" name="Entrance Pass: Kartia's Labyrinth Lv. 90 Party">
 		<set name="icon" value="icon.etc_ticket_red_i00"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -564,7 +564,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="35561" name="Entrance Pass: Kartia's Labyrinth Level 95 Party">
+	<etcitem id="35561" name="Entrance Pass: Kartia's Labyrinth Lv. 95 Party">
 		<set name="icon" value="icon.etc_ticket_red_i00"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -719,7 +719,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="35572" name="Holy Attack Resistance Necklace">
+	<armor id="35572" name="Holy Resistance Necklace">
 		<set name="type" value="NONE"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
 		<set name="price" value="37000"/>
@@ -751,7 +751,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="35574" name="Dark Attack Resistance Necklace">
+	<armor id="35574" name="Dark Resistance Necklace">
 		<set name="type" value="NONE"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
 		<set name="price" value="37000"/>
@@ -831,7 +831,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="35579" name="Top-grade Holy Attack Resistance Necklace">
+	<armor id="35579" name="Top-grade Holy Resistance Necklace">
 		<set name="type" value="NONE"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
 		<set name="price" value="37000"/>
@@ -847,7 +847,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="35580" name="Top-grade Dark Attack Resistance Necklace">
+	<armor id="35580" name="Top-grade Dark Resistance Necklace">
 		<set name="type" value="NONE"/>
 		<set name="icon" value="icon.accessary_inferno_necklace_i00"/>
 		<set name="price" value="37000"/>
@@ -946,7 +946,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="35586" name="Holy Attack Resistance Ring">
+	<armor id="35586" name="Holy Resistance Ring">
 		<set name="type" value="NONE"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
 		<set name="price" value="37000"/>
@@ -963,7 +963,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="35587" name="Dark Attack Resistance Ring">
+	<armor id="35587" name="Dark Resistance Ring">
 		<set name="type" value="NONE"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
 		<set name="price" value="37000"/>
@@ -1048,7 +1048,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="35592" name="Top-grade Holy Attack Resistance Ring">
+	<armor id="35592" name="Top-grade Holy Resistance Ring">
 		<set name="type" value="NONE"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
 		<set name="price" value="37000"/>
@@ -1065,7 +1065,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="35593" name="Top-grade Dark Attack Resistance Ring">
+	<armor id="35593" name="Top-grade Dark Resistance Ring">
 		<set name="type" value="NONE"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
 		<set name="price" value="37000"/>

@@ -43,7 +43,7 @@
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23530" name="Appearance Stone: Emerald Weapon">
+    <etcitem id="23530" name="Automatic Appearance Stone: Emerald Weapon">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>

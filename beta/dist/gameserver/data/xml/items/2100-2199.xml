@@ -316,7 +316,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="2135" name="Recipe: Durable Braid">
+	<etcitem id="2135" name="Recipe: Corroded Durable Braid">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -326,7 +326,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2136" name="Recipe: Cokes">
+	<etcitem id="2136" name="Recipe: Corroded Cokes">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -336,7 +336,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2137" name="Recipe: Steel">
+	<etcitem id="2137" name="Recipe: Corroded Steel">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -346,7 +346,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2138" name="Recipe: Coarse Bone Powder">
+	<etcitem id="2138" name="Recipe: Corroded Coarse Bone Powder">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -356,7 +356,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2139" name="Recipe: Steel Mold">
+	<etcitem id="2139" name="Recipe: Corroded Steel Mold">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -366,7 +366,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2140" name="Recipe: High-grade Suede">
+	<etcitem id="2140" name="Recipe: Corroded High-grade Suede">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -376,7 +376,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2141" name="Recipe: Silver Mold">
+	<etcitem id="2141" name="Recipe: Corroded Silver Mold">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -386,7 +386,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2142" name="Recipe: Varnish of Purity">
+	<etcitem id="2142" name="Recipe: Corroded Varnish of Purity">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -396,7 +396,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2143" name="Recipe: Synthetic Cokes">
+	<etcitem id="2143" name="Recipe: Corroded Synthetic Cokes">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -406,7 +406,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2144" name="Recipe: Synthetic Braid">
+	<etcitem id="2144" name="Recipe: Corroded Synthetic Braid">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_white_i00"/>
@@ -416,7 +416,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2145" name="Recipe: Mithril Alloy">
+	<etcitem id="2145" name="Recipe: Corroded Mithril Alloy">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -426,7 +426,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2146" name="Recipe: Artisan's frame">
+	<etcitem id="2146" name="Recipe: Corroded Artisan's frame">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -436,7 +436,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2147" name="Recipe: Blacksmith' frame">
+	<etcitem id="2147" name="Recipe: Corroded Blacksmith' frame">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -446,7 +446,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2148" name="Recipe: Quality Leather">
+	<etcitem id="2148" name="Recipe: Corroded Quality Leather">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>
@@ -456,7 +456,7 @@
 		<set name="ex_type" value="RECIPE"/>
 		<set name="weight" value="30"/>
 	</etcitem>
-	<etcitem id="2149" name="Recipe: Metallic Fiber">
+	<etcitem id="2149" name="Recipe: Corroded Metallic Fiber">
 		<set name="class" value="RECIPIES"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_recipe_blue_i00"/>

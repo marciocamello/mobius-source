@@ -81,7 +81,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="14008" name="Accessory Life Stone - Level 84">
+	<etcitem id="14008" name="Life Stone: Accessory - Lv. 84">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i03"/>

@@ -1261,7 +1261,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<etcitem id="16160" name="Life Stone - Level 85">
+	<etcitem id="16160" name="Life Stone - Lv. 85">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i03"/>
@@ -1270,7 +1270,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="16161" name="Mid-grade Life Stone - Level 85">
+	<etcitem id="16161" name="Mid-grade Life Stone - Lv. 85">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_special_i03"/>
@@ -1279,7 +1279,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="16162" name="High-grade Life Stone - Level 85">
+	<etcitem id="16162" name="High-grade Life Stone - Lv. 85">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_rare_i03"/>
@@ -1288,7 +1288,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="16163" name="Top-grade Life Stone - Level 85">
+	<etcitem id="16163" name="Top-grade Life Stone - Lv. 85">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_unique_i03"/>
@@ -1297,7 +1297,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="16164" name="Life Stone - Level 86">
+	<etcitem id="16164" name="Life Stone - Lv. 86">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i03"/>
@@ -1306,7 +1306,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="16165" name="Mid-grade Life Stone - Level 86">
+	<etcitem id="16165" name="Mid-grade Life Stone - Lv. 86">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_special_i03"/>
@@ -1315,7 +1315,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="16166" name="High-grade Life Stone - Level 86">
+	<etcitem id="16166" name="High-grade Life Stone - Lv. 86">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_rare_i03"/>
@@ -1324,7 +1324,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="16167" name="Top-grade Life Stone - Level 86">
+	<etcitem id="16167" name="Top-grade Life Stone - Lv. 86">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_unique_i03"/>
@@ -1543,7 +1543,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-	<etcitem id="16177" name="Accessory Life Stone - Level 85">
+	<etcitem id="16177" name="Life Stone: Accessory - Lv. 85">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i03"/>
@@ -1552,7 +1552,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="16178" name="Accessory Life Stone - Level 86">
+	<etcitem id="16178" name="Life Stone: Accessory - Lv. 86">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i03"/>

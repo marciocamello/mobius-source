@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<etcitem id="24301" name="Agathion - Twinkling Pisces" add_name="Stage 6">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="stackable" value="false"/>
+		<set name="type" value="OTHER"/>
+		<set name="weight" value="0"/>
+	</etcitem>
+</list>

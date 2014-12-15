@@ -449,7 +449,7 @@
 		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="15244" name="Short Sword of Fortune Set" add_name="10-day">
+	<etcitem id="15244" name="Rapier of Fortune Set" add_name="10-day">
 		<set name="reuse_delay" value="3000"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

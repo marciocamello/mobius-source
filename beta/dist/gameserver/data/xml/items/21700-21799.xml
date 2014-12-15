@@ -134,7 +134,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21711" name="Santa Claus' Blessing" add_name="Event">
+	<etcitem id="21711" name="Santa's Blessing" add_name="Event">
 		<set name="icon" value="BranchSys.icon.br_xmas_miracle_i00"/>
 		<set name="weight" value="5"/>
 		<set name="stackable" value="true"/>

@@ -263,7 +263,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_letter_blue_i00"/>
 	</etcitem>
-	<armor id="30411" name="Talisman (R-grade) - Knock back resistance (Passive)">
+	<armor id="30411" name="Talisman (R-grade) - Knock Back Resistance (Passive)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -277,7 +277,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="30412" name="Talisman (R-grade) - Knock down resistance (Passive)">
+	<armor id="30412" name="Talisman (R-grade) - Knock Down Resistance (Passive)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -291,7 +291,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="30413" name="Talisman (R-grade) - Binding resistance (Passive)">
+	<armor id="30413" name="Talisman (R-grade) - Binding Resistance (Passive)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -347,7 +347,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="30417" name="Talisman (R-grade) - Knock back resistance (Passive)">
+	<armor id="30417" name="Talisman (R-grade) - Knock Back Resistance (Passive)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -361,7 +361,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="30418" name="Talisman (R-grade) - Knock down resistance (Passive)">
+	<armor id="30418" name="Talisman (R-grade) - Knock Down Resistance (Passive)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>
@@ -375,7 +375,7 @@
 		</equip>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 	</armor>
-	<armor id="30419" name="Talisman (R-grade) - Binding resistance (Passive)">
+	<armor id="30419" name="Talisman (R-grade) - Binding Resistance (Passive)">
 		<set name="dropable" value="false"/>
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="false"/>

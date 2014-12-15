@@ -529,7 +529,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21653" name="Daisy Hairpin Pack (7-day)" add_name="Dark Attack Resistance">
+	<etcitem id="21653" name="Daisy Hairpin Pack (7-day)" add_name="Dark Resistance">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -689,7 +689,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21669" name="Red Party Mask Pack (7-day)" add_name="Dark Attack Resistance">
+	<etcitem id="21669" name="Red Party Mask Pack (7-day)" add_name="Dark Resistance">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -729,7 +729,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21673" name="Lady's Hair Pin Pack (7-day)" add_name="Death Whisper">
+	<etcitem id="21673" name="Lady's Hairpin Pack (7-day)" add_name="Death Whisper">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>
@@ -739,7 +739,7 @@
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="21674" name="Lady's Hair Pin Pack">
+	<etcitem id="21674" name="Lady's Hairpin Pack">
 		<set name="freightable" value="true"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 		<set name="weight" value="100"/>

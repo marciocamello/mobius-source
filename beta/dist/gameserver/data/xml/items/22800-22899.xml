@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<weapon id="22807" name="Spezion's Claw" >
+	<weapon id="22807" name="Spezion's Claw">
 		<set name="crystal_type" value="R"/>
 		<set name="icon" value="BranchSys3.Icon.g_spacia_claw_i00"/>
 		<set name="price" value="68020500"/>
@@ -171,34 +171,34 @@
 		<set name="crystal_type" value="R"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22889" name="Mysterious Spiritshot (R-grade)">
+	<etcitem id="22889" name="Mysterious Blessed Spiritshot (R-grade)">
 		<set name="icon" value="icon.blessed_spiritshot_r_i00"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="R"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22890" name="Mysterious Soulshot Large Pack (R-grade)">
+	<etcitem id="22890" name="Mysterious Blessed Soulshot Pack (10000) (R-grade)">
 		<set name="icon" value="icon.br_cash_pack_of_soulshot_r_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22891" name="Mysterious Soulshot Pack (R-grade)">
+	<etcitem id="22891" name="Mysterious Blessed Soulshot Pack (5000) (R-grade)">
 		<set name="icon" value="icon.br_cash_pack_of_soulshot_r_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22892" name="Mysterious Spiritshot Large Pack (R-grade)">
+	<etcitem id="22892" name="Mysterious Blessed Spiritshot Pack (10000) (R-grade)">
 		<set name="icon" value="icon.br_cash_pack_of_spiritshot_r_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22893" name="Mysterious Spiritshot Pack (R-grade)">
+	<etcitem id="22893" name="Mysterious Blessed Spiritshot Pack (5000) (R-grade)">
 		<set name="icon" value="icon.br_cash_pack_of_spiritshot_r_i00"/>
 		<set name="weight" value="100"/>
 		<set name="stackable" value="true"/>

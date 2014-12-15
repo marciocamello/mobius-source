@@ -1165,7 +1165,7 @@
 		</skills>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="8484" name="Prize-Winning Bait">
+	<etcitem id="8484" name="Corroded Prize-Winning Bait">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -1177,7 +1177,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8485" name="Prize-Winning Bait (Night Fishing)">
+	<etcitem id="8485" name="Corroded Prize-Winning Bait (Night Fishing)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -1189,7 +1189,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8486" name="Prize-Winning Bait (Novice)">
+	<etcitem id="8486" name="Corroded Prize-Winning Bait (Novice)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -1275,7 +1275,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="QUEST"/>
 	</etcitem>
-	<etcitem id="8496" name="Gludio Luminous Bait">
+	<etcitem id="8496" name="Corroded Gludio Luminous Bait">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -1287,7 +1287,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8497" name="Dion Luminous Bait">
+	<etcitem id="8497" name="Corroded Dion Luminous Bait">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -1299,7 +1299,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8498" name="Giran Luminous Bait">
+	<etcitem id="8498" name="Corroded Giran Luminous Bait">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>
@@ -1311,7 +1311,7 @@
 			<slot id="LEFT_HAND"/>
 		</equip>
 	</etcitem>
-	<etcitem id="8499" name="Oren Luminous Bait">
+	<etcitem id="8499" name="Corroded Oren Luminous Bait">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_lure_i00"/>

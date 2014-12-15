@@ -294,7 +294,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<etcitem id="34849" name="Wondrous Herb of Power">
+	<etcitem id="34849" name="Mysterious Herb of Power">
 		<set name="icon" value="icon.etc_warrior_set_i00"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="HERB"/>
@@ -303,7 +303,7 @@
 			<skill id="9404" level="1"/>
 		</skills>
 	</etcitem>
-	<etcitem id="34850" name="Wondrous Herb of Magic">
+	<etcitem id="34850" name="Mysterious Herb of Magic">
 		<set name="icon" value="icon.etc_magic_set_i00"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="HERB"/>

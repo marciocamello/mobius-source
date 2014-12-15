@@ -286,7 +286,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="6519" name="Green Bait (Low-grade)">
+	<etcitem id="6519" name="Corroded Green Bait (Low-grade)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i00"/>
@@ -303,7 +303,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="6520" name="Green Bait">
+	<etcitem id="6520" name="Corroded Green Bait">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i00"/>
@@ -320,7 +320,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="6521" name="Green Bait (High-grade)">
+	<etcitem id="6521" name="Corroded Green Bait (High-grade)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i00"/>
@@ -337,7 +337,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="6522" name="Purple Bait (Low-grade)">
+	<etcitem id="6522" name="Corroded Purple Bait (Low-grade)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i01"/>
@@ -354,7 +354,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="6523" name="Purple Bait">
+	<etcitem id="6523" name="Corroded Purple Bait">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i01"/>
@@ -371,7 +371,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="6524" name="Purple Bait (High-grade)">
+	<etcitem id="6524" name="Corroded Purple Bait (High-grade)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i01"/>
@@ -388,7 +388,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="6525" name="Yellow Bait (Low-grade)">
+	<etcitem id="6525" name="Corroded Yellow Bait (Low-grade)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i02"/>
@@ -405,7 +405,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="6526" name="Yellow Bait">
+	<etcitem id="6526" name="Corroded Yellow Bait">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i02"/>
@@ -422,7 +422,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="6527" name="Yellow Bait (High-grade)">
+	<etcitem id="6527" name="Corroded Yellow Bait (High-grade)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_bait_i02"/>
@@ -439,7 +439,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="6528" name="Event bait">
+	<etcitem id="6528" name="Corroded Event bait">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_special_bait_i00"/>
@@ -456,7 +456,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<weapon id="6529" name="Baby Duck Rod">
+	<weapon id="6529" name="Corroded Baby Duck Rod">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.weapon_fishing_rod_i00"/>
 		<set name="price" value="30000"/>
@@ -477,7 +477,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="6530" name="Albatross Rod">
+	<weapon id="6530" name="Corroded Albatross Rod">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.weapon_fishing_rod_i01"/>
@@ -499,7 +499,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="6531" name="Pelican Rod">
+	<weapon id="6531" name="Corroded Pelican Rod">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="C"/>
 		<set name="icon" value="icon.weapon_fishing_rod_i02"/>
@@ -521,7 +521,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="6532" name="KingFisher Rod">
+	<weapon id="6532" name="Corroded KingFisher Rod">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.weapon_fishing_rod_i03"/>
@@ -543,7 +543,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="6533" name="Cygnus Pole">
+	<weapon id="6533" name="Corroded Cygnus Pole">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.weapon_fishing_rod_i04"/>
@@ -565,7 +565,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="6534" name="Triton Pole">
+	<weapon id="6534" name="Corroded Triton Pole">
 		<set name="enchantable" value="false"/>
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.weapon_fishing_rod_i05"/>
@@ -587,7 +587,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<etcitem id="6535" name="Fishing Shot (No-grade)">
+	<etcitem id="6535" name="Corroded Fishing Shot (No-grade)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spirit_bullet_fish_i00"/>
@@ -596,7 +596,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="3"/>
 	</etcitem>
-	<etcitem id="6536" name="Fishing Shot (D-grade)">
+	<etcitem id="6536" name="Corroded Fishing Shot (D-grade)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="D"/>
 		<set name="icon" value="icon.etc_spirit_bullet_fish_i01"/>
@@ -605,7 +605,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="3"/>
 	</etcitem>
-	<etcitem id="6537" name="Fishing Shot (C-grade)">
+	<etcitem id="6537" name="Corroded Fishing Shot (C-grade)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="C"/>
 		<set name="icon" value="icon.etc_spirit_bullet_fish_i02"/>
@@ -614,7 +614,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="3"/>
 	</etcitem>
-	<etcitem id="6538" name="Fishing Shot (B-grade)">
+	<etcitem id="6538" name="Corroded Fishing Shot (B-grade)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="B"/>
 		<set name="icon" value="icon.etc_spirit_bullet_fish_i03"/>
@@ -623,7 +623,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="3"/>
 	</etcitem>
-	<etcitem id="6539" name="Fishing Shot (A-grade)">
+	<etcitem id="6539" name="Corroded Fishing Shot (A-grade)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="A"/>
 		<set name="icon" value="icon.etc_spirit_bullet_fish_i04"/>
@@ -632,7 +632,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="3"/>
 	</etcitem>
-	<etcitem id="6540" name="Fishing Shot (S-grade)">
+	<etcitem id="6540" name="Corroded Fishing Shot (S-grade)">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="S"/>
 		<set name="icon" value="icon.etc_spirit_bullet_fish_i05"/>

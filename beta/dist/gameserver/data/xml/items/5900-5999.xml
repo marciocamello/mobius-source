@@ -702,7 +702,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="5975" name="Revelation of the Seals: Chapter of Vengeance">
+	<etcitem id="5975" name="Revelation of the Seals: Chapter of Punishment">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

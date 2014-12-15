@@ -501,7 +501,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<etcitem id="8351" name="Black Fish Scale">
+	<etcitem id="8351" name="Corroded Black Fish Scale">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_gludio_fish_scale_i00"/>
@@ -510,7 +510,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="10"/>
 	</etcitem>
-	<etcitem id="8352" name="Red Colored Fish Scale">
+	<etcitem id="8352" name="Corroded Red Colored Fish Scale">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_dion_fish_scale_i00"/>
@@ -519,7 +519,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="10"/>
 	</etcitem>
-	<etcitem id="8353" name="Green Fish Scale">
+	<etcitem id="8353" name="Corroded Green Fish Scale">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_giran_fish_scale_i00"/>
@@ -528,7 +528,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="10"/>
 	</etcitem>
-	<etcitem id="8354" name="Yellow Fish Scale">
+	<etcitem id="8354" name="Corroded Yellow Fish Scale">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_oren_fish_scale_i00"/>
@@ -537,7 +537,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="10"/>
 	</etcitem>
-	<etcitem id="8355" name="Blue Colored Fish Scale">
+	<etcitem id="8355" name="Corroded Blue Colored Fish Scale">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_aden_fish_scale_i00"/>
@@ -546,7 +546,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="10"/>
 	</etcitem>
-	<etcitem id="8356" name="White Colored Fish Scale">
+	<etcitem id="8356" name="Corroded White Colored Fish Scale">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_innadrile_fish_scale_i00"/>
@@ -555,7 +555,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="10"/>
 	</etcitem>
-	<etcitem id="8357" name="Orange Colored Fish Scale">
+	<etcitem id="8357" name="Corroded Orange Colored Fish Scale">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_godad_fish_scale_i00"/>
@@ -564,7 +564,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="10"/>
 	</etcitem>
-	<etcitem id="8358" name="Purple Fish Scale">
+	<etcitem id="8358" name="Corroded Purple Fish Scale">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_rune_fish_scale_i00"/>
@@ -573,7 +573,7 @@
 		<set name="type" value="MATERIAL"/>
 		<set name="weight" value="10"/>
 	</etcitem>
-	<etcitem id="8359" name="Jade Colored Fish Scale">
+	<etcitem id="8359" name="Corroded Jade Colored Fish Scale">
 		<set name="class" value="MATHERIALS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_schuttgart_fish_scale_i00"/>
@@ -895,7 +895,7 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="8392" name="Spellbook: Holy Attack Resistance">
+	<etcitem id="8392" name="Spellbook: Holy Resistance">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>
@@ -905,7 +905,7 @@
 		<set name="ex_type" value="SPELLBOOK"/>
 		<set name="weight" value="120"/>
 	</etcitem>
-	<etcitem id="8393" name="Spellbook: Dark Attack Resistance">
+	<etcitem id="8393" name="Spellbook: Dark Resistance">
 		<set name="class" value="SPELLBOOKS"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_spell_books_assistance_i00"/>

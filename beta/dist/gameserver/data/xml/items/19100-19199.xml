@@ -1840,7 +1840,7 @@
 		</for>
 		<set name="crystallizable" value="false"/>
 	</weapon>
-	<etcitem id="19166" name="Accessory Life Stone (R-grade)">
+	<etcitem id="19166" name="Life Stone: Accessory (R-grade)">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r_mineral_unique_i00"/>
@@ -1849,7 +1849,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="19167" name="Accessory Life Stone (R95-grade)">
+	<etcitem id="19167" name="Life Stone: Accessory (R95-grade)">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r95_mineral_unique_i00"/>
@@ -1858,7 +1858,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="19168" name="Accessory Life Stone (R99-grade)">
+	<etcitem id="19168" name="Life Stone: Accessory (R99-grade)">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.r99_mineral_unique_i00"/>

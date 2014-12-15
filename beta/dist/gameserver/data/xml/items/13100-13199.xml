@@ -29,7 +29,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="1170"/>
 	</etcitem>
-	<etcitem id="13103" name="My Teleport Scroll Pack">
+	<etcitem id="13103" name="My Teleport Book Pack">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -269,7 +269,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="13123" name="My Teleport Scroll Pack">
+	<etcitem id="13123" name="My Teleport Book Pack">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

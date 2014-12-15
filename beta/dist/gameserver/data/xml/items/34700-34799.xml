@@ -54,7 +54,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.etc_pouch_gold_i00"/>
 	</etcitem>
-	<armor id="34705" name="Pirate's Eyepatch" add_name="Str">
+	<armor id="34705" name="Pirate's Eyepatch" add_name="STR">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_eye_bandage_i00"/>
 		<set name="type" value="NONE"/>
@@ -106,7 +106,7 @@
 			<add stat="MEN" order="0x10" value="3"/>
 		</for>
 	</armor>
-	<armor id="34709" name="Eyepatch" add_name="Int">
+	<armor id="34709" name="Eyepatch" add_name="INT">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.Accessary_one_eye_i00"/>
 		<set name="type" value="NONE"/>

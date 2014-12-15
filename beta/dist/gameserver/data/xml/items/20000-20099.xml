@@ -1102,7 +1102,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20075" name="Santa Claus' Gift - Joy" add_name="4-hour">
+	<etcitem id="20075" name="Santa's Gift - Joy" add_name="4-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1123,7 +1123,7 @@
 		</cond>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="20076" name="Santa Claus' Gift - Enjoyment" add_name="4-hour">
+	<etcitem id="20076" name="Santa's Gift - Enjoyment" add_name="4-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1144,7 +1144,7 @@
 		</cond>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="20077" name="Santa Claus' Gift - Luck" add_name="4-hour">
+	<etcitem id="20077" name="Santa's Gift - Luck" add_name="4-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -1165,7 +1165,7 @@
 		</cond>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="20078" name="Santa Claus' Gift - Luck" add_name="4-hour">
+	<etcitem id="20078" name="Santa's Gift - Luck" add_name="4-hour">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

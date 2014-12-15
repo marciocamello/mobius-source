@@ -34,7 +34,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35803" name="Romantic Chapeau" add_name="P. Def">
+	<armor id="35803" name="Romantic Chapeau" add_name="P. Def.">
 		<set name="icon" value="icon.accessory_romantic_chaperon_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -45,7 +45,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35804" name="Romantic Chapeau" add_name="M. Def">
+	<armor id="35804" name="Romantic Chapeau" add_name="M. Def.">
 		<set name="icon" value="icon.accessory_romantic_chaperon_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -67,7 +67,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35806" name="Romantic Chapeau" add_name="P. Atk">
+	<armor id="35806" name="Romantic Chapeau" add_name="P. Atk.">
 		<set name="icon" value="icon.accessory_romantic_chaperon_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -78,7 +78,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35807" name="Romantic Chapeau" add_name="M. Atk">
+	<armor id="35807" name="Romantic Chapeau" add_name="M. Atk.">
 		<set name="icon" value="icon.accessory_romantic_chaperon_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -189,7 +189,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35817" name="Angel Circlet" add_name="P. Atk">
+	<armor id="35817" name="Angel Circlet" add_name="P. Atk.">
 		<set name="icon" value="icon.Accessary_angel_circlet_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -200,7 +200,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35818" name="Angel Circlet" add_name="M. Atk">
+	<armor id="35818" name="Angel Circlet" add_name="M. Atk.">
 		<set name="icon" value="icon.Accessary_angel_circlet_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -311,7 +311,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35828" name="Demon Circlet" add_name="P. Def">
+	<armor id="35828" name="Demon Circlet" add_name="P. Def.">
 		<set name="icon" value="icon.Accessary_demon_circlet_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -322,7 +322,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35829" name="Demon Circlet" add_name="M. Def">
+	<armor id="35829" name="Demon Circlet" add_name="M. Def.">
 		<set name="icon" value="icon.Accessary_demon_circlet_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -411,7 +411,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35837" name="Pirate's Eyepatch" add_name="P. Def">
+	<armor id="35837" name="Pirate's Eyepatch" add_name="P. Def.">
 		<set name="icon" value="icon.accessory_eye_bandage_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -422,7 +422,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35838" name="Pirate's Eyepatch" add_name="M. Def">
+	<armor id="35838" name="Pirate's Eyepatch" add_name="M. Def.">
 		<set name="icon" value="icon.accessory_eye_bandage_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -444,7 +444,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35840" name="Pirate's Eyepatch" add_name="P. Atk">
+	<armor id="35840" name="Pirate's Eyepatch" add_name="P. Atk.">
 		<set name="icon" value="icon.accessory_eye_bandage_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -455,7 +455,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35841" name="Pirate's Eyepatch" add_name="M. Atk">
+	<armor id="35841" name="Pirate's Eyepatch" add_name="M. Atk.">
 		<set name="icon" value="icon.accessory_eye_bandage_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -544,7 +544,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35849" name="Outlaw's Eyepatch" add_name="P. Def">
+	<armor id="35849" name="Outlaw's Eyepatch" add_name="P. Def.">
 		<set name="icon" value="icon.accessory_outlaw_eyepatch_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -555,7 +555,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35850" name="Outlaw's Eyepatch" add_name="M. Def">
+	<armor id="35850" name="Outlaw's Eyepatch" add_name="M. Def.">
 		<set name="icon" value="icon.accessory_outlaw_eyepatch_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -577,7 +577,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35852" name="Outlaw's Eyepatch" add_name="P. Atk">
+	<armor id="35852" name="Outlaw's Eyepatch" add_name="P. Atk.">
 		<set name="icon" value="icon.accessory_outlaw_eyepatch_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -588,7 +588,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35853" name="Outlaw's Eyepatch" add_name="M. Atk">
+	<armor id="35853" name="Outlaw's Eyepatch" add_name="M. Atk.">
 		<set name="icon" value="icon.accessory_outlaw_eyepatch_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -677,7 +677,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35861" name="Eyepatch" add_name="P. Def">
+	<armor id="35861" name="Eyepatch" add_name="P. Def.">
 		<set name="icon" value="icon.Accessary_one_eye_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -688,7 +688,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35862" name="Eyepatch" add_name="M. Def">
+	<armor id="35862" name="Eyepatch" add_name="M. Def.">
 		<set name="icon" value="icon.Accessary_one_eye_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -710,7 +710,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35864" name="Eyepatch" add_name="P. Atk">
+	<armor id="35864" name="Eyepatch" add_name="P. Atk.">
 		<set name="icon" value="icon.Accessary_one_eye_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -721,7 +721,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35865" name="Eyepatch" add_name="M. Atk">
+	<armor id="35865" name="Eyepatch" add_name="M. Atk.">
 		<set name="icon" value="icon.Accessary_one_eye_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -809,7 +809,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35873" name="Party Hat" add_name="P. Def">
+	<armor id="35873" name="Party Hat" add_name="P. Def.">
 		<set name="icon" value="icon.accessory_party_hat_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -820,7 +820,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35874" name="Party Hat" add_name="M. Def">
+	<armor id="35874" name="Party Hat" add_name="M. Def.">
 		<set name="icon" value="icon.accessory_party_hat_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -964,7 +964,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35887" name="Refined Angel Ring" add_name="P. Atk">
+	<armor id="35887" name="Refined Angel Ring" add_name="P. Atk.">
 		<set name="icon" value="icon.accessory_angel_ring_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -975,7 +975,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35888" name="Refined Angel Ring" add_name="M. Atk">
+	<armor id="35888" name="Refined Angel Ring" add_name="M. Atk.">
 		<set name="icon" value="icon.accessory_angel_ring_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -1086,7 +1086,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35898" name="Refined Devil Horn" add_name="P. Def">
+	<armor id="35898" name="Refined Devil Horn" add_name="P. Def.">
 		<set name="icon" value="icon.accessory_devil_horn_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>
@@ -1097,7 +1097,7 @@
 		</for>
 		<set name="weight" value="10"/>
 	</armor>
-	<armor id="35899" name="Refined Devil Horn" add_name="M. Def">
+	<armor id="35899" name="Refined Devil Horn" add_name="M. Def.">
 		<set name="icon" value="icon.accessory_devil_horn_i00"/>
 		<set name="type" value="NONE"/>
 		<equip>

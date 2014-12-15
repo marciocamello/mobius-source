@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="15000" name="Leather Armor of Doom of Fortune" add_name="30-day">
+	<armor id="15000" name="Doom Leather Armor of Fortune" add_name="30-day">
 		<set name="enchantable" value="true"/>
 		<set name="crystal_type" value="B"/>
 		<set name="dropable" value="true"/>

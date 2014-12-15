@@ -11,7 +11,7 @@
 		<set name="tradeable" value="true"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="13301" name="My Teleport Scroll (Event)">
+	<etcitem id="13301" name="My Teleport Book (Event)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -745,7 +745,7 @@
 			<skill id="8245" level="1"/>
 		</skills>
 	</armor>
-	<etcitem id="13341" name="My Teleport Scroll Pack (Event)">
+	<etcitem id="13341" name="My Teleport Book Pack (Event)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

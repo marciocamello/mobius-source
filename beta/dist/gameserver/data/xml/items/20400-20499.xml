@@ -724,7 +724,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20431" name="Daisy Hairpin" add_name="Dark Attack Resistance (7-day)">
+	<armor id="20431" name="Daisy Hairpin" add_name="Dark Resistance (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -916,7 +916,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20439" name="Red Party Mask" add_name="Dark Attack Resistance (7-day)">
+	<armor id="20439" name="Red Party Mask" add_name="Dark Resistance (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -964,7 +964,7 @@
 			</not>
 		</cond>
 	</armor>
-	<armor id="20441" name="Lady's Hair Pin" add_name="Death Whisper (7-day)">
+	<armor id="20441" name="Lady's Hairpin" add_name="Death Whisper (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>
@@ -1612,7 +1612,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="100"/>
 	</etcitem>
-	<etcitem id="20486" name="Lady's Hair Pin Pack (7-day)">
+	<etcitem id="20486" name="Lady's Hairpin Pack (7-day)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

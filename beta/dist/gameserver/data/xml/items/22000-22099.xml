@@ -211,7 +211,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22018" name="Divine Scroll: Enchant Weapon (B-grade)">
+	<etcitem id="22018" name="Heavenly Scroll: Enchant Weapon (B-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
@@ -221,7 +221,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22019" name="Divine Scroll: Enchant Weapon (A-grade)">
+	<etcitem id="22019" name="Heavenly Scroll: Enchant Weapon (A-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
@@ -231,7 +231,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22020" name="Divine Scroll: Enchant Armor (B-grade)">
+	<etcitem id="22020" name="Heavenly Scroll: Enchant Armor (B-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
@@ -241,7 +241,7 @@
 		<set name="tradeable" value="false"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>
-	<etcitem id="22021" name="Divine Scroll: Enchant Armor (A-grade)">
+	<etcitem id="22021" name="Heavenly Scroll: Enchant Armor (A-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>

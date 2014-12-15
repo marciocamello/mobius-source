@@ -2314,7 +2314,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="14596" name="Aden Holy Attack Resistance Ring">
+	<armor id="14596" name="Aden Holy Resistance Ring">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
@@ -2336,7 +2336,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="14597" name="Innadril Holy Attack Resistance Ring">
+	<armor id="14597" name="Innadril Holy Resistance Ring">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
@@ -2358,7 +2358,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<armor id="14598" name="Goddard Dark Attack Resistance Ring">
+	<armor id="14598" name="Goddard Dark Resistance Ring">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>

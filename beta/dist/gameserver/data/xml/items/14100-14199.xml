@@ -1691,7 +1691,7 @@
 			<enchant stat="mDef" order="0x0C" value="0"/>
 		</for>
 	</armor>
-	<etcitem id="14166" name="Life Stone - Level 84">
+	<etcitem id="14166" name="Life Stone - Lv. 84">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_general_i03"/>
@@ -1700,7 +1700,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="14167" name="Mid-grade Life Stone - Level 84">
+	<etcitem id="14167" name="Mid-grade Life Stone - Lv. 84">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_special_i03"/>
@@ -1709,7 +1709,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="14168" name="High-grade Life Stone - Level 84">
+	<etcitem id="14168" name="High-grade Life Stone - Lv. 84">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_rare_i03"/>
@@ -1718,7 +1718,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="2"/>
 	</etcitem>
-	<etcitem id="14169" name="Top-grade Life Stone - Level 84">
+	<etcitem id="14169" name="Top-grade Life Stone - Lv. 84">
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.etc_mineral_unique_i03"/>

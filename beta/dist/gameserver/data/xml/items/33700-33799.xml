@@ -677,7 +677,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="33745" name="Legacy Doom Cryer Dualsword">
+	<weapon id="33745" name="Legacy Doomcryer Dualsword">
 		<set name="icon" value="icon.weapon_r_dualsword_i00"/>
 		<set name="rnd_dam" value="10"/>
 		<equip>

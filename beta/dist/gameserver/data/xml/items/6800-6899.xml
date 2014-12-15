@@ -532,7 +532,7 @@
 		</equip>
 		<set name="ex_type" value="HAIR_ACCESSORY"/>
 	</armor>
-	<armor id="6844" name="Lady's Hair Pin">
+	<armor id="6844" name="Lady's Hairpin">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_hairpin_i00"/>
 		<set name="price" value="500000"/>

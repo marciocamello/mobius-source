@@ -359,7 +359,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20521" name="Divine Scroll: Enchant Weapon (S-grade)">
+	<etcitem id="20521" name="Heavenly Scroll: Enchant Weapon (S-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
@@ -374,7 +374,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20522" name="Divine Scroll: Enchant Armor (S-grade)">
+	<etcitem id="20522" name="Heavenly Scroll: Enchant Armor (S-grade)">
 		<set name="freightable" value="true"/>
 		<set name="class" value="MISC"/>
 		<set name="crystal_type" value="NONE"/>
@@ -449,7 +449,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20526" name="Scroll: Holy Attack Resistance">
+	<etcitem id="20526" name="Scroll: Holy Resistance">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
@@ -469,7 +469,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="20527" name="Scroll: Dark Attack Resistance">
+	<etcitem id="20527" name="Scroll: Dark Resistance">
 		<set name="freightable" value="true"/>
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>

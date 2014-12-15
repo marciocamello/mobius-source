@@ -32,37 +32,37 @@
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23606" name="Entrance Pass: Kartia's Labyrinth Level 85 Solo">
+    <etcitem id="23606" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Solo">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23607" name="Entrance Pass: Kartia's Labyrinth Level 90 Solo">
+    <etcitem id="23607" name="Entrance Pass: Kartia's Labyrinth Lv. 90 Solo">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23608" name="Entrance Pass: Kartia's Labyrinth Level 95 Solo">
+    <etcitem id="23608" name="Entrance Pass: Kartia's Labyrinth Lv. 95 Solo">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23609" name="Entrance Pass: Kartia's Labyrinth Level 85 Party">
+    <etcitem id="23609" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Party">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23610" name="Entrance Pass: Kartia's Labyrinth Level 90 Party">
+    <etcitem id="23610" name="Entrance Pass: Kartia's Labyrinth Lv. 90 Party">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23611" name="Entrance Pass: Kartia's Labyrinth Level 95 Party">
+    <etcitem id="23611" name="Entrance Pass: Kartia's Labyrinth Lv. 95 Party">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
@@ -337,7 +337,7 @@
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23647" name="High-grade Lucky Enchant Stone: Enchant Armor (R-grade)">
+    <etcitem id="23647" name="High-grade Lucky Enchant Stone: Armor (R-grade)">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="weight" value="120"/>
@@ -464,109 +464,109 @@
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23668" name="Blessed Scroll: Modify Armor (R-grade)" add_name="1-day">
+    <etcitem id="23668" name="Blessed Armor Appearance Stone (R-grade)" add_name="1-day">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23669" name="Blessed Scroll: Modify Armor (S-grade)" add_name="1-day">
+    <etcitem id="23669" name="Blessed Armor Appearance Stone (S-grade)" add_name="1-day">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23670" name="Blessed Scroll: Modify Armor (A-grade)" add_name="1-day">
+    <etcitem id="23670" name="Blessed Armor Appearance Stone (A-grade)" add_name="1-day">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23671" name="Blessed Scroll: Modify Armor (B-grade)" add_name="1-day">
+    <etcitem id="23671" name="Blessed Armor Appearance Stone (B-grade)" add_name="1-day">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23672" name="Blessed Scroll: Modify Armor (C-grade)" add_name="1-day">
+    <etcitem id="23672" name="Blessed Armor Appearance Stone (C-grade)" add_name="1-day">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23673" name="Blessed Scroll: Modify Armor (D-grade)" add_name="1-day">
+    <etcitem id="23673" name="Blessed Armor Appearance Stone (D-grade)" add_name="1-day">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23674" name="Blessed Scroll: Modify Armor (R-grade)" add_name="7-day">
+    <etcitem id="23674" name="Blessed Armor Appearance Stone (R-grade)" add_name="7-day">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23675" name="Blessed Scroll: Modify Armor (S-grade)" add_name="7-day">
+    <etcitem id="23675" name="Blessed Armor Appearance Stone (S-grade)" add_name="7-day">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23676" name="Blessed Scroll: Modify Armor (A-grade)" add_name="7-day">
+    <etcitem id="23676" name="Blessed Armor Appearance Stone (A-grade)" add_name="7-day">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23677" name="Blessed Scroll: Modify Armor (B-grade)" add_name="7-day">
+    <etcitem id="23677" name="Blessed Armor Appearance Stone (B-grade)" add_name="7-day">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23678" name="Blessed Scroll: Modify Armor (C-grade)" add_name="7-day">
+    <etcitem id="23678" name="Blessed Armor Appearance Stone (C-grade)" add_name="7-day">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23679" name="Blessed Scroll: Modify Armor (D-grade)" add_name="7-day">
+    <etcitem id="23679" name="Blessed Armor Appearance Stone (D-grade)" add_name="7-day">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23680" name="Blessed Scroll: Modify Armor (R-grade)" add_name="30-day">
+    <etcitem id="23680" name="Blessed Armor Appearance Stone (R-grade)" add_name="30-day">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23681" name="Blessed Scroll: Modify Armor (S-grade)" add_name="30-day">
+    <etcitem id="23681" name="Blessed Armor Appearance Stone (S-grade)" add_name="30-day">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23682" name="Blessed Scroll: Modify Armor (A-grade)" add_name="30-day">
+    <etcitem id="23682" name="Blessed Armor Appearance Stone (A-grade)" add_name="30-day">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23683" name="Blessed Scroll: Modify Armor (B-grade)" add_name="30-day">
+    <etcitem id="23683" name="Blessed Armor Appearance Stone (B-grade)" add_name="30-day">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23684" name="Blessed Scroll: Modify Armor (C-grade)" add_name="30-day">
+    <etcitem id="23684" name="Blessed Armor Appearance Stone (C-grade)" add_name="30-day">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>
         <set name="type" value="OTHER"/>
     </etcitem>
-    <etcitem id="23685" name="Blessed Scroll: Modify Armor (D-grade)" add_name="30-day">
+    <etcitem id="23685" name="Blessed Armor Appearance Stone (D-grade)" add_name="30-day">
         <set name="class" value="OTHER"/>
         <set name="crystal_type" value="NONE"/>
         <set name="stackable" value="true"/>

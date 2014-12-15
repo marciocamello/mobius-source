@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<armor id="14600" name="Schuttgart Dark Attack Resistance Ring">
+	<armor id="14600" name="Schuttgart Dark Resistance Ring">
 		<set name="crystal_type" value="A"/>
 		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.accessary_inferno_ring_i00"/>
@@ -271,7 +271,7 @@
 			</not>
 		</cond>
 	</etcitem>
-	<etcitem id="14616" name="Santa Claus' Gift">
+	<etcitem id="14616" name="Santa's Gift">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -316,7 +316,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="150"/>
 	</etcitem>
-	<etcitem id="14619" name="Santa Claus' Weapon Exchange Ticket">
+	<etcitem id="14619" name="Santa's Weapon Coupon">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -327,7 +327,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<etcitem id="14620" name="Santa Claus' Weapon Exchange Ticket">
+	<etcitem id="14620" name="Santa's Weapon Coupon">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -338,7 +338,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="20"/>
 	</etcitem>
-	<weapon id="14621" name="Santa Claus' Sirra Blade">
+	<weapon id="14621" name="Santa's Sirra Blade">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_sirr_blade_i00"/>
@@ -372,7 +372,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14622" name="Santa Claus' Sword of Ipos">
+	<weapon id="14622" name="Santa's Sword of Ipos">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_sword_of_ipos_i00"/>
@@ -406,7 +406,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14623" name="Santa Claus' Barakiel Axe">
+	<weapon id="14623" name="Santa's Barakiel Axe">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_barakiel_axe_i00"/>
@@ -441,7 +441,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14624" name="Santa Claus' Behemoth' Tuning Fork">
+	<weapon id="14624" name="Santa's Behemoth' Tuning Fork">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_tuning_fork_of_behemoth_i00"/>
@@ -476,7 +476,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14625" name="Santa Claus' Naga Storm">
+	<weapon id="14625" name="Santa's Naga Storm">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_naga_storm_i00"/>
@@ -511,7 +511,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14626" name="Santa Claus' Tiphon Spear">
+	<weapon id="14626" name="Santa's Tiphon Spear">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_tiphon_spear_i00"/>
@@ -546,7 +546,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14627" name="Santa Claus' Shyeed Bow">
+	<weapon id="14627" name="Santa's Shyeed Bow">
 		<set name="atk_reuse" value="820"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="true"/>
@@ -583,7 +583,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14628" name="Santa Claus' Sobekk Hurricane">
+	<weapon id="14628" name="Santa's Sobekk Hurricane">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_sobekk_hurricane_i00"/>
@@ -618,7 +618,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14629" name="Santa Claus' Themis Tongue">
+	<weapon id="14629" name="Santa's Themis Tongue">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="true"/>
@@ -653,7 +653,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14630" name="Santa Claus' Cabrio's Hand">
+	<weapon id="14630" name="Santa's Cabrio's Hand">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="true"/>
@@ -689,7 +689,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14631" name="Santa Claus' Daimon Crystal">
+	<weapon id="14631" name="Santa's Daimon Crystal">
 		<set name="is_magic_weapon" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="true"/>
@@ -761,7 +761,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14633" name="Santa Claus' Screaming Vengeance">
+	<weapon id="14633" name="Santa's Screaming Vengeance">
 		<set name="atk_reuse" value="400"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="true"/>
@@ -797,7 +797,7 @@
 			<enchant stat="mAtk" order="0x0C" value="0"/>
 		</for>
 	</weapon>
-	<weapon id="14634" name="Santa Claus' Durendal">
+	<weapon id="14634" name="Santa's Durendal">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_death_bringer_i00"/>
@@ -1315,7 +1315,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="10"/>
 	</etcitem>
-	<weapon id="14674" name="Santa Claus' Tallum Blade*Damascus">
+	<weapon id="14674" name="Santa's Tallum Blade*Damascus">
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="true"/>
 		<set name="icon" value="icon.weapon_dual_sword_i00"/>

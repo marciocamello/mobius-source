@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="45433" name="NC Dinos Hat Appearance Stone" add_name="(30-day)">
+	<etcitem id="45433" name="NC Dinos Hat Appearance Stone" add_name="30-day">
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
 	</etcitem>		
-	<etcitem id="45435" name="NC Dinos Uniform Appearance Stone" add_name="(30-day)">
+	<etcitem id="45435" name="NC Dinos Uniform Appearance Stone" add_name="30-day">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>

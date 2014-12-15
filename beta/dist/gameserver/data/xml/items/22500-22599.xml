@@ -82,7 +82,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="BranchSys.icon.br_four_leaf_clover_box_i00"/>
 	</etcitem>
-	<etcitem id="22509" name="Lucky Enchant Stone: Weapon: Enchant Weapon Pack (R-grade)">
+	<etcitem id="22509" name="Lucky Enchant Stone: Weapon Pack (R-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -885,7 +885,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="br_cashtex.item.br_cash_pack_of_soulshot_a_i00"/>
 	</etcitem>
-	<etcitem id="22598" name="Mysterious Spiritshot Large Pack (D-grade)">
+	<etcitem id="22598" name="Mysterious Blessed Spiritshot Pack (10000) (D-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>
@@ -894,7 +894,7 @@
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="br_cashtex.item.br_cash_pack_of_spiritshot_d_i00"/>
 	</etcitem>
-	<etcitem id="22599" name="Mysterious Spiritshot Pack (D-grade)">
+	<etcitem id="22599" name="Mysterious Blessed Spiritshot Pack (5000) (D-grade)">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
 		<set name="crystal_type" value="NONE"/>

@@ -404,7 +404,7 @@
 		</cond>
 		<set name="capsuled" value="true"/>
 	</etcitem>
-	<etcitem id="7131" name="Scroll of Escape: Hunters Village">
+	<etcitem id="7131" name="Scroll of Escape: Hunter's Village">
 		<set name="class" value="CONSUMABLE"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="dropable" value="false"/>

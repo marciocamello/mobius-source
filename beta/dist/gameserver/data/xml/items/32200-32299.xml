@@ -1030,7 +1030,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="RECIPE"/>
 	</etcitem>
-	<etcitem id="32275" name="Recipe: Human Male Mage Wig">
+	<etcitem id="32275" name="Recipe: Human Male Wizard Wig">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="class" value="RECIPIES"/>
 		<set name="ex_type" value="RECIPE"/>
@@ -1039,7 +1039,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="RECIPE"/>
 	</etcitem>
-	<etcitem id="32276" name="Recipe: Human Female Mage Wig">
+	<etcitem id="32276" name="Recipe: Human Female Wizard Wig">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="class" value="RECIPIES"/>
 		<set name="ex_type" value="RECIPE"/>
@@ -1120,7 +1120,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="RECIPE"/>
 	</etcitem>
-	<etcitem id="32285" name="Recipe: Orc Mage Male Wig">
+	<etcitem id="32285" name="Recipe: Orc Male Shaman Wig">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="class" value="RECIPIES"/>
 		<set name="ex_type" value="RECIPE"/>
@@ -1129,7 +1129,7 @@
 		<set name="stackable" value="true"/>
 		<set name="type" value="RECIPE"/>
 	</etcitem>
-	<etcitem id="32286" name="Recipe: Orc Circlet">
+	<etcitem id="32286" name="Recipe: Orc Female Shaman Wig">
 		<set name="icon" value="icon.etc_recipe_gold_i00"/>
 		<set name="class" value="RECIPIES"/>
 		<set name="ex_type" value="RECIPE"/>
