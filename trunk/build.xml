@@ -29,10 +29,10 @@
 	</tstamp>
 	
 	<target name="checkRequirements" description="Check Requirements.">
-		<fail message="Ant 1.9.1 is required. But your version is ${ant.version} and if you are using Eclipse probably is outdated.">
+		<fail message="Ant 1.8.2 is required. But your version is ${ant.version} and if you are using Eclipse probably is outdated.">
 			<condition>
 				<not>
-					<antversion atleast="1.9.1" />
+					<antversion atleast="1.8.2" />
 				</not>
 			</condition>
 		</fail>
