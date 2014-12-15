@@ -35,7 +35,9 @@ import lineage2.loginserver.utils.Log;
  */
 public class RequestAuthLogin extends L2LoginClientPacket
 {
-	private final byte[] _raw = new byte[128];
+	private final byte[] _raw1 = new byte[128];
+	private final byte[] _raw2 = new byte[128];
+	private boolean _newAuthMethod = false;
 	
 	/**
 	 * Method readImpl.
@@ -43,15 +45,24 @@ public class RequestAuthLogin extends L2LoginClientPacket
 	@Override
 	protected void readImpl()
 	{
-		readB(_raw);
-		readD();
-		readD();
-		readD();
-		readD();
-		readD();
-		readD();
-		readH();
-		readC();
+		if (super._buf.remaining() >= (_raw1.length + _raw2.length))
+		{
+			_newAuthMethod = true;
+			readB(_raw1);
+			readB(_raw2);
+		}
+		if (super._buf.remaining() >= _raw1.length)
+		{
+			readB(_raw1);
+			readD();
+			readD();
+			readD();
+			readD();
+			readD();
+			readD();
+			readH();
+			readC();
+		}
 	}
 	
 	/**
@@ -62,13 +73,18 @@ public class RequestAuthLogin extends L2LoginClientPacket
 	protected void runImpl() throws Exception
 	{
 		L2LoginClient client = getClient();
-		byte[] decrypted;
+		byte[] decUser = null;
+		byte[] decPass = null;
 		
 		try
 		{
 			Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
 			rsaCipher.init(Cipher.DECRYPT_MODE, client.getRSAPrivateKey());
-			decrypted = rsaCipher.doFinal(_raw, 0x00, 0x80);
+			decUser = rsaCipher.doFinal(_raw1, 0x00, _raw1.length);
+			if (_newAuthMethod)
+			{
+				decPass = rsaCipher.doFinal(_raw2, 0x00, _raw2.length);
+			}
 		}
 		catch (Exception e)
 		{
@@ -76,9 +92,18 @@ public class RequestAuthLogin extends L2LoginClientPacket
 			return;
 		}
 		
-		String user = new String(decrypted, 0x5E, 14).trim();
-		user = user.toLowerCase();
-		String password = new String(decrypted, 0x6C, 16).trim();
+		String user = null;
+		String password = null;
+		if (_newAuthMethod)
+		{
+			user = new String(decUser, 0x4E, 0xE).trim().toLowerCase();
+			password = new String(decPass, 0x5C, 0x10).trim();
+		}
+		else
+		{
+			user = new String(decUser, 0x5E, 0xE).trim().toLowerCase();
+			password = new String(decUser, 0x6C, 0x10).trim();
+		}
 		int currentTime = (int) (System.currentTimeMillis() / 1000L);
 		Account account = new Account(user);
 		account.restore();
