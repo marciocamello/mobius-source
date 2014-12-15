@@ -13,7 +13,6 @@
 package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.entity.events.impl.DominionSiegeEvent;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.UnitMember;
 import lineage2.gameserver.network.serverpackets.PledgeShowMemberListDelete;
@@ -81,13 +80,6 @@ public class RequestWithdrawalPledge extends L2GameClientPacket
 		if (member.isClanLeader())
 		{
 			activeChar.sendMessage("A clan leader may not be dismissed.");
-			return;
-		}
-		
-		DominionSiegeEvent siegeEvent = activeChar.getEvent(DominionSiegeEvent.class);
-		if ((siegeEvent != null) && siegeEvent.isInProgress())
-		{
-			activeChar.sendPacket(SystemMsg.THIS_CLAN_MEMBER_CANNOT_WITHDRAW_OR_BE_EXPELLED_WHILE_PARTICIPATING_IN_A_TERRITORY_WAR);
 			return;
 		}
 		

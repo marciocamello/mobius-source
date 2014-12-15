@@ -1378,11 +1378,11 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 									break;
 								
 								case 0x54:
-									msg = new RequestExJoinDominionWar();
+									// msg = new RequestExJoinDominionWar();
 									break;
 								
 								case 0x55:
-									msg = new RequestExDominionInfo();
+									// msg = new RequestExDominionInfo();
 									break;
 								
 								case 0x56:
