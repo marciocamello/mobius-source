@@ -20,8 +20,6 @@ import lineage2.gameserver.handlers.BypassHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.impl.CastleSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
-import lineage2.gameserver.model.entity.residence.Castle;
-import lineage2.gameserver.model.entity.residence.Dominion;
 import lineage2.gameserver.model.entity.residence.Residence;
 import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
@@ -628,10 +626,8 @@ public final class VillageMasterInstance extends NpcInstance
 			case 10:
 				if ((clan.getReputationScore() >= Config.ALT_CLAN_REP_COUNT_11LVL) && (clan.getAllSize() >= Config.ALT_CLAN_PLAYER_COUNT_11LVL) && (clan.getCastle() > 0))
 				{
-					final Castle castle = ResidenceHolder.getInstance().getResidence(clan.getCastle());
-					final Dominion dominion = castle.getDominion();
 					// Radian Cloak of Light
-					if ((dominion.getLordObjectId() == player.getObjectId()) && player.getInventory().destroyItemByItemId(34996, 1))
+					if (player.getInventory().destroyItemByItemId(34996, 1))
 					{
 						clan.incReputation(-Config.ALT_CLAN_REP_COUNT_11LVL, false, "LvlUpClan");
 						increaseClanLevel = true;

@@ -49,7 +49,7 @@ public final class Teleport implements IBypassHandler, ScriptFile
 	@Override
 	public void onBypassFeedback(NpcInstance npc, Player player, String command)
 	{
-		if ((npc.getTemplate().getTeleportList().size() > 0) && npc.checkForDominionWard(player)) // remove teleport list check?
+		if (npc.getTemplate().getTeleportList().size() <= 0) // remove teleport list check?
 		{
 			return;
 		}

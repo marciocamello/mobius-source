@@ -1479,7 +1479,7 @@ public abstract class Creature extends GameObject
 				{
 					if (Rnd.chance(skill.getCancelTarget()))
 					{
-						if (((target.getCastingSkill() == null) || !((target.getCastingSkill().getSkillType() == SkillType.TAKECASTLE) || ((target.getCastingSkill().getSkillType() == SkillType.TAKEFORTRESS) || (target.getCastingSkill().getSkillType() == SkillType.TAKEFLAG)))) && !target.isRaid())
+						if (((target.getCastingSkill() == null) || !((target.getCastingSkill().getSkillType() == SkillType.TAKECASTLE) || (target.getCastingSkill().getSkillType() == SkillType.TAKEFORTRESS))) && !target.isRaid())
 						{
 							target.abortAttack(true, true);
 							target.abortCast(true, true);

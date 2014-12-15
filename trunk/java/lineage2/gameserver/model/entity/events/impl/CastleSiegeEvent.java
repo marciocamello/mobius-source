@@ -26,7 +26,6 @@ import lineage2.gameserver.dao.CastleDamageZoneDAO;
 import lineage2.gameserver.dao.CastleDoorUpgradeDAO;
 import lineage2.gameserver.dao.CastleHiredGuardDAO;
 import lineage2.gameserver.dao.SiegeClanDAO;
-import lineage2.gameserver.data.xml.holder.EventHolder;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
@@ -34,7 +33,6 @@ import lineage2.gameserver.model.Spawner;
 import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.entity.Hero;
 import lineage2.gameserver.model.entity.HeroDiary;
-import lineage2.gameserver.model.entity.events.EventType;
 import lineage2.gameserver.model.entity.events.objects.DoorObject;
 import lineage2.gameserver.model.entity.events.objects.SiegeClanObject;
 import lineage2.gameserver.model.entity.events.objects.SiegeToggleNpcObject;
@@ -326,17 +324,14 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 			getResidence().getOwnDate().setTimeInMillis(System.currentTimeMillis());
 			getResidence().getLastSiegeDate().setTimeInMillis(getResidence().getSiegeDate().getTimeInMillis());
 			
-			DominionSiegeRunnerEvent runnerEvent = EventHolder.getInstance().getEvent(EventType.MAIN_EVENT, 1);
-			runnerEvent.registerDominion(getResidence().getDominion());
 		}
 		else
 		{
+			
 			broadcastToWorld(new SystemMessage2(SystemMsg.THE_SIEGE_OF_S1_HAS_ENDED_IN_A_DRAW).addResidenceName(getResidence()));
 			getResidence().getOwnDate().setTimeInMillis(0);
 			getResidence().getLastSiegeDate().setTimeInMillis(0);
 			
-			DominionSiegeRunnerEvent runnerEvent = EventHolder.getInstance().getEvent(EventType.MAIN_EVENT, 1);
-			runnerEvent.unRegisterDominion(getResidence().getDominion());
 		}
 		
 		despawnSiegeSummons();

@@ -140,7 +140,6 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.entity.boat.Boat;
 import lineage2.gameserver.model.entity.boat.ClanAirShip;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
-import lineage2.gameserver.model.entity.events.impl.DominionSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.DuelEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.entity.olympiad.CompType;
@@ -200,7 +199,6 @@ import lineage2.gameserver.network.serverpackets.ExAutoSoulShot;
 import lineage2.gameserver.network.serverpackets.ExBR_AgathionEnergyInfo;
 import lineage2.gameserver.network.serverpackets.ExBR_ExtraUserInfo;
 import lineage2.gameserver.network.serverpackets.ExBasicActionList;
-import lineage2.gameserver.network.serverpackets.ExDominionWarStart;
 import lineage2.gameserver.network.serverpackets.ExMagicAttackInfo;
 import lineage2.gameserver.network.serverpackets.ExNewSkillToLearnByLevelUp;
 import lineage2.gameserver.network.serverpackets.ExNotifyPremiumItem;
@@ -3965,15 +3963,10 @@ public final class Player extends Playable implements PlayerGroup
 		
 		L2GameServerPacket ci = isPolymorphed() ? new NpcInfoPoly(this) : new CharInfo(this);
 		L2GameServerPacket exCi = new ExBR_ExtraUserInfo(this);
-		L2GameServerPacket dominion = getEvent(DominionSiegeEvent.class) != null ? new ExDominionWarStart(this) : null;
 		for (Player player : World.getAroundPlayers(this))
 		{
 			player.sendPacket(ci, exCi);
 			player.sendPacket(RelationChanged.update(player, this, player));
-			if (dominion != null)
-			{
-				player.sendPacket(dominion);
-			}
 		}
 		return;
 	}
@@ -4049,11 +4042,6 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		
 		sendPacket(new UserInfo(this));
-		DominionSiegeEvent siegeEvent = getEvent(DominionSiegeEvent.class);
-		if (siegeEvent != null)
-		{
-			sendPacket(new ExDominionWarStart(this));
-		}
 		return;
 	}
 	
@@ -5305,11 +5293,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		
 		list.add(RelationChanged.update(forPlayer, this, forPlayer));
-		DominionSiegeEvent dominionSiegeEvent = getEvent(DominionSiegeEvent.class);
-		if (dominionSiegeEvent != null)
-		{
-			list.add(new ExDominionWarStart(this));
-		}
+		
 		if (isInBoat())
 		{
 			list.add(getBoat().getOnPacket(this, getInBoatPosition()));

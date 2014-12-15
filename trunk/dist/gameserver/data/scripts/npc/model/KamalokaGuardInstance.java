@@ -47,11 +47,7 @@ public final class KamalokaGuardInstance extends NpcInstance
 		if (!canBypassCheck(player, this))
 		{
 			return;
-		}
-		
-		if (checkForDominionWard(player))
-		{
-			return;
+			
 		}
 		
 		if (command.startsWith("kamaloka"))
@@ -103,10 +99,6 @@ public final class KamalokaGuardInstance extends NpcInstance
 	@Override
 	public void showChatWindow(Player player, int val, Object... arg)
 	{
-		if (checkForDominionWard(player))
-		{
-			return;
-		}
 		
 		super.showChatWindow(player, val);
 	}

@@ -32,7 +32,6 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.World;
-import lineage2.gameserver.model.entity.events.impl.DominionSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
@@ -236,10 +235,7 @@ public final class DoorInstance extends Creature implements GeoCollision
 					if (siegeEvent.getSiegeClan(SiegeEvent.DEFENDERS, player.getClan()) != null)
 					{
 						return false;
-					}
-					if (siegeEvent.getObjects(DominionSiegeEvent.DEFENDER_PLAYERS).contains(player.getObjectId()))
-					{
-						return false;
+						
 					}
 				}
 				break;

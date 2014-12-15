@@ -112,7 +112,6 @@ import lineage2.gameserver.skills.skillclasses.SummonServitor;
 import lineage2.gameserver.skills.skillclasses.SummonSiegeFlag;
 import lineage2.gameserver.skills.skillclasses.Sweep;
 import lineage2.gameserver.skills.skillclasses.TakeCastle;
-import lineage2.gameserver.skills.skillclasses.TakeFlag;
 import lineage2.gameserver.skills.skillclasses.TakeFortress;
 import lineage2.gameserver.skills.skillclasses.TameControl;
 import lineage2.gameserver.skills.skillclasses.TeleportNpc;
@@ -366,7 +365,6 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		TAKECASTLE(TakeCastle.class),
 		TAKEFORTRESS(TakeFortress.class),
 		TAMECONTROL(TameControl.class),
-		TAKEFLAG(TakeFlag.class),
 		TELEPORT_NPC(TeleportNpc.class),
 		TRANSFORMATION(Transformation.class),
 		UNLOCK(Unlock.class),
@@ -1278,7 +1276,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			return SystemMsg.YOUR_TARGET_IS_OUT_OF_RANGE;
 		}
 		
-		if ((_skillType == SkillType.TAKECASTLE) || (_skillType == SkillType.TAKEFORTRESS) || (_skillType == SkillType.TAKEFLAG))
+		if ((_skillType == SkillType.TAKECASTLE) || (_skillType == SkillType.TAKEFORTRESS))
 		{
 			return null;
 		}

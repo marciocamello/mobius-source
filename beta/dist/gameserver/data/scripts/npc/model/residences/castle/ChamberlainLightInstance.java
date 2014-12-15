@@ -34,7 +34,6 @@ import lineage2.gameserver.model.pledge.Privilege;
 import lineage2.gameserver.network.serverpackets.CastleSiegeInfo;
 import lineage2.gameserver.network.serverpackets.ExShowCropInfo;
 import lineage2.gameserver.network.serverpackets.ExShowCropSetting;
-import lineage2.gameserver.network.serverpackets.ExShowDominionRegistry;
 import lineage2.gameserver.network.serverpackets.ExShowManorDefaultInfo;
 import lineage2.gameserver.network.serverpackets.ExShowSeedInfo;
 import lineage2.gameserver.network.serverpackets.ExShowSeedSetting;
@@ -321,7 +320,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 				return;
 			}
 			
-			if (castle.getSiegeEvent().isInProgress() || castle.getDominion().getSiegeEvent().isInProgress())
+			if (castle.getSiegeEvent().isInProgress())
 			{
 				showChatWindow(player, "residence2/castle/chamberlain_saius021.htm");
 				return;
@@ -455,7 +454,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 				return;
 			}
 			
-			if (castle.getSiegeEvent().isInProgress() || castle.getDominion().getSiegeEvent().isInProgress())
+			if (castle.getSiegeEvent().isInProgress())
 			{
 				showChatWindow(player, "residence2/castle/chamberlain_saius021.htm");
 				return;
@@ -638,10 +637,6 @@ public final class ChamberlainLightInstance extends ResidenceManager
 				html.setFile("castle/chamberlain/alreadyhavecrown.htm");
 				player.sendPacket(html);
 			}
-		}
-		else if (actualCommand.equals("viewTerritoryWarInfo"))
-		{
-			player.sendPacket(new ExShowDominionRegistry(player, castle.getDominion()));
 		}
 		else if (actualCommand.equals("Cloak")) // Give Radiant Cloak of Light to Castle Owner
 		{
@@ -864,7 +859,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 			return false;
 		}
 		
-		if (castle.getSiegeEvent().isInProgress() || castle.getDominion().getSiegeEvent().isInProgress())
+		if (castle.getSiegeEvent().isInProgress())
 		{
 			showChatWindow(player, "residence2/castle/chamberlain_saius021.htm");
 			return false;
