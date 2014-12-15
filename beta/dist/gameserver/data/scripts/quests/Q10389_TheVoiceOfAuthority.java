@@ -52,7 +52,7 @@ public class Q10389_TheVoiceOfAuthority extends Quest implements ScriptFile
 				break;
 			
 			case "endquest.htm":
-				qs.getPlayer().addExpAndSp(592767000, 59276700);
+				qs.getPlayer().addExpAndSp(592767000, 142264);
 				qs.giveItems(SIGN, 1);
 				qs.giveItems(57, 1302720);
 				qs.exitCurrentQuest(false);
