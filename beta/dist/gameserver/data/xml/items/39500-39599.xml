@@ -111,6 +111,26 @@
 		<set name="type" value="QUEST"/>
 		<set name="weight" value="20"/>
 	</etcitem>
+	<item id="39531" type="EtcItem" name="Leafie Leaf">
+		<set name="icon" val="etc_leaf_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="39532" type="EtcItem" name="Treant Leaf">
+		<set name="icon" val="etc_scale_of_medusa_green_i00" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_questitem" val="true" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<armor id="39572" name="Talisman - Insanity">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="BranchSys.br_rudolf_food_purple_i00"/>
