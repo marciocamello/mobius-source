@@ -18,7 +18,7 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
- * @author: Krash
+ * @author Krash
  */
 public class Q10737_GrakonsWarehouse extends Quest implements ScriptFile
 {
@@ -49,6 +49,7 @@ public class Q10737_GrakonsWarehouse extends Quest implements ScriptFile
 		{
 			case "quest_fighter_cont":
 				qs.setState(STARTED);
+				qs.setCond(1);
 				qs.playSound(SOUND_ACCEPT);
 				qs.giveItems(Apprentice_Support_Box, 1);
 				htmltext = "33943-3.htm";
@@ -56,6 +57,7 @@ public class Q10737_GrakonsWarehouse extends Quest implements ScriptFile
 			
 			case "quest_wizard_cont":
 				qs.setState(STARTED);
+				qs.setCond(1);
 				qs.playSound(SOUND_ACCEPT);
 				qs.giveItems(Apprentice_Support_Box, 1);
 				htmltext = "33242-3.htm";
@@ -98,7 +100,7 @@ public class Q10737_GrakonsWarehouse extends Quest implements ScriptFile
 		switch (npc.getId())
 		{
 			case Grakon:
-				if ((cond == 0) && (qs.getQuestItemsCount(Apprentice_Support_Box) > 0))
+				if ((cond == 1) && (qs.getQuestItemsCount(Apprentice_Support_Box) > 0))
 				{
 					if (qs.getPlayer().getClassId().getId() == 182) // Ertheia Fighter
 					{
@@ -112,14 +114,14 @@ public class Q10737_GrakonsWarehouse extends Quest implements ScriptFile
 				break;
 			
 			case Katalin:
-				if (cond == 0)
+				if ((cond == 0) && (qs.getPlayer().getClassId().getId() == 182))
 				{
 					htmltext = "33943-1.htm";
 				}
 				break;
 			
 			case Ayanthe:
-				if (cond == 0)
+				if ((cond == 0) && (qs.getPlayer().getClassId().getId() == 183))
 				{
 					htmltext = "33942-1.htm";
 				}
