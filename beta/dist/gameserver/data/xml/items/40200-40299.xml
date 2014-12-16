@@ -9,4 +9,30 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="0"/>
 	</etcitem>
+	<etcitem id="40262" name="Faeron Support Box - Ertheia Fighter">
+		<set name="icon" value="icon.etc_equip_item_box_i00"/>
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="weight" value="100"/>
+		<skills>
+			<skill id="2308" level="10"/>
+		</skills>
+		<set name="capsuled" value="true"/>
+	</etcitem>
+	<etcitem id="40263" name="Faeron Support Box - Ertheia Wizard">
+		<set name="icon" value="icon.etc_equip_item_box_i00"/>
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="weight" value="100"/>
+		<skills>
+			<skill id="2308" level="10"/>
+		</skills>
+		<set name="capsuled" value="true"/>
+	</etcitem>
 </list>

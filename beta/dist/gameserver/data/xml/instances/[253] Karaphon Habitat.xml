@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE list SYSTEM "instances.dtd">
+<list>
+	<instance id="253" name="Karaphon Habitat" maxChannels="25" collapseIfEmpty="10" timelimit="5">
+		<collapse on-party-dismiss="true" timer="60"/>
+		<level min="17" max="25"/>
+		<party min="1" max="1"/>
+		<return loc="-88293 237393 -2890"/>
+		<teleport loc="-82100 246311 -14152"/>
+		<remove itemId="0" count="0" necessary="false"/>
+		<give itemId="0" count="0"/>
+		<quest id="10745"/>
+		<reuse resetReuse="1 15 * * *" setUponEntry="false" sharedReuseGroup="0"/>
+		<spawns>
+			<spawn mobId="23459" type="point" respawn="0">
+				<coords loc="-82264 246392 -14179 45470"/>
+			</spawn>
+		</spawns>
+	</instance>
+</list>
