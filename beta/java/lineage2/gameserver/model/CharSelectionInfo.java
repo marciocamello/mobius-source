@@ -482,6 +482,16 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 		}
 		
 		/**
+		 * Method getPaperdollItem.
+		 * @param slot int
+		 * @return ItemInstance
+		 */
+		public ItemInstance getPaperdollItem(int slot)
+		{
+			return _paperdoll[slot];
+		}
+		
+		/**
 		 * Method getPaperdollItemId.
 		 * @param slot int
 		 * @return int

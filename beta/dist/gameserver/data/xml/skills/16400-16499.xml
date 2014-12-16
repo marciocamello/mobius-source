@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="16419" levels="2" name="Stocking Fairy's Blessing">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="BranchSys.icon.br_xmas_present_i00"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="500"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<set name="isSelfDispellable" val="false"/>
+		<set name="isPreservedOnDeath" val="true"/>
+		<for>
+			<effect count="1" name="SantaHuntBlessingSocks" stackType="StockingBless" stackOrder="1" time="7200" val="0">
+				<add order="0x40" stat="STR" val="3"/>
+				<add order="0x40" stat="INT" val="3"/>
+				<add order="0x40" stat="runSpd" val="7"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="16420" levels="2" name="Tree Fairy's Blessing">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="500"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<set name="isSelfDispellable" val="false"/>
+		<set name="isPreservedOnDeath" val="true"/>
+		<for>
+			<effect count="1" name="SantaHuntBlessingTree" stackType="TreeBless" stackOrder="1" time="7200" val="0">
+				<add order="0x40" stat="CON" val="3"/>
+				<add order="0x40" stat="MEN" val="3"/>
+				<add order="0x40" stat="rCrit" val="30"/>
+				<add order="0x40" stat="mCritRate" val="30"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="16421" levels="2" name="Snowman Fairy's Blessing">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="BranchSys.icon.br_xmas_present_luck_i00"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="500"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="isCommon" val="true"/>
+		<set name="isSelfDispellable" val="false"/>
+		<set name="isPreservedOnDeath" val="true"/>
+		<for>
+			<effect count="1" name="SantaHuntBlessingSnowman" stackType="SnowmanBless" stackOrder="1" time="7200" val="0">
+				<add order="0x40" stat="DEX" val="3"/>
+				<add order="0x40" stat="WIT" val="3"/>
+				<add order="0x40" stat="maxHp" val="2013"/>
+				<add order="0x40" stat="maxMp" val="2013"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="16423" levels="1" name="Noelle's Gift">
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.etc_whiteday_choco"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="itemConsumeId" val="40311"/>
+		<set name="itemConsumeCount" val="1"/>
+		<set name="altUse" val="true"/>
+		<set name="isHandler" val="true"/>
+		<set name="isSelfDispellable" val="false"/>
+		<set name="isPreservedOnDeath" val="true"/>
+		<for>
+			<effect count="1" name="Vitality" stackType="NoelleGift" stackOrder="1" time="21600" val="0"/>
+		</for>
+	</skill>
+</list>

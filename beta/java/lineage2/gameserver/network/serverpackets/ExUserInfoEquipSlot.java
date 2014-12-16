@@ -14,6 +14,8 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.Inventory;
+import lineage2.gameserver.model.items.ItemInstance;
+import lineage2.gameserver.templates.item.ItemTemplate;
 
 /**
  * @author blacksmoke
@@ -45,7 +47,24 @@ public class ExUserInfoEquipSlot extends L2GameServerPacket
 		{
 			writeH(0x12); // 16 + 2
 			writeD(_activeChar.getInventory().getPaperdollObjectId(order));
-			writeD(_activeChar.getInventory().getPaperdollItemId(order));
+			
+			if (order == Inventory.PAPERDOLL_HAIR)
+			{
+				final ItemInstance dhairItem = _activeChar.getInventory().getPaperdollItem(Inventory.PAPERDOLL_DHAIR);
+				if ((dhairItem != null) && (dhairItem.getVisualId() > 0) && (dhairItem.getBodyPart() == ItemTemplate.SLOT_HAIRALL))
+				{
+					writeD(0x00);
+				}
+				else
+				{
+					writeD(_activeChar.getInventory().getPaperdollItemId(order));
+				}
+			}
+			else
+			{
+				writeD(_activeChar.getInventory().getPaperdollItemId(order));
+			}
+			
 			writeH(_activeChar.getInventory().getPaperdollAugmentationId(order));
 			writeH(_activeChar.getInventory().getPaperdollAugmentationId(order));
 			writeD(_activeChar.getInventory().getVisualItemId(order));

@@ -334,12 +334,13 @@
 	<armor id="37534" name="Santa Suit">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.armor_ev_santas_clothes"/>
+		<set name="crystal_type" value="NONE"/>
 		<set name="price" value="0"/>
-		<set name="type" value="HEAVY"/>
+		<set name="type" value="NONE"/>
 		<equip>
 			<slot id="NONE"/>
 		</equip>
-	</armor>
+	</armor> 
 	<armor id="37535" name="Santa Hat">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.accessory_santas_cap_i00"/>

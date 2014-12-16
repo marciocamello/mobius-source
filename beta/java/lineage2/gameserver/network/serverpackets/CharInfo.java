@@ -23,10 +23,12 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Zone.ZoneType;
 import lineage2.gameserver.model.instances.DecoyInstance;
 import lineage2.gameserver.model.items.Inventory;
+import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.matching.MatchingRoom;
 import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.skills.effects.EffectCubic;
+import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
@@ -264,10 +266,28 @@ public class CharInfo extends L2GameServerPacket
 			writeC(_activeChar.getSex());
 			writeD(_activeChar.getBaseClassId());
 			
-			for (int slot : PAPERDOLL_ORDER)
+			writeD(_activeChar.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_UNDER));
+			writeD(_activeChar.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_HEAD));
+			writeD(_activeChar.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND));
+			writeD(_activeChar.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LHAND));
+			writeD(_activeChar.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_GLOVES));
+			writeD(_activeChar.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_CHEST));
+			writeD(_activeChar.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_LEGS));
+			writeD(_activeChar.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_FEET));
+			writeD(_activeChar.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_BACK));
+			writeD(_activeChar.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND));
+			
+			final ItemInstance dhairItem = _activeChar.getInventory().getPaperdollItem(Inventory.PAPERDOLL_DHAIR);
+			if ((dhairItem != null) && (dhairItem.getVisualId() > 0) && (dhairItem.getBodyPart() == ItemTemplate.SLOT_HAIRALL))
 			{
-				writeD(_activeChar.getInventory().getPaperdollItemId(slot));
+				writeD(0x00);
 			}
+			else
+			{
+				writeD(_activeChar.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_HAIR));
+			}
+			
+			writeD(_activeChar.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_DHAIR));
 			
 			writeH(_activeChar.getInventory().getPaperdollAugmentationId(Inventory.PAPERDOLL_RHAND));
 			writeH(0x00); // TODO: Second Effect 2
@@ -411,20 +431,4 @@ public class CharInfo extends L2GameServerPacket
 			writeC(_abilityPoints);
 		}
 	}
-	
-	private static final int[] PAPERDOLL_ORDER = new int[]
-	{
-		Inventory.PAPERDOLL_UNDER,
-		Inventory.PAPERDOLL_HEAD,
-		Inventory.PAPERDOLL_RHAND,
-		Inventory.PAPERDOLL_LHAND,
-		Inventory.PAPERDOLL_GLOVES,
-		Inventory.PAPERDOLL_CHEST,
-		Inventory.PAPERDOLL_LEGS,
-		Inventory.PAPERDOLL_FEET,
-		Inventory.PAPERDOLL_BACK,
-		Inventory.PAPERDOLL_RHAND,
-		Inventory.PAPERDOLL_HAIR,
-		Inventory.PAPERDOLL_DHAIR
-	};
 }

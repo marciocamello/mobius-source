@@ -653,7 +653,6 @@ public class UserInfo extends L2GameServerPacket
 		// {
 		// writeH(_undBlockSize); // blockSize
 		// }
-		
 	}
 	
 	/**

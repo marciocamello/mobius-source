@@ -95,6 +95,7 @@ import lineage2.gameserver.skills.effects.EffectRestoration;
 import lineage2.gameserver.skills.effects.EffectRestorationRandom;
 import lineage2.gameserver.skills.effects.EffectRoot;
 import lineage2.gameserver.skills.effects.EffectSalvation;
+import lineage2.gameserver.skills.effects.EffectSantaHuntBlessing;
 import lineage2.gameserver.skills.effects.EffectServitorShare;
 import lineage2.gameserver.skills.effects.EffectShadowStep;
 import lineage2.gameserver.skills.effects.EffectSilentMove;
@@ -194,6 +195,9 @@ public enum EffectType
 	Root(EffectRoot.class, AbnormalEffect.ROOT, Stats.ROOT_RESIST, Stats.ROOT_POWER, true),
 	Hourglass(EffectHourglass.class, null, true),
 	Salvation(EffectSalvation.class, null, true),
+	SantaHuntBlessingSocks(EffectSantaHuntBlessing.class, AbnormalEffect.U_SANTA_SOCKS_AVE, true),
+	SantaHuntBlessingTree(EffectSantaHuntBlessing.class, AbnormalEffect.U_SANTA_TREE_AVE, true),
+	SantaHuntBlessingSnowman(EffectSantaHuntBlessing.class, AbnormalEffect.U_SANTA_SNOWMAN_AVE, true),
 	ServitorShare(EffectServitorShare.class, null, true),
 	SilentMove(EffectSilentMove.class, AbnormalEffect.STEALTH, true),
 	Sleep(EffectSleep.class, AbnormalEffect.SLEEP, Stats.SLEEP_RESIST, Stats.SLEEP_POWER, true),

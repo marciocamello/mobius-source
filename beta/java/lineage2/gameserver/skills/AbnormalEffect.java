@@ -94,6 +94,10 @@ public enum AbnormalEffect
 	TALISMAN_POWER3("talismanpower3", 0x300000, 74),
 	TALISMAN_POWER4("talismanpower4", 0x400000, 75),
 	TALISMAN_POWER5("talismanpower5", 0x500000, 76),
+	// Christmas Event Effects
+	U_SANTA_SOCKS_AVE("santa_socks_ave", 0x000001, 106),
+	U_SANTA_TREE_AVE("santa_tree_ave", 0x000001, 107),
+	U_SANTA_SNOWMAN_AVE("santa_snowman_ave", 0x000001, 108),
 	// NEW ERTHEIA EFFECTS
 	U_ER_WI_WINDSTUN_AVE("windstun_ave", 0x000001, 112),
 	U_ER_WI_STORMSIGN2_AVE("stormsign2_ave", 0x000001, 113),

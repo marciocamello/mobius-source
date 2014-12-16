@@ -533,7 +533,14 @@ public class Functions
 		for (int[] location : locations)
 		{
 			SimpleSpawner sp = new SimpleSpawner(template);
-			sp.setLoc(new Location(location[0], location[1], location[2]));
+			if (location[3] >= 0)
+			{
+				sp.setLoc(new Location(location[0], location[1], location[2], location[3]));
+			}
+			else
+			{
+				sp.setLoc(new Location(location[0], location[1], location[2]));
+			}
 			sp.setAmount(1);
 			sp.setRespawnDelay(0);
 			sp.init();

@@ -391,4 +391,8 @@
 	<appearance_stone id="38417" target_type="WEAPON" shifting_type="FIXED" extract_id="38423" item_type="DUAL_BLUNT_WEAPON"/>
 	<appearance_stone id="38418" target_type="WEAPON" shifting_type="FIXED" extract_id="38422" item_type="DUAL_DAGGER"/>
 	<appearance_stone id="38420" target_type="WEAPON" shifting_type="FIXED" extract_id="38421" item_type="BLUNT_WEAPON"/>
+
+	<!-- SEAZONAL EVENT APP STONES -->
+	<appearance_stone id="40330" target_type="ARMOR" shifting_type="FIXED" extract_id="37534" item_type="UPPER_PIECE,FULL_BODY"/>
+	<appearance_stone id="40310" target_type="ACCESSORY" shifting_type="FIXED" extract_id="37535" item_type="HAIR_ACCESSORY"/>
 </list>
