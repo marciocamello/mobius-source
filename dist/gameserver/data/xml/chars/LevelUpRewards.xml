@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "LevelUpRewards.dtd">
+<list>
+	<reward level="2">
+		<item id="20418" count="1" />
+	</reward>
+	<reward level="20">
+		<item id="22109" count="1" />
+		<item id="22119" count="1" />
+	</reward>
+	<reward level="40">
+		<item id="22110" count="1" />
+		<item id="37045" count="65" />
+		<item id="22120" count="1" />
+	</reward>
+	<reward level="46">
+		<item id="22110" count="1" />
+		<item id="37045" count="83" />
+		<item id="22120" count="1" />
+	</reward>
+	<reward level="52">
+		<item id="22111" count="1" />
+		<item id="37045" count="110" />
+		<item id="22121" count="1" />
+	</reward>
+	<reward level="58">
+		<item id="22111" count="1" />
+		<item id="37045" count="134" />
+		<item id="22121" count="1" />
+	</reward>
+	<reward level="61">
+		<item id="37045" count="157" />
+		<item id="22112" count="1" />
+		<item id="22122" count="1" />
+	</reward>
+	<reward level="65">
+		<item id="37045" count="314" />
+		<item id="22112" count="1" />
+		<item id="22122" count="1" />
+	</reward>
+	<reward level="70">
+		<item id="37045" count="272" />
+		<item id="736" count="10" />
+		<item id="737" count="10" />
+		<item id="22112" count="1" />
+		<item id="22122" count="1" />
+	</reward>
+	<reward level="76">
+		<item id="37045" count="662" />
+		<item id="22113" count="1" />
+		<item id="22123" count="1" />
+		<item id="959" count="3" />
+		<item id="960" count="3" />
+	</reward>
+	<reward level="81">
+		<item id="37045" count="1300" />
+		<item id="22113" count="1" />
+		<item id="22123" count="1" />
+	</reward>
+	<reward level="85">
+		<item id="22449" count="2" />
+		<item id="22451" count="2" />
+	</reward>
+</list>

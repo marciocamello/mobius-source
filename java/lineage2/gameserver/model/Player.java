@@ -73,6 +73,8 @@ import lineage2.gameserver.data.xml.holder.EventHolder;
 import lineage2.gameserver.data.xml.holder.HennaHolder;
 import lineage2.gameserver.data.xml.holder.InstantZoneHolder;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
+import lineage2.gameserver.data.xml.holder.LevelUpRewardHolder;
+import lineage2.gameserver.data.xml.holder.LevelUpRewardHolder.ItemLevel;
 import lineage2.gameserver.data.xml.holder.MultiSellHolder.MultiSellListContainer;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.data.xml.holder.PlayerTemplateHolder;
@@ -208,6 +210,8 @@ import lineage2.gameserver.network.serverpackets.ExOlympiadSpelledInfo;
 import lineage2.gameserver.network.serverpackets.ExPCCafePointInfo;
 import lineage2.gameserver.network.serverpackets.ExQuestItemList;
 import lineage2.gameserver.network.serverpackets.ExSetCompassZoneCode;
+import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
+import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 import lineage2.gameserver.network.serverpackets.ExStorageMaxCount;
 import lineage2.gameserver.network.serverpackets.ExSubjobInfo;
@@ -5410,6 +5414,21 @@ public final class Player extends Playable implements PlayerGroup
 					MentorUtil.removeConditions(this);
 					MentorUtil.removeSkills(this);
 					MentorUtil.graduateMenteeMail(this);
+				}
+			}
+		}
+		
+		if ((LevelUpRewardHolder.getInstance().getItemLevel(getLevel()) != null))
+		{
+			final String var = getVar("LevelUpReward" + getLevel());
+			
+			for (ItemLevel entry : LevelUpRewardHolder.getInstance().getItemLevel(getLevel()))
+			{
+				if (var == null)
+				{
+					ItemFunctions.addItem(this, entry.id, entry.count, true);
+					sendPacket(new ExShowScreenMessage("Congratulations you have reached " + getLevel() + " level and earned a special gift.", 6000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
+					setVar("LevelUpReward" + getLevel(), "Rewarded", -1);
 				}
 			}
 		}
