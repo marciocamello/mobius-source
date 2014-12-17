@@ -12,10 +12,10 @@
 				<item id="17320" min="1" max="1" chance="21.47361"/>
 				<item id="17306" min="1" max="1" chance="9.34380"/>
 				<item id="17317" min="1" max="1" chance="9.30623"/>
-				<item id="18105" min="1" max="1" chance="7.80053"/>
-				<item id="18107" min="1" max="1" chance="7.76296"/>
+				<item id="17292" min="1" max="1" chance="7.80053"/>
+				<item id="17294" min="1" max="1" chance="7.76296"/>
 				<item id="18110" min="1" max="1" chance="7.68782"/>
-				<item id="18106" min="1" max="1" chance="7.63072"/>
+				<item id="17293" min="1" max="1" chance="7.63072"/>
 				<item id="17311" min="1" max="1" chance="5.84551"/>
 			</category>
 			<category id="3" chance="22.425">

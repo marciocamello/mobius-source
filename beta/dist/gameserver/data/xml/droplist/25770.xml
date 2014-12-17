@@ -13,9 +13,9 @@
 			<category id="2" chance="84.464">
 				<item id="286" min="1" max="1" chance="4.75730"/>
 				<item id="2121" min="3" max="9" chance="85.93218"/>
-				<item id="18199" min="1" max="1" chance="1.84340"/>
-				<item id="18189" min="1" max="1" chance="1.84103"/>
-				<item id="18191" min="1" max="1" chance="1.69540"/>
+				<item id="17410" min="1" max="1" chance="1.84340"/>
+				<item id="17400" min="1" max="1" chance="1.84103"/>
+				<item id="17402" min="1" max="1" chance="1.69540"/>
 				<item id="18187" min="1" max="1" chance="1.53794"/>
 				<item id="18198" min="1" max="1" chance="1.50479"/>
 				<item id="18192" min="1" max="1" chance="0.88796"/>

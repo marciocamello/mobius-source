@@ -5,18 +5,16 @@
 			<category id="1" chance="70.619">
 				<item id="5311" min="1" max="1" chance="3.2538"/>
 				<item id="5316" min="1" max="1" chance="3.2538"/>
-				<item id="5522" min="4" max="12" chance="60.9733"/>
-				<item id="5523" min="8" max="22" chance="32.5191"/>
-			</category>
-			<category id="2" chance="58.7351">
 				<item id="81" min="1" max="1" chance="1.6606"/>
 				<item id="151" min="1" max="1" chance="1.6606"/>
 				<item id="2500" min="1" max="1" chance="1.6606"/>
+			</category>
+			<category id="2" chance="58.7351">
 				<item id="5529" min="9" max="27" chance="26.2482"/>
 				<item id="5546" min="5" max="15" chance="51.8961"/>
 				<item id="5545" min="14" max="42" chance="16.8739"/>
-			</category>
-			<category id="3" chance="58.5668">
+				<item id="5522" min="4" max="12" chance="60.9733"/>
+				<item id="5523" min="8" max="22" chance="32.5191"/>
 				<item id="959" min="1" max="1" chance="8.9552"/>
 				<item id="960" min="1" max="1" chance="89.5522"/>
 				<item id="6577" min="1" max="1" chance="1.4926"/>

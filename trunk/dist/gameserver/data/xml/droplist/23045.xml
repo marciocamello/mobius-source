@@ -8,7 +8,7 @@
 			<category id="2" chance="6.752">
 				<item id="268" min="1" max="1" chance="0.04443"/>
 				<item id="2392" min="1" max="1" chance="0.08146"/>
-				<item id="4099" min="1" max="1" chance="81.18196"/>
+				<item id="4099" min="1" max="1" chance="81.17407"/>
 				<item id="4081" min="1" max="1" chance="18.69214"/>
 			</category>
 			<category id="3" chance="3.789">

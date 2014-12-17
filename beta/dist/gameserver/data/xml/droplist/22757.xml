@@ -8,9 +8,9 @@
 			<category id="2" chance="5.925">
 				<item id="13460" min="1" max="1" chance="0.19871"/>
 				<item id="15637" min="1" max="1" chance="84.61090"/>
-				<item id="18108" min="1" max="1" chance="5.06346"/>
-				<item id="18111" min="1" max="1" chance="5.06346"/>
-				<item id="18112" min="1" max="1" chance="5.06346"/>
+				<item id="17295" min="1" max="1" chance="5.06346"/>
+				<item id="17298" min="1" max="1" chance="5.06346"/>
+				<item id="17299" min="1" max="1" chance="5.06346"/>
 			</category>
 			<category id="3" chance="45.355">
 				<item id="1895" min="72" max="216" chance="8.21321"/>
@@ -26,8 +26,8 @@
 				<item id="15486" min="1" max="1" chance="17.44056"/>
 				<item id="9546" min="1" max="1" chance="1.65363"/>
 				<item id="9552" min="1" max="1" chance="0.66145"/>
-				<item id="19318" min="1" max="1" chance="0.66145"/>
-				<item id="19320" min="1" max="1" chance="0.66145"/>
+				<item id="36734" min="1" max="1" chance="0.66145"/>
+				<item id="36736" min="1" max="1" chance="0.66145"/>
 				<item id="19323" min="1" max="1" chance="0.66145"/>
 			</category>
 		</droplist>

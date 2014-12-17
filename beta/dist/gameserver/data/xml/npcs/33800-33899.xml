@@ -4536,10 +4536,10 @@
 			<defence attribute="unholy" value="20"/>
 		</attributes>
 	</npc>
-	<npc id="33890" name="Snow Man Grumps" title="">
+	<npc id="33890" name="Snow Man Grumps" title="PvP Rewards">
 		<set name="aggroRange" value="0"/>
-		<set name="collision_height" value="24.0"/>
-		<set name="collision_radius" value="8.0"/>
+		<set name="collision_height" value="30.0"/>
+		<set name="collision_radius" value="10.0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="basePAtk" value="373"/>
 		<set name="baseMAtk" value="373"/>

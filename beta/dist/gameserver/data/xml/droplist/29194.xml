@@ -51,19 +51,19 @@
 				<item id="18201" min="1" max="1" chance="2.63388"/>
 				<item id="18190" min="1" max="1" chance="2.63077"/>
 				<item id="18186" min="1" max="1" chance="2.62944"/>
-				<item id="18199" min="1" max="1" chance="2.62766"/>
-				<item id="18196" min="1" max="1" chance="2.62722"/>
+				<item id="17410" min="1" max="1" chance="2.62766"/>
+				<item id="17407" min="1" max="1" chance="2.62722"/>
 				<item id="18187" min="1" max="1" chance="2.62544"/>
-				<item id="18185" min="1" max="1" chance="2.61521"/>
-				<item id="18191" min="1" max="1" chance="2.61299"/>
-				<item id="18194" min="1" max="1" chance="2.60543"/>
-				<item id="18189" min="1" max="1" chance="2.60277"/>
-				<item id="18200" min="1" max="1" chance="2.60232"/>
+				<item id="17396" min="1" max="1" chance="2.61521"/>
+				<item id="17402" min="1" max="1" chance="2.61299"/>
+				<item id="17405" min="1" max="1" chance="2.60543"/>
+				<item id="17400" min="1" max="1" chance="2.60277"/>
+				<item id="17411" min="1" max="1" chance="2.60232"/>
 				<item id="18198" min="1" max="1" chance="2.60143"/>
-				<item id="18188" min="1" max="1" chance="2.59921"/>
+				<item id="17399" min="1" max="1" chance="2.59921"/>
 				<item id="18192" min="1" max="1" chance="2.59076"/>
 				<item id="18193" min="1" max="1" chance="2.58765"/>
-				<item id="18195" min="1" max="1" chance="2.58365"/>
+				<item id="17406" min="1" max="1" chance="2.58365"/>
 				<item id="19447" min="1" max="1" chance="4.45160"/>
 				<item id="17747" min="1" max="1" chance="4.45026"/>
 				<item id="19445" min="1" max="1" chance="2.24669"/>

@@ -17,7 +17,7 @@
 				<item id="1889" min="1" max="1" chance="3.20430"/>
 				<item id="4044" min="1" max="1" chance="1.60210"/>
 				<item id="5466" min="1" max="1" chance="0.01780"/>
-				<item id="10305" min="1" max="1" chance="0.19230"/>
+				<item id="10305" min="1" max="1" chance="0.36849"/>
 				<item id="1343" min="30" max="90" chance="22.88750"/>
 			</category>
 		</droplist>

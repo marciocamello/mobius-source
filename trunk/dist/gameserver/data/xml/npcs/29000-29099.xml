@@ -30,9 +30,9 @@
 		<set name="collision_height" value="53.0"/>
 		<set name="collision_radius" value="45.0"/>
 		<set name="level" value="40"/>
-		<set name="rewardExp" value="2179535"/>
-		<set name="rewardRp" value="1680"/>
-		<set name="rewardSp" value="168888"/>
+		<set name="rewardExp" value="79535"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="8888"/>
 		<set name="shots" value="NONE"/>
 		<set name="type" value="QueenAnt"/>
 		<ai_params>
@@ -40,10 +40,13 @@
 		</ai_params>
 		<faction name="queen_ant_clan" range="1000"/>
 		<minions>
-			<minion npc_id="29003" count="6"/>
-			<minion npc_id="29005" count="6"/>
+			<minion npc_id="29003" count="3"/>
+			<minion npc_id="29005" count="3"/>
 		</minions>
 		<skills>
+			<skill id="4019" level="1"/>
+			<skill id="4021" level="1"/>
+			<skill id="4045" level="1"/>
 			<skill id="4408" level="1"/>
 			<skill id="4409" level="1"/>
 			<skill id="4410" level="11"/>
@@ -52,11 +55,6 @@
 			<skill id="4413" level="11"/>
 			<skill id="4414" level="2"/>
 			<skill id="4415" level="3"/>
-			<skill id="4017" level="1"/>
-			<skill id="4018" level="1"/>
-			<skill id="4019" level="1"/>
-			<skill id="4021" level="1"/>
-			<skill id="4045" level="1"/>
 			<skill id="4416" level="12"/>
 		</skills>
 		<absorblist>
@@ -897,27 +895,27 @@
 		<set name="aggroRange" value="500"/>
 		<set name="ai_type" value="Orfen"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="75"/>
+		<set name="baseCON" value="96"/>
 		<set name="baseCritRate" value="70"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="622755"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseHpMax" value="34079799"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="441.65"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseMAtk" value="1399"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMAtk" value="1398.68"/>
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseMDef" value="293"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1708.8"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseMpMax" value="36939"/>
 		<set name="baseMpReg" value="20.0"/>
-		<set name="basePAtk" value="722"/>
+		<set name="basePAtk" value="722.31"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="basePDef" value="1602"/>
 		<set name="baseRunSpd" value="230"/>
-		<set name="baseSTR" value="78"/>
+		<set name="baseSTR" value="109"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="78"/>
+		<set name="baseWIT" value="128"/>
 		<set name="baseWalkSpd" value="60"/>
 		<set name="collision_height" value="143.0"/>
 		<set name="collision_radius" value="35.0"/>
@@ -940,8 +938,6 @@
 		<skills>
 			<skill id="4045" level="1"/>
 			<skill id="4062" level="1"/>
-			<skill id="4063" level="1"/>
-			<skill id="4064" level="1"/>
 			<skill id="4408" level="1"/>
 			<skill id="4409" level="1"/>
 			<skill id="4410" level="11"/>
@@ -4473,34 +4469,34 @@
 		<set name="aggroRange" value="500"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="57"/>
+		<set name="baseCON" value="96"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="73"/>
-		<set name="baseHpMax" value="36816712"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseHpMax" value="36816715"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="20"/>
-		<set name="baseINT" value="76"/>
-		<set name="baseMAtk" value="8455"/>
+		<set name="baseHpReg" value="364.87"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseMAtk" value="1241.64405"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseMDef" value="2573"/>
-		<set name="baseMEN" value="80"/>
-		<set name="baseMpMax" value="5357"/>
-		<set name="baseMpReg" value="7"/>
-		<set name="basePAtk" value="22365"/>
+		<set name="baseMDef" value="578.3992"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseMpMax" value="47100"/>
+		<set name="baseMpReg" value="3.21"/>
+		<set name="basePAtk" value="3134.565"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="4266"/>
+		<set name="basePDef" value="3161.7216"/>
 		<set name="baseRunSpd" value="210"/>
-		<set name="baseSTR" value="60"/>
+		<set name="baseSTR" value="109"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="70"/>
+		<set name="baseWIT" value="128"/>
 		<set name="baseWalkSpd" value="30"/>
 		<set name="collision_height" value="21.3"/>
 		<set name="collision_radius" value="9.0"/>
 		<set name="level" value="99"/>
-		<set name="rewardExp" value="2915972"/>
-		<set name="rewardRp" value="5032"/>
-		<set name="rewardSp" value="2856740"/>
+		<set name="rewardExp" value="6751585467"/>
+		<set name="rewardRp" value="30"/>
+		<set name="rewardSp" value="10802536"/>
 		<set name="shots" value="NONE"/>
 		<set name="type" value="RaidBoss"/>
 		<faction name="andreas_clan" range="300"/>
@@ -4526,69 +4522,20 @@
 			<skill id="4415" level="3"/>
 			<skill id="4416" level="6"/>
 			<skill id="4494" level="1"/>
-			<skill id="4671" level="1"/>
-			<skill id="4995" level="1"/>
 			<skill id="5033" level="1"/>
+			<skill id="5467" level="1"/>
 		</skills>
 		<absorblist>
 			<absorb chance="5" min_level="11" max_level="14" type="PARTY_ONE"/>
 		</absorblist>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300"/>
+			<defence attribute="water" value="300"/>
+			<defence attribute="wind" value="300"/>
+			<defence attribute="earth" value="300"/>
+			<defence attribute="holy" value="300"/>
+			<defence attribute="unholy" value="300"/>
 		</attributes>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="100.0">
-				<reward item_id="18238" min="1" max="1" chance="18.51"/>
-				<reward item_id="18237" min="1" max="1" chance="17.97"/>
-				<reward item_id="18236" min="1" max="1" chance="17.94"/>
-				<reward item_id="18225" min="1" max="1" chance="3.303"/>
-				<reward item_id="18233" min="1" max="1" chance="3.283"/>
-				<reward item_id="18232" min="1" max="1" chance="3.271"/>
-				<reward item_id="18221" min="1" max="1" chance="3.265"/>
-				<reward item_id="18224" min="1" max="1" chance="3.263"/>
-				<reward item_id="18234" min="1" max="1" chance="3.263"/>
-				<reward item_id="18229" min="1" max="1" chance="3.262"/>
-				<reward item_id="18228" min="1" max="1" chance="3.261"/>
-				<reward item_id="18227" min="1" max="1" chance="3.249"/>
-				<reward item_id="18220" min="1" max="1" chance="3.243"/>
-				<reward item_id="18219" min="1" max="1" chance="3.231"/>
-				<reward item_id="18222" min="1" max="1" chance="3.220"/>
-				<reward item_id="18231" min="1" max="1" chance="3.211"/>
-				<reward item_id="18235" min="1" max="1" chance="3.205"/>
-			</group>
-			<group chance="100.0">
-				<reward item_id="18226" min="1" max="1" chance="3.195"/>
-				<reward item_id="18230" min="1" max="1" chance="3.194"/>
-				<reward item_id="18223" min="1" max="1" chance="3.168"/>
-				<reward item_id="36279" min="1" max="1" chance="1.985"/>
-				<reward item_id="36280" min="1" max="1" chance="0.5"/>
-				<reward item_id="18205" min="1" max="1" chance="0.5"/>
-				<reward item_id="18206" min="1" max="1" chance="0.5"/>
-				<reward item_id="18207" min="1" max="1" chance="0.5"/>
-				<reward item_id="18208" min="1" max="1" chance="0.5"/>
-				<reward item_id="18209" min="1" max="1" chance="0.5"/>
-				<reward item_id="18210" min="1" max="1" chance="0.5"/>
-				<reward item_id="18211" min="1" max="1" chance="0.5"/>
-				<reward item_id="18212" min="1" max="1" chance="0.5"/>
-				<reward item_id="18213" min="1" max="1" chance="0.5"/>
-				<reward item_id="18214" min="1" max="1" chance="0.5"/>
-				<reward item_id="18215" min="1" max="1" chance="0.5"/>
-				<reward item_id="36281" min="1" max="1" chance="0.5"/>
-			</group>
-			<group chance="100.0">
-				<reward item_id="17527" min="1" max="1" chance="84.69"/>
-				<reward item_id="19448" min="1" max="1" chance="12.58"/>
-			</group>
-			<group chance="100.0">
-				<reward item_id="17526" min="1" max="1" chance="6.815"/>
-				<reward item_id="19447" min="1" max="1" chance="1.411"/>
-			</group>
-		</rewardlist>
 	</npc>
 	<npc id="29063" name="Andreas' Acolyte" title="Raid Fighter">
 		<set name="aggroRange" value="500"/>
@@ -4596,25 +4543,25 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="324814"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseHpMax" value="194889"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="145.856"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseMAtk" value="8457"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseMAtk" value="8457.09203"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseMDef" value="567"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1994.708"/>
+		<set name="baseMDef" value="567.1848"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseMpMax" value="22800"/>
 		<set name="baseMpReg" value="3.18"/>
-		<set name="basePAtk" value="8121"/>
+		<set name="basePAtk" value="8120.81031"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="1550"/>
+		<set name="basePDef" value="1550.2288"/>
 		<set name="baseRunSpd" value="200"/>
-		<set name="baseSTR" value="78"/>
+		<set name="baseSTR" value="89"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="78"/>
+		<set name="baseWIT" value="66"/>
 		<set name="baseWalkSpd" value="60"/>
 		<set name="collision_height" value="28.4"/>
 		<set name="collision_radius" value="7.7"/>
@@ -4640,12 +4587,8 @@
 			<skill id="4414" level="3"/>
 			<skill id="4415" level="5"/>
 			<skill id="4416" level="6"/>
+			<skill id="5467" level="1"/>
 		</skills>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="38.4933">
-				<reward item_id="1344" min="60" max="180" chance="100.0000"/>
-			</group>
-		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>
@@ -4661,25 +4604,25 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="324814"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseHpMax" value="194889"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="145.32"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseMAtk" value="4558"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseMAtk" value="4557.735"/>
 		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseMDef" value="556"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1939.14"/>
+		<set name="baseMDef" value="555.954"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseMpMax" value="22800"/>
 		<set name="baseMpReg" value="3.15"/>
-		<set name="basePAtk" value="5914"/>
+		<set name="basePAtk" value="5913.6"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="1520"/>
+		<set name="basePDef" value="1519.518"/>
 		<set name="baseRunSpd" value="200"/>
-		<set name="baseSTR" value="78"/>
+		<set name="baseSTR" value="89"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="78"/>
+		<set name="baseWIT" value="66"/>
 		<set name="baseWalkSpd" value="58"/>
 		<set name="collision_height" value="28.4"/>
 		<set name="collision_radius" value="7.7"/>
@@ -4706,12 +4649,8 @@
 			<skill id="4414" level="3"/>
 			<skill id="4415" level="3"/>
 			<skill id="4416" level="6"/>
+			<skill id="5467" level="1"/>
 		</skills>
-		<rewardlist type="RATED_GROUPED">
-			<group chance="37.6">
-				<reward item_id="1344" min="60" max="180" chance="100.0000"/>
-			</group>
-		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>

@@ -6,12 +6,12 @@
 				<item id="57" min="1158" max="2705" chance="100.00000"/>
 			</category>
 			<category id="2" chance="10.931">
-				<item id="19220" min="1" max="1" chance="50.46199"/>
-				<item id="19221" min="1" max="1" chance="49.53801"/>
+				<item id="36839" min="1" max="1" chance="50.46199"/>
+				<item id="36840" min="1" max="1" chance="49.53801"/>
 			</category>
 			<category id="3" chance="0.630">
-				<item id="19361" min="1" max="1" chance="47.61905"/>
-				<item id="19362" min="1" max="1" chance="47.61905"/>
+				<item id="36777" min="1" max="1" chance="47.61905"/>
+				<item id="36778" min="1" max="1" chance="47.61905"/>
 				<item id="17527" min="1" max="1" chance="4.76190"/>
 			</category>
 		</droplist>

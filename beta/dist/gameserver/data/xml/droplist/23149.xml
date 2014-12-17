@@ -6,19 +6,19 @@
 				<item id="57" min="1954" max="4561" chance="100.00000"/>
 			</category>
 			<category id="2" chance="4.375">
-				<item id="18185" min="1" max="1" chance="0.12571"/>
-				<item id="18194" min="1" max="1" chance="0.12571"/>
-				<item id="19265" min="1" max="1" chance="33.18857"/>
-				<item id="19255" min="1" max="1" chance="32.27429"/>
-				<item id="19251" min="1" max="1" chance="17.14286"/>
-				<item id="19257" min="1" max="1" chance="17.14286"/>
+				<item id="17396" min="1" max="1" chance="0.12571"/>
+				<item id="17405" min="1" max="1" chance="0.12571"/>
+				<item id="35321" min="1" max="1" chance="33.18857"/>
+				<item id="35311" min="1" max="1" chance="32.27429"/>
+				<item id="35307" min="1" max="1" chance="17.14286"/>
+				<item id="35313" min="1" max="1" chance="17.14286"/>
 			</category>
 			<category id="3" chance="1.546">
 				<item id="19314" min="1" max="1" chance="66.04140"/>
 				<item id="9548" min="1" max="1" chance="19.40492"/>
-				<item id="19389" min="1" max="1" chance="4.85123"/>
-				<item id="19392" min="1" max="1" chance="4.85123"/>
-				<item id="19399" min="1" max="1" chance="4.85123"/>
+				<item id="35431" min="1" max="1" chance="4.85123"/>
+				<item id="35434" min="1" max="1" chance="4.85123"/>
+				<item id="35441" min="1" max="1" chance="4.85123"/>
 			</category>
 		</droplist>
 		<spoillist>

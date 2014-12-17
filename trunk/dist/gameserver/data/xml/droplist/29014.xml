@@ -2,59 +2,30 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="DropListData.xsd">
 	<npc id="29014">
 		<droplist>
-			<category id="1" chance="35">
-				<item id="76" min="1" max="1" chance="12"/>
-				<item id="145" min="1" max="1" chance="10"/>
-				<item id="162" min="1" max="1" chance="12"/>
-				<item id="201" min="1" max="1" chance="10"/>
-				<item id="199" min="1" max="1" chance="10"/>
-				<item id="231" min="1" max="1" chance="12"/>
-				<item id="265" min="1" max="1" chance="10"/>
-				<item id="283" min="1" max="1" chance="12"/>
-				<item id="303" min="1" max="1" chance="12"/>
+			<category id="1" chance="100">
+				<item id="57" min="110000" max="150000" chance="100"/>
 			</category>
 			<category id="2" chance="100">
-				<item id="854" min="1" max="2" chance="35"/>
-				<item id="917" min="1" max="2" chance="30"/>
-				<item id="885" min="1" max="2" chance="35"/>
+				<item id="57" min="110000" max="150000" chance="100"/>
 			</category>
-			<category id="3" chance="50">
-				<item id="60" min="1" max="1" chance="20"/>
-				<item id="400" min="1" max="1" chance="20"/>
-				<item id="420" min="1" max="1" chance="20"/>
-				<item id="441" min="1" max="1" chance="20"/>
-				<item id="472" min="1" max="1" chance="20"/>
+			<category id="3" chance="100">
+				<item id="57" min="110000" max="150000" chance="100"/>
 			</category>
-			<category id="4" chance="50">
-				<item id="517" min="1" max="2" chance="20"/>
-				<item id="64" min="1" max="2" chance="20"/>
-				<item id="608" min="1" max="2" chance="20"/>
-				<item id="103" min="1" max="2" chance="20"/>
-				<item id="951" min="1" max="2" chance="20"/>
+			<category id="4" chance="100">
+				<item id="57" min="110000" max="150000" chance="100"/>
 			</category>
 			<category id="5" chance="100">
 				<item id="57" min="110000" max="150000" chance="100"/>
 			</category>
 			<category id="6" chance="100">
-				<item id="57" min="110000" max="150000" chance="100"/>
-			</category>
-			<category id="7" chance="100">
-				<item id="57" min="110000" max="150000" chance="100"/>
-			</category>
-			<category id="8" chance="100">
-				<item id="57" min="110000" max="150000" chance="100"/>
-			</category>
-			<category id="9" chance="100">
-				<item id="57" min="110000" max="150000" chance="100"/>
-			</category>
-			<category id="10" chance="100">
 				<item id="8744" min="2" max="4" chance="45"/>
 				<item id="8745" min="2" max="4" chance="40"/>
 				<item id="8754" min="1" max="2" chance="10"/>
 				<item id="8755" min="1" max="2" chance="5"/>
 			</category>
-			<category id="11" chance="30">
+			<category id="7" chance="100">
 				<item id="6661" min="1" max="1" chance="100"/>
+				<item id="36253" min="1" max="1" chance="100"/>
 			</category>
 		</droplist>
 	</npc>

@@ -3,25 +3,14 @@
 	<npc id="22139">
 		<droplist>
 			<category id="1" chance="70.000">
-				<item id="57" min="4525" max="9265" chance="100.00000"/>
-			</category>
-			<category id="2" chance="0.467">
-				<item id="305" min="1" max="1" chance="0.35040"/>
-				<item id="5541" min="1" max="1" chance="99.64960"/>
-			</category>
-			<category id="3" chance="41.623">
-				<item id="34990" min="4" max="4" chance="9.3028"/>
-				<item id="4039" min="1" max="1" chance="4.53210"/>
-				<item id="34991" min="29" max="29" chance="5.7144"/>
-				<item id="4044" min="1" max="1" chance="4.53210"/>
-				<item id="959" min="1" max="1" chance="0.00540"/>
-				<item id="1344" min="20" max="60" chance="84.97740"/>
+				<item id="57" min="763" max="1777" chance="70"/>
+				<item id="36523" min="1" max="1" chance="2.803"/>
+				<item id="36542" min="1" max="1" chance="0.5"/>
+				<item id="17526" min="1" max="1" chance="0.01"/>
 			</category>
 		</droplist>
 		<spoillist>
-			<item id="5515" min="1" max="1" chance="15.53160"/>
-			<item id="3957" min="1" max="1" chance="0.40870"/>
-			<item id="5522" min="1" max="1" chance="3.13180"/>
+			<item id="35334" min="1" max="1" chance="8.192"/>
 		</spoillist>
 	</npc>
 </list>

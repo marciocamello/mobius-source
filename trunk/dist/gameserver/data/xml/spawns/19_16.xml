@@ -469,4 +469,12 @@
 		</territory>
 		<npc id="22145"/>
 	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-16392" y="-40280" z="-10720" h="16383"/>
+		<npc id="33803"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-16328" y="-40280" z="-10720" h="16383"/>
+		<npc id="33824"/>
+	</spawn>
 </list>

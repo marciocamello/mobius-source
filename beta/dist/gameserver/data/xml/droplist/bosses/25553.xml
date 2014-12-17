@@ -13,8 +13,8 @@
 			<category id="2" chance="21.142">
 				<item id="9626" min="1" max="1" chance="39.20598"/>
 				<item id="6578" min="1" max="1" chance="13.06866"/>
-				<item id="18156" min="1" max="1" chance="25.92494"/>
-				<item id="18162" min="1" max="1" chance="18.25294"/>
+				<item id="17343" min="1" max="1" chance="25.92494"/>
+				<item id="17349" min="1" max="1" chance="18.25294"/>
 				<item id="18140" min="1" max="1" chance="3.54747"/>
 			</category>
 			<category id="3" chance="100.000">

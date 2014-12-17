@@ -3,31 +3,18 @@
 	<npc id="22144">
 		<droplist>
 			<category id="1" chance="70.000">
-				<item id="57" min="4643" max="9510" chance="100.00000"/>
-			</category>
-			<category id="2" chance="0.495">
-				<item id="81" min="1" max="1" chance="0.11310"/>
-				<item id="5529" min="1" max="1" chance="32.16520"/>
-				<item id="151" min="1" max="1" chance="0.11310"/>
-				<item id="5546" min="1" max="1" chance="35.33040"/>
-				<item id="2500" min="1" max="1" chance="0.11310"/>
-				<item id="5545" min="1" max="1" chance="32.16510"/>
-			</category>
-			<category id="3" chance="40.975">
-				<item id="34990" min="3" max="3" chance="14.323"/>
-				<item id="34992" min="1" max="1" chance="37.79680"/>
-				<item id="1882" min="1" max="1" chance="18.89840"/>
-				<item id="1894" min="1" max="1" chance="2.98400"/>
-				<item id="4042" min="1" max="1" chance="1.41740"/>
-				<item id="6901" min="1" max="1" chance="0.08500"/>
-				<item id="8732" min="1" max="1" chance="0.70870"/>
-				<item id="8742" min="1" max="1" chance="0.17720"/>
-				<item id="8752" min="1" max="1" chance="0.01770"/>
-				<item id="1344" min="40" max="120" chance="26.57580"/>
+				<item id="57" min="763" max="1777" chance="70"/>
+				<item id="35331" min="1" max="1" chance="0.05"/>
+				<item id="36563" min="1" max="1" chance=" 0.05"/>
+				<item id="17526" min="1" max="1" chance="0.005"/>
+				<item id="36564" min="1" max="1" chance="0.005"/>
+				<item id="35455" min="1" max="1" chance="0.0009"/>
 			</category>
 		</droplist>
 		<spoillist>
-			<item id="5514" min="1" max="1" chance="15.93890"/>
+			<item id="36563" min="1" max="1" chance="0.5"/>
+			<item id="36524" min="1" max="1" chance="0.05"/>
+			<item id="19448" min="1" max="1" chance="0.01"/>
 		</spoillist>
 	</npc>
 </list>

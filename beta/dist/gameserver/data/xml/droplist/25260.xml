@@ -4,39 +4,23 @@
 		<droplist>
 			<category id="1" chance="71.1477">
 				<item id="103" min="7" max="19" chance="2.2406"/>
+				<item id="77" min="1" max="1" chance="1.5851"/>
+				<item id="76" min="1" max="1" chance="1.5851"/>
+				<item id="145" min="1" max="1" chance="1.5851"/>
+				<item id="75" min="1" max="1" chance="1.5851"/>
+				<item id="84" min="1" max="1" chance="1.5851"/>
+				<item id="134" min="1" max="1" chance="1.5851"/>
 				<item id="107" min="7" max="21" chance="2.0805"/>
 				<item id="517" min="1" max="1" chance="20.3954"/>
 				<item id="1149" min="1" max="1" chance="20.3954"/>
-				<item id="1978" min="60" max="180" chance="15.4273"/>
-				<item id="4055" min="116" max="346" chance="8.0142"/>
-				<item id="2957" min="192" max="576" chance="3.2986"/>
-				<item id="1983" min="23" max="67" chance="28.148"/>
 			</category>
-			<category id="2" chance="78.4612">
-				<item id="75" min="1" max="1" chance="1.5851"/>
-				<item id="76" min="1" max="1" chance="1.5851"/>
-				<item id="77" min="1" max="1" chance="1.5851"/>
-				<item id="84" min="1" max="1" chance="1.5851"/>
-				<item id="134" min="1" max="1" chance="1.5851"/>
-				<item id="145" min="1" max="1" chance="1.5851"/>
-				<item id="2089" min="8" max="24" chance="8.9196"/>
-				<item id="2090" min="14" max="40" chance="5.2857"/>
-				<item id="2091" min="20" max="60" chance="3.5679"/>
-				<item id="2092" min="3" max="7" chance="28.5428"/>
-				<item id="2095" min="3" max="9" chance="23.7857"/>
-				<item id="2096" min="4" max="10" chance="20.3877"/>
-			</category>
-			<category id="3" chance="73.7192">
-				<item id="4601" min="6" max="18" chance="10.0365"/>
-				<item id="4602" min="2" max="4" chance="40.146"/>
+			<category id="2" chance="76">
+				<item id="9817" min="2" max="4" chance="100"/>
+				<item id="8176" min="1" max="2" chance="100"/>
 				<item id="4603" min="2" max="6" chance="30.1095"/>
 				<item id="951" min="3" max="7" chance="19.708"/>
-			</category>
-			<category id="4" chance="76">
-				<item id="9817" min="2" max="4" chance="100"/>
-			</category>
-			<category id="5" chance="76">
-				<item id="8176" min="1" max="2" chance="100"/>
+				<item id="4601" min="6" max="18" chance="10.0365"/>
+				<item id="4602" min="2" max="4" chance="40.146"/>
 			</category>
 		</droplist>
 	</npc>

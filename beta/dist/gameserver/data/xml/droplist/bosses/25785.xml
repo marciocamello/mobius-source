@@ -3,9 +3,9 @@
 	<npc id="25785">
 		<droplist>
 			<category id="1" chance="34.360">
-				<item id="18118" min="1" max="1" chance="34.31315"/>
-				<item id="18129" min="1" max="1" chance="33.00349"/>
-				<item id="18124" min="1" max="1" chance="32.68335"/>
+				<item id="17305" min="1" max="1" chance="34.31315"/>
+				<item id="17316" min="1" max="1" chance="33.00349"/>
+				<item id="17311" min="1" max="1" chance="32.68335"/>
 			</category>
 			<category id="2" chance="81.275">
 				<item id="17527" min="1" max="1" chance="92.82067"/>

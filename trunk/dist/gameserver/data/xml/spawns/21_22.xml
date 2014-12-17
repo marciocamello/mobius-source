@@ -247,63 +247,6 @@
 		</territory>
 		<npc id="20944"/>
 	</spawn>
-	<spawn count="8" respawn="600" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="56481" y="142459" zmin="-2829" zmax="-1929"/>
-			<add x="56743" y="141465" zmin="-2829" zmax="-1929"/>
-			<add x="57926" y="142725" zmin="-2829" zmax="-1929"/>
-			<add x="57423" y="143831" zmin="-2829" zmax="-1929"/>
-		</territory>
-		<npc id="27099"/>
-	</spawn>
-	<spawn count="8" respawn="600" respawn_random="0" period_of_day="none">
-		<territory>
-			<add x="52923" y="143673" zmin="-3907" zmax="-3507"/>
-			<add x="53205" y="142949" zmin="-3907" zmax="-3507"/>
-			<add x="54067" y="143000" zmin="-3907" zmax="-3507"/>
-			<add x="53601" y="144535" zmin="-3907" zmax="-3507"/>
-		</territory>
-		<npc id="27099"/>
-	</spawn>
-	<spawn count="1" respawn="86400" respawn_random="21600" period_of_day="none">
-		<territory>
-			<add x="51400" y="146676" zmin="-3677" zmax="-3077"/>
-			<add x="51137" y="147486" zmin="-3677" zmax="-3077"/>
-			<add x="50574" y="147430" zmin="-3677" zmax="-3077"/>
-			<add x="50325" y="146283" zmin="-3677" zmax="-3077"/>
-			<add x="50978" y="145946" zmin="-3677" zmax="-3077"/>
-		</territory>
-		<npc id="25118"/>
-	</spawn>
-	<spawn count="1" respawn="86400" respawn_random="21600" period_of_day="none">
-		<territory>
-			<add x="50882" y="153506" zmin="-3608" zmax="-3008"/>
-			<add x="51369" y="153158" zmin="-3608" zmax="-3008"/>
-			<add x="52226" y="154135" zmin="-3608" zmax="-3008"/>
-			<add x="51144" y="155137" zmin="-3608" zmax="-3008"/>
-		</territory>
-		<npc id="25383"/>
-	</spawn>
-	<spawn count="1" respawn="86400" respawn_random="21600" period_of_day="none">
-		<territory>
-			<add x="42227" y="152067" zmin="-2894" zmax="-2294"/>
-			<add x="42965" y="152958" zmin="-2894" zmax="-2294"/>
-			<add x="43446" y="152927" zmin="-2894" zmax="-2294"/>
-			<add x="43611" y="152017" zmin="-2894" zmax="-2294"/>
-		</territory>
-		<npc id="25223"/>
-	</spawn>
-	<spawn count="1" respawn="86400" respawn_random="21600" period_of_day="none">
-		<territory>
-			<add x="53200" y="144369" zmin="-3932" zmax="-3332"/>
-			<add x="53643" y="144591" zmin="-3932" zmax="-3332"/>
-			<add x="54119" y="142852" zmin="-3932" zmax="-3332"/>
-			<add x="53548" y="142749" zmin="-3932" zmax="-3332"/>
-			<add x="53151" y="142897" zmin="-3932" zmax="-3332"/>
-			<add x="52850" y="143748" zmin="-3932" zmax="-3332"/>
-		</territory>
-		<npc id="25385"/>
-	</spawn>
 	<spawn group="tanor_fortress_peace_merchant" count="1" respawn="15000" respawn_random="0" period_of_day="none">
 		<point x="54580" y="137296" z="-2608" h="0"/>
 		<npc id="36111"/>

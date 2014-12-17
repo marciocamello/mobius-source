@@ -7,13 +7,13 @@
 			</category>
 			<category id="2" chance="0.140">
 				<item id="11935" min="1" max="1" chance="1.35987"/>
-				<item id="4116" min="1" max="1" chance="18.19229"/>
+				<item id="4116" min="1" max="1" chance="18.36848"/>
 				<item id="11938" min="1" max="1" chance="1.35987"/>
-				<item id="4117" min="1" max="1" chance="18.19229"/>
+				<item id="4117" min="1" max="1" chance="18.36848"/>
 				<item id="11934" min="1" max="1" chance="1.35987"/>
 				<item id="4118" min="1" max="1" chance="17.23616"/>
 				<item id="11941" min="1" max="1" chance="1.35987"/>
-				<item id="8340" min="1" max="1" chance="18.19229"/>
+				<item id="8340" min="1" max="1" chance="18.36848"/>
 				<item id="11936" min="1" max="1" chance="1.35987"/>
 				<item id="8348" min="1" max="1" chance="18.16181"/>
 				<item id="171" min="1" max="1" chance="0.64516"/>

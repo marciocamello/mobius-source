@@ -2,7 +2,7 @@
 <!DOCTYPE list SYSTEM "npc.dtd">
 <list>
 	<npc id="22800" name="Divinity Magus" title="">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
@@ -1808,7 +1808,7 @@
 		</attributes>
 	</npc>
 	<npc id="22820" name="Mesmer Drake" title="Scout">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
@@ -3839,7 +3839,7 @@
 		</attributes>
 	</npc>
 	<npc id="22843" name="Maluk Sniper" title="">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
@@ -4524,7 +4524,7 @@
 		</attributes>
 	</npc>
 	<npc id="22850" name="Drake Scout" title="">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="DragonValley.DrakeRunners"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
@@ -5184,7 +5184,7 @@
 		</attributes>
 	</npc>
 	<npc id="22857" name="Knoriks" title="Land Dragon's Patrol">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="DragonValley.Knoriks"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
@@ -6204,7 +6204,7 @@
 		</attributes>
 	</npc>
 	<npc id="22870" name="Fairy Warrior" title="Slightly Enraged">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -6272,7 +6272,7 @@
 		</attributes>
 	</npc>
 	<npc id="22871" name="Fairy Rogue" title="">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -6337,7 +6337,7 @@
 		</attributes>
 	</npc>
 	<npc id="22872" name="Fairy Rogue" title="Wicked">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -6402,7 +6402,7 @@
 		</attributes>
 	</npc>
 	<npc id="22873" name="Fairy Rogue" title="Mature">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -6466,7 +6466,7 @@
 		</attributes>
 	</npc>
 	<npc id="22874" name="Fairy Rogue" title="Imperfect">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -6530,7 +6530,7 @@
 		</attributes>
 	</npc>
 	<npc id="22875" name="Fairy Rogue" title="Violent">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -6598,7 +6598,7 @@
 		</attributes>
 	</npc>
 	<npc id="22876" name="Fairy Rogue" title="Brutal">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -6664,7 +6664,7 @@
 		</attributes>
 	</npc>
 	<npc id="22877" name="Fairy Rogue" title="Fully Enraged">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -6731,7 +6731,7 @@
 		</attributes>
 	</npc>
 	<npc id="22878" name="Fairy Rogue" title="Slightly Enraged">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -6797,7 +6797,7 @@
 		</attributes>
 	</npc>
 	<npc id="22879" name="Fairy Knight" title="">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -6862,7 +6862,7 @@
 		</attributes>
 	</npc>
 	<npc id="22880" name="Fairy Knight" title="Wicked">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -6928,7 +6928,7 @@
 		</attributes>
 	</npc>
 	<npc id="22881" name="Fairy Knight" title="Mature">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -6992,7 +6992,7 @@
 		</attributes>
 	</npc>
 	<npc id="22882" name="Fairy Knight" title="Imperfect">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -7056,7 +7056,7 @@
 		</attributes>
 	</npc>
 	<npc id="22883" name="Fairy Knight" title="Violent">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -7123,7 +7123,7 @@
 		</attributes>
 	</npc>
 	<npc id="22884" name="Fairy Knight" title="Brutal">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -7189,7 +7189,7 @@
 		</attributes>
 	</npc>
 	<npc id="22885" name="Fairy Knight" title="Fully Enraged">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -7257,7 +7257,7 @@
 		</attributes>
 	</npc>
 	<npc id="22886" name="Fairy Knight" title="Slightly Enraged">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -7309,10 +7309,6 @@
 				<reward item_id="17527" min="1" max="1" chance="100.0000"/>
 			</group>
 		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="19231" min="1" max="1" chance="0.3000"/>
-			<reward item_id="19228" min="1" max="1" chance="0.0750"/>
-		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>
@@ -7323,7 +7319,7 @@
 		</attributes>
 	</npc>
 	<npc id="22887" name="Satyr Wizard" title="">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -7370,9 +7366,6 @@
 				<reward item_id="19358" min="1" max="1" chance="3.9494"/>
 			</group>
 		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="19217" min="1" max="1" chance="0.3000"/>
-		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>
@@ -7383,7 +7376,7 @@
 		</attributes>
 	</npc>
 	<npc id="22888" name="Satyr Wizard" title="Wicked">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -7432,9 +7425,6 @@
 				<reward item_id="17527" min="1" max="1" chance="0.3795"/>
 			</group>
 		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="19358" min="1" max="1" chance="0.0300"/>
-		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>
@@ -7445,7 +7435,7 @@
 		</attributes>
 	</npc>
 	<npc id="22889" name="Satyr Wizard" title="Mature">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -7494,9 +7484,6 @@
 				<reward item_id="9548" min="1" max="1" chance="100.0000"/>
 			</group>
 		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="19217" min="1" max="1" chance="0.3000"/>
-		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>
@@ -7507,7 +7494,7 @@
 		</attributes>
 	</npc>
 	<npc id="22890" name="Satyr Wizard" title="Imperfect">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -7556,9 +7543,6 @@
 				<reward item_id="9546" min="1" max="1" chance="100.0000"/>
 			</group>
 		</rewardlist>
-		<rewardlist type="SWEEP">
-			<reward item_id="17527" min="1" max="1" chance="0.0030"/>
-		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>
@@ -7569,7 +7553,7 @@
 		</attributes>
 	</npc>
 	<npc id="22891" name="Satyr Wizard" title="Violent">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -7634,7 +7618,7 @@
 		</attributes>
 	</npc>
 	<npc id="22892" name="Satyr Wizard" title="Brutal">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -7698,7 +7682,7 @@
 		</attributes>
 	</npc>
 	<npc id="22893" name="Satyr Wizard" title="Fully Enraged">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -7764,7 +7748,7 @@
 		</attributes>
 	</npc>
 	<npc id="22894" name="Satyr Wizard" title="Slightly Enraged">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -7829,7 +7813,7 @@
 		</attributes>
 	</npc>
 	<npc id="22895" name="Satyr Summoner" title="">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -7890,7 +7874,7 @@
 		</attributes>
 	</npc>
 	<npc id="22896" name="Satyr Summoner" title="Wicked">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -7950,7 +7934,7 @@
 		</attributes>
 	</npc>
 	<npc id="22897" name="Satyr Summoner" title="Mature">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -8012,7 +7996,7 @@
 		</attributes>
 	</npc>
 	<npc id="22898" name="Satyr Summoner" title="Imperfect">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>
@@ -8074,7 +8058,7 @@
 		</attributes>
 	</npc>
 	<npc id="22899" name="Satyr Summoner" title="Violent">
-		<set name="aggroRange" value="600"/>
+		<set name="aggroRange" value="100"/>
 		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="43"/>

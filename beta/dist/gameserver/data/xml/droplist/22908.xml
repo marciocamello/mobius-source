@@ -6,7 +6,7 @@
 				<item id="57" min="1662" max="3880" chance="100.00000"/>
 			</category>
 			<category id="2" chance="0.075">
-				<item id="18166" min="1" max="1" chance="100.00000"/>
+				<item id="17353" min="1" max="1" chance="100.00000"/>
 			</category>
 			<category id="3" chance="0.078">
 				<item id="30425" min="1" max="1" chance="96.15385"/>
