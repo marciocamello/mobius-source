@@ -23,6 +23,7 @@ import lineage2.gameserver.utils.ItemFunctions;
 public class EffectSantaHuntBlessing extends Effect
 {
 	private final static int SANTA_MARK = 40313;
+	private static final String EVENT_NAME = "HuntForSanta";
 	
 	public EffectSantaHuntBlessing(Env env, EffectTemplate template)
 	{
@@ -35,8 +36,9 @@ public class EffectSantaHuntBlessing extends Effect
 		super.onExit();
 		
 		final Player player = (Player) getEffected();
+		final String var = player.getVar(EVENT_NAME);
 		
-		if (!player.isDead() && (player.getInventoryLimit() > player.getInventory().getSize()))
+		if (!player.isDead() && (player.getInventoryLimit() > player.getInventory().getSize()) && (var == null))
 		{
 			ItemFunctions.addItem(player, SANTA_MARK, 1, true);
 		}

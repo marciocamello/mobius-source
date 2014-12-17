@@ -115,7 +115,7 @@ public final class HuntForSanta extends Functions implements ScriptFile
 		else
 		{
 			buff(npc, player, buffId);
-			player.setVar(EVENT_NAME, "ExpirationTime", System.currentTimeMillis() + (BUFF_REUSE_HOURS * 60 * 60 * 1000L));
+			player.setVar(EVENT_NAME, "ExpirationTime", System.currentTimeMillis() + (BUFF_REUSE_HOURS * 60 * 59 * 1000L));
 			htmltext = "hunt_for_santa_successfull.htm";
 		}
 		
@@ -156,7 +156,7 @@ public final class HuntForSanta extends Functions implements ScriptFile
 			buff(npc, player, BUFF_STOCKING);
 			buff(npc, player, BUFF_TREE);
 			buff(npc, player, BUFF_SNOWMAN);
-			player.setVar(EVENT_NAME, "ExpirationTime", System.currentTimeMillis() + (BUFF_REUSE_HOURS * 60 * 60 * 1000L));
+			player.setVar(EVENT_NAME, "ExpirationTime", System.currentTimeMillis() + (BUFF_REUSE_HOURS * 60 * 59 * 1000L));
 			htmltext = "hunt_for_santa_successfull.htm";
 		}
 		else
@@ -182,8 +182,11 @@ public final class HuntForSanta extends Functions implements ScriptFile
 		
 		final Player player = getSelf().getPlayer();
 		
+		player.getEffectList().stopEffect(BUFF_STOCKING);
 		player.getEffectList().removeEffect(BUFF_STOCKING);
+		player.getEffectList().stopEffect(BUFF_TREE);
 		player.getEffectList().removeEffect(BUFF_TREE);
+		player.getEffectList().stopEffect(BUFF_SNOWMAN);
 		player.getEffectList().removeEffect(BUFF_SNOWMAN);
 		player.unsetVar(EVENT_NAME);
 		
