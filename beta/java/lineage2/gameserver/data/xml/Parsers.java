@@ -34,6 +34,7 @@ import lineage2.gameserver.data.xml.parser.InstantZoneParser;
 import lineage2.gameserver.data.xml.parser.ItemParser;
 import lineage2.gameserver.data.xml.parser.JumpTracksParser;
 import lineage2.gameserver.data.xml.parser.LevelBonusParser;
+import lineage2.gameserver.data.xml.parser.LevelUpRewardParser;
 import lineage2.gameserver.data.xml.parser.NpcParser;
 import lineage2.gameserver.data.xml.parser.OptionDataParser;
 import lineage2.gameserver.data.xml.parser.PetitionGroupParser;
@@ -103,6 +104,7 @@ public abstract class Parsers
 		FishTable.getInstance().reload();
 		PetitionGroupParser.getInstance().load();
 		PlayerTemplateParser.getInstance().load();
+		LevelUpRewardParser.getInstance().load();
 		ClassDataParser.getInstance().load();
 		LevelBonusParser.getInstance().load();
 		BeautyShopParser.getInstance().load();
