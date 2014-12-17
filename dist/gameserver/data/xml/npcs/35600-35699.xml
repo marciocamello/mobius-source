@@ -1392,46 +1392,63 @@
 			<defence attribute="holy" value="53"/>
 		</attributes>
 	</npc>
-	<npc id="35629" name="Lidia von Hellmann" title="">
+	<npc id="35629" name="Lidia von Hellmann" title="Keeper of the Dead">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="residences.clanhall.LidiaVonHellmann"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="75"/>
+		<set name="baseCON" value="85"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="1562560"/>
+		<set name="baseDEX" value="70"/>
+		<set name="baseHpMax" value="157577421"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="37.3"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseMAtk" value="556"/>
-		<set name="baseMAtkSpd" value="333"/>
-		<set name="baseMDef" value="486"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1607.4"/>
+		<set name="baseINT" value="85"/>
+		<set name="baseMAtk" value="49512"/>
+		<set name="baseMAtkSpd" value="420"/>
+		<set name="baseMDef" value="91174"/>
+		<set name="baseMEN" value="75"/>
+		<set name="baseMpMax" value="16074"/>
 		<set name="baseMpReg" value="3.0"/>
-		<set name="basePAtk" value="1575"/>
+		<set name="basePAtk" value="77421"/>
 		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="998"/>
+		<set name="basePDef" value="10183"/>
 		<set name="baseRunSpd" value="180"/>
-		<set name="baseSTR" value="78"/>
+		<set name="baseSTR" value="85"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="78"/>
+		<set name="baseWIT" value="80"/>
 		<set name="baseWalkSpd" value="20"/>
 		<set name="collision_height" value="25.4"/>
 		<set name="collision_radius" value="10.0"/>
-		<set name="level" value="78"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="157577421"/>
+		<set name="rewardRp" value="3000"/>
+		<set name="rewardSp" value="157577421"/>
 		<set name="shots" value="NONE"/>
 		<set name="type" value="residences.clanhall.LidiaVonHellmann"/>
 		<equip>
 			<rhand item_id="8209"/>
 		</equip>
 		<skills>
+			<skill id="4045" level="1"/>
+			<skill id="4071" level="3"/>
+			<skill id="4085" level="1"/>
+			<skill id="4086" level="1"/>
+			<skill id="4095" level="1"/>
+			<skill id="4275" level="3"/>
+			<skill id="4278" level="1"/>
+			<skill id="4408" level="1"/>
+			<skill id="4409" level="1"/>
+			<skill id="4410" level="11"/>
+			<skill id="4411" level="11"/>
+			<skill id="4412" level="11"/>
+			<skill id="4413" level="11"/>
+			<skill id="4414" level="2"/>
+			<skill id="4415" level="3"/>
 			<skill id="4416" level="9"/>
 			<skill id="4997" level="1"/>
+			<skill id="4998" level="1"/>
+			<skill id="4999" level="1"/>
 		</skills>
 		<attributes>
 			<attack attribute="unholy" value="20"/>

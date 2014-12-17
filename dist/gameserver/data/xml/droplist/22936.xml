@@ -6,20 +6,20 @@
 				<item id="57" min="11421" max="26687" chance="100.00000"/>
 			</category>
 			<category id="2" chance="18.839">
-				<item id="18125" min="1" max="1" chance="1.59244"/>
-				<item id="18118" min="1" max="1" chance="0.39811"/>
-				<item id="18129" min="1" max="1" chance="0.39811"/>
-				<item id="19183" min="1" max="3" chance="62.74218"/>
-				<item id="19192" min="4" max="12" chance="34.86915"/>
+				<item id="17312" min="1" max="1" chance="1.59244"/>
+				<item id="17305" min="1" max="1" chance="0.39811"/>
+				<item id="17316" min="1" max="1" chance="0.39811"/>
+				<item id="36805" min="1" max="3" chance="62.74218"/>
+				<item id="36814" min="4" max="12" chance="34.86915"/>
 			</category>
 			<category id="3" chance="1.050">
-				<item id="19317" min="1" max="1" chance="71.42857"/>
+				<item id="36733" min="1" max="1" chance="71.42857"/>
 				<item id="17527" min="1" max="1" chance="28.57143"/>
 			</category>
 		</droplist>
 		<spoillist>
-			<item id="19171" min="1" max="1" chance="0.30000"/>
-			<item id="19173" min="1" max="1" chance="0.30000"/>
+			<item id="36796" min="1" max="1" chance="0.30000"/>
+			<item id="36798" min="1" max="1" chance="0.30000"/>
 			<item id="19313" min="1" max="1" chance="0.30000"/>
 		</spoillist>
 	</npc>

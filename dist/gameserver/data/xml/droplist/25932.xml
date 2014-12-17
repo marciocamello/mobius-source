@@ -45,16 +45,16 @@
 				<item id="36772" min="1" max="2" chance="3.20099"/>
 				<item id="36783" min="1" max="2" chance="3.19600"/>
 				<item id="36830" min="2" max="2" chance="3.19600"/>
-				<item id="36785" min="1" max="2" chance="3.19400"/>
-				<item id="36778" min="1" max="2" chance="3.19400"/>
-				<item id="36774" min="1" max="1" chance="3.19400"/>
-				<item id="36831" min="1" max="5" chance="3.19400"/>
-				<item id="36829" min="1" max="5" chance="3.19400"/>
+				<item id="36785" min="1" max="2" chance="3.35442"/>
+				<item id="36778" min="1" max="2" chance="3.35442"/>
+				<item id="36774" min="1" max="1" chance="3.35442"/>
+				<item id="36831" min="1" max="5" chance="3.35442"/>
+				<item id="36829" min="1" max="5" chance="3.35442"/>
 				<item id="36826" min="1" max="5" chance="3.19100"/>
 				<item id="36835" min="1" max="5" chance="3.18900"/>
 				<item id="36789" min="2" max="2" chance="3.18700"/>
-				<item id="36782" min="1" max="2" chance="3.18200"/>
-				<item id="36766" min="2" max="2" chance="3.18200"/>
+				<item id="36782" min="1" max="2" chance="3.17411"/>
+				<item id="36766" min="2" max="2" chance="3.17411"/>
 				<item id="36768" min="1" max="1" chance="3.17900"/>
 				<item id="36850" min="3" max="3" chance="3.17900"/>
 				<item id="36792" min="2" max="2" chance="3.17800"/>

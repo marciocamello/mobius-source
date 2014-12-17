@@ -6,15 +6,15 @@
 				<item id="57" min="6769" max="15804" chance="100.00000"/>
 			</category>
 			<category id="2" chance="0.060">
-				<item id="18145" min="1" max="1" chance="50.00000"/>
-				<item id="18146" min="1" max="1" chance="50.00000"/>
+				<item id="17332" min="1" max="1" chance="50.00000"/>
+				<item id="17333" min="1" max="1" chance="50.00000"/>
 			</category>
 			<category id="3" chance="0.030">
 				<item id="17526" min="1" max="1" chance="100.00000"/>
 			</category>
 		</droplist>
 		<spoillist>
-			<item id="18139" min="1" max="1" chance="0.00090"/>
+			<item id="17326" min="1" max="1" chance="0.00090"/>
 		</spoillist>
 	</npc>
 </list>

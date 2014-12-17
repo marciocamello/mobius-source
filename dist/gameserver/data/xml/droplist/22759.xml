@@ -8,7 +8,7 @@
 			<category id="2" chance="5.582">
 				<item id="13461" min="1" max="1" chance="0.21090"/>
 				<item id="15638" min="1" max="1" chance="89.04084"/>
-				<item id="18104" min="1" max="1" chance="5.37413"/>
+				<item id="17291" min="1" max="1" chance="5.37413"/>
 				<item id="18109" min="1" max="1" chance="5.37413"/>
 			</category>
 			<category id="3" chance="45.987">
@@ -25,8 +25,8 @@
 				<item id="15486" min="1" max="1" chance="17.74855"/>
 				<item id="9550" min="1" max="1" chance="0.65236"/>
 				<item id="9556" min="1" max="1" chance="0.65236"/>
-				<item id="19321" min="1" max="1" chance="0.65236"/>
-				<item id="19324" min="1" max="1" chance="0.65236"/>
+				<item id="36737" min="1" max="1" chance="0.65236"/>
+				<item id="36740" min="1" max="1" chance="0.65236"/>
 			</category>
 		</droplist>
 		<spoillist>

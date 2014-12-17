@@ -5367,7 +5367,7 @@
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="1473492"/>
+		<set name="baseHpMax" value="736748"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="95.137"/>
 		<set name="baseINT" value="42"/>
@@ -5375,7 +5375,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseMDef" value="518"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1777.4"/>
+		<set name="baseMpMax" value="1777"/>
 		<set name="baseMpReg" value="3.0"/>
 		<set name="basePAtk" value="2978"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -5389,9 +5389,9 @@
 		<set name="collision_height" value="46.0"/>
 		<set name="collision_radius" value="17.0"/>
 		<set name="level" value="83"/>
-		<set name="rewardExp" value="4158609"/>
-		<set name="rewardRp" value="499"/>
-		<set name="rewardSp" value="574729"/>
+		<set name="rewardExp" value="1862759394"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="447062"/>
 		<set name="shots" value="NONE"/>
 		<set name="type" value="RaidBoss"/>
 		<minions>

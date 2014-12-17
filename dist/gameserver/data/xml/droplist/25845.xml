@@ -4,11 +4,11 @@
 		<droplist>
 			<category id="3" chance="41.97900">
 				<item id="18203" min="1" max="1" chance="25.65568"/>
-				<item id="18194" min="1" max="1" chance="13.99509"/>
-				<item id="18185" min="1" max="1" chance="13.20422"/>
-				<item id="18189" min="1" max="1" chance="9.38803"/>
-				<item id="18200" min="1" max="1" chance="9.32609"/>
-				<item id="18196" min="1" max="1" chance="8.79726"/>
+				<item id="17405" min="1" max="1" chance="13.99509"/>
+				<item id="17396" min="1" max="1" chance="13.20422"/>
+				<item id="17400" min="1" max="1" chance="9.38803"/>
+				<item id="17411" min="1" max="1" chance="9.32609"/>
+				<item id="17407" min="1" max="1" chance="8.79726"/>
 				<item id="17526" min="1" max="1" chance="19.63363"/>
 			</category>
 		</droplist>

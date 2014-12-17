@@ -35,7 +35,7 @@
 		<set name="rewardSp" value="12263"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Monster"/>             
+		<set name="type" value="Monster"/>
 		<skills>
 			<skill id="4416" level="8"/>
 			<skill id="5467" level="1"/>
@@ -68,506 +68,757 @@
 		</attributes>
 	</npc>
 	<npc id="23314" name="Nerva Orc Raider" title="">
-		<set name="aggroRange" value="1"/>
+		<set name="aggroRange" value="600"/>
 		<set name="collision_height" value="38.0"/>
 		<set name="collision_radius" value="14.0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="334"/>
 		<set name="baseWalkSpd" value="60"/>
 		<set name="baseShldDef" value="0.0"/>
 		<set name="baseShldRate" value="0.0"/>
 		<set name="baseRunSpd" value="180"/>
-		<set name="baseMpMax" value="502181"/>
-		<set name="baseHpMax" value="1000"/>
+		<set name="baseMpMax" value="35678"/>
+		<set name="baseHpMax" value="602935"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseMpReg" value="3"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseSTR" value="88"/>
+		<set name="baseWIT" value="66"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
+		<set name="basePAtk" value="75000"/>
+		<set name="basePDef" value="2000"/>
 		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="baseMDef" value="87"/>
-		<set name="basePDef" value="130"/>
+		<set name="baseMDef" value="2000"/>
 		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
+		<set name="rewardExp" value="95996433"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="texture" value=""/>
+		<set name="rewardSp" value="46078"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<set name="type" value="Monster"/>
+		<equip>
+			<rhand item_id="18707"/>
+		</equip>
+		<skills>
+			<skill id="4295" level="1"/>
+			<skill id="5465" level="1"/>
+			<skill id="15575" level="1"/>
+			<skill id="15568" level="1"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100">
+				<reward item_id="57" min="50000" max="100000" chance="100"/>
+			</group>
+			<group chance="0.640">
+				<reward item_id="30298" min="1" max="1" chance="2.25330"/>
+			</group>
+			<group chance="0.660">
+				<reward item_id="35562" min="2" max="4" chance="50.0000"/>
+			</group>
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="220"/>
+			<defence attribute="water" value="220"/>
+			<defence attribute="wind" value="220"/>
+			<defence attribute="earth" value="220"/>
+			<defence attribute="holy" value="220"/>
+			<defence attribute="unholy" value="220"/>
 		</attributes>
 	</npc>
 	<npc id="23315" name="Nerva Orc Archer" title="">
-		<set name="aggroRange" value="1"/>
+		<set name="aggroRange" value="300"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="collision_radius" value="14.0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="334"/>
 		<set name="baseWalkSpd" value="60"/>
 		<set name="baseShldDef" value="0.0"/>
 		<set name="baseShldRate" value="0.0"/>
 		<set name="baseRunSpd" value="180"/>
-		<set name="baseMpMax" value="502181"/>
-		<set name="baseHpMax" value="1000"/>
+		<set name="baseMpMax" value="35678"/>
+		<set name="baseHpMax" value="663228"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseMpReg" value="3"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
-		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseSTR" value="88"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseAtkRange" value="900"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
+		<set name="basePAtk" value="75000"/>
+		<set name="basePDef" value="2000"/>
 		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="baseMDef" value="87"/>
-		<set name="basePDef" value="130"/>
+		<set name="baseMDef" value="2000"/>
 		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
+		<set name="rewardExp" value="103650867"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="texture" value=""/>
+		<set name="rewardSp" value="49752"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<set name="type" value="Monster"/>
+		<skills>
+			<skill id="4295" level="1"/>
+			<skill id="5465" level="1"/>
+			<skill id="15587" level="1"/>
+			<skill id="15620" level="1"/>
+			<skill id="15621" level="1"/>
+		</skills>
+		<equip>
+			<rhand item_id="15304"/>
+		</equip>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100">
+				<reward item_id="57" min="50000" max="100000" chance="100"/>
+			</group>
+			<group chance="0.640">
+				<reward item_id="30298" min="1" max="1" chance="2.25330"/>
+			</group>
+			<group chance="0.660">
+				<reward item_id="35562" min="2" max="4" chance="50.0000"/>
+			</group>
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="200"/>
+			<defence attribute="water" value="320"/>
+			<defence attribute="wind" value="230"/>
+			<defence attribute="earth" value="320"/>
+			<defence attribute="holy" value="230"/>
+			<defence attribute="unholy" value="230"/>
 		</attributes>
 	</npc>
 	<npc id="23316" name="Nerva Orc Priest" title="">
-		<set name="aggroRange" value="1"/>
+		<set name="aggroRange" value="100"/>
 		<set name="collision_height" value="32.0"/>
 		<set name="collision_radius" value="10.0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="334"/>
 		<set name="baseWalkSpd" value="60"/>
 		<set name="baseShldDef" value="0.0"/>
 		<set name="baseShldRate" value="0.0"/>
 		<set name="baseRunSpd" value="180"/>
-		<set name="baseMpMax" value="502181"/>
-		<set name="baseHpMax" value="1000"/>
+		<set name="baseMpMax" value="35678"/>
+		<set name="baseHpMax" value="1096245"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseMpReg" value="3"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
-		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseSTR" value="88"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseAtkRange" value="80"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseMageCritRate" value="50"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
-		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="baseMDef" value="87"/>
-		<set name="basePDef" value="130"/>
+		<set name="basePAtk" value="75000"/>
+		<set name="basePDef" value="2000"/>
+		<set name="baseMAtk" value="15000"/>
+		<set name="baseMDef" value="2000"/>
 		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
+		<set name="rewardExp" value="124437220"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="texture" value=""/>
+		<set name="rewardSp" value="59729"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<set name="type" value="Monster"/>
+		<equip>
+			<rhand item_id="18009"/>
+			<lhand item_id="15588"/>
+		</equip>
+		<skills>
+			<skill id="4295" level="1"/>
+			<skill id="5465" level="1"/>
+			<skill id="15149" level="1"/>
+			<skill id="15579" level="1"/>
+			<skill id="15580" level="1"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100">
+				<reward item_id="57" min="50000" max="100000" chance="100"/>
+			</group>
+			<group chance="0.640">
+				<reward item_id="30298" min="1" max="1" chance="2.25330"/>
+			</group>
+			<group chance="0.660">
+				<reward item_id="35562" min="2" max="4" chance="50.0000"/>
+			</group>
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="220"/>
+			<defence attribute="water" value="220"/>
+			<defence attribute="wind" value="220"/>
+			<defence attribute="earth" value="320"/>
+			<defence attribute="holy" value="220"/>
+			<defence attribute="unholy" value="220"/>
 		</attributes>
 	</npc>
 	<npc id="23317" name="Nerva Orc Wizard" title="">
-		<set name="aggroRange" value="1"/>
+		<set name="aggroRange" value="100"/>
 		<set name="collision_height" value="36.0"/>
 		<set name="collision_radius" value="14.0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="334"/>
 		<set name="baseWalkSpd" value="60"/>
 		<set name="baseShldDef" value="0.0"/>
 		<set name="baseShldRate" value="0.0"/>
 		<set name="baseRunSpd" value="180"/>
-		<set name="baseMpMax" value="502181"/>
-		<set name="baseHpMax" value="1000"/>
+		<set name="baseMpMax" value="35678"/>
+		<set name="baseHpMax" value="729003"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseMpReg" value="3"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseMEN" value="10"/>
+		<set name="baseSTR" value="88"/>
+		<set name="baseWIT" value="66"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseMageCritRate" value="50"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
-		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="baseMDef" value="87"/>
-		<set name="basePDef" value="130"/>
+		<set name="basePAtk" value="75000"/>
+		<set name="basePDef" value="2000"/>
+		<set name="baseMAtk" value="15000"/>
+		<set name="baseMDef" value="2000"/>
 		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
+		<set name="rewardExp" value="111937319"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
+		<set name="rewardSp" value="53729"/>
 		<set name="texture" value=""/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<set name="type" value="Monster"/>
+		<equip>
+			<rhand item_id="8688"/>
+		</equip>
+		<skills>
+			<skill id="4295" level="1"/>
+			<skill id="5465" level="1"/>
+			<skill id="15581" level="1"/>
+			<skill id="15582" level="1"/>
+			<skill id="15603" level="1"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100">
+				<reward item_id="57" min="50000" max="100000" chance="100"/>
+			</group>
+			<group chance="0.640">
+				<reward item_id="30298" min="1" max="1" chance="2.25330"/>
+			</group>
+			<group chance="0.660">
+				<reward item_id="35562" min="2" max="4" chance="50.0000"/>
+			</group>
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="220"/>
+			<defence attribute="water" value="220"/>
+			<defence attribute="wind" value="220"/>
+			<defence attribute="earth" value="320"/>
+			<defence attribute="holy" value="220"/>
+			<defence attribute="unholy" value="220"/>
 		</attributes>
 	</npc>
 	<npc id="23318" name="Nerva Orc Assassin" title="">
-		<set name="aggroRange" value="1"/>
+		<set name="aggroRange" value="200"/>
 		<set name="collision_height" value="32.0"/>
 		<set name="collision_radius" value="13.0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="334"/>
 		<set name="baseWalkSpd" value="60"/>
 		<set name="baseShldDef" value="0.0"/>
 		<set name="baseShldRate" value="0.0"/>
 		<set name="baseRunSpd" value="180"/>
-		<set name="baseMpMax" value="502181"/>
-		<set name="baseHpMax" value="1000"/>
+		<set name="baseMpMax" value="35678"/>
+		<set name="baseHpMax" value="882477"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseMpReg" value="3"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
+		<set name="baseCON" value="65"/>
+		<set name="baseDEX" value="100"/>
 		<set name="baseINT" value="21"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="50"/>
+		<set name="baseSTR" value="80"/>
+		<set name="baseWIT" value="50"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="basePAtk" value="75000"/>
+		<set name="basePDef" value="2000"/>
+		<set name="baseMAtk" value="500"/>
+		<set name="baseMDef" value="2000"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="104493557"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="50156"/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Monster"/>
+		<equip>
+			<rhand item_id="15833"/>
+		</equip>
+		<skills>
+			<skill id="4295" level="1"/>
+			<skill id="5465" level="1"/>
+			<skill id="15583" level="1"/>
+			<skill id="15584" level="1"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100">
+				<reward item_id="57" min="50000" max="100000" chance="100"/>
+			</group>
+			<group chance="0.640">
+				<reward item_id="30298" min="1" max="1" chance="2.25330"/>
+			</group>
+			<group chance="0.660">
+				<reward item_id="35562" min="2" max="4" chance="50.0000"/>
+			</group>
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="220"/>
+			<defence attribute="water" value="220"/>
+			<defence attribute="wind" value="220"/>
+			<defence attribute="earth" value="320"/>
+			<defence attribute="holy" value="220"/>
+			<defence attribute="unholy" value="220"/>
+		</attributes>
+	</npc>
+	<npc id="23319" name="Nerva Orc Ambusher" title="">
+		<set name="aggroRange" value="100"/>
+		<set name="collision_height" value="32.0"/>
+		<set name="collision_radius" value="13.0"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseMpMax" value="35678"/>
+		<set name="baseHpMax" value="548122"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="65"/>
+		<set name="baseDEX" value="100"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="50"/>
+		<set name="baseSTR" value="80"/>
+		<set name="baseWIT" value="50"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseMageCritRate" value="50"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
+		<set name="basePAtk" value="75000"/>
+		<set name="basePDef" value="2000"/>
 		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="baseMDef" value="87"/>
-		<set name="basePDef" value="130"/>
+		<set name="baseMDef" value="2000"/>
 		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
+		<set name="rewardExp" value="88903792"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
+		<set name="rewardSp" value="42673"/>
 		<set name="texture" value=""/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<set name="type" value="Monster"/>
+		<skills>
+			<skill id="4295" level="1"/>
+			<skill id="5465" level="1"/>
+			<skill id="15576" level="1"/>
+			<skill id="15577" level="1"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100">
+				<reward item_id="57" min="50000" max="100000" chance="100"/>
+			</group>
+			<group chance="0.640">
+				<reward item_id="30298" min="1" max="1" chance="2.25330"/>
+			</group>
+			<group chance="0.660">
+				<reward item_id="35562" min="2" max="4" chance="50.0000"/>
+			</group>
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="220"/>
+			<defence attribute="water" value="220"/>
+			<defence attribute="wind" value="220"/>
+			<defence attribute="earth" value="320"/>
+			<defence attribute="holy" value="220"/>
+			<defence attribute="unholy" value="220"/>
 		</attributes>
 	</npc>
 	<npc id="23320" name="Nerva Orc Merchant" title="">
-		<set name="aggroRange" value="1"/>
+		<set name="aggroRange" value="0"/>
 		<set name="collision_height" value="42.0"/>
 		<set name="collision_radius" value="20.0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="334"/>
 		<set name="baseWalkSpd" value="60"/>
 		<set name="baseShldDef" value="0.0"/>
 		<set name="baseShldRate" value="0.0"/>
 		<set name="baseRunSpd" value="180"/>
-		<set name="baseMpMax" value="502181"/>
-		<set name="baseHpMax" value="1000"/>
+		<set name="baseMpMax" value="35678"/>
+		<set name="baseHpMax" value="800259"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseMpReg" value="3"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
+		<set name="baseCON" value="65"/>
+		<set name="baseDEX" value="80"/>
 		<set name="baseINT" value="21"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="50"/>
+		<set name="baseSTR" value="100"/>
+		<set name="baseWIT" value="50"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseMageCritRate" value="50"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
+		<set name="basePAtk" value="75000"/>
+		<set name="basePDef" value="2000"/>
 		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="baseMDef" value="87"/>
-		<set name="basePDef" value="130"/>
+		<set name="baseMDef" value="2000"/>
 		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
+		<set name="rewardExp" value="120926012"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="texture" value=""/>
+		<set name="rewardSp" value="58044"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<set name="type" value="Monster"/>
+		<skills>
+			<skill id="4295" level="1"/>
+			<skill id="5465" level="1"/>
+			<skill id="15579" level="1"/>
+			<skill id="15580" level="1"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100">
+				<reward item_id="57" min="50000" max="100000" chance="100"/>
+			</group>
+			<group chance="0.640">
+				<reward item_id="30298" min="1" max="1" chance="2.25330"/>
+			</group>
+			<group chance="0.660">
+				<reward item_id="35562" min="2" max="4" chance="50.0000"/>
+			</group>
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="220"/>
+			<defence attribute="water" value="220"/>
+			<defence attribute="wind" value="220"/>
+			<defence attribute="earth" value="320"/>
+			<defence attribute="holy" value="220"/>
+			<defence attribute="unholy" value="220"/>
 		</attributes>
 	</npc>
 	<npc id="23321" name="Nerva Orc Warrior" title="">
-		<set name="aggroRange" value="1"/>
+		<set name="aggroRange" value="100"/>
 		<set name="collision_height" value="42.0"/>
 		<set name="collision_radius" value="20.0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="334"/>
 		<set name="baseWalkSpd" value="60"/>
 		<set name="baseShldDef" value="0.0"/>
 		<set name="baseShldRate" value="0.0"/>
 		<set name="baseRunSpd" value="180"/>
-		<set name="baseMpMax" value="502181"/>
-		<set name="baseHpMax" value="1000"/>
+		<set name="baseMpMax" value="35678"/>
+		<set name="baseHpMax" value="1644368"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseMpReg" value="3"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
+		<set name="baseCON" value="65"/>
+		<set name="baseDEX" value="80"/>
 		<set name="baseINT" value="21"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="50"/>
+		<set name="baseSTR" value="100"/>
+		<set name="baseWIT" value="50"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseMageCritRate" value="50"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
+		<set name="basePAtk" value="85000"/>
+		<set name="basePDef" value="2000"/>
 		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="baseMDef" value="87"/>
-		<set name="basePDef" value="130"/>
+		<set name="baseMDef" value="2000"/>
 		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
+		<set name="rewardExp" value="215798859"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
+		<set name="rewardSp" value="103583"/>
 		<set name="texture" value=""/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<set name="type" value="Monster"/>
+		<skills>
+			<skill id="4295" level="1"/>
+			<skill id="5465" level="1"/>
+			<skill id="15585" level="1"/>
+			<skill id="15586" level="1"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100">
+				<reward item_id="57" min="50000" max="100000" chance="100"/>
+			</group>
+			<group chance="0.640">
+				<reward item_id="30298" min="1" max="1" chance="2.25330"/>
+			</group>
+			<group chance="0.660">
+				<reward item_id="35562" min="2" max="4" chance="50.0000"/>
+			</group>
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="220"/>
+			<defence attribute="water" value="220"/>
+			<defence attribute="wind" value="220"/>
+			<defence attribute="earth" value="320"/>
+			<defence attribute="holy" value="220"/>
+			<defence attribute="unholy" value="220"/>
 		</attributes>
 	</npc>
 	<npc id="23322" name="Nerva Orc Prefect" title="">
-		<set name="aggroRange" value="1"/>
+		<set name="aggroRange" value="100"/>
 		<set name="collision_height" value="38.0"/>
 		<set name="collision_radius" value="18.0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="334"/>
 		<set name="baseWalkSpd" value="60"/>
 		<set name="baseShldDef" value="0.0"/>
 		<set name="baseShldRate" value="0.0"/>
 		<set name="baseRunSpd" value="180"/>
-		<set name="baseMpMax" value="502181"/>
-		<set name="baseHpMax" value="1000"/>
+		<set name="baseMpMax" value="35678"/>
+		<set name="baseHpMax" value="2192491"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseMpReg" value="3"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
+		<set name="baseCON" value="65"/>
+		<set name="baseDEX" value="80"/>
 		<set name="baseINT" value="21"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="50"/>
+		<set name="baseSTR" value="100"/>
+		<set name="baseWIT" value="50"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
+		<set name="basePAtk" value="95000"/>
+		<set name="basePDef" value="2000"/>
 		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="baseMDef" value="87"/>
-		<set name="basePDef" value="130"/>
+		<set name="baseMDef" value="2000"/>
 		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
+		<set name="rewardExp" value="272259087"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="texture" value=""/>
+		<set name="rewardSp" value="130684"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<set name="type" value="Monster"/>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100">
+				<reward item_id="57" min="50000" max="100000" chance="100"/>
+			</group>
+			<group chance="0.640">
+				<reward item_id="30298" min="1" max="1" chance="2.25330"/>
+			</group>
+			<group chance="0.660">
+				<reward item_id="35562" min="2" max="4" chance="50.0000"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="99.608">
+				<reward item_id="57" min="49467" max="115486" chance="70"/>
+				<reward item_id="18208" min="1" max="1" chance="0.001"/>
+			</group>
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="220"/>
+			<defence attribute="water" value="220"/>
+			<defence attribute="wind" value="220"/>
+			<defence attribute="earth" value="320"/>
+			<defence attribute="holy" value="220"/>
+			<defence attribute="unholy" value="220"/>
+		</attributes>
+	</npc>
+	<npc id="23323" name="Nerva Orc Elite" title="">
+		<set name="aggroRange" value="100"/>
+		<set name="collision_height" value="32.0"/>
+		<set name="collision_radius" value="18.0"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseMpMax" value="35678"/>
+		<set name="baseHpMax" value="602935"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="65"/>
+		<set name="baseDEX" value="80"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="50"/>
+		<set name="baseSTR" value="100"/>
+		<set name="baseWIT" value="50"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="basePAtk" value="75000"/>
+		<set name="basePDef" value="2000"/>
+		<set name="baseMAtk" value="500"/>
+		<set name="baseMDef" value="2000"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="95996433"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="46078"/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Monster"/>
+		<skills>
+			<skill id="4295" level="1"/>
+			<skill id="5465" level="1"/>
+			<skill id="15589" level="1"/>
+			<skill id="15576" level="1"/>
+			<skill id="15608" level="6"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100">
+				<reward item_id="57" min="50000" max="100000" chance="100"/>
+			</group>
+			<group chance="0.640">
+				<reward item_id="30298" min="1" max="1" chance="2.25330"/>
+			</group>
+			<group chance="0.660">
+				<reward item_id="35562" min="2" max="4" chance="50.0000"/>
+			</group>
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="220"/>
+			<defence attribute="water" value="220"/>
+			<defence attribute="wind" value="220"/>
+			<defence attribute="earth" value="320"/>
+			<defence attribute="holy" value="220"/>
+			<defence attribute="unholy" value="220"/>
 		</attributes>
 	</npc>
 	<npc id="23324" name="Captain" title="Nerva Bloodlust">
-		<set name="aggroRange" value="1"/>
+		<set name="aggroRange" value="0"/>
 		<set name="collision_height" value="42.0"/>
 		<set name="collision_radius" value="20.0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="334"/>
 		<set name="baseWalkSpd" value="60"/>
 		<set name="baseShldDef" value="0.0"/>
 		<set name="baseShldRate" value="0.0"/>
 		<set name="baseRunSpd" value="180"/>
-		<set name="baseMpMax" value="502181"/>
-		<set name="baseHpMax" value="1000"/>
+		<set name="baseMpMax" value="35678"/>
+		<set name="baseHpMax" value="1096245"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseMpReg" value="3"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
+		<set name="baseCON" value="65"/>
+		<set name="baseDEX" value="80"/>
 		<set name="baseINT" value="21"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="50"/>
+		<set name="baseSTR" value="100"/>
+		<set name="baseWIT" value="50"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
+		<set name="basePAtk" value="75000"/>
+		<set name="basePDef" value="2000"/>
 		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="baseMDef" value="87"/>
-		<set name="basePDef" value="130"/>
+		<set name="baseMDef" value="2000"/>
 		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
+		<set name="rewardExp" value="171101178"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="texture" value=""/>
+		<set name="rewardSp" value="82128"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<set name="type" value="Monster"/>
+		<faction name="Embryo_clan" range="300"/>
+		<skills>
+			<skill id="5465" level="1"/>
+			<skill id="4295" level="1"/>
+			<skill id="4410" level="3"/>
+			<skill id="4412" level="3"/>
+			<skill id="4413" level="3"/>
+			<skill id="15585" level="1"/>
+			<skill id="15586" level="1"/>
+			<skill id="15551" level="1"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100">
+				<reward item_id="57" min="50000" max="100000" chance="100"/>
+			</group>
+			<group chance="0.640">
+				<reward item_id="30298" min="1" max="1" chance="2.25330"/>
+			</group>
+			<group chance="0.660">
+				<reward item_id="35562" min="2" max="4" chance="50.0000"/>
+			</group>
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="220"/>
+			<defence attribute="water" value="220"/>
+			<defence attribute="wind" value="220"/>
+			<defence attribute="earth" value="320"/>
+			<defence attribute="holy" value="220"/>
+			<defence attribute="unholy" value="220"/>
 		</attributes>
 	</npc>
 	<npc id="23325" name="Archer" title="Nerva Bloodlust">
-		<set name="aggroRange" value="1"/>
+		<set name="aggroRange" value="0"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="collision_radius" value="14.0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="334"/>
 		<set name="baseWalkSpd" value="60"/>
 		<set name="baseShldDef" value="0.0"/>
 		<set name="baseShldRate" value="0.0"/>
 		<set name="baseRunSpd" value="180"/>
-		<set name="baseMpMax" value="502181"/>
-		<set name="baseHpMax" value="1000"/>
+		<set name="baseMpMax" value="35678"/>
+		<set name="baseHpMax" value="548122"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseMpReg" value="3"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
+		<set name="baseCON" value="65"/>
+		<set name="baseDEX" value="80"/>
 		<set name="baseINT" value="21"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
-		<set name="baseAtkRange" value="40"/>
+		<set name="baseMEN" value="50"/>
+		<set name="baseSTR" value="100"/>
+		<set name="baseWIT" value="50"/>
+		<set name="baseAtkRange" value="600"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
+		<set name="basePAtk" value="75000"/>
+		<set name="basePDef" value="2000"/>
 		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="baseMDef" value="87"/>
-		<set name="basePDef" value="130"/>
+		<set name="baseMDef" value="2000"/>
 		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
+		<set name="rewardExp" value="30863520"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="texture" value=""/>
+		<set name="rewardSp" value="14814"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<set name="type" value="Monster"/>
+		<faction name="Embryo_clan" range="300"/>
+		<equip>
+			<rhand item_id="15304"/>
+		</equip>
+		<skills>
+			<skill id="5465" level="1"/>
+			<skill id="4295" level="1"/>
+			<skill id="4410" level="3"/>
+			<skill id="4412" level="3"/>
+			<skill id="4413" level="3"/>
+			<skill id="15545" level="1"/>
+			<skill id="15557" level="1"/>
+			<skill id="15587" level="1"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100">
+				<reward item_id="57" min="50000" max="100000" chance="100"/>
+			</group>
+			<group chance="0.640">
+				<reward item_id="30298" min="1" max="1" chance="2.25330"/>
+			</group>
+			<group chance="0.660">
+				<reward item_id="35562" min="2" max="4" chance="50.0000"/>
+			</group>
+		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
 			<defence attribute="water" value="20"/>
@@ -578,552 +829,791 @@
 		</attributes>
 	</npc>
 	<npc id="23326" name="Wizard" title="Nerva Bloodlust">
-		<set name="aggroRange" value="1"/>
+		<set name="aggroRange" value="0"/>
 		<set name="collision_height" value="36.0"/>
 		<set name="collision_radius" value="14.0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="334"/>
 		<set name="baseWalkSpd" value="60"/>
 		<set name="baseShldDef" value="0.0"/>
 		<set name="baseShldRate" value="0.0"/>
 		<set name="baseRunSpd" value="180"/>
-		<set name="baseMpMax" value="502181"/>
-		<set name="baseHpMax" value="1000"/>
+		<set name="baseMpMax" value="35678"/>
+		<set name="baseHpMax" value="548122"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseMpReg" value="3"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
+		<set name="baseCON" value="65"/>
+		<set name="baseDEX" value="80"/>
 		<set name="baseINT" value="21"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="50"/>
+		<set name="baseSTR" value="100"/>
+		<set name="baseWIT" value="50"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseMageCritRate" value="50"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
+		<set name="basePAtk" value="75000"/>
+		<set name="basePDef" value="2000"/>
 		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="baseMDef" value="87"/>
-		<set name="basePDef" value="130"/>
+		<set name="baseMDef" value="2000"/>
 		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
+		<set name="rewardExp" value="30863250"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="texture" value=""/>
+		<set name="rewardSp" value="14814"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<set name="type" value="Monster"/>
+		<faction name="Embryo_clan" range="300"/>
+		<equip>
+			<rhand item_id="8688"/>
+		</equip>
+		<skills>
+			<skill id="5465" level="1"/>
+			<skill id="4295" level="1"/>
+			<skill id="4410" level="3"/>
+			<skill id="4412" level="3"/>
+			<skill id="4413" level="3"/>
+			<skill id="15541" level="1"/>
+			<skill id="15548" level="1"/>
+			<skill id="15550" level="1"/>
+			<skill id="15558" level="1"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100">
+				<reward item_id="57" min="50000" max="100000" chance="100"/>
+			</group>
+			<group chance="0.640">
+				<reward item_id="30298" min="1" max="1" chance="2.25330"/>
+			</group>
+			<group chance="0.660">
+				<reward item_id="35562" min="2" max="4" chance="50.0000"/>
+			</group>
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="220"/>
+			<defence attribute="water" value="220"/>
+			<defence attribute="wind" value="220"/>
+			<defence attribute="earth" value="320"/>
+			<defence attribute="holy" value="202"/>
+			<defence attribute="unholy" value="220"/>
 		</attributes>
 	</npc>
 	<npc id="23327" name="Soldier" title="Nerva Bloodlust">
-		<set name="aggroRange" value="1"/>
+		<set name="aggroRange" value="0"/>
 		<set name="collision_height" value="38.0"/>
 		<set name="collision_radius" value="14.0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="334"/>
 		<set name="baseWalkSpd" value="60"/>
 		<set name="baseShldDef" value="0.0"/>
 		<set name="baseShldRate" value="0.0"/>
 		<set name="baseRunSpd" value="180"/>
-		<set name="baseMpMax" value="502181"/>
-		<set name="baseHpMax" value="1000"/>
+		<set name="baseMpMax" value="35678"/>
+		<set name="baseHpMax" value="548122"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseMpReg" value="3"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
+		<set name="baseCON" value="65"/>
+		<set name="baseDEX" value="80"/>
 		<set name="baseINT" value="21"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="50"/>
+		<set name="baseSTR" value="100"/>
+		<set name="baseWIT" value="50"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
+		<set name="basePAtk" value="75000"/>
+		<set name="basePDef" value="2000"/>
 		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
+		<set name="baseMDef" value="2000"/>
 		<set name="baseMDef" value="87"/>
 		<set name="basePDef" value="130"/>
 		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
+		<set name="rewardExp" value="30863250"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
+		<set name="rewardSp" value="14814"/>
 		<set name="texture" value=""/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<set name="type" value="Monster"/>
+		<faction name="Embryo_clan" range="300"/>
+		<equip>
+			<rhand item_id="18707"/>
+		</equip>
+		<skills>
+			<skill id="5465" level="1"/>
+			<skill id="4295" level="1"/>
+			<skill id="4410" level="3"/>
+			<skill id="4412" level="3"/>
+			<skill id="4413" level="3"/>
+			<skill id="15556" level="1"/>
+			<skill id="15560" level="1"/>
+			<skill id="15578" level="1"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100">
+				<reward item_id="57" min="50000" max="100000" chance="100"/>
+			</group>
+			<group chance="0.640">
+				<reward item_id="30298" min="1" max="1" chance="2.25330"/>
+			</group>
+			<group chance="0.660">
+				<reward item_id="35562" min="2" max="4" chance="50.0000"/>
+			</group>
+		</rewardlist>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="220"/>
+			<defence attribute="water" value="220"/>
+			<defence attribute="wind" value="220"/>
+			<defence attribute="earth" value="320"/>
+			<defence attribute="holy" value="202"/>
+			<defence attribute="unholy" value="220"/>
 		</attributes>
 	</npc>
 	<npc id="23328" name="Assassin" title="Nerva Bloodlust">
-		<set name="aggroRange" value="1"/>
+		<set name="aggroRange" value="0"/>
 		<set name="collision_height" value="32.0"/>
 		<set name="collision_radius" value="13.0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="334"/>
 		<set name="baseWalkSpd" value="60"/>
 		<set name="baseShldDef" value="0.0"/>
 		<set name="baseShldRate" value="0.0"/>
 		<set name="baseRunSpd" value="180"/>
-		<set name="baseMpMax" value="502181"/>
-		<set name="baseHpMax" value="1000"/>
+		<set name="baseMpMax" value="35678"/>
+		<set name="baseHpMax" value="548122"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseMpReg" value="3"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
+		<set name="baseCON" value="65"/>
+		<set name="baseDEX" value="80"/>
 		<set name="baseINT" value="21"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="50"/>
+		<set name="baseSTR" value="100"/>
+		<set name="baseWIT" value="50"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
+		<set name="basePAtk" value="75000"/>
+		<set name="basePDef" value="2000"/>
 		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
+		<set name="baseMDef" value="2000"/>
 		<set name="baseMDef" value="87"/>
 		<set name="basePDef" value="130"/>
 		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
+		<set name="rewardExp" value="30863250"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
+		<set name="rewardSp" value="14814"/>
 		<set name="texture" value=""/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="Monster"/>
+		<faction name="Embryo_clan" range="300"/>
+		<equip>
+			<rhand item_id="15280"/>
+		</equip>
+		<skills>
+			<skill id="5465" level="1"/>
+			<skill id="4295" level="1"/>
+			<skill id="4410" level="3"/>
+			<skill id="4412" level="3"/>
+			<skill id="4413" level="3"/>
+			<skill id="15561" level="1"/>
+			<skill id="15575" level="1"/>
+			<skill id="15568" level="1"/>
+		</skills>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100">
+				<reward item_id="57" min="50000" max="100000" chance="100"/>
+			</group>
+			<group chance="0.640">
+				<reward item_id="30298" min="1" max="1" chance="2.25330"/>
+			</group>
+			<group chance="0.660">
+				<reward item_id="35562" min="2" max="4" chance="50.0000"/>
+			</group>
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="220"/>
+			<defence attribute="water" value="220"/>
+			<defence attribute="wind" value="220"/>
+			<defence attribute="earth" value="320"/>
+			<defence attribute="holy" value="202"/>
+			<defence attribute="unholy" value="220"/>
+		</attributes>
+	</npc>
+	<npc id="23328" name="Kaiser" title="Nerva">
+		<set name="collision_height" value="36.5"/>
+		<set name="collision_radius" value="20"/>
+		<set name="aggroRange" value="100"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="baseWalkSpd" value="60"/>
+		<set name="baseShldDef" value="0.0"/>
+		<set name="baseShldRate" value="0.0"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseHpMax" value="328875"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="7.5"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseCON" value="65"/>
+		<set name="baseDEX" value="80"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMEN" value="50"/>
+		<set name="baseSTR" value="100"/>
+		<set name="baseWIT" value="50"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="basePAtk" value="75000"/>
+		<set name="basePDef" value="2000"/>
+		<set name="baseMAtk" value="5000"/>
+		<set name="baseMDef" value="2000"/>
+		<set name="level" value="99"/>
+		<set name="rewardExp" value="959958945"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="1535934"/>
+		<set name="texture" value=""/>
+		<set name="shots" value="NONE"/>
+		<set name="type" value="Monster"/>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100">
+				<reward item_id="57" min="50000" max="100000" chance="100"/>
+			</group>
+			<group chance="0.640">
+				<reward item_id="30298" min="1" max="1" chance="2.25330"/>
+			</group>
+			<group chance="0.660">
+				<reward item_id="35562" min="2" max="4" chance="50.0000"/>
+			</group>
+		</rewardlist>
 		<ai_params>
 			<set name="showName" value="true"/>
 			<set name="show Title" value="true"/>
 		</ai_params>
+		<skills>
+			<skill id="4416" level="2"/>
+			<skill id="5465" level="1"/>
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300"/>
+			<defence attribute="water" value="300"/>
+			<defence attribute="wind" value="300"/>
+			<defence attribute="earth" value="300"/>
+			<defence attribute="holy" value="300"/>
+			<defence attribute="unholy" value="300"/>
 		</attributes>
 	</npc>
 	<npc id="23330" name="Rubble" title="">
 		<set name="collision_radius" value="18.0"/>
 		<set name="collision_height" value="29.0"/>
-		<set name="level" value="1"/>
-		<set name="type" value="Npc"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseAttackType" value="SWORD"/>
-		<set name="baseHpMax" value="451962"/>
-		<set name="baseMpMax" value="28942"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="20"/>
-		<set name="baseMEN" value="10"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="285150"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="baseSTR" value="88"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="20"/>
+		<set name="rewardExp" value="6555879"/>
 		<set name="rewardRp" value="0"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
-		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseMAtkSpd" value="334"/>
-		<set name="aggroRange" value="0"/>
-		<set name="baseWalkSpd" value="60"/>
-		<set name="baseRunSpd" value="180"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
+		<set name="rewardSp" value="14465"/>
+		<set name="basePAtk" value="4258"/>
+		<set name="basePDef" value="840"/>
+		<set name="baseMAtk" value="2511"/>
+		<set name="baseMDef" value="740"/>
+		<set name="basePAtkSpd" value="529"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
-		<set name="texture" value=""/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseWalkSpd" value="45"/>
+		<set name="shots" value="NONE"/>
+		<faction name="land_of_chaos_clan" range="500"/>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="4717" max="11013" chance="100"/>
+			</group>
+			<group chance="0.001">
+				<reward item_id="17417" min="1" max="1" chance="100"/>
+			</group>
+			<group chance="0.331">
+				<reward item_id="36563" min="1" max="1" chance="90.66183"/>
+				<reward item_id="36564" min="1" max="1" chance="9.06618"/>
+				<reward item_id="36863" min="1" max="1" chance="0.27199"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="36533" min="1" max="1" chance="13.28"/>
+			<reward item_id="36534" min="1" max="1" chance="1.264"/>
+		</rewardlist>
+		<skills>
+			<skill id="4416" level="1"/>
+			<skill id="4410" level="19"/>
+			<skill id="5467" level="1"/>
+			<skill id="4412" level="9"/>
+			<skill id="4413" level="9"/>
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300"/>
+			<defence attribute="water" value="300"/>
+			<defence attribute="wind" value="300"/>
+			<defence attribute="earth" value="300"/>
+			<defence attribute="holy" value="300"/>
+			<defence attribute="unholy" value="300"/>
 		</attributes>
 	</npc>
 	<npc id="23332" name="One-armed Zombie" title="">
-		<set name="aggroRange" value="1"/>
 		<set name="collision_height" value="34.0"/>
 		<set name="collision_radius" value="20.0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseMAtkSpd" value="334"/>
-		<set name="baseWalkSpd" value="60"/>
-		<set name="baseShldDef" value="0.0"/>
-		<set name="baseShldRate" value="0.0"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
-		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="baseRunSpd" value="180"/>
-		<set name="baseMpMax" value="236267"/>
-		<set name="baseHpMax" value="1000"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
-		<set name="baseMDef" value="87"/>
-		<set name="basePDef" value="130"/>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
+		<set name="type" value="Monster"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="295987"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="baseSTR" value="88"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="20"/>
+		<set name="rewardExp" value="6555879"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="texture" value=""/>
+		<set name="rewardSp" value="27705"/>
+		<set name="basePAtk" value="4258"/>
+		<set name="basePDef" value="840"/>
+		<set name="baseMAtk" value="2511"/>
+		<set name="baseMDef" value="740"/>
+		<set name="basePAtkSpd" value="529"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseWalkSpd" value="45"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="4717" max="11013" chance="100"/>
+			</group>
+			<group chance="0.827">
+				<reward item_id="36563" min="1" max="1" chance="90.71118"/>
+				<reward item_id="36564" min="1" max="1" chance="9.07112"/>
+				<reward item_id="35569" min="1" max="1" chance="0.10885"/>
+				<reward item_id="36879" min="1" max="1" chance="0.10885"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="36533" min="1" max="1" chance="12.5"/>
+			<reward item_id="36534" min="1" max="1" chance="1.274"/>
+		</rewardlist>
+		<skills>
+			<skill id="4416" level="1"/>
+			<skill id="4410" level="19"/>
+			<skill id="5467" level="1"/>
+			<skill id="4412" level="9"/>
+			<skill id="4413" level="9"/>
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300"/>
+			<defence attribute="water" value="300"/>
+			<defence attribute="wind" value="300"/>
+			<defence attribute="earth" value="300"/>
+			<defence attribute="holy" value="300"/>
+			<defence attribute="unholy" value="300"/>
 		</attributes>
 	</npc>
 	<npc id="23333" name="Putrefied Zombie" title="">
-		<set name="aggroRange" value="1"/>
 		<set name="collision_height" value="32.0"/>
 		<set name="collision_radius" value="20.0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseMAtkSpd" value="334"/>
-		<set name="baseWalkSpd" value="60"/>
-		<set name="baseShldDef" value="0.0"/>
-		<set name="baseShldRate" value="0.0"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
-		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="baseRunSpd" value="180"/>
-		<set name="baseMpMax" value="451962"/>
-		<set name="baseHpMax" value="1000"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
-		<set name="baseMDef" value="87"/>
-		<set name="basePDef" value="130"/>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
+		<set name="type" value="Monster"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="295987"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="baseSTR" value="88"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="20"/>
+		<set name="rewardExp" value="6555879"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="texture" value=""/>
+		<set name="rewardSp" value="27705"/>
+		<set name="basePAtk" value="4258"/>
+		<set name="basePDef" value="840"/>
+		<set name="baseMAtk" value="2511"/>
+		<set name="baseMDef" value="740"/>
+		<set name="basePAtkSpd" value="529"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseWalkSpd" value="45"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="4717" max="11013" chance="100"/>
+			</group>
+			<group chance="0.031">
+				<reward item_id="36862" min="1" max="1" chance="97.08738"/>
+				<reward item_id="36899" min="1" max="1" chance="2.91262"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="36563" min="1" max="1" chance="1.41"/>
+			<reward item_id="36564" min="1" max="1" chance="0.3"/>
+		</rewardlist>
+		<skills>
+			<skill id="4416" level="1"/>
+			<skill id="4410" level="15"/>
+			<skill id="5467" level="1"/>
+			<skill id="4413" level="9"/>
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300"/>
+			<defence attribute="water" value="300"/>
+			<defence attribute="wind" value="300"/>
+			<defence attribute="earth" value="300"/>
+			<defence attribute="holy" value="300"/>
+			<defence attribute="unholy" value="300"/>
 		</attributes>
 	</npc>
 	<npc id="23334" name="Shelop" title="">
 		<set name="collision_radius" value="30.0"/>
 		<set name="collision_height" value="27.0"/>
-		<set name="level" value="1"/>
-		<set name="type" value="Npc"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseAttackType" value="SWORD"/>
-		<set name="baseHpMax" value="451962"/>
-		<set name="baseMpMax" value="28942"/>
-		<set name="baseHpReg" value="7.5"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseMpReg" value="2.7"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="20"/>
-		<set name="baseMEN" value="10"/>
-		<set name="rewardExp" value="0"/>
-		<set name="rewardSp" value="0"/>
+		<set name="baseHpMax" value="295987"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="baseSTR" value="88"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="20"/>
+		<set name="rewardExp" value="6555879"/>
 		<set name="rewardRp" value="0"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
-		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseMAtkSpd" value="334"/>
-		<set name="aggroRange" value="0"/>
-		<set name="baseWalkSpd" value="60"/>
-		<set name="baseRunSpd" value="180"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
+		<set name="rewardSp" value="27705"/>
+		<set name="basePAtk" value="4258"/>
+		<set name="basePDef" value="840"/>
+		<set name="baseMAtk" value="2511"/>
+		<set name="baseMDef" value="740"/>
+		<set name="basePAtkSpd" value="529"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
-		<set name="texture" value=""/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseWalkSpd" value="45"/>
+		<set name="shots" value="NONE"/>
+		<faction name="land_of_chaos_clan" range="500"/>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="4717" max="11013" chance="100"/>
+			</group>
+			<group chance="0.001">
+				<reward item_id="17423" min="1" max="1" chance="100"/>
+			</group>
+			<group chance="0.004">
+				<reward item_id="36870" min="1" max="1" chance="76.92308"/>
+				<reward item_id="36900" min="1" max="1" chance="23.07692"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="36563" min="1" max="1" chance="1.402"/>
+			<reward item_id="36564" min="1" max="1" chance="0.3"/>
+		</rewardlist>
+		<skills>
+			<skill id="4416" level="1"/>
+			<skill id="4410" level="19"/>
+			<skill id="5467" level="1"/>
+			<skill id="4412" level="9"/>
+			<skill id="4413" level="9"/>
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300"/>
+			<defence attribute="water" value="300"/>
+			<defence attribute="wind" value="300"/>
+			<defence attribute="earth" value="300"/>
+			<defence attribute="holy" value="300"/>
+			<defence attribute="unholy" value="300"/>
 		</attributes>
 	</npc>
 	<npc id="23335" name="Poras" title="">
 		<set name="aggroRange" value="1"/>
 		<set name="collision_height" value="53.0"/>
 		<set name="collision_radius" value="20.0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseMAtkSpd" value="334"/>
-		<set name="baseWalkSpd" value="60"/>
-		<set name="baseShldDef" value="0.0"/>
-		<set name="baseShldRate" value="0.0"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
-		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="baseRunSpd" value="180"/>
-		<set name="baseMpMax" value="451962"/>
-		<set name="baseHpMax" value="1000"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
-		<set name="baseMDef" value="87"/>
-		<set name="basePDef" value="130"/>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
+		<set name="type" value="Monster"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="295987"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="baseSTR" value="88"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="20"/>
+		<set name="rewardExp" value="6555879"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="texture" value=""/>
+		<set name="rewardSp" value="27705"/>
+		<set name="basePAtk" value="4258"/>
+		<set name="basePDef" value="840"/>
+		<set name="baseMAtk" value="2511"/>
+		<set name="baseMDef" value="740"/>
+		<set name="basePAtkSpd" value="529"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseWalkSpd" value="45"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="4717" max="11013" chance="100"/>
+			</group>
+			<group chance="0.001">
+				<reward item_id="17425" min="1" max="1" chance="100"/>
+			</group>
+			<group chance="0.004">
+				<reward item_id="36878" min="1" max="1" chance="76.92308"/>
+				<reward item_id="36912" min="1" max="1" chance="23.07692"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="36563" min="1" max="1" chance="1.489"/>
+			<reward item_id="36564" min="1" max="1" chance="0.3"/>
+		</rewardlist>
+		<skills>
+			<skill id="4416" level="1"/>
+			<skill id="5467" level="1"/>
+			<skill id="4410" level="13"/>
+			<skill id="4411" level="13"/>
+			<skill id="4413" level="9"/>
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300"/>
+			<defence attribute="water" value="300"/>
+			<defence attribute="wind" value="300"/>
+			<defence attribute="earth" value="300"/>
+			<defence attribute="holy" value="300"/>
+			<defence attribute="unholy" value="300"/>
 		</attributes>
 	</npc>
 	<npc id="23336" name="Death Worm" title="">
-		<set name="aggroRange" value="1"/>
 		<set name="collision_height" value="41.0"/>
 		<set name="collision_radius" value="70.0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseMAtkSpd" value="334"/>
-		<set name="baseWalkSpd" value="60"/>
-		<set name="baseShldDef" value="0.0"/>
-		<set name="baseShldRate" value="0.0"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
-		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="baseRunSpd" value="180"/>
-		<set name="baseMpMax" value="451962"/>
-		<set name="baseHpMax" value="1000"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
-		<set name="baseMDef" value="87"/>
-		<set name="basePDef" value="130"/>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
+		<set name="type" value="Monster"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="295987"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="baseSTR" value="88"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="20"/>
+		<set name="rewardExp" value="6555879"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="texture" value=""/>
+		<set name="rewardSp" value="27705"/>
+		<set name="basePAtk" value="4258"/>
+		<set name="basePDef" value="840"/>
+		<set name="baseMAtk" value="2511"/>
+		<set name="baseMDef" value="740"/>
+		<set name="basePAtkSpd" value="529"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseWalkSpd" value="45"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="4717" max="11013" chance="100"/>
+			</group>
+			<group chance="0.001">
+				<reward item_id="17424" min="1" max="1" chance="100"/>
+			</group>
+			<group chance="0.003">
+				<reward item_id="35567" min="1" max="1" chance="33.33333"/>
+				<reward item_id="36913" min="1" max="1" chance="33.33333"/>
+				<reward item_id="36920" min="1" max="1" chance="33.33333"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="36563" min="1" max="1" chance="1.496"/>
+			<reward item_id="36564" min="1" max="1" chance="0.3"/>
+		</rewardlist>
+		<skills>
+			<skill id="4416" level="1"/>
+			<skill id="5467" level="1"/>
+			<skill id="4410" level="15"/>
+			<skill id="4413" level="9"/>
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300"/>
+			<defence attribute="water" value="300"/>
+			<defence attribute="wind" value="300"/>
+			<defence attribute="earth" value="300"/>
+			<defence attribute="holy" value="300"/>
+			<defence attribute="unholy" value="300"/>
 		</attributes>
 	</npc>
 	<npc id="23337" name="Large Rubble" title="">
-		<set name="aggroRange" value="1"/>
 		<set name="collision_height" value="40.0"/>
 		<set name="collision_radius" value="23.0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseMAtkSpd" value="334"/>
-		<set name="baseWalkSpd" value="60"/>
-		<set name="baseShldDef" value="0.0"/>
-		<set name="baseShldRate" value="0.0"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
-		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="baseRunSpd" value="180"/>
-		<set name="baseMpMax" value="451962"/>
-		<set name="baseHpMax" value="1000"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
-		<set name="baseMDef" value="87"/>
-		<set name="basePDef" value="130"/>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
+		<set name="type" value="Monster"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="295987"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="baseSTR" value="88"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="20"/>
+		<set name="rewardExp" value="6555879"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="texture" value=""/>
+		<set name="rewardSp" value="27705"/>
+		<set name="basePAtk" value="4258"/>
+		<set name="basePDef" value="840"/>
+		<set name="baseMAtk" value="2511"/>
+		<set name="baseMDef" value="740"/>
+		<set name="basePAtkSpd" value="529"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseWalkSpd" value="45"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="4717" max="11013" chance="100"/>
+			</group>
+			<group chance="0.001">
+				<reward item_id="17421" min="1" max="1" chance="100"/>
+			</group>
+			<group chance="0.002">
+				<reward item_id="36921" min="1" max="1" chance="50"/>
+				<reward item_id="36928" min="1" max="1" chance="50"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="36563" min="1" max="1" chance="1.435"/>
+			<reward item_id="36564" min="1" max="1" chance="0.3"/>
+		</rewardlist>
+		<skills>
+			<skill id="4416" level="1"/>
+			<skill id="5467" level="1"/>
+			<skill id="4410" level="13"/>
+			<skill id="4411" level="13"/>
+			<skill id="4412" level="9"/>
+			<skill id="4413" level="9"/>
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300"/>
+			<defence attribute="water" value="300"/>
+			<defence attribute="wind" value="300"/>
+			<defence attribute="earth" value="300"/>
+			<defence attribute="holy" value="300"/>
+			<defence attribute="unholy" value="300"/>
 		</attributes>
 	</npc>
 	<npc id="23348" name="Chaos Horn" title="">
-		<set name="aggroRange" value="1"/>
 		<set name="collision_height" value="27.0"/>
 		<set name="collision_radius" value="16.0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="baseMAtkSpd" value="334"/>
-		<set name="baseWalkSpd" value="60"/>
-		<set name="baseShldDef" value="0.0"/>
-		<set name="baseShldRate" value="0.0"/>
-		<set name="basePAtk" value="500"/>
-		<set name="basePDef" value="500"/>
-		<set name="baseMAtk" value="500"/>
-		<set name="baseMDef" value="500"/>
-		<set name="baseRunSpd" value="128"/>
-		<set name="baseMpMax" value="502181"/>
-		<set name="baseHpMax" value="1000"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseMEN" value="20"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseWIT" value="20"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
-		<set name="baseMDef" value="87"/>
-		<set name="basePDef" value="130"/>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="level" value="99"/>
-		<set name="rewardExp" value="0"/>
+		<set name="type" value="Monster"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="328875"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseMpReg" value="7"/>
+		<set name="baseSTR" value="88"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="20"/>
+		<set name="rewardExp" value="6555879"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
-		<set name="texture" value=""/>
+		<set name="rewardSp" value="27705"/>
+		<set name="basePAtk" value="5258"/>
+		<set name="basePDef" value="940"/>
+		<set name="baseMAtk" value="2511"/>
+		<set name="baseMDef" value="940"/>
+		<set name="basePAtkSpd" value="529"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseWalkSpd" value="45"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
-		<ai_params>
-			<set name="showName" value="true"/>
-			<set name="show Title" value="true"/>
-		</ai_params>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="70.0">
+				<reward item_id="57" min="4717" max="11013" chance="100"/>
+			</group>
+			<group chance="0.001">
+				<reward item_id="17421" min="1" max="1" chance="100"/>
+			</group>
+			<group chance="0.004">
+				<reward item_id="36936" min="1" max="1" chance="76.92308"/>
+				<reward item_id="36929" min="1" max="1" chance="23.07692"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="36563" min="1" max="1" chance="1.41"/>
+			<reward item_id="36564" min="1" max="1" chance="0.3"/>
+		</rewardlist>
+		<skills>
+			<skill id="4416" level="1"/>
+			<skill id="5467" level="1"/>
+			<skill id="4410" level="9"/>
+			<skill id="4411" level="9"/>
+			<skill id="4412" level="7"/>
+			<skill id="4413" level="7"/>
+		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300"/>
+			<defence attribute="water" value="300"/>
+			<defence attribute="wind" value="300"/>
+			<defence attribute="earth" value="300"/>
+			<defence attribute="holy" value="300"/>
+			<defence attribute="unholy" value="300"/>
 		</attributes>
 	</npc>
 	<npc id="23351" name="Wild Guardian Tree" title="">
@@ -1159,8 +1649,6 @@
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
-		<set name="texture" value=""/>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="100.0">
 				<reward item_id="57" min="1687" max="3938" chance="70"/>
@@ -1223,8 +1711,6 @@
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
-		<set name="texture" value=""/>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="100.0">
 				<reward item_id="57" min="1687" max="3938" chance="70"/>
@@ -1287,7 +1773,6 @@
 		<set name="baseShldDef" value="0"/>
 		<set name="baseShldRate" value="0"/>
 		<set name="baseCritRate" value="40"/>
-		<set name="baseMageCritRate" value="50"/>
 		<set name="texture" value=""/>
 		<rewardlist type="RATED_GROUPED">
 			<group chance="100.0">

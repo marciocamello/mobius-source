@@ -34,7 +34,7 @@
 		</droplist>
 		<spoillist>
 			<item id="5230" min="1" max="1" chance="0.47230"/>
-			<item id="4053" min="1" max="1" chance="15.18170"/>
+			<item id="4053" min="1" max="1" chance="15.36855"/>
 			<item id="5271" min="1" max="1" chance="0.47230"/>
 		</spoillist>
 	</npc>

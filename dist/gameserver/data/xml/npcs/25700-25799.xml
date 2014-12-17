@@ -5090,21 +5090,21 @@
 		</rewardlist>
 	</npc>
 	<npc id="25775" name="Apherus" title="">
-		<set name="baseSTR" value="60"/>
-		<set name="baseCON" value="57"/>
-		<set name="baseDEX" value="73"/>
-		<set name="baseINT" value="76"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="80"/>
-		<set name="baseHpMax" value="4111534"/>
-		<set name="baseMpMax" value="4861"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="82"/>
+		<set name="baseDEX" value="55"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="78"/>
+		<set name="baseMEN" value="78"/>
+		<set name="baseHpMax" value="1726809"/>
+		<set name="baseMpMax" value="22800"/>
 		<set name="baseHpReg" value="20"/>
 		<set name="baseMpReg" value="7"/>
-		<set name="basePAtk" value="19033"/>
+		<set name="basePAtk" value="59033"/>
 		<set name="baseMAtk" value="6886"/>
 		<set name="basePDef" value="3797"/>
 		<set name="baseMDef" value="2373"/>
-		<set name="basePAtkSpd" value="299"/>
+		<set name="basePAtkSpd" value="253"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseShldDef" value="0"/>
 		<set name="baseAtkRange" value="40"/>

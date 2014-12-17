@@ -1620,8 +1620,10 @@
 		</attributes>
 	</npc>
 	<npc id="32933" name="Fairy Citizen" title="">
+		<set name="collision_height" value="22.5"/>
+		<set name="collision_radius" value="8.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Mystic"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
@@ -1645,14 +1647,11 @@
 		<set name="baseShldRate" value="0"/>
 		<set name="baseWIT" value="78"/>
 		<set name="baseWalkSpd" value="20"/>
-		<set name="collision_height" value="22.5"/>
-		<set name="collision_radius" value="8.0"/>
-		<set name="level" value="85"/>
+		<set name="level" value="92"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
 		<skills>
 			<skill id="4416" level="13"/>

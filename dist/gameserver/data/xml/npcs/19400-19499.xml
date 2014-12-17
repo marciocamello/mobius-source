@@ -1678,6 +1678,10 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
+		<ai_params>
+			<set name="TargetEnabled" value="false"/>
+			<set name="showName" value="false"/>
+		</ai_params>
 		<attributes>
 			<defence attribute="fire" value="0"/>
 			<defence attribute="water" value="0"/>
@@ -2751,144 +2755,127 @@
 		</attributes>
 	</npc>
 	<npc id="19460" name="Horn" title="">
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="2880.376"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseINT" value="74"/>
-		<set name="baseMAtk" value="1145"/>
-		<set name="baseMAtkSpd" value="253"/>
-		<set name="baseMDef" value="469"/>
-		<set name="baseMEN" value="72"/>
-		<set name="baseMpMax" value="1674.8"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="basePAtk" value="1799"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="577"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="109"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="64"/>
-		<set name="baseWalkSpd" value="30"/>
 		<set name="collision_height" value="27.0"/>
 		<set name="collision_radius" value="16.0"/>
-		<set name="level" value="80"/>
-		<set name="rewardExp" value="0"/>
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="295987"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="20"/>
+		<set name="rewardExp" value="6555879"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
+		<set name="rewardSp" value="27705"/>
+		<set name="basePAtk" value="4258"/>
+		<set name="basePDef" value="840"/>
+		<set name="baseMAtk" value="2511"/>
+		<set name="baseMDef" value="740"/>
+		<set name="basePAtkSpd" value="529"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseWalkSpd" value="45"/>
 		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills>
-			<skill id="4416" level="1"/>
-		</skills>
+		<faction name="land_of_chaos_clan" range="500"/>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="240"/>
+			<defence attribute="water" value="240"/>
+			<defence attribute="wind" value="240"/>
+			<defence attribute="earth" value="240"/>
+			<defence attribute="holy" value="240"/>
+			<defence attribute="unholy" value="240"/>
 		</attributes>
 	</npc>
 	<npc id="19461" name="Horn" title="">
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="2880.376"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseINT" value="74"/>
-		<set name="baseMAtk" value="1145"/>
-		<set name="baseMAtkSpd" value="253"/>
-		<set name="baseMDef" value="469"/>
-		<set name="baseMEN" value="72"/>
-		<set name="baseMpMax" value="1674.8"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="basePAtk" value="1799"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="577"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="109"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="64"/>
-		<set name="baseWalkSpd" value="30"/>
 		<set name="collision_height" value="27.0"/>
 		<set name="collision_radius" value="16.0"/>
-		<set name="level" value="80"/>
-		<set name="rewardExp" value="0"/>
+		<set name="aggroRange" value="100"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="295987"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="20"/>
+		<set name="rewardExp" value="6555879"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
+		<set name="rewardSp" value="27705"/>
+		<set name="basePAtk" value="4258"/>
+		<set name="basePDef" value="840"/>
+		<set name="baseMAtk" value="2511"/>
+		<set name="baseMDef" value="740"/>
+		<set name="basePAtkSpd" value="529"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseWalkSpd" value="45"/>
 		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills>
-			<skill id="4416" level="1"/>
-		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="240"/>
+			<defence attribute="water" value="240"/>
+			<defence attribute="wind" value="240"/>
+			<defence attribute="earth" value="240"/>
+			<defence attribute="holy" value="240"/>
+			<defence attribute="unholy" value="240"/>
 		</attributes>
 	</npc>
 	<npc id="19462" name="Horn" title="">
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
-		<set name="baseAtkRange" value="40"/>
-		<set name="baseCON" value="75"/>
-		<set name="baseCritRate" value="40"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="2880.376"/>
-		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="8.5"/>
-		<set name="baseINT" value="74"/>
-		<set name="baseMAtk" value="1145"/>
-		<set name="baseMAtkSpd" value="253"/>
-		<set name="baseMDef" value="469"/>
-		<set name="baseMEN" value="72"/>
-		<set name="baseMpMax" value="1674.8"/>
-		<set name="baseMpReg" value="3"/>
-		<set name="basePAtk" value="1799"/>
-		<set name="basePAtkSpd" value="253"/>
-		<set name="basePDef" value="577"/>
-		<set name="baseRunSpd" value="120"/>
-		<set name="baseSTR" value="109"/>
-		<set name="baseShldDef" value="0"/>
-		<set name="baseShldRate" value="0"/>
-		<set name="baseWIT" value="64"/>
-		<set name="baseWalkSpd" value="30"/>
 		<set name="collision_height" value="27.0"/>
 		<set name="collision_radius" value="16.0"/>
-		<set name="level" value="80"/>
-		<set name="rewardExp" value="0"/>
+		<set name="aggroRange" value="100"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="295987"/>
+		<set name="baseHpRate" value="1.0"/>
+		<set name="baseHpReg" value="13"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseMpReg" value="4"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseWIT" value="70"/>
+		<set name="baseMEN" value="20"/>
+		<set name="rewardExp" value="6555879"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="0"/>
+		<set name="rewardSp" value="27705"/>
+		<set name="basePAtk" value="4258"/>
+		<set name="basePDef" value="840"/>
+		<set name="baseMAtk" value="2511"/>
+		<set name="baseMDef" value="740"/>
+		<set name="basePAtkSpd" value="529"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseMAtkSpd" value="398"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseWalkSpd" value="45"/>
 		<set name="shots" value="NONE"/>
-		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
-		<skills>
-			<skill id="4416" level="1"/>
-		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="240"/>
+			<defence attribute="water" value="240"/>
+			<defence attribute="wind" value="240"/>
+			<defence attribute="earth" value="240"/>
+			<defence attribute="holy" value="240"/>
+			<defence attribute="unholy" value="240"/>
 		</attributes>
 	</npc>
 	<npc id="19463" name="Bloody Horn" title="">
@@ -3442,12 +3429,12 @@
 	</npc>
 	<npc id="19475" name="Legah" title="One-armed Zombie's Arm">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="2880.376"/>
+		<set name="baseHpMax" value="1"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseHpReg" value="8.5"/>
 		<set name="baseINT" value="74"/>
@@ -3474,7 +3461,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="Monster"/>
 		<skills>
 			<skill id="4416" level="1"/>
 			<skill id="5467" level="1"/>
@@ -3484,12 +3471,12 @@
 			<skill id="4413" level="8"/>
 		</skills>
 		<attributes>
-			<defence attribute="fire" value="20"/>
-			<defence attribute="water" value="20"/>
-			<defence attribute="wind" value="20"/>
-			<defence attribute="earth" value="20"/>
-			<defence attribute="holy" value="20"/>
-			<defence attribute="unholy" value="20"/>
+			<defence attribute="fire" value="300"/>
+			<defence attribute="water" value="300"/>
+			<defence attribute="wind" value="300"/>
+			<defence attribute="earth" value="300"/>
+			<defence attribute="holy" value="300"/>
+			<defence attribute="unholy" value="300"/>
 		</attributes>
 	</npc>
 	<npc id="19476" name="Lyn Draco" title="">

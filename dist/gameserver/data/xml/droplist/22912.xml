@@ -6,9 +6,9 @@
 				<item id="57" min="21552" max="50333" chance="100.00000"/>
 			</category>
 			<category id="2" chance="14.476">
-				<item id="18194" min="1" max="1" chance="2.07240"/>
+				<item id="17405" min="1" max="1" chance="2.07240"/>
 				<item id="18180" min="1" max="1" chance="0.20724"/>
-				<item id="19260" min="1" max="3" chance="83.79387"/>
+				<item id="35316" min="1" max="3" chance="83.79387"/>
 				<item id="19246" min="1" max="1" chance="13.92650"/>
 			</category>
 			<category id="3" chance="4.608">

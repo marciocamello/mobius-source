@@ -418,7 +418,7 @@
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="1052878"/>
+		<set name="baseHpMax" value="347452"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="72.964"/>
 		<set name="baseINT" value="42"/>
@@ -426,7 +426,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseMDef" value="362"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1036.8"/>
+		<set name="baseMpMax" value="1036"/>
 		<set name="baseMpReg" value="2.4"/>
 		<set name="basePAtk" value="785"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -440,9 +440,9 @@
 		<set name="collision_height" value="85.0"/>
 		<set name="collision_radius" value="28.0"/>
 		<set name="level" value="60"/>
-		<set name="rewardExp" value="1367516"/>
-		<set name="rewardRp" value="1240"/>
-		<set name="rewardSp" value="236815"/>
+		<set name="rewardExp" value="34637834"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="8313"/>
 		<set name="shots" value="NONE"/>
 		<set name="type" value="RaidBoss"/>
 		<minions>
@@ -490,10 +490,6 @@
 				<reward item_id="6570" min="1" max="1" chance="79.5455"/>
 				<reward item_id="6571" min="1" max="1" chance="20.4545"/>
 			</group>
-		</rewardlist>
-		<rewardlist type="NOT_RATED_NOT_GROUPED">
-			<reward item_id="9814" min="1" max="4" chance="84.0000"/>
-			<reward item_id="8176" min="1" max="2" chance="72.0000"/>
 		</rewardlist>
 		<attributes>
 			<attack attribute="unholy" value="20"/>
@@ -1340,7 +1336,7 @@
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="738329"/>
+		<set name="baseHpMax" value="334950"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="73.934"/>
 		<set name="baseINT" value="42"/>
@@ -1348,7 +1344,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseMDef" value="293"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="747.8"/>
+		<set name="baseMpMax" value="747"/>
 		<set name="baseMpReg" value="2.1"/>
 		<set name="basePAtk" value="858"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1362,9 +1358,9 @@
 		<set name="collision_height" value="73.0"/>
 		<set name="collision_radius" value="42.0"/>
 		<set name="level" value="50"/>
-		<set name="rewardExp" value="1775596"/>
-		<set name="rewardRp" value="1700"/>
-		<set name="rewardSp" value="253410"/>
+		<set name="rewardExp" value="7064466"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="1695"/>
 		<set name="shots" value="NONE"/>
 		<set name="type" value="RaidBoss"/>
 		<equip>
@@ -1551,7 +1547,7 @@
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="934811"/>
+		<set name="baseHpMax" value="308490"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="66.085"/>
 		<set name="baseINT" value="42"/>
@@ -1559,7 +1555,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseMDef" value="334"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="918.8"/>
+		<set name="baseMpMax" value="918"/>
 		<set name="baseMpReg" value="2.4"/>
 		<set name="basePAtk" value="644"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1573,9 +1569,9 @@
 		<set name="collision_height" value="54.0"/>
 		<set name="collision_radius" value="22.5"/>
 		<set name="level" value="56"/>
-		<set name="rewardExp" value="1264899"/>
-		<set name="rewardRp" value="1104"/>
-		<set name="rewardSp" value="204337"/>
+		<set name="rewardExp" value="23103634"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="5544"/>
 		<set name="shots" value="NONE"/>
 		<set name="type" value="RaidBoss"/>
 		<equip>
@@ -1619,10 +1615,6 @@
 				<reward item_id="4618" min="3" max="7" chance="11.8372"/>
 				<reward item_id="948" min="1" max="3" chance="53.6376"/>
 			</group>
-		</rewardlist>
-		<rewardlist type="NOT_RATED_NOT_GROUPED">
-			<reward item_id="9816" min="1" max="4" chance="77.0000"/>
-			<reward item_id="8176" min="1" max="2" chance="65.0000"/>
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -1757,7 +1749,7 @@
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="1176767"/>
+		<set name="baseHpMax" value="1638609"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="277.058"/>
 		<set name="baseINT" value="42"/>
@@ -1765,7 +1757,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseMDef" value="398"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1188.8"/>
+		<set name="baseMpMax" value="1188"/>
 		<set name="baseMpReg" value="2.7"/>
 		<set name="basePAtk" value="3631"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -1779,9 +1771,9 @@
 		<set name="collision_height" value="87.0"/>
 		<set name="collision_radius" value="72.0"/>
 		<set name="level" value="65"/>
-		<set name="rewardExp" value="4489692"/>
-		<set name="rewardRp" value="2592"/>
-		<set name="rewardSp" value="895951"/>
+		<set name="rewardExp" value="106892354"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="25654"/>
 		<set name="shots" value="NONE"/>
 		<set name="type" value="RaidBoss"/>
 		<skills>
@@ -1824,10 +1816,6 @@
 				<reward item_id="6570" min="1" max="1" chance="89.2857"/>
 				<reward item_id="6569" min="1" max="1" chance="10.7143"/>
 			</group>
-		</rewardlist>
-		<rewardlist type="NOT_RATED_NOT_GROUPED">
-			<reward item_id="9816" min="3" max="7" chance="80.0000"/>
-			<reward item_id="8176" min="1" max="4" chance="80.0000"/>
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -2228,7 +2216,7 @@
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="738329"/>
+		<set name="baseHpMax" value="243650"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="53.855"/>
 		<set name="baseINT" value="42"/>
@@ -2236,7 +2224,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseMDef" value="293"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="747.8"/>
+		<set name="baseMpMax" value="747"/>
 		<set name="baseMpReg" value="2.1"/>
 		<set name="basePAtk" value="458"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -2250,9 +2238,9 @@
 		<set name="collision_height" value="57.0"/>
 		<set name="collision_radius" value="30.0"/>
 		<set name="level" value="50"/>
-		<set name="rewardExp" value="1194883"/>
-		<set name="rewardRp" value="908"/>
-		<set name="rewardSp" value="168787"/>
+		<set name="rewardExp" value="7064466"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="1695"/>
 		<set name="shots" value="NONE"/>
 		<set name="type" value="RaidBoss"/>
 		<equip>
@@ -4145,7 +4133,7 @@
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="870878"/>
+		<set name="baseHpMax" value="287391"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="62.194"/>
 		<set name="baseINT" value="42"/>
@@ -4153,7 +4141,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseMDef" value="320"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="861.0"/>
+		<set name="baseMpMax" value="861"/>
 		<set name="baseMpReg" value="2.4"/>
 		<set name="basePAtk" value="578"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -4167,9 +4155,9 @@
 		<set name="collision_height" value="30.0"/>
 		<set name="collision_radius" value="14.0"/>
 		<set name="level" value="54"/>
-		<set name="rewardExp" value="1211141"/>
-		<set name="rewardRp" value="1036"/>
-		<set name="rewardSp" value="188146"/>
+		<set name="rewardExp" value="8151307"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="1956"/>
 		<set name="shots" value="NONE"/>
 		<set name="type" value="RaidBoss"/>
 		<minions>
@@ -4212,10 +4200,6 @@
 				<reward item_id="4621" min="1" max="1" chance="53.9360"/>
 				<reward item_id="6571" min="1" max="1" chance="1.1173"/>
 			</group>
-		</rewardlist>
-		<rewardlist type="NOT_RATED_NOT_GROUPED">
-			<reward item_id="9818" min="1" max="3" chance="90.0000"/>
-			<reward item_id="8176" min="1" max="1" chance="90.0000"/>
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -4433,7 +4417,7 @@
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="1275172"/>
+		<set name="baseHpMax" value="1778067"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="294.211"/>
 		<set name="baseINT" value="42"/>
@@ -4441,7 +4425,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseMDef" value="433"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="1345.8"/>
+		<set name="baseMpMax" value="1345"/>
 		<set name="baseMpReg" value="2.7"/>
 		<set name="basePAtk" value="4310"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -4455,9 +4439,9 @@
 		<set name="collision_height" value="51.5"/>
 		<set name="collision_radius" value="44.0"/>
 		<set name="level" value="70"/>
-		<set name="rewardExp" value="4596479"/>
-		<set name="rewardRp" value="2884"/>
-		<set name="rewardSp" value="963124"/>
+		<set name="rewardExp" value="226669890"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="54400"/>
 		<set name="shots" value="NONE"/>
 		<set name="type" value="RaidBoss"/>
 		<skills>
@@ -4502,11 +4486,6 @@
 				<reward item_id="960" min="1" max="1" chance="89.5522"/>
 				<reward item_id="6577" min="1" max="1" chance="1.4926"/>
 			</group>
-		</rewardlist>
-		<rewardlist type="NOT_RATED_NOT_GROUPED">
-			<reward item_id="8619" min="1" max="1" chance="52.0000"/>
-			<reward item_id="9815" min="3" max="7" chance="81.0000"/>
-			<reward item_id="8176" min="1" max="4" chance="81.0000"/>
 		</rewardlist>
 		<attributes>
 			<defence attribute="fire" value="20"/>
@@ -5021,7 +5000,7 @@
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
 		<set name="baseDEX" value="41"/>
-		<set name="baseHpMax" value="577073"/>
+		<set name="baseHpMax" value="190435"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="43.343"/>
 		<set name="baseINT" value="42"/>
@@ -5029,7 +5008,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseMDef" value="260"/>
 		<set name="baseMEN" value="20"/>
-		<set name="baseMpMax" value="610.8"/>
+		<set name="baseMpMax" value="610"/>
 		<set name="baseMpReg" value="2.1"/>
 		<set name="basePAtk" value="334"/>
 		<set name="basePAtkSpd" value="253"/>
@@ -5043,9 +5022,9 @@
 		<set name="collision_height" value="87.0"/>
 		<set name="collision_radius" value="72.0"/>
 		<set name="level" value="45"/>
-		<set name="rewardExp" value="1042754"/>
-		<set name="rewardRp" value="764"/>
-		<set name="rewardSp" value="137992"/>
+		<set name="rewardExp" value="5918766"/>
+		<set name="rewardRp" value="0"/>
+		<set name="rewardSp" value="1420"/>
 		<set name="shots" value="NONE"/>
 		<set name="type" value="RaidBoss"/>
 		<minions>

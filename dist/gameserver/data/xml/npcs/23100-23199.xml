@@ -11,15 +11,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2934"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="922"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="3778"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="228"/>
@@ -81,15 +81,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="25176"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="1414"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="57748"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="4849"/>
@@ -247,15 +247,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="27812"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="1528"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="62284"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="5506"/>
@@ -311,15 +311,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="16973"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="1499"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="55154"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="4804"/>
@@ -375,15 +375,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="16973"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="1499"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="53809"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="4682"/>
@@ -440,15 +440,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="16973"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="1499"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="57729"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="5040"/>
@@ -502,15 +502,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="30374"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="1651"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="76850"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="7187"/>
@@ -568,15 +568,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="18590"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="1620"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="63602"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="5852"/>
@@ -633,15 +633,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="18590"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="1620"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="62264"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="5724"/>
@@ -698,15 +698,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="33376"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="1820"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="84663"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="8408"/>
@@ -825,13 +825,13 @@
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="19"/>
 		<set name="baseMpMax" value="467"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="276"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="9"/>
@@ -885,15 +885,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="148"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="505"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="220"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="7"/>
@@ -1175,15 +1175,15 @@
 		<set name="baseAtkRange" value="650"/>
 		<set name="baseHpMax" value="478"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="613"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="528"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="23"/>
@@ -1220,15 +1220,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="478"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="613"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="992"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="43"/>
@@ -1265,15 +1265,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="634"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="505"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="992"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="43"/>
@@ -1308,15 +1308,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="542"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="637"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="879"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="39"/>
@@ -1372,15 +1372,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="615901"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2901"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -1425,7 +1425,7 @@
 		<set name="baseDEX" value="41"/>
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -1461,15 +1461,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="200396"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2845"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -1505,15 +1505,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1113846"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2737"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="2367334"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="50677"/>
@@ -1570,15 +1570,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="556923"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2737"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="1695128"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="36287"/>
@@ -1633,15 +1633,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="556923"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2737"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="1719197"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="36803"/>
@@ -1700,15 +1700,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="556923"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2737"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="1760458"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="37686"/>
@@ -1768,15 +1768,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="556923"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2737"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="1671059"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="35772"/>
@@ -1832,15 +1832,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1113846"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2737"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="5826180"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="124721"/>
@@ -1897,15 +1897,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="556923"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2737"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="3863514"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="82706"/>
@@ -1963,15 +1963,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="556923"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2737"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="1671059"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="35772"/>
@@ -2025,15 +2025,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1113846"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2737"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="2367334"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="50677"/>
@@ -2091,15 +2091,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="556923"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2737"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="1550716"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="33196"/>
@@ -2154,15 +2154,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="556923"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2737"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="1760458"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="37686"/>
@@ -2219,15 +2219,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="556923"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2737"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="1719197"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="36803"/>
@@ -2284,15 +2284,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1113846"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2737"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="5826180"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="124721"/>
@@ -2350,15 +2350,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="278461"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2737"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="1194842"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="25578"/>
@@ -2416,15 +2416,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="278461"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2737"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="1182807"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="25320"/>
@@ -2482,15 +2482,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="278461"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2737"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="1213753"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="25982"/>
@@ -2547,15 +2547,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="278461"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2737"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="1196561"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="25614"/>
@@ -2620,7 +2620,7 @@
 		<set name="baseDEX" value="41"/>
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -2665,7 +2665,7 @@
 		<set name="baseDEX" value="41"/>
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -2710,7 +2710,7 @@
 		<set name="baseDEX" value="41"/>
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -2755,7 +2755,7 @@
 		<set name="baseDEX" value="41"/>
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -2792,25 +2792,25 @@
 		<set name="level" value="95"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="51231"/>
+		<set name="baseHpMax" value="14806"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2737"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="808354"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2205"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="220705"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="17304"/>
-		<set name="basePAtk" value="3908"/>
-		<set name="basePDef" value="750"/>
-		<set name="baseMAtk" value="1812"/>
-		<set name="baseMDef" value="666"/>
-		<set name="basePAtkSpd" value="445"/>
+		<set name="rewardSp" value="4724"/>
+		<set name="basePAtk" value="20000"/>
+		<set name="basePDef" value="300"/>
+		<set name="baseMAtk" value="1663"/>
+		<set name="baseMDef" value="350"/>
+		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="160"/>
@@ -2864,23 +2864,23 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="51231"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2737"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="916643"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="3341"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="1374965"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="19622"/>
-		<set name="basePAtk" value="3908"/>
-		<set name="basePDef" value="750"/>
-		<set name="baseMAtk" value="1812"/>
-		<set name="baseMDef" value="666"/>
-		<set name="basePAtkSpd" value="445"/>
+		<set name="rewardSp" value="5886"/>
+		<set name="basePAtk" value="20000"/>
+		<set name="basePDef" value="300"/>
+		<set name="baseMAtk" value="1663"/>
+		<set name="baseMDef" value="350"/>
+		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="150"/>
@@ -2934,25 +2934,25 @@
 		<set name="level" value="95"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="102462"/>
+		<set name="baseHpMax" value="14806"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2737"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="1380601"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2205"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="407114"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="29554"/>
-		<set name="basePAtk" value="3908"/>
-		<set name="basePDef" value="750"/>
-		<set name="baseMAtk" value="1812"/>
-		<set name="baseMDef" value="666"/>
-		<set name="basePAtkSpd" value="575"/>
+		<set name="rewardSp" value="8715"/>
+		<set name="basePAtk" value="20000"/>
+		<set name="basePDef" value="400"/>
+		<set name="baseMAtk" value="1663"/>
+		<set name="baseMDef" value="350"/>
+		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="90"/>
@@ -3010,24 +3010,24 @@
 		<set name="level" value="96"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="103039"/>
+		<set name="baseHpMax" value="14890"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2790"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="1482033"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2242"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="454187"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="31980"/>
-		<set name="basePAtk" value="4090"/>
-		<set name="basePDef" value="763"/>
-		<set name="baseMAtk" value="1896"/>
-		<set name="baseMDef" value="678"/>
+		<set name="rewardSp" value="9800"/>
+		<set name="basePAtk" value="10000"/>
+		<set name="basePDef" value="400"/>
+		<set name="baseMAtk" value="1663"/>
+		<set name="baseMDef" value="400"/>
 		<set name="basePAtkSpd" value="499"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -3085,25 +3085,25 @@
 		<set name="level" value="96"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="51519"/>
+		<set name="baseHpMax" value="14890"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2790"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2242"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="265889"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="5737"/>
-		<set name="basePAtk" value="4090"/>
-		<set name="basePDef" value="763"/>
-		<set name="baseMAtk" value="1896"/>
-		<set name="baseMDef" value="678"/>
-		<set name="basePAtkSpd" value="508"/>
+		<set name="basePAtk" value="20000"/>
+		<set name="basePDef" value="400"/>
+		<set name="baseMAtk" value="1663"/>
+		<set name="baseMDef" value="300"/>
+		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="180"/>
@@ -3162,12 +3162,12 @@
 		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="1674.8"/>
 		<set name="baseMpReg" value="3.0"/>
-		<set name="baseSTR" value="78"/>
+		<set name="baseSTR" value="89"/>
 		<set name="baseCON" value="75"/>
-		<set name="baseDEX" value="41"/>
-		<set name="baseINT" value="42"/>
-		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
@@ -3203,15 +3203,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="6991"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="1164"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="12019"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="884"/>
@@ -3269,15 +3269,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="7229"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="1187"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="11749"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="875"/>
@@ -3336,15 +3336,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="7469"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="1210"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="14636"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="1115"/>
@@ -3405,15 +3405,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="7711"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="1234"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="15193"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="1174"/>
@@ -3473,15 +3473,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="7955"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="1258"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="13913"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="1083"/>
@@ -3541,15 +3541,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="10934"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="1283"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="16667"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="1314"/>
@@ -3606,15 +3606,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="2219000"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="1036"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="315535"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="29550"/>
@@ -3667,24 +3667,24 @@
 		<set name="level" value="93"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="1623662"/>
+		<set name="baseHpMax" value="312844"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2632"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="9749339"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="21324"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="11287757"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="204830"/>
-		<set name="basePAtk" value="3569"/>
-		<set name="basePDef" value="725"/>
-		<set name="baseMAtk" value="1655"/>
-		<set name="baseMDef" value="644"/>
+		<set name="rewardSp" value="237152"/>
+		<set name="basePAtk" value="971"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="250"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="253"/>
@@ -3733,24 +3733,24 @@
 		<set name="level" value="92"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="49178"/>
+		<set name="baseHpMax" value="14213"/>
 		<set name="baseHpRate" value="1"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2582"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="384651"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="3144"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="459267"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="8006"/>
-		<set name="basePAtk" value="3410"/>
-		<set name="basePDef" value="713"/>
-		<set name="baseMAtk" value="1581"/>
-		<set name="baseMDef" value="633"/>
+		<set name="rewardSp" value="9559"/>
+		<set name="basePAtk" value="971"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="250"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="253"/>
@@ -3801,24 +3801,24 @@
 		<set name="level" value="87"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="46699"/>
+		<set name="baseHpMax" value="13497"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2343"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="510332"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1917"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="299545"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="10035"/>
-		<set name="basePAtk" value="2714"/>
-		<set name="basePDef" value="655"/>
-		<set name="baseMAtk" value="1258"/>
-		<set name="baseMDef" value="582"/>
+		<set name="rewardSp" value="5890"/>
+		<set name="basePAtk" value="8000"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="330"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -3859,24 +3859,24 @@
 		<set name="level" value="87"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="46699"/>
+		<set name="baseHpMax" value="13497"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2343"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="510332"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2875"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="299545"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="10035"/>
-		<set name="basePAtk" value="2714"/>
-		<set name="basePDef" value="655"/>
-		<set name="baseMAtk" value="1258"/>
-		<set name="baseMDef" value="582"/>
+		<set name="rewardSp" value="5890"/>
+		<set name="basePAtk" value="8000"/>
+		<set name="basePDef" value="450"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="355"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -3921,24 +3921,24 @@
 		<set name="level" value="88"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="46945"/>
+		<set name="baseHpMax" value="13568"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2389"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="579482"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1952"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="340134"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="11514"/>
-		<set name="basePAtk" value="2841"/>
-		<set name="basePDef" value="666"/>
-		<set name="baseMAtk" value="1317"/>
-		<set name="baseMDef" value="592"/>
+		<set name="rewardSp" value="6758"/>
+		<set name="basePAtk" value="19500"/>
+		<set name="basePDef" value="370"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="360"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -3983,24 +3983,24 @@
 		<set name="level" value="87"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="11674"/>
+		<set name="baseHpMax" value="13497"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2343"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="33136"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1917"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="16962"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="651"/>
-		<set name="basePAtk" value="2714"/>
-		<set name="basePDef" value="655"/>
-		<set name="baseMAtk" value="1258"/>
-		<set name="baseMDef" value="582"/>
+		<set name="rewardSp" value="333"/>
+		<set name="basePAtk" value="11000"/>
+		<set name="basePDef" value="250"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="290"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -4044,24 +4044,24 @@
 		<set name="level" value="88"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="46945"/>
+		<set name="baseHpMax" value="13568"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2389"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="610649"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2928"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="358483"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="12133"/>
-		<set name="basePAtk" value="2841"/>
-		<set name="basePDef" value="666"/>
-		<set name="baseMAtk" value="1317"/>
-		<set name="baseMDef" value="592"/>
+		<set name="rewardSp" value="7122"/>
+		<set name="basePAtk" value="7500"/>
+		<set name="basePDef" value="800"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="420"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -4104,24 +4104,24 @@
 		<set name="level" value="88"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="46945"/>
+		<set name="baseHpMax" value="13568"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2389"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="523625"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1952"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="307348"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="10404"/>
-		<set name="basePAtk" value="2841"/>
-		<set name="basePDef" value="666"/>
-		<set name="baseMAtk" value="1317"/>
-		<set name="baseMDef" value="592"/>
+		<set name="rewardSp" value="6106"/>
+		<set name="basePAtk" value="7000"/>
+		<set name="basePDef" value="350"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="250"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -4164,24 +4164,24 @@
 		<set name="level" value="89"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="47792"/>
+		<set name="baseHpMax" value="13812"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2435"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="557005"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1988"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="327048"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="11213"/>
-		<set name="basePAtk" value="2974"/>
-		<set name="basePDef" value="678"/>
-		<set name="baseMAtk" value="1379"/>
-		<set name="baseMDef" value="602"/>
+		<set name="rewardSp" value="6584"/>
+		<set name="basePAtk" value="9000"/>
+		<set name="basePDef" value="470"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="1200"/>
 		<set name="basePAtkSpd" value="344"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -4226,24 +4226,24 @@
 		<set name="level" value="89"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="47792"/>
+		<set name="baseHpMax" value="13812"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2435"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="549132"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1988"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="322491"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="11055"/>
-		<set name="basePAtk" value="2974"/>
-		<set name="basePDef" value="678"/>
-		<set name="baseMAtk" value="1379"/>
-		<set name="baseMDef" value="602"/>
+		<set name="rewardSp" value="6492"/>
+		<set name="basePAtk" value="18000"/>
+		<set name="basePDef" value="470"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="370"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -4288,24 +4288,24 @@
 		<set name="level" value="90"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="48048"/>
+		<set name="baseHpMax" value="13886"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2483"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="562891"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="3035"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="330571"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="11459"/>
-		<set name="basePAtk" value="3113"/>
-		<set name="basePDef" value="689"/>
-		<set name="baseMAtk" value="1443"/>
-		<set name="baseMDef" value="612"/>
+		<set name="rewardSp" value="6729"/>
+		<set name="basePAtk" value="20000"/>
+		<set name="basePDef" value="370"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="590"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -4354,24 +4354,24 @@
 		<set name="level" value="90"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="48048"/>
+		<set name="baseHpMax" value="13886"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2483"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="584976"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="3035"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="343454"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="11909"/>
-		<set name="basePAtk" value="3113"/>
-		<set name="basePDef" value="689"/>
-		<set name="baseMAtk" value="1443"/>
-		<set name="baseMDef" value="612"/>
+		<set name="rewardSp" value="6992"/>
+		<set name="basePAtk" value="19500"/>
+		<set name="basePDef" value="360"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="600"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -4416,26 +4416,26 @@
 		<set name="level" value="90"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="500"/>
-		<set name="baseHpMax" value="48048"/>
+		<set name="baseHpMax" value="13886"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2483"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="599558"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2023"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="351948"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="12205"/>
-		<set name="basePAtk" value="3113"/>
-		<set name="basePDef" value="689"/>
-		<set name="baseMAtk" value="1443"/>
-		<set name="baseMDef" value="612"/>
+		<set name="rewardSp" value="7165"/>
+		<set name="basePAtk" value="80000"/>
+		<set name="basePDef" value="360"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="500"/>
 		<set name="basePAtkSpd" value="266"/>
-		<set name="baseCritRate" value="4"/>
+		<set name="baseCritRate" value="100"/>
 		<set name="baseMAtkSpd" value="398"/>
 		<set name="baseRunSpd" value="170"/>
 		<set name="baseWalkSpd" value="45"/>
@@ -4482,21 +4482,21 @@
 		<set name="baseHpMax" value="13886"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="8.5"/>
-		<set name="baseMpMax" value="1674.8"/>
+		<set name="baseMpMax" value="3035"/>
 		<set name="baseMpReg" value="3.0"/>
 		<set name="baseSTR" value="78"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseDEX" value="41"/>
 		<set name="baseINT" value="42"/>
 		<set name="baseWIT" value="78"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="623059"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="365822"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="12684"/>
-		<set name="basePAtk" value="6300"/>
-		<set name="basePDef" value="1081"/>
+		<set name="rewardSp" value="7447"/>
+		<set name="basePAtk" value="971"/>
+		<set name="basePDef" value="341"/>
 		<set name="baseMAtk" value="663"/>
-		<set name="baseMDef" value="1200"/>
+		<set name="baseMDef" value="250"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
@@ -4543,24 +4543,24 @@
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="45632"/>
+		<set name="baseHpMax" value="13188"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2253"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="3086669"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1846"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="253903"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="305966"/>
-		<set name="basePAtk" value="2477"/>
-		<set name="basePDef" value="633"/>
-		<set name="baseMAtk" value="1148"/>
-		<set name="baseMDef" value="562"/>
+		<set name="rewardSp" value="4846"/>
+		<set name="basePAtk" value="13000"/>
+		<set name="basePDef" value="341"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="285"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -4604,24 +4604,24 @@
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="45632"/>
+		<set name="baseHpMax" value="13188"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2253"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="3086669"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="2770"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="315938"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="305966"/>
-		<set name="basePAtk" value="2477"/>
-		<set name="basePDef" value="633"/>
-		<set name="baseMAtk" value="1148"/>
-		<set name="baseMDef" value="562"/>
+		<set name="rewardSp" value="6030"/>
+		<set name="basePAtk" value="5500"/>
+		<set name="basePDef" value="280"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="355"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -4668,24 +4668,24 @@
 		<set name="level" value="86"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="45868"/>
+		<set name="baseHpMax" value="13256"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2298"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="498505"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1881"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="292603"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="9652"/>
-		<set name="basePAtk" value="2593"/>
-		<set name="basePDef" value="644"/>
-		<set name="baseMAtk" value="1202"/>
-		<set name="baseMDef" value="572"/>
+		<set name="rewardSp" value="5665"/>
+		<set name="basePAtk" value="5500"/>
+		<set name="basePDef" value="470"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="300"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -4725,24 +4725,24 @@
 		<set name="level" value="85"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="45632"/>
+		<set name="baseHpMax" value="13188"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2253"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="595659"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1846"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="349650"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="11369"/>
-		<set name="basePAtk" value="2477"/>
-		<set name="basePDef" value="633"/>
-		<set name="baseMAtk" value="1148"/>
-		<set name="baseMDef" value="562"/>
+		<set name="rewardSp" value="6674"/>
+		<set name="basePAtk" value="22000"/>
+		<set name="basePDef" value="345"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="330"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -4787,24 +4787,24 @@
 		<set name="level" value="87"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="46699"/>
+		<set name="baseHpMax" value="13497"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2343"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="510332"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1917"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="299545"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="10035"/>
-		<set name="basePAtk" value="2714"/>
-		<set name="basePDef" value="655"/>
-		<set name="baseMAtk" value="1258"/>
-		<set name="baseMDef" value="582"/>
+		<set name="rewardSp" value="5890"/>
+		<set name="basePAtk" value="8000"/>
+		<set name="basePDef" value="340"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="310"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -4844,24 +4844,24 @@
 		<set name="level" value="87"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="46699"/>
+		<set name="baseHpMax" value="13497"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2343"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="562536"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1917"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="330315"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="11062"/>
-		<set name="basePAtk" value="2714"/>
-		<set name="basePDef" value="655"/>
-		<set name="baseMAtk" value="1258"/>
-		<set name="baseMDef" value="582"/>
+		<set name="rewardSp" value="6495"/>
+		<set name="basePAtk" value="22500"/>
+		<set name="basePDef" value="255"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="310"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -4905,24 +4905,24 @@
 		<set name="level" value="87"/>
 		<set name="type" value="Monster"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="46699"/>
+		<set name="baseHpMax" value="13497"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
-		<set name="baseMpMax" value="2343"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
-		<set name="rewardExp" value="609874"/>
+		<set name="baseHpReg" value="8.5"/>
+		<set name="baseMpMax" value="1917"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="358061"/>
 		<set name="rewardRp" value="0"/>
-		<set name="rewardSp" value="11993"/>
-		<set name="basePAtk" value="2714"/>
-		<set name="basePDef" value="655"/>
-		<set name="baseMAtk" value="1258"/>
-		<set name="baseMDef" value="582"/>
+		<set name="rewardSp" value="7041"/>
+		<set name="basePAtk" value="20000"/>
+		<set name="basePDef" value="340"/>
+		<set name="baseMAtk" value="663"/>
+		<set name="baseMDef" value="330"/>
 		<set name="basePAtkSpd" value="299"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="398"/>
@@ -4968,15 +4968,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="9428"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="1967"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="48813"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="5068"/>
@@ -5035,15 +5035,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="9915"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2005"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="50072"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="5264"/>
@@ -5102,15 +5102,15 @@
 		<set name="baseAtkRange" value="1100"/>
 		<set name="baseHpMax" value="9428"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="1967"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="48813"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="5068"/>
@@ -5169,15 +5169,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="9428"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="1967"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="47718"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="4948"/>
@@ -5236,15 +5236,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="34874"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2085"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="208475"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="1201"/>
@@ -5305,15 +5305,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="10429"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2045"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="49827"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="5305"/>
@@ -5372,15 +5372,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="10973"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2085"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="52366"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="5502"/>
@@ -5441,15 +5441,15 @@
 		<set name="baseAtkRange" value="1100"/>
 		<set name="baseHpMax" value="10973"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2085"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="52366"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="5502"/>
@@ -5508,15 +5508,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="10973"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2085"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="51155"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="5368"/>
@@ -5575,15 +5575,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="10973"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2085"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="52366"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="5502"/>
@@ -5642,15 +5642,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="34812"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2126"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="226965"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="1201"/>
@@ -5714,15 +5714,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="34812"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2126"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="226965"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="1201"/>
@@ -5786,15 +5786,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="11549"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2126"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="55000"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="5705"/>
@@ -5853,15 +5853,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="12158"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2167"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="57733"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="5914"/>
@@ -5920,15 +5920,15 @@
 		<set name="baseAtkRange" value="1100"/>
 		<set name="baseHpMax" value="12158"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2167"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="57733"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="5914"/>
@@ -5987,15 +5987,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="12158"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2167"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="56398"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="5770"/>
@@ -6054,15 +6054,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="34600"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2210"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="252022"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="1204"/>
@@ -6126,15 +6126,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="34600"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2210"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="252022"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="1204"/>
@@ -6198,15 +6198,15 @@
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1086370"/>
 		<set name="baseHpRate" value="1.0"/>
-		<set name="baseHpReg" value="13"/>
+		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="2790"/>
-		<set name="baseMpReg" value="4"/>
-		<set name="baseSTR" value="40"/>
-		<set name="baseCON" value="43"/>
-		<set name="baseDEX" value="30"/>
-		<set name="baseINT" value="21"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="20"/>
+		<set name="baseMpReg" value="3"/>
+		<set name="baseSTR" value="89"/>
+		<set name="baseCON" value="75"/>
+		<set name="baseDEX" value="42"/>
+		<set name="baseINT" value="79"/>
+		<set name="baseWIT" value="66"/>
+		<set name="baseMEN" value="10"/>
 		<set name="rewardExp" value="8442040"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="115422"/>

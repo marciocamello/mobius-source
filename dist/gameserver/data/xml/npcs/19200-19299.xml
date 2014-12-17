@@ -2301,24 +2301,24 @@
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="1193411"/>
+		<set name="baseHpMax" value="689833"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseHpReg" value="20"/>
-		<set name="baseMpMax" value="4326"/>
+		<set name="baseMpMax" value="19524"/>
 		<set name="baseMpReg" value="7"/>
-		<set name="baseSTR" value="60"/>
-		<set name="baseCON" value="57"/>
-		<set name="baseDEX" value="73"/>
-		<set name="baseINT" value="76"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="80"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="96"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseWIT" value="128"/>
+		<set name="baseMEN" value="78"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="15515"/>
-		<set name="basePDef" value="3277"/>
-		<set name="baseMAtk" value="5309"/>
-		<set name="baseMDef" value="2142"/>
+		<set name="basePAtk" value="14000"/>
+		<set name="basePDef" value="975"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="825"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
@@ -2334,6 +2334,9 @@
 		</attributes>
 		<skills>
 			<skill id="4416" level="9"/>
+			<skill id="14942" level="1"/>
+			<skill id="14945" level="1"/>
+			<skill id="14946" level="1"/>
 		</skills>
 	</npc>
 	<npc id="19254" name="Pelline" title="Lord of Kartia">
@@ -2344,24 +2347,24 @@
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="1298930"/>
+		<set name="baseHpMax" value="750827"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseHpReg" value="20"/>
-		<set name="baseMpMax" value="4768"/>
+		<set name="baseMpMax" value="21324"/>
 		<set name="baseMpReg" value="7"/>
-		<set name="baseSTR" value="60"/>
-		<set name="baseCON" value="57"/>
-		<set name="baseDEX" value="73"/>
-		<set name="baseINT" value="76"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="80"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="96"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseWIT" value="128"/>
+		<set name="baseMEN" value="78"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="18411"/>
-		<set name="basePDef" value="3707"/>
-		<set name="baseMAtk" value="6601"/>
-		<set name="baseMDef" value="2334"/>
+		<set name="basePAtk" value="10000"/>
+		<set name="basePDef" value="1431"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="1021"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
@@ -2378,6 +2381,8 @@
 		<skills>
 			<skill id="4416" level="9"/>
 			<skill id="5462" level="1"/>
+			<skill id="14941" level="1"/>
+			<skill id="14944" level="1"/>
 		</skills>
 	</npc>
 	<npc id="19255" name="Kalios" title="Lord of Kartia">
@@ -2388,24 +2393,24 @@
 		<set name="aggroRange" value="300"/>
 		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="1773796"/>
+		<set name="baseHpMax" value="1025316"/>
 		<set name="baseHpRate" value="1"/>
 		<set name="baseHpReg" value="20"/>
-		<set name="baseMpMax" value="5254"/>
+		<set name="baseMpMax" value="23174"/>
 		<set name="baseMpReg" value="7"/>
-		<set name="baseSTR" value="60"/>
-		<set name="baseCON" value="57"/>
-		<set name="baseDEX" value="73"/>
-		<set name="baseINT" value="76"/>
-		<set name="baseWIT" value="70"/>
-		<set name="baseMEN" value="80"/>
+		<set name="baseSTR" value="109"/>
+		<set name="baseCON" value="96"/>
+		<set name="baseDEX" value="98"/>
+		<set name="baseINT" value="59"/>
+		<set name="baseWIT" value="128"/>
+		<set name="baseMEN" value="78"/>
 		<set name="rewardExp" value="0"/>
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
-		<set name="basePAtk" value="21668"/>
-		<set name="basePDef" value="4170"/>
-		<set name="baseMAtk" value="8122"/>
-		<set name="baseMDef" value="2533"/>
+		<set name="basePAtk" value="14000"/>
+		<set name="basePDef" value="1954"/>
+		<set name="baseMAtk" value="2550"/>
+		<set name="baseMDef" value="1431"/>
 		<set name="basePAtkSpd" value="253"/>
 		<set name="baseCritRate" value="4"/>
 		<set name="baseMAtkSpd" value="333"/>
@@ -2422,6 +2427,9 @@
 		<skills>
 			<skill id="4416" level="9"/>
 			<skill id="5464" level="1"/>
+			<skill id="14942" level="1"/>
+			<skill id="14945" level="1"/>
+			<skill id="14946" level="1"/>
 		</skills>
 	</npc>
 	<npc id="19256" name="Tree of Life" title="">
@@ -2672,8 +2680,8 @@
 		<set name="collision_height" value="46.0"/>
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
-		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="Tauti.KundaGuard"/>
+		<set name="aggroRange" value="300"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1536018"/>
 		<set name="baseHpRate" value="1"/>
@@ -2698,7 +2706,6 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
-		<faction name="kunda_attacker" range="400"/>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -2722,7 +2729,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Tauti.KundaGuard"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1536018"/>
 		<set name="baseHpRate" value="1"/>
@@ -2747,7 +2754,6 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
-		<faction name="kunda_attacker" range="400"/>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -2771,7 +2777,7 @@
 		<set name="level" value="99"/>
 		<set name="type" value="Monster"/>
 		<set name="aggroRange" value="300"/>
-		<set name="ai_type" value="Tauti.KundaGuard"/>
+		<set name="ai_type" value="Fighter"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="1536018"/>
 		<set name="baseHpRate" value="1"/>
@@ -2796,7 +2802,6 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
-		<faction name="kunda_attacker" range="400"/>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -2845,10 +2850,6 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
-		<faction name="kunda_attacker" range="900"/>
-		<ai_params>
-			<set name="noRandomWalk" value="true"/>
-		</ai_params>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -2893,10 +2894,6 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="186"/>
 		<set name="baseWalkSpd" value="50"/>
-		<faction name="kunda_attacker" range="900"/>
-		<ai_params>
-			<set name="noRandomWalk" value="true"/>
-		</ai_params>
 		<attributes>
 			<defence attribute="fire" value="300"/>
 			<defence attribute="water" value="300"/>
@@ -2909,11 +2906,6 @@
 			<skill id="4416" level="6"/>
 			<skill id="5462" level="1"/>
 		</skills>
-		<rewardlist type="NOT_RATED_GROUPED">
-			<group chance="100.0">
-				<reward item_id="34899" min="1" max="1" chance="100.0000" />
-			</group>
-		</rewardlist>
 	</npc>
 	<npc id="19267" name="Mysterious Box" title="">
 		<set name="collision_radius" value="8.5"/>

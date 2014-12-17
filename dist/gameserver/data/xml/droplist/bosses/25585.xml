@@ -21,8 +21,8 @@
 				<item id="6570" min="1" max="1" chance="15.50423"/>
 				<item id="729" min="1" max="1" chance="15.50423"/>
 				<item id="6569" min="1" max="1" chance="1.86049"/>
-				<item id="18151" min="1" max="1" chance="21.73950"/>
-				<item id="18164" min="1" max="1" chance="13.21119"/>
+				<item id="17338" min="1" max="1" chance="21.73950"/>
+				<item id="17351" min="1" max="1" chance="13.21119"/>
 				<item id="18142" min="1" max="1" chance="4.27270"/>
 			</category>
 			<category id="3" chance="100.000">

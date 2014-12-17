@@ -6,10 +6,10 @@
 				<item id="57" min="123" max="286" chance="100.00000"/>
 			</category>
 			<category id="2" chance="0.030">
-				<item id="18121" min="1" max="1" chance="100.00000"/>
+				<item id="17308" min="1" max="1" chance="100.00000"/>
 			</category>
 			<category id="3" chance="0.076">
-				<item id="19330" min="1" max="1" chance="98.81423"/>
+				<item id="36746" min="1" max="1" chance="98.81423"/>
 				<item id="17526" min="1" max="1" chance="1.18577"/>
 			</category>
 		</droplist>

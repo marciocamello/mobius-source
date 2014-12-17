@@ -3,17 +3,17 @@
 	<npc id="25774">
 		<droplist>
 			<category id="2" chance="22.673">
-				<item id="18104" min="1" max="1" chance="15.18105"/>
+				<item id="17291" min="1" max="1" chance="15.17292"/>
 				<item id="18109" min="1" max="1" chance="14.85026"/>
-				<item id="18103" min="1" max="1" chance="14.80616"/>
+				<item id="17290" min="1" max="1" chance="14.80616"/>
 				<item id="18113" min="1" max="1" chance="14.77969"/>
-				<item id="18107" min="1" max="1" chance="6.02038"/>
-				<item id="18111" min="1" max="1" chance="5.99832"/>
-				<item id="18105" min="1" max="1" chance="5.88365"/>
-				<item id="18112" min="1" max="1" chance="5.74251"/>
-				<item id="18106" min="1" max="1" chance="5.73810"/>
+				<item id="17294" min="1" max="1" chance="6.02038"/>
+				<item id="17298" min="1" max="1" chance="5.99832"/>
+				<item id="17292" min="1" max="1" chance="5.88365"/>
+				<item id="17299" min="1" max="1" chance="5.74251"/>
+				<item id="17293" min="1" max="1" chance="5.73810"/>
 				<item id="18110" min="1" max="1" chance="5.51758"/>
-				<item id="18108" min="1" max="1" chance="5.48229"/>
+				<item id="17295" min="1" max="1" chance="5.48229"/>
 			</category>
 			<category id="3" chance="44.770">
 				<item id="17527" min="1" max="1" chance="92.67367"/>
