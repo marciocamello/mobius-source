@@ -10,6 +10,9 @@
 				<equipment item_id="5588" count="1"/>
 				<equipment item_id="10650" count="5"/>
 				<equipment item_id="32226" count="10"/>
+				<equipment item_id="36950" count="1" />
+				<equipment item_id="33801" count="1" />
+				<equipment item_id="37314" count="1" />
 			</start_equipments>
 			<start_points>
 				<point x="-114628" y="259915" z="-1192"/>
