@@ -56,7 +56,7 @@ public class DomainParser extends AbstractFileParser<MapRegionManager>
 	@Override
 	public File getXMLFile()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/xml/other/domains.xml");
+		return new File(Config.DATAPACK_ROOT, "data/xml/mapregion/domains.xml");
 	}
 	
 	/**

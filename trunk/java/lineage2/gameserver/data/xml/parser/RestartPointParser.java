@@ -68,7 +68,7 @@ public class RestartPointParser extends AbstractFileParser<MapRegionManager>
 	@Override
 	public File getXMLFile()
 	{
-		return new File(Config.DATAPACK_ROOT, "data/xml/other/restart_points.xml");
+		return new File(Config.DATAPACK_ROOT, "data/xml/mapregion/restart_points.xml");
 	}
 	
 	/**
