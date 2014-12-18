@@ -43,7 +43,7 @@ public class LevelUpRewardHolder extends AbstractHolder
 	@Override
 	public void log()
 	{
-		info("Loaded " + _itemLevelTemplate.size() + " item rewards by level.");
+		info("Loaded " + _itemLevelTemplate.size() + " level up rewards.");
 	}
 	
 	@Override
@@ -57,17 +57,17 @@ public class LevelUpRewardHolder extends AbstractHolder
 		return _instance;
 	}
 	
-	public void addItemLevel(ItemLevel item, int levelPlayer)
+	public void addItemLevel(ItemLevel item, int playerLevel)
 	{
-		if (!_itemLevelTemplate.containsKey(levelPlayer))
+		if (!_itemLevelTemplate.containsKey(playerLevel))
 		{
-			_itemLevelTemplate.put(levelPlayer, new ArrayList<ItemLevel>());
+			_itemLevelTemplate.put(playerLevel, new ArrayList<ItemLevel>());
 		}
-		_itemLevelTemplate.get(levelPlayer).add(item);
+		_itemLevelTemplate.get(playerLevel).add(item);
 	}
 	
-	public List<ItemLevel> getItemLevel(int levelPlayer)
+	public List<ItemLevel> getItemLevel(int playerLevel)
 	{
-		return _itemLevelTemplate.get(levelPlayer) != null ? _itemLevelTemplate.get(levelPlayer) : new ArrayList<>(0);
+		return _itemLevelTemplate.get(playerLevel) != null ? _itemLevelTemplate.get(playerLevel) : new ArrayList<>(0);
 	}
 }
