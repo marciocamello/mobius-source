@@ -22,12 +22,10 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
-import quests.Q00698_BlockTheLordsEscape;
 
 /**
  * @author pchayka
@@ -266,16 +264,6 @@ public final class HeartInfinityDefence extends Reflection
 		
 		for (Player p : getPlayers())
 		{
-			if (win)
-			{
-				QuestState qs = p.getQuestState(Q00698_BlockTheLordsEscape.class);
-				
-				if ((qs != null) && (qs.getCond() == 1))
-				{
-					qs.set("defenceDone", 1);
-				}
-			}
-			
 			p.sendPacket(new ExShowScreenMessage(win ? NpcString.CONGRATULATIONS_YOU_HAVE_SUCCEEDED_AT_S1_S2_THE_INSTANCE_WILL_SHORTLY_EXPIRE : NpcString.YOU_HAVE_FAILED_AT_S1_S2, 8000, ExShowScreenMessage.ScreenMessageAlign.MIDDLE_CENTER, false, 1, -1, false, "#" + NpcString.HEART_OF_IMMORTALITY.getId(), "#" + NpcString.DEFEND.getId()));
 		}
 	}

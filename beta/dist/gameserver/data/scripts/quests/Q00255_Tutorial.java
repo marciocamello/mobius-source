@@ -253,42 +253,6 @@ public class Q00255_Tutorial extends Quest implements ScriptFile, OnPlayerEnterL
 						}
 						break;
 					
-					case 20:
-						if (player.getQuestState("Q10276_MutatedKaneusGludio") == null)
-						{
-							qs.showQuestionMark(36);
-							qs.playSound(SOUND_TUTORIAL);
-						}
-						break;
-					
-					case 28:
-						if (player.getQuestState("Q10277_MutatedKaneusDion") == null)
-						{
-							qs.showQuestionMark(36);
-							qs.playSound(SOUND_TUTORIAL);
-						}
-						else if (player.getQuestState("Q10278_MutatedKaneusHeine") == null)
-						{
-							qs.showQuestionMark(36);
-							qs.playSound(SOUND_TUTORIAL);
-						}
-						else if (player.getQuestState("Q10279_MutatedKaneusOren") == null)
-						{
-							qs.showQuestionMark(36);
-							qs.playSound(SOUND_TUTORIAL);
-						}
-						else if (player.getQuestState("Q10280_MutatedKaneusSchuttgart") == null)
-						{
-							qs.showQuestionMark(36);
-							qs.playSound(SOUND_TUTORIAL);
-						}
-						else if (player.getQuestState("Q10281_MutatedKaneusRune") == null)
-						{
-							qs.showQuestionMark(36);
-							qs.playSound(SOUND_TUTORIAL);
-						}
-						break;
-					
 					case 79:
 						if (player.getQuestState("Q00192_SevenSignsSeriesOfDoubt") == null)
 						{

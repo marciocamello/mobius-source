@@ -17,11 +17,8 @@ import instances.SufferingHallDefence;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
-import quests.Q00694_BreakThroughTheHallOfSuffering;
-import quests.Q00695_DefendTheHallOfSuffering;
 
 /**
  * @author Mobius
@@ -129,19 +126,6 @@ public final class TepiosRewardInstance extends NpcInstance
 					{
 						ItemFunctions.addItem(p, SUPPLIES6_10[Rnd.get(SUPPLIES6_10.length)], 1, true);
 					}
-				}
-				
-				QuestState qs = p.getQuestState(Q00694_BreakThroughTheHallOfSuffering.class);
-				QuestState qs2 = p.getQuestState(Q00695_DefendTheHallOfSuffering.class);
-				
-				if ((qs != null) && (getReflection().getInstancedZoneId() == 115))
-				{
-					qs.exitCurrentQuest(true);
-				}
-				
-				if ((qs2 != null) && (getReflection().getInstancedZoneId() == 116))
-				{
-					qs2.exitCurrentQuest(true);
 				}
 			}
 			
