@@ -119,7 +119,7 @@ public class Config
 			_keyPairs[i] = new ScrambledKeyPair(keygen.generateKeyPair());
 		}
 		
-		_log.info("Cached " + _keyPairs.length + " KeyPairs for RSA communication");
+		_log.info("Cached " + _keyPairs.length + " KeyPairs for RSA communication.");
 		_blowfishKeys = new byte[Config.LOGIN_BLOWFISH_KEYS][16];
 		
 		for (int i = 0; i < _blowfishKeys.length; i++)
@@ -130,7 +130,7 @@ public class Config
 			}
 		}
 		
-		_log.info("Stored " + _blowfishKeys.length + " keys for Blowfish communication");
+		_log.info("Stored " + _blowfishKeys.length + " keys for Blowfish communication.");
 	}
 	
 	/**
@@ -158,7 +158,7 @@ public class Config
 				}
 			}
 			
-			_log.info("Loaded " + SERVER_NAMES.size() + " server names");
+			_log.info("Loaded " + SERVER_NAMES.size() + " server names.");
 		}
 		catch (Exception e)
 		{
