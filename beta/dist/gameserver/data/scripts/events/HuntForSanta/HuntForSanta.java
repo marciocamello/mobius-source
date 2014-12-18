@@ -114,8 +114,8 @@ public final class HuntForSanta extends Functions implements ScriptFile
 		}
 		else
 		{
+			removeEventBuffs(player);
 			buff(npc, player, buffId);
-			player.setVar(EVENT_NAME, "ExpirationTime", System.currentTimeMillis() + (BUFF_REUSE_HOURS * 60 * 59 * 1000L));
 			htmltext = "hunt_for_santa_successfull.htm";
 		}
 		
@@ -153,10 +153,10 @@ public final class HuntForSanta extends Functions implements ScriptFile
 		}
 		else if ((party != null) && ((partyRaces.size() >= 3) || (party.getMemberCount() >= 7)))
 		{
+			removeEventBuffs(player);
 			buff(npc, player, BUFF_STOCKING);
 			buff(npc, player, BUFF_TREE);
 			buff(npc, player, BUFF_SNOWMAN);
-			player.setVar(EVENT_NAME, "ExpirationTime", System.currentTimeMillis() + (BUFF_REUSE_HOURS * 60 * 59 * 1000L));
 			htmltext = "hunt_for_santa_successfull.htm";
 		}
 		else
@@ -165,6 +165,17 @@ public final class HuntForSanta extends Functions implements ScriptFile
 		}
 		
 		show("scripts/events/HuntForSanta/" + htmltext, player);
+	}
+	
+	private void removeEventBuffs(Player player)
+	{
+		player.setVar(EVENT_NAME, "ExpirationTime", System.currentTimeMillis() + (BUFF_REUSE_HOURS * 60 * 59 * 1000L));
+		player.getEffectList().stopEffect(BUFF_STOCKING);
+		player.getEffectList().removeEffect(BUFF_STOCKING);
+		player.getEffectList().stopEffect(BUFF_TREE);
+		player.getEffectList().removeEffect(BUFF_TREE);
+		player.getEffectList().stopEffect(BUFF_SNOWMAN);
+		player.getEffectList().removeEffect(BUFF_SNOWMAN);
 	}
 	
 	private void buff(NpcInstance npc, Player player, int skillId)
@@ -182,12 +193,7 @@ public final class HuntForSanta extends Functions implements ScriptFile
 		
 		final Player player = getSelf().getPlayer();
 		
-		player.getEffectList().stopEffect(BUFF_STOCKING);
-		player.getEffectList().removeEffect(BUFF_STOCKING);
-		player.getEffectList().stopEffect(BUFF_TREE);
-		player.getEffectList().removeEffect(BUFF_TREE);
-		player.getEffectList().stopEffect(BUFF_SNOWMAN);
-		player.getEffectList().removeEffect(BUFF_SNOWMAN);
+		removeEventBuffs(player);
 		player.unsetVar(EVENT_NAME);
 		
 		show("default/34008-1.htm", player);
