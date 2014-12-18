@@ -14,7 +14,6 @@ package ai.Hellbound;
 
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.Fighter;
-import lineage2.gameserver.instancemanager.HellboundManager;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -80,22 +79,5 @@ public final class Chimera extends Fighter
 		
 		actor.doDie(null);
 		actor.endDecayTask();
-	}
-	
-	/**
-	 * Method onEvtAttacked.
-	 * @param attacker Creature
-	 * @param damage int
-	 */
-	@Override
-	protected void onEvtAttacked(Creature attacker, int damage)
-	{
-		if (HellboundManager.getHellboundLevel() < 7)
-		{
-			attacker.teleToLocation(-11272, 236464, -3248);
-			return;
-		}
-		
-		super.onEvtAttacked(attacker, damage);
 	}
 }

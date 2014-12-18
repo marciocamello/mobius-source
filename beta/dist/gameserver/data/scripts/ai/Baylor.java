@@ -19,7 +19,6 @@ import lineage2.commons.threading.RunnableImpl;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.ai.DefaultAI;
-import lineage2.gameserver.instancemanager.HellboundManager;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
@@ -238,20 +237,5 @@ public final class Baylor extends DefaultAI
 	protected boolean maybeMoveToHome()
 	{
 		return false;
-	}
-	
-	/**
-	 * Method onEvtDead.
-	 * @param killer Creature
-	 */
-	@Override
-	protected void onEvtDead(Creature killer)
-	{
-		if (HellboundManager.getConfidence() < 1)
-		{
-			HellboundManager.setConfidence(1);
-		}
-		
-		super.onEvtDead(killer);
 	}
 }

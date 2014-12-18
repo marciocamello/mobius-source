@@ -14,7 +14,6 @@ package npc.model;
 
 import java.util.StringTokenizer;
 
-import lineage2.gameserver.instancemanager.HellboundManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
@@ -67,7 +66,6 @@ public final class NativePrisonerInstance extends NpcInstance
 		{
 			stopAbnormalEffect(AbnormalEffect.HOLD_2);
 			Functions.npcSay(this, "Thank you for saving me! Guards are coming, run!");
-			HellboundManager.addConfidence(15);
 			deleteMe();
 		}
 		else

@@ -45,7 +45,6 @@ import lineage2.gameserver.instancemanager.CursedWeaponsManager;
 import lineage2.gameserver.instancemanager.DelusionChamberManager;
 import lineage2.gameserver.instancemanager.FindPartyManager;
 import lineage2.gameserver.instancemanager.HarnakUndegroundManager;
-import lineage2.gameserver.instancemanager.HellboundManager;
 import lineage2.gameserver.instancemanager.L2TopManager;
 import lineage2.gameserver.instancemanager.MMOTopManager;
 import lineage2.gameserver.instancemanager.PetitionManager;
@@ -248,7 +247,6 @@ public class GameServer
 		EventHolder.getInstance().callInit();
 		BoatHolder.getInstance().spawnAll();
 		CastleManorManager.getInstance();
-		HellboundManager.getInstance();
 		NaiaTowerManager.getInstance();
 		NaiaCoreManager.getInstance();
 		SoDManager.getInstance();

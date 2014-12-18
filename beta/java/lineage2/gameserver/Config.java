@@ -415,7 +415,6 @@ public class Config
 	public static double RATE_DROP_SIEGE_GUARD;
 	public static double RATE_MANOR;
 	public static boolean RATE_PARTY_MIN;
-	public static double RATE_HELLBOUND_CONFIDENCE;
 	public static int RATE_MOB_SPAWN;
 	public static int RATE_MOB_SPAWN_MIN_LEVEL;
 	public static int RATE_MOB_SPAWN_MAX_LEVEL;
@@ -710,6 +709,8 @@ public class Config
 	public static int ALT_PET_INVENTORY_LIMIT;
 	public static boolean SAVE_GM_SPAWN_CUSTOM;
 	public static boolean LOAD_GM_SPAWN_CUSTOM;
+	public static int HELLBOUND_MIN_PLAYER_LEVEL;
+	public static boolean HELLBOUND_MAP_WITHOUT_ITEM;
 	public static int STARTING_ADENA;
 	public static int STARTING_LEVEL;
 	public static int SUB_START_LEVEL;
@@ -1104,7 +1105,6 @@ public class Config
 		NO_RATE_KEY_MATERIAL = rateSettings.getProperty("NoRateKeyMaterial", true);
 		NO_RATE_RECIPES = rateSettings.getProperty("NoRateRecipes", true);
 		RATE_PARTY_MIN = rateSettings.getProperty("RatePartyMin", false);
-		RATE_HELLBOUND_CONFIDENCE = rateSettings.getProperty("RateHellboundConfidence", 1.);
 		RATE_MOB_SPAWN = rateSettings.getProperty("RateMobSpawn", 1);
 		RATE_MOB_SPAWN_MIN_LEVEL = rateSettings.getProperty("RateMobMinLevel", 1);
 		RATE_MOB_SPAWN_MAX_LEVEL = rateSettings.getProperty("RateMobMaxLevel", 100);
@@ -1723,6 +1723,8 @@ public class Config
 		ALT_PET_INVENTORY_LIMIT = altSettings.getProperty("AltPetInventoryLimit", 12);
 		SAVE_GM_SPAWN_CUSTOM = altSettings.getProperty("SaveGmSpawnCustom", false);
 		LOAD_GM_SPAWN_CUSTOM = altSettings.getProperty("LoadGmSpawnCustom", false);
+		HELLBOUND_MIN_PLAYER_LEVEL = altSettings.getProperty("HellboundMinimumPlayerLevel", 99);
+		HELLBOUND_MAP_WITHOUT_ITEM = altSettings.getProperty("HellboundMapWithoutItem", false);
 	}
 	
 	/**

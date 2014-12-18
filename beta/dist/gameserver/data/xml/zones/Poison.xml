@@ -2539,7 +2539,7 @@
 			<coords loc="211420 -110828 -1608 -1408"/>
 		</polygon>
 	</zone>
-	<zone name="[hellbound_heat1]" type="Poison">
+	<!-- <zone name="[hellbound_heat1]" type="Poison">
 		<set name="enabled" val="true"/>
 		<set name="target" val="pc"/>
 		<set name="skill_name" val="5399;1"/>
@@ -2568,7 +2568,7 @@
 			<coords loc="13620 242495 -5980 1020"/>
 			<coords loc="131 242444 -5980 1020"/>
 		</polygon>
-	</zone>
+	</zone> -->
 	<zone name="[stakato_mob_buff]" type="Poison">
 		<set name="enabled" val="false"/>
 		<set name="target" val="npc"/>

@@ -12,9 +12,10 @@
  */
 package npc.model;
 
-import lineage2.gameserver.instancemanager.HellboundManager;
+import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
+import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
 /**
@@ -49,9 +50,9 @@ public final class WarpgateInstance extends NpcInstance
 		
 		if (command.startsWith("enter_hellbound"))
 		{
-			if ((HellboundManager.getHellboundLevel() != 0) && player.isQuestCompleted("Q00130_PathToHellbound"))
+			if ((player.getLevel() >= Config.HELLBOUND_MIN_PLAYER_LEVEL) || (Functions.getItemCount(player, 45448) != 0))
 			{
-				player.teleToLocation(-11272, 236464, -3248);
+				player.teleToLocation(9160, 252040, -2053); // need retail coords
 				return;
 			}
 			

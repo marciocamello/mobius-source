@@ -14,7 +14,6 @@ package npc.model;
 
 import java.util.StringTokenizer;
 
-import lineage2.gameserver.instancemanager.HellboundManager;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -64,10 +63,9 @@ public final class QuarrySlaveInstance extends NpcInstance
 		
 		StringTokenizer st = new StringTokenizer(command);
 		
-		if (st.nextToken().equals("rescue") && (HellboundManager.getHellboundLevel() == 5))
+		if (st.nextToken().equals("rescue"))
 		{
 			Functions.npcSay(this, "Sh-h! Guards are around, let's go.");
-			HellboundManager.addConfidence(10);
 			doDie(null);
 			endDecayTask();
 		}

@@ -5,11 +5,19 @@
 		<set name="stackable" value="true"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="type" value="OTHER"/>
-	</etcitem>		
+	</etcitem>
 	<etcitem id="45435" name="NC Dinos Uniform Appearance Stone" add_name="30-day">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
-	</etcitem>	
+	</etcitem>
+	<etcitem id="45448" name="Visitation Scroll: Hellbound" add_name="90-min">
+		<set name="crystal_type" value="NONE"/>
+		<set name="durability" value="90"/>
+		<set name="stackable" value="true"/>
+		<set name="temporal" value="true"/>
+		<set name="type" value="OTHER"/>
+		<set name="weight" value="30"/>
+	</etcitem>
 </list>

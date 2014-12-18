@@ -12,6 +12,7 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
+import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.network.serverpackets.ShowMiniMap;
@@ -45,7 +46,7 @@ public class RequestShowMiniMap extends L2GameClientPacket
 			return;
 		}
 		
-		if (activeChar.isActionBlocked(Zone.BLOCKED_ACTION_MINIMAP) || (activeChar.isInZone("[Hellbound_territory]") && (Functions.getItemCount(activeChar, 9994) == 0)))
+		if (activeChar.isActionBlocked(Zone.BLOCKED_ACTION_MINIMAP) || (!Config.HELLBOUND_MAP_WITHOUT_ITEM && activeChar.isInZone("[Hellbound_territory]") && (Functions.getItemCount(activeChar, 9994) == 0)))
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessage.THIS_IS_AN_AREA_WHERE_YOU_CANNOT_USE_THE_MINI_MAP_THE_MINI_MAP_WILL_NOT_BE_OPENED));
 			return;
