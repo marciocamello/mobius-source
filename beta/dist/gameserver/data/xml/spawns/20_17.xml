@@ -30,7 +30,7 @@
 		<npc id="30058"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="15631" y="142885" z="-2696" h="59007"/>
+		<point x="15631" y="142885" z="-2696" h="16000"/>
 		<npc id="30059"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
