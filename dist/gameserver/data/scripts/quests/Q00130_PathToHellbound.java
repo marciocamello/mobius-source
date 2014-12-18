@@ -12,7 +12,6 @@
  */
 package quests;
 
-import lineage2.gameserver.instancemanager.HellboundManager;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
@@ -72,12 +71,6 @@ public class Q00130_PathToHellbound extends Quest implements ScriptFile
 				{
 					qs.playSound(SOUND_FINISH);
 					qs.takeItems(CASIAN_BLUE_CRY, -1);
-					
-					if (HellboundManager.getHellboundLevel() == 0)
-					{
-						HellboundManager.getInstance().openHellbound();
-					}
-					
 					qs.exitCurrentQuest(false);
 				}
 				break;

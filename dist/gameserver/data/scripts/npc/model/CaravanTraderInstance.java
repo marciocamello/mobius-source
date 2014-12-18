@@ -18,7 +18,6 @@ import java.util.StringTokenizer;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.data.xml.holder.MultiSellHolder;
-import lineage2.gameserver.instancemanager.HellboundManager;
 import lineage2.gameserver.instancemanager.ServerVariables;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
@@ -196,7 +195,6 @@ public final class CaravanTraderInstance extends NpcInstance
 				}
 				
 				Functions.removeItem(player, DarionsBadge, val);
-				HellboundManager.addConfidence(val * 10L);
 				showDialog(player, getHtmlPath(getId(), 3, player));
 				return;
 			}
@@ -240,7 +238,6 @@ public final class CaravanTraderInstance extends NpcInstance
 						}
 						
 						Functions.removeItem(player, LifeForce, 10);
-						HellboundManager.addConfidence(100);
 						showDialog(player, getHtmlPath(getId(), 3, player));
 						break;
 					
@@ -252,7 +249,6 @@ public final class CaravanTraderInstance extends NpcInstance
 						}
 						
 						Functions.removeItem(player, DimLifeForce, 5);
-						HellboundManager.addConfidence(100);
 						showDialog(player, getHtmlPath(getId(), 3, player));
 						break;
 					
@@ -264,7 +260,6 @@ public final class CaravanTraderInstance extends NpcInstance
 						}
 						
 						Functions.removeItem(player, ContainedLifeForce, 1);
-						HellboundManager.addConfidence(50);
 						showDialog(player, getHtmlPath(getId(), 3, player));
 						break;
 				}
@@ -378,7 +373,6 @@ public final class CaravanTraderInstance extends NpcInstance
 			if (player.getInventory().getCountOf(DarionsBadge) >= 5)
 			{
 				Functions.removeItem(player, DarionsBadge, 5);
-				HellboundManager.addConfidence(20);
 				showDialog(player, getHtmlPath(getId(), 2, player));
 				return;
 			}
@@ -483,15 +477,7 @@ public final class CaravanTraderInstance extends NpcInstance
 		switch (getId())
 		{
 			case 32356:
-				if (HellboundManager.getHellboundLevel() <= 1)
-				{
-					htmlpath = getHtmlPath(getId(), 0, player);
-				}
-				else if (HellboundManager.getHellboundLevel() == 5)
-				{
-					htmlpath = getHtmlPath(getId(), 5, player);
-				}
-				else if (!ServerVariables.getBool("HB_judesBoxes", false))
+				if (!ServerVariables.getBool("HB_judesBoxes", false))
 				{
 					htmlpath = getHtmlPath(getId(), 1, player);
 				}
@@ -506,102 +492,30 @@ public final class CaravanTraderInstance extends NpcInstance
 				{
 					htmlpath = getHtmlPath(getId(), 5, player);
 				}
-				else if (HellboundManager.getHellboundLevel() < 2)
-				{
-					htmlpath = getHtmlPath(getId(), 0, player);
-				}
-				else if (HellboundManager.getHellboundLevel() == 2)
-				{
-					htmlpath = getHtmlPath(getId(), 1, player);
-				}
-				else if ((HellboundManager.getHellboundLevel() == 3) && !ServerVariables.getBool("HB_bernardBoxes", false))
-				{
-					htmlpath = getHtmlPath(getId(), 2, player);
-				}
-				else if (HellboundManager.getHellboundLevel() >= 3)
+				else
 				{
 					htmlpath = getHtmlPath(getId(), 7, player);
 				}
 				break;
 			
 			case 32297:
-				if (HellboundManager.getHellboundLevel() <= 1)
-				{
-					htmlpath = getHtmlPath(getId(), 0, player);
-				}
-				else if (HellboundManager.getHellboundLevel() > 1)
-				{
-					htmlpath = getHtmlPath(getId(), 1, player);
-				}
+				htmlpath = getHtmlPath(getId(), 1, player);
 				break;
 			
 			case 32354:
-				if (HellboundManager.getHellboundLevel() <= 1)
-				{
-					htmlpath = getHtmlPath(getId(), 0, player);
-				}
-				else if ((HellboundManager.getHellboundLevel() == 2) || (HellboundManager.getHellboundLevel() == 3))
-				{
-					htmlpath = getHtmlPath(getId(), 1, player);
-				}
-				else if (HellboundManager.getHellboundLevel() == 6)
-				{
-					htmlpath = getHtmlPath(getId(), 9, player);
-				}
-				else if (HellboundManager.getHellboundLevel() == 7)
-				{
-					htmlpath = getHtmlPath(getId(), 10, player);
-				}
-				else if (HellboundManager.getHellboundLevel() > 7)
-				{
-					htmlpath = getHtmlPath(getId(), 5, player);
-				}
-				else
-				{
-					htmlpath = getHtmlPath(getId(), 8, player);
-				}
+				htmlpath = getHtmlPath(getId(), 5, player);
 				break;
 			
 			case 32345:
-				if (HellboundManager.getHellboundLevel() <= 1)
-				{
-					htmlpath = getHtmlPath(getId(), 0, player);
-				}
-				else if (HellboundManager.getHellboundLevel() == 5)
-				{
-					htmlpath = getHtmlPath(getId(), 7, player);
-				}
-				else if (HellboundManager.getHellboundLevel() == 6)
-				{
-					htmlpath = getHtmlPath(getId(), 5, player);
-				}
-				else if (HellboundManager.getHellboundLevel() == 8)
-				{
-					htmlpath = getHtmlPath(getId(), 6, player);
-				}
-				else
-				{
-					htmlpath = getHtmlPath(getId(), 1, player);
-				}
+				htmlpath = getHtmlPath(getId(), 1, player);
 				break;
 			
 			case 32355:
-				if (HellboundManager.getHellboundLevel() == 5)
-				{
-					htmlpath = getHtmlPath(getId(), 1, player);
-				}
-				else
-				{
-					htmlpath = getHtmlPath(getId(), 0, player);
-				}
+				htmlpath = getHtmlPath(getId(), 0, player);
 				break;
 			
 			case 32298:
-				if (HellboundManager.getHellboundLevel() <= 1)
-				{
-					htmlpath = getHtmlPath(getId(), 0, player);
-				}
-				else if (!hasProperMark(player, 1))
+				if (!hasProperMark(player, 1))
 				{
 					htmlpath = getHtmlPath(getId(), 1, player);
 				}
@@ -620,73 +534,27 @@ public final class CaravanTraderInstance extends NpcInstance
 				break;
 			
 			case 32364:
-				if (HellboundManager.getHellboundLevel() == 5)
-				{
-					htmlpath = getHtmlPath(getId(), 0, player);
-				}
-				else
-				{
-					htmlpath = getHtmlPath(getId(), 6, player);
-				}
+				htmlpath = getHtmlPath(getId(), 6, player);
 				break;
 			
 			case 32357:
-				if (HellboundManager.getHellboundLevel() == 9)
-				{
-					htmlpath = getHtmlPath(getId(), 1, player);
-				}
-				else if (HellboundManager.getHellboundLevel() == 10)
-				{
-					htmlpath = getHtmlPath(getId(), 4, player);
-				}
-				else
-				{
-					htmlpath = getHtmlPath(getId(), 0, player);
-				}
+				htmlpath = getHtmlPath(getId(), 0, player);
 				break;
 			
 			case 32346:
-				if (HellboundManager.getHellboundLevel() >= 10)
-				{
-					htmlpath = getHtmlPath(getId(), 0, player);
-				}
-				else
-				{
-					htmlpath = getHtmlPath(getId(), 3, player);
-				}
+				htmlpath = getHtmlPath(getId(), 0, player);
 				break;
 			
 			case 32313:
-				if (HellboundManager.getHellboundLevel() >= 11)
-				{
-					htmlpath = getHtmlPath(getId(), 0, player);
-				}
-				else
-				{
-					htmlpath = getHtmlPath(getId(), 2, player);
-				}
+				htmlpath = getHtmlPath(getId(), 0, player);
 				break;
 			
 			case 32302:
-				if (HellboundManager.getHellboundLevel() >= 11)
-				{
-					htmlpath = getHtmlPath(getId(), 0, player);
-				}
-				else
-				{
-					htmlpath = getHtmlPath(getId(), 3, player);
-				}
+				htmlpath = getHtmlPath(getId(), 0, player);
 				break;
 			
 			case 32373:
-				if (HellboundManager.getHellboundLevel() >= 11)
-				{
-					htmlpath = getHtmlPath(getId(), 0, player);
-				}
-				else
-				{
-					htmlpath = getHtmlPath(getId(), 3, player);
-				}
+				htmlpath = getHtmlPath(getId(), 0, player);
 				break;
 		}
 		
