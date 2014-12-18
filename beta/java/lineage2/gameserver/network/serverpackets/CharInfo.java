@@ -166,7 +166,7 @@ public class CharInfo extends L2GameServerPacket
 		_cubics = _activeChar.getCubics().toArray(new EffectCubic[_activeChar.getCubics().size()]);
 		_aveList = _activeChar.getAveList();
 		
-		_showHairAccessory = 1;
+		_showHairAccessory = _activeChar.isHairAccessoryEnabled() ? 0x01 : 0x00;
 		_abilityPoints = 0;
 		_specialEffect = 0;
 		_structType = 37;

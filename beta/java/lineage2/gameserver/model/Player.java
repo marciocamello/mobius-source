@@ -9805,6 +9805,17 @@ public final class Player extends Playable implements PlayerGroup
 	}
 	
 	/**
+	 * Method setVar.
+	 * @param name String
+	 * @param value boolean
+	 * @param expirationTime long
+	 */
+	public void setVar(String name, boolean value, long expirationTime)
+	{
+		setVar(name, value ? "true" : "false", expirationTime);
+	}
+	
+	/**
 	 * Method unsetVar.
 	 * @param name String
 	 */
@@ -15366,6 +15377,16 @@ public final class Player extends Playable implements PlayerGroup
 	public boolean isChaotic()
 	{
 		return getKarma() < 0;
+	}
+	
+	public final boolean isHairAccessoryEnabled()
+	{
+		return getVarB("hairAccessoryEnabled", true);
+	}
+	
+	public final void setHairAccessoryEnabled(boolean enabled)
+	{
+		setVar("hairAccessoryEnabled", enabled, -1);
 	}
 	
 	public void setAppearanceStone(final ItemInstance enchantItem)

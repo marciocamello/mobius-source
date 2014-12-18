@@ -334,7 +334,7 @@ public class UserInfo extends L2GameServerPacket
 		_hairStyle = player.getHairStyle();
 		_hairColor = player.getHairColor();
 		_face = player.getFace();
-		_showHairAccessory = 1;
+		_showHairAccessory = player.isHairAccessoryEnabled() ? 0x01 : 0x00;
 		_clanId = player.getClanId();
 		_isClanLeader = player.isClanLeader() ? 1 : 0;
 		
