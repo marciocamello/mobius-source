@@ -2453,8 +2453,6 @@
 		<region map="16_24"/>
 		<region map="16_25"/>
 		<region map="17_14"/>
-		<region map="17_24"/>
-		<region map="17_25"/>
 		<region map="18_25"/>
 		<restart race="human" loc="[talking_island_town]"/>
 		<restart race="elf" loc="[talking_island_town]"/>
@@ -2571,6 +2569,17 @@
 		<restart race="dwarf" loc="[arcan_town]"/>
 		<restart race="kamael" loc="[arcan_town]"/>
 		<restart race="ertheia" loc="[arcan_town]"/>
+	</restart_area>
+	<restart_area>
+		<region map="17_24"/>
+		<region map="17_25"/>
+		<restart race="human" loc="[faeron_village]"/>
+		<restart race="elf" loc="[faeron_village]"/>
+		<restart race="darkelf" loc="[faeron_village]"/>
+		<restart race="orc" loc="[faeron_village]"/>
+		<restart race="dwarf" loc="[faeron_village]"/>
+		<restart race="kamael" loc="[faeron_village]"/>
+		<restart race="ertheia" loc="[faeron_village]"/>
 	</restart_area>
 	<restart_area>
 		<region map="20_17"/>
@@ -4247,6 +4256,19 @@
 			<coords loc="-83808 251264 -3630"/>
 			<coords loc="-83328 238304 -3700"/>
 			<coords loc="-91296 236272 -3690"/>
+		</PKrestart_point>
+	</restart_loc>
+	<restart_loc name="[faeron_village]" bbs="1" msg_id="910">
+		<restart_point>
+			<coords loc="-78615 248628 -3296"/>
+			<coords loc="-80316 248142 -3488"/>
+		</restart_point>
+		<PKrestart_point>
+			<coords loc="-84057 245761 -3456"/>
+			<coords loc="-83445 248498 -3736"/>
+			<coords loc="-81552 244656 -3616"/>
+			<coords loc="-76726 244073 -3672"/>
+			<coords loc="-78831 244842 -3664"/>
 		</PKrestart_point>
 	</restart_loc>
 </list>
