@@ -1079,7 +1079,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="texture" value=""/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="AltarOfSouls"/>
 		<ai_params>
 			<set name="showName" value="true"/>
 			<set name="show Title" value="true"/>
@@ -2431,7 +2431,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="texture" value=""/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="Adventurer"/>
 		<ai_params>
 			<set name="showName" value="true"/>
 			<set name="show Title" value="true"/>

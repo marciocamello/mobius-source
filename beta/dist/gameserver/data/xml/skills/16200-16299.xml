@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="16100" levels="1" name="Presentation">
+		<set name="icon" val="icon.skill0000"/>
+		<set name="target" val="TARGET_NONE"/>
+		<set name="skillType" val="NOTDONE"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="castRange" val="600"/>
+		<set name="hitTime" val="10000"/>
+	</skill>
+	<skill id="16208" levels="4" name="Fire Spike">
+		<table name="#effectPoint">360 379 399 418</table>
+		<table name="#elementPower">100 200 300 400</table>
+		<table name="#power">1000 1150 1300 1500</table>
+		<set name="magicType" val="MAGIC"/>
+		<set name="reuseDelay" val="1200"/>
+		<set name="power" val="#power"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="4000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume" val="25"/>
+		<set name="effectPoint" val="#effectPoint"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="fire"/>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="shieldignore" val="true"/>
+	</skill>
+	<skill id="16210" levels="4" name="Wind Spike">
+		<table name="#effectPoint">360 379 399 418</table>
+		<table name="#elementPower">100 200 300 400</table>
+		<table name="#power">1000 1150 1300 1500</table>
+		<set name="magicType" val="MAGIC"/>
+		<set name="reuseDelay" val="1200"/>
+		<set name="power" val="#power"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="4000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume" val="25"/>
+		<set name="effectPoint" val="#effectPoint"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="wind"/>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="shieldignore" val="true"/>
+	</skill>
+	<skill id="16211" levels="4" name="Earth Spike">
+		<table name="#effectPoint">360 379 399 418</table>
+		<table name="#elementPower">100 200 300 400</table>
+		<table name="#power">1000 1150 1300 1500</table>
+		<set name="magicType" val="MAGIC"/>
+		<set name="reuseDelay" val="1200"/>
+		<set name="power" val="#power"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="4000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume" val="25"/>
+		<set name="effectPoint" val="#effectPoint"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="earth"/>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="shieldignore" val="true"/>
+	</skill>
+	<skill id="16214" levels="4" name="Fire Buster">
+		<table name="#effectPoint">360 379 399 418</table>
+		<table name="#elementPower">100 200 300 400</table>
+		<table name="#power">1000 1150 1300 1500</table>
+		<set name="magicType" val="MAGIC"/>
+		<set name="reuseDelay" val="1200"/>
+		<set name="power" val="#power"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="4000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume" val="25"/>
+		<set name="effectPoint" val="#effectPoint"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="fire"/>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="shieldignore" val="true"/>
+	</skill>
+	<skill id="16216" levels="4" name="Wind Buster">
+		<table name="#effectPoint">360 379 399 418</table>
+		<table name="#elementPower">100 200 300 400</table>
+		<table name="#power">1000 1150 1300 1500</table>
+		<set name="magicType" val="MAGIC"/>
+		<set name="reuseDelay" val="1200"/>
+		<set name="power" val="#power"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="4000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume" val="25"/>
+		<set name="effectPoint" val="#effectPoint"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="wind"/>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="shieldignore" val="true"/>
+	</skill>
+	<skill id="16217" levels="4" name="Earth Buster">
+		<table name="#effectPoint">360 379 399 418</table>
+		<table name="#elementPower">100 200 300 400</table>
+		<table name="#power">1000 1150 1300 1500</table>
+		<set name="magicType" val="MAGIC"/>
+		<set name="reuseDelay" val="1200"/>
+		<set name="power" val="#power"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="4000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume" val="25"/>
+		<set name="effectPoint" val="#effectPoint"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="earth"/>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="shieldignore" val="true"/>
+	</skill>
+	<skill id="16220" levels="4" name="Fire Blast">
+		<table name="#effectPoint">360 379 399 418</table>
+		<table name="#elementPower">100 200 300 400</table>
+		<table name="#power">1000 1150 1300 1500</table>
+		<set name="magicType" val="MAGIC"/>
+		<set name="reuseDelay" val="1200"/>
+		<set name="power" val="#power"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="4000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume" val="25"/>
+		<set name="effectPoint" val="#effectPoint"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="fire"/>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="shieldignore" val="true"/>
+	</skill>
+	<skill id="16222" levels="4" name="Wind Blast">
+		<table name="#effectPoint">360 379 399 418</table>
+		<table name="#elementPower">100 200 300 400</table>
+		<table name="#power">1000 1150 1300 1500</table>
+		<set name="magicType" val="MAGIC"/>
+		<set name="reuseDelay" val="1200"/>
+		<set name="power" val="#power"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="4000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume" val="25"/>
+		<set name="effectPoint" val="#effectPoint"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="wind"/>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="shieldignore" val="true"/>
+	</skill>
+	<skill id="16223" levels="4" name="Earth Blast">
+		<table name="#effectPoint">360 379 399 418</table>
+		<table name="#elementPower">100 200 300 400</table>
+		<table name="#power">1000 1150 1300 1500</table>
+		<set name="magicType" val="MAGIC"/>
+		<set name="reuseDelay" val="1200"/>
+		<set name="power" val="#power"/>
+		<set name="castRange" val="900"/>
+		<set name="hitTime" val="4000"/>
+		<set name="hitCancelTime" val="500"/>
+		<set name="mpConsume" val="25"/>
+		<set name="effectPoint" val="#effectPoint"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="element" val="earth"/>
+		<set name="elementPower" val="#elementPower"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="shieldignore" val="true"/>
+	</skill>
+</list>

@@ -2620,4 +2620,172 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
+	<npc id="25942" name="Flaming Ladar" title="Raid Boss">
+		<set name="baseHpMax" value="56685422"/>
+		<set name="baseMAtkSpd" value="1500"/>
+		<set name="basePAtkSpd" value="400"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="10.0"/>
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMAtk" value="1500"/>
+		<set name="baseMDef" value="656"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="69522"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="basePAtk" value="56034"/>
+		<set name="basePDef" value="870"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="20"/>
+		<set name="castle_id" value="1"/>
+		<set name="level" value="98"/>
+		<set name="rewardExp" value="9339738544"/>
+		<set name="rewardRp" value="300"/>
+		<set name="rewardSp" value="2241537"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="RaidBoss"/>
+		<skills>
+			<skill id="16208" level="1" />
+			<skill id="16214" level="1" />
+			<skill id="16220" level="1" />
+			<skill id="5462" level="1" />
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
+		</attributes>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100">
+				<reward item_id="57" chance="80" min="1000" max="100000"/>
+			</group>
+		</rewardlist>
+	</npc>
+	<npc id="25943" name="Wind Cassius" title="Raid Boss">
+		<set name="baseHpMax" value="43557445"/>
+		<set name="baseMAtkSpd" value="1500"/>
+		<set name="basePAtkSpd" value="400"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="10.0"/>
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMAtk" value="1500"/>
+		<set name="baseMDef" value="656"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="63972"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="basePAtk" value="44034"/>
+		<set name="basePDef" value="870"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="20"/>
+		<set name="castle_id" value="1"/>
+		<set name="level" value="93"/>
+		<set name="rewardExp" value="7998784282"/>
+		<set name="rewardRp" value="300"/>
+		<set name="rewardSp" value="1919708"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="RaidBoss"/>
+		<skills>
+			<skill id="16210" level="1" />
+			<skill id="16216" level="1" />
+			<skill id="16222" level="1" />
+			<skill id="5464" level="1" />
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
+		</attributes>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100">
+				<reward item_id="57" chance="80" min="1000" max="100000"/>
+			</group>
+		</rewardlist>
+	</npc>
+	<npc id="25944" name="Earth Terakan" title="Raid Boss">
+		<set name="baseHpMax" value="38196052"/>
+		<set name="baseMAtkSpd" value="1500"/>
+		<set name="basePAtkSpd" value="400"/>
+		<set name="baseRunSpd" value="120"/>
+		<set name="baseWalkSpd" value="50"/>
+		<set name="collision_height" value="24.0"/>
+		<set name="collision_radius" value="10.0"/>
+		<set name="aggroRange" value="0"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseCON" value="43"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseMAtk" value="1500"/>
+		<set name="baseMDef" value="656"/>
+		<set name="baseMEN" value="20"/>
+		<set name="baseMpMax" value="58572"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="basePAtk" value="27034"/>
+		<set name="basePDef" value="870"/>
+		<set name="baseSTR" value="40"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseWIT" value="20"/>
+		<set name="castle_id" value="1"/>
+		<set name="level" value="88"/>
+		<set name="rewardExp" value="6810821128"/>
+		<set name="rewardRp" value="300"/>
+		<set name="rewardSp" value="1634597"/>
+		<set name="shots" value="NONE"/>
+		<set name="texture" value=""/>
+		<set name="type" value="RaidBoss"/>
+		<skills>
+			<skill id="16211" level="1" />
+			<skill id="16217" level="1" />
+			<skill id="16223" level="1" />
+			<skill id="5465" level="1" />
+		</skills>
+		<attributes>
+			<defence attribute="fire" value="150"/>
+			<defence attribute="water" value="150"/>
+			<defence attribute="wind" value="150"/>
+			<defence attribute="earth" value="150"/>
+			<defence attribute="holy" value="150"/>
+			<defence attribute="unholy" value="150"/>
+		</attributes>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100">
+				<reward item_id="57" chance="80" min="1000" max="100000"/>
+			</group>
+		</rewardlist>
+	</npc>
 </list>

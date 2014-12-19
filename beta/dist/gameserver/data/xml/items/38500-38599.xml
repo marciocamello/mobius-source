@@ -9,4 +9,25 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="0"/>
 	</etcitem>
+	<etcitem id="38572" name="Aparition Stone (Lv. 88)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="38573" name="Aparition Stone (Lv. 93)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
+	<etcitem id="38574" name="Aparition Stone (Lv. 98)">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="stackable" value="true"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
 </list>
