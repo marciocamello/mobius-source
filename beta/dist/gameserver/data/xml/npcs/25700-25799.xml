@@ -6542,7 +6542,16 @@
 			</group>
 			<group chance="44.89">
 				<reward item_id="305" min="1" max="1" chance="4.7421"/>
-				<reward item_id="5541" min="12" max="36" chance="56.19387"/>
+				<reward item_id="5541" min="12" max="1" chance="56.19387"/>
+				<reward item_id="18232" min="1" max="1" chance="7.03046"/>
+				<reward item_id="18221" min="1" max="1" chance="6.98813"/>
+				<reward item_id="18233" min="1" max="1" chance="5.29289"/>
+				<reward item_id="18223" min="1" max="1" chance="5.22383"/>
+				<reward item_id="18225" min="1" max="1" chance="5.0033"/>
+				<reward item_id="18226" min="1" max="1" chance="4.51321"/>
+				<reward item_id="18205" min="1" max="1" chance="1.67074"/>
+				<reward item_id="18208" min="1" max="1" chance="1.67074"/>
+				<reward item_id="18215" min="1" max="1" chance="1.67074"/>
 			</group>
 			<group chance="0.382">
 				<reward item_id="22223" min="1" max="2" chance="80.0"/>
@@ -6559,8 +6568,7 @@
 			</group>
 		</rewardlist>
 		<minions>
-			<minion npc_id="25798" count="1"/>
-			<minion npc_id="25799" count="1"/>
+			<minion npc_id="25798" count="8"/>
 		</minions>
 	</npc>
 	<npc id="25798" name="Kechi's Subordinate" title="">

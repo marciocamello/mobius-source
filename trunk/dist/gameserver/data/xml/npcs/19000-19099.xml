@@ -348,7 +348,7 @@
 		<set name="collision_radius" value="32.0"/>
 		<set name="collision_height" value="24.5"/>
 		<set name="level" value="98"/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="CrystallHallCannon"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseHpMax" value="615901"/>
@@ -388,14 +388,14 @@
 			<skill id="5463" level="1"/>
 		</skills>
 	</npc>
-	<npc id="19009" name="Water Cannon" title="">
+	<npc id="19009" name="Water Cannon" title="Square Base">
 		<set name="collision_radius" value="0.1"/>
 		<set name="collision_height" value="0.1"/>
-		<set name="level" value="85"/>
-		<set name="type" value="Npc"/>
+		<set name="level" value="98"/>
+		<set name="type" value="CrystallHallCannon"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
-		<set name="baseHpMax" value="13881"/>
+		<set name="baseHpMax" value="615901"/>
 		<set name="baseHpRate" value="1.0"/>
 		<set name="baseHpReg" value="8.5"/>
 		<set name="baseMpMax" value="1674.8"/>
@@ -418,6 +418,7 @@
 		<set name="baseMAtkSpd" value="333"/>
 		<set name="baseRunSpd" value="1"/>
 		<set name="baseWalkSpd" value="1"/>
+		<set name="texture" value="LineageNpcEV.water_cannon_base"/>
 		<attributes>
 			<defence attribute="fire" value="160"/>
 			<defence attribute="water" value="160"/>

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<list xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" type="1" ns0:noNamespaceSchemaLocation="../xsd/multisell.xsd>
+	<config showall="false" notax="true" keepenchanted="true" isnew="true" isnewProduction="true"/>
+	    <npcs>
+                <npc>33388</npc>
+        </npcs>
+	<item>
+		<ingredient count="20" id="17746"/>		
+		<production chance="0" count="1" id="30364"/>		
+		<production chance="78" count="1" id="18573"/>		
+		<production chance="19" count="1" id="18574"/>		
+		<production chance="1" count="1" id="18575"/>		
+		<production chance="1" count="1" id="18576"/>		
+	</item>
+	<item>
+		<ingredient count="35" id="17746"/>		
+		<production chance="0" count="1" id="32301"/>		
+		<production chance="100" count="1" id="32301"/>		
+	</item>
+	<item>
+		<ingredient count="35" id="17746"/>		
+		<production chance="0" count="1" id="32302"/>		
+		<production chance="100" count="1" id="32302"/>		
+	</item>
+	<item>
+		<ingredient count="35" id="17746"/>		
+		<production chance="0" count="1" id="32303"/>		
+		<production chance="100" count="1" id="32303"/>		
+	</item>
+	<item>
+		<ingredient count="85" id="17746"/>		
+		<production chance="0" count="1" id="32313"/>		
+		<production chance="100" count="1" id="32313"/>		
+	</item>
+	<item>
+		<ingredient count="85" id="17746"/>		
+		<production chance="0" count="1" id="32314"/>		
+		<production chance="100" count="1" id="32314"/>		
+	</item>
+	<item>
+		<ingredient count="85" id="17746"/>		
+		<production chance="0" count="1" id="32315"/>		
+		<production chance="100" count="1" id="32315"/>		
+	</item>
+	<item>
+		<ingredient count="550" id="17746"/>		
+		<production chance="0" count="1" id="30363"/>		
+		<production chance="33" count="1" id="18557"/>		
+		<production chance="33" count="1" id="18558"/>		
+		<production chance="33" count="1" id="18559"/>		
+	</item>
+	<item>
+		<ingredient count="2" id="17746"/>		
+		<production chance="0" count="1" id="30423"/>		
+		<production chance="3" count="1" id="30423"/>		
+		<production chance="3" count="1" id="30424"/>		
+		<production chance="3" count="1" id="30425"/>		
+		<production chance="27" count="1" id="30426"/>		
+		<production chance="27" count="1" id="30427"/>		
+		<production chance="27" count="1" id="30428"/>		
+		<production chance="10" count="1" id="32317"/>		
+	</item>
+	<item>
+		<ingredient count="2" id="17746"/>		
+		<production chance="0" count="1" id="32814"/>		
+		<production chance="1" count="1" id="37103"/>		
+		<production chance="1" count="1" id="37104"/>		
+		<production chance="1" count="1" id="37105"/>		
+		<production chance="1" count="1" id="37106"/>		
+		<production chance="1" count="1" id="37107"/>		
+		<production chance="1" count="1" id="37108"/>		
+		<production chance="1" count="1" id="37109"/>		
+		<production chance="1" count="1" id="37110"/>		
+		<production chance="1" count="1" id="37111"/>		
+		<production chance="1" count="1" id="32814"/>		
+		<production chance="1" count="1" id="32815"/>		
+		<production chance="1" count="1" id="32816"/>		
+		<production chance="29" count="1" id="30426"/>		
+		<production chance="29" count="1" id="30427"/>		
+		<production chance="29" count="1" id="30428"/>		
+		<production chance="10" count="1" id="32317"/>		
+	</item>
+	<item>
+		<ingredient count="32" id="17746"/>		
+		<production chance="0" count="1" id="37042"/>		
+		<production chance="99" count="1" id="37042"/>		
+		<production chance="1" count="1" id="37043"/>		
+	</item>
+</list>

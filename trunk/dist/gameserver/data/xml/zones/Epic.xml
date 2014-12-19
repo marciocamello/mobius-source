@@ -279,4 +279,44 @@
 			<coords loc="42008 -174344 -8976 -5976"/>
 		</polygon>
 	</zone>
+	<zone name="[Steam1to2]" type="Epic">
+		<polygon>
+			<coords loc="147160 218120 -12180 -12120" />
+			<coords loc="147032 218120 -12180 -12120" />
+			<coords loc="147032 218328 -12180 -12120" />
+			<coords loc="147160 218312 -12180 -12120" />
+		</polygon>
+	</zone>
+	<zone name="[Steam2to3]" type="Epic">
+		<polygon>
+			<coords loc="149848 218120 -12180 -12120" />
+			<coords loc="149752 218104 -12180 -12120" />
+			<coords loc="149752 218312 -12180 -12120" />
+			<coords loc="149864 218296 -12180 -12120" />
+		</polygon>
+	</zone>
+	<zone name="[Steam3to4]" type="Epic">
+		<polygon>
+			<coords loc="152552 218104 -12180 -12120" />
+			<coords loc="152440 218104 -12180 -12120" />
+			<coords loc="152456 218312 -12180 -12120" />
+			<coords loc="152552 218312 -12180 -12120" />
+		</polygon>
+	</zone>
+	<zone name="[Steam4to5]" type="Epic">
+		<polygon>
+			<coords loc="148296 220168 -12180 -12120" />
+			<coords loc="148408 220152 -12180 -12120" />
+			<coords loc="148392 219944 -12180 -12120" />
+			<coords loc="148296 219960 -12180 -12120" />
+		</polygon>
+	</zone>
+	<zone name="[Steam5toBoss]" type="Epic">
+		<polygon>
+			<coords loc="145592 219976 -12180 -12120" />
+			<coords loc="145784 219992 -12180 -12120" />
+			<coords loc="145768 220152 -12180 -12120" />
+			<coords loc="145592 220168 -12180 -12120" />
+		</polygon>
+	</zone>
 </list>

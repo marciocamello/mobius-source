@@ -2034,7 +2034,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="BalokStory"/>
 		<skills>
 			<skill id="4416" level="15"/>
 		</skills>

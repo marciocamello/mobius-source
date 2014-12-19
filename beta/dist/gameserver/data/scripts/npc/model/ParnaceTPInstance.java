@@ -12,23 +12,25 @@
  */
 package npc.model;
 
-import instances.Baylor;
 import instances.CrystalHall;
-import instances.Vullock;
+import instances.SteamCorridor;
+
+import java.util.Calendar;
+
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
+import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ReflectionUtils;
 
 /**
- * @author Awakeninger
+ * @author Awakeninger + Nache
  */
 public final class ParnaceTPInstance extends NpcInstance
 {
-	private static final int CrystalHallInstance = 163;
-	private static final int VullockInstance = 167;
-	private static final int BaylorInstance = 168;
+	private static final int CRYSTAL_HALL_INSTANCE = 163;
+	private static final int STEAM_CORRIDOR_INSTANCE = 164;
 	
 	public ParnaceTPInstance(int objectId, NpcTemplate template)
 	{
@@ -43,57 +45,78 @@ public final class ParnaceTPInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.startsWith("request_ch"))
+		Reflection r = player.getActiveReflection();
+		
+		switch (command)
 		{
-			Reflection r = player.getActiveReflection();
-			
-			if (r != null)
-			{
-				if (player.canReenterInstance(CrystalHallInstance))
+			case "request_CrystalHall":
+				if (r != null)
 				{
-					player.teleToLocation(r.getTeleportLoc(), r);
+					if (player.canReenterInstance(CRYSTAL_HALL_INSTANCE))
+					{
+						player.teleToLocation(r.getTeleportLoc(), r);
+					}
 				}
-			}
-			else if (player.canEnterInstance(CrystalHallInstance))
-			{
-				ReflectionUtils.enterReflection(player, new CrystalHall(), CrystalHallInstance);
-			}
-		}
-		else if (command.startsWith("request_vallock"))
-		{
-			Reflection r = player.getActiveReflection();
-			
-			if (r != null)
-			{
-				if (player.canReenterInstance(VullockInstance))
+				else if (player.canEnterInstance(CRYSTAL_HALL_INSTANCE))
 				{
-					player.teleToLocation(r.getTeleportLoc(), r);
+					ReflectionUtils.enterReflection(player, new CrystalHall(), CRYSTAL_HALL_INSTANCE);
 				}
-			}
-			else if (player.canEnterInstance(VullockInstance))
-			{
-				ReflectionUtils.enterReflection(player, new Vullock(), VullockInstance);
-			}
-		}
-		else if (command.startsWith("request_Baylor"))
-		{
-			Reflection r = player.getActiveReflection();
+				break;
 			
-			if (r != null)
-			{
-				if (player.canReenterInstance(BaylorInstance))
+			case "request_SteamCorridor":
+				if (r != null)
 				{
-					player.teleToLocation(r.getTeleportLoc(), r);
+					if (player.canReenterInstance(STEAM_CORRIDOR_INSTANCE))
+					{
+						player.teleToLocation(r.getTeleportLoc(), r);
+					}
 				}
-			}
-			else if (player.canEnterInstance(BaylorInstance))
-			{
-				ReflectionUtils.enterReflection(player, new Baylor(), BaylorInstance);
-			}
+				else if (player.canEnterInstance(STEAM_CORRIDOR_INSTANCE))
+				{
+					ReflectionUtils.enterReflection(player, new SteamCorridor(), STEAM_CORRIDOR_INSTANCE);
+				}
+				break;
+			
+			case "request_CoralGarden":
+				// FIXME Not Done
+				break;
+			
+			default:
+				super.onBypassFeedback(player, command);
+				break;
 		}
-		else
+	}
+	
+	@Override
+	public void showChatWindow(Player player, int val, Object... arg)
+	{
+		NpcHtmlMessage msg = new NpcHtmlMessage(player, this);
+		
+		switch (Calendar.getInstance().get(Calendar.DAY_OF_WEEK))
 		{
-			super.onBypassFeedback(player, command);
+			case 0:
+			case 2:
+			case 4:
+				msg.setFile("default/33522.htm");
+				msg.replace("%instance%", "Steam Corridor");
+				msg.replace("%enter%", "request_SteamCorridor");
+				break;
+			
+			case 1:
+			case 3:
+			case 5:
+				msg.setFile("default/33522.htm");
+				msg.replace("%instance%", "Emerald Square");
+				msg.replace("%enter%", "request_CrystalHall");
+				break;
+			
+			case 6:
+				msg.setFile("default/33522.htm");
+				msg.replace("%instance%", "Coral Garden");
+				msg.replace("%enter%", "request_CoralGarden");
+				break;
 		}
+		
+		player.sendPacket(msg);
 	}
 }
