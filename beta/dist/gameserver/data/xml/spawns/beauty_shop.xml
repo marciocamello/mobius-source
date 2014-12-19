@@ -1,20 +1,93 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "spawn.dtd">
 <list>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="146468" y="27822" z="-2264" h="65323"/>
-		<npc id="33825"/>
-	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="86158" y="-143435" z="-1336" h="63814"/>
-		<npc id="33825"/>
-	</spawn>
+	<!-- Beauty Shop Dion -->
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="15145" y="143472" z="-2664" h="57049"/>
 		<npc id="33825"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15192" y="143464" z="-2701" h="38013"/>
+		<npc id="33854"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15160" y="143416" z="-2699" h="60187"/>
+		<npc id="33855"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="15224" y="143432" z="-2702" h="56529"/>
+		<npc id="33857"/>
+	</spawn>
+	
+	<!-- Beauty Shop Giran -->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="81752" y="149631" z="-3464" h="49153"/>
 		<npc id="33825"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="81758" y="149574" z="-3464" h="38013"/>
+		<npc id="33854"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="81743" y="149510" z="-3464" h="60187"/>
+		<npc id="33855"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="81710" y="149574" z="-3464" h="56529"/>
+		<npc id="33857"/>
+	</spawn>
+	
+	<!-- Beauty Shop Aden -->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="146468" y="27822" z="-2264" h="65323"/>
+		<npc id="33825"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="146515" y="27810" z="-2264" h="16384"/>
+		<npc id="33854"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="146562" y="27823" z="-2264" h="15025"/>
+		<npc id="33855"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="146514" y="27835" z="-2264" h="63272"/>
+		<npc id="33856"/>
+	</spawn>
+	
+	<!-- Beauty Shop Rune -->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="43463" y="-48421" z="-792" h="19404"/>
+		<npc id="33825"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="43448" y="-48360" z="-792" h="44755"/>
+		<npc id="33855"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="43432" y="-48376" z="-792" h="54781"/>
+		<npc id="33856"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="43480" y="-48376" z="-792" h="45045"/>
+		<npc id="33856"/>
+	</spawn>
+	
+	<!-- Beauty Shop Shuttgart -->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="86158" y="-143435" z="-1336" h="63814"/>
+		<npc id="33825"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="86215" y="-143518" z="-1336" h="46696"/>
+		<npc id="33854"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="86226" y="-143444" z="-1336" h="50330"/>
+		<npc id="33855"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="86203" y="-143399" z="-1336" h="56334"/>
+		<npc id="33856"/>
 	</spawn>
 </list>
