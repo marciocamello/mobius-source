@@ -12,8 +12,8 @@
  */
 package npc.model;
 
+import instances.Balok;
 import instances.Baylor;
-import instances.Vullock;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
@@ -21,12 +21,12 @@ import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ReflectionUtils;
 
 /**
- * @author Awakeninger
+ * @author Awakeninger + Nache
  */
 public final class CrystalPrisonTPInstance extends NpcInstance
 {
-	private static final int VullockInstance = 167;
-	private static final int BaylorInstance = 168;
+	private static final int BAYLOR_INSTANCE = 166;
+	private static final int BALOK_INSTANCE = 167;
 	
 	public CrystalPrisonTPInstance(int objectId, NpcTemplate template)
 	{
@@ -41,41 +41,41 @@ public final class CrystalPrisonTPInstance extends NpcInstance
 			return;
 		}
 		
-		if (command.startsWith("request_vallock"))
+		Reflection r = player.getActiveReflection();
+		
+		switch (command)
 		{
-			Reflection r = player.getActiveReflection();
-			
-			if (r != null)
-			{
-				if (player.canReenterInstance(VullockInstance))
+			case "request_Balok":
+				if (r != null)
 				{
-					player.teleToLocation(r.getTeleportLoc(), r);
+					if (player.canReenterInstance(BALOK_INSTANCE))
+					{
+						player.teleToLocation(r.getTeleportLoc(), r);
+					}
 				}
-			}
-			else if (player.canEnterInstance(VullockInstance))
-			{
-				ReflectionUtils.enterReflection(player, new Vullock(), VullockInstance);
-			}
-		}
-		else if (command.equals("request_Baylor"))
-		{
-			Reflection r = player.getActiveReflection();
-			
-			if (r != null)
-			{
-				if (player.canReenterInstance(BaylorInstance))
+				else if (player.canEnterInstance(BALOK_INSTANCE))
 				{
-					player.teleToLocation(r.getTeleportLoc(), r);
+					ReflectionUtils.enterReflection(player, new Balok(), BALOK_INSTANCE);
 				}
-			}
-			else if (player.canEnterInstance(BaylorInstance))
-			{
-				ReflectionUtils.enterReflection(player, new Baylor(), BaylorInstance);
-			}
-		}
-		else
-		{
-			super.onBypassFeedback(player, command);
+				break;
+			
+			case "request_Baylor":
+				if (r != null)
+				{
+					if (player.canReenterInstance(BAYLOR_INSTANCE))
+					{
+						player.teleToLocation(r.getTeleportLoc(), r);
+					}
+				}
+				else if (player.canEnterInstance(BAYLOR_INSTANCE))
+				{
+					ReflectionUtils.enterReflection(player, new Baylor(), BAYLOR_INSTANCE);
+				}
+				break;
+			
+			default:
+				super.onBypassFeedback(player, command);
+				break;
 		}
 	}
 }

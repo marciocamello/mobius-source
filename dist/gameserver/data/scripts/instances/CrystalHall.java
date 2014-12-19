@@ -25,10 +25,11 @@ import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 import lineage2.gameserver.utils.Location;
 
 /**
- * @author Awakeninger
+ * @author Awakeninger + Nache
  */
 public final class CrystalHall extends Reflection
 {
+	// Npcs
 	private static final int RB1 = 25881;
 	private static final int RB2 = 25881;
 	private static final int Cannon1 = 19008;
@@ -40,9 +41,10 @@ public final class CrystalHall extends Reflection
 	private static final int Cannon7 = 19008;
 	private static final int Cannon8 = 19009;
 	private static final int Exchanger = 33388;
+	// Doors
 	private static final int DoorOutside = 24220005;
 	private static final int DoorInside = 24220006;
-	private long _savedTime;
+	// Locations
 	private final Location Cannon1Loc = new Location(143144, 145832, -12061);
 	private final Location Cannon2Loc = new Location(141912, 144200, -11949);
 	private final Location Cannon3Loc = new Location(143368, 143768, -11976);
@@ -52,17 +54,22 @@ public final class CrystalHall extends Reflection
 	private final Location Cannon7Loc = new Location(148152, 146136, -12305);
 	private final Location Cannon8Loc = new Location(149096, 146872, -12369);
 	private final Location RB1Loc = new Location(152984, 145960, -12609, 15640);
-	final Location RB2Loc = new Location(152536, 145960, -12609, 15640);
+	public final Location RB2Loc = new Location(152536, 145960, -12609, 15640);
+	// Other
+	private long _savedTime;
+	NpcInstance can8 = null;
+	NpcInstance exchange;
 	private final DeathListener _deathListener = new DeathListener();
 	
 	@Override
-	public void onPlayerEnter(Player player)
+	protected void onCreate()
 	{
-		super.onPlayerEnter(player);
+		super.onCreate();
 		_savedTime = System.currentTimeMillis();
-		player.sendPacket(new ExSendUIEvent(player, 0, 1, (int) (System.currentTimeMillis() - _savedTime) / 1000, 0, NpcString.ELAPSED_TIME));
-		NpcInstance can8 = addSpawnWithoutRespawn(Cannon8, Cannon8Loc, 0);
+		
+		can8 = addSpawnWithoutRespawn(Cannon8, Cannon8Loc, 0);
 		can8.addListener(_deathListener);
+		can8.setIsInvul(true);
 		NpcInstance can1 = addSpawnWithoutRespawn(Cannon1, Cannon1Loc, 0);
 		can1.addListener(_deathListener);
 		NpcInstance can2 = addSpawnWithoutRespawn(Cannon2, Cannon2Loc, 0);
@@ -83,6 +90,22 @@ public final class CrystalHall extends Reflection
 		RB2N.addListener(_deathListener);
 	}
 	
+	@Override
+	public void onPlayerEnter(Player player)
+	{
+		super.onPlayerEnter(player);
+		player.sendPacket(new ExSendUIEvent(player, 0, 1, (int) (System.currentTimeMillis() - _savedTime) / 1000, 0, NpcString.ELAPSED_TIME));
+		player.setVar("Cannon0", "true", -1);
+		player.setVar("ED1", "true", -1);
+	}
+	
+	@Override
+	public void onPlayerExit(Player player)
+	{
+		super.onPlayerExit(player);
+		player.sendPacket(new ExSendUIEvent(player, 1, 1, 0, 0));
+	}
+	
 	private class DeathListener implements OnDeathListener
 	{
 		public DeathListener()
@@ -96,49 +119,52 @@ public final class CrystalHall extends Reflection
 			{
 				for (Player p : getPlayers())
 				{
-					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 1));
-				}
-			}
-			else if (self.isNpc() && (self.getId() == Cannon2))
-			{
-				for (Player p : getPlayers())
-				{
-					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 2));
-				}
-			}
-			else if (self.isNpc() && (self.getId() == Cannon3))
-			{
-				for (Player p : getPlayers())
-				{
-					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 3));
-				}
-			}
-			else if (self.isNpc() && (self.getId() == Cannon4))
-			{
-				for (Player p : getPlayers())
-				{
-					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 4));
-				}
-			}
-			else if (self.isNpc() && (self.getId() == Cannon5))
-			{
-				for (Player p : getPlayers())
-				{
-					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 5));
-				}
-			}
-			else if (self.isNpc() && (self.getId() == Cannon6))
-			{
-				for (Player p : getPlayers())
-				{
-					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 6));
-				}
-			}
-			else if (self.isNpc() && (self.getId() == Cannon7))
-			{
-				for (Player p : getPlayers())
-				{
-					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, 7));
+					if (p.getVar("Cannon0") != null)
+					{
+						p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, "1"));
+						p.setVar("Cannon1", "true", -1);
+						p.unsetVar("Cannon0");
+					}
+					else if (p.getVar("Cannon1") != null)
+					{
+						p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, "2"));
+						p.setVar("Cannon2", "true", -1);
+						p.unsetVar("Cannon1");
+					}
+					else if (p.getVar("Cannon2") != null)
+					{
+						p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, "3"));
+						p.setVar("Cannon3", "true", -1);
+						p.unsetVar("Cannon2");
+					}
+					else if (p.getVar("Cannon3") != null)
+					{
+						p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, "4"));
+						p.setVar("Cannon4", "true", -1);
+						p.unsetVar("Cannon3");
+					}
+					else if (p.getVar("Cannon4") != null)
+					{
+						p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, "5"));
+						p.setVar("Cannon5", "true", -1);
+						p.unsetVar("Cannon4");
+					}
+					else if (p.getVar("Cannon5") != null)
+					{
+						p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, "6"));
+						p.setVar("Cannon6", "true", -1);
+						p.unsetVar("Cannon5");
+					}
+					else if (p.getVar("Cannon6") != null)
+					{
+						p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, "7"));
+						p.setVar("Cannon7", "true", -1);
+						p.unsetVar("Cannon6");
+						if (can8 != null)
+						{
+							can8.setIsInvul(false);
+						}
+					}
 				}
 			}
 			else if (self.isNpc() && (self.getId() == Cannon8))
@@ -146,21 +172,29 @@ public final class CrystalHall extends Reflection
 				for (Player p : getPlayers())
 				{
 					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying_open_door, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true));
+					p.unsetVar("Cannon7");
 				}
-				
 				getDoor(DoorOutside).openMe();
 				getDoor(DoorInside).openMe();
 			}
-			else if (self.isNpc() && (self.getId() == RB1) && (self.getId() == RB2))
+			else if (self.isNpc() && (self.getId() == RB1))
 			{
 				for (Player p : getPlayers())
 				{
-					p.sendPacket(new ExSendUIEvent(p, 1, 1, 0, 0));
-					p.sendPacket(new SystemMessage2(SystemMsg.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addInteger(5));
+					if ((p.getVar("ED1") != null) && (p.getVar("Emam Dead") == null))
+					{
+						p.setVar("Emam Dead", "true", -1);
+						p.unsetVar("ED1");
+					}
+					else if ((p.getVar("Emam Dead") != null) && (p.getVar("ED1") == null))
+					{
+						p.sendPacket(new SystemMessage2(SystemMsg.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addInteger(5));
+						startCollapseTimer(5 * 60 * 1000L);
+						exchange = addSpawnWithoutRespawn(Exchanger, RB2Loc, 0);
+						p.unsetVar("Emam Dead");
+						
+					}
 				}
-				
-				startCollapseTimer(5 * 60 * 1000L);
-				addSpawnWithoutRespawn(Exchanger, RB2Loc, 0);
 			}
 		}
 	}

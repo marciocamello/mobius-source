@@ -525,12 +525,15 @@
 	</skill>
 	<skill id="14366" levels="1" name="Black Vortex Swamp">
 		<set name="icon" val="icon.skill1201"/>
-		<set name="target" val="TARGET_NONE"/>
-		<set name="skillType" val="NOTDONE"/>
-		<set name="operateType" val="OP_ACTIVE"/>
-		<set name="castRange" val="600"/>
+		<set name="reuseDelay" val="10000"/>
 		<set name="hitTime" val="2500"/>
-		<set name="reuseDelay" val="2000"/>
+		<set name="magicLevel" val="99"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="power" val="50000"/>
+		<set name="skillRadius" val="350"/>
+		<set name="target" val="TARGET_AREA"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
 	</skill>
 	<skill id="14367" levels="1" name="Darkness Drain">
 		<set name="icon" val="icon.skill1010"/>

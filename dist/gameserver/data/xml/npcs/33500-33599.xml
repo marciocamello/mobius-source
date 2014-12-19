@@ -1100,7 +1100,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="ParnaceTP"/>
 		<skills>
 			<skill id="4416" level="2"/>
 		</skills>
@@ -1148,7 +1148,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="CrystalPrisonTP"/>
 		<skills>
 			<skill id="4416" level="2"/>
 		</skills>

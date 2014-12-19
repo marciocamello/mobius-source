@@ -4,15 +4,27 @@
 	<instance id="166" name="CrystalPrisonBaylor" maxChannels="25" collapseIfEmpty="10" timelimit="60" dispelBuffs="true">
 		<collapse on-party-dismiss="true" timer="10"/>
 		<level min="95" max="99"/>
-		<party min="1" max="14"/>
+		<party min="2" max="7"/>
 		<return loc="149368 173640 -945"/>
 		<teleport loc="153592 143896 -12734"/>
 		<remove itemId="0" count="0" necessary="false"/>
 		<give itemId="0" count="0"/>
 		<quest id="0"/>
-		<reuse resetReuse="1 15 * * *" setUponEntry="false" sharedReuseGroup="0"/>
+		<reuse resetReuse="30 6 * * *" setUponEntry="false" sharedReuseGroup="0"/>
 		<doors>
 			<door id="24220008" opened="true"/>
+			<door id="24220009" opened="true"/>
+			<door id="24220011" opened="true"/>
+			<door id="24220012" opened="true"/>
+			<door id="24220013" opened="true"/>
+			<door id="24220014" opened="true"/>
+			<door id="24220015" opened="true"/>
+			<door id="24220016" opened="true"/>
+			<door id="24220017" opened="true"/>
+			<door id="24220019" opened="true"/>
 		</doors>
+		<zones>
+			<zone name="[Baylor_epic]" active="true"/>
+		</zones>
 	</instance>
 </list>

@@ -7,6 +7,103 @@
 		<set name="hitTime" val="10000"/>
 		<for/>
 	</skill>
+	<skill id="14508" levels="1" name="Chains of Yoke">
+		<table name="#magicLevel">95</table>
+		<table name="#activateRate">100</table>
+		<set name="reuseDelay" val="10000"/>
+		<set name="hitTime" val="3000"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="flyType" val="THROW_HORIZONTAL"/>
+		<set name="flySpeed" val="600"/>
+		<set name="skillType" val="AGGRESSION"/>
+		<set name="activateRate" val="#activateRate"/>
+		<set name="castRange" val="600"/>
+		<set name="skillRadius" val="350"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="trait" val="PULL"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<for>
+			<effect count="1" name="TargetToMe" time="1" val="0" chance="#activateRate"/>
+		</for>
+	</skill>
+	<skill id="14509" levels="1" name="HP Drain">
+		<set name="reuseDelay" val="30000"/>
+		<set name="hitTime" val="10000"/>
+		<set name="magicLevel" val="95"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="icon" val="icon.skill1042"/>
+		<set name="power" val="1500"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="MDAM"/>
+		<set name="skillRadius" val="600"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="absorbPart" val="1"/>
+		<set name="isUsingWhileCasting" val="true"/>
+		<set name="isSkillTimePermanent" val="true"/>
+		<triggers>
+			<trigger id="14510" level="1" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="100"/>
+		</triggers>
+	</skill>
+	<skill id="14510" levels="2" name="Drain Status">
+		<set name="magicLevel" val="95"/>
+		<set name="icon" val="icon.skill1042"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DRAIN"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="Debuff" chance="100"/>
+		</for>
+	</skill>
+	<skill id="14511" levels="1" name="Expose Weakness">
+		<set name="hitTime" val="500"/>
+		<set name="magicLevel" val="95"/>
+		<set name="icon" val="icon.skill0793"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="5">
+				<mul order="0x30" stat="pDef" val="0.9"/>
+				<mul order="0x30" stat="mDef" val="0.9"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="14512" levels="1" name="Expose Weakness">
+		<set name="hitTime" val="500"/>
+		<set name="magicLevel" val="95"/>
+		<set name="icon" val="icon.skill0793"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect name="Buff" time="5">
+				<mul order="0x30" stat="pDef" val="0.9"/>
+				<mul order="0x30" stat="mDef" val="0.9"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="14513" levels="1" name="Kick">
+		<set name="reuseDelay" val="2000"/>
+		<set name="hitTime" val="2800"/>
+		<set name="magicLevel" val="95"/>
+		<set name="magicType" val="SPECIAL"/>
+		<set name="power" val="34640"/>
+		<set name="icon" val="icon.skill0261"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<for>
+			<effect count="1" name="KnockBack" stackOrder="-1" stackType="KnockBack" time="0" val="0"/>
+			<effect count="1" name="Debuff" time="30">
+				<mul order="0x30" stat="pDef" val="0.9"/>
+				<mul order="0x30" stat="mDef" val="0.9"/>
+				<sub order="0x40" stat="pDef" val="500"/>
+				<sub order="0x40" stat="mDef" val="500"/>
+				<sub order="0x30" stat="rEvas" val="4"/>
+				<sub order="0x30" stat="mEvas" val="4"/>
+			</effect>
+		</for>
+	</skill>
 	<skill id="14571" levels="5" name="Shilen's Breath">
 		<table name="#stat">1 1 0.605 0.452 0.299</table>
 		<table name="#Res">5 5 0 0 0</table>

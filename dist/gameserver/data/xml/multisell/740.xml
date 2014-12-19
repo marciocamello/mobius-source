@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "multisell.dtd">
+<list>
+	<npcs>
+		<npc>33385</npc>
+		<npc>33386</npc>
+		<npc>33387</npc>
+		<npc>33388</npc>
+	</npcs>
+	<item>
+		<ingredient count="10" id="17743" />
+		<production count="1" id="18398" />
+	</item>
+	<item>
+		<ingredient count="10" id="17743" />
+		<production count="1" id="18402" />
+	</item>
+</list>
