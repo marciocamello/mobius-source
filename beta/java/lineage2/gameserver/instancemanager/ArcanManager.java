@@ -16,10 +16,12 @@ import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.network.serverpackets.EventTrigger;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.utils.ReflectionUtils;
 
 public class ArcanManager
 {
@@ -74,19 +76,15 @@ public class ArcanManager
 	
 	void broadcastPacket(int value, boolean b, boolean message)
 	{
+		final Zone zone = ReflectionUtils.getZone("[Arcan_0]");
 		L2GameServerPacket trigger = new EventTrigger(value, b);
 		
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			player.sendPacket(trigger);
-		}
-		
-		if (message)
-		{
-			L2GameServerPacket sm = new ExShowScreenMessage(NpcString.DARK_POWER_SEEPS_OUT_FROM_THE_MIDDLE_OF_THE_TOWN, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, 0, true);
-			
-			for (Player player : GameObjectsStorage.getAllPlayersForIterate())
+			if (message && zone.getInsidePlayers().contains(player))
 			{
+				L2GameServerPacket sm = new ExShowScreenMessage(NpcString.DARK_POWER_SEEPS_OUT_FROM_THE_MIDDLE_OF_THE_TOWN, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, 0, true);
 				player.sendPacket(sm);
 			}
 		}
