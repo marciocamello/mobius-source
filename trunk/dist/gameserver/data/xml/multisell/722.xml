@@ -1,5 +1,6 @@
-<?xml version="1.0"?>
-<list xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" type="1" ns0:noNamespaceSchemaLocation="../xsd/multisell.xsd>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "multisell.dtd">
+<list>
 	<config showall="false" notax="true" keepenchanted="true" isnew="true" isnewProduction="true"/>
 	    <npcs>
                 <npc>33387</npc>
