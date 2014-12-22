@@ -40,7 +40,7 @@ import org.slf4j.LoggerFactory;
 public class Config
 {
 	private final static Logger _log = LoggerFactory.getLogger(Config.class);
-	private static final String LOGIN_CONFIGURATION_FILE = "config/loginserver.ini";
+	private static final String LOGIN_CONFIG_FILE = "config/LoginServer.ini";
 	private static final String SERVER_NAMES_FILE = "config/xml/servername.xml";
 	public static String LOGIN_HOST;
 	public static int PORT_LOGIN;
@@ -171,7 +171,7 @@ public class Config
 	 */
 	private static void loadConfiguration()
 	{
-		ExProperties serverSettings = load(LOGIN_CONFIGURATION_FILE);
+		ExProperties serverSettings = load(LOGIN_CONFIG_FILE);
 		LOGIN_HOST = serverSettings.getProperty("LoginserverHostname", "127.0.0.1");
 		PORT_LOGIN = serverSettings.getProperty("LoginserverPort", 2106);
 		GAME_SERVER_LOGIN_HOST = serverSettings.getProperty("LoginHost", "127.0.0.1");
