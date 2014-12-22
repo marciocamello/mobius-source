@@ -53,27 +53,26 @@ public class Config
 {
 	private static final Logger _log = LoggerFactory.getLogger(Config.class);
 	private static final int NCPUS = Runtime.getRuntime().availableProcessors();
-	private static final String OTHER_CONFIG_FILE = "config/other.ini";
-	private static final String RESIDENCE_CONFIG_FILE = "config/residence.ini";
-	private static final String SPOIL_CONFIG_FILE = "config/spoil.ini";
-	private static final String ALT_SETTINGS_FILE = "config/altsettings.ini";
-	private static final String FORMULAS_CONFIGURATION_FILE = "config/formulas.ini";
-	private static final String PVP_CONFIG_FILE = "config/pvp.ini";
-	private static final String CONFIGURATION_FILE = "config/server.ini";
-	private static final String RATES_FILE = "config/rates.ini";
-	private static final String AI_CONFIG_FILE = "config/ai.ini";
-	private static final String GEODATA_CONFIG_FILE = "config/geodata.ini";
-	private static final String EVENTS_CONFIG_FILE = "config/events.ini";
-	private static final String SERVICES_FILE = "config/services.ini";
-	private static final String OLYMPIAD = "config/olympiad.ini";
-	private static final String DEVELOP_FILE = "config/develop.ini";
-	private static final String EXT_FILE = "config/ext.ini";
-	private static final String TOP_FILE = "config/Tops.ini";
-	private static final String PAYMENT_CONFIG_FILE = "config/payment.ini";
-	private static final String COMMUNITY_CONFIGURATION_FILE = "config/CommunityBoard.ini";
-	public static final String OLYMPIAD_DATA_FILE = "config/olympiad.ini";
-	private static final String ANUSEWORDS_CONFIG_FILE = "config/abusewords.txt";
-	public static final String FAKE_PLAYERS_LIST = "config/fake_players.list";
+	private static final String OTHER_CONFIG_FILE = "config/Other.ini";
+	private static final String RESIDENCE_CONFIG_FILE = "config/Residence.ini";
+	private static final String SPOIL_CONFIG_FILE = "config/Spoil.ini";
+	private static final String GENERAL_CONFIG_FILE = "config/General.ini";
+	private static final String FORMULAS_CONFIG_FILE = "config/Formulas.ini";
+	private static final String PVP_CONFIG_FILE = "config/PvP.ini";
+	private static final String SERVER_CONFIG_FILE = "config/Server.ini";
+	private static final String RATES_CONFIG_FILE = "config/Rates.ini";
+	private static final String NPC_CONFIG_FILE = "config/Npc.ini";
+	private static final String GEODATA_CONFIG_FILE = "config/Geodata.ini";
+	private static final String EVENTS_CONFIG_FILE = "config/Events.ini";
+	private static final String SERVICES_CONFIG_FILE = "config/Services.ini";
+	public static final String OLYMPIAD_CONFIG_FILE = "config/Olympiad.ini";
+	private static final String DEVELOP_CONFIG_FILE = "config/Develop.ini";
+	private static final String EXT_CONFIG_FILE = "config/ext.ini";
+	private static final String VOTE_REWARD_CONFIG_FILE = "config/VoteReward.ini";
+	private static final String DONATE_CONFIG_FILE = "config/Donate.ini";
+	private static final String COMMUNITY_CONFIG_FILE = "config/CommunityBoard.ini";
+	private static final String ABUSEWORDS_CONFIG_FILE = "config/Abusewords.txt";
+	public static final String FAKE_PLAYERS_LIST = "config/FakePlayers.txt";
 	public static final String PLAYER_ACCESS_FILES_DIR = "config/xml/AccessLevels/";
 	public static int HTM_CACHE_MODE;
 	public static boolean HTM_DEBUG_MODE;
@@ -414,7 +413,6 @@ public class Config
 	public static double RATE_DROP_SIEGE_GUARD;
 	public static double RATE_MANOR;
 	public static boolean RATE_PARTY_MIN;
-	public static double RATE_HELLBOUND_CONFIDENCE;
 	public static int RATE_MOB_SPAWN;
 	public static int RATE_MOB_SPAWN_MIN_LEVEL;
 	public static int RATE_MOB_SPAWN_MAX_LEVEL;
@@ -595,7 +593,6 @@ public class Config
 	// public static double RESIDENCE_LEASE_MULTIPLIER;
 	public static boolean ACCEPT_ALTERNATE_ID;
 	public static int REQUEST_ID;
-	// public static boolean ANNOUNCE_MAMMON_SPAWN;
 	public static int GM_NAME_COLOR;
 	public static boolean GM_HERO_AURA;
 	public static int NORMAL_NAME_COLOR;
@@ -710,6 +707,8 @@ public class Config
 	public static int ALT_PET_INVENTORY_LIMIT;
 	public static boolean SAVE_GM_SPAWN_CUSTOM;
 	public static boolean LOAD_GM_SPAWN_CUSTOM;
+	public static int HELLBOUND_MIN_PLAYER_LEVEL;
+	public static boolean HELLBOUND_MAP_WITHOUT_ITEM;
 	public static int STARTING_ADENA;
 	public static int STARTING_LEVEL;
 	public static int SUB_START_LEVEL;
@@ -857,7 +856,6 @@ public class Config
 	public static boolean LOGIN_SERVER_IS_PVP;
 	public static int LOGIN_SERVER_AGE_LIMIT;
 	public static int LOGIN_SERVER_SERVER_TYPE;
-	// public static int SAFE_ENCHANT_LVL;
 	public static boolean REMOVE_UNKNOWN_QUEST;
 	public static boolean ALLOW_MENTOR_BUFFS_IN_OFFLINE_MODE;
 	public static boolean STARTING_LOC;
@@ -872,7 +870,7 @@ public class Config
 	 */
 	private static void loadServerConfig()
 	{
-		ExProperties serverSettings = load(CONFIGURATION_FILE);
+		ExProperties serverSettings = load(SERVER_CONFIG_FILE);
 		GAME_SERVER_LOGIN_HOST = serverSettings.getProperty("LoginHost", "127.0.0.1");
 		GAME_SERVER_LOGIN_PORT = serverSettings.getProperty("LoginPort", 9013);
 		// GAME_SERVER_LOGIN_CRYPT = serverSettings.getProperty("LoginUseCrypt", true);
@@ -1067,7 +1065,7 @@ public class Config
 	 */
 	private static void loadRatesConfig()
 	{
-		ExProperties rateSettings = load(RATES_FILE);
+		ExProperties rateSettings = load(RATES_CONFIG_FILE);
 		
 		RATE_XP = rateSettings.getProperty("RateXp", 1.);
 		RATE_SP = rateSettings.getProperty("RateSp", 1.);
@@ -1101,7 +1099,6 @@ public class Config
 		NO_RATE_KEY_MATERIAL = rateSettings.getProperty("NoRateKeyMaterial", true);
 		NO_RATE_RECIPES = rateSettings.getProperty("NoRateRecipes", true);
 		RATE_PARTY_MIN = rateSettings.getProperty("RatePartyMin", false);
-		RATE_HELLBOUND_CONFIDENCE = rateSettings.getProperty("RateHellboundConfidence", 1.);
 		RATE_MOB_SPAWN = rateSettings.getProperty("RateMobSpawn", 1);
 		RATE_MOB_SPAWN_MIN_LEVEL = rateSettings.getProperty("RateMobMinLevel", 1);
 		RATE_MOB_SPAWN_MAX_LEVEL = rateSettings.getProperty("RateMobMaxLevel", 100);
@@ -1140,7 +1137,7 @@ public class Config
 	 */
 	private static void loadCommunityConfig()
 	{
-		ExProperties communitySettings = load(COMMUNITY_CONFIGURATION_FILE);
+		ExProperties communitySettings = load(COMMUNITY_CONFIG_FILE);
 		COMMUNITYBOARD_ENABLED = communitySettings.getProperty("CommunityBoardEnable", true);
 		
 		if (COMMUNITYBOARD_ENABLED)
@@ -1276,44 +1273,44 @@ public class Config
 	}
 	
 	/**
-	 * Method loadTopSettings.
+	 * Method loadVoteRewardSettings.
 	 */
-	private static void loadTopSettings()
+	private static void loadVoteRewardSettings()
 	{
-		ExProperties topSettings = load(TOP_FILE);
-		L2_TOP_MANAGER_ENABLED = topSettings.getProperty("L2TopManagerEnabled", false);
-		L2_TOP_MANAGER_INTERVAL = topSettings.getProperty("L2TopManagerInterval", 300000);
-		L2_TOP_WEB_ADDRESS = topSettings.getProperty("L2TopWebAddress", "");
-		L2_TOP_SMS_ADDRESS = topSettings.getProperty("L2TopSmsAddress", "");
-		L2_TOP_SERVER_ADDRESS = topSettings.getProperty("L2TopServerAddress", "Lineage2GoD.com");
-		L2_TOP_SAVE_DAYS = topSettings.getProperty("L2TopSaveDays", 30);
-		L2_TOP_REWARD = topSettings.getProperty("L2TopReward", new int[0]);
-		// L2_TOP_SERVER_PREFIX = topSettings.getProperty("L2TopServerPrefix", "");
-		L2_TOP_REWARD_NO_CLAN = topSettings.getProperty("L2TopRewardNoClan", new int[0]);
-		MMO_TOP_MANAGER_ENABLED = topSettings.getProperty("MMOTopEnable", false);
-		MMO_TOP_MANAGER_INTERVAL = topSettings.getProperty("MMOTopManagerInterval", 300000);
-		MMO_TOP_WEB_ADDRESS = topSettings.getProperty("MMOTopUrl", "");
-		// MMO_TOP_SERVER_ADDRESS = topSettings.getProperty("MMOTopServerAddress", "Lineage2GoD.com");
-		MMO_TOP_SAVE_DAYS = topSettings.getProperty("MMOTopSaveDays", 30);
-		MMO_TOP_REWARD = topSettings.getProperty("MMOTopReward", new int[0]);
-		MMO_TOP_REWARD_NO_CLAN = topSettings.getProperty("MMOTopRewardNoClan", new int[0]);
+		ExProperties voteRewardSettings = load(VOTE_REWARD_CONFIG_FILE);
+		L2_TOP_MANAGER_ENABLED = voteRewardSettings.getProperty("L2TopManagerEnabled", false);
+		L2_TOP_MANAGER_INTERVAL = voteRewardSettings.getProperty("L2TopManagerInterval", 300000);
+		L2_TOP_WEB_ADDRESS = voteRewardSettings.getProperty("L2TopWebAddress", "");
+		L2_TOP_SMS_ADDRESS = voteRewardSettings.getProperty("L2TopSmsAddress", "");
+		L2_TOP_SERVER_ADDRESS = voteRewardSettings.getProperty("L2TopServerAddress", "Lineage2GoD.com");
+		L2_TOP_SAVE_DAYS = voteRewardSettings.getProperty("L2TopSaveDays", 30);
+		L2_TOP_REWARD = voteRewardSettings.getProperty("L2TopReward", new int[0]);
+		// L2_TOP_SERVER_PREFIX = voteRewardSettings.getProperty("L2TopServerPrefix", "");
+		L2_TOP_REWARD_NO_CLAN = voteRewardSettings.getProperty("L2TopRewardNoClan", new int[0]);
+		MMO_TOP_MANAGER_ENABLED = voteRewardSettings.getProperty("MMOTopEnable", false);
+		MMO_TOP_MANAGER_INTERVAL = voteRewardSettings.getProperty("MMOTopManagerInterval", 300000);
+		MMO_TOP_WEB_ADDRESS = voteRewardSettings.getProperty("MMOTopUrl", "");
+		// MMO_TOP_SERVER_ADDRESS = voteRewardSettings.getProperty("MMOTopServerAddress", "Lineage2GoD.com");
+		MMO_TOP_SAVE_DAYS = voteRewardSettings.getProperty("MMOTopSaveDays", 30);
+		MMO_TOP_REWARD = voteRewardSettings.getProperty("MMOTopReward", new int[0]);
+		MMO_TOP_REWARD_NO_CLAN = voteRewardSettings.getProperty("MMOTopRewardNoClan", new int[0]);
 	}
 	
 	/**
-	 * Method loadPaymentConfig.
+	 * Method loadDonateConfig.
 	 */
-	private static void loadPaymentConfig()
+	private static void loadDonateConfig()
 	{
-		ExProperties paymentSetting = load(PAYMENT_CONFIG_FILE);
-		SMS_PAYMENT_MANAGER_ENABLED = paymentSetting.getProperty("SMSPaymentEnabled", false);
-		SMS_PAYMENT_WEB_ADDRESS = paymentSetting.getProperty("SMSPaymentWebAddress", "");
-		SMS_PAYMENT_MANAGER_INTERVAL = paymentSetting.getProperty("SMSPaymentManagerInterval", 300000);
-		SMS_PAYMENT_SAVE_DAYS = paymentSetting.getProperty("SMSPaymentSaveDays", 30);
-		SMS_PAYMENT_SERVER_ADDRESS = paymentSetting.getProperty("SMSPaymentServerAddress", "Lineage2GoD.com");
-		SMS_PAYMENT_REWARD = paymentSetting.getProperty("SMSPaymentReward", new int[0]);
-		SMS_PAYMENT_REWARD_NO_CLAN = paymentSetting.getProperty("SMSPaymentRewardNoClan", new int[0]);
-		SMS_PAYMENT_TYPE = paymentSetting.getProperty("SMSPaymentProfitOrSum", true);
-		// SMS_PAYMENT_PREFIX = paymentSetting.getProperty("SMSPaymentPrefix", "");
+		ExProperties donateSetting = load(DONATE_CONFIG_FILE);
+		SMS_PAYMENT_MANAGER_ENABLED = donateSetting.getProperty("SMSPaymentEnabled", false);
+		SMS_PAYMENT_WEB_ADDRESS = donateSetting.getProperty("SMSPaymentWebAddress", "");
+		SMS_PAYMENT_MANAGER_INTERVAL = donateSetting.getProperty("SMSPaymentManagerInterval", 300000);
+		SMS_PAYMENT_SAVE_DAYS = donateSetting.getProperty("SMSPaymentSaveDays", 30);
+		SMS_PAYMENT_SERVER_ADDRESS = donateSetting.getProperty("SMSPaymentServerAddress", "Lineage2GoD.com");
+		SMS_PAYMENT_REWARD = donateSetting.getProperty("SMSPaymentReward", new int[0]);
+		SMS_PAYMENT_REWARD_NO_CLAN = donateSetting.getProperty("SMSPaymentRewardNoClan", new int[0]);
+		SMS_PAYMENT_TYPE = donateSetting.getProperty("SMSPaymentProfitOrSum", true);
+		// SMS_PAYMENT_PREFIX = donateSetting.getProperty("SMSPaymentPrefix", "");
 	}
 	
 	/**
@@ -1370,13 +1367,11 @@ public class Config
 		MAX_PVTCRAFT_SLOTS = otherSettings.getProperty("MaxPvtManufactureSlots", 20);
 		SENDSTATUS_TRADE_JUST_OFFLINE = otherSettings.getProperty("SendStatusTradeJustOffline", false);
 		SENDSTATUS_TRADE_MOD = otherSettings.getProperty("SendStatusTradeMod", 1.);
-		// ANNOUNCE_MAMMON_SPAWN = otherSettings.getProperty("AnnounceMammonSpawn", true);
 		GM_NAME_COLOR = Integer.decode("0x" + otherSettings.getProperty("GMNameColor", "00CCFF"));
 		GM_HERO_AURA = otherSettings.getProperty("GMHeroAura", false);
 		NORMAL_NAME_COLOR = Integer.decode("0x" + otherSettings.getProperty("NormalNameColor", "FFFFFF"));
 		CLANLEADER_NAME_COLOR = Integer.decode("0x" + otherSettings.getProperty("ClanleaderNameColor", "FFFFFF"));
 		GAME_POINT_ITEM_ID = otherSettings.getProperty("GamePointItemId", -1);
-		// SAFE_ENCHANT_LVL = otherSettings.getProperty("SafeEnchant", 0);
 		REMOVE_UNKNOWN_QUEST = otherSettings.getProperty("RemoveUnknownQuest", false);
 		ALLOW_MENTOR_BUFFS_IN_OFFLINE_MODE = otherSettings.getProperty("AllowMentorBuffsInOfflineMode", false);
 		STARTING_LOC = otherSettings.getProperty("StartingLoc", false);
@@ -1441,7 +1436,7 @@ public class Config
 	 */
 	private static void loadFormulasConfig()
 	{
-		ExProperties formulasSettings = load(FORMULAS_CONFIGURATION_FILE);
+		ExProperties formulasSettings = load(FORMULAS_CONFIG_FILE);
 		SKILLS_CHANCE_MOD = formulasSettings.getProperty("SkillsChanceMod", 11.);
 		SKILLS_CHANCE_POW = formulasSettings.getProperty("SkillsChancePow", 0.5);
 		SKILLS_CHANCE_MIN = formulasSettings.getProperty("SkillsChanceMin", 5.);
@@ -1479,7 +1474,7 @@ public class Config
 	 */
 	private static void loadDevelopSettings()
 	{
-		load(DEVELOP_FILE);
+		load(DEVELOP_CONFIG_FILE);
 	}
 	
 	/**
@@ -1487,47 +1482,47 @@ public class Config
 	 */
 	private static void loadExtSettings()
 	{
-		ExProperties properties = load(EXT_FILE);
+		ExProperties properties = load(EXT_CONFIG_FILE);
 		EX_NEW_PETITION_SYSTEM = properties.getProperty("NewPetitionSystem", false);
 		EX_JAPAN_MINIGAME = properties.getProperty("JapanMinigame", false);
 		EX_LECTURE_MARK = properties.getProperty("LectureMark", false);
 	}
 	
 	/**
-	 * Method loadAltSettings.
+	 * Method loadGeneralSettings.
 	 */
-	private static void loadAltSettings()
+	private static void loadGeneralSettings()
 	{
-		ExProperties altSettings = load(ALT_SETTINGS_FILE);
-		ALT_ARENA_EXP = altSettings.getProperty("ArenaExp", true);
-		ALT_GAME_EXP_LOST = altSettings.getProperty("AltGameExpLost", false);
-		ALT_SAVE_UNSAVEABLE = altSettings.getProperty("AltSaveUnsaveable", false);
-		ALT_SAVE_EFFECTS_REMAINING_TIME = altSettings.getProperty("AltSaveEffectsRemainingTime", 5);
-		ALT_SHOW_REUSE_MSG = altSettings.getProperty("AltShowSkillReuseMessage", true);
-		ALT_DELETE_SA_BUFFS = altSettings.getProperty("AltDeleteSABuffs", false);
-		AUTO_LOOT = altSettings.getProperty("AutoLoot", false);
-		AUTO_LOOT_HERBS = altSettings.getProperty("AutoLootHerbs", false);
-		AUTO_LOOT_INDIVIDUAL = altSettings.getProperty("AutoLootIndividual", false);
-		AUTO_LOOT_FROM_RAIDS = altSettings.getProperty("AutoLootFromRaids", false);
-		AUTO_LOOT_PK = altSettings.getProperty("AutoLootPK", false);
-		ALT_GAME_KARMA_PLAYER_CAN_SHOP = altSettings.getProperty("AltKarmaPlayerCanShop", false);
-		SAVING_SPS = altSettings.getProperty("SavingSpS", false);
-		MANAHEAL_SPS_BONUS = altSettings.getProperty("ManahealSpSBonus", false);
-		// CRAFT_MASTERWORK_CHANCE = altSettings.getProperty("CraftMasterworkChance", 3.);
-		// CRAFT_DOUBLECRAFT_CHANCE = altSettings.getProperty("CraftDoubleCraftChance", 3.);
-		ALT_RAID_RESPAWN_MULTIPLIER = altSettings.getProperty("AltRaidRespawnMultiplier", 1.0);
-		ALT_ALLOW_AUGMENT_ALL = altSettings.getProperty("AugmentAll", false);
-		ALT_ALLOW_DROP_AUGMENTED = altSettings.getProperty("AlowDropAugmented", false);
-		ALT_GAME_UNREGISTER_RECIPE = altSettings.getProperty("AltUnregisterRecipe", true);
-		ALT_GAME_SHOW_DROPLIST = altSettings.getProperty("AltShowDroplist", true);
-		ALLOW_NPC_SHIFTCLICK = altSettings.getProperty("AllowShiftClick", false);
-		ALT_FULL_NPC_STATS_PAGE = altSettings.getProperty("AltFullStatsPage", false);
-		ALT_GAME_LEVEL_TO_GET_SUBCLASS = altSettings.getProperty("AltLevelToGetSubclass", 75);
-		ALT_GAME_SUB_BOOK = altSettings.getProperty("AltSubBook", false);
-		ALT_GAME_RESET_CERTIFICATION_COST = altSettings.getProperty("AltResetCertificationCost", 10000000);
-		ALT_GAME_RESET_DUALCERTIFICATION_COST = altSettings.getProperty("AltResetDualCertificationCost", 20000000);
-		ALT_GAME_REMOVE_PREVIOUS_CERTIFICATES = altSettings.getProperty("AltRemovePreviousCertificates", false);
-		ALT_GAME_DUALCLASS_REAWAKENING_COST = altSettings.getProperty("AltGameDualClassReawakeningCost", new double[]
+		ExProperties generalSettings = load(GENERAL_CONFIG_FILE);
+		ALT_ARENA_EXP = generalSettings.getProperty("ArenaExp", true);
+		ALT_GAME_EXP_LOST = generalSettings.getProperty("AltGameExpLost", false);
+		ALT_SAVE_UNSAVEABLE = generalSettings.getProperty("AltSaveUnsaveable", false);
+		ALT_SAVE_EFFECTS_REMAINING_TIME = generalSettings.getProperty("AltSaveEffectsRemainingTime", 5);
+		ALT_SHOW_REUSE_MSG = generalSettings.getProperty("AltShowSkillReuseMessage", true);
+		ALT_DELETE_SA_BUFFS = generalSettings.getProperty("AltDeleteSABuffs", false);
+		AUTO_LOOT = generalSettings.getProperty("AutoLoot", false);
+		AUTO_LOOT_HERBS = generalSettings.getProperty("AutoLootHerbs", false);
+		AUTO_LOOT_INDIVIDUAL = generalSettings.getProperty("AutoLootIndividual", false);
+		AUTO_LOOT_FROM_RAIDS = generalSettings.getProperty("AutoLootFromRaids", false);
+		AUTO_LOOT_PK = generalSettings.getProperty("AutoLootPK", false);
+		ALT_GAME_KARMA_PLAYER_CAN_SHOP = generalSettings.getProperty("AltKarmaPlayerCanShop", false);
+		SAVING_SPS = generalSettings.getProperty("SavingSpS", false);
+		MANAHEAL_SPS_BONUS = generalSettings.getProperty("ManahealSpSBonus", false);
+		// CRAFT_MASTERWORK_CHANCE = generalSettings.getProperty("CraftMasterworkChance", 3.);
+		// CRAFT_DOUBLECRAFT_CHANCE = generalSettings.getProperty("CraftDoubleCraftChance", 3.);
+		ALT_RAID_RESPAWN_MULTIPLIER = generalSettings.getProperty("AltRaidRespawnMultiplier", 1.0);
+		ALT_ALLOW_AUGMENT_ALL = generalSettings.getProperty("AugmentAll", false);
+		ALT_ALLOW_DROP_AUGMENTED = generalSettings.getProperty("AlowDropAugmented", false);
+		ALT_GAME_UNREGISTER_RECIPE = generalSettings.getProperty("AltUnregisterRecipe", true);
+		ALT_GAME_SHOW_DROPLIST = generalSettings.getProperty("AltShowDroplist", true);
+		ALLOW_NPC_SHIFTCLICK = generalSettings.getProperty("AllowShiftClick", false);
+		ALT_FULL_NPC_STATS_PAGE = generalSettings.getProperty("AltFullStatsPage", false);
+		ALT_GAME_LEVEL_TO_GET_SUBCLASS = generalSettings.getProperty("AltLevelToGetSubclass", 75);
+		ALT_GAME_SUB_BOOK = generalSettings.getProperty("AltSubBook", false);
+		ALT_GAME_RESET_CERTIFICATION_COST = generalSettings.getProperty("AltResetCertificationCost", 10000000);
+		ALT_GAME_RESET_DUALCERTIFICATION_COST = generalSettings.getProperty("AltResetDualCertificationCost", 20000000);
+		ALT_GAME_REMOVE_PREVIOUS_CERTIFICATES = generalSettings.getProperty("AltRemovePreviousCertificates", false);
+		ALT_GAME_DUALCLASS_REAWAKENING_COST = generalSettings.getProperty("AltGameDualClassReawakeningCost", new double[]
 		{
 			100,
 			90,
@@ -1560,68 +1555,68 @@ public class Config
 			_log.warn("altGameReawakeningCost - Incorrect values for corresponding levels, loaded default values.");
 		}
 		
-		ALT_MAX_LEVEL = Math.min(altSettings.getProperty("AltMaxLevel", 99), Experience.LEVEL.length - 1);
-		ALT_MAX_SUB_LEVEL = Math.min(altSettings.getProperty("AltMaxSubLevel", 80), Experience.LEVEL.length - 1);
-		ALT_MAX_DUAL_SUB_LEVEL = Math.min(altSettings.getProperty("AltMaxDualSubLevel", 99), Experience.LEVEL.length - 1);
-		ALT_ALLOW_OTHERS_WITHDRAW_FROM_CLAN_WAREHOUSE = altSettings.getProperty("AltAllowOthersWithdrawFromClanWarehouse", false);
-		ALT_ALLOW_CLAN_COMMAND_ONLY_FOR_CLAN_LEADER = altSettings.getProperty("AltAllowClanCommandOnlyForClanLeader", true);
-		// ALT_GAME_REQUIRE_CLAN_CASTLE = altSettings.getProperty("AltRequireClanCastle", false);
-		// ALT_GAME_REQUIRE_CASTLE_DAWN = altSettings.getProperty("AltRequireCastleDawn", true);
-		// ALT_GAME_ALLOW_ADENA_DAWN = altSettings.getProperty("AltAllowAdenaDawn", true);
-		ALT_CLAN_PLAYER_COUNT_6LVL = altSettings.getProperty("AltClanPlayer_6", 30);
-		ALT_CLAN_REP_COUNT_6LVL = altSettings.getProperty("AltClanRep_6", 5000);
-		ALT_CLAN_PLAYER_COUNT_7LVL = altSettings.getProperty("AltClanPlayer_7", 50);
-		ALT_CLAN_REP_COUNT_7LVL = altSettings.getProperty("AltClanRep_7", 10000);
-		ALT_CLAN_PLAYER_COUNT_8LVL = altSettings.getProperty("AltClanPlayer_8", 80);
-		ALT_CLAN_REP_COUNT_8LVL = altSettings.getProperty("AltClanRep_8", 20000);
-		ALT_CLAN_PLAYER_COUNT_9LVL = altSettings.getProperty("AltClanPlayer_9", 120);
-		ALT_CLAN_REP_COUNT_9LVL = altSettings.getProperty("AltClanRep_9", 40000);
-		ALT_CLAN_PLAYER_COUNT_10LVL = altSettings.getProperty("AltClanPlayer_10", 140);
-		ALT_CLAN_REP_COUNT_10LVL = altSettings.getProperty("AltClanRep_10", 75000);
-		ALT_CLAN_PLAYER_COUNT_11LVL = altSettings.getProperty("AltClanPlayer_11", 170);
-		ALT_CLAN_REP_COUNT_11LVL = altSettings.getProperty("AltClanRep_11", 75000);
-		ALT_ADD_RECIPES = altSettings.getProperty("AltAddRecipes", 0);
-		// SS_ANNOUNCE_PERIOD = altSettings.getProperty("SSAnnouncePeriod", 0);
-		PETITIONING_ALLOWED = altSettings.getProperty("PetitioningAllowed", true);
-		MAX_PETITIONS_PER_PLAYER = altSettings.getProperty("MaxPetitionsPerPlayer", 5);
-		MAX_PETITIONS_PENDING = altSettings.getProperty("MaxPetitionsPending", 25);
-		AUTO_LEARN_SKILLS = altSettings.getProperty("AutoLearnSkills", false);
-		AUTO_LEARN_FORGOTTEN_SKILLS = altSettings.getProperty("AutoLearnForgottenSkills", false);
-		ENCHANT_SKILLSID_RETAIL = altSettings.getProperty("EnchantSkillsIdRetail", false);
-		ALT_SOCIAL_ACTION_REUSE = altSettings.getProperty("AltSocialActionReuse", false);
-		ALT_DISABLE_SPELLBOOKS = altSettings.getProperty("AltDisableSpellbooks", false);
-		ALT_DELETE_SKILL_PROF = altSettings.getProperty("AltDeleteSkillProf", false);
-		ALT_DELETE_SKILL_RELATION = altSettings.getProperty("AltDeleteSkillRelation", false);
-		ALT_DELETE_AWAKEN_SKILL_FROM_DB = altSettings.getProperty("AltDeleteAwakenSkillFromDB", true);
-		ALT_CHECK_SKILLS_AWAKENING = altSettings.getProperty("AltCheckSkillsPostAwakening", false);
-		ALT_SIMPLE_SIGNS = altSettings.getProperty("PushkinSignsOptions", false);
-		ALT_TELE_TO_CATACOMBS = altSettings.getProperty("TeleToCatacombs", false);
-		ALT_BS_CRYSTALLIZE = altSettings.getProperty("BSCrystallize", false);
-		// ALT_MAMMON_UPGRADE = altSettings.getProperty("MammonUpgrade", 6680500);
-		// ALT_MAMMON_EXCHANGE = altSettings.getProperty("MammonExchange", 10091400);
-		ALT_ALLOW_TATTOO = altSettings.getProperty("AllowTattoo", false);
-		ALT_BUFF_LIMIT = altSettings.getProperty("BuffLimit", 20);
-		ALT_DEATH_PENALTY = altSettings.getProperty("EnableAltDeathPenalty", false);
-		ALLOW_DEATH_PENALTY_C5 = altSettings.getProperty("EnableDeathPenaltyC5", true);
-		ALT_DEATH_PENALTY_C5_CHANCE = altSettings.getProperty("DeathPenaltyC5Chance", 10);
-		ALT_DEATH_PENALTY_C5_EXPERIENCE_PENALTY = altSettings.getProperty("DeathPenaltyC5RateExpPenalty", 1);
-		ALT_DEATH_PENALTY_C5_KARMA_PENALTY = altSettings.getProperty("DeathPenaltyC5RateKarma", 1);
-		ALT_PK_DEATH_RATE = altSettings.getProperty("AltPKDeathRate", 0.);
-		NONOWNER_ITEM_PICKUP_DELAY = altSettings.getProperty("NonOwnerItemPickupDelay", 15L) * 1000L;
-		ALT_NO_LASTHIT = altSettings.getProperty("NoLasthitOnRaid", false);
-		ALT_KAMALOKA_NIGHTMARES_PREMIUM_ONLY = altSettings.getProperty("KamalokaNightmaresPremiumOnly", false);
-		// ALT_KAMALOKA_NIGHTMARE_REENTER = altSettings.getProperty("SellReenterNightmaresTicket", true);
-		// ALT_KAMALOKA_ABYSS_REENTER = altSettings.getProperty("SellReenterAbyssTicket", true);
-		// ALT_KAMALOKA_LAB_REENTER = altSettings.getProperty("SellReenterLabyrinthTicket", true);
-		ALT_PET_HEAL_BATTLE_ONLY = altSettings.getProperty("PetsHealOnlyInBattle", true);
-		CHAR_TITLE = altSettings.getProperty("CharTitle", false);
-		ADD_CHAR_TITLE = altSettings.getProperty("CharAddTitle", "");
-		ALT_ALLOW_SELL_COMMON = altSettings.getProperty("AllowSellCommon", true);
-		ALT_ALLOW_SHADOW_WEAPONS = altSettings.getProperty("AllowShadowWeapons", true);
-		ALT_DISABLED_MULTISELL = altSettings.getProperty("DisabledMultisells", ArrayUtils.EMPTY_INT_ARRAY);
-		ALT_SHOP_PRICE_LIMITS = altSettings.getProperty("ShopPriceLimits", ArrayUtils.EMPTY_INT_ARRAY);
-		ALT_SHOP_UNALLOWED_ITEMS = altSettings.getProperty("ShopUnallowedItems", ArrayUtils.EMPTY_INT_ARRAY);
-		ALT_ALLOWED_PET_POTIONS = altSettings.getProperty("AllowedPetPotions", new int[]
+		ALT_MAX_LEVEL = Math.min(generalSettings.getProperty("AltMaxLevel", 99), Experience.LEVEL.length - 1);
+		ALT_MAX_SUB_LEVEL = Math.min(generalSettings.getProperty("AltMaxSubLevel", 80), Experience.LEVEL.length - 1);
+		ALT_MAX_DUAL_SUB_LEVEL = Math.min(generalSettings.getProperty("AltMaxDualSubLevel", 99), Experience.LEVEL.length - 1);
+		ALT_ALLOW_OTHERS_WITHDRAW_FROM_CLAN_WAREHOUSE = generalSettings.getProperty("AltAllowOthersWithdrawFromClanWarehouse", false);
+		ALT_ALLOW_CLAN_COMMAND_ONLY_FOR_CLAN_LEADER = generalSettings.getProperty("AltAllowClanCommandOnlyForClanLeader", true);
+		// ALT_GAME_REQUIRE_CLAN_CASTLE = generalSettings.getProperty("AltRequireClanCastle", false);
+		// ALT_GAME_REQUIRE_CASTLE_DAWN = generalSettings.getProperty("AltRequireCastleDawn", true);
+		// ALT_GAME_ALLOW_ADENA_DAWN = generalSettings.getProperty("AltAllowAdenaDawn", true);
+		ALT_CLAN_PLAYER_COUNT_6LVL = generalSettings.getProperty("AltClanPlayer_6", 30);
+		ALT_CLAN_REP_COUNT_6LVL = generalSettings.getProperty("AltClanRep_6", 5000);
+		ALT_CLAN_PLAYER_COUNT_7LVL = generalSettings.getProperty("AltClanPlayer_7", 50);
+		ALT_CLAN_REP_COUNT_7LVL = generalSettings.getProperty("AltClanRep_7", 10000);
+		ALT_CLAN_PLAYER_COUNT_8LVL = generalSettings.getProperty("AltClanPlayer_8", 80);
+		ALT_CLAN_REP_COUNT_8LVL = generalSettings.getProperty("AltClanRep_8", 20000);
+		ALT_CLAN_PLAYER_COUNT_9LVL = generalSettings.getProperty("AltClanPlayer_9", 120);
+		ALT_CLAN_REP_COUNT_9LVL = generalSettings.getProperty("AltClanRep_9", 40000);
+		ALT_CLAN_PLAYER_COUNT_10LVL = generalSettings.getProperty("AltClanPlayer_10", 140);
+		ALT_CLAN_REP_COUNT_10LVL = generalSettings.getProperty("AltClanRep_10", 75000);
+		ALT_CLAN_PLAYER_COUNT_11LVL = generalSettings.getProperty("AltClanPlayer_11", 170);
+		ALT_CLAN_REP_COUNT_11LVL = generalSettings.getProperty("AltClanRep_11", 75000);
+		ALT_ADD_RECIPES = generalSettings.getProperty("AltAddRecipes", 0);
+		// SS_ANNOUNCE_PERIOD = generalSettings.getProperty("SSAnnouncePeriod", 0);
+		PETITIONING_ALLOWED = generalSettings.getProperty("PetitioningAllowed", true);
+		MAX_PETITIONS_PER_PLAYER = generalSettings.getProperty("MaxPetitionsPerPlayer", 5);
+		MAX_PETITIONS_PENDING = generalSettings.getProperty("MaxPetitionsPending", 25);
+		AUTO_LEARN_SKILLS = generalSettings.getProperty("AutoLearnSkills", false);
+		AUTO_LEARN_FORGOTTEN_SKILLS = generalSettings.getProperty("AutoLearnForgottenSkills", false);
+		ENCHANT_SKILLSID_RETAIL = generalSettings.getProperty("EnchantSkillsIdRetail", false);
+		ALT_SOCIAL_ACTION_REUSE = generalSettings.getProperty("AltSocialActionReuse", false);
+		ALT_DISABLE_SPELLBOOKS = generalSettings.getProperty("AltDisableSpellbooks", false);
+		ALT_DELETE_SKILL_PROF = generalSettings.getProperty("AltDeleteSkillProf", false);
+		ALT_DELETE_SKILL_RELATION = generalSettings.getProperty("AltDeleteSkillRelation", false);
+		ALT_DELETE_AWAKEN_SKILL_FROM_DB = generalSettings.getProperty("AltDeleteAwakenSkillFromDB", true);
+		ALT_CHECK_SKILLS_AWAKENING = generalSettings.getProperty("AltCheckSkillsPostAwakening", false);
+		ALT_SIMPLE_SIGNS = generalSettings.getProperty("PushkinSignsOptions", false);
+		ALT_TELE_TO_CATACOMBS = generalSettings.getProperty("TeleToCatacombs", false);
+		ALT_BS_CRYSTALLIZE = generalSettings.getProperty("BSCrystallize", false);
+		// ALT_MAMMON_UPGRADE = generalSettings.getProperty("MammonUpgrade", 6680500);
+		// ALT_MAMMON_EXCHANGE = generalSettings.getProperty("MammonExchange", 10091400);
+		ALT_ALLOW_TATTOO = generalSettings.getProperty("AllowTattoo", false);
+		ALT_BUFF_LIMIT = generalSettings.getProperty("BuffLimit", 20);
+		ALT_DEATH_PENALTY = generalSettings.getProperty("EnableAltDeathPenalty", false);
+		ALLOW_DEATH_PENALTY_C5 = generalSettings.getProperty("EnableDeathPenaltyC5", true);
+		ALT_DEATH_PENALTY_C5_CHANCE = generalSettings.getProperty("DeathPenaltyC5Chance", 10);
+		ALT_DEATH_PENALTY_C5_EXPERIENCE_PENALTY = generalSettings.getProperty("DeathPenaltyC5RateExpPenalty", 1);
+		ALT_DEATH_PENALTY_C5_KARMA_PENALTY = generalSettings.getProperty("DeathPenaltyC5RateKarma", 1);
+		ALT_PK_DEATH_RATE = generalSettings.getProperty("AltPKDeathRate", 0.);
+		NONOWNER_ITEM_PICKUP_DELAY = generalSettings.getProperty("NonOwnerItemPickupDelay", 15L) * 1000L;
+		ALT_NO_LASTHIT = generalSettings.getProperty("NoLasthitOnRaid", false);
+		ALT_KAMALOKA_NIGHTMARES_PREMIUM_ONLY = generalSettings.getProperty("KamalokaNightmaresPremiumOnly", false);
+		// ALT_KAMALOKA_NIGHTMARE_REENTER = generalSettings.getProperty("SellReenterNightmaresTicket", true);
+		// ALT_KAMALOKA_ABYSS_REENTER = generalSettings.getProperty("SellReenterAbyssTicket", true);
+		// ALT_KAMALOKA_LAB_REENTER = generalSettings.getProperty("SellReenterLabyrinthTicket", true);
+		ALT_PET_HEAL_BATTLE_ONLY = generalSettings.getProperty("PetsHealOnlyInBattle", true);
+		CHAR_TITLE = generalSettings.getProperty("CharTitle", false);
+		ADD_CHAR_TITLE = generalSettings.getProperty("CharAddTitle", "");
+		ALT_ALLOW_SELL_COMMON = generalSettings.getProperty("AllowSellCommon", true);
+		ALT_ALLOW_SHADOW_WEAPONS = generalSettings.getProperty("AllowShadowWeapons", true);
+		ALT_DISABLED_MULTISELL = generalSettings.getProperty("DisabledMultisells", ArrayUtils.EMPTY_INT_ARRAY);
+		ALT_SHOP_PRICE_LIMITS = generalSettings.getProperty("ShopPriceLimits", ArrayUtils.EMPTY_INT_ARRAY);
+		ALT_SHOP_UNALLOWED_ITEMS = generalSettings.getProperty("ShopUnallowedItems", ArrayUtils.EMPTY_INT_ARRAY);
+		ALT_ALLOWED_PET_POTIONS = generalSettings.getProperty("AllowedPetPotions", new int[]
 		{
 			735,
 			1060,
@@ -1634,42 +1629,42 @@ public class Config
 			6035,
 			6036
 		});
-		// ALLOW_CLANSKILLS = altSettings.getProperty("AllowClanSkills", true);
-		ALLOW_LEARN_TRANS_SKILLS_WO_QUEST = altSettings.getProperty("AllowLearnTransSkillsWOQuest", false);
-		PARTY_LEADER_ONLY_CAN_INVITE = altSettings.getProperty("PartyLeaderOnlyCanInvite", true);
-		PARTY_MATCHMAKING_ON_ENTERWORLD = altSettings.getProperty("PartyMatchmakingOnEnterWorld", false);
-		ALLOW_TALK_WHILE_SITTING = altSettings.getProperty("AllowTalkWhileSitting", true);
-		ALLOW_NOBLE_TP_TO_ALL = altSettings.getProperty("AllowNobleTPToAll", false);
-		ALLOW_FAKE_PLAYERS = altSettings.getProperty("AllowFakePlayers", false);
-		ALLOW_TOTAL_ONLINE = altSettings.getProperty("AllowVoiceCommandOnline", false);
-		FAKE_PLAYERS_PERCENT = altSettings.getProperty("FakePlayersPercent", 100);
-		CLANHALL_BUFFTIME_MODIFIER = altSettings.getProperty("ClanHallBuffTimeModifier", 1.0);
-		SONGDANCETIME_MODIFIER = altSettings.getProperty("SongDanceTimeModifier", 1.0);
-		MAXLOAD_MODIFIER = altSettings.getProperty("MaxLoadModifier", 1.0);
-		GATEKEEPER_MODIFIER = altSettings.getProperty("GkCostMultiplier", 1.0);
-		GATEKEEPER_FREE = altSettings.getProperty("GkFree", 40);
-		CRUMA_GATEKEEPER_LVL = altSettings.getProperty("GkCruma", 65);
-		ALT_IMPROVED_PETS_LIMITED_USE = altSettings.getProperty("ImprovedPetsLimitedUse", false);
-		ALT_CHAMPION_CHANCE1 = altSettings.getProperty("AltChampionChance1", 0.);
-		ALT_CHAMPION_CHANCE2 = altSettings.getProperty("AltChampionChance2", 0.);
-		ALT_CHAMPION_CAN_BE_AGGRO = altSettings.getProperty("AltChampionAggro", false);
-		ALT_CHAMPION_CAN_BE_SOCIAL = altSettings.getProperty("AltChampionSocial", false);
-		ALT_CHAMPION_TOP_LEVEL = altSettings.getProperty("AltChampionTopLevel", 75);
-		ALT_VITALITY_ENABLED = altSettings.getProperty("AltVitalityEnabled", true);
-		ALT_VITALITY_RATE = altSettings.getProperty("AltVitalityRate", 2.);
-		ALT_VITALITY_CONSUME_RATE = altSettings.getProperty("AltVitalityConsumeRate", 1.);
-		ALT_PCBANG_POINTS_ENABLED = altSettings.getProperty("AltPcBangPointsEnabled", false);
-		ALT_PCBANG_POINTS_BONUS_DOUBLE_CHANCE = altSettings.getProperty("AltPcBangPointsDoubleChance", 10.);
-		ALT_PCBANG_POINTS_BONUS = altSettings.getProperty("AltPcBangPointsBonus", 0);
-		ALT_PCBANG_POINTS_DELAY = altSettings.getProperty("AltPcBangPointsDelay", 20);
-		ALT_PCBANG_POINTS_MIN_LVL = altSettings.getProperty("AltPcBangPointsMinLvl", 1);
-		ALT_DEBUG_ENABLED = altSettings.getProperty("AltDebugEnabled", false);
-		ALT_DEBUG_PVP_ENABLED = altSettings.getProperty("AltDebugPvPEnabled", false);
-		ALT_DEBUG_PVP_DUEL_ONLY = altSettings.getProperty("AltDebugPvPDuelOnly", true);
-		ALT_DEBUG_PVE_ENABLED = altSettings.getProperty("AltDebugPvEEnabled", false);
-		ALT_MAX_ALLY_SIZE = altSettings.getProperty("AltMaxAllySize", 3);
-		ALT_PARTY_DISTRIBUTION_RANGE = altSettings.getProperty("AltPartyDistributionRange", 1500);
-		ALT_PARTY_BONUS = altSettings.getProperty("AltPartyBonus", new double[]
+		// ALLOW_CLANSKILLS = generalSettings.getProperty("AllowClanSkills", true);
+		ALLOW_LEARN_TRANS_SKILLS_WO_QUEST = generalSettings.getProperty("AllowLearnTransSkillsWOQuest", false);
+		PARTY_LEADER_ONLY_CAN_INVITE = generalSettings.getProperty("PartyLeaderOnlyCanInvite", true);
+		PARTY_MATCHMAKING_ON_ENTERWORLD = generalSettings.getProperty("PartyMatchmakingOnEnterWorld", false);
+		ALLOW_TALK_WHILE_SITTING = generalSettings.getProperty("AllowTalkWhileSitting", true);
+		ALLOW_NOBLE_TP_TO_ALL = generalSettings.getProperty("AllowNobleTPToAll", false);
+		ALLOW_FAKE_PLAYERS = generalSettings.getProperty("AllowFakePlayers", false);
+		ALLOW_TOTAL_ONLINE = generalSettings.getProperty("AllowVoiceCommandOnline", false);
+		FAKE_PLAYERS_PERCENT = generalSettings.getProperty("FakePlayersPercent", 100);
+		CLANHALL_BUFFTIME_MODIFIER = generalSettings.getProperty("ClanHallBuffTimeModifier", 1.0);
+		SONGDANCETIME_MODIFIER = generalSettings.getProperty("SongDanceTimeModifier", 1.0);
+		MAXLOAD_MODIFIER = generalSettings.getProperty("MaxLoadModifier", 1.0);
+		GATEKEEPER_MODIFIER = generalSettings.getProperty("GkCostMultiplier", 1.0);
+		GATEKEEPER_FREE = generalSettings.getProperty("GkFree", 40);
+		CRUMA_GATEKEEPER_LVL = generalSettings.getProperty("GkCruma", 65);
+		ALT_IMPROVED_PETS_LIMITED_USE = generalSettings.getProperty("ImprovedPetsLimitedUse", false);
+		ALT_CHAMPION_CHANCE1 = generalSettings.getProperty("AltChampionChance1", 0.);
+		ALT_CHAMPION_CHANCE2 = generalSettings.getProperty("AltChampionChance2", 0.);
+		ALT_CHAMPION_CAN_BE_AGGRO = generalSettings.getProperty("AltChampionAggro", false);
+		ALT_CHAMPION_CAN_BE_SOCIAL = generalSettings.getProperty("AltChampionSocial", false);
+		ALT_CHAMPION_TOP_LEVEL = generalSettings.getProperty("AltChampionTopLevel", 75);
+		ALT_VITALITY_ENABLED = generalSettings.getProperty("AltVitalityEnabled", true);
+		ALT_VITALITY_RATE = generalSettings.getProperty("AltVitalityRate", 2.);
+		ALT_VITALITY_CONSUME_RATE = generalSettings.getProperty("AltVitalityConsumeRate", 1.);
+		ALT_PCBANG_POINTS_ENABLED = generalSettings.getProperty("AltPcBangPointsEnabled", false);
+		ALT_PCBANG_POINTS_BONUS_DOUBLE_CHANCE = generalSettings.getProperty("AltPcBangPointsDoubleChance", 10.);
+		ALT_PCBANG_POINTS_BONUS = generalSettings.getProperty("AltPcBangPointsBonus", 0);
+		ALT_PCBANG_POINTS_DELAY = generalSettings.getProperty("AltPcBangPointsDelay", 20);
+		ALT_PCBANG_POINTS_MIN_LVL = generalSettings.getProperty("AltPcBangPointsMinLvl", 1);
+		ALT_DEBUG_ENABLED = generalSettings.getProperty("AltDebugEnabled", false);
+		ALT_DEBUG_PVP_ENABLED = generalSettings.getProperty("AltDebugPvPEnabled", false);
+		ALT_DEBUG_PVP_DUEL_ONLY = generalSettings.getProperty("AltDebugPvPDuelOnly", true);
+		ALT_DEBUG_PVE_ENABLED = generalSettings.getProperty("AltDebugPvEEnabled", false);
+		ALT_MAX_ALLY_SIZE = generalSettings.getProperty("AltMaxAllySize", 3);
+		ALT_PARTY_DISTRIBUTION_RANGE = generalSettings.getProperty("AltPartyDistributionRange", 1500);
+		ALT_PARTY_BONUS = generalSettings.getProperty("AltPartyBonus", new double[]
 		{
 			1.00,
 			1.10,
@@ -1681,46 +1676,48 @@ public class Config
 			2.10,
 			2.20
 		});
-		// ALT_ALL_PHYS_SKILLS_OVERHIT = altSettings.getProperty("AltAllPhysSkillsOverhit", true);
-		ALT_REMOVE_SKILLS_ON_DELEVEL = altSettings.getProperty("AltRemoveSkillsOnDelevel", true);
-		// ALLOW_CH_DOOR_OPEN_ON_CLICK = altSettings.getProperty("AllowChDoorOpenOnClick", true);
-		ALT_CH_ALL_BUFFS = altSettings.getProperty("AltChAllBuffs", false);
-		ALT_CH_ALLOW_1H_BUFFS = altSettings.getProperty("AltChAllowHourBuff", false);
-		// ALT_CH_SIMPLE_DIALOG = altSettings.getProperty("AltChSimpleDialog", false);
-		BEAUTY_SHOP_COIN_ITEM_ID = altSettings.getProperty("CoinForBeautyShop", 36308);
-		AUGMENTATION_NG_SKILL_CHANCE = altSettings.getProperty("AugmentationNGSkillChance", 15);
-		AUGMENTATION_NG_GLOW_CHANCE = altSettings.getProperty("AugmentationNGGlowChance", 0);
-		AUGMENTATION_MID_SKILL_CHANCE = altSettings.getProperty("AugmentationMidSkillChance", 30);
-		AUGMENTATION_MID_GLOW_CHANCE = altSettings.getProperty("AugmentationMidGlowChance", 40);
-		AUGMENTATION_HIGH_SKILL_CHANCE = altSettings.getProperty("AugmentationHighSkillChance", 45);
-		AUGMENTATION_HIGH_GLOW_CHANCE = altSettings.getProperty("AugmentationHighGlowChance", 70);
-		AUGMENTATION_TOP_SKILL_CHANCE = altSettings.getProperty("AugmentationTopSkillChance", 60);
-		AUGMENTATION_TOP_GLOW_CHANCE = altSettings.getProperty("AugmentationTopGlowChance", 100);
-		AUGMENTATION_BASESTAT_CHANCE = altSettings.getProperty("AugmentationBaseStatChance", 1);
-		AUGMENTATION_ACC_SKILL_CHANCE = altSettings.getProperty("AugmentationAccSkillChance", 10);
-		ALT_OPEN_CLOAK_SLOT = altSettings.getProperty("OpenCloakSlot", false);
-		ALT_SHOW_SERVER_TIME = altSettings.getProperty("ShowServerTime", false);
-		FOLLOW_RANGE = altSettings.getProperty("FollowRange", 100);
-		ALT_ITEM_AUCTION_ENABLED = altSettings.getProperty("AltItemAuctionEnabled", true);
-		ALT_ITEM_AUCTION_CAN_REBID = altSettings.getProperty("AltItemAuctionCanRebid", false);
-		ALT_ITEM_AUCTION_START_ANNOUNCE = altSettings.getProperty("AltItemAuctionAnnounce", true);
-		ALT_ITEM_AUCTION_BID_ITEM_ID = altSettings.getProperty("AltItemAuctionBidItemId", 57);
-		ALT_ITEM_AUCTION_MAX_BID = altSettings.getProperty("AltItemAuctionMaxBid", 1000000L);
-		ALT_ITEM_AUCTION_MAX_CANCEL_TIME_IN_MILLIS = altSettings.getProperty("AltItemAuctionMaxCancelTimeInMillis", 604800000);
-		ALT_FISH_CHAMPIONSHIP_ENABLED = altSettings.getProperty("AltFishChampionshipEnabled", true);
-		ALT_FISH_CHAMPIONSHIP_REWARD_ITEM = altSettings.getProperty("AltFishChampionshipRewardItemId", 57);
-		ALT_FISH_CHAMPIONSHIP_REWARD_1 = altSettings.getProperty("AltFishChampionshipReward1", 800000);
-		ALT_FISH_CHAMPIONSHIP_REWARD_2 = altSettings.getProperty("AltFishChampionshipReward2", 500000);
-		ALT_FISH_CHAMPIONSHIP_REWARD_3 = altSettings.getProperty("AltFishChampionshipReward3", 300000);
-		ALT_FISH_CHAMPIONSHIP_REWARD_4 = altSettings.getProperty("AltFishChampionshipReward4", 200000);
-		ALT_FISH_CHAMPIONSHIP_REWARD_5 = altSettings.getProperty("AltFishChampionshipReward5", 100000);
-		ALT_ENABLE_BLOCK_CHECKER_EVENT = altSettings.getProperty("EnableBlockCheckerEvent", true);
-		ALT_MIN_BLOCK_CHECKER_TEAM_MEMBERS = Math.min(Math.max(altSettings.getProperty("BlockCheckerMinTeamMembers", 1), 1), 6);
-		ALT_RATE_COINS_REWARD_BLOCK_CHECKER = altSettings.getProperty("BlockCheckerRateCoinReward", 1.);
-		ALT_HBCE_FAIR_PLAY = altSettings.getProperty("HBCEFairPlay", false);
-		ALT_PET_INVENTORY_LIMIT = altSettings.getProperty("AltPetInventoryLimit", 12);
-		SAVE_GM_SPAWN_CUSTOM = altSettings.getProperty("SaveGmSpawnCustom", false);
-		LOAD_GM_SPAWN_CUSTOM = altSettings.getProperty("LoadGmSpawnCustom", false);
+		// ALT_ALL_PHYS_SKILLS_OVERHIT = generalSettings.getProperty("AltAllPhysSkillsOverhit", true);
+		ALT_REMOVE_SKILLS_ON_DELEVEL = generalSettings.getProperty("AltRemoveSkillsOnDelevel", true);
+		// ALLOW_CH_DOOR_OPEN_ON_CLICK = generalSettings.getProperty("AllowChDoorOpenOnClick", true);
+		ALT_CH_ALL_BUFFS = generalSettings.getProperty("AltChAllBuffs", false);
+		ALT_CH_ALLOW_1H_BUFFS = generalSettings.getProperty("AltChAllowHourBuff", false);
+		// ALT_CH_SIMPLE_DIALOG = generalSettings.getProperty("AltChSimpleDialog", false);
+		BEAUTY_SHOP_COIN_ITEM_ID = generalSettings.getProperty("CoinForBeautyShop", 36308);
+		AUGMENTATION_NG_SKILL_CHANCE = generalSettings.getProperty("AugmentationNGSkillChance", 15);
+		AUGMENTATION_NG_GLOW_CHANCE = generalSettings.getProperty("AugmentationNGGlowChance", 0);
+		AUGMENTATION_MID_SKILL_CHANCE = generalSettings.getProperty("AugmentationMidSkillChance", 30);
+		AUGMENTATION_MID_GLOW_CHANCE = generalSettings.getProperty("AugmentationMidGlowChance", 40);
+		AUGMENTATION_HIGH_SKILL_CHANCE = generalSettings.getProperty("AugmentationHighSkillChance", 45);
+		AUGMENTATION_HIGH_GLOW_CHANCE = generalSettings.getProperty("AugmentationHighGlowChance", 70);
+		AUGMENTATION_TOP_SKILL_CHANCE = generalSettings.getProperty("AugmentationTopSkillChance", 60);
+		AUGMENTATION_TOP_GLOW_CHANCE = generalSettings.getProperty("AugmentationTopGlowChance", 100);
+		AUGMENTATION_BASESTAT_CHANCE = generalSettings.getProperty("AugmentationBaseStatChance", 1);
+		AUGMENTATION_ACC_SKILL_CHANCE = generalSettings.getProperty("AugmentationAccSkillChance", 10);
+		ALT_OPEN_CLOAK_SLOT = generalSettings.getProperty("OpenCloakSlot", false);
+		ALT_SHOW_SERVER_TIME = generalSettings.getProperty("ShowServerTime", false);
+		FOLLOW_RANGE = generalSettings.getProperty("FollowRange", 100);
+		ALT_ITEM_AUCTION_ENABLED = generalSettings.getProperty("AltItemAuctionEnabled", true);
+		ALT_ITEM_AUCTION_CAN_REBID = generalSettings.getProperty("AltItemAuctionCanRebid", false);
+		ALT_ITEM_AUCTION_START_ANNOUNCE = generalSettings.getProperty("AltItemAuctionAnnounce", true);
+		ALT_ITEM_AUCTION_BID_ITEM_ID = generalSettings.getProperty("AltItemAuctionBidItemId", 57);
+		ALT_ITEM_AUCTION_MAX_BID = generalSettings.getProperty("AltItemAuctionMaxBid", 1000000L);
+		ALT_ITEM_AUCTION_MAX_CANCEL_TIME_IN_MILLIS = generalSettings.getProperty("AltItemAuctionMaxCancelTimeInMillis", 604800000);
+		ALT_FISH_CHAMPIONSHIP_ENABLED = generalSettings.getProperty("AltFishChampionshipEnabled", true);
+		ALT_FISH_CHAMPIONSHIP_REWARD_ITEM = generalSettings.getProperty("AltFishChampionshipRewardItemId", 57);
+		ALT_FISH_CHAMPIONSHIP_REWARD_1 = generalSettings.getProperty("AltFishChampionshipReward1", 800000);
+		ALT_FISH_CHAMPIONSHIP_REWARD_2 = generalSettings.getProperty("AltFishChampionshipReward2", 500000);
+		ALT_FISH_CHAMPIONSHIP_REWARD_3 = generalSettings.getProperty("AltFishChampionshipReward3", 300000);
+		ALT_FISH_CHAMPIONSHIP_REWARD_4 = generalSettings.getProperty("AltFishChampionshipReward4", 200000);
+		ALT_FISH_CHAMPIONSHIP_REWARD_5 = generalSettings.getProperty("AltFishChampionshipReward5", 100000);
+		ALT_ENABLE_BLOCK_CHECKER_EVENT = generalSettings.getProperty("EnableBlockCheckerEvent", true);
+		ALT_MIN_BLOCK_CHECKER_TEAM_MEMBERS = Math.min(Math.max(generalSettings.getProperty("BlockCheckerMinTeamMembers", 1), 1), 6);
+		ALT_RATE_COINS_REWARD_BLOCK_CHECKER = generalSettings.getProperty("BlockCheckerRateCoinReward", 1.);
+		ALT_HBCE_FAIR_PLAY = generalSettings.getProperty("HBCEFairPlay", false);
+		ALT_PET_INVENTORY_LIMIT = generalSettings.getProperty("AltPetInventoryLimit", 12);
+		SAVE_GM_SPAWN_CUSTOM = generalSettings.getProperty("SaveGmSpawnCustom", false);
+		LOAD_GM_SPAWN_CUSTOM = generalSettings.getProperty("LoadGmSpawnCustom", false);
+		HELLBOUND_MIN_PLAYER_LEVEL = generalSettings.getProperty("HellboundMinimumPlayerLevel", 99);
+		HELLBOUND_MAP_WITHOUT_ITEM = generalSettings.getProperty("HellboundMapWithoutItem", false);
 	}
 	
 	/**
@@ -1728,7 +1725,7 @@ public class Config
 	 */
 	private static void loadServicesSettings()
 	{
-		ExProperties servicesSettings = load(SERVICES_FILE);
+		ExProperties servicesSettings = load(SERVICES_CONFIG_FILE);
 		
 		for (int id : servicesSettings.getProperty("AllowClassMasters", ArrayUtils.EMPTY_INT_ARRAY))
 		{
@@ -1950,25 +1947,25 @@ public class Config
 	}
 	
 	/**
-	 * Method loadAISettings.
+	 * Method loadNpcSettings.
 	 */
-	private static void loadAISettings()
+	private static void loadNpcSettings()
 	{
-		ExProperties aiSettings = load(AI_CONFIG_FILE);
-		AI_TASK_MANAGER_COUNT = aiSettings.getProperty("AiTaskManagers", 1);
-		AI_TASK_ATTACK_DELAY = aiSettings.getProperty("AiTaskDelay", 1000);
-		AI_TASK_ACTIVE_DELAY = aiSettings.getProperty("AiTaskActiveDelay", 1000);
-		BLOCK_ACTIVE_TASKS = aiSettings.getProperty("BlockActiveTasks", false);
-		ALWAYS_TELEPORT_HOME = aiSettings.getProperty("AlwaysTeleportHome", false);
-		RND_WALK = aiSettings.getProperty("RndWalk", true);
-		RND_WALK_RATE = aiSettings.getProperty("RndWalkRate", 1);
-		RND_ANIMATION_RATE = aiSettings.getProperty("RndAnimationRate", 2);
-		AGGRO_CHECK_INTERVAL = aiSettings.getProperty("AggroCheckInterval", 250);
-		NONAGGRO_TIME_ONTELEPORT = aiSettings.getProperty("NonAggroTimeOnTeleport", 15000);
-		MAX_DRIFT_RANGE = aiSettings.getProperty("MaxDriftRange", 100);
-		MAX_PURSUE_RANGE = aiSettings.getProperty("MaxPursueRange", 4000);
-		MAX_PURSUE_UNDERGROUND_RANGE = aiSettings.getProperty("MaxPursueUndergoundRange", 2000);
-		MAX_PURSUE_RANGE_RAID = aiSettings.getProperty("MaxPursueRangeRaid", 5000);
+		ExProperties npcSettings = load(NPC_CONFIG_FILE);
+		AI_TASK_MANAGER_COUNT = npcSettings.getProperty("AiTaskManagers", 1);
+		AI_TASK_ATTACK_DELAY = npcSettings.getProperty("AiTaskDelay", 1000);
+		AI_TASK_ACTIVE_DELAY = npcSettings.getProperty("AiTaskActiveDelay", 1000);
+		BLOCK_ACTIVE_TASKS = npcSettings.getProperty("BlockActiveTasks", false);
+		ALWAYS_TELEPORT_HOME = npcSettings.getProperty("AlwaysTeleportHome", false);
+		RND_WALK = npcSettings.getProperty("RndWalk", true);
+		RND_WALK_RATE = npcSettings.getProperty("RndWalkRate", 1);
+		RND_ANIMATION_RATE = npcSettings.getProperty("RndAnimationRate", 2);
+		AGGRO_CHECK_INTERVAL = npcSettings.getProperty("AggroCheckInterval", 250);
+		NONAGGRO_TIME_ONTELEPORT = npcSettings.getProperty("NonAggroTimeOnTeleport", 15000);
+		MAX_DRIFT_RANGE = npcSettings.getProperty("MaxDriftRange", 100);
+		MAX_PURSUE_RANGE = npcSettings.getProperty("MaxPursueRange", 4000);
+		MAX_PURSUE_UNDERGROUND_RANGE = npcSettings.getProperty("MaxPursueUndergoundRange", 2000);
+		MAX_PURSUE_RANGE_RAID = npcSettings.getProperty("MaxPursueRangeRaid", 5000);
 	}
 	
 	/**
@@ -2078,7 +2075,7 @@ public class Config
 	 */
 	private static void loadOlympiadSettings()
 	{
-		ExProperties olympSettings = load(OLYMPIAD);
+		ExProperties olympSettings = load(OLYMPIAD_CONFIG_FILE);
 		ENABLE_OLYMPIAD = olympSettings.getProperty("EnableOlympiad", true);
 		ENABLE_OLYMPIAD_SPECTATING = olympSettings.getProperty("EnableOlympiadSpectating", true);
 		ALT_OLY_DAYS = olympSettings.getProperty("AltOlyDays", false);
@@ -2122,14 +2119,14 @@ public class Config
 		loadRatesConfig();
 		loadResidenceConfig();
 		loadOtherConfig();
-		loadTopSettings();
-		loadPaymentConfig();
+		loadVoteRewardSettings();
+		loadDonateConfig();
 		loadSpoilConfig();
 		loadFormulasConfig();
-		loadAltSettings();
+		loadGeneralSettings();
 		loadServicesSettings();
 		loadPvPSettings();
-		loadAISettings();
+		loadNpcSettings();
 		loadGeodataSettings();
 		loadEventsSettings();
 		loadOlympiadSettings();
@@ -2158,7 +2155,7 @@ public class Config
 		try
 		{
 			String line;
-			lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(ANUSEWORDS_CONFIG_FILE), "UTF-8"));
+			lnr = new LineNumberReader(new InputStreamReader(new FileInputStream(ABUSEWORDS_CONFIG_FILE), "UTF-8"));
 			
 			while ((line = lnr.readLine()) != null)
 			{

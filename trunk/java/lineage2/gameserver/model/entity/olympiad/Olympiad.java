@@ -96,7 +96,7 @@ public class Olympiad
 		_olympiadEnd = ServerVariables.getLong("Olympiad_End", -1);
 		_validationEnd = ServerVariables.getLong("Olympiad_ValdationEnd", -1);
 		_nextWeeklyChange = ServerVariables.getLong("Olympiad_NextWeeklyChange", -1);
-		ExProperties olympiadProperties = Config.load(Config.OLYMPIAD_DATA_FILE);
+		ExProperties olympiadProperties = Config.load(Config.OLYMPIAD_CONFIG_FILE);
 		
 		if (_currentCycle == -1)
 		{

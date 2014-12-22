@@ -161,7 +161,7 @@ public class Announcements
 		
 		try
 		{
-			List<String> lines = Arrays.asList(FileUtils.readFileToString(new File("config/announcements.txt"), "UTF-8").split("\n"));
+			List<String> lines = Arrays.asList(FileUtils.readFileToString(new File("config/Announcements.txt"), "UTF-8").split("\n"));
 			
 			for (String line : lines)
 			{
@@ -179,7 +179,7 @@ public class Announcements
 		}
 		catch (Exception e)
 		{
-			_log.error("Error while loading config/announcements.txt!");
+			_log.error("Error while loading config/Announcements.txt!");
 		}
 	}
 	
