@@ -38,7 +38,7 @@
 			<door id="24220060" opened="true"/>
 		</doors>
 		<zones>
-			<zone name="[gvg_battle_zone]" active="true"/>
+			<zone name="[gvg_Battle]" active="true"/>
 			<zone name="[gvg_1_peace]" active="true"/>
 			<zone name="[gvg_2_peace]" active="true"/>
 		</zones>
