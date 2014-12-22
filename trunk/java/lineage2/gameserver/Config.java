@@ -707,8 +707,6 @@ public class Config
 	public static int ALT_PET_INVENTORY_LIMIT;
 	public static boolean SAVE_GM_SPAWN_CUSTOM;
 	public static boolean LOAD_GM_SPAWN_CUSTOM;
-	public static int HELLBOUND_MIN_PLAYER_LEVEL;
-	public static boolean HELLBOUND_MAP_WITHOUT_ITEM;
 	public static int STARTING_ADENA;
 	public static int STARTING_LEVEL;
 	public static int SUB_START_LEVEL;
@@ -1716,8 +1714,6 @@ public class Config
 		ALT_PET_INVENTORY_LIMIT = generalSettings.getProperty("AltPetInventoryLimit", 12);
 		SAVE_GM_SPAWN_CUSTOM = generalSettings.getProperty("SaveGmSpawnCustom", false);
 		LOAD_GM_SPAWN_CUSTOM = generalSettings.getProperty("LoadGmSpawnCustom", false);
-		HELLBOUND_MIN_PLAYER_LEVEL = generalSettings.getProperty("HellboundMinimumPlayerLevel", 99);
-		HELLBOUND_MAP_WITHOUT_ITEM = generalSettings.getProperty("HellboundMapWithoutItem", false);
 	}
 	
 	/**
