@@ -154,4 +154,21 @@
 			<coords loc="207880 119544 -14960 -2200"/>
 		</polygon>
 	</zone>
+	<zone name="[parnassus]" type="NoSummon" >
+		<polygon>
+			<coords loc="151016 173432 -952 -852" />
+			<coords loc="151032 173000 -952 -852" />
+			<coords loc="150888 172360 -952 -852" />
+			<coords loc="150712 172136 -952 -852" />
+			<coords loc="150168 171720 -952 -852" />
+			<coords loc="149144 171688 -952 -852" />
+			<coords loc="148472 171784 -952 -852" />
+			<coords loc="147832 172328 -952 -852" />
+			<coords loc="147784 174200 -952 -852" />
+			<coords loc="148488 174840 -960 -860" />
+			<coords loc="149384 174952 -952 -852" />
+			<coords loc="150296 174744 -952 -852" />
+			<coords loc="150888 174328 -952 -852" />
+		</polygon>
+	</zone>
 </list>
