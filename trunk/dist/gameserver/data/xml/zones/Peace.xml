@@ -1,14 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "zone.dtd">
 <list>
-	<zone name="[kamael_start]" type="Peace">
-		<polygon>
-			<coords loc="-126000 37000"/>
-			<coords loc="-122000 37000"/>
-			<coords loc="-122000 39000"/>
-			<coords loc="-126000 39000"/>
-		</polygon>
-	</zone>
 	<zone name="[talking_island_town_peace_zone1]" type="Peace">
 		<polygon>
 			<coords loc="-114584 252104"/>
@@ -59,199 +51,6 @@
 			<coords loc="-113500 243350 -8050 -7050"/>
 			<coords loc="-115930 243350 -8050 -7050"/>
 			<coords loc="-115930 246000 -8050 -7050"/>
-		</polygon>
-	</zone>
-	<zone name="[mage_start_peace_1]" type="Peace">
-		<polygon>
-			<coords loc="-90034 248143 -3699 -2699"/>
-			<coords loc="-89960 248698 -3699 -2699"/>
-			<coords loc="-90520 248847 -3699 -2699"/>
-			<coords loc="-91136 248445 -3699 -2699"/>
-			<coords loc="-91270 248296 -3699 -2699"/>
-			<coords loc="-91328 248092 -3699 -2699"/>
-			<coords loc="-91250 247867 -3699 -2699"/>
-			<coords loc="-91063 247704 -3699 -2699"/>
-			<coords loc="-90863 247676 -3699 -2699"/>
-			<coords loc="-90638 247748 -3699 -2699"/>
-		</polygon>
-	</zone>
-	<zone name="[mage_start_peace_2]" type="Peace">
-		<polygon>
-			<coords loc="-90165 247096 -4043 -3043"/>
-			<coords loc="-88576 248162 -4043 -3043"/>
-			<coords loc="-89962 250239 -4043 -3043"/>
-			<coords loc="-91512 249150 -4043 -3043"/>
-		</polygon>
-	</zone>
-	<zone name="[mage_start_peace_3]" type="Peace">
-		<polygon>
-			<coords loc="-88457 248867 -3659 -2659"/>
-			<coords loc="-88611 249099 -3659 -2659"/>
-			<coords loc="-89054 249756 -3659 -2659"/>
-			<coords loc="-89279 250048 -3659 -2659"/>
-			<coords loc="-89684 250143 -3659 -2659"/>
-			<coords loc="-90008 249970 -3659 -2659"/>
-			<coords loc="-88864 248209 -3659 -2659"/>
-			<coords loc="-88542 248446 -3659 -2659"/>
-		</polygon>
-	</zone>
-	<zone name="[mage_start_peace_4]" type="Peace">
-		<polygon>
-			<coords loc="-88732 248912 -3659 -2659"/>
-			<coords loc="-88418 249116 -3659 -2659"/>
-			<coords loc="-89005 249980 -3659 -2659"/>
-			<coords loc="-89311 249787 -3659 -2659"/>
-		</polygon>
-	</zone>
-	<zone name="[mage_start_peace_5]" type="Peace">
-		<polygon>
-			<coords loc="-88612 249461 -3659 -2659"/>
-			<coords loc="-88559 249539 -3659 -2659"/>
-			<coords loc="-88581 249649 -3659 -2659"/>
-			<coords loc="-88680 249708 -3659 -2659"/>
-			<coords loc="-88761 249704 -3659 -2659"/>
-			<coords loc="-89050 249513 -3659 -2659"/>
-			<coords loc="-89073 249332 -3659 -2659"/>
-			<coords loc="-88895 249273 -3659 -2659"/>
-		</polygon>
-	</zone>
-	<zone name="[fighter_start_peace_1]" type="Peace">
-		<polygon>
-			<coords loc="-73436 257725 -3284 -2284"/>
-			<coords loc="-71668 256229 -3284 -2284"/>
-			<coords loc="-69952 258077 -3284 -2284"/>
-			<coords loc="-71896 259701 -3284 -2284"/>
-		</polygon>
-	</zone>
-	<zone name="[fighter_start_peace_2]" type="Peace">
-		<polygon>
-			<coords loc="-73180 257663 -3272 -2272"/>
-			<coords loc="-72460 258619 -3272 -2272"/>
-			<coords loc="-72720 258831 -3272 -2272"/>
-			<coords loc="-73284 258115 -3272 -2272"/>
-			<coords loc="-73260 257855 -3272 -2272"/>
-		</polygon>
-	</zone>
-	<zone name="[fighter_start_peace_3]" type="Peace">
-		<polygon>
-			<coords loc="-71279 256408 -3272 -2272"/>
-			<coords loc="-70679 257116 -3272 -2272"/>
-			<coords loc="-70939 257328 -3272 -2272"/>
-			<coords loc="-71575 256612 -3272 -2272"/>
-			<coords loc="-71634 256392 -3272 -2272"/>
-		</polygon>
-	</zone>
-	<zone name="[fighter_start_peace_4]" type="Peace">
-		<polygon>
-			<coords loc="-72596 259181 -3306 -2306"/>
-			<coords loc="-70363 257272 -3306 -2306"/>
-			<coords loc="-70041 257631 -3306 -2306"/>
-			<coords loc="-72303 259545 -3306 -2306"/>
-		</polygon>
-	</zone>
-	<zone name="[darkelf_town_peace_zone]" type="Peace">
-		<polygon>
-			<coords loc="15719 16735 -8507 -1507"/>
-			<coords loc="14885 19139 -8507 -1507"/>
-			<coords loc="12223 21049 -8507 -1507"/>
-			<coords loc="8962 20203 -8507 -1507"/>
-			<coords loc="7340 18060 -8507 -1507"/>
-			<coords loc="7372 15649 -8507 -1507"/>
-			<coords loc="8018 14013 -8507 -1507"/>
-			<coords loc="9389 12836 -8507 -1507"/>
-			<coords loc="10669 12131 -8507 -1507"/>
-			<coords loc="12499 12455 -8507 -1507"/>
-			<coords loc="14684 13625 -8507 -1507"/>
-			<coords loc="15441 15060 -8507 -1507"/>
-		</polygon>
-	</zone>
-	<zone name="[darkelf_start_peace_1]" type="Peace">
-		<polygon>
-			<coords loc="28422 8936 -4571 -2071"/>
-			<coords loc="30282 10670 -4571 -2071"/>
-			<coords loc="29952 11744 -4571 -2071"/>
-			<coords loc="28457 13117 -4571 -2071"/>
-			<coords loc="27730 13126 -4571 -2071"/>
-			<coords loc="26435 11893 -4571 -2071"/>
-			<coords loc="26450 10146 -4571 -2071"/>
-			<coords loc="27792 8929 -4571 -2071"/>
-		</polygon>
-	</zone>
-	<zone name="[darkelf_start_peace_2]" type="Peace">
-		<polygon>
-			<coords loc="29434 10233 -4588 -2088"/>
-			<coords loc="31273 10233 -4588 -2088"/>
-			<coords loc="31273 11827 -4588 -2088"/>
-			<coords loc="29431 11830 -4588 -2088"/>
-		</polygon>
-	</zone>
-	<zone name="[elf_town_peace1]" type="Peace">
-		<polygon>
-			<coords loc="47758 51443 -3511 -2011"/>
-			<coords loc="46735 52457 -3511 -2011"/>
-			<coords loc="45358 52947 -3511 -2011"/>
-			<coords loc="44182 52419 -3511 -2011"/>
-			<coords loc="43398 51830 -3511 -2011"/>
-			<coords loc="43006 51401 -3511 -2011"/>
-			<coords loc="42508 50515 -3511 -2011"/>
-			<coords loc="42343 49479 -3511 -2011"/>
-			<coords loc="42547 48421 -3511 -2011"/>
-			<coords loc="43138 47363 -3511 -2011"/>
-			<coords loc="44342 46639 -3511 -2011"/>
-			<coords loc="45621 46486 -3511 -2011"/>
-			<coords loc="45974 46554 -3511 -2011"/>
-			<coords loc="47114 46996 -3511 -2011"/>
-			<coords loc="47777 47710 -3511 -2011"/>
-			<coords loc="48202 48441 -3511 -2011"/>
-			<coords loc="48400 49391 -3511 -2011"/>
-			<coords loc="48365 50345 -3511 -2011"/>
-		</polygon>
-	</zone>
-	<zone name="[elf_start_peace1]" type="Peace">
-		<polygon>
-			<coords loc="47987 40688 -4071 -2571"/>
-			<coords loc="47644 41254 -4071 -2571"/>
-			<coords loc="47139 41756 -4071 -2571"/>
-			<coords loc="46576 42051 -4071 -2571"/>
-			<coords loc="45590 42006 -4071 -2571"/>
-			<coords loc="44823 41489 -4071 -2571"/>
-			<coords loc="44355 40860 -4071 -2571"/>
-			<coords loc="44168 40397 -4071 -2571"/>
-			<coords loc="44319 39900 -4071 -2571"/>
-			<coords loc="44723 39030 -4071 -2571"/>
-			<coords loc="45366 38626 -4071 -2571"/>
-			<coords loc="46511 38446 -4071 -2571"/>
-			<coords loc="47292 38808 -4071 -2571"/>
-			<coords loc="47736 39330 -4071 -2571"/>
-			<coords loc="48079 39911 -4071 -2571"/>
-		</polygon>
-	</zone>
-	<zone name="[elf_start_peace2]" type="Peace">
-		<polygon>
-			<coords loc="44215 39803 -4082 -2582"/>
-			<coords loc="44497 40504 -4082 -2582"/>
-			<coords loc="43643 41416 -4082 -2582"/>
-			<coords loc="43398 41419 -4082 -2582"/>
-			<coords loc="42884 41191 -4082 -2582"/>
-			<coords loc="42475 40529 -4082 -2582"/>
-			<coords loc="42466 40285 -4082 -2582"/>
-			<coords loc="42762 39658 -4082 -2582"/>
-			<coords loc="43311 39336 -4082 -2582"/>
-			<coords loc="43546 39327 -4082 -2582"/>
-		</polygon>
-	</zone>
-	<zone name="[elf_start_peace3]" type="Peace">
-		<polygon>
-			<coords loc="49799 39991 -4082 -2582"/>
-			<coords loc="49812 40226 -4082 -2582"/>
-			<coords loc="48958 41201 -4082 -2582"/>
-			<coords loc="48724 41204 -4082 -2582"/>
-			<coords loc="48096 40759 -4082 -2582"/>
-			<coords loc="47883 40159 -4082 -2582"/>
-			<coords loc="48123 39481 -4082 -2582"/>
-			<coords loc="48636 39123 -4082 -2582"/>
-			<coords loc="48885 39121 -4082 -2582"/>
-			<coords loc="49368 39360 -4082 -2582"/>
 		</polygon>
 	</zone>
 	<zone name="[guldiocastle_town_peace1]" type="Peace">
@@ -494,116 +293,6 @@
 			<coords loc="83111 143859"/>
 		</polygon>
 	</zone>
-	<zone name="[orc_start_peace]" type="Peace">
-		<polygon>
-			<coords loc="-58952 -115543 -1483 516"/>
-			<coords loc="-52769 -115553 -1483 516"/>
-			<coords loc="-52758 -111736 -1483 516"/>
-			<coords loc="-58952 -111749 -1483 516"/>
-		</polygon>
-	</zone>
-	<zone name="[orc_town_peace1]" type="Peace">
-		<polygon>
-			<coords loc="-42044 -113585 -397 603"/>
-			<coords loc="-42533 -111862 -397 603"/>
-			<coords loc="-43811 -110599 -397 603"/>
-			<coords loc="-45614 -110071 -397 603"/>
-			<coords loc="-47375 -110007 -397 603"/>
-			<coords loc="-47397 -117215 -397 603"/>
-			<coords loc="-46661 -117220 -397 603"/>
-			<coords loc="-45633 -117094 -397 603"/>
-			<coords loc="-43791 -116569 -397 603"/>
-			<coords loc="-42530 -115322 -397 603"/>
-		</polygon>
-	</zone>
-	<zone name="[orc_town_peace2]" type="Peace">
-		<polygon>
-			<coords loc="-50211 -116941 -460 540"/>
-			<coords loc="-47413 -117301 -460 540"/>
-			<coords loc="-47358 -109913 -460 540"/>
-			<coords loc="-49161 -109305 -460 540"/>
-			<coords loc="-51245 -109819 -460 540"/>
-			<coords loc="-53401 -112501 -460 540"/>
-			<coords loc="-53788 -113966 -460 540"/>
-			<coords loc="-52931 -115293 -460 540"/>
-		</polygon>
-	</zone>
-	<zone name="[dwarf_start]" type="Peace">
-		<polygon>
-			<coords loc="110063 -175794 -652 348"/>
-			<coords loc="110565 -173944 -652 348"/>
-			<coords loc="110518 -173426 -652 348"/>
-			<coords loc="109153 -171575 -652 348"/>
-			<coords loc="106345 -171905 -652 348"/>
-			<coords loc="104853 -174391 -652 348"/>
-			<coords loc="105481 -176144 -652 348"/>
-			<coords loc="106031 -177035 -652 348"/>
-			<coords loc="107660 -177623 -652 348"/>
-			<coords loc="109208 -177140 -652 348"/>
-		</polygon>
-	</zone>
-	<zone name="[dwarf_town_peace1]" type="Peace">
-		<polygon>
-			<coords loc="117520 -181718 -1600 -400"/>
-			<coords loc="117423 -180017 -1600 -400"/>
-			<coords loc="115371 -176774 -1600 -400"/>
-			<coords loc="114885 -176815 -1600 -400"/>
-			<coords loc="114070 -177180 -1600 -400"/>
-			<coords loc="113883 -179469 -1600 -400"/>
-			<coords loc="114580 -181875 -1600 -400"/>
-		</polygon>
-	</zone>
-	<zone name="[dwarf_town_peace2]" type="Peace">
-		<polygon>
-			<coords loc="117630 -182925 -1685 -685"/>
-			<coords loc="115159 -182811 -1685 -685"/>
-			<coords loc="115477 -183673 -1685 -685"/>
-			<coords loc="115600 -183891 -1685 -685"/>
-			<coords loc="115740 -184086 -1685 -685"/>
-			<coords loc="115948 -184206 -1685 -685"/>
-			<coords loc="116257 -184251 -1685 -685"/>
-			<coords loc="116710 -184253 -1685 -685"/>
-			<coords loc="117023 -184164 -1685 -685"/>
-			<coords loc="117204 -184034 -1685 -685"/>
-			<coords loc="117335 -183812 -1685 -685"/>
-			<coords loc="117503 -183386 -1685 -685"/>
-		</polygon>
-	</zone>
-	<zone name="[dwarf_town_peace3]" type="Peace">
-		<polygon>
-			<coords loc="114641 -183866 -1724 -724"/>
-			<coords loc="117517 -183140 -1724 -724"/>
-			<coords loc="117778 -182649 -1724 -724"/>
-			<coords loc="117775 -182246 -1724 -724"/>
-			<coords loc="117733 -182086 -1724 -724"/>
-			<coords loc="117432 -181576 -1724 -724"/>
-			<coords loc="114638 -181551 -1724 -724"/>
-		</polygon>
-	</zone>
-	<zone name="[dwarf_town_peace4]" type="Peace">
-		<polygon>
-			<coords loc="116406 -176891 -1000 -400"/>
-			<coords loc="115964 -176809 -1000 -400"/>
-			<coords loc="115535 -176773 -1000 -400"/>
-			<coords loc="115142 -176788 -1000 -400"/>
-			<coords loc="115867 -178003 -1000 -400"/>
-			<coords loc="117355 -179595 -1000 -400"/>
-			<coords loc="117300 -178525 -1000 -400"/>
-			<coords loc="117172 -177847 -1000 -400"/>
-			<coords loc="116798 -177111 -1000 -400"/>
-			<coords loc="116643 -176968 -1000 -400"/>
-		</polygon>
-	</zone>
-	<zone name="[dwarf_town_peace5]" type="Peace">
-		<polygon>
-			<coords loc="116649 -179760 -1257 -657"/>
-			<coords loc="117429 -180911 -1257 -657"/>
-			<coords loc="117493 -180052 -1257 -657"/>
-			<coords loc="117467 -179575 -1257 -657"/>
-			<coords loc="116977 -178211 -1257 -657"/>
-			<coords loc="116142 -178429 -1257 -657"/>
-		</polygon>
-	</zone>
 	<zone name="[oren_town_peace1]" type="Peace">
 		<polygon>
 			<coords loc="78900 52076 -1822 -1022"/>
@@ -696,72 +385,6 @@
 			<coords loc="143728 25712 -2456 -956"/>
 			<coords loc="143728 26882 -2456 -956"/>
 			<coords loc="143118 26712 -2456 -956"/>
-		</polygon>
-	</zone>
-	<zone name="[speaking_port_peace1]" type="Peace">
-		<polygon>
-			<coords loc="-96610 258814"/>
-			<coords loc="-96389 258748"/>
-			<coords loc="-96369 258787"/>
-			<coords loc="-96374 259051"/>
-			<coords loc="-96640 259059"/>
-		</polygon>
-	</zone>
-	<zone name="[speaking_port_peace2]" type="Peace">
-		<polygon>
-			<coords loc="-96561 258759"/>
-			<coords loc="-96411 258764"/>
-			<coords loc="-96553 259066"/>
-			<coords loc="-97256 259068"/>
-			<coords loc="-97245 258787"/>
-		</polygon>
-	</zone>
-	<zone name="[speaking_port_peace3]" type="Peace">
-		<polygon>
-			<coords loc="-96969 259036"/>
-			<coords loc="-96649 259036"/>
-			<coords loc="-96648 261414"/>
-			<coords loc="-96968 261414"/>
-		</polygon>
-	</zone>
-	<zone name="[speaking_port_peace4]" type="Peace">
-		<polygon>
-			<coords loc="-97161 259866"/>
-			<coords loc="-96961 259866"/>
-			<coords loc="-96961 260203"/>
-			<coords loc="-97161 260203"/>
-		</polygon>
-	</zone>
-	<zone name="[speaking_port_peace5]" type="Peace">
-		<polygon>
-			<coords loc="-96750 259679"/>
-			<coords loc="-96326 259679"/>
-			<coords loc="-96326 260400"/>
-			<coords loc="-96750 260400"/>
-		</polygon>
-	</zone>
-	<zone name="[speaking_port_peace6]" type="Peace">
-		<polygon>
-			<coords loc="-97290 261068"/>
-			<coords loc="-95888 261068"/>
-			<coords loc="-95888 261419"/>
-			<coords loc="-97290 261418"/>
-		</polygon>
-	</zone>
-	<zone name="[speaking_port_peace7]" type="Peace">
-		<polygon>
-			<coords loc="-97476 260763"/>
-			<coords loc="-97167 260763"/>
-			<coords loc="-97167 261419"/>
-			<coords loc="-97476 261419"/>
-		</polygon>
-	</zone>
-	<zone name="[speaking_port_peace8]" type="Peace">
-		<polygon>
-			<coords loc="-97237 259333"/>
-			<coords loc="-96923 259333"/>
-			<coords loc="-96923 259637"/>
-			<coords loc="-97237 259637"/>
 		</polygon>
 	</zone>
 	<zone name="[gludin_port1]" type="Peace">
@@ -1130,14 +753,6 @@
 			<coords loc="83881 -139486"/>
 		</polygon>
 	</zone>
-	<zone name="[kamael_village_town_peace]" type="Peace">
-		<polygon>
-			<coords loc="-121838 40801"/>
-			<coords loc="-121838 50094"/>
-			<coords loc="-111701 50094"/>
-			<coords loc="-111701 40801"/>
-		</polygon>
-	</zone>
 	<zone name="[keucereus_alliance_base_town_peace]" type="Peace">
 		<polygon>
 			<coords loc="-188728 247048"/>
@@ -1272,6 +887,223 @@
 			<coords loc="209576 15144 -4000 4000"/>
 			<coords loc="209736 15160 -4000 4000"/>
 			<coords loc="209512 15400 -4000 4000"/>
+		</polygon>
+	</zone>
+	<zone name="[arcan_city_center]" type="Peace">
+		<circle loc="207096 88696 4500 -1300"/>
+	</zone>
+	<zone name="[arcan_city_enter]" type="Peace" >
+		<polygon>
+			<coords loc="202840 87656 -1300"/>
+			<coords loc="203032 87512 -1300"/>
+			<coords loc="202120 86136 -1300"/>
+			<coords loc="201928 86280 -1300"/>
+		</polygon>
+	</zone>
+	<zone name="[arcan_city_enter_circle]" type="Peace" >
+		<circle loc="201832 85928 1000 -1300"/>
+	</zone>
+	<zone name="[arcan_city_east_1]" type="Peace" >
+		<polygon>
+			<coords loc="208296 84600 -1300"/>
+			<coords loc="208184 84360 -1300"/>
+			<coords loc="209464 83576 -1300"/>
+			<coords loc="209512 83656 -1300"/>
+		</polygon>
+	</zone>
+	<zone name="[arcan_city_west_1]" type="Peace" >
+		<polygon>
+			<coords loc="207576 84408 -1300"/>
+			<coords loc="207752 84264 -1300"/>
+			<coords loc="206888 83064 -1300"/>
+			<coords loc="206728 83112 -1300"/>
+		</polygon>
+	</zone>
+	<zone name="[arcan_city_shuttle_1_circle]" type="Peace" >
+		<circle loc="206580 82700 700 -1200"/>
+	</zone>
+	<zone name="[arcan_city_shuttle_2_circle]" type="Peace" >
+		<circle loc="209885 83357 700 -1200"/>
+	</zone>
+	<zone name="[arcan_city_area_east]" type="Peace" >
+		<polygon>
+			<coords loc="211160 82648 -100"/>
+			<coords loc="210312 83112 -100"/>
+			<coords loc="210168 83048 -100"/>
+			<coords loc="211032 82456 -100"/>
+		</polygon>
+	</zone>
+	<zone name="[arcan_city_area_east_circle]" type="Peace" >
+		<circle loc="211368 82360 1000 -100"/>
+	</zone>
+	<zone name="[arcan_city_area_west]" type="Peace" >
+		<polygon>
+			<coords loc="205864 81432 -100"/>
+			<coords loc="206440 82296 -100"/>
+			<coords loc="206328 82296 -100"/>
+			<coords loc="205672 81560 -100"/>
+		</polygon>
+	</zone>
+	<zone name="[arcan_city_area_west_circle]" type="Peace" >
+		<circle loc="205600 81224 1000 -100"/>
+	</zone>
+	<zone name="[tamiel_hug]" type="Peace" >
+		<circle loc="214800 80360 2000 600"/>
+	</zone>
+	<zone name="[gainak_peace_zone_main]" type="Peace">
+		<polygon>
+			<coords loc="16824 -114248 -351 -100"/>
+			<coords loc="16648 -114360 -351 -100"/>
+			<coords loc="16552 -114424 -351 -100"/>
+			<coords loc="16376 -114488 -351 -100"/>
+			<coords loc="16280 -114536 -351 -100"/>
+			<coords loc="16232 -114440 -351 -100"/>
+			<coords loc="15992 -113960 -351 -100"/>
+			<coords loc="15944 -113864 -351 -100"/>
+			<coords loc="16024 -113816 -351 -100"/>
+			<coords loc="16200 -113720 -351 -100"/>
+			<coords loc="16296 -113656 -351 -100"/>
+			<coords loc="16472 -113608 -351 -100"/>
+		</polygon>
+	</zone>
+	<zone name="[gainak_peace_zone_1]" type="Peace">
+		<set name="enabled" val="false"/>
+		<banned_polygon>
+			<coords loc="16824 -114248 -351 -100"/>
+			<coords loc="16648 -114360 -351 -100"/>
+			<coords loc="16552 -114424 -351 -100"/>
+			<coords loc="16376 -114488 -351 -100"/>
+			<coords loc="16280 -114536 -351 -100"/>
+			<coords loc="16232 -114440 -351 -100"/>
+			<coords loc="15992 -113960 -351 -100"/>
+			<coords loc="15944 -113864 -351 -100"/>
+			<coords loc="16024 -113816 -351 -100"/>
+			<coords loc="16200 -113720 -351 -100"/>
+			<coords loc="16296 -113656 -351 -100"/>
+			<coords loc="16472 -113608 -351 -100"/>
+		</banned_polygon>
+		<polygon>
+			<coords loc="18392 -115784 -351 -100"/>
+			<coords loc="17672 -116040 -351 -100"/>
+			<coords loc="17608 -116200 -351 -100"/>
+			<coords loc="17080 -116264 -351 -100"/>
+			<coords loc="16984 -116136 -351 -100"/>
+			<coords loc="16136 -116024 -351 -100"/>
+			<coords loc="15176 -115304 -351 -100"/>
+			<coords loc="14920 -114968 -351 -100"/>
+			<coords loc="14712 -114360 -351 -100"/>
+			<coords loc="14760 -114232 -351 -100"/>
+			<coords loc="14648 -113960 -351 -100"/>
+			<coords loc="14808 -112760 -351 -100"/>
+			<coords loc="15336 -112072 -351 -100"/>
+			<coords loc="15320 -111928 -351 -100"/>
+			<coords loc="15688 -111640 -351 -100"/>
+			<coords loc="15816 -111672 -351 -100"/>
+			<coords loc="16600 -111352 -351 -100"/>
+		</polygon>
+	</zone>
+	<zone name="[faeron_village_town_peace]" type="Peace">
+		<polygon>
+			<coords loc="-82504 248456"/>
+			<coords loc="-82408 248520"/>
+			<coords loc="-82312 248600"/>
+			<coords loc="-82200 248696"/>
+			<coords loc="-82056 248872"/>
+			<coords loc="-82216 249096"/>
+			<coords loc="-82248 249224"/>
+			<coords loc="-82440 249528"/>
+			<coords loc="-82520 249640"/>
+			<coords loc="-82536 249752"/>
+			<coords loc="-82488 250344"/>
+			<coords loc="-80616 250680"/>
+			<coords loc="-79912 250568"/>
+			<coords loc="-79240 250888"/>
+			<coords loc="-79304 251256"/>
+			<coords loc="-79528 251512"/>
+			<coords loc="-79864 251368"/>
+			<coords loc="-79928 251512"/>
+			<coords loc="-80152 251560"/>
+			<coords loc="-80760 251736"/>
+			<coords loc="-80872 252056"/>
+			<coords loc="-80600 252200"/>
+			<coords loc="-80664 252440"/>
+			<coords loc="-80664 252728"/>
+			<coords loc="-80584 252872"/>
+			<coords loc="-80456 252984"/>
+			<coords loc="-80264 253048"/>
+			<coords loc="-80056 253048"/>
+			<coords loc="-79864 252968"/>
+			<coords loc="-79736 252824"/>
+			<coords loc="-79688 252696"/>
+			<coords loc="-79704 252520"/>
+			<coords loc="-79784 252376"/>
+			<coords loc="-79352 252008"/>
+			<coords loc="-79240 251896"/>
+			<coords loc="-79176 251720"/>
+			<coords loc="-79032 251576"/>
+			<coords loc="-78968 251544"/>
+			<coords loc="-78888 251464"/>
+			<coords loc="-77944 250968"/>
+			<coords loc="-77896 250888"/>
+			<coords loc="-77704 250328"/>
+			<coords loc="-77800 249800"/>
+			<coords loc="-77512 249256"/>
+			<coords loc="-77592 248712"/>
+			<coords loc="-77496 248232"/>
+			<coords loc="-77576 247912"/>
+			<coords loc="-77768 247672"/>
+			<coords loc="-78312 247240"/>
+			<coords loc="-78728 247000"/>
+			<coords loc="-78872 246888"/>
+			<coords loc="-78904 246600"/>
+			<coords loc="-78840 246152"/>
+			<coords loc="-79384 246232"/>
+			<coords loc="-79304 246344"/>
+			<coords loc="-79240 246472"/>
+			<coords loc="-79192 246616"/>
+			<coords loc="-79080 247032"/>
+			<coords loc="-79176 247048"/>
+			<coords loc="-79336 247240"/>
+			<coords loc="-79352 247336"/>
+			<coords loc="-79384 247464"/>
+			<coords loc="-79512 247656"/>
+			<coords loc="-79416 247496"/>
+			<coords loc="-79560 247320"/>
+			<coords loc="-79752 247224"/>
+			<coords loc="-79880 247240"/>
+			<coords loc="-79960 247112"/>
+			<coords loc="-80072 247000"/>
+			<coords loc="-80184 246920"/>
+			<coords loc="-80312 246936"/>
+			<coords loc="-80408 246920"/>
+			<coords loc="-80536 246984"/>
+			<coords loc="-80616 247048"/>
+			<coords loc="-80664 247160"/>
+			<coords loc="-80776 247160"/>
+			<coords loc="-80872 247112"/>
+			<coords loc="-80952 247096"/>
+			<coords loc="-81032 247112"/>
+			<coords loc="-81112 247160"/>
+			<coords loc="-81192 247272"/>
+			<coords loc="-81208 247448"/>
+			<coords loc="-81176 247560"/>
+			<coords loc="-81192 247672"/>
+			<coords loc="-81352 247784"/>
+			<coords loc="-81416 247864"/>
+			<coords loc="-81384 247912"/>
+			<coords loc="-81384 248040"/>
+			<coords loc="-81304 248120"/>
+			<coords loc="-81160 248184"/>
+			<coords loc="-80968 248424"/>
+			<coords loc="-80776 248696"/>
+			<coords loc="-81112 249160"/>
+			<coords loc="-81288 249160"/>
+			<coords loc="-81448 249096"/>
+			<coords loc="-81608 248936"/>
+			<coords loc="-81752 248680"/>
+			<coords loc="-81928 248680"/>
+			<coords loc="-82120 248376"/>
+			<coords loc="-82200 248200"/>
 		</polygon>
 	</zone>
 </list>
