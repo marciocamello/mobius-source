@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "spawn.dtd">
 <list>
-	<!-- Faeron NPCs -->
+	<!-- Faeron NPC's -->
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-80600" y="251676" z="-3024" h="12094"/>
 		<npc id="33931"/>
@@ -145,10 +145,6 @@
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-78740" y="247461" z="-3272" h="44216"/>
 		<npc id="33982"/>
-	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="-79687" y="247655" z="-3480" h="29783"/>
-		<npc id="34007"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-79675" y="247878" z="-3480" h="36588"/>
