@@ -2241,7 +2241,6 @@
 		<region map="18_19"/>
 		<region map="18_18"/>
 		<region map="18_20"/>
-		<region map="17_19"/>
 		<restart race="human" loc="[darkelf_town]"/>
 		<restart race="elf" loc="[elf_town]"/>
 		<restart race="darkelf" loc="[darkelf_town]"/>
@@ -2363,11 +2362,8 @@
 	<restart_area>
 		<region map="18_14"/>
 		<region map="19_13"/>
-		<region map="19_14"/>
 		<region map="19_15"/>
 		<region map="19_16"/>
-		<region map="20_13"/>
-		<region map="20_14"/>
 		<region map="20_15"/>
 		<restart race="human" loc="[orc_town]"/>
 		<restart race="elf" loc="[orc_town]"/>
@@ -2376,6 +2372,18 @@
 		<restart race="dwarf" loc="[orc_town]"/>
 		<restart race="kamael" loc="[orc_town]"/>
 		<restart race="ertheia" loc="[orc_town]"/>
+	</restart_area>
+	<restart_area>
+		<region map="19_14"/>
+		<region map="20_13"/>
+		<region map="20_14"/>
+		<restart race="human" loc="[gainak_village]"/>
+		<restart race="elf" loc="[gainak_village]"/>
+		<restart race="darkelf" loc="[gainak_village]"/>
+		<restart race="orc" loc="[gainak_village]"/>
+		<restart race="dwarf" loc="[gainak_village]"/>
+		<restart race="kamael" loc="[gainak_village]"/>
+		<restart race="ertheia" loc="[gainak_village]"/>
 	</restart_area>
 	<restart_area>
 		<region map="15_11"/>
@@ -2453,7 +2461,6 @@
 		<region map="16_24"/>
 		<region map="16_25"/>
 		<region map="17_14"/>
-		<region map="18_25"/>
 		<restart race="human" loc="[talking_island_town]"/>
 		<restart race="elf" loc="[talking_island_town]"/>
 		<restart race="darkelf" loc="[talking_island_town]"/>
@@ -2560,6 +2567,7 @@
 		<restart race="ertheia" loc="[gludio_castle_town]"/>
 	</restart_area>
 	<restart_area>
+		<region map="26_19"/>
 		<region map="26_20"/>
 		<region map="26_21"/>
 		<restart race="human" loc="[arcan_town]"/>
@@ -2573,6 +2581,7 @@
 	<restart_area>
 		<region map="17_24"/>
 		<region map="17_25"/>
+		<region map="18_25"/>
 		<restart race="human" loc="[faeron_village]"/>
 		<restart race="elf" loc="[faeron_village]"/>
 		<restart race="darkelf" loc="[faeron_village]"/>
@@ -4230,32 +4239,25 @@
 			<coords loc="17931 170381 -3451"/>
 		</PKrestart_point>
 	</restart_loc>
-	<restart_loc name="[arcan_town]" bbs="5" msg_id="3566">
+	<restart_loc name="[arcan_town]" bbs="11" msg_id="3566">
 		<restart_point>
-			<coords loc="207432 87096 -1024"/>
-			<coords loc="206952 89480 -1120"/>
+			<coords loc="207802 89559 -1104"/>
+			<coords loc="207377 87181 -1024"/>
+			<coords loc="206097 88566 -1104"/>
 		</restart_point>
 		<PKrestart_point>
-			<coords loc="-79411 240677 -3450"/>
-			<coords loc="-80480 242640 -3690"/>
-			<coords loc="-80336 244656 -3680"/>
-			<coords loc="-82464 247248 -3570"/>
-			<coords loc="-89522 241696 -3530"/>
-			<coords loc="-87056 237952 -3580"/>
-			<coords loc="-89536 240336 -3560"/>
-			<coords loc="-88208 241360 -3560"/>
-			<coords loc="-85328 238080 -3660"/>
-			<coords loc="-89760 237408 -3660"/>
-			<coords loc="-92976 240560 -3380"/>
-			<coords loc="-94448 240944 -3300"/>
-			<coords loc="-93552 245296 -3530"/>
-			<coords loc="-91584 238480 -3650"/>
-			<coords loc="-88720 238976 -3650"/>
-			<coords loc="-91760 243664 -3440"/>
-			<coords loc="-81680 249696 -3630"/>
-			<coords loc="-83808 251264 -3630"/>
-			<coords loc="-83328 238304 -3700"/>
-			<coords loc="-91296 236272 -3690"/>
+			<coords loc="205283 80763 384"/>
+			<coords loc="201527 85496 -1013"/>
+			<coords loc="211831 82036 157"/>
+		</PKrestart_point>
+	</restart_loc>
+	<restart_loc name="[gainak_village]" bbs="9" msg_id="920">
+		<restart_point>
+			<coords loc="16248 -114136 -224"/>
+		</restart_point>
+		<PKrestart_point>
+			<coords loc="14136 -112808 -224"/>
+			<coords loc="15576 -116408 -216"/>
 		</PKrestart_point>
 	</restart_loc>
 	<restart_loc name="[faeron_village]" bbs="1" msg_id="910">
