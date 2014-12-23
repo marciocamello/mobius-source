@@ -8,4 +8,8 @@
 	<enchant_bonus grade="4" values="0, 0, 0, 16, 47, 94, 157, 235, 329, 439, 564, 705"/>
 	<enchant_bonus grade="5" values="0, 0, 0, 17, 52, 104, 173, 259, 363, 484, 623, 778"/>
 	<enchant_bonus grade="6" values="0, 0, 0, 17, 52, 104, 173, 259, 363, 484, 623, 778"/>
+	<enchant_bonus grade="7" values="0, 0, 0, 17, 52, 104, 173, 259, 363, 484, 623, 778"/>
+	<enchant_bonus grade="8" values="0, 0, 0, 32, 64, 160, 173, 259, 363, 484, 623, 778"/>
+	<enchant_bonus grade="9" values="0, 0, 0, 35, 70, 175, 259, 363, 484, 623, 778, 1000"/>
+	<enchant_bonus grade="10" values="0, 0, 0, 38, 76, 190, 259, 363, 484, 623, 778, 1000"/>
 </list>
