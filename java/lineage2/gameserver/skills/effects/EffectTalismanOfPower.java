@@ -36,26 +36,22 @@ public class EffectTalismanOfPower extends Effect
 		{
 			case 1:
 			case 2:
-				getEffected().startAbnormalEffect(AbnormalEffect.TALISMAN_INSANITY);
-				break;
-			
-			case 3:
 				getEffected().startAbnormalEffect(AbnormalEffect.TALISMAN_POWER1);
 				break;
 			
-			case 4:
+			case 3:
 				getEffected().startAbnormalEffect(AbnormalEffect.TALISMAN_POWER2);
 				break;
 			
-			case 5:
+			case 4:
 				getEffected().startAbnormalEffect(AbnormalEffect.TALISMAN_POWER3);
 				break;
 			
-			case 6:
+			case 5:
 				getEffected().startAbnormalEffect(AbnormalEffect.TALISMAN_POWER4);
 				break;
 			
-			case 7:
+			case 6:
 				getEffected().startAbnormalEffect(AbnormalEffect.TALISMAN_POWER5);
 				break;
 		}
@@ -65,7 +61,6 @@ public class EffectTalismanOfPower extends Effect
 	public void onExit()
 	{
 		super.onExit();
-		getEffected().stopAbnormalEffect(AbnormalEffect.TALISMAN_INSANITY);
 		getEffected().stopAbnormalEffect(AbnormalEffect.TALISMAN_POWER1);
 		getEffected().stopAbnormalEffect(AbnormalEffect.TALISMAN_POWER2);
 		getEffected().stopAbnormalEffect(AbnormalEffect.TALISMAN_POWER3);

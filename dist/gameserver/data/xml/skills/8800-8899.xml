@@ -786,14 +786,14 @@
 			<add order="0x40" stat="talismansLimit" val="#values"/>
 		</for>
 	</skill>
-	<skill id="8864" levels="7" name="Talisman - Insanity">
+	<skill id="8864" levels="6" name="Talisman - Longing">
 		<set name="target" val="TARGET_SELF"/>
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<set name="referenceItemId" val="#item"/>
 		<set name="referenceItemMpConsume" val="0"/>
-		<table name="#item">34984 34985 34986 34987 34988 34989 39572</table>
-		<table name="#id">13384 13385 13386 13387 13388 13389 17978</table>
+		<table name="#item">34984 34985 34986 34987 34988 34989</table>
+		<table name="#id">13384 13385 13386 13387 13388 13389</table>
 		<triggers>
 			<trigger id="#id" level="1" type="ADD" chance="100" cancel_effects_on_remove="true"/>
 		</triggers>
@@ -852,7 +852,7 @@
 		<set name="skillType" val="BUFF"/>
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
-			<add order="0x40" stat="WIT" val="3"/>
+			<add order="0x40" stat="WIT" val="3"/>	
 		</for>
 	</skill>
 	<skill id="8875" levels="1" name="Refined Romantic Chapeau containing the GM's Blessing">
@@ -862,7 +862,7 @@
 		<set name="operateType" val="OP_PASSIVE"/>
 		<for>
 			<mul order="0x30" stat="pAtk" val="1.05"/>
-			<add order="0x40" stat="rCrit" val="50"/>
+			<add order="0x40" stat="rCrit" val="50"/>	
 		</for>
 	</skill>
 	<skill id="8876" levels="1" name="Refined Romantic Chapeau containing the GM's Blessing">
