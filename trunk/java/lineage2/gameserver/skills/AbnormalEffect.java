@@ -53,7 +53,7 @@ public enum AbnormalEffect
 	REAL_TARGET("realtarget", 0x20000000, 30),
 	DEATH_MARK("deathmark", 0x40000000, 31),
 	SKULL_FEAR("soulshock", 0x80000000, 32),
-	// Special effects
+	// special effects
 	S_INVINCIBLE("invul2", 0x000001, 33),
 	S_AIR_STUN("airstun", 0x000002, 34),
 	S_AIR_ROOT("airroot", 0x000004, 35),
@@ -89,68 +89,12 @@ public enum AbnormalEffect
 	S_65("s_65", 0x000001, 65),
 	S_66("s_66", 0x000002, 66),
 	S_67("s_67", 0x000004, 67),
-	MUTE_LIFESTONE("mute_lifestone", 0x000001, 68), // Mute LifeStone
-	AURA_SIGIL_1("aura_sigil_1", 0x000001, 69), // Sigil Aura 1
-	AURA_SIGIL_2("aura_sigil_2", 0x000001, 70), // Sigil Aura 2
-	TALISMAN_INSANITY("talismaninsanity", 0x000001, 71), // Talisman - Insanity
-	TALISMAN_POWER1("talismanpower1", 0x100000, 72), // Talisman - 1
-	TALISMAN_POWER2("talismanpower2", 0x200000, 73), // Talisman - 2
-	TALISMAN_POWER3("talismanpower3", 0x300000, 74), // Talisman - 3
-	TALISMAN_POWER4("talismanpower4", 0x400000, 75), // Talisman - 4
-	TALISMAN_POWER5("talismanpower5", 0x500000, 76), // Talisman - 5
-	// App. Abnormals
-	CHAOS_FESTIVAL("chaosfestival", 0x000001, 77), // Chaos Festival
-	APP_1("app1", 0x000001, 78), // App - 1
-	APP_2("app2", 0x000001, 79), // App - 2
-	APP_3("app3", 0x000001, 80), // App - 3
-	APP_4("app4", 0x000001, 81), // App - 4
-	APP_5("app5", 0x000001, 81), // App - 5
-	APP_6("app6", 0x000001, 82), // App - 6
-	APP_7("app7", 0x000001, 83), // App - 7
-	APP_8("app8", 0x000001, 84), // App - 8
-	APP_9("app9", 0x000001, 85), // Santa App
-	APP_10("app10", 0x000001, 86), // App - 9
-	APP_11("app11", 0x000001, 87), // App - 10
-	APP_WEAPON("app_weapon", 0x000001, 88), // App Weapon
-	APP_WEAPON1("app_weapon1", 0x000001, 88), // App Weapon
-	// Unknown abnormal
-	ABNORMAL_EVENT2("abnormal_event2", 0x000001, 89), // Event
-	ABNORMAL_EVENT3("abnormal_event3", 0x000001, 90), // Event
-	ABNORMAL_EVENT4("abnormal_event4", 0x000001, 91), // Event
-	ABNORMAL_EVENT5("abnormal_event5", 0x000001, 92), // Event Star 0/5
-	ABNORMAL_EVENT6("abnormal_event6", 0x000001, 93), // Event Star 1/5
-	ABNORMAL_EVENT7("abnormal_event7", 0x000001, 94), // Event Star 2/5
-	ABNORMAL_EVENT8("abnormal_event8", 0x000001, 95), // Event Star 3/5
-	ABNORMAL_EVENT9("abnormal_event9", 0x000001, 96), // Event Star 4/5
-	ABNORMAL_EVENT10("abnormal_event10", 0x000001, 97), // Event Star 5/5
-	// New skills abnormals
-	FACE_TO_FACE("facetoface", 0x000001, 98), // Skill Face to Face
-	ICE_TEMPLE_KNIGHT("icetempleknight", 0x000001, 99), // Ice Abnormal
-	// App 2
-	ROBO_APP("robo_app", 0x000001, 100), // Robocop app.
-	// Event
-	ABNORMAL_EVENT11("abnormal_event11", 0x000001, 101), // Event
-	ABNORMAL_EVENT12("abnormal_event12", 0x000001, 102), // Music Event
-	ABNORMAL_EVENT13("abnormal_event13", 0x000001, 103), // Music Event
-	ABNORMAL_EVENT14("abnormal_event14", 0x000001, 104), // Music Event
-	ABNORMAL_EVENT15("abnormal_event15", 0x000001, 105), // Lineage II Icon Event
-	// Christmas Event Effects
-	U_SANTA_SOCKS_AVE("santa_socks_ave", 0x000001, 106),
-	U_SANTA_TREE_AVE("santa_tree_ave", 0x000001, 107),
-	U_SANTA_SNOWMAN_AVE("santa_snowman_ave", 0x000001, 108),
-	EVENT_FIREWORK("event_firework", 0x000001, 109), // Firework Effect
-	EVENT_GLOW("event_glow", 0x000001, 110), // Glow Effect
-	EVENT_STIGMA("event_stigma", 0x000001, 111), // Stigma Effect
-	// App maybe effects
-	APP_TAIWAN("app_taiwan", 0x000001, 130), // Taiwan Armor App
-	APP_MILITARY("app_military", 0x000001, 131), // Military Armor App
-	APP_IRONMAN("app_ironman", 0x000001, 132), // IronMan Armor App
-	APP_LOLEFFECT("app_loleffect", 0x000001, 133), // LOL Armor App
-	APP_ARMOR("app_armor", 0x000001, 134), // Armor App
-	APP_WEAPON2("app_weapon2", 0x000001, 135), // Weapon App
-	APP_WEAPON3("app_weapon3", 0x000001, 136), // Weapon App
-	APP_WEAPON4("app_weapon4", 0x000001, 136), // Weapon App
-	// Event effects
+	TALISMAN_POWER1("talismanpower1", 0x100000, 72),
+	TALISMAN_POWER2("talismanpower2", 0x200000, 73),
+	TALISMAN_POWER3("talismanpower3", 0x300000, 74),
+	TALISMAN_POWER4("talismanpower4", 0x400000, 75),
+	TALISMAN_POWER5("talismanpower5", 0x500000, 76),
+	// event effects
 	E_AFRO_1("afrobaguette1", 0x000001, 0),
 	E_AFRO_2("afrobaguette2", 0x000002, 0),
 	E_AFRO_3("afrobaguette3", 0x000004, 0),
@@ -160,7 +104,7 @@ public enum AbnormalEffect
 	E_VESPER_2("vesper2", 0x000040, 0),
 	E_VESPER_3("vesper3", 0x000080, 0),
 	HUNTING_BONUS("hunting_bonus", 0x80000, 0),
-	AVE_ADVENT_BLESSING("ave_advent_blessing", 0x080000, 0); // Add NevitAdvent
+	AVE_ADVENT_BLESSING("ave_advent_blessing", 0x080000, 0); // Add NevitAdvent by pmq
 	private final int _mask;
 	private final String _name;
 	private final int _id;
