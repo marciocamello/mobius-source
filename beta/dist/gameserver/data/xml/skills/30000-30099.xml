@@ -469,7 +469,7 @@
 		<table name="#magicLevel">5 20 40 52 64 76 80 85 90 95 99</table>
 		<table name="#mAtk">1.17 1.17 1.17 1.17 1.17 1.17 1.17 1.40 1.40 1.40 1.40</table>
 		<table name="#Table-mAtk">10 57 228 436 728 834 942 1050 1252 1454 1727</table>
-		<table name="#mAtkSpd">0.05 0.05 1.10 1.10 1.10 1.15 1.20 1.30 1.30 1.30 1.30</table>
+		<table name="#mAtkSpd">1.05 1.05 1.10 1.10 1.10 1.15 1.20 1.30 1.30 1.30 1.30</table>
 		<table name="#mCritRate">1.10</table>
 		<table name="#mCritDamage">1.10</table>
 		<set name="magicLevel" val="#magicLevel"/>
