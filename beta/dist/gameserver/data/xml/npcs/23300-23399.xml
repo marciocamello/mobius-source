@@ -1803,4 +1803,861 @@
 			<defence attribute="unholy" value="120"/>
 		</attributes>
 	</npc>
+	<npc id="23384" name="Smaug" title="">
+		<set name="collision_radius" value="35.0"/>
+		<set name="collision_height" value="46.5"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="657749"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="140"/>
+		<set name="baseCON" value="60"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="71385191"/>
+		<set name="rewardSp" value="171324"/>
+		<set name="rewardRp" value="0"/>
+		<set name="basePAtk" value="30070"/>
+		<set name="basePDef" value="6000"/>
+		<set name="baseMAtk" value="30000"/>
+		<set name="baseMDef" value="6500"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="aggroRange" value="0"/>
+		<set name="baseWalkSpd" value="57"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="texture" value=""/>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100.0">
+				<reward item_id="57" min="16970" max="39529" chance="30"/>
+				<reward item_id="37791" min="1" max="1" chance="1"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="40049" min="1" max="1" chance="60"/>
+			<reward item_id="40050" min="1" max="1" chance="6"/>
+			<reward item_id="40051" min="1" max="1" chance="1"/>
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
+		</attributes>
+	</npc>
+	<npc id="23385" name="Lunatikan" title="">
+		<set name="collision_radius" value="35.0"/>
+		<set name="collision_height" value="46.5"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="657749"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="140"/>
+		<set name="baseCON" value="60"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="71385191"/>
+		<set name="rewardSp" value="171324"/>
+		<set name="rewardRp" value="0"/>
+		<set name="basePAtk" value="30070"/>
+		<set name="basePDef" value="6000"/>
+		<set name="baseMAtk" value="30000"/>
+		<set name="baseMDef" value="6500"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="aggroRange" value="0"/>
+		<set name="baseWalkSpd" value="57"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="texture" value=""/>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100.0">
+				<reward item_id="57" min="16970" max="39529" chance="30"/>
+				<reward item_id="37791" min="1" max="1" chance="1"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="40049" min="1" max="1" chance="60"/>
+			<reward item_id="40050" min="1" max="1" chance="6"/>
+			<reward item_id="40051" min="1" max="1" chance="1"/>
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
+		</attributes>
+	</npc>
+	<npc id="23386" name="Jabberwok" title="">
+		<set name="collision_radius" value="35.0"/>
+		<set name="collision_height" value="46.5"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="657749"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="140"/>
+		<set name="baseCON" value="60"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="71385191"/>
+		<set name="rewardSp" value="171324"/>
+		<set name="rewardRp" value="0"/>
+		<set name="basePAtk" value="30070"/>
+		<set name="basePDef" value="6000"/>
+		<set name="baseMAtk" value="30000"/>
+		<set name="baseMDef" value="6500"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="aggroRange" value="0"/>
+		<set name="baseWalkSpd" value="57"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="texture" value=""/>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100.0">
+				<reward item_id="57" min="64811" max="150969" chance="30"/>
+				<reward item_id="37791" min="1" max="1" chance="2"/>
+				<reward item_id="36550" min="1" max="1" chance="1"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="40049" min="1" max="1" chance="77"/>
+			<reward item_id="40050" min="1" max="1" chance="24"/>
+			<reward item_id="40051" min="1" max="1" chance="2"/>
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
+		</attributes>
+	</npc>
+	<npc id="23387" name="Kanzaroth" title="">
+		<set name="collision_radius" value="35.0"/>
+		<set name="collision_height" value="46.5"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="657749"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="140"/>
+		<set name="baseCON" value="60"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="71385191"/>
+		<set name="rewardSp" value="171324"/>
+		<set name="rewardRp" value="0"/>
+		<set name="basePAtk" value="30070"/>
+		<set name="basePDef" value="6000"/>
+		<set name="baseMAtk" value="30000"/>
+		<set name="baseMDef" value="6500"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="aggroRange" value="0"/>
+		<set name="baseWalkSpd" value="57"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="texture" value=""/>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100.0">
+				<reward item_id="57" min="16970" max="39529" chance="30"/>
+				<reward item_id="37791" min="1" max="1" chance="0.5"/>
+				<reward item_id="36565" min="1" max="1" chance="0.5"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="40049" min="1" max="1" chance="60"/>
+			<reward item_id="40050" min="1" max="1" chance="6"/>
+			<reward item_id="40051" min="1" max="1" chance="1"/>
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
+		</attributes>
+	</npc>
+	<npc id="23388" name="Kandiloth" title="">
+		<set name="collision_radius" value="35.0"/>
+		<set name="collision_height" value="46.5"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="657749"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="140"/>
+		<set name="baseCON" value="60"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="71385191"/>
+		<set name="rewardSp" value="171324"/>
+		<set name="rewardRp" value="0"/>
+		<set name="basePAtk" value="30070"/>
+		<set name="basePDef" value="6000"/>
+		<set name="baseMAtk" value="30000"/>
+		<set name="baseMDef" value="6500"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="aggroRange" value="0"/>
+		<set name="baseWalkSpd" value="57"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="texture" value=""/>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100.0">
+				<reward item_id="57" min="16970" max="39529" chance="30"/>
+				<reward item_id="37791" min="1" max="1" chance="0.5"/>
+				<reward item_id="36550" min="1" max="1" chance="0.5"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="40049" min="1" max="1" chance="60"/>
+			<reward item_id="40050" min="1" max="1" chance="6"/>
+			<reward item_id="40051" min="1" max="1" chance="1"/>
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
+		</attributes>
+	</npc>
+	<npc id="23389" name="Viper" title="Oasis Mirage">
+		<set name="collision_radius" value="35.0"/>
+		<set name="collision_height" value="46.5"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="109624"/>
+		<set name="baseMpMax" value="3567"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="140"/>
+		<set name="baseCON" value="60"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="1464542"/>
+		<set name="rewardSp" value="351"/>
+		<set name="rewardRp" value="0"/>
+		<set name="basePAtk" value="30070"/>
+		<set name="basePDef" value="6000"/>
+		<set name="baseMAtk" value="30000"/>
+		<set name="baseMDef" value="6500"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="aggroRange" value="0"/>
+		<set name="baseWalkSpd" value="57"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="texture" value=""/>
+		<attributes>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
+		</attributes>
+	</npc>
+	<npc id="23390" name="Viper" title="Oasis Mirage">
+		<set name="collision_radius" value="35.0"/>
+		<set name="collision_height" value="46.5"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="109624"/>
+		<set name="baseMpMax" value="3567"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="140"/>
+		<set name="baseCON" value="60"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="1464542"/>
+		<set name="rewardSp" value="351"/>
+		<set name="rewardRp" value="0"/>
+		<set name="basePAtk" value="30070"/>
+		<set name="basePDef" value="6000"/>
+		<set name="baseMAtk" value="30000"/>
+		<set name="baseMDef" value="6500"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="aggroRange" value="0"/>
+		<set name="baseWalkSpd" value="57"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="texture" value=""/>
+		<attributes>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
+		</attributes>
+	</npc>
+	<npc id="23391" name="Kefensis" title="Mirage Watcher">
+		<set name="collision_radius" value="35.0"/>
+		<set name="collision_height" value="46.5"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="657749"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="140"/>
+		<set name="baseCON" value="60"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="142770186"/>
+		<set name="rewardSp" value="342648"/>
+		<set name="rewardRp" value="0"/>
+		<set name="basePAtk" value="30070"/>
+		<set name="basePDef" value="6000"/>
+		<set name="baseMAtk" value="30000"/>
+		<set name="baseMDef" value="6500"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="aggroRange" value="0"/>
+		<set name="baseWalkSpd" value="57"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="texture" value=""/>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100.0">
+				<reward item_id="57" min="22570" max="52575" chance="30"/>
+				<reward item_id="37791" min="1" max="1" chance="1"/>
+			</group>
+			<group chance="100.0">
+				<reward item_id="17423" min="1" max="1" chance="0.005"/>
+				<reward item_id="17424" min="1" max="1" chance="0.005"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="40049" min="1" max="1" chance="99"/>
+			<reward item_id="40050" min="1" max="1" chance="80"/>
+			<reward item_id="40051" min="1" max="1" chance="8"/>
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
+		</attributes>
+	</npc>
+	<npc id="23392" name="Kefensis" title="Mirage Watcher">
+		<set name="collision_radius" value="35.0"/>
+		<set name="collision_height" value="46.5"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="657749"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="140"/>
+		<set name="baseCON" value="60"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="142770186"/>
+		<set name="rewardSp" value="342648"/>
+		<set name="rewardRp" value="0"/>
+		<set name="basePAtk" value="30070"/>
+		<set name="basePDef" value="6000"/>
+		<set name="baseMAtk" value="30000"/>
+		<set name="baseMDef" value="6500"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="aggroRange" value="0"/>
+		<set name="baseWalkSpd" value="57"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="texture" value=""/>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100.0">
+				<reward item_id="57" min="22570" max="52575" chance="30"/>
+				<reward item_id="37791" min="1" max="1" chance="1"/>
+			</group>
+			<group chance="100.0">
+				<reward item_id="17423" min="1" max="1" chance="0.005"/>
+				<reward item_id="17424" min="1" max="1" chance="0.005"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="40049" min="1" max="1" chance="99"/>
+			<reward item_id="40050" min="1" max="1" chance="80"/>
+			<reward item_id="40051" min="1" max="1" chance="8"/>
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
+		</attributes>
+	</npc>
+	<npc id="23393" name="Slaver" title="">
+		<set name="collision_radius" value="35.0"/>
+		<set name="collision_height" value="46.5"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="240079"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="140"/>
+		<set name="baseCON" value="60"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="47590087"/>
+		<set name="rewardSp" value="114216"/>
+		<set name="rewardRp" value="0"/>
+		<set name="basePAtk" value="30070"/>
+		<set name="basePDef" value="6000"/>
+		<set name="baseMAtk" value="30000"/>
+		<set name="baseMDef" value="6500"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="aggroRange" value="0"/>
+		<set name="baseWalkSpd" value="57"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="texture" value=""/>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100.0">
+				<reward item_id="57" min="14926" max="34767" chance="30"/>
+				<reward item_id="37791" min="1" max="1" chance="1"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="40049" min="1" max="1" chance="53"/>
+			<reward item_id="40050" min="1" max="1" chance="6"/>
+			<reward item_id="40051" min="1" max="1" chance="1"/>
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
+		</attributes>
+	</npc>
+	<npc id="23394" name="Slaver" title="">
+		<set name="collision_radius" value="35.0"/>
+		<set name="collision_height" value="46.5"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="240079"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="140"/>
+		<set name="baseCON" value="60"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="47590087"/>
+		<set name="rewardSp" value="114216"/>
+		<set name="rewardRp" value="0"/>
+		<set name="basePAtk" value="30070"/>
+		<set name="basePDef" value="6000"/>
+		<set name="baseMAtk" value="30000"/>
+		<set name="baseMDef" value="6500"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="aggroRange" value="0"/>
+		<set name="baseWalkSpd" value="57"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="texture" value=""/>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100.0">
+				<reward item_id="57" min="14926" max="34767" chance="30"/>
+				<reward item_id="37791" min="1" max="1" chance="1"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="40049" min="1" max="1" chance="53"/>
+			<reward item_id="40050" min="1" max="1" chance="6"/>
+			<reward item_id="40051" min="1" max="1" chance="1"/>
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
+		</attributes>
+	</npc>
+	<npc id="23395" name="Garion" title="">
+		<set name="collision_radius" value="35.0"/>
+		<set name="collision_height" value="46.5"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="986624"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="140"/>
+		<set name="baseCON" value="60"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="90421085"/>
+		<set name="rewardSp" value="217010"/>
+		<set name="rewardRp" value="0"/>
+		<set name="basePAtk" value="30070"/>
+		<set name="basePDef" value="6000"/>
+		<set name="baseMAtk" value="30000"/>
+		<set name="baseMDef" value="6500"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="aggroRange" value="0"/>
+		<set name="baseWalkSpd" value="57"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="texture" value=""/>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100.0">
+				<reward item_id="57" min="21793" max="50766" chance="30"/>
+				<reward item_id="37791" min="1" max="1" chance="1.3"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="40049" min="1" max="1" chance="79.3"/>
+			<reward item_id="40050" min="1" max="1" chance="8.3"/>
+			<reward item_id="40051" min="1" max="1" chance="1"/>
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
+		</attributes>
+	</npc>
+	<npc id="23396" name="Garion Neti" title="">
+		<set name="collision_radius" value="35.0"/>
+		<set name="collision_height" value="46.5"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="986624"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="140"/>
+		<set name="baseCON" value="60"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="90421085"/>
+		<set name="rewardSp" value="217010"/>
+		<set name="rewardRp" value="0"/>
+		<set name="basePAtk" value="30070"/>
+		<set name="basePDef" value="6000"/>
+		<set name="baseMAtk" value="30000"/>
+		<set name="baseMDef" value="6500"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="aggroRange" value="0"/>
+		<set name="baseWalkSpd" value="57"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="texture" value=""/>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100.0">
+				<reward item_id="57" min="21793" max="50766" chance="30"/>
+				<reward item_id="37791" min="1" max="1" chance="1"/>
+				<reward item_id="36943" min="1" max="1" chance="0.0009"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="40049" min="1" max="1" chance="79.3"/>
+			<reward item_id="40050" min="1" max="1" chance="8.3"/>
+			<reward item_id="40051" min="1" max="1" chance="1"/>
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
+		</attributes>
+	</npc>
+	<npc id="23397" name="Desert Wendigo" title="">
+		<set name="collision_radius" value="35.0"/>
+		<set name="collision_height" value="46.5"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="986624"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="140"/>
+		<set name="baseCON" value="60"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="90421085"/>
+		<set name="rewardSp" value="217010"/>
+		<set name="rewardRp" value="0"/>
+		<set name="basePAtk" value="30070"/>
+		<set name="basePDef" value="6000"/>
+		<set name="baseMAtk" value="30000"/>
+		<set name="baseMDef" value="6500"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="aggroRange" value="0"/>
+		<set name="baseWalkSpd" value="57"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="texture" value=""/>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100.0">
+				<reward item_id="57" min="21793" max="50766" chance="30"/>
+				<reward item_id="37791" min="1" max="1" chance="1"/>
+				<reward item_id="36550" min="1" max="1" chance="0.05"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="40049" min="1" max="1" chance="80.4"/>
+			<reward item_id="40050" min="1" max="1" chance="8.4"/>
+			<reward item_id="40051" min="1" max="1" chance="1"/>
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
+		</attributes>
+	</npc>
+	<npc id="23398" name="Koraza" title="">
+		<set name="collision_radius" value="35.0"/>
+		<set name="collision_height" value="46.5"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="986624"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="140"/>
+		<set name="baseCON" value="60"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="90421085"/>
+		<set name="rewardSp" value="217010"/>
+		<set name="rewardRp" value="0"/>
+		<set name="basePAtk" value="30070"/>
+		<set name="basePDef" value="6000"/>
+		<set name="baseMAtk" value="30000"/>
+		<set name="baseMDef" value="6500"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="aggroRange" value="0"/>
+		<set name="baseWalkSpd" value="57"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="texture" value=""/>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100.0">
+				<reward item_id="57" min="21793" max="50766" chance="30"/>
+				<reward item_id="37791" min="1" max="1" chance="1"/>
+				<reward item_id="36565" min="1" max="1" chance="0.05"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="40049" min="1" max="1" chance="77.5"/>
+			<reward item_id="40050" min="1" max="1" chance="8.3"/>
+			<reward item_id="40051" min="1" max="1" chance="1"/>
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
+		</attributes>
+	</npc>
+	<npc id="23399" name="Bend Beetle" title="">
+		<set name="collision_radius" value="35.0"/>
+		<set name="collision_height" value="46.5"/>
+		<set name="level" value="99"/>
+		<set name="type" value="Monster"/>
+		<set name="ai_type" value="Fighter"/>
+		<set name="baseAtkRange" value="40"/>
+		<set name="baseHpMax" value="986624"/>
+		<set name="baseMpMax" value="23550"/>
+		<set name="baseHpReg" value="7.5"/>
+		<set name="baseHpRate" value="1"/>
+		<set name="baseMpReg" value="2.7"/>
+		<set name="baseSTR" value="140"/>
+		<set name="baseCON" value="60"/>
+		<set name="baseDEX" value="30"/>
+		<set name="baseINT" value="21"/>
+		<set name="baseWIT" value="20"/>
+		<set name="baseMEN" value="10"/>
+		<set name="rewardExp" value="90421085"/>
+		<set name="rewardSp" value="217010"/>
+		<set name="rewardRp" value="0"/>
+		<set name="basePAtk" value="30070"/>
+		<set name="basePDef" value="6000"/>
+		<set name="baseMAtk" value="30000"/>
+		<set name="baseMDef" value="6500"/>
+		<set name="basePAtkSpd" value="253"/>
+		<set name="baseMAtkSpd" value="334"/>
+		<set name="aggroRange" value="0"/>
+		<set name="baseWalkSpd" value="57"/>
+		<set name="baseRunSpd" value="180"/>
+		<set name="baseShldDef" value="0"/>
+		<set name="baseShldRate" value="0"/>
+		<set name="baseCritRate" value="40"/>
+		<set name="texture" value=""/>
+		<rewardlist type="RATED_GROUPED">
+			<group chance="100.0">
+				<reward item_id="57" min="30529" max="71118" chance="30"/>
+				<reward item_id="37791" min="1" max="1" chance="1"/>
+				<reward item_id="36550" min="1" max="1" chance="0.1"/>
+			</group>
+		</rewardlist>
+		<rewardlist type="SWEEP">
+			<reward item_id="40049" min="1" max="1" chance="55.1"/>
+			<reward item_id="40050" min="1" max="1" chance="12.1"/>
+			<reward item_id="40051" min="1" max="1" chance="1.1"/>
+		</rewardlist>
+		<attributes>
+			<defence attribute="fire" value="120"/>
+			<defence attribute="water" value="120"/>
+			<defence attribute="wind" value="120"/>
+			<defence attribute="earth" value="120"/>
+			<defence attribute="holy" value="120"/>
+			<defence attribute="unholy" value="120"/>
+		</attributes>
+	</npc>
 </list>

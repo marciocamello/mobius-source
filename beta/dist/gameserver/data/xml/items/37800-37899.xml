@@ -144,7 +144,7 @@
 				<player olympiad="true"/>
 			</not>
 		</cond>
-	</etcitem>	
+	</etcitem>
 	<etcitem id="37841" name="Valentine Appearance Stone: One-handed Magic Blunt Weapon" add_name="15-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -160,7 +160,7 @@
 				<player olympiad="true"/>
 			</not>
 		</cond>
-	</etcitem>	
+	</etcitem>
 	<etcitem id="37842" name="Valentine Appearance Stone: Two-handed Magic Blunt Weapon" add_name="15-day">
 		<set name="type" value="OTHER"/>
 		<set name="destroyable" value="false"/>
@@ -256,5 +256,16 @@
 				<player olympiad="true"/>
 			</not>
 		</cond>
-	</etcitem>	
+	</etcitem>
+	<etcitem id="37893" name="Bloodied Demonic Tome">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_codex_of_giant_i03"/>
+		<set name="price" value="1500"/>
+		<set name="stackable" value="true"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
 </list>

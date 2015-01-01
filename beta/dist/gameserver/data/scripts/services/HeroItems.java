@@ -437,4 +437,48 @@ public final class HeroItems extends Functions
 		npc.showChatWindow(player, fileName);
 		return null;
 	}
+	
+	/**
+	 * Method getcloak.
+	 * @return String
+	 */
+	public String getcloak()
+	{
+		Player player = getSelf();
+		
+		if (player == null)
+		{
+			return null;
+		}
+		
+		NpcInstance npc = getNpc();
+		
+		if (npc == null)
+		{
+			return null;
+		}
+		
+		String fileName = OLYMPIAD_HTML_PATH;
+		
+		if (player.isHero()) /** TODO: Calculate 1st to 3rd top and give cloak */
+		{
+			if (player.getInventory().getItemByItemId(30372) != null)
+			{
+				fileName += "monument_cloak_have.htm";
+			}
+			else
+			{
+				ItemFunctions.addItem(player, 30372, 1, true);
+				fileName += "monument_cloak_give.htm";
+			}
+		}
+		else
+		{
+			fileName += "monument_cloak_no_top.htm";
+			/** TODO: Calculate 1st to 3rd top and give cloak */
+		}
+		
+		npc.showChatWindow(player, fileName);
+		return null;
+	}
 }

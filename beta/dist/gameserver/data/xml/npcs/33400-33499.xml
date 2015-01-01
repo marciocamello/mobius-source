@@ -1668,6 +1668,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
+		<equip>
+			<rhand item_id="129"/>
+			<lhand item_id="102"/>
+		</equip>
+		<ai_params>
+			<set name="showName" value="false"/>
+			<set name="show Title" value="false"/>
+			<set name="TargetEnabled" value="false"/>
+		</ai_params>
 		<skills>
 			<skill id="4416" level="14"/>
 		</skills>
@@ -1812,6 +1821,15 @@
 		<set name="shots" value="NONE"/>
 		<set name="texture" value=""/>
 		<set name="type" value="Npc"/>
+		<equip>
+			<rhand item_id="129"/>
+			<lhand item_id="102"/>
+		</equip>
+		<ai_params>
+			<set name="showName" value="false"/>
+			<set name="show Title" value="false"/>
+			<set name="TargetEnabled" value="false"/>
+		</ai_params>
 		<skills>
 			<skill id="4416" level="14"/>
 		</skills>

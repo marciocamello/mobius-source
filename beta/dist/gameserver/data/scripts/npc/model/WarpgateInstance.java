@@ -52,11 +52,11 @@ public final class WarpgateInstance extends NpcInstance
 		{
 			if ((player.getLevel() >= Config.HELLBOUND_MIN_PLAYER_LEVEL) || (Functions.getItemCount(player, 45448) != 0))
 			{
-				player.teleToLocation(9160, 252040, -2053); // need retail coords
+				player.teleToLocation(-28632, 255640, -2230);
 				return;
 			}
 			
-			showChatWindow(player, "default/32318-1.htm");
+			showChatWindow(player, "default/33900-1.htm");
 			return;
 		}
 		

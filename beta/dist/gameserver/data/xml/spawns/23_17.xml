@@ -1361,12 +1361,16 @@
 		<npc id="32053"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="112053" y="219594" z="-3674" h="0"/>
-		<npc id="32318"/>
+		<point x="112088" y="219544" z="-3696" h="32767"/>
+		<npc id="33900"/>
 	</spawn>
-	<spawn count="1" respawn="30" respawn_random="0" period_of_day="none">
-		<point x="112017" y="219528" z="-3671" h="31163"/>
-		<npc id="32292"/>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="112008" y="219528" z="-3696" h="32767"/>
+		<npc id="31620"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="112008" y="219608" z="-3696" h="24575"/>
+		<npc id="32347"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="116995" y="144970" z="-2574" h="22419"/>
@@ -1643,10 +1647,6 @@
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="116041" y="249446" z="-947" h="49151"/>
 		<npc id="36408"/>
-	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="110840" y="219192" z="-3567" h="49151"/>
-		<npc id="32632"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="territory_manager_6">
 		<point x="115356" y="218783" z="-3656" h="32768"/>

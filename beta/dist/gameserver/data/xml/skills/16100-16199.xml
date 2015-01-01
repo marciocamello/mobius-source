@@ -8,4 +8,20 @@
 		<set name="castRange" val="600"/>
 		<set name="hitTime" val="10000"/>
 	</skill>
+	<skill id="16130" levels="1" name="Oasis Energy">
+		<set name="levelModifier" val="1"/>
+		<set name="icon" val="icon.oasis_feel"/>
+		<set name="magicLevel" val="1"/>
+		<set name="target" val="TARGET_ONE"/>
+		<set name="skillType" val="DEBUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="saveVs" val="MEN"/>
+		<for>
+			<effect count="1" name="Buff" time="30" val="250" stackOrder="1" stackType="OasisEnergy">
+				<mul order="0x30" stat="pAtkSpd" val="0.25"/>
+				<mul order="0x30" stat="mAtkSpd" val="0.25"/>
+				<sub order="0x30" stat="runSpd" val="50"/>
+			</effect>
+		</for>
+	</skill>
 </list>

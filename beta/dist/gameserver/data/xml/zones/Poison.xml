@@ -2539,36 +2539,63 @@
 			<coords loc="211420 -110828 -1608 -1408"/>
 		</polygon>
 	</zone>
-	<!-- <zone name="[hellbound_heat1]" type="Poison">
+	<zone name="[hellbound_oasis_energy1]" type="Poison">
 		<set name="enabled" val="true"/>
 		<set name="target" val="pc"/>
-		<set name="skill_name" val="5399;1"/>
+		<set name="skill_name" val="16130;1"/>
 		<set name="skill_prob" val="100"/>
-		<set name="unit_tick" val="10"/>
+		<set name="unit_tick" val="35"/>
 		<set name="initial_delay" val="1"/>
 		<polygon>
-			<coords loc="-19092 247323 -5156 1844"/>
-			<coords loc="-1373 247850 -5156 1844"/>
-			<coords loc="-2152 260234 -5156 1844"/>
-			<coords loc="-24490 260000 -5156 1844"/>
-			<coords loc="-22872 251314 -5156 1844"/>
-			<coords loc="-19214 251154 -5156 1844"/>
+			<coords loc="-14584 252456"/>
+			<coords loc="-14947 251744"/>
+			<coords loc="-15557 251289"/>
+			<coords loc="-16127 250461"/>
+			<coords loc="-15810 249923"/>
+			<coords loc="-14795 250436"/>
+			<coords loc="-13404 251669"/>
+			<coords loc="-13437 252021"/>
+			<coords loc="-13905 252682"/>
+			<coords loc="-13410 253454"/>
+			<coords loc="-13378 253140"/>
+			<coords loc="-12917 253022"/>
+			<coords loc="-13051 252042"/>
+			<coords loc="-12363 251316"/>
+			<coords loc="-12006 251692"/>
+			<coords loc="-12005 252269"/>
+			<coords loc="-12475 252800"/>
+			<coords loc="-12552 253605"/>
+			<coords loc="-13444 254477"/>
+			<coords loc="-14618 254517"/>
+			<coords loc="-15205 254060"/>
+			<coords loc="-15167 253707"/>
+			<coords loc="-15071 253356"/>
 		</polygon>
 	</zone>
-	<zone name="[hellbound_heat2]" type="Poison">
+	<zone name="[hellbound_oasis_energy2]" type="Poison">
 		<set name="enabled" val="true"/>
 		<set name="target" val="pc"/>
-		<set name="skill_name" val="5399;1"/>
+		<set name="skill_name" val="16130;1"/>
 		<set name="skill_prob" val="100"/>
-		<set name="unit_tick" val="10"/>
+		<set name="unit_tick" val="35"/>
 		<set name="initial_delay" val="1"/>
 		<polygon>
-			<coords loc="243 231758 -5980 1020"/>
-			<coords loc="13742 233542 -5980 1020"/>
-			<coords loc="13620 242495 -5980 1020"/>
-			<coords loc="131 242444 -5980 1020"/>
+			<coords loc="-19336 242664"/>
+			<coords loc="-18792 242664"/>
+			<coords loc="-18344 242456"/>
+			<coords loc="-17912 241800"/>
+			<coords loc="-18136 241224"/>
+			<coords loc="-17896 240552"/>
+			<coords loc="-18008 239768"/>
+			<coords loc="-18600 240408"/>
+			<coords loc="-18408 240696"/>
+			<coords loc="-18472 241064"/>
+			<coords loc="-18392 241480"/>
+			<coords loc="-18776 242056"/>
+			<coords loc="-19096 242184"/>
+			<coords loc="-19368 242440"/>
 		</polygon>
-	</zone> -->
+	</zone>
 	<zone name="[stakato_mob_buff]" type="Poison">
 		<set name="enabled" val="false"/>
 		<set name="target" val="npc"/>

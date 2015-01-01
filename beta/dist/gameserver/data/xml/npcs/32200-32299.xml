@@ -4341,7 +4341,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="32294" name="Budenka" title="Harbor Caravaner">
+	<npc id="32294" name="Budenka" title="Ancient Literature Caravaner">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -4374,7 +4374,7 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="CaravanTrader"/>
+		<set name="type" value="Npc"/>
 		<skills>
 			<skill id="4416" level="6"/>
 		</skills>
@@ -4479,7 +4479,7 @@
 			<defence attribute="unholy" value="150"/>
 		</attributes>
 	</npc>
-	<npc id="32298" name="Hude" title="Caravan Merchant">
+	<npc id="32298" name="Hude" title="Grocer">
 		<set name="aggroRange" value="0"/>
 		<set name="ai_type" value="CharacterAI"/>
 		<set name="baseAtkRange" value="40"/>
@@ -4512,7 +4512,7 @@
 		<set name="rewardRp" value="0"/>
 		<set name="rewardSp" value="0"/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="CaravanTrader"/>
+		<set name="type" value="Merchant"/>
 		<skills>
 			<skill id="4416" level="6"/>
 		</skills>

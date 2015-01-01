@@ -3067,10 +3067,6 @@
 		<point x="77554" y="-152972" z="-904" h="16384"/>
 		<npc id="36411"/>
 	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="87205" y="-143485" z="-1288" h="16384"/>
-		<npc id="32632"/>
-	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none" group="territory_manager_9">
 		<point x="89272" y="-141432" z="-1536" h="32768"/>
 		<npc id="36489"/>

@@ -3078,14 +3078,6 @@
 		<npc id="36409"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="146952" y="25656" z="-2038" h="16383"/>
-		<npc id="32632"/>
-	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
-		<point x="147843" y="-55146" z="-2728" h="49152"/>
-		<npc id="32632"/>
-	</spawn>
-	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="143472" y="-58991" z="-3464" h="40959"/>
 		<npc id="32499"/>
 	</spawn>

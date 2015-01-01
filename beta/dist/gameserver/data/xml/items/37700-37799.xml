@@ -49,7 +49,7 @@
 		<set name="crystal_count" value="0"/>
 		<equip>
 			<slot id="LEFT_HAND"/>
-		</equip>		
+		</equip>
 		<for>
 			<add stat="pDef" order="0x10" value="5"/>
 			<enchant stat="pDef" order="0x0C" value="0"/>
@@ -70,7 +70,7 @@
 			<enchant stat="maxHp" order="0x80" value="0"/>
 		</for>
 	</armor>
-        <armor id="37714" name="Talisman - Lilith">
+	<armor id="37714" name="Talisman - Lilith">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.lilith_talisman_i00"/>
 		<set name="type" value="NONE"/>
@@ -86,7 +86,7 @@
 			<skill id="13569" level="1"/>
 		</skills>
 	</armor>
-        <armor id="37715" name="Talisman - Anakim">
+	<armor id="37715" name="Talisman - Anakim">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.anakim_talisman_i00"/>
 		<set name="type" value="NONE"/>
@@ -102,7 +102,7 @@
 			<skill id="13569" level="2"/>
 		</skills>
 	</armor>
-        <etcitem id="37716" name="Seven Signs' Energy">
+	<etcitem id="37716" name="Seven Signs' Energy">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.sevensign_energy_i00"/>
 		<set name="type" value="OTHER"/>
@@ -111,7 +111,7 @@
 		<set name="sellable" value="false"/>
 		<set name="tradeable" value="true"/>
 	</etcitem>
-        <armor id="37717" name="Talisman - Seven Signs">
+	<armor id="37717" name="Talisman - Seven Signs">
 		<set name="crystal_type" value="NONE"/>
 		<set name="icon" value="icon.sevensign_talisman_i00"/>
 		<set name="type" value="NONE"/>
@@ -134,7 +134,7 @@
 		<equip>
 			<slot id="NONE"/>
 		</equip>
-	</armor> 
+	</armor>
 	<armor id="37726" name="NC Dinos Shortstop Cap">
 		<set name="crystal_type" value="NONE"/>
 		<set name="price" value="0"/>
@@ -150,5 +150,16 @@
 		<set name="tradeable" value="true"/>
 		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
-	</etcitem>	
+	</etcitem>
+	<etcitem id="37791" name="Sealed Demonic Tome">
+		<set name="class" value="OTHER"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="dropable" value="false"/>
+		<set name="icon" value="icon.etc_codex_of_giant_i02"/>
+		<set name="price" value="1500"/>
+		<set name="stackable" value="true"/>
+		<set name="tradeable" value="false"/>
+		<set name="type" value="OTHER"/>
+	</etcitem>
 </list>

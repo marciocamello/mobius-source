@@ -1106,4 +1106,18 @@
 			<coords loc="-82200 248200"/>
 		</polygon>
 	</zone>
+	<zone name="[refugee_camp_peace]" type="Peace">
+		<polygon>
+			<coords loc="-29163 253328"/>
+			<coords loc="-29912 254568"/>
+			<coords loc="-29921 257134"/>
+			<coords loc="-29810 257882"/>
+			<coords loc="-29165 258521"/>
+			<coords loc="-28244 258243"/>
+			<coords loc="-27576 255784"/>
+			<coords loc="-27464 255192"/>
+			<coords loc="-27720 254296"/>
+			<coords loc="-28616 253608"/>
+		</polygon>
+	</zone>
 </list>
