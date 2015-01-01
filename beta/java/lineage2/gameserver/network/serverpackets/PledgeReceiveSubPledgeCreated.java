@@ -30,7 +30,8 @@ public class PledgeReceiveSubPledgeCreated extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeEx(0x41);
+		writeC(0xFE);
+		writeH(0x41);
 		writeD(0x01);
 		writeD(type);
 		writeS(_name);

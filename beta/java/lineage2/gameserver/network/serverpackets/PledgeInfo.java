@@ -12,6 +12,7 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+import lineage2.gameserver.Config;
 import lineage2.gameserver.model.pledge.Clan;
 
 public class PledgeInfo extends L2GameServerPacket
@@ -31,7 +32,7 @@ public class PledgeInfo extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x89);
-		writeD(2);
+		writeD(Config.REQUEST_ID); // Server_ID
 		writeD(clan_id);
 		writeS(clan_name);
 		writeS(ally_name);

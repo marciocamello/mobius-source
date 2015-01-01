@@ -26,7 +26,6 @@ public class PledgeShowInfoUpdate extends L2GameServerPacket
 	private final int crest_id;
 	private final int ally_id;
 	private int ally_crest;
-	private final int _territorySide;
 	private final int atwar;
 	private String ally_name = StringUtils.EMPTY;
 	private final int HasCastle;
@@ -45,7 +44,6 @@ public class PledgeShowInfoUpdate extends L2GameServerPacket
 		crest_id = clan.getCrestId();
 		ally_id = clan.getAllyId();
 		atwar = clan.isAtWar();
-		_territorySide = clan.getWarDominion();
 		Alliance ally = clan.getAlliance();
 		
 		if (ally != null)
@@ -58,8 +56,7 @@ public class PledgeShowInfoUpdate extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		// dddddddddddd Sdddd
-		writeC(0x8e);
+		writeC(0x8E);
 		// sending empty data so client will ask all the info in response ;)
 		writeD(clan_id);
 		writeD(crest_id);
@@ -67,16 +64,16 @@ public class PledgeShowInfoUpdate extends L2GameServerPacket
 		writeD(HasCastle);
 		writeD(HasHideout);
 		writeD(HasFortress);
-		writeD(0);
+		writeD(0x00); // castle state ?
 		writeD(clan_rank);// displayed in the "tree" view (with the clan skills)
 		writeD(clan_rep);
-		writeD(0);
-		writeD(0);
-		writeD(ally_id);
-		writeS(ally_name);
-		writeD(ally_crest);
-		writeD(atwar);
 		writeD(0x00);
-		writeD(_territorySide);
+		writeD(0x00);
+		writeD(ally_id); // c5
+		writeS(ally_name); // c5
+		writeD(ally_crest); // c5
+		writeD(atwar); // c5
+		writeD(0x00);
+		writeD(0x00);
 	}
 }

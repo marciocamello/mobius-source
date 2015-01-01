@@ -40,6 +40,7 @@ import lineage2.gameserver.idfactory.IdFactory;
 import lineage2.gameserver.instancemanager.ArcanManager;
 import lineage2.gameserver.instancemanager.AwakingManager;
 import lineage2.gameserver.instancemanager.CastleManorManager;
+import lineage2.gameserver.instancemanager.ClanEntryManager;
 import lineage2.gameserver.instancemanager.CoupleManager;
 import lineage2.gameserver.instancemanager.CursedWeaponsManager;
 import lineage2.gameserver.instancemanager.DelusionChamberManager;
@@ -261,6 +262,7 @@ public class GameServer
 		ParnassusManager.getInstance();
 		SubClassTable.getInstance();
 		DualClassTable.getInstance();
+		ClanEntryManager.getInstance();
 		if (Config.GARBAGE_COLLECTOR_INTERVAL > 0)
 		{
 			Class.forName(GarbageCollector.class.getName());

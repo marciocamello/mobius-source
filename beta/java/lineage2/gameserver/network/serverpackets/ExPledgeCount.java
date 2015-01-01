@@ -12,13 +12,22 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+import lineage2.gameserver.model.pledge.Clan;
+
 public class ExPledgeCount extends L2GameServerPacket
 {
+	private final int _count;
+	
+	public ExPledgeCount(Clan clan)
+	{
+		_count = clan.getOnlineMembersCount();
+	}
+	
 	@Override
-	protected final void writeImpl()
+	protected void writeImpl()
 	{
 		writeC(0xFE);
 		writeH(0x13D);
-		writeD(0);
+		writeD(_count);
 	}
 }

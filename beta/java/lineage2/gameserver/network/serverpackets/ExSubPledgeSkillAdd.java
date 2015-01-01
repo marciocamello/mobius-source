@@ -12,9 +12,6 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-/**
- * Author: VISTALL
- */
 public class ExSubPledgeSkillAdd extends L2GameServerPacket
 {
 	private final int _type;
@@ -31,7 +28,8 @@ public class ExSubPledgeSkillAdd extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeEx(0x77);
+		writeC(0xFE);
+		writeH(0x77);
 		writeD(_type);
 		writeD(_id);
 		writeD(_level);

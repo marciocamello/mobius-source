@@ -10,22 +10,25 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package lineage2.gameserver.network.serverpackets.PledgeRecruit;
+package lineage2.gameserver.network.serverpackets;
 
-import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
+import lineage2.gameserver.model.base.ClanEntryStatus;
 
-/**
- * @author Smotocel-PC
- */
-public class ExPledgeRecruitBoardDetail extends L2GameServerPacket
+public class ExPledgeRecruitApplyInfo extends L2GameServerPacket
 {
+	final ClanEntryStatus _status;
+	
+	public ExPledgeRecruitApplyInfo(ClanEntryStatus status)
+	{
+		_status = status;
+	}
+	
 	@Override
 	protected void writeImpl()
 	{
-		writeEx(0x142);
-		writeD(0);
-		writeD(0);
-		writeS("test2");
-		writeS("test3");
+		writeC(0xFE);
+		writeH(0x140);
+		
+		writeD(_status.ordinal());
 	}
 }

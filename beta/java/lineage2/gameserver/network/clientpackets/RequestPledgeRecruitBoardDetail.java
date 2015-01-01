@@ -10,33 +10,40 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package lineage2.gameserver.network.clientpackets.PledgeRecruit;
+package lineage2.gameserver.network.clientpackets;
 
+import lineage2.gameserver.instancemanager.ClanEntryManager;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.clientpackets.L2GameClientPacket;
+import lineage2.gameserver.model.pledge.entry.PledgeRecruitInfo;
+import lineage2.gameserver.network.serverpackets.ExPledgeRecruitBoardDetail;
 
-public class RequestPledgeRecruitBoardSearch extends L2GameClientPacket
+public class RequestPledgeRecruitBoardDetail extends L2GameClientPacket
 {
+	private int _clanId;
+	
 	@Override
 	protected void readImpl()
 	{
-		readD();
-		readD();
-		readD();
-		readS();
-		readD();
-		readD();
-		readD();
+		_clanId = readD();
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = (getClient()).getActiveChar();
+		final Player activeChar = getClient().getActiveChar();
 		
 		if (activeChar == null)
 		{
-			// empty if block
+			return;
 		}
+		
+		final PledgeRecruitInfo pledgeRecruitInfo = ClanEntryManager.getInstance().getClanById(_clanId);
+		
+		if (pledgeRecruitInfo == null)
+		{
+			return;
+		}
+		
+		activeChar.sendPacket(new ExPledgeRecruitBoardDetail(pledgeRecruitInfo));
 	}
 }

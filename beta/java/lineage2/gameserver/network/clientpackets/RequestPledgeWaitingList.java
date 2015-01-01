@@ -10,45 +10,31 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package lineage2.gameserver.network.clientpackets.PledgeRecruit;
+package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.clientpackets.L2GameClientPacket;
+import lineage2.gameserver.network.serverpackets.ExPledgeWaitingList;
 
-public class RequestPledgeDraftListSearch extends L2GameClientPacket
+public class RequestPledgeWaitingList extends L2GameClientPacket
 {
-	@SuppressWarnings("unused")
-	private int _minLevel;
-	@SuppressWarnings("unused")
-	private int _maxLevel;
-	@SuppressWarnings("unused")
-	private int _role;
-	@SuppressWarnings("unused")
-	private String _charName;
-	@SuppressWarnings("unused")
-	private int _sortType;
-	@SuppressWarnings("unused")
-	private int _sortOrder;
+	private int _clanId;
 	
 	@Override
 	protected void readImpl()
 	{
-		_minLevel = readD();
-		_maxLevel = readD();
-		_role = readD();
-		_charName = readS();
-		_sortType = readD();
-		_sortOrder = readD();
+		_clanId = readD();
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = (getClient()).getActiveChar();
+		final Player activeChar = getClient().getActiveChar();
 		
-		if (activeChar == null)
+		if ((activeChar == null) || (activeChar.getClanId() != _clanId))
 		{
-			// empty if block
+			return;
 		}
+		
+		activeChar.sendPacket(new ExPledgeWaitingList(_clanId));
 	}
 }

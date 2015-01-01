@@ -10,12 +10,11 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package lineage2.gameserver.network.clientpackets.PledgeRecruit;
+package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.clientpackets.L2GameClientPacket;
 
-public class RequestPledgeWaitingApplied extends L2GameClientPacket
+public class RequestPledgeJoinSys extends L2GameClientPacket
 {
 	@Override
 	protected void readImpl()

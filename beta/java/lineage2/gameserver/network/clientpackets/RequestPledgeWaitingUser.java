@@ -12,54 +12,43 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
+import lineage2.gameserver.instancemanager.ClanEntryManager;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.pledge.Clan;
-import lineage2.gameserver.network.serverpackets.ManagePledgePower;
+import lineage2.gameserver.model.pledge.entry.PledgeApplicantInfo;
+import lineage2.gameserver.network.serverpackets.ExPledgeWaitingList;
+import lineage2.gameserver.network.serverpackets.ExPledgeWaitingUser;
 
-public final class RequestPledgePower extends L2GameClientPacket
+public class RequestPledgeWaitingUser extends L2GameClientPacket
 {
-	private int _rank;
-	private int _action;
-	private int _privs;
+	private int _clanId;
+	private int _playerId;
 	
 	@Override
 	protected void readImpl()
 	{
-		_rank = readD();
-		_action = readD();
-		if (_action == 2)
-		{
-			_privs = readD();
-		}
-		else
-		{
-			_privs = 0;
-		}
+		_clanId = readD();
+		_playerId = readD();
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		final Player player = getClient().getActiveChar();
-		if (player == null)
+		final Player activeChar = getClient().getActiveChar();
+		
+		if ((activeChar == null) || (activeChar.getClanId() != _clanId))
 		{
 			return;
 		}
 		
-		if (_action == 2)
+		final PledgeApplicantInfo infos = ClanEntryManager.getInstance().getPlayerApplication(_clanId, _playerId);
+		
+		if (infos == null)
 		{
-			if (player.isClanLeader())
-			{
-				if (_rank == 9)
-				{
-					_privs = (_privs & Clan.CP_CL_WAREHOUSE_SEARCH) + (_privs & Clan.CP_CH_ENTRY_EXIT) + (_privs & Clan.CP_CS_ENTRY_EXIT) + (_privs & Clan.CP_CH_USE_FUNCTIONS) + (_privs & Clan.CP_CS_USE_FUNCTIONS);
-				}
-				player.getClan().setRankPrivs(_rank, _privs);
-			}
+			activeChar.sendPacket(new ExPledgeWaitingList(_clanId));
 		}
 		else
 		{
-			player.sendPacket(new ManagePledgePower(getClient().getActiveChar().getClan(), _action, _rank));
+			activeChar.sendPacket(new ExPledgeWaitingUser(infos));
 		}
 	}
 }

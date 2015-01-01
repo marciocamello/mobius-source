@@ -16,18 +16,11 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.UnitMember;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
 public class RequestPledgeSetMemberPowerGrade extends L2GameClientPacket
 {
 	private int _powerGrade;
 	private String _name;
 	
-	/**
-	 * Method readImpl.
-	 */
 	@Override
 	protected void readImpl()
 	{
@@ -35,9 +28,6 @@ public class RequestPledgeSetMemberPowerGrade extends L2GameClientPacket
 		_powerGrade = readD();
 	}
 	
-	/**
-	 * Method runImpl.
-	 */
 	@Override
 	protected void runImpl()
 	{

@@ -10,18 +10,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package lineage2.gameserver.network.serverpackets.PledgeRecruit;
+package lineage2.gameserver.network.serverpackets;
 
-import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 
-/**
- * @author Smo
- */
 public class ExPledgeWaitingListAlarm extends L2GameServerPacket
 {
 	@Override
 	protected void writeImpl()
 	{
-		writeEx(0x147);
+		writeC(0xFE);
+		writeH(0x147);
 	}
 }

@@ -10,29 +10,37 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package lineage2.gameserver.network.clientpackets.PledgeRecruit;
+package lineage2.gameserver.network.clientpackets;
 
+import java.util.OptionalInt;
+
+import lineage2.gameserver.instancemanager.ClanEntryManager;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.clientpackets.L2GameClientPacket;
+import lineage2.gameserver.network.serverpackets.ExPledgeWaitingListApplied;
 
-public class RequestPledgeWaitingUserAccept extends L2GameClientPacket
+public class RequestPledgeWaitingApplied extends L2GameClientPacket
 {
 	@Override
 	protected void readImpl()
 	{
-		readD();
-		readD();
-		readD();
+		// Nothing to read
 	}
 	
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = (getClient()).getActiveChar();
+		final Player activeChar = getClient().getActiveChar();
 		
-		if (activeChar == null)
+		if ((activeChar == null) || (activeChar.getClan() == null))
 		{
-			// empty if block
+			return;
+		}
+		
+		OptionalInt clanId = ClanEntryManager.getInstance().getClanIdForPlayerApplication(activeChar.getObjectId());
+		
+		if (clanId.isPresent())
+		{
+			activeChar.sendPacket(new ExPledgeWaitingListApplied(clanId.getAsInt(), activeChar.getObjectId()));
 		}
 	}
 }

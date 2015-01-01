@@ -12,6 +12,8 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+import lineage2.gameserver.Config;
+
 public class PledgeCrest extends L2GameServerPacket
 {
 	private final int _crestId;
@@ -27,7 +29,7 @@ public class PledgeCrest extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0x6a);
-		writeD(2);
+		writeD(Config.REQUEST_ID); // Server ID
 		writeD(_crestId);
 		writeD(_data.length);
 		writeB(_data);

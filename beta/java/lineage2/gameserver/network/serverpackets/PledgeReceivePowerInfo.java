@@ -18,18 +18,18 @@ import lineage2.gameserver.model.pledge.UnitMember;
 
 public class PledgeReceivePowerInfo extends L2GameServerPacket
 {
-	private final int PowerGrade;
-	private int privs;
-	private final String member_name;
+	private final int _power_grade;
+	private int _privs;
+	private final String _member_name;
 	
 	public PledgeReceivePowerInfo(UnitMember member)
 	{
-		PowerGrade = member.getPowerGrade();
-		member_name = member.getName();
+		_power_grade = member.getPowerGrade();
+		_member_name = member.getName();
 		
 		if (member.isClanLeader())
 		{
-			privs = Clan.CP_ALL;
+			_privs = Clan.CP_ALL;
 		}
 		else
 		{
@@ -37,11 +37,11 @@ public class PledgeReceivePowerInfo extends L2GameServerPacket
 			
 			if (temp != null)
 			{
-				privs = temp.getPrivs();
+				_privs = temp.getPrivs();
 			}
 			else
 			{
-				privs = 0;
+				_privs = 0;
 			}
 		}
 	}
@@ -49,9 +49,10 @@ public class PledgeReceivePowerInfo extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeEx(0x3e);
-		writeD(PowerGrade);
-		writeS(member_name);
-		writeD(privs);
+		writeC(0xFE);
+		writeH(0x3E);
+		writeD(_power_grade);
+		writeS(_member_name);
+		writeD(_privs);
 	}
 }

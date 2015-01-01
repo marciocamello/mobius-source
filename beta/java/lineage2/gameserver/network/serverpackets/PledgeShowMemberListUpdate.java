@@ -68,14 +68,18 @@ public class PledgeShowMemberListUpdate extends L2GameServerPacket
 		writeD(_lvl);
 		writeD(_classId);
 		writeD(_sex);
-		
-		/*
-		 * writeD(_race); if (_isOnline) { writeD(_objectId); writeD(_pledgeType); } else { writeD(0); writeD(0); }
-		 */
-		
-		writeD(_objectId);
-		writeD(_isOnline);
-		writeD(_pledgeType);
+		writeD(_race);
+		if (_isOnline)
+		{
+			writeD(_objectId);
+			writeD(_pledgeType);
+		}
+		else
+		{
+			// when going offline send as 0
+			writeD(0);
+			writeD(0);
+		}
 		writeD(_isApprentice); // does a clan member have a sponsor
 	}
 }

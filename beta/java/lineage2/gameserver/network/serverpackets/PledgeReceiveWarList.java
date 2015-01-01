@@ -41,7 +41,8 @@ public class PledgeReceiveWarList extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeEx(0x40);
+		writeC(0xFE);
+		writeH(0x40);
 		writeD(0x00); // page number goes here(_page ), made it static cuz not sure how many war to add to one page so TODO here
 		writeD(infos.size());
 		
@@ -51,8 +52,8 @@ public class PledgeReceiveWarList extends L2GameServerPacket
 			writeD(_updateType);
 			writeD(_info.unk1);
 			writeD(_info.unk2); // filler ??
-			writeD(0);
-			writeD(0);
+			writeD(0x00); // 603 : GS-comment-030.4
+			writeD(0x00); // 603 : GS-comment-030.5
 		}
 	}
 	

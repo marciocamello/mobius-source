@@ -17,39 +17,23 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.RankPrivs;
 import lineage2.gameserver.network.serverpackets.PledgePowerGradeList;
 
-/**
- * @author Mobius
- * @version $Revision: 1.0 $
- */
-public class RequestPledgePowerGradeList extends L2GameClientPacket
+public final class RequestPledgePowerGradeList extends L2GameClientPacket
 {
-	/**
-	 * Method readImpl.
-	 */
 	@Override
 	protected void readImpl()
 	{
+		// trigger
 	}
 	
-	/**
-	 * Method runImpl.
-	 */
 	@Override
 	protected void runImpl()
 	{
-		Player activeChar = getClient().getActiveChar();
-		
-		if (activeChar == null)
-		{
-			return;
-		}
-		
-		Clan clan = activeChar.getClan();
-		
+		Player player = getClient().getActiveChar();
+		Clan clan = player.getClan();
 		if (clan != null)
 		{
 			RankPrivs[] privs = clan.getAllRankPrivs();
-			activeChar.sendPacket(new PledgePowerGradeList(privs));
+			player.sendPacket(new PledgePowerGradeList(privs));
 		}
 	}
 }

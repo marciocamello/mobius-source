@@ -10,33 +10,26 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package lineage2.gameserver.network.clientpackets.PledgeRecruit;
+package lineage2.gameserver.network.serverpackets;
 
-import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.clientpackets.L2GameClientPacket;
+import lineage2.gameserver.model.pledge.entry.PledgeApplicantInfo;
 
-public class RequestPledgeDraftListApply extends L2GameClientPacket
+public class ExPledgeWaitingUser extends L2GameServerPacket
 {
-	@SuppressWarnings("unused")
-	private int _applyType;
-	@SuppressWarnings("unused")
-	private int _searchType;
+	private final PledgeApplicantInfo _pledgeRecruitInfo;
 	
-	@Override
-	protected void readImpl()
+	public ExPledgeWaitingUser(PledgeApplicantInfo pledgeRecruitInfo)
 	{
-		_applyType = readD();
-		_searchType = readD();
+		_pledgeRecruitInfo = pledgeRecruitInfo;
 	}
 	
 	@Override
-	protected void runImpl()
+	protected void writeImpl()
 	{
-		Player activeChar = (getClient()).getActiveChar();
+		writeC(0xFE);
+		writeH(0x145);
 		
-		if (activeChar == null)
-		{
-			return;
-		}
+		writeD(_pledgeRecruitInfo.getPlayerId());
+		writeS(_pledgeRecruitInfo.getMessage());
 	}
 }

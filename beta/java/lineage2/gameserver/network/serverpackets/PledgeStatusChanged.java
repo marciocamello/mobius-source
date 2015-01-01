@@ -44,7 +44,7 @@ public class PledgeStatusChanged extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		writeC(0xCD);
-		writeD(0);
+		writeD(0x00);
 		writeD(leader_id);
 		writeD(clan_id);
 		writeD(crestId);

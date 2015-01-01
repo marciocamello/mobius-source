@@ -26,7 +26,8 @@ public class PledgePowerGradeList extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeEx(0x3d);
+		writeC(0xFE);
+		writeH(0x3D);
 		writeD(_privs.length);
 		
 		for (RankPrivs element : _privs)

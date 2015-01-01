@@ -10,27 +10,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package lineage2.gameserver.network.clientpackets.PledgeRecruit;
+package lineage2.gameserver.model.base;
 
-import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.clientpackets.L2GameClientPacket;
-
-public class RequestPledgeRecruitBoardDetail extends L2GameClientPacket
+public enum ClanEntryStatus
 {
-	@Override
-	protected void readImpl()
-	{
-		readD();
-	}
-	
-	@Override
-	protected void runImpl()
-	{
-		Player activeChar = (getClient()).getActiveChar();
-		
-		if (activeChar == null)
-		{
-			// empty if block
-		}
-	}
+	DEFAULT,
+	ORDERED,
+	CLAN_REGISTRATION,
+	UNKNOWN,
+	WAITING
 }

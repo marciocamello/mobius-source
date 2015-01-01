@@ -60,7 +60,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * @author Mobius
+ * @author Creative Infinity
  * @version $Revision: 1.0 $
  */
 public class Clan implements Iterable<UnitMember>
@@ -73,7 +73,6 @@ public class Clan implements Iterable<UnitMember>
 	private int _hasCastle;
 	private int _hasFortress;
 	private int _hasHideout;
-	private int _warDominion;
 	private int _crestId;
 	private int _crestLargeId;
 	private long _expelledMemberTime;
@@ -422,6 +421,23 @@ public class Clan implements Iterable<UnitMember>
 		}
 		
 		return result;
+	}
+	
+	/**
+	 * @return the online clan member count.
+	 */
+	public int getOnlineMembersCount()
+	{
+		int count = 0;
+		for (UnitMember temp : this)
+		{
+			if ((temp == null) || !temp.isOnline())
+			{
+				continue;
+			}
+			count++;
+		}
+		return count;
 	}
 	
 	/**
@@ -2020,7 +2036,7 @@ public class Clan implements Iterable<UnitMember>
 	}
 	
 	/**
-	 * @author Mobius
+	 * @author Creative Infinity
 	 */
 	private static class ClanReputationComparator implements Comparator<Clan>
 	{
@@ -2262,16 +2278,6 @@ public class Clan implements Iterable<UnitMember>
 				member.getEffectList().stopEffect(_clanLeaderSkill);
 			}
 		}
-	}
-	
-	public int getWarDominion()
-	{
-		return _warDominion;
-	}
-	
-	public void setWarDominion(int warDominion)
-	{
-		_warDominion = warDominion;
 	}
 	
 	public int getUnionType()

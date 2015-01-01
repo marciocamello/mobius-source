@@ -22,7 +22,7 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
 /**
- * @author Mobius
+ * @author Creative Infinity
  * @version $Revision: 1.0 $
  */
 public class RequestJoinPledge extends L2GameClientPacket
@@ -141,6 +141,8 @@ public class RequestJoinPledge extends L2GameClientPacket
 		
 		Request request = new Request(L2RequestType.CLAN, activeChar, member).setTimeout(10000L);
 		request.set("pledgeType", _pledgeType);
-		member.sendPacket(new AskJoinPledge(activeChar.getObjectId(), activeChar.getClan().getName()));
+		final String pledgeName = activeChar.getClan().getName();
+		final String subPledgeName = (activeChar.getClan().getSubUnit(_pledgeType) != null ? activeChar.getClan().getSubUnit(_pledgeType).getName() : null);
+		member.sendPacket(new AskJoinPledge(activeChar.getObjectId(), subPledgeName, _pledgeType, pledgeName));
 	}
 }

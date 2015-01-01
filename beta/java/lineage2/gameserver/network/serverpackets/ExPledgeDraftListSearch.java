@@ -10,20 +10,35 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package lineage2.gameserver.network.serverpackets.PledgeRecruit;
+package lineage2.gameserver.network.serverpackets;
 
-import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
+import java.util.List;
 
-/**
- * @author Smotocel-PC
- */
-public class ExPledgeWaitingUser extends L2GameServerPacket
+import lineage2.gameserver.model.pledge.entry.PledgeWaitingInfo;
+
+public class ExPledgeDraftListSearch extends L2GameServerPacket
 {
+	final List<PledgeWaitingInfo> _pledgeRecruitList;
+	
+	public ExPledgeDraftListSearch(List<PledgeWaitingInfo> pledgeRecruitList)
+	{
+		_pledgeRecruitList = pledgeRecruitList;
+	}
+	
 	@Override
 	protected void writeImpl()
 	{
-		writeEx(0x145);
-		writeD(0);
-		writeS("");
+		writeC(0xFE);
+		writeH(0x146);
+		
+		writeD(_pledgeRecruitList.size());
+		for (PledgeWaitingInfo prl : _pledgeRecruitList)
+		{
+			writeD(prl.getPlayerId());
+			writeS(prl.getPlayerName());
+			writeD(prl.getKarma());
+			writeD(prl.getPlayerClassId());
+			writeD(prl.getPlayerLvl());
+		}
 	}
 }

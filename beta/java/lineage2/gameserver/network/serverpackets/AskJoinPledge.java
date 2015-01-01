@@ -16,18 +16,30 @@ public class AskJoinPledge extends L2GameServerPacket
 {
 	private final int _requestorId;
 	private final String _pledgeName;
+	private final int _pledgeType;
+	private final String _subPledgeName;
 	
-	public AskJoinPledge(int requestorId, String pledgeName)
+	public AskJoinPledge(int requestorId, String subPledgeName, int pledgeType, String pledgeName)
 	{
 		_requestorId = requestorId;
+		_subPledgeName = subPledgeName;
+		_pledgeType = pledgeType;
 		_pledgeName = pledgeName;
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
-		writeC(0x2c);
+		writeC(0x2C);
 		writeD(_requestorId);
+		if (_subPledgeName != null)
+		{
+			writeS(_pledgeType > 0 ? _subPledgeName : _pledgeName);
+		}
 		writeS(_pledgeName);
+		if (_pledgeType != 0)
+		{
+			writeD(_pledgeType);
+		}
 	}
 }

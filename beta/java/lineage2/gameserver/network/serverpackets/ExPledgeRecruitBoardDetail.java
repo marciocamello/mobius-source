@@ -10,19 +10,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package lineage2.gameserver.network.serverpackets.PledgeRecruit;
+package lineage2.gameserver.network.serverpackets;
 
-import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
+import lineage2.gameserver.model.pledge.entry.PledgeRecruitInfo;
 
-/**
- * @author Smotocel-PC
- */
-public class ExPledgeDraftListSearch extends L2GameServerPacket
+public class ExPledgeRecruitBoardDetail extends L2GameServerPacket
 {
+	final PledgeRecruitInfo _pledgeRecruitInfo;
+	
+	public ExPledgeRecruitBoardDetail(PledgeRecruitInfo pledgeRecruitInfo)
+	{
+		_pledgeRecruitInfo = pledgeRecruitInfo;
+	}
+	
 	@Override
 	protected void writeImpl()
 	{
-		writeEx(0x146);
-		writeD(0);
+		writeC(0xFE);
+		writeH(0x142);
+		
+		writeD(_pledgeRecruitInfo.getClanId());
+		writeD(_pledgeRecruitInfo.getKarma());
+		writeS(_pledgeRecruitInfo.getInformation());
+		writeS(_pledgeRecruitInfo.getDetailedInformation());
 	}
 }
