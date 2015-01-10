@@ -12,26 +12,18 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-public class ExPutEnchantScrollItemResult extends L2GameServerPacket
+public class ExRemoveEnchantSupportItemResult extends L2GameServerPacket
 {
-	public static final L2GameServerPacket FAIL = new ExPutEnchantScrollItemResult(0);
-	public static final L2GameServerPacket SUCCESS = new ExPutEnchantScrollItemResult(1);
+	public static final L2GameServerPacket STATIC = new ExRemoveEnchantSupportItemResult();
 	
-	private final int _result;
-	
-	/**
-	 * @param result
-	 */
-	public ExPutEnchantScrollItemResult(int result)
+	public ExRemoveEnchantSupportItemResult()
 	{
-		_result = result;
 	}
 	
 	@Override
 	protected void writeImpl()
 	{
 		writeC(0xFE);
-		writeH(0x152);
-		writeD(_result);
+		writeH(0x153);
 	}
 }

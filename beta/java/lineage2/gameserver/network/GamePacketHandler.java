@@ -1917,10 +1917,10 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 								// msg = new RequestRegisterXMasWishCard();
 								break;
 							case 0xE3:
-								// msg = new RequestExAddEnchantScrollItem();
+								msg = new RequestExAddEnchantScrollItem();
 								break;
 							case 0xE4:
-								// msg = new RequestExRemoveEnchantSupportItem();
+								msg = new RequestExRemoveEnchantSupportItem();
 								break;
 							case 0xE5:
 								// msg = new RequestCardReward();

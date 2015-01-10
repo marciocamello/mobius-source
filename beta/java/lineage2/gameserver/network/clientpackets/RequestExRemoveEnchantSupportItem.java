@@ -10,28 +10,30 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package lineage2.gameserver.network.serverpackets;
+package lineage2.gameserver.network.clientpackets;
 
-public class ExPutEnchantScrollItemResult extends L2GameServerPacket
+import lineage2.gameserver.model.Player;
+import lineage2.gameserver.network.serverpackets.ExRemoveEnchantSupportItemResult;
+
+public class RequestExRemoveEnchantSupportItem extends L2GameClientPacket
 {
-	public static final L2GameServerPacket FAIL = new ExPutEnchantScrollItemResult(0);
-	public static final L2GameServerPacket SUCCESS = new ExPutEnchantScrollItemResult(1);
-	
-	private final int _result;
-	
-	/**
-	 * @param result
-	 */
-	public ExPutEnchantScrollItemResult(int result)
+	public RequestExRemoveEnchantSupportItem()
 	{
-		_result = result;
 	}
 	
 	@Override
-	protected void writeImpl()
+	protected void readImpl()
 	{
-		writeC(0xFE);
-		writeH(0x152);
-		writeD(_result);
+	}
+	
+	@Override
+	protected void runImpl()
+	{
+		Player activeChar = getClient().getActiveChar();
+		if (activeChar == null)
+		{
+			return;
+		}
+		activeChar.sendPacket(ExRemoveEnchantSupportItemResult.STATIC);
 	}
 }

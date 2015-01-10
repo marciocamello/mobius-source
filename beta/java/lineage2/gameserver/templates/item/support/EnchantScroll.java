@@ -14,7 +14,6 @@ package lineage2.gameserver.templates.item.support;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public class EnchantScroll extends EnchantItem
 {

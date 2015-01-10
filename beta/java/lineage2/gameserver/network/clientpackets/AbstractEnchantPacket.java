@@ -14,12 +14,12 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
+import lineage2.gameserver.model.items.ItemInstance.ItemLocation;
 import lineage2.gameserver.model.items.etcitems.EnchantScrollInfo;
 import lineage2.gameserver.model.items.etcitems.EnchantScrollTarget;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public abstract class AbstractEnchantPacket extends L2GameClientPacket
 {
@@ -81,7 +81,7 @@ public abstract class AbstractEnchantPacket extends L2GameClientPacket
 			return false;
 		}
 		
-		if ((item.getLocation() != ItemInstance.ItemLocation.INVENTORY) && (item.getLocation() != ItemInstance.ItemLocation.PAPERDOLL))
+		if ((item.getLocation() != ItemLocation.INVENTORY) && (item.getLocation() != ItemLocation.PAPERDOLL))
 		{
 			return false;
 		}

@@ -20,7 +20,6 @@ import lineage2.gameserver.utils.ItemFunctions;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public class RequestExTryToPutEnchantSupportItem extends L2GameClientPacket
 {

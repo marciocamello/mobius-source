@@ -18,11 +18,10 @@ public class EnchantResult extends L2GameServerPacket
 	private final int _crystalId;
 	private final long _count;
 	private final int _enchantValue;
-	public static final EnchantResult SUCESS = new EnchantResult(0, 0, 0);
+	
 	public static final EnchantResult CANCEL = new EnchantResult(2, 0, 0);
 	public static final EnchantResult BLESSED_FAILED = new EnchantResult(3, 0, 0);
 	public static final EnchantResult FAILED_NO_CRYSTALS = new EnchantResult(4, 0, 0);
-	public static final EnchantResult ANCIENT_FAILED = new EnchantResult(5, 0, 0);
 	
 	public EnchantResult(int resultId, int crystalId, long count)
 	{
@@ -45,5 +44,8 @@ public class EnchantResult extends L2GameServerPacket
 		writeD(_crystalId);
 		writeQ(_count);
 		writeD(_enchantValue);
+		writeH(0x00);
+		writeH(0x00);
+		writeH(0x00);
 	}
 }

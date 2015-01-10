@@ -31,7 +31,6 @@ import lineage2.gameserver.utils.ItemFunctions;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public class RequestEnchantItem extends AbstractEnchantPacket
 {
@@ -235,7 +234,7 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 				iu.addModifiedItem(item);
 				player.sendPacket(iu);
 				
-				player.sendPacket(new EnchantResult(0, 0, 0L, item.getEnchantLevel()));
+				player.sendPacket(new EnchantResult(0, 0, 0, item.getEnchantLevel()));
 				
 				if (Config.SHOW_ENCHANT_EFFECT_RESULT)
 				{
@@ -341,7 +340,7 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 						iu.addModifiedItem(item);
 						player.sendPacket(iu);
 						player.sendPacket(SystemMsg.THE_BLESSED_ENCHANT_FAILED);
-						player.sendPacket(EnchantResult.ANCIENT_FAILED);
+						player.sendPacket(new EnchantResult(5, 0, 0, item.getEnchantLevel()));
 						break;
 					
 					case BLESSED:
@@ -366,7 +365,7 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 						break;
 					
 					case ANCIENT:
-						player.sendPacket(EnchantResult.ANCIENT_FAILED);
+						player.sendPacket(new EnchantResult(5, 0, 0, item.getEnchantLevel()));
 						break;
 					
 					default:
