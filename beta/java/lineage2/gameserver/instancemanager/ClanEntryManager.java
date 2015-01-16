@@ -25,20 +25,22 @@ import java.util.OptionalInt;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.database.DatabaseFactory;
+import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.pledge.entry.PledgeApplicantInfo;
 import lineage2.gameserver.model.pledge.entry.PledgeRecruitInfo;
 import lineage2.gameserver.model.pledge.entry.PledgeWaitingInfo;
 import lineage2.gameserver.utils.Util;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class ClanEntryManager
 {
-	protected static final Logger _log = Logger.getLogger(ClanEntryManager.class.getName());
+	private static final Logger _log = LoggerFactory.getLogger(ClanEntryManager.class);
 	
 	private static final Map<Integer, PledgeWaitingInfo> _waitingList = new ConcurrentHashMap<>();
 	private static final Map<Integer, PledgeRecruitInfo> _clanList = new ConcurrentHashMap<>();
@@ -94,39 +96,41 @@ public class ClanEntryManager
 		}
 		catch (Exception e)
 		{
-			_log.warning(getClass().getSimpleName() + ": Exception: ClanEntryManager.load(): " + e.getMessage());
+			_log.warn("Exception: ClanEntryManager.load(): " + e.getMessage());
 		}
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
-			ResultSet rs = s.executeQuery("SELECT a.char_id, a.karma, b.base_class, b.level, b.char_name FROM pledge_waiting_list as a LEFT JOIN characters as b ON a.char_id = b.charId"))
+			ResultSet rs = s.executeQuery("SELECT a.char_id, a.karma, b.default_class_id, b.level FROM pledge_waiting_list as a LEFT JOIN character_subclasses as b ON a.char_id = b.char_obj_id"))
 		{
 			while (rs.next())
 			{
-				_waitingList.put(rs.getInt("char_id"), new PledgeWaitingInfo(rs.getInt("char_id"), rs.getInt("level"), rs.getInt("karma"), rs.getInt("base_class"), rs.getString("char_name")));
+				final int charId = rs.getInt("char_id");
+				_waitingList.put(charId, new PledgeWaitingInfo(charId, rs.getInt("level"), rs.getInt("karma"), rs.getInt("default_class_id"), World.getPlayer(charId).getName()/* FIXME: Get char name from db */));
 			}
 			
 			_log.info(getClass().getSimpleName() + ": Loaded: " + _waitingList.size() + " player in waiting list");
 		}
 		catch (Exception e)
 		{
-			_log.warning(getClass().getSimpleName() + ": Exception: ClanEntryManager.load(): " + e.getMessage());
+			_log.warn(getClass().getSimpleName() + ": Exception: ClanEntryManager.load(): " + e.getMessage());
 		}
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			Statement s = con.createStatement();
-			ResultSet rs = s.executeQuery("SELECT a.charId, a.clanId, a.karma, a.message, b.base_class, b.level, b.char_name FROM pledge_applicant as a LEFT JOIN characters as b ON a.charId = b.charId"))
+			ResultSet rs = s.executeQuery("SELECT a.charId, a.clanId, a.karma, a.message, b.default_class_id, b.level FROM pledge_applicant as a LEFT JOIN character_subclasses as b ON a.charId = b.char_obj_id"))
 		{
 			while (rs.next())
 			{
-				_applicantList.computeIfAbsent(rs.getInt("clanId"), k -> new ConcurrentHashMap<>()).put(rs.getInt("charId"), new PledgeApplicantInfo(rs.getInt("charId"), rs.getString("char_name"), rs.getInt("level"), rs.getInt("karma"), rs.getInt("clanId"), rs.getString("message")));
+				final int charId = rs.getInt("charId");
+				_applicantList.computeIfAbsent(rs.getInt("clanId"), k -> new ConcurrentHashMap<>()).put(charId, new PledgeApplicantInfo(charId, World.getPlayer(charId).getName()/* FIXME: Get char name from db */, rs.getInt("level"), rs.getInt("karma"), rs.getInt("clanId"), rs.getString("message")));
 			}
 			
 			_log.info(getClass().getSimpleName() + ": Loaded: " + _applicantList.size() + " player application");
 		}
 		catch (Exception e)
 		{
-			_log.warning(getClass().getSimpleName() + ": Exception: ClanEntryManager.load(): " + e.getMessage());
+			_log.warn(getClass().getSimpleName() + ": Exception: ClanEntryManager.load(): " + e.getMessage());
 		}
 	}
 	
@@ -168,7 +172,7 @@ public class ClanEntryManager
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage(), e);
+			_log.error(e.getMessage(), e);
 		}
 		
 		return (clanApplicantList != null) && (clanApplicantList.remove(playerId) != null);
@@ -191,7 +195,7 @@ public class ClanEntryManager
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, e.getMessage(), e);
+				_log.error(e.getMessage(), e);
 			}
 			return true;
 		}
@@ -216,7 +220,7 @@ public class ClanEntryManager
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, e.getMessage(), e);
+				_log.error(e.getMessage(), e);
 			}
 			
 			return _waitingList.put(playerId, info) != null;
@@ -236,7 +240,7 @@ public class ClanEntryManager
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, e.getMessage(), e);
+				_log.error(e.getMessage(), e);
 			}
 			_waitingList.remove(playerId);
 			lockPlayer(playerId);
@@ -260,7 +264,7 @@ public class ClanEntryManager
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, e.getMessage(), e);
+				_log.error(e.getMessage(), e);
 			}
 			return _clanList.put(clanId, info) != null;
 		}
@@ -282,7 +286,7 @@ public class ClanEntryManager
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, e.getMessage(), e);
+				_log.error(e.getMessage(), e);
 			}
 			return _clanList.replace(clanId, info) != null;
 		}
@@ -301,7 +305,7 @@ public class ClanEntryManager
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, e.getMessage(), e);
+				_log.error(e.getMessage(), e);
 			}
 			_clanList.remove(clanId);
 			lockClan(clanId);
