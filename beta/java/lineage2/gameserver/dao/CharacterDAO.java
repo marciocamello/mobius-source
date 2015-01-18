@@ -86,7 +86,7 @@ public class CharacterDAO
 		try
 		{
 			con = DatabaseFactory.getInstance().getConnection();
-			statement = con.prepareStatement("INSERT INTO `characters` (account_name, obj_Id, char_name, face, hairStyle, hairColor, sex, karma, pvpkills, pkkills, clanid, createtime, deletetime, title, accesslevel, online, leaveclan, deleteclan, nochannel, pledge_type, pledge_rank, lvl_joined_academy, apprentice) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+			statement = con.prepareStatement("INSERT INTO `characters` (account_name, obj_Id, char_name, face, hairStyle, hairColor, sex, karma, pvpkills, pkkills, clanid, createtime, deletetime, title, accesslevel, online, leaveclan, deleteclan, nochannel, pledge_type, pledge_rank, lvl_joined_academy, apprentice, used_world_chat_points) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 			statement.setString(1, player.getAccountName());
 			statement.setInt(2, player.getObjectId());
 			statement.setString(3, player.getName());
@@ -110,6 +110,7 @@ public class CharacterDAO
 			statement.setInt(21, player.getPowerGrade());
 			statement.setInt(22, player.getLvlJoinedAcademy());
 			statement.setInt(23, player.getApprentice());
+			statement.setInt(24, player.getUsedWorldChatPoints());
 			statement.executeUpdate();
 		}
 		catch (final Exception e)

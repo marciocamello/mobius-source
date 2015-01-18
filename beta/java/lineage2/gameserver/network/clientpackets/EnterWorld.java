@@ -75,6 +75,7 @@ import lineage2.gameserver.network.serverpackets.ExTutorialList;
 import lineage2.gameserver.network.serverpackets.ExUnReadMailCount;
 import lineage2.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import lineage2.gameserver.network.serverpackets.ExVitalityEffectInfo;
+import lineage2.gameserver.network.serverpackets.ExWorldChatCnt;
 import lineage2.gameserver.network.serverpackets.FriendList;
 import lineage2.gameserver.network.serverpackets.HennaInfo;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
@@ -623,6 +624,11 @@ public class EnterWorld extends L2GameClientPacket
 			{
 				AwakingManager.getInstance().checkAwakenPlayerSkills(activeChar);
 			}
+		}
+		
+		if ((activeChar.getUsedWorldChatPoints() < (activeChar.hasBonus() ? Config.WORLD_CHAT_POINTS_PER_DAY_PREMIUM : Config.WORLD_CHAT_POINTS_PER_DAY)) && (activeChar.getLevel() >= (activeChar.hasBonus() ? Config.WORLD_CHAT_USE_MIN_LEVEL_PREMIUM : Config.WORLD_CHAT_USE_MIN_LEVEL)))
+		{
+			activeChar.sendPacket(new ExWorldChatCnt(activeChar));
 		}
 	}
 	

@@ -218,6 +218,7 @@ import lineage2.gameserver.network.serverpackets.ExSubjobInfo;
 import lineage2.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import lineage2.gameserver.network.serverpackets.ExVitalityPointInfo;
 import lineage2.gameserver.network.serverpackets.ExVoteSystemInfo;
+import lineage2.gameserver.network.serverpackets.ExWorldChatCnt;
 import lineage2.gameserver.network.serverpackets.GetItem;
 import lineage2.gameserver.network.serverpackets.HennaInfo;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
@@ -420,7 +421,7 @@ public final class Player extends Playable implements PlayerGroup
 	private final ItemContainer _refund = new PcRefund(this);
 	private final PcFreight _freight = new PcFreight(this);
 	public final BookMarkList bookmarks = new BookMarkList(this, 0);
-	public final AntiFlood antiFlood = new AntiFlood();
+	public final AntiFlood _antiFlood = new AntiFlood();
 	private final Map<Integer, RecipeTemplate> _recipebook = new TreeMap<>();
 	private final Map<Integer, RecipeTemplate> _commonrecipebook = new TreeMap<>();
 	private final Map<Integer, PremiumItem> _premiumItems = new TreeMap<>();
@@ -551,6 +552,7 @@ public final class Player extends Playable implements PlayerGroup
 	private final SubClassList _subClassList = new SubClassList(this);
 	private final SummonList _summonList = new SummonList(this);
 	private final MentoringSystem mentorSystem;
+	private int _usedWorldChatPoints = 0;
 	
 	/**
 	 * Constructor for Player.
@@ -5454,6 +5456,11 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 		
+		if (getLevel() == (hasBonus() ? Config.WORLD_CHAT_USE_MIN_LEVEL_PREMIUM : Config.WORLD_CHAT_USE_MIN_LEVEL))
+		{
+			sendPacket(new ExWorldChatCnt(this));
+		}
+		
 		rewardSkills(true, false);
 	}
 	
@@ -6341,6 +6348,8 @@ public final class Player extends Playable implements PlayerGroup
 					player.setNoChannel(0);
 				}
 				
+				player.setUsedWorldChatPoints(rset.getInt("used_world_chat_points"));
+				
 				player.setAccessLevel(rset.getInt("accesslevel"));
 				player.setOnlineTime(rset.getLong("onlinetime") * 1000L);
 				final int clanId = rset.getInt("clanid");
@@ -6463,6 +6472,7 @@ public final class Player extends Playable implements PlayerGroup
 				player.getSubClassList().restore();
 				player.setActiveSubClass(player.getActiveClassId(), false, 0);
 				player.restoreVitality();
+				player.checkWorldChatPoints();
 				player.getInventory().restore();
 				player.getMentorSystem().restore();
 				
@@ -6780,7 +6790,7 @@ public final class Player extends Playable implements PlayerGroup
 			try
 			{
 				con = DatabaseFactory.getInstance().getConnection();
-				statement = con.prepareStatement("UPDATE characters SET face=?,hairStyle=?,hairColor=?,sex=?,x=?,y=?,z=?,karma=?,pvpkills=?,pkkills=?,rec_have=?,rec_left=?,rec_bonus_time=?,clanid=?,deletetime=?,title=?,accesslevel=?,online=?,leaveclan=?,deleteclan=?,nochannel=?,onlinetime=?,pledge_type=?,pledge_rank=?,lvl_joined_academy=?,apprentice=?,key_bindings=?,pcBangPoints=?,char_name=?,fame=?,bookmarks=?,faceB=?,hairStyleB=?,hairColorB=? WHERE obj_Id=? LIMIT 1");
+				statement = con.prepareStatement("UPDATE characters SET face=?,hairStyle=?,hairColor=?,sex=?,x=?,y=?,z=?,karma=?,pvpkills=?,pkkills=?,rec_have=?,rec_left=?,rec_bonus_time=?,clanid=?,deletetime=?,title=?,accesslevel=?,online=?,leaveclan=?,deleteclan=?,nochannel=?,onlinetime=?,pledge_type=?,pledge_rank=?,lvl_joined_academy=?,apprentice=?,key_bindings=?,pcBangPoints=?,char_name=?,fame=?,bookmarks=?,faceB=?,hairStyleB=?,hairColorB=?,used_world_chat_points=? WHERE obj_Id=? LIMIT 1");
 				statement.setInt(1, getOriginalFace());
 				statement.setInt(2, getOriginalHairStyle());
 				statement.setInt(3, getOriginalHairColor());
@@ -6826,7 +6836,8 @@ public final class Player extends Playable implements PlayerGroup
 				statement.setInt(32, getNewFace());
 				statement.setInt(33, getNewHairStyle());
 				statement.setInt(34, getNewHairColor());
-				statement.setInt(35, getObjectId());
+				statement.setInt(35, getUsedWorldChatPoints());
+				statement.setInt(36, getObjectId());
 				statement.executeUpdate();
 				GameStats.increaseUpdatePlayerBase();
 				
@@ -15582,17 +15593,11 @@ public final class Player extends Playable implements PlayerGroup
 		_inLastHero = param;
 	}
 	
-	/**
-	 * 
-	 */
 	private void restoreUISettings()
 	{
 		_uiKeySettings = new UIKeysSettings(getObjectId());
 	}
 	
-	/**
-	 * 
-	 */
 	private void storeUISettings()
 	{
 		if (_uiKeySettings == null)
@@ -15606,9 +15611,6 @@ public final class Player extends Playable implements PlayerGroup
 		}
 	}
 	
-	/**
-	 * @return
-	 */
 	public UIKeysSettings getUISettings()
 	{
 		if (_uiKeySettings == null)
@@ -15617,5 +15619,44 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		
 		return _uiKeySettings;
+	}
+	
+	public int getWorldChatPoints()
+	{
+		if (hasBonus())
+		{
+			return Math.max(0, Config.WORLD_CHAT_POINTS_PER_DAY_PREMIUM - _usedWorldChatPoints);
+		}
+		
+		return Math.max(0, Config.WORLD_CHAT_POINTS_PER_DAY - _usedWorldChatPoints);
+	}
+	
+	public int getUsedWorldChatPoints()
+	{
+		return _usedWorldChatPoints;
+	}
+	
+	public void setUsedWorldChatPoints(int value)
+	{
+		_usedWorldChatPoints = value;
+	}
+	
+	private void checkWorldChatPoints()
+	{
+		Calendar calendar = Calendar.getInstance();
+		calendar.set(Calendar.HOUR_OF_DAY, 6);
+		calendar.set(Calendar.MINUTE, 30);
+		calendar.set(Calendar.SECOND, 0);
+		calendar.set(Calendar.MILLISECOND, 0);
+		
+		if ((_lastAccess < (calendar.getTimeInMillis() / 1000)) && (System.currentTimeMillis() > calendar.getTimeInMillis()))
+		{
+			_usedWorldChatPoints = 0;
+		}
+	}
+	
+	public AntiFlood getAntiFlood()
+	{
+		return _antiFlood;
 	}
 }

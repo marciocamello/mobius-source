@@ -39,10 +39,10 @@ public enum ChatType
 	CRITICAL_ANNOUNCE, // 18
 	SCREEN_ANNOUNCE,
 	BATTLEFIELD, // 20 ^
-	MPCC_ROOM, // 21 added epilogue, similarity PARTY_ROOM current for SS
+	MPCC_ROOM, // 21 added with epilogue, similar to PARTY_ROOM current for SS
 	NPC_ALL, // 22
 	NPC_SHOUT, // 23
-	NPC_SAY, // NEW_24
+	NPC_TELL, // 24 NEW_TELL
 	GLOBAL; // 25
 	public static final ChatType[] VALUES = values();
 }

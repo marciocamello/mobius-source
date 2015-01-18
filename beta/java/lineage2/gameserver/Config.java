@@ -199,6 +199,12 @@ public class Config
 	public static boolean GLOBAL_TRADE_CHAT;
 	public static int CHAT_RANGE;
 	public static int SHOUT_OFFSET;
+	public static int WORLD_CHAT_POINTS_PER_DAY;
+	public static int WORLD_CHAT_POINTS_PER_DAY_PREMIUM;
+	public static int WORLD_CHAT_POINTS_CONSUME;
+	public static int WORLD_CHAT_POINTS_CONSUME_PREMIUM;
+	public static int WORLD_CHAT_USE_MIN_LEVEL;
+	public static int WORLD_CHAT_USE_MIN_LEVEL_PREMIUM;
 	public static boolean PREMIUM_HEROCHAT;
 	public static boolean EVERYONE_HAS_ADMIN_RIGHTS;
 	public static int DEFAULT_ACCESS_FOR_EVERYONE;
@@ -921,6 +927,12 @@ public class Config
 		GLOBAL_TRADE_CHAT = serverSettings.getProperty("GlobalTradeChat", false);
 		CHAT_RANGE = serverSettings.getProperty("ChatRange", 1250);
 		SHOUT_OFFSET = serverSettings.getProperty("ShoutOffset", 0);
+		WORLD_CHAT_POINTS_PER_DAY = serverSettings.getProperty("WorldChatPointsPerDay", 10);
+		WORLD_CHAT_POINTS_PER_DAY_PREMIUM = serverSettings.getProperty("WorldChatPointsPerDayPremium", 20);
+		WORLD_CHAT_POINTS_CONSUME = serverSettings.getProperty("WorldChatPointsConsume", 1);
+		WORLD_CHAT_POINTS_CONSUME_PREMIUM = serverSettings.getProperty("WorldChatPointsConsumePremium", 1);
+		WORLD_CHAT_USE_MIN_LEVEL = serverSettings.getProperty("WorldChatMinLevel", 95);
+		WORLD_CHAT_USE_MIN_LEVEL_PREMIUM = serverSettings.getProperty("WorldChatMinLevelPremium", 10);
 		PREMIUM_HEROCHAT = serverSettings.getProperty("PremiumHeroChat", true);
 		LOG_CHAT = serverSettings.getProperty("LogChat", false);
 		AUTODESTROY_ITEM_AFTER = serverSettings.getProperty("AutoDestroyDroppedItemAfter", 0);

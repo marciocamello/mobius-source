@@ -107,17 +107,17 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest implements Scr
 				{
 					if (Rnd.chance(33))
 					{
-						Functions.npcSayToPlayer(_tairen, qs.getPlayer(), NpcString.LOOKS_LIKE_ONLY_SKILL_BASED_ATTACKS_DAMAGE_THEM, ChatType.NPC_SAY);
+						Functions.npcSayToPlayer(_tairen, qs.getPlayer(), NpcString.LOOKS_LIKE_ONLY_SKILL_BASED_ATTACKS_DAMAGE_THEM, ChatType.NPC_TELL);
 					}
 					
 					if (Rnd.chance(33))
 					{
-						Functions.npcSayToPlayer(_tairen, qs.getPlayer(), NpcString.YOUR_NORMAL_ATTACKS_ARENT_WORKING, ChatType.NPC_SAY);
+						Functions.npcSayToPlayer(_tairen, qs.getPlayer(), NpcString.YOUR_NORMAL_ATTACKS_ARENT_WORKING, ChatType.NPC_TELL);
 					}
 					
 					if (Rnd.chance(33))
 					{
-						Functions.npcSayToPlayer(_tairen, qs.getPlayer(), NpcString.USE_YOUR_SKILL_ATTACKS_AGAINST_THEM, ChatType.NPC_SAY);
+						Functions.npcSayToPlayer(_tairen, qs.getPlayer(), NpcString.USE_YOUR_SKILL_ATTACKS_AGAINST_THEM, ChatType.NPC_TELL);
 					}
 				}
 				break;
@@ -126,7 +126,7 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest implements Scr
 				htmltext = "";
 				NpcInstance asa = NpcUtils.spawnSingle(Assasin, new Location(-114815, 244966, -7976, 0), player.getActiveReflection());
 				NpcInstance ass = NpcUtils.spawnSingle(Assasin, new Location(-114554, 244954, -7976, 0), player.getActiveReflection());
-				Functions.npcSayToPlayer(ass, qs.getPlayer(), NpcString.FINALLY_I_THOUGHT_I_WAS_GOING_TO_DIE_WAITING, ChatType.NPC_SAY);
+				Functions.npcSayToPlayer(ass, qs.getPlayer(), NpcString.FINALLY_I_THOUGHT_I_WAS_GOING_TO_DIE_WAITING, ChatType.NPC_TELL);
 				asa.getAggroList().addDamageHate(qs.getPlayer(), 0, 10000);
 				asa.setAggressionTarget(player);
 				break;
@@ -227,7 +227,7 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest implements Scr
 	@Override
 	public String onAttack(NpcInstance npc, QuestState qs)
 	{
-		Functions.npcSayToPlayer(_tairen, qs.getPlayer(), NpcString.ENOUGH_OF_THIS_COME_AT_ME, ChatType.NPC_SAY);
+		Functions.npcSayToPlayer(_tairen, qs.getPlayer(), NpcString.ENOUGH_OF_THIS_COME_AT_ME, ChatType.NPC_TELL);
 		
 		if (_tairen != null)
 		{

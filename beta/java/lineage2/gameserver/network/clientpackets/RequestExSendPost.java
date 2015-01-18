@@ -187,7 +187,7 @@ public class RequestExSendPost extends L2GameClientPacket
 			return;
 		}
 		
-		if (!activeChar.antiFlood.canMail())
+		if (!activeChar._antiFlood.canMail())
 		{
 			activeChar.sendPacket(new SystemMessage(SystemMessage.THE_PREVIOUS_MAIL_WAS_FORWARDED_LESS_THAN_1_MINUTE_AGO_AND_THIS_CANNOT_BE_FORWARDED));
 			return;

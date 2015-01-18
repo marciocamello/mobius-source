@@ -38,6 +38,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `faceB` INT UNSIGNED DEFAULT NULL,
   `hairStyleB` INT UNSIGNED DEFAULT NULL,
   `hairColorB` INT UNSIGNED DEFAULT NULL,
+  `used_world_chat_points` INT NOT NULL DEFAULT '0',
   PRIMARY KEY (obj_Id),
   UNIQUE KEY `char_name` (`char_name`),
   KEY `account_name` (`account_name`),

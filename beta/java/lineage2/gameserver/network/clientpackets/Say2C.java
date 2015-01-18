@@ -231,7 +231,7 @@ public class Say2C extends L2GameClientPacket
 				{
 					if (!receiver.getMessageRefusal())
 					{
-						if (activeChar.antiFlood.canTell(receiver.getObjectId(), _text))
+						if (activeChar._antiFlood.canTell(receiver.getObjectId(), _text))
 						{
 							receiver.sendPacket(cs);
 						}
@@ -267,7 +267,7 @@ public class Say2C extends L2GameClientPacket
 					return;
 				}
 				
-				if (!activeChar.isGM() && !activeChar.antiFlood.canShout(_text))
+				if (!activeChar.isGM() && !activeChar._antiFlood.canShout(_text))
 				{
 					activeChar.sendMessage("Shout chat is allowed once per 5 seconds.");
 					return;
@@ -298,7 +298,7 @@ public class Say2C extends L2GameClientPacket
 					return;
 				}
 				
-				if (!activeChar.isGM() && !activeChar.antiFlood.canTrade(_text))
+				if (!activeChar.isGM() && !activeChar._antiFlood.canTrade(_text))
 				{
 					activeChar.sendMessage("Trade chat is allowed once per 5 seconds.");
 					return;
@@ -444,7 +444,7 @@ public class Say2C extends L2GameClientPacket
 				{
 					if (!activeChar.getPlayerAccess().CanAnnounce)
 					{
-						if (!activeChar.antiFlood.canHero(_text))
+						if (!activeChar._antiFlood.canHero(_text))
 						{
 							activeChar.sendMessage("Hero chat is allowed once per 10 seconds.");
 							return;
@@ -495,6 +495,51 @@ public class Say2C extends L2GameClientPacket
 					r2.broadCast(cs);
 				}
 				break;
+			
+			case GLOBAL:
+			{
+				if (activeChar.isCursedWeaponEquipped())
+				{
+					activeChar.sendPacket(new SystemMessage(SystemMessage.SHOUT_AND_TRADE_CHATTING_CANNOT_BE_USED_WHILE_POSSESSING_A_CURSED_WEAPON));
+					return;
+				}
+				
+				if (activeChar.isInObserverMode())
+				{
+					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_CHAT_LOCALLY_WHILE_OBSERVING));
+					return;
+				}
+				
+				if (!activeChar.getAntiFlood().canShout(_text))
+				{
+					return;
+				}
+				
+				if (activeChar.getWorldChatPoints() <= 0)
+				{
+					activeChar.sendPacket(new SystemMessage(SystemMessage.TODAY_YOU_REACHED_THE_LIMIT_OF_USE_OF_THE_WORLD_CHAT__RESET_OF_THE_WORLD_USE_CHAT_IS_DONE_DAILY_AT_6_30_AM));
+					return;
+				}
+				
+				if (activeChar.hasBonus())
+				{
+					if (activeChar.getLevel() < Config.WORLD_CHAT_USE_MIN_LEVEL_PREMIUM)
+					{
+						activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CAN_USE_THE_WORLD_CHAT_WITH_S1_LEVEL).addNumber(Config.WORLD_CHAT_USE_MIN_LEVEL_PREMIUM));
+						return;
+					}
+				}
+				else if (activeChar.getLevel() < Config.WORLD_CHAT_USE_MIN_LEVEL)
+				{
+					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CAN_USE_THE_WORLD_CHAT_WITH_S1_LEVEL).addNumber(Config.WORLD_CHAT_USE_MIN_LEVEL));
+					return;
+				}
+				
+				Say2C.announce(activeChar, cs);
+				activeChar.sendPacket(cs);
+				activeChar.setUsedWorldChatPoints(activeChar.getUsedWorldChatPoints() + (activeChar.hasBonus() ? Config.WORLD_CHAT_POINTS_CONSUME_PREMIUM : Config.WORLD_CHAT_POINTS_CONSUME));
+				break;
+			}
 			
 			default:
 				_log.warn("Character " + activeChar.getName() + " used unknown chat type: " + _type.ordinal() + ".");
