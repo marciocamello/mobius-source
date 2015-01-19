@@ -116,7 +116,7 @@ public final class EssagirWarriors extends DefaultAI
 		if ((lastSayTimer + SAY_RAFF) < System.currentTimeMillis())
 		{
 			lastSayTimer = System.currentTimeMillis();
-			Functions.npcSay(actor, NpcString.IT_S_HERE, ChatType.NPC_TELL, 800);
+			Functions.npcSay(actor, NpcString.IT_S_HERE, ChatType.NPC_ALL, 800);
 		}
 		
 		return true;

@@ -134,7 +134,7 @@ public final class SeekerEscort extends DefaultAI
 		if ((lastSayTimer + SAY_RAFF) < System.currentTimeMillis())
 		{
 			lastSayTimer = System.currentTimeMillis();
-			Functions.npcSay(actor, NpcString.RUFF_RUFF_RRRRRR, ChatType.NPC_TELL, 800, st.getPlayer().getName());
+			Functions.npcSay(actor, NpcString.RUFF_RUFF_RRRRRR, ChatType.NPC_ALL, 800, st.getPlayer().getName());
 		}
 		
 		if (zone == 1)

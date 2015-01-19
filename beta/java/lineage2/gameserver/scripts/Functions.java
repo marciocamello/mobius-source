@@ -239,7 +239,7 @@ public class Functions
 			return;
 		}
 		
-		NpcSay cs = new NpcSay(npc, ChatType.NPC_TELL, fStringId, params);
+		NpcSay cs = new NpcSay(npc, ChatType.NPC_ALL, fStringId, params);
 		
 		for (Player player : World.getAroundPlayers(npc, range, Math.max(range / 2, 200)))
 		{

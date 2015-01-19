@@ -189,7 +189,7 @@ public final class EvilIncubator extends Reflection
 	{
 		if (state == 1)
 		{
-			ADOLPH.get(0).broadcastPacket(new NpcSay(ADOLPH.get(0), ChatType.NPC_TELL, NpcString.CREATURES_HAVE_STOPPED_ATTACKING_USE_THIS_TIME_TO_REST_AND_RECOVER));
+			ADOLPH.get(0).broadcastPacket(new NpcSay(ADOLPH.get(0), ChatType.NPC_ALL, NpcString.CREATURES_HAVE_STOPPED_ATTACKING_USE_THIS_TIME_TO_REST_AND_RECOVER));
 			
 			for (Player player : getPlayers())
 			{
@@ -199,7 +199,7 @@ public final class EvilIncubator extends Reflection
 		
 		if (state == 2)
 		{
-			ADOLPH.get(0).broadcastPacket(new NpcSay(ADOLPH.get(0), ChatType.NPC_TELL, NpcString.THE_CRY_OF_FATE_PENDANT_WILL_BE_HELPFUL_TO_YOU_PLEASE_EQUIP_IT_AND_BRING_OUT_THE_POWER_OF_THE_PENDANT_TO_PREPARE_FOR_THE_NEXT_FIGHT));
+			ADOLPH.get(0).broadcastPacket(new NpcSay(ADOLPH.get(0), ChatType.NPC_ALL, NpcString.THE_CRY_OF_FATE_PENDANT_WILL_BE_HELPFUL_TO_YOU_PLEASE_EQUIP_IT_AND_BRING_OUT_THE_POWER_OF_THE_PENDANT_TO_PREPARE_FOR_THE_NEXT_FIGHT));
 		}
 		
 		if (state == 3)
@@ -271,7 +271,7 @@ public final class EvilIncubator extends Reflection
 			
 			if (!npc.isEmpty())
 			{
-				npc.get(0).broadcastPacket(new NpcSay(npc.get(0), ChatType.NPC_TELL, msg));
+				npc.get(0).broadcastPacket(new NpcSay(npc.get(0), ChatType.NPC_ALL, msg));
 			}
 			
 			if (!sayLocker && !npc.isEmpty())

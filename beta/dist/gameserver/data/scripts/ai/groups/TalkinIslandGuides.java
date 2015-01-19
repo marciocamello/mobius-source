@@ -155,7 +155,7 @@ public final class TalkinIslandGuides extends DefaultAI
 			}
 			else
 			{
-				Functions.npcSay(actor, end_String, ChatType.NPC_TELL, 800, target.getName());
+				Functions.npcSay(actor, end_String, ChatType.NPC_ALL, 800, target.getName());
 				actor.deleteMe();
 			}
 		}
@@ -165,7 +165,7 @@ public final class TalkinIslandGuides extends DefaultAI
 			actor.setHeading(heading);
 			actor.broadcastPacket(new ExRotation(actor.getObjectId(), heading));
 			lastSayTime = System.currentTimeMillis();
-			Functions.npcSay(actor, string, ChatType.NPC_TELL, 800, target.getName());
+			Functions.npcSay(actor, string, ChatType.NPC_ALL, 800, target.getName());
 		}
 		
 		return true;
