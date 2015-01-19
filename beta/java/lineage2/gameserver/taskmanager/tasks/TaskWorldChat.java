@@ -12,6 +12,7 @@
  */
 package lineage2.gameserver.taskmanager.tasks;
 
+import lineage2.gameserver.Config;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExWorldChatCnt;
@@ -52,8 +53,11 @@ public class TaskWorldChat extends Task
 		
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
-			player.setUsedWorldChatPoints(0);
-			player.sendPacket(new ExWorldChatCnt(player));
+			if (player.getLevel() >= (player.hasBonus() ? Config.WORLD_CHAT_USE_MIN_LEVEL_PREMIUM : Config.WORLD_CHAT_USE_MIN_LEVEL))
+			{
+				player.setUsedWorldChatPoints(0);
+				player.sendPacket(new ExWorldChatCnt(player));
+			}
 		}
 		
 		_log.info("World Chat Global Task: completed.");
