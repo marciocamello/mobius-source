@@ -883,7 +883,7 @@ public class AdminEditChar implements IAdminCommandHandler, ScriptFile
 		replyMSG.append("<td><button value=\"Recall\" action=\"bypass -h admin_recall " + player.getName() + "\" width=65 height=18 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
 		replyMSG.append("<td><button value=\"Skills\" action=\"bypass -h admin_show_skills\" width=65 height=18 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
 		replyMSG.append("<td><button value=\"Edit\" action=\"bypass -h admin_edit_character\" width=65 height=18 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
-		replyMSG.append("<td><button value=\"Class\" action=\"bypass -h admin_show_html setclass.htm\" width=65 height=18 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
+		replyMSG.append("<td><button value=\"Class\" action=\"bypass -h admin_show_html setclass/human_fighter.htm\" width=65 height=18 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
 		replyMSG.append("</tr><tr>");
 		replyMSG.append("<td><button value=\"Lv/Exp/Sp\" action=\"bypass -h admin_add_exp_sp_to_character\" width=65 height=18 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
 		replyMSG.append("<td><button value=\"Instance\" action=\"bypass -h admin_instance " + player.getName() + "\" width=65 height=18 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>");
