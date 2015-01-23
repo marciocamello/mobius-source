@@ -14,30 +14,32 @@ package lineage2.gameserver.network.serverpackets;
 
 import java.util.List;
 
-import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.Creature;
 
 /**
- * @author blacksmoke
+ * @author Mikhael(Nache)
  */
-public class ExUserInfoAbnormalVisualEffect extends L2GameServerPacket
+public class NpcInfoAbnormalVisualEffect extends L2GameServerPacket
 {
-	private final Player _activeChar;
+	private final int _objectId;
+	private final int _transformId;
 	private final List<Integer> _aveList;
 	
-	public ExUserInfoAbnormalVisualEffect(Player activeChar)
+	public NpcInfoAbnormalVisualEffect(Creature npc)
 	{
-		_activeChar = activeChar;
-		_aveList = activeChar.getAveList();
+		_objectId = npc.getObjectId();
+		_transformId = npc.getTransformation();
+		_aveList = npc.getAveList();
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
-		writeC(0xFE);
-		writeH(0x158);
+		writeC(0x4B);
 		
-		writeD(_activeChar.getObjectId());
-		writeD(_activeChar.getTransformation());
+		writeD(_objectId);
+		writeD(_transformId);
+		
 		if (_aveList != null)
 		{
 			writeD(_aveList.size());

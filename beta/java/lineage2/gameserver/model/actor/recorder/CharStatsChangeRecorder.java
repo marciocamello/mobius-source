@@ -19,14 +19,14 @@ import gnu.trove.list.array.TIntArrayList;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  * @param <T>
  */
 public class CharStatsChangeRecorder<T extends Creature>
 {
-	static final int BROADCAST_CHAR_INFO = 1 << 0;
-	static final int SEND_CHAR_INFO = 1 << 1;
-	static final int SEND_STATUS_INFO = 1 << 2;
+	public static final int BROADCAST_CHAR_INFO = 1 << 0;
+	public static final int SEND_CHAR_INFO = 1 << 1;
+	public static final int SEND_STATUS_INFO = 1 << 2;
+	public static final int SEND_ABNORMAL_INFO = 1 << 3;
 	protected final T _activeChar;
 	private int _level;
 	private int _accuracy;

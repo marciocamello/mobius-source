@@ -84,6 +84,7 @@ import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.MagicSkillCanceled;
 import lineage2.gameserver.network.serverpackets.MagicSkillLaunched;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
+import lineage2.gameserver.network.serverpackets.NpcInfoState;
 import lineage2.gameserver.network.serverpackets.SetupGauge;
 import lineage2.gameserver.network.serverpackets.StatusUpdate;
 import lineage2.gameserver.network.serverpackets.StatusUpdate.StatusUpdateField;
@@ -128,7 +129,6 @@ import gnu.trove.set.hash.TIntHashSet;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public abstract class Creature extends GameObject
 {
@@ -5452,6 +5452,10 @@ public abstract class Creature extends GameObject
 		{
 			_running = true;
 			broadcastPacket(new ChangeMoveType(this));
+			if (isNpc())
+			{
+				broadcastPacket(new NpcInfoState(getObjectId(), 4));
+			}
 		}
 	}
 	
@@ -5534,6 +5538,10 @@ public abstract class Creature extends GameObject
 		{
 			_running = false;
 			broadcastPacket(new ChangeMoveType(this));
+			if (isNpc())
+			{
+				broadcastPacket(new NpcInfoState(getObjectId(), 0));
+			}
 		}
 	}
 	

@@ -13,10 +13,10 @@
 package lineage2.gameserver.model.actor.recorder;
 
 import lineage2.gameserver.model.instances.NpcInstance;
+import lineage2.gameserver.network.serverpackets.NpcInfoAbnormalVisualEffect;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public class NpcStatsChangeRecorder extends CharStatsChangeRecorder<NpcInstance>
 {
@@ -40,6 +40,10 @@ public class NpcStatsChangeRecorder extends CharStatsChangeRecorder<NpcInstance>
 		if ((_changes & BROADCAST_CHAR_INFO) == BROADCAST_CHAR_INFO)
 		{
 			_activeChar.broadcastCharInfo();
+		}
+		if ((_changes & SEND_ABNORMAL_INFO) == SEND_ABNORMAL_INFO)
+		{
+			_activeChar.broadcastPacket(new NpcInfoAbnormalVisualEffect(_activeChar));
 		}
 	}
 }

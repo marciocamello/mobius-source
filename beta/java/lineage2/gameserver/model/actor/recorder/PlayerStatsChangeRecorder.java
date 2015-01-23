@@ -19,13 +19,13 @@ import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.matching.MatchingRoom;
 import lineage2.gameserver.network.serverpackets.ExStorageMaxCount;
+import lineage2.gameserver.network.serverpackets.ExUserInfoAbnormalVisualEffect;
 import lineage2.gameserver.network.serverpackets.StatusUpdate.StatusUpdateField;
 
 import org.apache.commons.lang3.StringUtils;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public final class PlayerStatsChangeRecorder extends CharStatsChangeRecorder<Player>
 {
@@ -124,6 +124,11 @@ public final class PlayerStatsChangeRecorder extends CharStatsChangeRecorder<Pla
 		else if ((_changes & SEND_CHAR_INFO) == SEND_CHAR_INFO)
 		{
 			_activeChar.sendUserInfo();
+		}
+		
+		if ((_changes & SEND_ABNORMAL_INFO) == SEND_ABNORMAL_INFO)
+		{
+			_activeChar.sendPacket(new ExUserInfoAbnormalVisualEffect(_activeChar));
 		}
 		
 		if ((_changes & SEND_CUR_LOAD) == SEND_CUR_LOAD)
