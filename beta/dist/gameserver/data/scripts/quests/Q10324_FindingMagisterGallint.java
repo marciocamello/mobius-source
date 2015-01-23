@@ -31,7 +31,7 @@ public class Q10324_FindingMagisterGallint extends Quest implements ScriptFile
 		addTalkId(Shenon);
 		addTalkId(Galint);
 		addLevelCheck(1, 20);
-		addQuestCompletedCheck(Q10323_GoingIntoARealWarLetsGoToTheTrainingGround.class);
+		addQuestCompletedCheck(Q10323_TrainLikeItsReal.class);
 	}
 	
 	@Override
