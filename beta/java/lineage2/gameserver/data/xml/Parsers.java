@@ -26,7 +26,7 @@ import lineage2.gameserver.data.xml.parser.CubicParser;
 import lineage2.gameserver.data.xml.parser.DomainParser;
 import lineage2.gameserver.data.xml.parser.DoorParser;
 import lineage2.gameserver.data.xml.parser.DropListDataParser;
-import lineage2.gameserver.data.xml.parser.EnchantItemParser;
+import lineage2.gameserver.data.xml.parser.AppearanceStoneParser;
 import lineage2.gameserver.data.xml.parser.EventParser;
 import lineage2.gameserver.data.xml.parser.FishDataParser;
 import lineage2.gameserver.data.xml.parser.HennaParser;
@@ -71,7 +71,7 @@ public abstract class Parsers
 		RestorationInfoParser.getInstance().load();
 		OptionDataParser.getInstance().load();
 		ItemParser.getInstance().load();
-		EnchantItemParser.getInstance().load();
+		AppearanceStoneParser.getInstance().load();
 		NpcParser.getInstance().load();
 		DropListDataParser.getInstance().load();
 		DomainParser.getInstance().load();

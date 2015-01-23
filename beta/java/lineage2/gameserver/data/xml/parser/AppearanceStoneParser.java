@@ -17,23 +17,23 @@ import java.util.Iterator;
 
 import lineage2.commons.data.xml.AbstractFileParser;
 import lineage2.gameserver.Config;
-import lineage2.gameserver.data.xml.holder.EnchantItemHolder;
+import lineage2.gameserver.data.xml.holder.AppearanceStoneHolder;
 import lineage2.gameserver.model.items.etcitems.AppearanceStone;
 import lineage2.gameserver.templates.item.ExItemType;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
 import org.dom4j.Element;
 
-public class EnchantItemParser extends AbstractFileParser<EnchantItemHolder>
+public class AppearanceStoneParser extends AbstractFileParser<AppearanceStoneHolder>
 {
-	private static final EnchantItemParser _instance = new EnchantItemParser();
+	private static final AppearanceStoneParser _instance = new AppearanceStoneParser();
 	
-	private EnchantItemParser()
+	private AppearanceStoneParser()
 	{
-		super(EnchantItemHolder.getInstance());
+		super(AppearanceStoneHolder.getInstance());
 	}
 	
-	public static EnchantItemParser getInstance()
+	public static AppearanceStoneParser getInstance()
 	{
 		return _instance;
 	}

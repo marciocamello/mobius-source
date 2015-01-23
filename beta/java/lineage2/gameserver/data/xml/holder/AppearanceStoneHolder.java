@@ -14,30 +14,22 @@ package lineage2.gameserver.data.xml.holder;
 
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.model.items.etcitems.AppearanceStone;
-import lineage2.gameserver.templates.item.support.EnchantScroll;
 
 import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.HashIntObjectMap;
 
-public class EnchantItemHolder extends AbstractHolder
+public class AppearanceStoneHolder extends AbstractHolder
 {
-	private static final EnchantItemHolder _instance = new EnchantItemHolder();
-	
-	private final IntObjectMap<EnchantScroll> _enchantScrolls = new HashIntObjectMap<>();
+	private static final AppearanceStoneHolder _instance = new AppearanceStoneHolder();
 	private final IntObjectMap<AppearanceStone> _appearanceStones = new HashIntObjectMap<>();
 	
-	private EnchantItemHolder()
+	private AppearanceStoneHolder()
 	{
 	}
 	
-	public static EnchantItemHolder getInstance()
+	public static AppearanceStoneHolder getInstance()
 	{
 		return _instance;
-	}
-	
-	public void addEnchantScroll(EnchantScroll enchantScroll)
-	{
-		_enchantScrolls.put(enchantScroll.getId(), enchantScroll);
 	}
 	
 	public void addAppearanceStone(AppearanceStone appearanceStone)
@@ -45,19 +37,9 @@ public class EnchantItemHolder extends AbstractHolder
 		_appearanceStones.put(appearanceStone.getItemId(), appearanceStone);
 	}
 	
-	public EnchantScroll getEnchantScroll(int id)
-	{
-		return _enchantScrolls.get(id);
-	}
-	
 	public AppearanceStone getAppearanceStone(int id)
 	{
 		return _appearanceStones.get(id);
-	}
-	
-	public int[] getEnchantScrolls()
-	{
-		return _enchantScrolls.keySet().toArray();
 	}
 	
 	public int[] getAppearanceStones()
@@ -68,7 +50,6 @@ public class EnchantItemHolder extends AbstractHolder
 	@Override
 	public void log()
 	{
-		info("loaded " + _enchantScrolls.size() + " enchant scroll(s) count.");
 		info("loaded " + _appearanceStones.size() + " appearance stone(s) count.");
 	}
 	
@@ -81,7 +62,6 @@ public class EnchantItemHolder extends AbstractHolder
 	@Override
 	public void clear()
 	{
-		_enchantScrolls.clear();
 		_appearanceStones.clear();
 	}
 }

@@ -12,7 +12,7 @@
  */
 package handlers.items;
 
-import lineage2.gameserver.data.xml.holder.EnchantItemHolder;
+import lineage2.gameserver.data.xml.holder.AppearanceStoneHolder;
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
@@ -36,13 +36,13 @@ public final class AppearanceStones extends ScriptItemHandler
 		}
 		
 		player.setAppearanceStone(item);
-		player.sendPacket(new ExChooseShapeShiftingItem(EnchantItemHolder.getInstance().getAppearanceStone(item.getId())));
+		player.sendPacket(new ExChooseShapeShiftingItem(AppearanceStoneHolder.getInstance().getAppearanceStone(item.getId())));
 		return true;
 	}
 	
 	@Override
 	public int[] getItemIds()
 	{
-		return EnchantItemHolder.getInstance().getAppearanceStones();
+		return AppearanceStoneHolder.getInstance().getAppearanceStones();
 	}
 }

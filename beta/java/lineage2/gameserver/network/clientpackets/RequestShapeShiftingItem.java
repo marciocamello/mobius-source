@@ -13,7 +13,7 @@
 package lineage2.gameserver.network.clientpackets;
 
 import lineage2.commons.dao.JdbcEntityState;
-import lineage2.gameserver.data.xml.holder.EnchantItemHolder;
+import lineage2.gameserver.data.xml.holder.AppearanceStoneHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.PcInventory;
@@ -103,7 +103,7 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 			return;
 		}
 		
-		AppearanceStone appearanceStone = EnchantItemHolder.getInstance().getAppearanceStone(stone.getId());
+		AppearanceStone appearanceStone = AppearanceStoneHolder.getInstance().getAppearanceStone(stone.getId());
 		
 		if (appearanceStone == null)
 		{
