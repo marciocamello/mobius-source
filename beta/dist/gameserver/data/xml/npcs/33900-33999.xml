@@ -4287,7 +4287,7 @@
 		<set name="aggroRange" value="0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="8.0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Guard"/>
 		<set name="basePAtk" value="373"/>
 		<set name="baseMAtk" value="373"/>
 		<set name="basePDef" value="373"/>
@@ -4321,7 +4321,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="texture" value=""/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="Guard"/>
 		<ai_params>
 			<set name="showName" value="true"/>
 			<set name="show Title" value="true"/>
@@ -4339,7 +4339,7 @@
 		<set name="aggroRange" value="0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="8.0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Guard"/>
 		<set name="basePAtk" value="373"/>
 		<set name="baseMAtk" value="373"/>
 		<set name="basePDef" value="373"/>
@@ -4373,7 +4373,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="texture" value=""/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="Guard"/>
 		<ai_params>
 			<set name="showName" value="true"/>
 			<set name="show Title" value="true"/>
@@ -4391,7 +4391,7 @@
 		<set name="aggroRange" value="0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="8.0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Guard"/>
 		<set name="basePAtk" value="373"/>
 		<set name="baseMAtk" value="373"/>
 		<set name="basePDef" value="373"/>
@@ -4425,7 +4425,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="texture" value=""/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="Guard"/>
 		<ai_params>
 			<set name="showName" value="true"/>
 			<set name="show Title" value="true"/>
@@ -4443,7 +4443,7 @@
 		<set name="aggroRange" value="0"/>
 		<set name="collision_height" value="24.0"/>
 		<set name="collision_radius" value="8.0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="Guard"/>
 		<set name="basePAtk" value="373"/>
 		<set name="baseMAtk" value="373"/>
 		<set name="basePDef" value="373"/>
@@ -4477,7 +4477,7 @@
 		<set name="rewardSp" value="0"/>
 		<set name="texture" value=""/>
 		<set name="shots" value="NONE"/>
-		<set name="type" value="Npc"/>
+		<set name="type" value="Guard"/>
 		<ai_params>
 			<set name="showName" value="true"/>
 			<set name="show Title" value="true"/>
