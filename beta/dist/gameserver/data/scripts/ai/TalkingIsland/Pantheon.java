@@ -31,6 +31,7 @@ public class Pantheon extends DefaultAI
 	public Pantheon(NpcInstance actor)
 	{
 		super(actor);
+		getActor().setRandomWalk(false);
 	}
 	
 	@Override

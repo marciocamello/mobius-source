@@ -31,6 +31,12 @@ public class Milia extends DefaultAI
 	public Milia(NpcInstance actor)
 	{
 		super(actor);
+		getActor().setRandomWalk(false);
+	}
+	
+	public boolean hasRandomWalk()
+	{
+		return false;
 	}
 	
 	@Override
