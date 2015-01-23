@@ -238,7 +238,7 @@
 	</npc>
 	<npc id="30006" name="Milia" title="Gatekeeper">
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="TalkingIsland.Milia"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
