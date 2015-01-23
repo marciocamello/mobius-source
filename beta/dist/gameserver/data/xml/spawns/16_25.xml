@@ -334,6 +334,34 @@
 		<npc id="30283"/>
 	</spawn>
 	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="-110758" y="253461" z="-1736" h="10250"/>
+		<npc id="33464"/>
+	</spawn>
+	<spawn count="1" respawn="30" respawn_random="0" period_of_day="none">
+		<point x="-110200" y="251816" z="-2042" h="16383"/>
+		<npc id="27532"/>
+	</spawn>
+	<spawn count="1" respawn="30" respawn_random="0" period_of_day="none">
+		<point x="-110232" y="251992" z="-2041" h="16383"/>
+		<npc id="27532"/>
+	</spawn>
+	<spawn count="1" respawn="30" respawn_random="0" period_of_day="none">
+		<point x="-110136" y="252056" z="-2044" h="16383"/>
+		<npc id="27532"/>
+	</spawn>
+	<spawn count="1" respawn="30" respawn_random="0" period_of_day="none">
+		<point x="-110008" y="252088" z="-2046" h="16383"/>
+		<npc id="27532"/>
+	</spawn>
+	<spawn count="1" respawn="30" respawn_random="0" period_of_day="none">
+		<point x="-109944" y="252168" z="-2044" h="16383"/>
+		<npc id="27532"/>
+	</spawn>
+	<spawn count="1" respawn="30" respawn_random="0" period_of_day="none">
+		<point x="-109928" y="251976" z="-2049" h="16383"/>
+		<npc id="27532"/>
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
 		<point x="-110896" y="251872" z="-1968" h="228"/>
 		<npc id="33000"/>
 	</spawn>

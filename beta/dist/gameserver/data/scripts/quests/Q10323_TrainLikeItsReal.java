@@ -84,7 +84,11 @@ public class Q10323_TrainLikeItsReal extends Quest implements ScriptFile
 					player.sendPacket(new ExShowScreenMessage(NpcStringId.SOULSHOT_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
 					qs.startQuestTimer("soul_timer", 4500);
 					qs.showTutorialHTML(TutorialShowHtml.QT_003, TutorialShowHtml.TYPE_WINDOW);
-					qs.giveItems(Soulshots, 500);
+					if (!player.getVarB("Q10323_SS_Rewarded"))
+					{
+						player.setVar("Q10323_SS_Rewarded", true, -1);
+						qs.giveItems(Soulshots, 500);
+					}
 					qs.setCond(4);
 				}
 				else
@@ -92,7 +96,11 @@ public class Q10323_TrainLikeItsReal extends Quest implements ScriptFile
 					player.sendPacket(new ExShowScreenMessage(NpcStringId.SPIRITSHOT_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
 					qs.startQuestTimer("spirit_timer", 4500);
 					qs.showTutorialHTML(TutorialShowHtml.QT_003, TutorialShowHtml.TYPE_WINDOW);
-					qs.giveItems(Spiritshots, 500);
+					if (!player.getVarB("Q10323_SS_Rewarded"))
+					{
+						player.setVar("Q10323_SS_Rewarded", true, -1);
+						qs.giveItems(Spiritshots, 500);
+					}
 					qs.setCond(5);
 				}
 				return null;
@@ -113,10 +121,9 @@ public class Q10323_TrainLikeItsReal extends Quest implements ScriptFile
 				htmltext = "33194-08.htm";
 				break;
 			
-			case "qet_rev":
+			case "32974-02.htm":
 				qs.getPlayer().addExpAndSp(1700, 5);
 				qs.giveItems(57, 90);
-				htmltext = "32974-02.htm";
 				qs.exitCurrentQuest(false);
 				qs.playSound(SOUND_FINISH);
 				break;
