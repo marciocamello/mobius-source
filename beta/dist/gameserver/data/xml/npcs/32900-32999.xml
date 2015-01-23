@@ -3466,7 +3466,7 @@
 		<set name="collision_height" value="26.5"/>
 		<set name="collision_radius" value="8.7"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="TalkingIsland.Pantheon"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
