@@ -3613,7 +3613,7 @@
 		<set name="collision_height" value="29.35"/>
 		<set name="collision_radius" value="10.0"/>
 		<set name="aggroRange" value="0"/>
-		<set name="ai_type" value="CharacterAI"/>
+		<set name="ai_type" value="TalkingIsland.Theodore"/>
 		<set name="baseAtkRange" value="40"/>
 		<set name="baseCON" value="75"/>
 		<set name="baseCritRate" value="40"/>
