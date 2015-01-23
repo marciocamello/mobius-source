@@ -5487,6 +5487,7 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if (getLevel() == (hasBonus() ? Config.WORLD_CHAT_USE_MIN_LEVEL_PREMIUM : Config.WORLD_CHAT_USE_MIN_LEVEL))
 		{
+			_usedWorldChatPoints = hasBonus() ? Config.WORLD_CHAT_POINTS_PER_DAY_PREMIUM - Config.WORLD_CHAT_POINTS_CONSUME_PREMIUM : Config.WORLD_CHAT_POINTS_PER_DAY - Config.WORLD_CHAT_POINTS_CONSUME;
 			sendPacket(new ExWorldChatCnt(this));
 		}
 		

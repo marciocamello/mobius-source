@@ -28,6 +28,7 @@ import lineage2.gameserver.model.entity.olympiad.OlympiadGame;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.matching.MatchingRoom;
 import lineage2.gameserver.network.serverpackets.ActionFail;
+import lineage2.gameserver.network.serverpackets.ExWorldChatCnt;
 import lineage2.gameserver.network.serverpackets.Say2;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
@@ -538,6 +539,7 @@ public class Say2C extends L2GameClientPacket
 				Say2C.announce(activeChar, cs);
 				activeChar.sendPacket(cs);
 				activeChar.setUsedWorldChatPoints(activeChar.getUsedWorldChatPoints() + (activeChar.hasBonus() ? Config.WORLD_CHAT_POINTS_CONSUME_PREMIUM : Config.WORLD_CHAT_POINTS_CONSUME));
+				activeChar.sendPacket(new ExWorldChatCnt(activeChar));
 				break;
 			}
 			
