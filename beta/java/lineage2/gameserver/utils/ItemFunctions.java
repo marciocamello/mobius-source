@@ -102,15 +102,15 @@ public final class ItemFunctions
 		{
 			if (itemId == 57)
 			{
-				SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA).addLong(count);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA).addLong(count));
 			}
 			else if (count > 1)
 			{
-				SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(itemId).addLong(count);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(itemId).addLong(count));
 			}
 			else
 			{
-				SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(itemId);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(itemId));
 			}
 		}
 	}
