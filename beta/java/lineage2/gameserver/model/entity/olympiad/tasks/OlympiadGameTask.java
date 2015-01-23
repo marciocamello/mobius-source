@@ -20,6 +20,7 @@ import lineage2.gameserver.model.entity.olympiad.BattleStatus;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.entity.olympiad.OlympiadGame;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.Log;
 
 import org.slf4j.Logger;
@@ -139,14 +140,14 @@ public class OlympiadGameTask extends RunnableImpl
 			{
 				case Begining:
 				{
-					_game.broadcastPacket(new SystemMessage(SystemMessage.YOU_WILL_ENTER_THE_OLYMPIAD_STADIUM_IN_S1_SECOND_S).addNumber(120), true, false);
+					_game.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_WILL_BE_MOVED_TO_THE_OLYMPIAD_STADIUM_IN_S1_SECOND_S).addInt(120), true, false);
 					task = new OlympiadGameTask(_game, BattleStatus.Begin_Countdown, 60, 60000);
 					break;
 				}
 				
 				case Begin_Countdown:
 				{
-					_game.broadcastPacket(new SystemMessage(SystemMessage.YOU_WILL_ENTER_THE_OLYMPIAD_STADIUM_IN_S1_SECOND_S).addNumber(_count), true, false);
+					_game.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_WILL_BE_MOVED_TO_THE_OLYMPIAD_STADIUM_IN_S1_SECOND_S).addInt(_count), true, false);
 					
 					if (_count == 60)
 					{
@@ -188,7 +189,7 @@ public class OlympiadGameTask extends RunnableImpl
 						_game.addBuffers();
 					}
 					
-					_game.broadcastPacket(new SystemMessage(SystemMessage.THE_GAME_WILL_START_IN_S1_SECOND_S).addNumber(_count), true, true);
+					_game.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MATCH_WILL_START_IN_S1_SECOND_S).addInt(_count), true, true);
 					_count -= 10;
 					
 					if (_count > 0)
@@ -204,7 +205,7 @@ public class OlympiadGameTask extends RunnableImpl
 				
 				case CountDown:
 				{
-					_game.broadcastPacket(new SystemMessage(SystemMessage.THE_GAME_WILL_START_IN_S1_SECOND_S).addNumber(_count), true, true);
+					_game.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MATCH_WILL_START_IN_S1_SECOND_S).addInt(_count), true, true);
 					_count--;
 					
 					if (_count <= 0)
@@ -225,7 +226,7 @@ public class OlympiadGameTask extends RunnableImpl
 					if (_count == 36)
 					{
 						_game.setState(2);
-						_game.broadcastPacket(new SystemMessage(SystemMessage.STARTS_THE_GAME), true, true);
+						_game.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MATCH_HAS_STARTED_FIGHT), true, true);
 						_game.broadcastInfo(null, null, false);
 					}
 					

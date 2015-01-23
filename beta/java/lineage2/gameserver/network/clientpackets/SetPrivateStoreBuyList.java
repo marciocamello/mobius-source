@@ -22,6 +22,7 @@ import lineage2.gameserver.model.items.TradeItem;
 import lineage2.gameserver.network.serverpackets.PrivateStoreManageListBuy;
 import lineage2.gameserver.network.serverpackets.PrivateStoreMsgBuy;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.TradeHelper;
 
@@ -144,20 +145,20 @@ public class SetPrivateStoreBuyList extends L2GameClientPacket
 		}
 		catch (ArithmeticException ae)
 		{
-			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 			return;
 		}
 		
 		if (buyList.size() > buyer.getTradeLimit())
 		{
-			buyer.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
+			buyer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 			buyer.sendPacket(new PrivateStoreManageListBuy(buyer));
 			return;
 		}
 		
 		if (totalCost > buyer.getAdena())
 		{
-			buyer.sendPacket(new SystemMessage(SystemMessage.THE_PURCHASE_PRICE_IS_HIGHER_THAN_THE_AMOUNT_OF_MONEY_THAT_YOU_HAVE_AND_SO_YOU_CANNOT_OPEN_A_PERSONAL_STORE));
+			buyer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_PURCHASE_PRICE_IS_HIGHER_THAN_THE_AMOUNT_OF_MONEY_THAT_YOU_HAVE_AND_SO_YOU_CANNOT_OPEN_A_PERSONAL_STORE));
 			buyer.sendPacket(new PrivateStoreManageListBuy(buyer));
 			return;
 		}

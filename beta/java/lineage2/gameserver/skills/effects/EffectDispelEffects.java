@@ -18,8 +18,8 @@ import java.util.List;
 
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Effect;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;
 
@@ -126,7 +126,7 @@ public class EffectDispelEffects extends Effect
 				if (Rnd.chance(calcSkillChanceLimits(prelimChance, _effector.isPlayable())))
 				{
 					negated++;
-					_effected.sendPacket(new SystemMessage2(SystemMsg.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED).addSkillName(e.getSkill().getId(), e.getSkill().getLevel()));
+					_effected.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED).addSkillName(e.getSkill().getId(), e.getSkill().getLevel()));
 					e.exit();
 				}
 			}

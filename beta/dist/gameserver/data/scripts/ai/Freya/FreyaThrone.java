@@ -21,7 +21,7 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.tables.SkillTable;
 
 /**
@@ -83,7 +83,7 @@ public final class FreyaThrone extends Fighter
 			
 			for (Player p : r.getPlayers())
 			{
-				p.sendPacket(new ExShowScreenMessage(NpcString.I_FEEL_STRONG_MAGIC_FLOW, 3000, ScreenMessageAlign.MIDDLE_CENTER, true));
+				p.sendPacket(new ExShowScreenMessage(NpcStringId.STRONG_MAGIC_POWER_CAN_BE_FELT_FROM_SOMEWHERE, 3000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			}
 			
 			_eternalblizzardReuseTimer = System.currentTimeMillis() + (_eternalblizzardReuseDelay * 1000L);

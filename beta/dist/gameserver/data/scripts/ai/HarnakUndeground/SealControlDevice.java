@@ -17,7 +17,7 @@ import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 
 public final class SealControlDevice extends DefaultAI
@@ -84,57 +84,57 @@ public final class SealControlDevice extends DefaultAI
 		switch (timerId)
 		{
 			case 1:
-				Functions.npcSayInRange(getActor(), 1500, NpcString.DISABLE_DEVICE_WILL_GO_OUT_OF_CONTROL_IN_1_MINUTE);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.DISABLE_DEVICE_WILL_GO_OUT_OF_CONTROL_IN_1_MINUTE);
 				addTimer(2, 10000);
 				break;
 			
 			case 2:
-				Functions.npcSayInRange(getActor(), 1500, NpcString._50_SECONDS_ARE_REMAINING);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.SECONDS_ARE_REMAINING41);
 				addTimer(3, 10000);
 				break;
 			
 			case 3:
-				Functions.npcSayInRange(getActor(), 1500, NpcString._40_SECONDS_ARE_REMAINING);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.SECONDS_ARE_REMAINING42);
 				addTimer(4, 10000);
 				break;
 			
 			case 4:
-				Functions.npcSayInRange(getActor(), 1500, NpcString._30_SECONDS_ARE_REMAINING);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.SECONDS_ARE_REMAINING43);
 				addTimer(5, 10000);
 				break;
 			
 			case 5:
-				Functions.npcSayInRange(getActor(), 1500, NpcString._20_SECONDS_ARE_REMAINING);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.SECONDS_ARE_REMAINING44);
 				addTimer(6, 10000);
 				break;
 			
 			case 6:
-				Functions.npcSayInRange(getActor(), 1500, NpcString._10_SECONDS_ARE_REMAINING);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.SECONDS_ARE_REMAINING45);
 				addTimer(7, 5000);
 				break;
 			
 			case 7:
-				Functions.npcSayInRange(getActor(), 1500, NpcString._5_SECONDS);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.SECONDS);
 				addTimer(8, 1000);
 				break;
 			
 			case 8:
-				Functions.npcSayInRange(getActor(), 1500, NpcString._4_SECONDS);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.SECONDS2);
 				addTimer(9, 1000);
 				break;
 			
 			case 9:
-				Functions.npcSayInRange(getActor(), 1500, NpcString._3_SECONDS);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.SECONDS3);
 				addTimer(10, 1000);
 				break;
 			
 			case 10:
-				Functions.npcSayInRange(getActor(), 1500, NpcString._2_SECONDS);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.SECONDS4);
 				addTimer(11, 1000);
 				break;
 			
 			case 11:
-				Functions.npcSayInRange(getActor(), 1500, NpcString._1_SECOND);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.SECOND);
 				break;
 		}
 	}

@@ -25,6 +25,7 @@ import lineage2.gameserver.model.SimpleSpawner;
 import lineage2.gameserver.model.actor.listener.CharListenerList;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 
@@ -417,7 +418,7 @@ public final class FreyaEvent extends Functions implements ScriptFile, OnDeathLi
 			}
 			else
 			{
-				player.sendPacket(new SystemMessage(SystemMessage._2_UNITS_OF_THE_ITEM_S1_IS_REQUIRED).addNumber(GIFT_PRICE));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_S2_S1_S).addInt(GIFT_PRICE));
 			}
 		}
 		else
@@ -427,11 +428,11 @@ public final class FreyaEvent extends Functions implements ScriptFile, OnDeathLi
 			
 			if (hours > 0)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_S1_HOURSS_AND_S2_MINUTES_REMAINING_UNTIL_THE_TIME_WHEN_THE_ITEM_CAN_BE_PURCHASED).addNumber(hours).addNumber(minutes));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S1_HOUR_S_AND_S2_MINUTE_S_REMAINING_UNTIL_THE_ITEM_CAN_BE_PURCHASED_AGAIN).addInt(hours).addInt(minutes));
 			}
 			else if (minutes > 0)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_S1_MINUTES_REMAINING_UNTIL_THE_TIME_WHEN_THE_ITEM_CAN_BE_PURCHASED).addNumber(minutes));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S1_MINUTE_S_REMAINING_UNTIL_THE_ITEM_CAN_BE_PURCHASED_AGAIN).addInt(minutes));
 			}
 			else if (getItemCount(player, ADENA) >= GIFT_PRICE)
 			{
@@ -441,7 +442,7 @@ public final class FreyaEvent extends Functions implements ScriptFile, OnDeathLi
 			}
 			else
 			{
-				player.sendPacket(new SystemMessage(SystemMessage._2_UNITS_OF_THE_ITEM_S1_IS_REQUIRED).addNumber(GIFT_PRICE));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_S2_S1_S).addInt(GIFT_PRICE));
 			}
 		}
 	}

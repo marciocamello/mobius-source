@@ -40,7 +40,7 @@ import lineage2.gameserver.network.serverpackets.ConfirmDlg;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SetupGauge;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.skills.AbnormalEffect;
 import lineage2.gameserver.tables.SkillTable;
@@ -255,7 +255,7 @@ public class Wedding implements IVoicedCommandHandler, ScriptFile
 				if (activeChar.getEffectList().getEffectsBySkill(skill) == null)
 				{
 					skill.getEffects(activeChar, activeChar, false, false);
-					activeChar.sendPacket(new SystemMessage(SystemMessage.S1_S2S_EFFECT_CAN_BE_FELT).addSkillName(skillId, skillLevel));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT).addSkillName(skillId, skillLevel));
 				}
 			}
 			
@@ -341,7 +341,7 @@ public class Wedding implements IVoicedCommandHandler, ScriptFile
 			return false;
 		}
 		
-		ConfirmDlg packet = new ConfirmDlg(SystemMsg.S1, 60000).addString("Player " + activeChar.getName() + " asking you to engage. Do you want to start new relationship?");
+		ConfirmDlg packet = new ConfirmDlg(SystemMessageId.S1).addString("Player " + activeChar.getName() + " asking you to engage. Do you want to start new relationship?");
 		ptarget.ask(packet, new CoupleAnswerListener(activeChar, ptarget));
 		return true;
 	}
@@ -387,13 +387,13 @@ public class Wedding implements IVoicedCommandHandler, ScriptFile
 		
 		if (partner.isInZoneBattle() || partner.isInZone(Zone.ZoneType.Siege) || partner.isInZone(NoRestart) || partner.isInOlympiadMode() || activeChar.isInZoneBattle() || activeChar.isInZone(Zone.ZoneType.Siege) || activeChar.isInZone(NoRestart) || activeChar.isInOlympiadMode() || (partner.getReflection() != ReflectionManager.DEFAULT) || partner.isInZone(NoSummon) || activeChar.isInObserverMode() || partner.isInObserverMode())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_USE_SUMMONING_OR_TELEPORTING_IN_THIS_AREA));
 			return false;
 		}
 		
 		if (!activeChar.reduceAdena(Config.WEDDING_TELEPORT_PRICE, true))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			return false;
 		}
 		

@@ -19,6 +19,7 @@ import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -74,15 +75,15 @@ public class GmListTable
 		
 		if (gmList.isEmpty())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NOT_ANY_GMS_THAT_ARE_PROVIDING_CUSTOMER_SERVICE_CURRENTLY));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_GMS_CURRENTLY_VISIBLE_IN_THE_PUBLIC_LIST_AS_THEY_MAY_BE_PERFORMING_OTHER_FUNCTIONS_AT_THE_MOMENT));
 			return;
 		}
 		
-		player.sendPacket(new SystemMessage(SystemMessage._GM_LIST_));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.GM_LIST));
 		
 		for (Player gm : gmList)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.GM_S1).addString(gm.getName()));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.GM_C1).addString(gm.getName()));
 		}
 	}
 	

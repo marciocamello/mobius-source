@@ -14,7 +14,7 @@ package ai.residences.clanhall;
 
 import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -39,6 +39,6 @@ public final class RainbowEnragedYeti extends Fighter
 	public void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		Functions.npcShout(getActor(), NpcString.OOOH_WHO_POURED_NECTAR_ON_MY_HEAD_WHILE_I_WAS_SLEEPING);
+		Functions.npcShout(getActor(), NpcStringId.OOOH_WHO_POURED_NECTAR_ON_MY_HEAD_WHILE_I_WAS_SLEEPING);
 	}
 }

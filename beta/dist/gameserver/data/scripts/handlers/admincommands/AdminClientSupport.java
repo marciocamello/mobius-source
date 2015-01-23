@@ -21,8 +21,8 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.items.ItemInstance;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.item.ItemTemplate;
@@ -82,7 +82,7 @@ public final class AdminClientSupport implements IAdminCommandHandler, ScriptFil
 				{
 					final Skill skill = SkillTable.getInstance().getInfo(Integer.parseInt(wordList[1]), Integer.parseInt(wordList[2]));
 					target.getPlayer().addSkill(skill, true);
-					target.getPlayer().sendPacket(new SystemMessage2(SystemMsg.YOU_HAVE_EARNED_S1_SKILL).addSkillName(skill.getId(), skill.getLevel()));
+					target.getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S12).addSkillName(skill.getId(), skill.getLevel()));
 				}
 				catch (NumberFormatException e)
 				{
@@ -148,7 +148,14 @@ public final class AdminClientSupport implements IAdminCommandHandler, ScriptFil
 							final ItemInstance item = ItemFunctions.createItem(id);
 							item.setCount(count);
 							target.getPlayer().getInventory().addItem(item);
-							target.getPlayer().sendPacket(SystemMessage2.obtainItems(item));
+							if (item.getCount() > 1)
+							{
+								target.getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(item.getId()).addLong(item.getCount()));
+							}
+							else
+							{
+								target.getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(item.getId()));
+							}
 						}
 						else
 						{
@@ -156,7 +163,15 @@ public final class AdminClientSupport implements IAdminCommandHandler, ScriptFil
 							{
 								ItemInstance item = ItemFunctions.createItem(id);
 								target.getPlayer().getInventory().addItem(item);
-								target.getPlayer().sendPacket(SystemMessage2.obtainItems(item));
+								if (item.getCount() > 1)
+								{
+									target.getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(item.getId()).addLong(item.getCount()));
+								}
+								else
+								{
+									target.getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(item.getId()));
+								}
+								
 							}
 						}
 					}

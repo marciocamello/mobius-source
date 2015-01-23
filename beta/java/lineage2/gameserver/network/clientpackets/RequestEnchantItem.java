@@ -26,7 +26,7 @@ import lineage2.gameserver.network.serverpackets.InventoryUpdate;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.ItemFunctions;
 
 /**
@@ -65,7 +65,7 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 		{
 			player.setEnchantScroll(null);
 			player.sendPacket(EnchantResult.CANCEL);
-			player.sendPacket(SystemMsg.INAPPROPRIATE_ENCHANT_CONDITIONS);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS));
 			player.sendActionFailed();
 		}
 		
@@ -100,7 +100,7 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 			if ((item.getEnchantLevel() >= esi.getMax()) || (item.getEnchantLevel() < esi.getMin()))
 			{
 				player.sendPacket(EnchantResult.CANCEL);
-				player.sendPacket(SystemMsg.INAPPROPRIATE_ENCHANT_CONDITIONS);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS));
 				player.sendActionFailed();
 				return;
 			}
@@ -110,7 +110,7 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 				if (!checkItem(item, esi))
 				{
 					player.sendPacket(EnchantResult.CANCEL);
-					player.sendPacket(SystemMsg.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL);
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL));
 					player.sendActionFailed();
 					return;
 				}
@@ -240,7 +240,7 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 				{
 					player.broadcastPacket(new L2GameServerPacket[]
 					{
-						new SystemMessage(3013).addName(player).addNumber(item.getEnchantLevel()).addItemName(item.getId())
+						SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_SUCCESSFULLY_ENCHANTED_A_S2_S3).addPcName(player).addInt(item.getEnchantLevel()).addItemName(item.getId())
 					});
 					player.broadcastPacket(new L2GameServerPacket[]
 					{
@@ -339,7 +339,7 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 						InventoryUpdate iu = new InventoryUpdate();
 						iu.addModifiedItem(item);
 						player.sendPacket(iu);
-						player.sendPacket(SystemMsg.THE_BLESSED_ENCHANT_FAILED);
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_BLESSED_ENCHANT_FAILED_THE_ENCHANT_VALUE_OF_THE_ITEM_BECAME_0));
 						player.sendPacket(new EnchantResult(5, 0, 0, item.getEnchantLevel()));
 						break;
 					
@@ -360,7 +360,7 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 						InventoryUpdate iuc = new InventoryUpdate();
 						iuc.addModifiedItem(item);
 						player.sendPacket(iuc);
-						player.sendPacket(SystemMsg.THE_BLESSED_ENCHANT_FAILED);
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_BLESSED_ENCHANT_FAILED_THE_ENCHANT_VALUE_OF_THE_ITEM_BECAME_0));
 						player.sendPacket(EnchantResult.BLESSED_FAILED);
 						break;
 					

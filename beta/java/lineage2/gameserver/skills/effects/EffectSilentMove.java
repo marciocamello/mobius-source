@@ -15,6 +15,7 @@ package lineage2.gameserver.skills.effects;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Env;
 
 /**
@@ -82,8 +83,8 @@ public final class EffectSilentMove extends Effect
 		
 		if (manaDam > _effected.getCurrentMp())
 		{
-			_effected.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_MP));
-			_effected.sendPacket(new SystemMessage(SystemMessage.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED).addSkillName(getSkill().getId(), getSkill().getDisplayLevel()));
+			_effected.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_MP));
+			_effected.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED).addSkillName(getSkill().getId(), getSkill().getDisplayLevel()));
 			return false;
 		}
 		

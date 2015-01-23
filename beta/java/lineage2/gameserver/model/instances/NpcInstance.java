@@ -74,9 +74,9 @@ import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.NpcInfo;
 import lineage2.gameserver.network.serverpackets.SocialAction;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.taskmanager.DecayTaskManager;
@@ -133,8 +133,8 @@ public class NpcInstance extends Creature
 	private Castle _nearestCastle;
 	private Fortress _nearestFortress;
 	private ClanHall _nearestClanHall;
-	private NpcString _nameNpcString = NpcString.NONE;
-	private NpcString _titleNpcString = NpcString.NONE;
+	private NpcStringId _nameNpcString = NpcStringId.STRING_NONE;
+	private NpcStringId _titleNpcString = NpcStringId.STRING_NONE;
 	private Spawner _spawn;
 	private Location _spawnedLoc = new Location();
 	private SpawnRange _spawnRange;
@@ -432,18 +432,18 @@ public class NpcInstance extends Creature
 			
 			if (isRaid() || (this instanceof ReflectionBossInstance))
 			{
-				SystemMessage2 sm;
+				SystemMessage sm;
 				
 				if (itemId == 57)
 				{
-					sm = new SystemMessage2(SystemMsg.C1_HAS_DIED_AND_DROPPED_S2_ADENA);
-					sm.addName(this);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_DIED_AND_DROPPED_S2_ADENA);
+					sm.addCharName(this);
 					sm.addLong(item.getCount());
 				}
 				else
 				{
-					sm = new SystemMessage2(SystemMsg.C1_DIED_AND_DROPPED_S3_S2);
-					sm.addName(this);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DIED_AND_DROPPED_S3_S2_S);
+					sm.addCharName(this);
 					sm.addItemName(itemId);
 					sm.addLong(item.getCount());
 				}
@@ -469,18 +469,18 @@ public class NpcInstance extends Creature
 		
 		if (isRaid() || (this instanceof ReflectionBossInstance))
 		{
-			SystemMessage2 sm;
+			SystemMessage sm;
 			
 			if (item.getId() == 57)
 			{
-				sm = new SystemMessage2(SystemMsg.C1_HAS_DIED_AND_DROPPED_S2_ADENA);
-				sm.addName(this);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_DIED_AND_DROPPED_S2_ADENA);
+				sm.addCharName(this);
 				sm.addLong(item.getCount());
 			}
 			else
 			{
-				sm = new SystemMessage2(SystemMsg.C1_DIED_AND_DROPPED_S3_S2);
-				sm.addName(this);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DIED_AND_DROPPED_S3_S2_S);
+				sm.addCharName(this);
 				sm.addItemName(item.getId());
 				sm.addLong(item.getCount());
 			}
@@ -1715,13 +1715,13 @@ public class NpcInstance extends Creature
 			
 			if (minlevel > 0)
 			{
-				SystemMessage2 sm = new SystemMessage2(SystemMsg.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN__COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
-				sm.addInteger(minlevel);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ANY_FURTHER_SKILLS_TO_LEARN_COME_BACK_WHEN_YOU_HAVE_REACHED_LEVEL_S1);
+				sm.addInt(minlevel);
 				player.sendPacket(sm);
 			}
 			else
 			{
-				player.sendPacket(SystemMsg.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN));
 			}
 			
 			player.sendPacket(AcquireSkillDone.STATIC);
@@ -1780,7 +1780,7 @@ public class NpcInstance extends Creature
 		if (skills.size() == 0)
 		{
 			player.sendPacket(AcquireSkillDone.STATIC);
-			player.sendPacket(SystemMsg.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN));
 		}
 		else
 		{
@@ -2112,36 +2112,36 @@ public class NpcInstance extends Creature
 	
 	/**
 	 * Method getNameNpcString.
-	 * @return NpcString
+	 * @return NpcStringId
 	 */
-	public NpcString getNameNpcString()
+	public NpcStringId getNameNpcString()
 	{
 		return _nameNpcString;
 	}
 	
 	/**
 	 * Method getTitleNpcString.
-	 * @return NpcString
+	 * @return NpcStringId
 	 */
-	public NpcString getTitleNpcString()
+	public NpcStringId getTitleNpcString()
 	{
 		return _titleNpcString;
 	}
 	
 	/**
 	 * Method setNameNpcString.
-	 * @param nameNpcString NpcString
+	 * @param nameNpcString NpcStringId
 	 */
-	public void setNameNpcString(NpcString nameNpcString)
+	public void setNameNpcString(NpcStringId nameNpcString)
 	{
 		_nameNpcString = nameNpcString;
 	}
 	
 	/**
 	 * Method setTitleNpcString.
-	 * @param titleNpcString NpcString
+	 * @param titleNpcString NpcStringId
 	 */
-	public void setTitleNpcString(NpcString titleNpcString)
+	public void setTitleNpcString(NpcStringId titleNpcString)
 	{
 		_titleNpcString = titleNpcString;
 	}

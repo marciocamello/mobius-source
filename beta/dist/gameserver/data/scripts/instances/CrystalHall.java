@@ -19,9 +19,9 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExSendUIEvent;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.Location;
 
 /**
@@ -94,7 +94,7 @@ public final class CrystalHall extends Reflection
 	public void onPlayerEnter(Player player)
 	{
 		super.onPlayerEnter(player);
-		player.sendPacket(new ExSendUIEvent(player, 0, 1, (int) (System.currentTimeMillis() - _savedTime) / 1000, 0, NpcString.ELAPSED_TIME));
+		player.sendPacket(new ExSendUIEvent(player, 0, 1, (int) (System.currentTimeMillis() - _savedTime) / 1000, 0, NpcStringId.ELAPSED_TIME));
 		player.setVar("Cannon0", "true", -1);
 		player.setVar("ED1", "true", -1);
 	}
@@ -121,43 +121,43 @@ public final class CrystalHall extends Reflection
 				{
 					if (p.getVar("Cannon0") != null)
 					{
-						p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, "1"));
+						p.sendPacket(new ExShowScreenMessage(NpcStringId.SUCCESSFUL_DESTRUCTION_OF_STRONGHOLD_S1, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, "1"));
 						p.setVar("Cannon1", "true", -1);
 						p.unsetVar("Cannon0");
 					}
 					else if (p.getVar("Cannon1") != null)
 					{
-						p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, "2"));
+						p.sendPacket(new ExShowScreenMessage(NpcStringId.SUCCESSFUL_DESTRUCTION_OF_STRONGHOLD_S1, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, "2"));
 						p.setVar("Cannon2", "true", -1);
 						p.unsetVar("Cannon1");
 					}
 					else if (p.getVar("Cannon2") != null)
 					{
-						p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, "3"));
+						p.sendPacket(new ExShowScreenMessage(NpcStringId.SUCCESSFUL_DESTRUCTION_OF_STRONGHOLD_S1, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, "3"));
 						p.setVar("Cannon3", "true", -1);
 						p.unsetVar("Cannon2");
 					}
 					else if (p.getVar("Cannon3") != null)
 					{
-						p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, "4"));
+						p.sendPacket(new ExShowScreenMessage(NpcStringId.SUCCESSFUL_DESTRUCTION_OF_STRONGHOLD_S1, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, "4"));
 						p.setVar("Cannon4", "true", -1);
 						p.unsetVar("Cannon3");
 					}
 					else if (p.getVar("Cannon4") != null)
 					{
-						p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, "5"));
+						p.sendPacket(new ExShowScreenMessage(NpcStringId.SUCCESSFUL_DESTRUCTION_OF_STRONGHOLD_S1, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, "5"));
 						p.setVar("Cannon5", "true", -1);
 						p.unsetVar("Cannon4");
 					}
 					else if (p.getVar("Cannon5") != null)
 					{
-						p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, "6"));
+						p.sendPacket(new ExShowScreenMessage(NpcStringId.SUCCESSFUL_DESTRUCTION_OF_STRONGHOLD_S1, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, "6"));
 						p.setVar("Cannon6", "true", -1);
 						p.unsetVar("Cannon5");
 					}
 					else if (p.getVar("Cannon6") != null)
 					{
-						p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, "7"));
+						p.sendPacket(new ExShowScreenMessage(NpcStringId.SUCCESSFUL_DESTRUCTION_OF_STRONGHOLD_S1, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true, "7"));
 						p.setVar("Cannon7", "true", -1);
 						p.unsetVar("Cannon6");
 						if (can8 != null)
@@ -171,7 +171,7 @@ public final class CrystalHall extends Reflection
 			{
 				for (Player p : getPlayers())
 				{
-					p.sendPacket(new ExShowScreenMessage(NpcString.Success_destroying_open_door, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true));
+					p.sendPacket(new ExShowScreenMessage(NpcStringId.SUCCESSFUL_DESTRUCTION_OF_STRONGHOLD_ENTRY_ACCESSED, 12000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, 1, -1, true));
 					p.unsetVar("Cannon7");
 				}
 				getDoor(DoorOutside).openMe();
@@ -188,7 +188,7 @@ public final class CrystalHall extends Reflection
 					}
 					else if ((p.getVar("Emam Dead") != null) && (p.getVar("ED1") == null))
 					{
-						p.sendPacket(new SystemMessage2(SystemMsg.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addInteger(5));
+						p.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES).addInt(5));
 						startCollapseTimer(5 * 60 * 1000L);
 						exchange = addSpawnWithoutRespawn(Exchanger, RB2Loc, 0);
 						p.unsetVar("Emam Dead");

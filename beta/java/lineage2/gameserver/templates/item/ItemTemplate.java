@@ -20,8 +20,8 @@ import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.items.ItemInstance;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.StatTemplate;
 import lineage2.gameserver.stats.conditions.Condition;
@@ -45,7 +45,7 @@ public abstract class ItemTemplate extends StatTemplate
 	 */
 	public static enum ReuseType
 	{
-		NORMAL(SystemMsg.THERE_ARE_S2_SECONDS_REMAINING_IN_S1S_REUSE_TIME, SystemMsg.THERE_ARE_S2_MINUTES_S3_SECONDS_REMAINING_IN_S1S_REUSE_TIME, SystemMsg.THERE_ARE_S2_HOURS_S3_MINUTES_AND_S4_SECONDS_REMAINING_IN_S1S_REUSE_TIME)
+		NORMAL(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME, SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME, SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME)
 		{
 			@Override
 			public long next(ItemInstance item)
@@ -53,7 +53,10 @@ public abstract class ItemTemplate extends StatTemplate
 				return System.currentTimeMillis() + item.getTemplate().getReuseDelay();
 			}
 		},
-		EVERY_DAY_AT_6_30(SystemMsg.THERE_ARE_S2_SECONDS_REMAINING_FOR_S1S_REUSE_TIME, SystemMsg.THERE_ARE_S2_MINUTES_S3_SECONDS_REMAINING_FOR_S1S_REUSE_TIME, SystemMsg.THERE_ARE_S2_HOURS_S3_MINUTES_S4_SECONDS_REMAINING_FOR_S1S_REUSE_TIME)
+		EVERY_DAY_AT_6_30(
+			SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_FOR_S1_S_RE_USE_TIME_IT_IS_RESET_EVERY_DAY_AT_6_30_AM,
+			SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_FOR_S1_S_RE_USE_TIME_IT_IS_RESET_EVERY_DAY_AT_6_30_AM,
+			SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_S4_SECOND_S_REMAINING_FOR_S1_S_RE_USE_TIME_IT_IS_RESET_EVERY_DAY_AT_6_30_AM)
 		{
 			private final SchedulingPattern _pattern = new SchedulingPattern("30 6 * * *");
 			
@@ -63,13 +66,13 @@ public abstract class ItemTemplate extends StatTemplate
 				return _pattern.next(System.currentTimeMillis());
 			}
 		};
-		private SystemMsg[] _messages;
+		private SystemMessageId[] _messages;
 		
 		/**
 		 * Constructor for ReuseType.
 		 * @param msg SystemMsg[]
 		 */
-		ReuseType(SystemMsg... msg)
+		ReuseType(SystemMessageId... msg)
 		{
 			_messages = msg;
 		}
@@ -85,7 +88,7 @@ public abstract class ItemTemplate extends StatTemplate
 		 * Method getMessages.
 		 * @return SystemMsg[]
 		 */
-		public SystemMsg[] getMessages()
+		public SystemMessageId[] getMessages()
 		{
 			return _messages;
 		}
@@ -987,13 +990,13 @@ public abstract class ItemTemplate extends StatTemplate
 		
 		if (!res && (_condition.getSystemMsg() != null))
 		{
-			if (_condition.getSystemMsg().size() > 0)
+			if (_condition.getSystemMsg().getParamCount() > 0)
 			{
-				player.sendPacket(new SystemMessage2(_condition.getSystemMsg()).addItemName(getId()));
+				player.sendPacket(SystemMessage.getSystemMessage(_condition.getSystemMsg()).addItemName(getId()));
 			}
 			else
 			{
-				player.sendPacket(_condition.getSystemMsg());
+				player.sendPacket(SystemMessage.getSystemMessage(_condition.getSystemMsg()));
 			}
 		}
 		

@@ -19,7 +19,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.instances.SummonInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.utils.PositionUtils;
 
@@ -50,7 +50,7 @@ public final class EffectFear extends Effect
 	{
 		if (_effected.isFearImmune())
 		{
-			getEffector().sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+			getEffector().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 			return false;
 		}
 		
@@ -62,14 +62,14 @@ public final class EffectFear extends Effect
 			
 			if (_effected.isSummon() && (siegeEvent != null) && siegeEvent.containsSiegeSummon((SummonInstance) _effected))
 			{
-				getEffector().sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+				getEffector().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 				return false;
 			}
 		}
 		
 		if (_effected.isInZonePeace())
 		{
-			getEffector().sendPacket(new SystemMessage(SystemMessage.YOU_MAY_NOT_ATTACK_IN_A_PEACEFUL_ZONE));
+			getEffector().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_ATTACK_IN_A_PEACEFUL_ZONE));
 			return false;
 		}
 		

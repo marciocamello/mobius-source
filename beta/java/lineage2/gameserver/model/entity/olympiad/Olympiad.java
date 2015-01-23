@@ -35,8 +35,8 @@ import lineage2.gameserver.model.entity.olympiad.tasks.OlympiadEndTask;
 import lineage2.gameserver.model.entity.olympiad.tasks.ValidationTask;
 import lineage2.gameserver.model.entity.olympiad.tasks.WeeklyTask;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.MultiValueIntegerMap;
@@ -267,25 +267,25 @@ public class Olympiad
 	{
 		if (!_inCompPeriod || _isOlympiadEnd)
 		{
-			noble.sendPacket(SystemMsg.THE_GRAND_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
+			noble.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS));
 			return false;
 		}
 		
 		if (getMillisToOlympiadEnd() <= (600 * 1000))
 		{
-			noble.sendPacket(SystemMsg.THE_GRAND_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
+			noble.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS));
 			return false;
 		}
 		
 		if (getMillisToCompEnd() <= (600 * 1000))
 		{
-			noble.sendPacket(SystemMsg.THE_GRAND_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
+			noble.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS));
 			return false;
 		}
 		
 		if (noble.isCursedWeaponEquipped())
 		{
-			noble.sendPacket(SystemMsg.YOU_CANNOT_REGISTER_WHILE_IN_POSSESSION_OF_A_CURSED_WEAPON);
+			noble.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_REGISTER_WHILE_IN_POSSESSION_OF_A_CURSED_WEAPON));
 			return false;
 		}
 		
@@ -314,14 +314,14 @@ public class Olympiad
 			case CLASSED:
 			{
 				_classBasedRegisters.put(classId, noble.getObjectId());
-				noble.sendPacket(SystemMsg.YOU_HAVE_BEEN_REGISTERED_FOR_THE_GRAND_OLYMPIAD_WAITING_LIST_FOR_A_CLASS_SPECIFIC_MATCH);
+				noble.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_BEEN_REGISTERED_FOR_THE_OLYMPIAD_WAITING_LIST_FOR_A_CLASS_BATTLE));
 				break;
 			}
 			
 			case NON_CLASSED:
 			{
 				_nonClassBasedRegisters.add(noble.getObjectId());
-				noble.sendPacket(SystemMsg.YOU_ARE_CURRENTLY_REGISTERED_FOR_A_1V1_CLASS_IRRELEVANT_MATCH);
+				noble.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_CURRENTLY_REGISTERED_FOR_A_1V1_CLASS_IRRELEVANT_MATCH));
 				break;
 			}
 			
@@ -343,13 +343,13 @@ public class Olympiad
 	{
 		if (!validPlayer.isNoble())
 		{
-			sendPlayer.sendPacket(new SystemMessage2(SystemMsg.C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_ONLY_NOBLESSE_CHARACTERS_CAN_PARTICIPATE_IN_THE_OLYMPIAD).addName(validPlayer));
+			sendPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_ONLY_NOBLESSE_EXALTED_CHARACTERS_CAN_PARTICIPATE_IN_THE_OLYMPIAD).addPcName(validPlayer));
 			return false;
 		}
 		
 		if (validPlayer.getBaseClassId() != validPlayer.getClassId().getId())
 		{
-			sendPlayer.sendPacket(new SystemMessage2(SystemMsg.C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_SUBCLASS_CHARACTER_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD).addName(validPlayer));
+			sendPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_SUBCLASSES_AND_DUEL_CLASSES_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD).addPcName(validPlayer));
 			return false;
 		}
 		
@@ -366,13 +366,13 @@ public class Olympiad
 			case CLASSED:
 				if (_classBasedRegisters.containsValue(validPlayer.getObjectId()))
 				{
-					sendPlayer.sendPacket(new SystemMessage2(SystemMsg.C1_IS_ALREADY_REGISTERED_ON_THE_CLASS_MATCH_WAITING_LIST).addName(validPlayer));
+					sendPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_REGISTERED_ON_THE_CLASS_MATCH_WAITING_LIST).addPcName(validPlayer));
 					return false;
 				}
 				
 				if (ar[1] == 0)
 				{
-					validPlayer.sendPacket(SystemMsg.THE_TOTAL_NUMBER_OF_MATCHES_THAT_CAN_BE_ENTERED_IN_1_WEEK_IS_60_CLASS_IRRELEVANT_INDIVIDUAL_MATCHES_30_SPECIFIC_MATCHES_AND_10_TEAM_MATCHES);
+					validPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CAN_ENTER_UP_TO_50_FREE_FOR_ALL_BATTLES_AND_50_CLASS_SPECIFIC_BATTLES_PER_WEEK));
 					return false;
 				}
 				break;
@@ -380,13 +380,13 @@ public class Olympiad
 			case NON_CLASSED:
 				if (_nonClassBasedRegisters.contains(validPlayer.getObjectId()))
 				{
-					sendPlayer.sendPacket(new SystemMessage2(SystemMsg.C1_IS_ALREADY_REGISTERED_ON_THE_WAITING_LIST_FOR_THE_CLASS_IRRELEVANT_INDIVIDUAL_MATCH).addName(validPlayer));
+					sendPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_REGISTERED_ON_THE_WAITING_LIST_FOR_THE_ALL_CLASS_BATTLE).addPcName(validPlayer));
 					return false;
 				}
 				
 				if (ar[2] == 0)
 				{
-					validPlayer.sendPacket(SystemMsg.THE_TOTAL_NUMBER_OF_MATCHES_THAT_CAN_BE_ENTERED_IN_1_WEEK_IS_60_CLASS_IRRELEVANT_INDIVIDUAL_MATCHES_30_SPECIFIC_MATCHES_AND_10_TEAM_MATCHES);
+					validPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CAN_ENTER_UP_TO_50_FREE_FOR_ALL_BATTLES_AND_50_CLASS_SPECIFIC_BATTLES_PER_WEEK));
 					return false;
 				}
 				break;
@@ -397,13 +397,13 @@ public class Olympiad
 		
 		if (ar[0] == 0)
 		{
-			validPlayer.sendPacket(SystemMsg.THE_MAXIMUM_MATCHES_YOU_CAN_PARTICIPATE_IN_1_WEEK_IS_70);
+			validPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MAXIMUM_MATCHES_YOU_CAN_PARTICIPATE_IN_1_WEEK_IS_30));
 			return false;
 		}
 		
 		if (isRegisteredInComp(validPlayer))
 		{
-			sendPlayer.sendPacket(new SystemMessage2(SystemMsg.C1_IS_ALREADY_REGISTERED_ON_THE_MATCH_WAITING_LIST).addName(validPlayer));
+			sendPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_REGISTERED_ON_THE_MATCH_WAITING_LIST).addPcName(validPlayer));
 			return false;
 		}
 		
@@ -445,19 +445,19 @@ public class Olympiad
 	{
 		if (!_inCompPeriod || _isOlympiadEnd)
 		{
-			noble.sendPacket(SystemMsg.THE_GRAND_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
+			noble.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS));
 			return false;
 		}
 		
 		if (!noble.isNoble())
 		{
-			noble.sendPacket(SystemMsg.THE_GRAND_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
+			noble.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS));
 			return false;
 		}
 		
 		if (!isRegistered(noble))
 		{
-			noble.sendPacket(SystemMsg.YOU_ARE_NOT_CURRENTLY_REGISTERED_FOR_THE_GRAND_OLYMPIAD);
+			noble.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_CURRENTLY_REGISTERED_FOR_THE_OLYMPIAD));
 			return false;
 		}
 		
@@ -486,7 +486,7 @@ public class Olympiad
 		
 		_classBasedRegisters.removeValue(noble.getObjectId());
 		_nonClassBasedRegisters.remove(new Integer(noble.getObjectId()));
-		noble.sendPacket(SystemMsg.YOU_HAVE_BEEN_REMOVED_FROM_THE_GRAND_OLYMPIAD_WAITING_LIST);
+		noble.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_BEEN_REMOVED_FROM_THE_OLYMPIAD_WAITING_LIST));
 		return true;
 	}
 	
@@ -631,7 +631,7 @@ public class Olympiad
 			
 			if (player != null)
 			{
-				player.sendPacket(new SystemMessage2(SystemMsg.C1_HAS_EARNED_S2_POINTS_IN_THE_GRAND_OLYMPIAD_GAMES).addName(player).addInteger(Config.OLYMPIAD_POINTS_WEEKLY));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_EARNED_S2_POINTS_IN_THE_OLYMPIAD_GAMES).addPcName(player).addInt(Config.OLYMPIAD_POINTS_WEEKLY));
 			}
 		}
 	}
@@ -654,13 +654,13 @@ public class Olympiad
 	{
 		if ((spectator.getOlympiadGame() != null) || isRegistered(spectator) || Olympiad.isRegisteredInComp(spectator))
 		{
-			spectator.sendPacket(SystemMsg.YOU_MAY_NOT_OBSERVE_A_GRAND_OLYMPIAD_GAMES_MATCH_WHILE_YOU_ARE_ON_THE_WAITING_LIST);
+			spectator.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_OBSERVE_A_OLYMPIAD_GAMES_MATCH_WHILE_YOU_ARE_ON_THE_WAITING_LIST));
 			return;
 		}
 		
 		if ((_manager == null) || (_manager.getOlympiadInstance(id) == null) || (_manager.getOlympiadInstance(id).getStatus() == BattleStatus.Begining) || (_manager.getOlympiadInstance(id).getStatus() == BattleStatus.Begin_Countdown))
 		{
-			spectator.sendPacket(SystemMsg.THE_GRAND_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
+			spectator.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS));
 			return;
 		}
 		

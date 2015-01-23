@@ -12,7 +12,7 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 
 /**
  * @author VISTALL
@@ -20,10 +20,10 @@ import lineage2.gameserver.network.serverpackets.components.NpcString;
  */
 public abstract class NpcStringContainer extends L2GameServerPacket
 {
-	private final NpcString _npcString;
+	private final NpcStringId _npcString;
 	private final String[] _parameters = new String[5];
 	
-	protected NpcStringContainer(NpcString npcString, String... arg)
+	protected NpcStringContainer(NpcStringId npcString, String... arg)
 	{
 		_npcString = npcString;
 		System.arraycopy(arg, 0, _parameters, 0, arg.length);

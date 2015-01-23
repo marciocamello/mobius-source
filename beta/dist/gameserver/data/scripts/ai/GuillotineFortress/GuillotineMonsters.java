@@ -20,7 +20,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.items.PcInventory;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.NpcUtils;
 
@@ -64,7 +64,7 @@ public final class GuillotineMonsters extends Fighter
 				
 				if (attacker.isPlayer())
 				{
-					player.sendPacket(new ExShowScreenMessage(NpcString.CHAOS_SHIELD_BREAKTHROUGH, 10000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));
+					player.sendPacket(new ExShowScreenMessage(NpcStringId.CHAOS_SHIELD_BREAKTHROUGH, 10000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));
 				}
 			}
 		}

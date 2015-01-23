@@ -26,8 +26,8 @@ import lineage2.gameserver.model.entity.events.objects.SiegeClanObject;
 import lineage2.gameserver.model.entity.residence.ClanHall;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.PlaySound;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.utils.Location;
 
@@ -65,11 +65,11 @@ public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanOb
 		{
 			if (_oldOwner == null)
 			{
-				broadcastInZone2(new SystemMessage2(SystemMsg.THE_SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST).addResidenceName(getResidence()));
+				broadcastInZone2(SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST).addCastleId(getResidence().getId()));
 			}
 			else
 			{
-				broadcastInZone2(new SystemMessage2(SystemMsg.S1S_SIEGE_WAS_CANCELED_BECAUSE_THERE_WERE_NO_CLANS_THAT_PARTICIPATED).addResidenceName(getResidence()));
+				broadcastInZone2(SystemMessage.getSystemMessage(SystemMessageId.S1_S_SIEGE_WAS_CANCELED_BECAUSE_THERE_WERE_NO_CLANS_THAT_PARTICIPATED).addCastleId(getResidence().getId()));
 			}
 			
 			reCalcNextTime(false);
@@ -91,8 +91,8 @@ public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanOb
 			team.setSiegeClan(CollectionUtils.safeGet(attackers, i));
 		}
 		
-		broadcastTo(new SystemMessage2(SystemMsg.THE_SIEGE_TO_CONQUER_S1_HAS_BEGUN).addResidenceName(getResidence()), ATTACKERS, DEFENDERS);
-		broadcastTo(SystemMsg.THE_TRYOUTS_ARE_ABOUT_TO_BEGIN, ATTACKERS);
+		broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_TO_CONQUER_S1_HAS_BEGUN).addCastleId(getResidence().getId()), ATTACKERS, DEFENDERS);
+		broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_TRYOUTS_ARE_ABOUT_TO_BEGIN_LINE_UP), ATTACKERS);
 		super.startEvent();
 	}
 	
@@ -101,7 +101,7 @@ public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanOb
 	 */
 	public void nextStep()
 	{
-		broadcastTo(SystemMsg.THE_TRYOUTS_HAVE_BEGUN, ATTACKERS, DEFENDERS);
+		broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_TRYOUTS_HAVE_BEGUN), ATTACKERS, DEFENDERS);
 		updateParticles(true, ATTACKERS, DEFENDERS);
 	}
 	
@@ -158,11 +158,11 @@ public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanOb
 		
 		if (minute > 0)
 		{
-			broadcastTo(new SystemMessage2(SystemMsg.THE_CONTEST_WILL_BEGIN_IN_S1_MINUTES).addInteger(minute), ATTACKERS, DEFENDERS);
+			broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_CONTEST_WILL_BEGIN_IN_S1_MINUTE_S).addInt(minute), ATTACKERS, DEFENDERS);
 		}
 		else
 		{
-			broadcastTo(new SystemMessage2(SystemMsg.THE_PRELIMINARY_MATCH_WILL_BEGIN_IN_S1_SECONDS).addInteger(val), ATTACKERS, DEFENDERS);
+			broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_PRELIMINARY_MATCH_WILL_BEGIN_IN_S1_SECOND_S_PREPARE_YOURSELF).addInt(val), ATTACKERS, DEFENDERS);
 		}
 	}
 	
@@ -183,12 +183,12 @@ public class ClanHallTeamBattleEvent extends SiegeEvent<ClanHall, CTBSiegeClanOb
 				newOwner.incReputation(1700, false, toString());
 			}
 			
-			broadcastTo(new SystemMessage2(SystemMsg.S1_CLAN_HAS_DEFEATED_S2).addString(newOwner.getName()).addResidenceName(getResidence()), ATTACKERS, DEFENDERS);
-			broadcastTo(new SystemMessage2(SystemMsg.THE_SIEGE_OF_S1_IS_FINISHED).addResidenceName(getResidence()), ATTACKERS, DEFENDERS);
+			broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.S1_CLAN_HAS_DEFEATED_S2).addString(newOwner.getName()).addCastleId(getResidence().getId()), ATTACKERS, DEFENDERS);
+			broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_IS_FINISHED).addCastleId(getResidence().getId()), ATTACKERS, DEFENDERS);
 		}
 		else
 		{
-			broadcastTo(new SystemMessage2(SystemMsg.THE_PRELIMINARY_MATCH_OF_S1_HAS_ENDED_IN_A_DRAW).addResidenceName(getResidence()), ATTACKERS);
+			broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_PRELIMINARY_MATCH_OF_S1_HAS_ENDED_IN_A_DRAW).addCastleId(getResidence().getId()), ATTACKERS);
 		}
 		
 		updateParticles(false, ATTACKERS, DEFENDERS);

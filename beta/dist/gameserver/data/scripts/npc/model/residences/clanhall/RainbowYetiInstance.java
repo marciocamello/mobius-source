@@ -29,8 +29,9 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 
@@ -120,7 +121,7 @@ public final class RainbowYetiInstance extends NpcInstance
 			_generated = Rnd.get(WORLD_LIST.length);
 			Word word = WORLD_LIST[_generated];
 			List<Player> around = World.getAroundPlayers(RainbowYetiInstance.this, 750, 100);
-			ExShowScreenMessage msg = new ExShowScreenMessage(NpcString.NONE, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, word.getName());
+			ExShowScreenMessage msg = new ExShowScreenMessage(NpcStringId.STRING_NONE, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, word.getName());
 			
 			for (Player player : around)
 			{
@@ -548,7 +549,7 @@ public final class RainbowYetiInstance extends NpcInstance
 			
 			if (_generated == -1)
 			{
-				msg.replaceNpcString("%word%", NpcString.UNDECIDED);
+				msg.replaceNpcString("%word%", NpcStringId.UNDECIDED);
 			}
 			else
 			{
@@ -580,7 +581,7 @@ public final class RainbowYetiInstance extends NpcInstance
 		ItemInstance item = ItemFunctions.createItem(itemId);
 		item.addEvent(event);
 		player.getInventory().addItem(item);
-		player.sendPacket(SystemMessage2.obtainItems(item));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(itemId));
 	}
 	
 	/**

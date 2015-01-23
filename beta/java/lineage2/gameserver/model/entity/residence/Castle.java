@@ -39,7 +39,7 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.EventTrigger;
 import lineage2.gameserver.network.serverpackets.ExCastleState;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.item.support.MerchantGuard;
@@ -80,14 +80,14 @@ public class Castle extends Residence
 	private long _treasury;
 	private long _collectedShops;
 	private long _collectedSeed;
-	private final NpcString _npcStringName;
+	private final NpcStringId _npcStringName;
 	private ResidenceSide _residenceSide = ResidenceSide.NEUTRAL;
 	private final Set<ItemInstance> _spawnMerchantTickets = new CopyOnWriteArraySet<>();
 	
 	public Castle(StatsSet set)
 	{
 		super(set);
-		_npcStringName = NpcString.valueOf(1001000 + _id);
+		_npcStringName = NpcStringId.getNpcStringId(1001000 + _id);
 	}
 	
 	@Override
@@ -882,7 +882,7 @@ public class Castle extends Residence
 		CastleDAO.getInstance().update(this);
 	}
 	
-	public NpcString getNpcStringName()
+	public NpcStringId getNpcStringName()
 	{
 		return _npcStringName;
 	}

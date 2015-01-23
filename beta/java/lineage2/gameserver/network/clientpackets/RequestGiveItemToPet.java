@@ -18,6 +18,7 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.PcInventory;
 import lineage2.gameserver.model.items.PetInventory;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -67,7 +68,7 @@ public class RequestGiveItemToPet extends L2GameClientPacket
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
@@ -79,13 +80,13 @@ public class RequestGiveItemToPet extends L2GameClientPacket
 		
 		if (activeChar.isFishing())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DO_THAT_WHILE_FISHING));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING));
 			return;
 		}
 		
 		if (pet.isDead())
 		{
-			sendPacket(new SystemMessage(SystemMessage.CANNOT_GIVE_ITEMS_TO_A_DEAD_PET));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_IS_DEAD_AND_ANY_ATTEMPT_YOU_MAKE_TO_GIVE_IT_SOMETHING_GOES_UNRECOGNIZED));
 			return;
 		}
 		
@@ -121,13 +122,13 @@ public class RequestGiveItemToPet extends L2GameClientPacket
 		
 		if (!pet.getInventory().validateWeight(weight))
 		{
-			sendPacket(new SystemMessage(SystemMessage.EXCEEDED_PET_INVENTORYS_WEIGHT_LIMIT));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_CANNOT_CARRY_ANY_MORE_ITEMS2));
 			return;
 		}
 		
 		if (!pet.getInventory().validateCapacity(slots))
 		{
-			sendPacket(new SystemMessage(SystemMessage.DUE_TO_THE_VOLUME_LIMIT_OF_THE_PETS_INVENTORY_NO_MORE_ITEMS_CAN_BE_PLACED_THERE));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_CANNOT_CARRY_ANY_MORE_ITEMS));
 			return;
 		}
 		

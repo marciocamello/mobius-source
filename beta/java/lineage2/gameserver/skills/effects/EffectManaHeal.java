@@ -14,6 +14,7 @@ package lineage2.gameserver.skills.effects;
 
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;
 
@@ -67,7 +68,7 @@ public class EffectManaHeal extends Effect
 		double mp = calc();
 		double newMp = Math.min(mp * 1.7, (mp * (!_ignoreMpEff ? _effected.calcStat(Stats.MANAHEAL_EFFECTIVNESS, 100., _effector, getSkill()) : 100.)) / 100.);
 		double addToMp = Math.max(0, Math.min(newMp, ((_effected.calcStat(Stats.MP_LIMIT, null, null) * _effected.getMaxMp()) / 100.) - _effected.getCurrentMp()));
-		_effected.sendPacket(new SystemMessage(SystemMessage.S1_MPS_HAVE_BEEN_RESTORED).addNumber(Math.round(addToMp)));
+		_effected.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_MP_HAS_BEEN_RESTORED).addLong(Math.round(addToMp)));
 		
 		if (addToMp > 0)
 		{

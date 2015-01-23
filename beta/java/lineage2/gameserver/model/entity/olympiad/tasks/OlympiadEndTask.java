@@ -20,6 +20,7 @@ import lineage2.gameserver.model.entity.Hero;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.entity.olympiad.OlympiadDatabase;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -44,7 +45,7 @@ public class OlympiadEndTask extends RunnableImpl
 			return;
 		}
 		
-		Announcements.getInstance().announceToAll(new SystemMessage(SystemMessage.OLYMPIAD_PERIOD_S1_HAS_ENDED).addNumber(Olympiad._currentCycle));
+		Announcements.getInstance().announceToAll(SystemMessage.getSystemMessage(SystemMessageId.ROUND_S1_OF_THE_OLYMPIAD_GAMES_HAS_NOW_ENDED).addInt(Olympiad._currentCycle));
 		Announcements.getInstance().announceToAll("Olympiad Validation Period has began");
 		Olympiad._isOlympiadEnd = true;
 		

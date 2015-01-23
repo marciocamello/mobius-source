@@ -22,8 +22,8 @@ import lineage2.gameserver.model.items.etcitems.AppearanceStone.ShapeTargetType;
 import lineage2.gameserver.model.items.etcitems.AppearanceStone.ShapeType;
 import lineage2.gameserver.network.serverpackets.ExShapeShiftingResult;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ExItemType;
 import lineage2.gameserver.templates.item.ItemTemplate.Grade;
 import lineage2.gameserver.utils.Util;
@@ -282,7 +282,7 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 			
 			if (cost > player.getAdena())
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_MODIFY_AS_YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_MODIFY_AS_YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 				player.sendPacket(ExShapeShiftingResult.FAIL);
 				player.setAppearanceStone(null);
 				player.setAppearanceExtractItem(null);
@@ -347,7 +347,7 @@ public class RequestShapeShiftingItem extends L2GameClientPacket
 				inventory.equipItem(targetItem);
 			}
 			
-			player.sendPacket(new SystemMessage2(SystemMsg.YOU_HAVE_SPENT_S1_ON_A_SUCCESSFUL_APPEARANCE_MODIFICATION).addLong(cost));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_SPENT_S1_ON_A_SUCCESSFUL_APPEARANCE_MODIFICATION).addLong(cost));
 		}
 		finally
 		{

@@ -21,8 +21,7 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ActionFail;
 import lineage2.gameserver.network.serverpackets.RecipeItemMakeInfo;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.EtcItemTemplate.EtcItemType;
 import lineage2.gameserver.templates.item.RecipeTemplate;
 import lineage2.gameserver.templates.item.RecipeTemplate.RecipeComponent;
@@ -78,7 +77,7 @@ public class RequestRecipeItemMakeSelf extends L2GameClientPacket
 		
 		if (activeChar.isFishing())
 		{
-			activeChar.sendPacket(SystemMsg.YOU_CANNOT_DO_THAT_WHILE_FISHING_);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING2));
 			return;
 		}
 		
@@ -86,19 +85,19 @@ public class RequestRecipeItemMakeSelf extends L2GameClientPacket
 		
 		if ((recipe == null) || (recipe.getMaterials().length == 0))
 		{
-			activeChar.sendPacket(SystemMsg.THE_RECIPE_IS_INCORRECT);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_RECIPE_IS_INCORRECT));
 			return;
 		}
 		
 		if (activeChar.getCurrentMp() < recipe.getMpConsume())
 		{
-			activeChar.sendPacket(SystemMsg.NOT_ENOUGH_MP, new RecipeItemMakeInfo(activeChar, recipe, 0));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_MP), new RecipeItemMakeInfo(activeChar, recipe, 0));
 			return;
 		}
 		
 		if (!activeChar.findRecipe(_recipeId))
 		{
-			activeChar.sendPacket(SystemMsg.PLEASE_REGISTER_A_RECIPE, ActionFail.STATIC);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PLEASE_REGISTER_A_RECIPE), ActionFail.STATIC);
 			return;
 		}
 		
@@ -124,7 +123,7 @@ public class RequestRecipeItemMakeSelf extends L2GameClientPacket
 						continue;
 					}
 					
-					activeChar.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_MATERIALS_TO_PERFORM_THAT_ACTION, new RecipeItemMakeInfo(activeChar, recipe, 0));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_MATERIALS_TO_PERFORM_THAT_ACTION), new RecipeItemMakeInfo(activeChar, recipe, 0));
 					return;
 				}
 				
@@ -132,7 +131,7 @@ public class RequestRecipeItemMakeSelf extends L2GameClientPacket
 				
 				if ((item == null) || (item.getCount() < material.getCount()))
 				{
-					activeChar.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_MATERIALS_TO_PERFORM_THAT_ACTION, new RecipeItemMakeInfo(activeChar, recipe, 0));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_MATERIALS_TO_PERFORM_THAT_ACTION), new RecipeItemMakeInfo(activeChar, recipe, 0));
 					return;
 				}
 			}
@@ -155,7 +154,14 @@ public class RequestRecipeItemMakeSelf extends L2GameClientPacket
 						continue;
 					}
 					
-					activeChar.sendPacket(SystemMessage2.removeItems(material.getId(), material.getCount()));
+					if (material.getCount() > 1)
+					{
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED).addItemName(material.getId()).addLong(material.getCount()));
+					}
+					else
+					{
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED).addItemName(material.getId()));
+					}
 				}
 			}
 		}
@@ -177,7 +183,7 @@ public class RequestRecipeItemMakeSelf extends L2GameClientPacket
 		}
 		else
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.S1_MANUFACTURING_FAILURE).addItemName(itemId));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_MANUFACTURE_S1).addItemName(itemId));
 		}
 		
 		activeChar.sendPacket(new RecipeItemMakeInfo(activeChar, recipe, success));

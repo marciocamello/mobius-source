@@ -19,6 +19,7 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Util;
 
@@ -211,7 +212,7 @@ public class Q00508_AClansReputation extends Quest implements ScriptFile
 				{
 					htmltext = "30868-" + raid + "b.htm";
 					int increasedPoints = clan.incReputation(REWARDS_LIST[raid][2], true, "Q00508_AClansReputation");
-					qs.getPlayer().sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_SUCCESSFULLY_COMPLETED_A_CLAN_QUEST_S1_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION_SCORE).addNumber(increasedPoints));
+					qs.getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_SUCCESSFULLY_COMPLETED_A_CLAN_QUEST_S1_POINT_S_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION).addInt(increasedPoints));
 					qs.takeItems(item, 1);
 				}
 			}

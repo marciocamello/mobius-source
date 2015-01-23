@@ -35,7 +35,7 @@ import lineage2.gameserver.model.base.ClassLevel;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.DualClassTable;
 import lineage2.gameserver.tables.SubClassTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
@@ -178,7 +178,7 @@ public final class SubClassManagerInstance extends NpcInstance
 				{
 					if (Config.ENABLE_OLYMPIAD && Olympiad.isRegisteredInComp(player))
 					{
-						player.sendPacket(SystemMsg.C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_SUBCLASS_CHARACTER_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD);
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_SUBCLASSES_AND_DUEL_CLASSES_CANNOT_PARTICIPATE_IN_THE_OLYMPIAD));
 						return;
 					}
 					
@@ -186,7 +186,7 @@ public final class SubClassManagerInstance extends NpcInstance
 					{
 						player.rewardSkills(false, true);
 						player.sendSkillList();
-						player.sendPacket(SystemMsg.THE_NEW_SUBCLASS_HAS_BEEN_ADDED);
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_NEW_SUBCLASS_HAS_BEEN_ADDED));
 						showChatWindow(player, "default/" + getId() + "-add_success.htm");
 						return;
 					}
@@ -280,7 +280,7 @@ public final class SubClassManagerInstance extends NpcInstance
 					{
 						player.rewardSkills(false, true);
 						player.sendSkillList();
-						player.sendPacket(SystemMsg.THE_NEW_SUBCLASS_HAS_BEEN_ADDED);
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_NEW_SUBCLASS_HAS_BEEN_ADDED));
 						showChatWindow(player, "default/" + getId() + "-add_success.htm");
 						return;
 					}
@@ -344,7 +344,7 @@ public final class SubClassManagerInstance extends NpcInstance
 					
 					if (player.getInventory().getAdena() < reawakeningCost)
 					{
-						player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 						return;
 					}
 					
@@ -357,7 +357,7 @@ public final class SubClassManagerInstance extends NpcInstance
 					{
 						AwakingManager.getInstance().onTransferOnlyRemoveSkills(player, newSubClassId, humanSkillClassId);
 						AwakingManager.getInstance().giveItems(player, previousClassId, newSubClassId);
-						player.sendPacket(SystemMsg.THE_NEW_SUBCLASS_HAS_BEEN_ADDED);
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_NEW_SUBCLASS_HAS_BEEN_ADDED));
 						showChatWindow(player, "default/" + getId() + "-add_success.htm");
 						player.rewardSkills(false, true);
 						player.sendSkillList();

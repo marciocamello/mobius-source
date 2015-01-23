@@ -18,6 +18,7 @@ import lineage2.gameserver.model.pledge.UnitMember;
 import lineage2.gameserver.network.serverpackets.PledgeReceiveMemberInfo;
 import lineage2.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -88,7 +89,7 @@ public class RequestPledgeSetAcademyMaster extends L2GameClientPacket
 					
 					sponsor.setApprentice(apprentice.getObjectId());
 					clan.broadcastToOnlineMembers(new PledgeShowMemberListUpdate(apprentice));
-					clan.broadcastToOnlineMembers(new SystemMessage(SystemMessage.S2_HAS_BEEN_DESIGNATED_AS_THE_APPRENTICE_OF_CLAN_MEMBER_S1).addString(sponsor.getName()).addString(apprentice.getName()));
+					clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.S2_HAS_BEEN_DESIGNATED_AS_THE_APPRENTICE_OF_CLAN_MEMBER_S1).addString(sponsor.getName()).addString(apprentice.getName()));
 				}
 				else
 				{
@@ -100,7 +101,7 @@ public class RequestPledgeSetAcademyMaster extends L2GameClientPacket
 					
 					sponsor.setApprentice(0);
 					clan.broadcastToOnlineMembers(new PledgeShowMemberListUpdate(apprentice));
-					clan.broadcastToOnlineMembers(new SystemMessage(SystemMessage.S2_CLAN_MEMBER_S1S_APPRENTICE_HAS_BEEN_REMOVED).addString(sponsor.getName()).addString(apprentice.getName()));
+					clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.S2_CLAN_MEMBER_C1_S_APPRENTICE_HAS_BEEN_REMOVED).addString(sponsor.getName()).addString(apprentice.getName()));
 				}
 				
 				if (apprentice.isOnline())

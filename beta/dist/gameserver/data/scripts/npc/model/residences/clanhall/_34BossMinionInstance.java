@@ -13,7 +13,7 @@
 package npc.model.residences.clanhall;
 
 import lineage2.gameserver.model.Creature;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import npc.model.residences.SiegeGuardInstance;
@@ -57,15 +57,15 @@ public abstract class _34BossMinionInstance extends SiegeGuardInstance implement
 	
 	/**
 	 * Method spawnChatSay.
-	 * @return NpcString
+	 * @return NpcStringId
 	 */
-	public abstract NpcString spawnChatSay();
+	public abstract NpcStringId spawnChatSay();
 	
 	/**
 	 * Method teleChatSay.
-	 * @return NpcString
+	 * @return NpcStringId
 	 * @see npc.model.residences.clanhall._34SiegeGuard#teleChatSay()
 	 */
 	@Override
-	public abstract NpcString teleChatSay();
+	public abstract NpcStringId teleChatSay();
 }

@@ -16,6 +16,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.ActionFail;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.ClanTable;
 
 /**
@@ -64,13 +65,13 @@ public class RequestStartPledgeWar extends L2GameClientPacket
 		
 		if (clan.getWarsCount() >= 30)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.A_DECLARATION_OF_WAR_AGAINST_MORE_THAN_30_CLANS_CANT_BE_MADE_AT_THE_SAME_TIME), ActionFail.STATIC);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_DECLARATION_OF_WAR_AGAINST_MORE_THAN_30_CLANS_CAN_T_BE_MADE_AT_THE_SAME_TIME), ActionFail.STATIC);
 			return;
 		}
 		
 		if ((clan.getLevel() < 3) || (clan.getAllSize() < 15))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.A_CLAN_WAR_CAN_BE_DECLARED_ONLY_IF_THE_CLAN_IS_LEVEL_THREE_OR_ABOVE_AND_THE_NUMBER_OF_CLAN_MEMBERS_IS_FIFTEEN_OR_GREATER), ActionFail.STATIC);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_CLAN_WAR_CAN_ONLY_BE_DECLARED_IF_THE_CLAN_IS_LEVEL_5_OR_ABOVE_AND_THE_NUMBER_OF_CLAN_MEMBERS_IS_FIFTEEN_OR_GREATER), ActionFail.STATIC);
 			return;
 		}
 		
@@ -78,27 +79,27 @@ public class RequestStartPledgeWar extends L2GameClientPacket
 		
 		if (targetClan == null)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THE_DECLARATION_OF_WAR_CANT_BE_MADE_BECAUSE_THE_CLAN_DOES_NOT_EXIST_OR_ACT_FOR_A_LONG_PERIOD), ActionFail.STATIC);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_CLAN_WAR_CANNOT_BE_DECLARED_AGAINST_A_CLAN_THAT_DOES_NOT_EXIST), ActionFail.STATIC);
 			return;
 		}
 		else if (clan.equals(targetClan))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.FOOL_YOU_CANNOT_DECLARE_WAR_AGAINST_YOUR_OWN_CLAN), ActionFail.STATIC);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FOOL_YOU_CANNOT_DECLARE_WAR_AGAINST_YOUR_OWN_CLAN), ActionFail.STATIC);
 			return;
 		}
 		else if (clan.isAtWarWith(targetClan.getClanId()))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THE_DECLARATION_OF_WAR_HAS_BEEN_ALREADY_MADE_TO_THE_CLAN), ActionFail.STATIC);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WAR_HAS_ALREADY_BEEN_DECLARED_AGAINST_THAT_CLAN_BUT_I_LL_MAKE_NOTE_THAT_YOU_REALLY_DON_T_LIKE_THEM), ActionFail.STATIC);
 			return;
 		}
 		else if ((clan.getAllyId() == targetClan.getAllyId()) && (clan.getAllyId() != 0))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.A_DECLARATION_OF_CLAN_WAR_AGAINST_AN_ALLIED_CLAN_CANT_BE_MADE), ActionFail.STATIC);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_DECLARATION_OF_CLAN_WAR_AGAINST_AN_ALLIED_CLAN_CAN_T_BE_MADE), ActionFail.STATIC);
 			return;
 		}
 		else if ((targetClan.getLevel() < 3) || (targetClan.getAllSize() < 15))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.A_CLAN_WAR_CAN_BE_DECLARED_ONLY_IF_THE_CLAN_IS_LEVEL_THREE_OR_ABOVE_AND_THE_NUMBER_OF_CLAN_MEMBERS_IS_FIFTEEN_OR_GREATER), ActionFail.STATIC);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_CLAN_WAR_CAN_ONLY_BE_DECLARED_IF_THE_CLAN_IS_LEVEL_5_OR_ABOVE_AND_THE_NUMBER_OF_CLAN_MEMBERS_IS_FIFTEEN_OR_GREATER), ActionFail.STATIC);
 			return;
 		}
 		

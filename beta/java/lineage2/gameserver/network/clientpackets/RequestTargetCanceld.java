@@ -14,7 +14,8 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -50,7 +51,7 @@ public class RequestTargetCanceld extends L2GameClientPacket
 		{
 			if (activeChar.isClanAirShipDriver())
 			{
-				activeChar.sendPacket(SystemMsg.THIS_ACTION_IS_PROHIBITED_WHILE_STEERING);
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_ACTION_IS_PROHIBITED_WHILE_STEERING));
 			}
 			
 			activeChar.sendActionFailed();

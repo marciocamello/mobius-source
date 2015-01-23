@@ -34,7 +34,8 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.PlaySound;
 import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
@@ -446,7 +447,7 @@ public final class ValakasManager extends Functions implements ScriptFile, OnDea
 					}
 					
 					_valakas.unblock();
-					broadcastScreenMessage(NpcString.VALAKAS_ARROGAANT_FOOL_YOU_DARE_TO_CHALLENGE_ME);
+					broadcastScreenMessage(NpcStringId.ARROGANT_FOOL_YOU_DARE_TO_CHALLENGE_ME_THE_RULER_OF_FLAMES_HERE_IS_YOUR_REWARD);
 					
 					if (_valakas.getAI().getIntention() == AI_INTENTION_ACTIVE)
 					{
@@ -458,7 +459,7 @@ public final class ValakasManager extends Functions implements ScriptFile, OnDea
 				
 				case 12:
 					_valakas.broadcastPacket(new PlaySound(PlaySound.Type.MUSIC, "B03_D", 1, _valakas.getObjectId(), _valakas.getLoc()));
-					broadcastScreenMessage(NpcString.VALAKAS_THE_EVIL_FIRE_DRAGON_VALAKAS_DEFEATED);
+					broadcastScreenMessage(NpcStringId.ALL_GONNA_DIE_SMASHED_LIKE_MEAT_WILL_GET_SUCKED_INTO_THE_DARKNESS);
 					onValakasDie();
 					
 					for (Player pc : _players)
@@ -844,9 +845,9 @@ public final class ValakasManager extends Functions implements ScriptFile, OnDea
 	
 	/**
 	 * Method broadcastScreenMessage.
-	 * @param npcs NpcString
+	 * @param npcs NpcStringId
 	 */
-	public static void broadcastScreenMessage(NpcString npcs)
+	public static void broadcastScreenMessage(NpcStringId npcs)
 	{
 		for (Player p : getPlayersInside())
 		{
@@ -894,7 +895,7 @@ public final class ValakasManager extends Functions implements ScriptFile, OnDea
 		
 		if ((ccleader.getParty() == null) || !ccleader.getParty().isInCommandChannel())
 		{
-			ccleader.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_IN_A_CURRENT_COMMAND_CHANNEL));
+			ccleader.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_ASSOCIATED_WITH_THE_CURRENT_COMMAND_CHANNEL));
 			return;
 		}
 		
@@ -902,7 +903,7 @@ public final class ValakasManager extends Functions implements ScriptFile, OnDea
 		
 		if (cc.getChannelLeader() != ccleader)
 		{
-			ccleader.sendPacket(new SystemMessage(SystemMessage.ONLY_THE_ALLIANCE_CHANNEL_LEADER_CAN_ATTEMPT_ENTRY));
+			ccleader.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_THE_ALLIANCE_CHANNEL_LEADER_CAN_ATTEMPT_ENTRY));
 			return;
 		}
 		

@@ -21,7 +21,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.Earthquake;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
@@ -67,7 +67,7 @@ public final class GunPrisionInstance extends NpcInstance
 			case "zalp":
 				if (!checkShot)
 				{
-					Functions.npcSay(this, NpcString.CANNON_READY_TO_FIRE);
+					Functions.npcSay(this, NpcStringId.CANNON_IS_LOADING);
 					player.sendPacket(new NpcHtmlMessage(player, this).setHtml("Cannon:<br><br>Preparations are underway to re-activate the cannon. This process can take up to 5 minutes."));
 					return;
 				}
@@ -118,7 +118,7 @@ public final class GunPrisionInstance extends NpcInstance
 			case "spezion_bomb":
 				if (!checkShot)
 				{
-					Functions.npcSay(this, NpcString.CANNON_READY_TO_FIRE);
+					Functions.npcSay(this, NpcStringId.CANNON_IS_LOADING);
 					player.sendPacket(new NpcHtmlMessage(player, this).setHtml("Cannon:<br><br>Preparations are underway to re-activate the cannon. This process can take up to 5 minutes."));
 					return;
 				}

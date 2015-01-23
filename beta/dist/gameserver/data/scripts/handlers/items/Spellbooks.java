@@ -22,8 +22,8 @@ import lineage2.gameserver.model.SkillLearn;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SkillList;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.SkillTable;
 import gnu.trove.set.hash.TIntHashSet;
 
@@ -71,7 +71,7 @@ public final class Spellbooks extends ScriptItemHandler
 		
 		if (item.getCount() < 1)
 		{
-			player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 			return false;
 		}
 		
@@ -79,7 +79,7 @@ public final class Spellbooks extends ScriptItemHandler
 		
 		if (list.isEmpty())
 		{
-			player.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
 			return false;
 		}
 		
@@ -96,7 +96,7 @@ public final class Spellbooks extends ScriptItemHandler
 		
 		if (alreadyHas)
 		{
-			player.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
 			return false;
 		}
 		
@@ -112,7 +112,7 @@ public final class Spellbooks extends ScriptItemHandler
 		
 		if (wrongLvl)
 		{
-			player.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
 			return false;
 		}
 		
@@ -130,7 +130,7 @@ public final class Spellbooks extends ScriptItemHandler
 				continue;
 			}
 			
-			player.sendPacket(new SystemMessage2(SystemMsg.YOU_HAVE_EARNED_S1_SKILL).addSkillName(skill.getId(), skill.getLevel()));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S12).addSkillName(skill.getId(), skill.getLevel()));
 			player.addSkill(skill, true);
 		}
 		

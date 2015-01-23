@@ -14,6 +14,7 @@ package services;
 
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -36,19 +37,19 @@ public final class ManaRegen extends Functions
 		
 		if (fullCost <= 0)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.NOTHING_HAPPENED));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOTHING_HAPPENED));
 			return;
 		}
 		
 		if (getItemCount(player, ADENA) >= fullCost)
 		{
 			removeItem(player, ADENA, fullCost);
-			player.sendPacket(new SystemMessage(SystemMessage.S1_MPS_HAVE_BEEN_RESTORED).addNumber(mp));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_MP_HAS_BEEN_RESTORED).addLong(mp));
 			player.setCurrentMp(player.getMaxMp());
 		}
 		else
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 		}
 	}
 }

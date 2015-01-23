@@ -16,7 +16,7 @@ import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -52,7 +52,7 @@ abstract class SimpleItemHandler extends ScriptItemHandler
 		
 		if (player.isInFlyingTransform())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
 			return false;
 		}
 		
@@ -79,11 +79,11 @@ abstract class SimpleItemHandler extends ScriptItemHandler
 	{
 		if (player.getInventory().destroyItem(item, count))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_USE_S1).addItemName(item.getId()));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_USE_S1).addItemName(item.getId()));
 			return true;
 		}
 		
-		player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 		return false;
 	}
 }

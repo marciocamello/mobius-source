@@ -19,7 +19,7 @@ import lineage2.gameserver.model.Request;
 import lineage2.gameserver.model.Request.L2RequestType;
 import lineage2.gameserver.network.serverpackets.SendTradeRequest;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.Util;
 
 /**
@@ -60,32 +60,32 @@ public class TradeRequest extends L2GameClientPacket
 		
 		if (!activeChar.getPlayerAccess().UseTrade)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THIS_ACCOUNT_CANOT_TRADE_ITEMS));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SOME_LINEAGE_II_FEATURES_HAVE_BEEN_LIMITED_FOR_FREE_TRIALS_TRIAL_ACCOUNTS_AREN_T_ALLOWED_TO_TRADE_ITEMS_AND_OR_ADENA_TO_UNLOCK_ALL_OF_THE_FEATURES_OF_LINEAGE_II_PURCHASE_THE_FULL_VERSION_TODAY));
 			activeChar.sendActionFailed();
 			return;
 		}
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
 		if (activeChar.isFishing())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DO_THAT_WHILE_FISHING));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING));
 			return;
 		}
 		
 		if (activeChar.isInTrade())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_ALREADY_TRADING_WITH_SOMEONE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_ALREADY_TRADING_WITH_SOMEONE));
 			return;
 		}
 		
 		if (activeChar.isProcessingRequest())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.WAITING_FOR_ANOTHER_REPLY));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WAITING_FOR_ANOTHER_REPLY));
 			return;
 		}
 		
@@ -109,13 +109,13 @@ public class TradeRequest extends L2GameClientPacket
 		
 		if ((target == null) || !target.isPlayer() || (target == activeChar))
 		{
-			activeChar.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 			return;
 		}
 		
 		if (!activeChar.isInRangeZ(target, Creature.INTERACTION_DISTANCE))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOUR_TARGET_IS_OUT_OF_RANGE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE));
 			return;
 		}
 		
@@ -123,7 +123,7 @@ public class TradeRequest extends L2GameClientPacket
 		
 		if (!reciever.getPlayerAccess().UseTrade)
 		{
-			activeChar.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 			return;
 		}
 		
@@ -131,24 +131,24 @@ public class TradeRequest extends L2GameClientPacket
 		
 		if ((tradeBan != null) && (tradeBan.equals("-1") || (Long.parseLong(tradeBan) >= System.currentTimeMillis())))
 		{
-			activeChar.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 			return;
 		}
 		
 		if (reciever.isInBlockList(activeChar))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_BEEN_BLOCKED_FROM_THE_CONTACT_YOU_SELECTED));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_BEEN_BLOCKED_FROM_CHATTING_WITH_THAT_CONTACT));
 			return;
 		}
 		
 		if (reciever.getTradeRefusal() || reciever.isBusy())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.S1_IS_BUSY_PLEASE_TRY_AGAIN_LATER).addString(reciever.getName()));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER).addString(reciever.getName()));
 			return;
 		}
 		
 		new Request(L2RequestType.TRADE_REQUEST, activeChar, reciever).setTimeout(10000L);
 		reciever.sendPacket(new SendTradeRequest(activeChar.getObjectId()));
-		activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_REQUESTED_A_TRADE_WITH_C1).addString(reciever.getName()));
+		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_REQUESTED_A_TRADE_WITH_C1).addString(reciever.getName()));
 	}
 }

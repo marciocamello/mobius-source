@@ -13,7 +13,8 @@
 package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -44,14 +45,14 @@ public class Logout extends L2GameClientPacket
 		
 		if (activeChar.isInCombat())
 		{
-			activeChar.sendPacket(SystemMsg.YOU_CANNOT_EXIT_THE_GAME_WHILE_IN_COMBAT);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_EXIT_THE_GAME_WHILE_IN_COMBAT));
 			activeChar.sendActionFailed();
 			return;
 		}
 		
 		if (activeChar.isFishing())
 		{
-			activeChar.sendPacket(SystemMsg.YOU_CANNOT_DO_THAT_WHILE_FISHING_2);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING3));
 			activeChar.sendActionFailed();
 			return;
 		}

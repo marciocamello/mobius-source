@@ -23,7 +23,7 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
@@ -88,7 +88,7 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest implements Scr
 				return null;
 				
 			case "qet_rev":
-				player.sendPacket(new ExShowScreenMessage(NpcString.ACCESSORIES_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.ACCESSORIES_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
 				htmltext = "0-5.htm";
 				qs.getPlayer().addExpAndSp(7800, 350);
 				qs.giveItems(57, 159);
@@ -107,17 +107,17 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest implements Scr
 				{
 					if (Rnd.chance(33))
 					{
-						Functions.npcSayToPlayer(_tairen, qs.getPlayer(), NpcString.LOOKS_LIKE_ONLY_SKILL_BASED_ATTACKS_DAMAGE_THEM, ChatType.NPC_ALL);
+						Functions.npcSayToPlayer(_tairen, qs.getPlayer(), NpcStringId.LOOKS_LIKE_ONLY_SKILL_BASED_ATTACKS_DAMAGE_THEM, ChatType.NPC_ALL);
 					}
 					
 					if (Rnd.chance(33))
 					{
-						Functions.npcSayToPlayer(_tairen, qs.getPlayer(), NpcString.YOUR_NORMAL_ATTACKS_ARENT_WORKING, ChatType.NPC_ALL);
+						Functions.npcSayToPlayer(_tairen, qs.getPlayer(), NpcStringId.YOUR_NORMAL_ATTACKS_AREN_T_WORKING, ChatType.NPC_ALL);
 					}
 					
 					if (Rnd.chance(33))
 					{
-						Functions.npcSayToPlayer(_tairen, qs.getPlayer(), NpcString.USE_YOUR_SKILL_ATTACKS_AGAINST_THEM, ChatType.NPC_ALL);
+						Functions.npcSayToPlayer(_tairen, qs.getPlayer(), NpcStringId.USE_YOUR_SKILL_ATTACKS_AGAINST_THEM, ChatType.NPC_ALL);
 					}
 				}
 				break;
@@ -126,7 +126,7 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest implements Scr
 				htmltext = "";
 				NpcInstance asa = NpcUtils.spawnSingle(Assasin, new Location(-114815, 244966, -7976, 0), player.getActiveReflection());
 				NpcInstance ass = NpcUtils.spawnSingle(Assasin, new Location(-114554, 244954, -7976, 0), player.getActiveReflection());
-				Functions.npcSayToPlayer(ass, qs.getPlayer(), NpcString.FINALLY_I_THOUGHT_I_WAS_GOING_TO_DIE_WAITING, ChatType.NPC_ALL);
+				Functions.npcSayToPlayer(ass, qs.getPlayer(), NpcStringId.FINALLY_I_THOUGHT_I_WAS_GOING_TO_DIE_WAITING, ChatType.NPC_ALL);
 				asa.getAggroList().addDamageHate(qs.getPlayer(), 0, 10000);
 				asa.setAggressionTarget(player);
 				break;
@@ -190,7 +190,7 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest implements Scr
 				if ((npc.getObjectId() == bookDeskObjectId) && !bookTaken)
 				{
 					bookTaken = true;
-					player.sendPacket(new ExShowScreenMessage(NpcString.WATCH_OUT_YOU_ARE_BEING_ATTACKED, 4500, ScreenMessageAlign.TOP_CENTER));
+					player.sendPacket(new ExShowScreenMessage(NpcStringId.WATCH_OUT_YOU_ARE_BEING_ATTACKED, 4500, ScreenMessageAlign.TOP_CENTER));
 					htmltext = "2-2.htm";
 					st.takeAllItems(Book);
 					st.giveItems(Book, 1, false);
@@ -227,7 +227,7 @@ public class Q10327_IntruderWhoWantsTheBookOfGiants extends Quest implements Scr
 	@Override
 	public String onAttack(NpcInstance npc, QuestState qs)
 	{
-		Functions.npcSayToPlayer(_tairen, qs.getPlayer(), NpcString.ENOUGH_OF_THIS_COME_AT_ME, ChatType.NPC_ALL);
+		Functions.npcSayToPlayer(_tairen, qs.getPlayer(), NpcStringId.ENOUGH_OF_THIS_COME_AT_ME, ChatType.NPC_ALL);
 		
 		if (_tairen != null)
 		{

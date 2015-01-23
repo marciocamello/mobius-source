@@ -15,8 +15,8 @@ package npc.model.residences.fortress.siege;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
 /**
@@ -58,7 +58,7 @@ public final class BallistaInstance extends NpcInstance
 		}
 		
 		player.getClan().incReputation(30, false, "Ballista " + getTitle());
-		player.sendPacket(new SystemMessage2(SystemMsg.THE_BALLISTA_HAS_BEEN_SUCCESSFULLY_DESTROYED));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_BALLISTA_HAS_BEEN_SUCCESSFULLY_DESTROYED_THE_CLAN_REPUTATION_WILL_BE_INCREASED));
 	}
 	
 	/**

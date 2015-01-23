@@ -18,6 +18,7 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Env;
 import gnu.trove.iterator.TObjectIntIterator;
 import gnu.trove.map.hash.TObjectIntHashMap;
@@ -95,7 +96,7 @@ public final class EffectCurseOfLifeFlow extends Effect
 			double max_heal = calc();
 			double heal = Math.min(damage, max_heal);
 			double newHp = Math.min(damager.getCurrentHp() + heal, damager.getMaxHp());
-			damager.sendPacket(new SystemMessage(SystemMessage.S1_HPS_HAVE_BEEN_RESTORED).addNumber((long) (newHp - damager.getCurrentHp())));
+			damager.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED).addLong((long) (newHp - damager.getCurrentHp())));
 			damager.setCurrentHp(newHp, false);
 		}
 		

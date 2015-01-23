@@ -20,6 +20,7 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
@@ -379,7 +380,7 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest implements 
 			case "raymond_q195_3.htm":
 				if ((player.getTransformation() != 0) || player.isMounted())
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
 					return null;
 				}
 				qs.playSound(SOUND_MIDDLE);
@@ -391,7 +392,7 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest implements 
 			case "transformagain":
 				if ((player.getTransformation() != 0) || player.isMounted())
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
 					return null;
 				}
 				negateSpeedBuffs(player);
@@ -436,16 +437,16 @@ public class Q00195_SevenSignsSecretRitualOfThePriests extends Quest implements 
 					{
 						ref.openDoor(door1);
 						ref.openDoor(door2);
-						player.sendPacket(new SystemMessage(SystemMessage.BY_USING_THE_INVISIBLE_SKILL_SNEAK_INTO_THE_DAWN_S_DOCUMENT_STORAGE));
-						player.sendPacket(new SystemMessage(SystemMessage.MALE_GUARDS_CAN_DETECT_THE_CONCEALMENT_BUT_THE_FEMALE_GUARDS_CANNOT));
-						player.sendPacket(new SystemMessage(SystemMessage.FEMALE_GUARDS_NOTICE_THE_DISGUISES_FROM_FAR_AWAY_BETTER_THAN_THE_MALE_GUARDS_DO_SO_BEWARE));
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.BY_USING_THE_INVISIBLE_SKILL_SNEAK_INTO_THE_DAWN_S_DOCUMENT_STORAGE));
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MALE_GUARDS_CAN_DETECT_THE_CONCEALMENT_BUT_THE_FEMALE_GUARDS_CANNOT));
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FEMALE_GUARDS_NOTICE_THE_DISGUISES_FROM_FAR_AWAY_BETTER_THAN_THE_MALE_GUARDS_DO_SO_BEWARE));
 						htmltext = "identityconfirmdevice_q195_1.htm";
 					}
 					else
 					{
 						ref.openDoor(door3);
 						ref.openDoor(door4);
-						player.sendPacket(new SystemMessage(SystemMessage.THE_DOOR_IN_FRONT_OF_US_IS_THE_ENTRANCE_TO_THE_DAWN_S_DOCUMENT_STORAGE_APPROACH_TO_THE_CODE));
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_DOOR_IN_FRONT_OF_US_IS_THE_ENTRANCE_TO_THE_DAWN_S_DOCUMENT_STORAGE_APPROACH_TO_THE_CODE_INPUT_DEVICE));
 						player.showQuestMovie(ExStartScenePlayer.SCENE_SSQ_RITUAL_OF_PRIEST);
 						htmltext = "identityconfirmdevice_q195_1.htm";
 					}

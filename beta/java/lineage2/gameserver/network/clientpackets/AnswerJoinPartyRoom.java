@@ -16,7 +16,8 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Request;
 import lineage2.gameserver.model.Request.L2RequestType;
 import lineage2.gameserver.model.matching.MatchingRoom;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -81,7 +82,7 @@ public class AnswerJoinPartyRoom extends L2GameClientPacket
 		if (requestor == null)
 		{
 			request.cancel();
-			activeChar.sendPacket(SystemMsg.THAT_PLAYER_IS_NOT_ONLINE);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
 			activeChar.sendActionFailed();
 			return;
 		}
@@ -96,7 +97,7 @@ public class AnswerJoinPartyRoom extends L2GameClientPacket
 		if (_response == 0)
 		{
 			request.cancel();
-			requestor.sendPacket(SystemMsg.THE_PLAYER_DECLINED_TO_JOIN_YOUR_PARTY);
+			requestor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_PLAYER_DECLINED_TO_JOIN_YOUR_PARTY));
 			return;
 		}
 		

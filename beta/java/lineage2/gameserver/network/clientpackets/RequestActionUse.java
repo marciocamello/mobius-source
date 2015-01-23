@@ -41,8 +41,7 @@ import lineage2.gameserver.network.serverpackets.PrivateStoreManageListSell;
 import lineage2.gameserver.network.serverpackets.RecipeShopManageList;
 import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.tables.PetSkillsTable;
 import lineage2.gameserver.tables.SkillTable;
@@ -499,13 +498,13 @@ public class RequestActionUse extends L2GameClientPacket
 					case 38:
 						if (activeChar.getTransformation() != 0)
 						{
-							activeChar.sendPacket(SystemMsg.YOU_CANNOT_BOARD_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_BOARD_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						}
 						else if (activeChar.isMounted())
 						{
 							if (activeChar.isFlying() && !activeChar.checkLandingState())
 							{
-								activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOT_ALLOWED_TO_DISMOUNT_AT_THIS_LOCATION), ActionFail.STATIC);
+								activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_ALLOWED_TO_DISMOUNT_IN_THIS_LOCATION), ActionFail.STATIC);
 								activeChar.sendActionFailed();
 								return;
 							}
@@ -514,47 +513,47 @@ public class RequestActionUse extends L2GameClientPacket
 						}
 						else if (activeChar.isMounted() || activeChar.isInBoat())
 						{
-							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_BOARD_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						}
 						else if (activeChar.isDead())
 						{
-							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_BOARD_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						}
 						else if (activeChar.isInDuel())
 						{
-							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_BOARD_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						}
 						else if (activeChar.isFishing())
 						{
-							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_BOARD_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						}
 						else if (activeChar.isSitting())
 						{
-							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_BOARD_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						}
 						else if (activeChar.isCursedWeaponEquipped())
 						{
-							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_BOARD_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						}
 						else if (activeChar.getActiveWeaponFlagAttachment() != null)
 						{
-							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_BOARD_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						}
 						else if (activeChar.isCastingNow())
 						{
-							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_BOARD_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						}
 						else if (activeChar.isParalyzed())
 						{
-							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_BOARD_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						}
 						else if ((pet == null) || activeChar.isInCombat() || pet.isInCombat())
 						{
-							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOUNT_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_BOARD_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 						}
 						else if (pet.isDead())
 						{
-							activeChar.sendPacket(new SystemMessage(SystemMessage.A_DEAD_PET_CANNOT_BE_RIDDEN));
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_DEAD_STRIDER_CANNOT_BE_RIDDEN));
 						}
 						else if (pet.isMountable())
 						{
@@ -599,7 +598,7 @@ public class RequestActionUse extends L2GameClientPacket
 							}
 							else
 							{
-								activeChar.sendPacket(SystemMsg.ANOTHER_PLAYER_IS_PROBABLY_CONTROLLING_THE_TARGET);
+								activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ANOTHER_PLAYER_IS_PROBABLY_CONTROLLING_THE_TARGET));
 							}
 						}
 						break;
@@ -678,7 +677,7 @@ public class RequestActionUse extends L2GameClientPacket
 				
 				if (pet.isDepressed())
 				{
-					activeChar.sendPacket(SystemMsg.YOUR_PETSERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS));
 					return;
 				}
 				
@@ -717,21 +716,21 @@ public class RequestActionUse extends L2GameClientPacket
 						
 						if (_ctrlPressed && !target.isAttackable(pet))
 						{
-							activeChar.sendPacket(SystemMsg.INVALID_TARGET);
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 							activeChar.sendActionFailed();
 							return;
 						}
 						
 						if (!target.isMonster() && (pet.isInZonePeace() || (target.isCreature() && ((Creature) target).isInZonePeace())))
 						{
-							activeChar.sendPacket(SystemMsg.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE));
 							activeChar.sendActionFailed();
 							return;
 						}
 						
 						if ((activeChar.getLevel() + 20) <= pet.getLevel())
 						{
-							activeChar.sendPacket(SystemMsg.YOUR_PET_IS_TOO_HIGH_LEVEL_TO_CONTROL);
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_IS_TOO_HIGH_LEVEL_TO_CONTROL));
 							activeChar.sendActionFailed();
 							return;
 						}
@@ -746,19 +745,19 @@ public class RequestActionUse extends L2GameClientPacket
 					case 19:
 						if (pet.isDead())
 						{
-							activeChar.sendPacket(SystemMsg.DEAD_PETS_CANNOT_BE_RETURNED_TO_THEIR_SUMMONING_ITEM, ActionFail.STATIC);
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.DEAD_PETS_CANNOT_BE_RETURNED_TO_THEIR_SUMMONING_ITEM), ActionFail.STATIC);
 							return;
 						}
 						
 						if (pet.isInCombat())
 						{
-							activeChar.sendPacket(SystemMsg.A_PET_CANNOT_BE_UNSUMMONED_DURING_BATTLE, ActionFail.STATIC);
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_PET_CANNOT_BE_UNSUMMONED_DURING_BATTLE), ActionFail.STATIC);
 							return;
 						}
 						
 						if (!PetDataTable.isVitaminPet(pet.getId()) && pet.isPet() && (pet.getCurrentFed() < (0.55 * pet.getMaxFed())))
 						{
-							activeChar.sendPacket(SystemMsg.YOU_MAY_NOT_RESTORE_A_HUNGRY_PET, ActionFail.STATIC);
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_RESTORE_A_HUNGRY_PET), ActionFail.STATIC);
 							return;
 						}
 						
@@ -825,7 +824,7 @@ public class RequestActionUse extends L2GameClientPacket
 						{
 							if (!target.isAttackable(servitor))
 							{
-								activeChar.sendPacket(SystemMsg.INVALID_TARGET);
+								activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 								activeChar.sendActionFailed();
 								return;
 							}
@@ -843,7 +842,7 @@ public class RequestActionUse extends L2GameClientPacket
 						{
 							if (servitor.isInZonePeace())
 							{
-								activeChar.sendPacket(SystemMsg.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
+								activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE));
 								activeChar.sendActionFailed();
 								return;
 							}
@@ -860,7 +859,7 @@ public class RequestActionUse extends L2GameClientPacket
 					case 52:
 						if (servitor.isInCombat())
 						{
-							activeChar.sendPacket(SystemMsg.A_PET_CANNOT_BE_UNSUMMONED_DURING_BATTLE);
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_PET_CANNOT_BE_UNSUMMONED_DURING_BATTLE));
 							activeChar.sendActionFailed();
 						}
 						else
@@ -938,7 +937,7 @@ public class RequestActionUse extends L2GameClientPacket
 							{
 								if (!target.isAttackable(summon))
 								{
-									activeChar.sendPacket(SystemMsg.INVALID_TARGET);
+									activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 									activeChar.sendActionFailed();
 									return;
 								}
@@ -956,7 +955,7 @@ public class RequestActionUse extends L2GameClientPacket
 							{
 								if (summon.isInZonePeace())
 								{
-									activeChar.sendPacket(SystemMsg.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
+									activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE));
 									activeChar.sendActionFailed();
 									return;
 								}
@@ -997,7 +996,7 @@ public class RequestActionUse extends L2GameClientPacket
 					case 1102: // Cancel the Summoning
 						if (activeChar.getSummonList().isInCombat())
 						{
-							activeChar.sendPacket(SystemMsg.A_PET_CANNOT_BE_UNSUMMONED_DURING_BATTLE);
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_PET_CANNOT_BE_UNSUMMONED_DURING_BATTLE));
 							activeChar.sendActionFailed();
 						}
 						else
@@ -1038,7 +1037,7 @@ public class RequestActionUse extends L2GameClientPacket
 				
 				if (activeChar.isFishing())
 				{
-					activeChar.sendPacket(SystemMsg.YOU_CANNOT_DO_THAT_WHILE_FISHING_2);
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING3));
 					activeChar.sendActionFailed();
 					return;
 				}
@@ -1076,19 +1075,19 @@ public class RequestActionUse extends L2GameClientPacket
 				
 				if (pcTarget.isProcessingRequest() && pcTarget.getRequest().isTypeOf(L2RequestType.COUPLE_ACTION))
 				{
-					activeChar.sendPacket(new SystemMessage2(SystemMsg.C1_IS_ALREADY_PARTICIPATING_IN_A_COUPLE_ACTION_AND_CANNOT_BE_REQUESTED_FOR_ANOTHER_COUPLE_ACTION).addName(pcTarget));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_PARTICIPATING_IN_A_COUPLE_ACTION_AND_CANNOT_BE_REQUESTED_FOR_ANOTHER_COUPLE_ACTION).addPcName(pcTarget));
 					return;
 				}
 				
 				if (pcTarget.isProcessingRequest())
 				{
-					activeChar.sendPacket(new SystemMessage2(SystemMsg.C1_IS_ON_ANOTHER_TASK).addName(pcTarget));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER).addPcName(pcTarget));
 					return;
 				}
 				
 				if (!activeChar.isInRange(pcTarget, 300) || activeChar.isInRange(pcTarget, 25) || (activeChar.getTargetId() == activeChar.getObjectId()) || !GeoEngine.canSeeTarget(activeChar, pcTarget, false))
 				{
-					activeChar.sendPacket(SystemMsg.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS);
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS));
 					return;
 				}
 				
@@ -1099,7 +1098,7 @@ public class RequestActionUse extends L2GameClientPacket
 				}
 				
 				new Request(L2RequestType.COUPLE_ACTION, activeChar, pcTarget).setTimeout(10000L);
-				activeChar.sendPacket(new SystemMessage2(SystemMsg.YOU_HAVE_REQUESTED_A_COUPLE_ACTION_WITH_C1).addName(pcTarget));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_REQUESTED_A_COUPLE_ACTION_WITH_C1).addPcName(pcTarget));
 				pcTarget.sendPacket(new ExAskCoupleAction(activeChar.getObjectId(), action.value));
 				
 				if (Config.ALT_SOCIAL_ACTION_REUSE)
@@ -1131,7 +1130,7 @@ public class RequestActionUse extends L2GameClientPacket
 		{
 			if (summon.isPet() && ((activeChar.getLevel() + 20) <= summon.getLevel()))
 			{
-				activeChar.sendPacket(SystemMsg.YOUR_PET_IS_TOO_HIGH_LEVEL_TO_CONTROL);
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_IS_TOO_HIGH_LEVEL_TO_CONTROL));
 				continue;
 			}
 			

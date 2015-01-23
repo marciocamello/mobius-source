@@ -27,8 +27,8 @@ import lineage2.gameserver.model.entity.residence.ClanHall;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.PlaySound;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.ClanTable;
 
 /**
@@ -83,8 +83,8 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 			}
 			
 			siegeClans.clear();
-			broadcastTo(SystemMsg.THIS_CLAN_HALL_WAR_HAS_BEEN_CANCELLED, ATTACKERS);
-			broadcastInZone2(new SystemMessage2(SystemMsg.THE_SIEGE_OF_S1_HAS_ENDED_IN_A_DRAW).addResidenceName(getResidence()));
+			broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THIS_CLAN_HALL_WAR_HAS_BEEN_CANCELLED_NOT_ENOUGH_CLANS_HAVE_REGISTERED), ATTACKERS);
+			broadcastInZone2(SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_ENDED_IN_A_DRAW).addCastleId(getResidence().getId()));
 			reCalcNextTime(false);
 			return;
 		}
@@ -100,12 +100,12 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 			if (temp.size() == 4)
 			{
 				siegeClans.remove(siegeClan);
-				siegeClan.broadcast(SystemMsg.YOU_HAVE_FAILED_IN_YOUR_ATTEMPT_TO_REGISTER_FOR_THE_CLAN_HALL_WAR);
+				siegeClan.broadcast(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_IN_YOUR_ATTEMPT_TO_REGISTER_FOR_THE_CLAN_HALL_WAR_PLEASE_TRY_AGAIN));
 			}
 			else
 			{
 				temp.add(siegeClan);
-				siegeClan.broadcast(SystemMsg.YOU_HAVE_BEEN_REGISTERED_FOR_A_CLAN_HALL_WAR);
+				siegeClan.broadcast(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_BEEN_REGISTERED_FOR_A_CLAN_HALL_WAR_PLEASE_MOVE_TO_THE_LEFT_SIDE_OF_THE_CLAN_HALL_S_ARENA_AND_GET_READY));
 			}
 		}
 		
@@ -131,12 +131,12 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 				newOwner.incReputation(1700, false, toString());
 			}
 			
-			broadcastTo(new SystemMessage2(SystemMsg.S1_CLAN_HAS_DEFEATED_S2).addString(newOwner.getName()).addResidenceName(getResidence()), ATTACKERS, DEFENDERS);
-			broadcastTo(new SystemMessage2(SystemMsg.THE_SIEGE_OF_S1_IS_FINISHED).addResidenceName(getResidence()), ATTACKERS, DEFENDERS);
+			broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.S1_CLAN_HAS_DEFEATED_S2).addString(newOwner.getName()).addCastleId(getResidence().getId()), ATTACKERS, DEFENDERS);
+			broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_IS_FINISHED).addCastleId(getResidence().getId()), ATTACKERS, DEFENDERS);
 		}
 		else
 		{
-			broadcastTo(new SystemMessage2(SystemMsg.THE_SIEGE_OF_S1_HAS_ENDED_IN_A_DRAW).addResidenceName(getResidence()), ATTACKERS);
+			broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_ENDED_IN_A_DRAW).addCastleId(getResidence().getId()), ATTACKERS);
 		}
 		
 		updateParticles(false, ATTACKERS);
@@ -159,22 +159,22 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 		
 		_arenaClosed = true;
 		updateParticles(true, ATTACKERS);
-		broadcastTo(new SystemMessage2(SystemMsg.THE_SIEGE_TO_CONQUER_S1_HAS_BEGUN).addResidenceName(getResidence()), ATTACKERS);
+		broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_TO_CONQUER_S1_HAS_BEGUN).addCastleId(getResidence().getId()), ATTACKERS);
 	}
 	
 	/**
 	 * Method setRegistrationOver.
-	 * @param b boolean
+	 * @param isOver boolean
 	 */
 	@Override
-	public void setRegistrationOver(boolean b)
+	public void setRegistrationOver(boolean isOver)
 	{
-		if (b)
+		if (isOver)
 		{
-			broadcastTo(SystemMsg.THE_REGISTRATION_PERIOD_FOR_A_CLAN_HALL_WAR_HAS_ENDED, ATTACKERS);
+			broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_REGISTRATION_PERIOD_FOR_A_CLAN_HALL_WAR_HAS_ENDED), ATTACKERS);
 		}
 		
-		super.setRegistrationOver(b);
+		super.setRegistrationOver(isOver);
 	}
 	
 	/**
@@ -204,12 +204,12 @@ public class ClanHallMiniGameEvent extends SiegeEvent<ClanHall, CMGSiegeClanObje
 		
 		if (min > 0)
 		{
-			SystemMsg msg = min > 10 ? SystemMsg.IN_S1_MINUTES_THE_GAME_WILL_BEGIN_ALL_PLAYERS_MUST_HURRY_AND_MOVE_TO_THE_LEFT_SIDE_OF_THE_CLAN_HALLS_ARENA : SystemMsg.IN_S1_MINUTES_THE_GAME_WILL_BEGIN_ALL_PLAYERS_PLEASE_ENTER_THE_ARENA_NOW;
-			broadcastTo(new SystemMessage2(msg).addInteger(min), ATTACKERS);
+			SystemMessage msg = SystemMessage.getSystemMessage(min > 10 ? SystemMessageId.IN_S1_MINUTE_S_THE_GAME_WILL_BEGIN_ALL_PLAYERS_MUST_HURRY_AND_MOVE_TO_THE_LEFT_SIDE_OF_THE_CLAN_HALL_S_ARENA : SystemMessageId.IN_S1_MINUTE_S_THE_GAME_WILL_BEGIN_ALL_PLAYERS_PLEASE_ENTER_THE_ARENA_NOW);
+			broadcastTo(msg.addInt(min), ATTACKERS);
 		}
 		else
 		{
-			broadcastTo(new SystemMessage2(SystemMsg.IN_S1_SECONDS_THE_GAME_WILL_BEGIN).addInteger(seconds), ATTACKERS);
+			broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.IN_S1_SECOND_S_THE_GAME_WILL_BEGIN).addInt(seconds), ATTACKERS);
 		}
 	}
 	

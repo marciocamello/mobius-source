@@ -21,7 +21,8 @@ import lineage2.gameserver.model.items.etcitems.AppearanceStone.ShapeTargetType;
 import lineage2.gameserver.model.items.etcitems.AppearanceStone.ShapeType;
 import lineage2.gameserver.network.serverpackets.ExPutShapeShiftingTargetItemResult;
 import lineage2.gameserver.network.serverpackets.ExShapeShiftingResult;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ExItemType;
 import lineage2.gameserver.templates.item.ItemTemplate.Grade;
 import lineage2.gameserver.utils.Util;
@@ -104,7 +105,7 @@ public class RequestExTryToPutShapeShiftingTargetItem extends L2GameClientPacket
 		
 		if (!targetItem.isOther() && (targetItem.getTemplate().getItemGrade() == Grade.NONE))
 		{
-			player.sendPacket(SystemMsg.YOU_CANNOT_MODIFY_OR_RESTORE_NOGRADE_ITEMS);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_MODIFY_OR_RESTORE_NO_GRADE_ITEMS));
 			return;
 		}
 		
@@ -114,7 +115,7 @@ public class RequestExTryToPutShapeShiftingTargetItem extends L2GameClientPacket
 		{
 			if (!Util.contains(stoneGrades, targetItem.getTemplate().getItemGrade()))
 			{
-				player.sendPacket(SystemMsg.ITEM_GRADES_DO_NOT_MATCH);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ITEM_GRADES_DO_NOT_MATCH));
 				return;
 			}
 		}
@@ -134,7 +135,7 @@ public class RequestExTryToPutShapeShiftingTargetItem extends L2GameClientPacket
 			{
 				if (!Util.contains(targetTypes, ShapeTargetType.WEAPON))
 				{
-					player.sendPacket(SystemMsg.WEAPONS_ONLY);
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WEAPONS_ONLY));
 					return;
 				}
 			}
@@ -142,7 +143,7 @@ public class RequestExTryToPutShapeShiftingTargetItem extends L2GameClientPacket
 			{
 				if (!Util.contains(targetTypes, ShapeTargetType.ARMOR))
 				{
-					player.sendPacket(SystemMsg.ARMOR_ONLY);
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ARMOR_ONLY));
 					return;
 				}
 			}
@@ -150,7 +151,7 @@ public class RequestExTryToPutShapeShiftingTargetItem extends L2GameClientPacket
 			{
 				if (!Util.contains(targetTypes, ShapeTargetType.ACCESSORY))
 				{
-					player.sendPacket(SystemMsg.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS));
 					return;
 				}
 			}
@@ -162,7 +163,7 @@ public class RequestExTryToPutShapeShiftingTargetItem extends L2GameClientPacket
 		{
 			if (!Util.contains(itemTypes, targetItem.getExItemType()))
 			{
-				player.sendPacket(SystemMsg.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS));
 				return;
 			}
 		}

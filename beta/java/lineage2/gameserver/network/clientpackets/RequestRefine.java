@@ -22,6 +22,7 @@ import lineage2.gameserver.network.serverpackets.ExVariationResult;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
 import lineage2.gameserver.network.serverpackets.ShortCutRegister;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.AugmentationData;
 
 /**
@@ -64,7 +65,7 @@ public final class RequestRefine extends AbstractRefinePacket
 		
 		if ((targetItem == null) || (refinerItem == null) || (gemstoneItem == null))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THIS_IS_NOT_A_SUITABLE_ITEM));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM));
 			return;
 		}
 		
@@ -77,7 +78,7 @@ public final class RequestRefine extends AbstractRefinePacket
 		
 		if (!isValid(activeChar, targetItem, refinerItem, gemstoneItem))
 		{
-			activeChar.sendPacket(new ExVariationResult(0, 0, 0), new SystemMessage(SystemMessage.AUGMENTATION_FAILED_DUE_TO_INAPPROPRIATE_CONDITIONS));
+			activeChar.sendPacket(new ExVariationResult(0, 0, 0), SystemMessage.getSystemMessage(SystemMessageId.AUGMENTATION_FAILED_DUE_TO_INAPPROPRIATE_CONDITIONS));
 			return;
 		}
 		
@@ -85,11 +86,11 @@ public final class RequestRefine extends AbstractRefinePacket
 		{
 			int stat12 = 0x0000FFFF & targetItem.getAugmentationId();
 			int stat34 = targetItem.getAugmentationId() >> 16;
-			activeChar.sendPacket(new ExVariationResult(stat12, stat34, 1), new SystemMessage(SystemMessage.THE_ITEM_WAS_SUCCESSFULLY_AUGMENTED));
+			activeChar.sendPacket(new ExVariationResult(stat12, stat34, 1), SystemMessage.getSystemMessage(SystemMessageId.AUGMENTING_SUCCESSFUL));
 		}
 		else
 		{
-			activeChar.sendPacket(new ExVariationResult(0, 0, 0), new SystemMessage(SystemMessage.AUGMENTATION_FAILED_DUE_TO_INAPPROPRIATE_CONDITIONS));
+			activeChar.sendPacket(new ExVariationResult(0, 0, 0), SystemMessage.getSystemMessage(SystemMessageId.AUGMENTATION_FAILED_DUE_TO_INAPPROPRIATE_CONDITIONS));
 		}
 	}
 	

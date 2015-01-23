@@ -21,7 +21,7 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 
@@ -29,8 +29,8 @@ public final class SourceOfPower extends DefaultAI
 {
 	private static final int SKILL_ID = 14625;
 	private static final int LIGHT_HEAL_ID = 14736;
-	private static final NpcString MSG1 = NpcString.I_HERMUNKUS_GIVE_MY_POWER_TO_THOSE_WHO_FIGHT_FOR_ME;
-	private static final NpcString MSG2 = NpcString.THOUGH_SMALL_THIS_POWER_WILL_HELP_YOU_GREATLY;
+	private static final NpcStringId MSG1 = NpcStringId.I_HERMUNCUS_GIVE_MY_POWER_TO_THOSE_WHO_FIGHT_FOR_ME;
+	private static final NpcStringId MSG2 = NpcStringId.THOUGH_SMALL_THIS_POWER_WILL_HELP_YOU_GREATLY;
 	private final boolean controlNpc;
 	private final boolean useLightHeal;
 	private boolean firstCast;
@@ -66,8 +66,8 @@ public final class SourceOfPower extends DefaultAI
 					
 					if (controlNpc)
 					{
-						Functions.npcSayToPlayer(getActor(), p, NpcString.RRECEIVE_THIS_POWER_FROM_THE_ANCIENT_GIANT, ChatType.TELL);
-						Functions.npcSayToPlayer(getActor(), p, NpcString.USE_THIS_NEW_POWER_WHEN_THE_TIME_IS_RIGHT, ChatType.TELL);
+						Functions.npcSayToPlayer(getActor(), p, NpcStringId.RECEIVE_THIS_POWER_FORM_THE_ANCIENT_GIANT, ChatType.TELL);
+						Functions.npcSayToPlayer(getActor(), p, NpcStringId.USE_THIS_NEW_POWER_WHEN_THE_TIME_IS_RIGHT, ChatType.TELL);
 					}
 				}
 				else

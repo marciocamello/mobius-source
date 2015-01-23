@@ -34,10 +34,9 @@ import lineage2.gameserver.network.serverpackets.ExOlympiadUserInfo;
 import lineage2.gameserver.network.serverpackets.ExReceiveOlympiad;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.InstantZone;
 import lineage2.gameserver.templates.StatsSet;
@@ -157,16 +156,16 @@ public class OlympiadGame
 	{
 		for (NpcInstance npc : Olympiad.getNpcs())
 		{
-			NpcString npcString;
+			NpcStringId npcString;
 			
 			switch (_type)
 			{
 				case CLASSED:
-					npcString = NpcString.OLYMPIAD_CLASS_INDIVIDUAL_MATCH_IS_GOING_TO_BEGIN_IN_ARENA_S1_IN_A_MOMENT;
+					npcString = NpcStringId.OLYMPIAD_CLASS_INDIVIDUAL_MATCH_IS_GOING_TO_BEGIN_IN_ARENA_S1_IN_A_MOMENT;
 					break;
 				
 				case NON_CLASSED:
-					npcString = NpcString.OLYMPIAD_CLASSFREE_INDIVIDUAL_MATCH_IS_GOING_TO_BEGIN_IN_ARENA_S1_IN_A_MOMENT;
+					npcString = NpcStringId.OLYMPIAD_CLASS_FREE_INDIVIDUAL_MATCH_IS_GOING_TO_BEGIN_IN_ARENA_S1_IN_A_MOMENT;
 					break;
 				
 				default:
@@ -235,7 +234,7 @@ public class OlympiadGame
 		{
 			_team1.takePointsForCrash();
 			_team2.takePointsForCrash();
-			broadcastPacket(new SystemMessage(SystemMessage.THE_GAME_HAS_BEEN_CANCELLED_BECAUSE_THE_OTHER_PARTY_ENDS_THE_GAME), true, false);
+			broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_OPPONENT_MADE_HASTE_WITH_THEIR_TAIL_BETWEEN_THEIR_LEGS_THE_MATCH_HAS_BEEN_CANCELLED), true, false);
 			return;
 		}
 		
@@ -282,7 +281,7 @@ public class OlympiadGame
 		_team1.saveNobleData();
 		_team2.saveNobleData();
 		broadcastRelation();
-		broadcastPacket(new SystemMessage2(SystemMsg.YOU_WILL_BE_MOVED_BACK_TO_TOWN_IN_S1_SECONDS).addInteger(20), true, true);
+		broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_WILL_BE_MOVED_BACK_TO_TOWN_IN_S1_SECOND_S).addInt(20), true, true);
 	}
 	
 	/**
@@ -330,7 +329,22 @@ public class OlympiadGame
 		for (Player player : winnerTeam.getPlayers())
 		{
 			ItemInstance item = player.getInventory().addItem(Config.ALT_OLY_BATTLE_REWARD_ITEM, getType().getReward());
-			player.sendPacket(SystemMessage2.obtainItems(item.getId(), getType().getReward(), 0));
+			if (item.getId() == 57)
+			{
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA).addLong(item.getCount()));
+			}
+			else if (item.getCount() > 1)
+			{
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(item.getId()).addLong(item.getCount()));
+			}
+			else if (item.getEnchantLevel() > 0)
+			{
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2).addInt(item.getEnchantLevel()).addItemName(item.getId()));
+			}
+			else
+			{
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1));
+			}
 			player.sendChanges();
 		}
 		
@@ -353,7 +367,7 @@ public class OlympiadGame
 		}
 		
 		broadcastPacket(packet, true, false);
-		broadcastPacket(new SystemMessage2(SystemMsg.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH).addString(winnerTeam.getName()), false, true);
+		broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_C1_YOU_WIN_THE_MATCH).addString(winnerTeam.getName()), false, true);
 		Log.add("Olympiad Result: " + winnerTeam.getName() + " vs " + looseTeam.getName() + " ... (" + (int) winnerTeam.getDamage() + " vs " + (int) looseTeam.getDamage() + ") " + winnerTeam.getName() + " win " + pointDiff + " points", "olympiad");
 	}
 	
@@ -408,7 +422,7 @@ public class OlympiadGame
 			}
 		}
 		
-		broadcastPacket(SystemMsg.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE, false, true);
+		broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_IS_NO_VICTOR_THE_MATCH_ENDS_IN_A_TIE), false, true);
 		broadcastPacket(packet, true, false);
 		Log.add("Olympiad Result: " + _team1.getName() + " vs " + _team2.getName() + " ... tie", "olympiad");
 	}

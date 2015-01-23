@@ -15,6 +15,7 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -50,7 +51,7 @@ public class RequestExOustFromMPCC extends L2GameClientPacket
 		
 		if (target == null)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THAT_PLAYER_IS_NOT_CURRENTLY_ONLINE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_CURRENTLY_ONLINE));
 			return;
 		}
 		
@@ -61,18 +62,18 @@ public class RequestExOustFromMPCC extends L2GameClientPacket
 		
 		if (!target.isInParty() || !target.getParty().isInCommandChannel() || (activeChar.getParty().getCommandChannel() != target.getParty().getCommandChannel()))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return;
 		}
 		
 		if (activeChar.getParty().getCommandChannel().getChannelLeader() != activeChar)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.ONLY_THE_CREATOR_OF_A_CHANNEL_CAN_ISSUE_A_GLOBAL_COMMAND));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_THE_CREATOR_OF_A_COMMAND_CHANNEL_CAN_ISSUE_A_GLOBAL_COMMAND));
 			return;
 		}
 		
-		target.getParty().getCommandChannel().getChannelLeader().sendPacket(new SystemMessage(SystemMessage.S1_PARTY_HAS_BEEN_DISMISSED_FROM_THE_COMMAND_CHANNEL).addString(target.getName()));
+		target.getParty().getCommandChannel().getChannelLeader().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_HAS_BEEN_DISMISSED_FROM_THE_COMMAND_CHANNEL).addString(target.getName()));
 		target.getParty().getCommandChannel().removeParty(target.getParty());
-		target.getParty().broadCast(new SystemMessage(SystemMessage.YOU_WERE_DISMISSED_FROM_THE_COMMAND_CHANNEL));
+		target.getParty().broadCast(SystemMessage.getSystemMessage(SystemMessageId.YOU_WERE_DISMISSED_FROM_THE_COMMAND_CHANNEL));
 	}
 }

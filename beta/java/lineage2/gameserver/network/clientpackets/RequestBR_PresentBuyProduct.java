@@ -29,6 +29,7 @@ import lineage2.gameserver.network.serverpackets.ExBR_GamePoint;
 import lineage2.gameserver.network.serverpackets.ExBR_PresentBuyProductPacket;
 import lineage2.gameserver.network.serverpackets.ExNoticePostArrived;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.ItemFunctions;
 
 /**
@@ -111,7 +112,7 @@ public class RequestBR_PresentBuyProduct extends L2GameClientPacket
 			
 			if (target.isInBlockList(activeChar))
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.S1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_S1_).addString(receiverName));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_C1).addString(receiverName));
 				return;
 			}
 		}
@@ -123,7 +124,7 @@ public class RequestBR_PresentBuyProduct extends L2GameClientPacket
 			{
 				if (mysql.simple_get_int("target_Id", "character_blocklist", "obj_Id=" + recieverId + " AND target_Id=" + activeChar.getObjectId()) > 0)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.S1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_S1_).addString(receiverName));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_C1).addString(receiverName));
 					return;
 				}
 			}
@@ -131,7 +132,7 @@ public class RequestBR_PresentBuyProduct extends L2GameClientPacket
 		
 		if (recieverId == 0)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.WHEN_THE_RECIPIENT_DOESN_T_EXIST_OR_THE_CHARACTER_HAS_BEEN_DELETED_SENDING_MAIL_IS_NOT_POSSIBLE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WHEN_THE_RECIPIENT_DOESN_T_EXIST_OR_THE_CHARACTER_HAS_BEEN_DELETED_SENDING_MAIL_IS_NOT_POSSIBLE));
 			return;
 		}
 		
@@ -183,7 +184,7 @@ public class RequestBR_PresentBuyProduct extends L2GameClientPacket
 		if (target != null)
 		{
 			target.sendPacket(ExNoticePostArrived.STATIC_TRUE);
-			target.sendPacket(new SystemMessage(SystemMessage.THE_MAIL_HAS_ARRIVED));
+			target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MAIL_HAS_ARRIVED));
 		}
 	}
 }

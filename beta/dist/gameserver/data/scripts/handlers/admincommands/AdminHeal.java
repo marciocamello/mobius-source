@@ -19,6 +19,7 @@ import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
@@ -128,7 +129,7 @@ public class AdminHeal implements IAdminCommandHandler, ScriptFile
 		}
 		else
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 		}
 	}
 	

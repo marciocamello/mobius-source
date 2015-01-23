@@ -29,6 +29,7 @@ import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.Say2;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.GmListTable;
 
 import org.slf4j.Logger;
@@ -156,18 +157,18 @@ public final class PetitionManager implements IPetitionHandler
 				}
 				else
 				{
-					getResponder().sendPacket(new SystemMessage(SystemMessage.ENDING_PETITION_CONSULTATION_WITH_S1).addString(getPetitioner().getName()));
+					getResponder().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PETITION_CONSULTATION_WITH_C1_HAS_ENDED).addString(getPetitioner().getName()));
 					
 					if (endState == PetitionState.Petitioner_Cancel)
 					{
-						getResponder().sendPacket(new SystemMessage(SystemMessage.RECEIPT_NO_S1_PETITION_CANCELLED).addNumber(getId()));
+						getResponder().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.RECEIPT_NO_S1_PETITION_CANCELLED).addInt(getId()));
 					}
 				}
 			}
 			
 			if ((getPetitioner() != null) && getPetitioner().isOnline())
 			{
-				getPetitioner().sendPacket(new SystemMessage(SystemMessage.ENDING_PETITION_CONSULTATION));
+				getPetitioner().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_ENDS_THE_GM_PETITION_CONSULTATION_NPLEASE_GIVE_US_FEEDBACK_ON_THE_PETITION_SERVICE));
 			}
 			
 			getCompletedPetitions().put(getId(), this);
@@ -339,9 +340,9 @@ public final class PetitionManager implements IPetitionHandler
 		
 		currPetition.setResponder(respondingAdmin);
 		currPetition.setState(PetitionState.In_Process);
-		currPetition.sendPetitionerPacket(new SystemMessage(SystemMessage.PETITION_APPLICATION_ACCEPTED));
-		currPetition.sendResponderPacket(new SystemMessage(SystemMessage.PETITION_APPLICATION_ACCEPTED_RECEIPT_NO_IS_S1).addNumber(currPetition.getId()));
-		currPetition.sendResponderPacket(new SystemMessage(SystemMessage.PETITION_CONSULTATION_WITH_S1_UNDER_WAY).addString(currPetition.getPetitioner().getName()));
+		currPetition.sendPetitionerPacket(SystemMessage.getSystemMessage(SystemMessageId.PETITION_APPLICATION_ACCEPTED));
+		currPetition.sendResponderPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PETITION_APPLICATION_HAS_BEEN_ACCEPTED_NRECEIPT_NO_IS_S1).addInt(currPetition.getId()));
+		currPetition.sendResponderPacket(SystemMessage.getSystemMessage(SystemMessageId.STARTING_PETITION_CONSULTATION_WITH_C1).addString(currPetition.getPetitioner().getName()));
 		return true;
 	}
 	
@@ -789,25 +790,25 @@ public final class PetitionManager implements IPetitionHandler
 	{
 		if (GmListTable.getAllVisibleGMs().size() == 0)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NOT_ANY_GMS_THAT_ARE_PROVIDING_CUSTOMER_SERVICE_CURRENTLY));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_GMS_CURRENTLY_VISIBLE_IN_THE_PUBLIC_LIST_AS_THEY_MAY_BE_PERFORMING_OTHER_FUNCTIONS_AT_THE_MOMENT));
 			return;
 		}
 		
 		if (!PetitionManager.getInstance().isPetitioningAllowed())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.CANNOT_CONNECT_TO_PETITION_SERVER));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_GAME_CLIENT_ENCOUNTERED_AN_ERROR_AND_WAS_UNABLE_TO_CONNECT_TO_THE_PETITION_SERVER));
 			return;
 		}
 		
 		if (PetitionManager.getInstance().isPlayerPetitionPending(player))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.ALREADY_APPLIED_FOR_PETITION));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_ONLY_SUBMIT_ONE_PETITION_ACTIVE_AT_A_TIME));
 			return;
 		}
 		
 		if (PetitionManager.getInstance().getPendingPetitionCount() == Config.MAX_PETITIONS_PENDING)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.THE_PETITION_SYSTEM_IS_CURRENTLY_UNAVAILABLE_PLEASE_TRY_AGAIN_LATER));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_PETITION_SERVICE_IS_CURRENTLY_UNAVAILABLE_PLEASE_SEND_A_SUPPORT_TICKET_ON_HTTPS_LINEAGE2_CUSTHELP_COM));
 			return;
 		}
 		
@@ -815,13 +816,13 @@ public final class PetitionManager implements IPetitionHandler
 		
 		if (totalPetitions > Config.MAX_PETITIONS_PER_PLAYER)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.WE_HAVE_RECEIVED_S1_PETITIONS_FROM_YOU_TODAY_AND_THAT_IS_THE_MAXIMUM_THAT_YOU_CAN_SUBMIT_IN_ONE_DAY_YOU_CANNOT_SUBMIT_ANY_MORE_PETITIONS));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WE_HAVE_RECEIVED_S1_PETITIONS_FROM_YOU_TODAY_AND_THAT_IS_THE_MAXIMUM_THAT_YOU_CAN_SUBMIT_IN_ONE_DAY_YOU_CANNOT_SUBMIT_ANY_MORE_PETITIONS));
 			return;
 		}
 		
-		if (txt.length() > 255)
+		if (txt.length() > 800)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.PETITIONS_CANNOT_EXCEED_255_CHARACTERS));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_PETITION_CAN_CONTAIN_UP_TO_800_CHARACTERS));
 			return;
 		}
 		
@@ -832,8 +833,8 @@ public final class PetitionManager implements IPetitionHandler
 		}
 		
 		int petitionId = PetitionManager.getInstance().submitPetition(player, txt, id);
-		player.sendPacket(new SystemMessage(SystemMessage.PETITION_APPLICATION_ACCEPTED_RECEIPT_NO_IS_S1).addNumber(petitionId));
-		player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_SUBMITTED_S1_PETITIONS_YOU_MAY_SUBMIT_S2_MORE_PETITIONS_TODAY).addNumber(totalPetitions).addNumber(Config.MAX_PETITIONS_PER_PLAYER - totalPetitions));
-		player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_S1_PETITIONS_PENDING).addNumber(PetitionManager.getInstance().getPendingPetitionCount()));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PETITION_APPLICATION_HAS_BEEN_ACCEPTED_NRECEIPT_NO_IS_S1).addInt(petitionId));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_SUBMITTED_S1_PETITION_S_NYOU_MAY_SUBMIT_S2_MORE_PETITION_S_TODAY).addInt(totalPetitions).addInt(Config.MAX_PETITIONS_PER_PLAYER - totalPetitions));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S1_PETITIONS_CURRENTLY_ON_THE_WAITING_LIST).addInt(PetitionManager.getInstance().getPendingPetitionCount()));
 	}
 }

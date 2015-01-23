@@ -30,6 +30,7 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.InstantZone;
 import lineage2.gameserver.utils.Location;
@@ -165,7 +166,7 @@ public class Q00512_BladeUnderFoot extends Quest implements ScriptFile
 								{
 									state.giveItems(FragmentOfTheDungeonLeaderMark, RewardMarksCount / party.getMemberCount());
 									state.playSound(SOUND_ITEMGET);
-									state.getPlayer().sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(5));
+									state.getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES).addInt(5));
 								}
 							}
 						}
@@ -173,7 +174,7 @@ public class Q00512_BladeUnderFoot extends Quest implements ScriptFile
 						{
 							qs.giveItems(FragmentOfTheDungeonLeaderMark, RewardMarksCount);
 							qs.playSound(SOUND_ITEMGET);
-							qs.getPlayer().sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(5));
+							qs.getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES).addInt(5));
 						}
 						
 						final Reflection r = ReflectionManager.getInstance().get(prison.getReflectionId());
@@ -239,7 +240,7 @@ public class Q00512_BladeUnderFoot extends Quest implements ScriptFile
 				
 				if ((prison != null) && prison.isLocked())
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.C1_MAY_NOT_RE_ENTER_YET).addName(player));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_MAY_NOT_RE_ENTER_YET).addPcName(player));
 					return null;
 				}
 			}
@@ -265,7 +266,7 @@ public class Q00512_BladeUnderFoot extends Quest implements ScriptFile
 			player.getParty().setReflection(r);
 			r.setParty(player.getParty());
 			r.startCollapseTimer(iz.getTimelimit() * 60 * 1000L);
-			player.getParty().broadCast(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(iz.getTimelimit()));
+			player.getParty().broadCast(SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES).addInt(iz.getTimelimit()));
 			prison.initSpawn(type1[Rnd.get(type1.length)], true);
 		}
 		

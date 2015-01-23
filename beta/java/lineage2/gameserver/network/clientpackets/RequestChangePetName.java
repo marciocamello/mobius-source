@@ -15,6 +15,7 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -51,7 +52,7 @@ public class RequestChangePetName extends L2GameClientPacket
 		{
 			if ((_name.length() < 1) || (_name.length() > 8))
 			{
-				sendPacket(new SystemMessage(SystemMessage.YOUR_PETS_NAME_CAN_BE_UP_TO_8_CHARACTERS));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_S_NAME_CAN_BE_UP_TO_8_CHARACTERS_IN_LENGTH));
 				return;
 			}
 			

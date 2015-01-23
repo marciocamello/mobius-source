@@ -18,6 +18,7 @@ import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -63,7 +64,7 @@ public final class BeastShot extends ScriptItemHandler
 		{
 			if (!isAutoSoulShot)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.PETS_AND_SERVITORS_ARE_NOT_AVAILABLE_AT_THIS_TIME));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PETS_AND_SERVITORS_ARE_NOT_AVAILABLE_AT_THIS_TIME));
 			}
 			
 			return false;
@@ -83,7 +84,7 @@ public final class BeastShot extends ScriptItemHandler
 		{
 			if (!isAutoSoulShot)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.WHEN_PET_OR_SERVITOR_IS_DEAD_SOULSHOTS_OR_SPIRITSHOTS_FOR_PET_OR_SERVITOR_ARE_NOT_AVAILABLE));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_PET_OR_SERVITOR_SAD_ISN_T_IT));
 			}
 			
 			return false;
@@ -107,7 +108,7 @@ public final class BeastShot extends ScriptItemHandler
 					
 					if (!player.getInventory().destroyItem(item, consumption))
 					{
-						player.sendPacket(new SystemMessage(SystemMessage.YOU_DONT_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR));
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SOULSHOTS_NEEDED_FOR_A_PET_SERVITOR));
 						return false;
 					}
 					
@@ -126,7 +127,7 @@ public final class BeastShot extends ScriptItemHandler
 					
 					if (!player.getInventory().destroyItem(item, consumption))
 					{
-						player.sendPacket(new SystemMessage(SystemMessage.YOU_DONT_HAVE_ENOUGH_SPIRITSHOTS_NEEDED_FOR_A_PET_SERVITOR));
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SPIRITSHOTS_NEEDED_FOR_A_PET_SERVITOR));
 						return false;
 					}
 					
@@ -145,7 +146,7 @@ public final class BeastShot extends ScriptItemHandler
 					
 					if (!player.getInventory().destroyItem(item, consumption))
 					{
-						player.sendPacket(new SystemMessage(SystemMessage.YOU_DONT_HAVE_ENOUGH_SPIRITSHOTS_NEEDED_FOR_A_PET_SERVITOR));
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_SPIRITSHOTS_NEEDED_FOR_A_PET_SERVITOR));
 						return false;
 					}
 					

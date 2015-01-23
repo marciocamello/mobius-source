@@ -17,8 +17,8 @@ import lineage2.gameserver.dao.CharacterDAO;
 import lineage2.gameserver.dao.CharacterPostFriendDAO;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExConfirmAddingPostFriend;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 import org.napile.primitive.maps.IntObjectMap;
 
@@ -82,6 +82,6 @@ public class RequestExAddPostFriendForPostBox extends L2GameClientPacket
 		
 		CharacterPostFriendDAO.getInstance().insert(player, targetObjectId);
 		postFriend.put(targetObjectId, CharacterDAO.getInstance().getNameByObjectId(targetObjectId));
-		player.sendPacket(new SystemMessage2(SystemMsg.S1_WAS_SUCCESSFULLY_ADDED_TO_YOUR_CONTACT_LIST).addString(_name), new ExConfirmAddingPostFriend(_name, ExConfirmAddingPostFriend.SUCCESS));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_WAS_SUCCESSFULLY_ADDED_TO_YOUR_CONTACT_LIST).addString(_name), new ExConfirmAddingPostFriend(_name, ExConfirmAddingPostFriend.SUCCESS));
 	}
 }

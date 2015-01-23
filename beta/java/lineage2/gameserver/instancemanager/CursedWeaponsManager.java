@@ -34,6 +34,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 
@@ -499,7 +500,7 @@ public class CursedWeaponsManager
 		
 		cw.initWeapon();
 		removeFromDb(cw.getItemId());
-		announce(new SystemMessage(SystemMessage.S1_HAS_DISAPPEARED_CW).addString(cw.getName()));
+		announce(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED).addString(cw.getName()));
 	}
 	
 	/**
@@ -621,7 +622,7 @@ public class CursedWeaponsManager
 		{
 			cw.activate(player, item);
 			saveData(cw);
-			announce(new SystemMessage(SystemMessage.THE_OWNER_OF_S2_HAS_APPEARED_IN_THE_S1_REGION).addZoneName(player.getLoc()).addString(cw.getName()));
+			announce(SystemMessage.getSystemMessage(SystemMessageId.THE_OWNER_OF_S2_HAS_APPEARED_IN_THE_S1_REGION).addZoneName(player.getLoc().getX(), player.getLoc().getY(), player.getLoc().getZ()).addString(cw.getName()));
 		}
 		else
 		{
@@ -700,7 +701,7 @@ public class CursedWeaponsManager
 		if (cw.dropIt(null, null, player))
 		{
 			saveData(cw);
-			announce(new SystemMessage(SystemMessage.S2_WAS_DROPPED_IN_THE_S1_REGION).addZoneName(player.getLoc()).addItemName(cw.getItemId()));
+			announce(SystemMessage.getSystemMessage(SystemMessageId.S2_WAS_DROPPED_IN_THE_S1_REGION).addZoneName(player.getLoc().getX(), player.getLoc().getY(), player.getLoc().getZ()).addItemName(cw.getItemId()));
 		}
 		else
 		{
@@ -768,9 +769,9 @@ public class CursedWeaponsManager
 	 */
 	public void showUsageTime(Player player, CursedWeapon cw)
 	{
-		SystemMessage sm = new SystemMessage(SystemMessage.S2_MINUTE_OF_USAGE_TIME_ARE_LEFT_FOR_S1);
+		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_S2_MINUTE_S_OF_USAGE_TIME_REMAINING);
 		sm.addString(cw.getName());
-		sm.addNumber(new Long(cw.getTimeLeft() / 60000).intValue());
+		sm.addInt(new Long(cw.getTimeLeft() / 60000).intValue());
 		player.sendPacket(sm);
 	}
 	

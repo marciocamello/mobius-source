@@ -19,6 +19,7 @@ import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.RaidBossInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
 /**
@@ -81,7 +82,7 @@ public final class CannibalisticStakatoChiefInstance extends RaidBossInstance
 				if ((partyMember != null) && pc.isInRange(partyMember, Config.ALT_PARTY_DISTRIBUTION_RANGE))
 				{
 					itemId = ITEMS[Rnd.get(ITEMS.length)];
-					partyMember.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1).addItemName(itemId));
+					partyMember.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1).addItemName(itemId));
 					partyMember.getInventory().addItem(itemId, 1);
 				}
 			}
@@ -89,7 +90,7 @@ public final class CannibalisticStakatoChiefInstance extends RaidBossInstance
 		else
 		{
 			itemId = ITEMS[Rnd.get(ITEMS.length)];
-			pc.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1).addItemName(itemId));
+			pc.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1).addItemName(itemId));
 			pc.getInventory().addItem(itemId, 1);
 		}
 	}

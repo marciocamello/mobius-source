@@ -22,7 +22,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.tables.SkillTable;
 
 /**
@@ -81,7 +81,7 @@ public final class BufferNoobs extends DefaultAI
 					actor.callSkill(skill, target, true);
 				}
 				
-				player.sendPacket(new ExShowScreenMessage(NpcString.NEWBIE_HELPER_HAS_CASTED_BUFFS_ON_$S1, 800, ScreenMessageAlign.TOP_CENTER, player.getName()));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.NEWBIE_HELPER_HAS_CASTED_BUFFS_ON_S1, 800, ScreenMessageAlign.TOP_CENTER, player.getName()));
 			}
 		}
 		

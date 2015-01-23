@@ -22,6 +22,7 @@ import lineage2.gameserver.model.items.ItemInstance.ItemLocation;
 import lineage2.gameserver.model.mail.Mail;
 import lineage2.gameserver.network.serverpackets.ExShowReceivedPostList;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Log;
@@ -66,25 +67,25 @@ public class RequestPostAttachment extends L2GameClientPacket
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_RECEIVE_BECAUSE_THE_PRIVATE_SHOP_OR_WORKSHOP_IS_IN_PROGRESS));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_RECEIVE_BECAUSE_THE_PRIVATE_STORE_OR_WORKSHOP_IS_IN_PROGRESS));
 			return;
 		}
 		
 		if (activeChar.isInTrade())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_RECEIVE_DURING_AN_EXCHANGE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_RECEIVE_DURING_AN_EXCHANGE));
 			return;
 		}
 		
 		if (activeChar.isFishing())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DO_THAT_WHILE_FISHING));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING));
 			return;
 		}
 		
 		if (activeChar.getEnchantScroll() != null)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_RECEIVE_DURING_AN_ITEM_ENHANCEMENT_OR_ATTRIBUTE_ENHANCEMENT));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_RECEIVE_MAIL_WHILE_ENCHANTING_AN_ITEM_BESTOWING_AN_ATTRIBUTE_OR_COMBINING_JEWELS));
 			return;
 		}
 		
@@ -100,7 +101,7 @@ public class RequestPostAttachment extends L2GameClientPacket
 				
 				if ((mail.getAttachments().size() > 0) && !activeChar.isInPeaceZone())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_RECEIVE_IN_A_NON_PEACE_ZONE_LOCATION));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_RECEIVE_IN_A_NON_PEACE_ZONE_LOCATION));
 					return;
 				}
 				
@@ -127,13 +128,13 @@ public class RequestPostAttachment extends L2GameClientPacket
 					
 					if (!activeChar.getInventory().validateWeight(weight))
 					{
-						sendPacket(new SystemMessage(SystemMessage.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL));
+						sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL));
 						return;
 					}
 					
 					if (!activeChar.getInventory().validateCapacity(slots))
 					{
-						sendPacket(new SystemMessage(SystemMessage.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL));
+						sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL));
 						return;
 					}
 					
@@ -141,7 +142,7 @@ public class RequestPostAttachment extends L2GameClientPacket
 					{
 						if (!activeChar.reduceAdena(mail.getPrice(), true))
 						{
-							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_RECEIVE_BECAUSE_YOU_DON_T_HAVE_ENOUGH_ADENA));
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_RECEIVE_BECAUSE_YOU_DON_T_HAVE_ENOUGH_ADENA));
 							return;
 						}
 						
@@ -150,7 +151,7 @@ public class RequestPostAttachment extends L2GameClientPacket
 						if (sender != null)
 						{
 							sender.addAdena(mail.getPrice(), true);
-							sender.sendPacket(new SystemMessage(SystemMessage.S1_ACQUIRED_THE_ATTACHED_ITEM_TO_YOUR_MAIL).addName(activeChar));
+							sender.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_ACQUIRED_THE_ATTACHED_ITEM_TO_YOUR_MAIL).addPcName(activeChar));
 						}
 						else
 						{
@@ -183,12 +184,12 @@ public class RequestPostAttachment extends L2GameClientPacket
 				
 				for (ItemInstance item : items)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_ACQUIRED_S2_S1).addItemName(item.getId()).addNumber(item.getCount()));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S2_S1).addItemName(item.getId()).addLong(item.getCount()));
 					Log.LogItem(activeChar, Log.PostRecieve, item);
 					activeChar.getInventory().addItem(item);
 				}
 				
-				activeChar.sendPacket(new SystemMessage(SystemMessage.MAIL_SUCCESSFULLY_RECEIVED));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MAIL_SUCCESSFULLY_RECEIVED));
 			}
 			catch (ArithmeticException ae)
 			{

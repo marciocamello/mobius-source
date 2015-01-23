@@ -92,7 +92,7 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.TeleportToLocation;
 import lineage2.gameserver.network.serverpackets.ValidateLocation;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.skills.AbnormalEffect;
 import lineage2.gameserver.skills.EffectType;
 import lineage2.gameserver.skills.TimeStamp;
@@ -277,7 +277,7 @@ public abstract class Creature extends GameObject
 				{
 					if ((Math.abs(getZ() - loc.getZ()) > 1000) && !isFlying())
 					{
-						sendPacket(SystemMsg.CANNOT_SEE_TARGET);
+						sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_SEE_TARGET));
 						stopMove();
 						return;
 					}
@@ -502,7 +502,7 @@ public abstract class Creature extends GameObject
 			if (isPlayer() && message)
 			{
 				sendActionFailed();
-				sendPacket(new SystemMessage(SystemMessage.C1S_ATTACK_FAILED).addName(this));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_S_ATTACK_FAILED).addCharName(this));
 			}
 		}
 	}
@@ -564,7 +564,7 @@ public abstract class Creature extends GameObject
 			
 			if (isPlayer() && message)
 			{
-				sendPacket(new SystemMessage(SystemMessage.YOUR_CASTING_HAS_BEEN_INTERRUPTED));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_CASTING_HAS_BEEN_INTERRUPTED));
 			}
 		}
 	}
@@ -750,7 +750,7 @@ public abstract class Creature extends GameObject
 			{
 				damage -= currentMp;
 				setCurrentMp(0);
-				sendPacket(SystemMsg.MP_BECAME_0_AND_THE_ARCANE_SHIELD_IS_DISAPPEARING);
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MP_BECAME_0_AND_THE_ARCANE_SHIELD_IS_DISAPPEARING));
 			}
 			
 			getEffectList().stopEffects(EffectType.AbsorbDamageToMp);
@@ -971,7 +971,7 @@ public abstract class Creature extends GameObject
 		{
 			if (_currentMp < mpConsume2)
 			{
-				sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_MP));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_MP));
 				return;
 			}
 			
@@ -1032,7 +1032,7 @@ public abstract class Creature extends GameObject
 			{
 				if (!consumeItem(skill.getItemConsumeId()[i], itemConsume[i]))
 				{
-					sendPacket(skill.isHandler() ? SystemMsg.INCORRECT_ITEM_COUNT : SystemMsg.THERE_ARE_NOT_ENOUGH_NECESSARY_ITEMS_TO_USE_THE_SKILL);
+					sendPacket(skill.isHandler() ? SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT) : SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NOT_ENOUGH_NECESSARY_ITEMS_TO_USE_THE_SKILL));
 					return;
 				}
 			}
@@ -1048,13 +1048,13 @@ public abstract class Creature extends GameObject
 		
 		if (skill.getSoulsConsume() > getConsumedSouls())
 		{
-			sendPacket(new SystemMessage(SystemMessage.THERE_IS_NOT_ENOUGHT_SOUL));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SOULS));
 			return;
 		}
 		
 		if (skill.getEnergyConsume() > getAgathionEnergy())
 		{
-			sendPacket(SystemMsg.THE_SKILL_HAS_BEEN_CANCELED_BECAUSE_YOU_HAVE_INSUFFICIENT_ENERGY);
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_SKILL_WAS_CANCELED_DUE_TO_INSUFFICIENT_ENERGY));
 			return;
 		}
 		
@@ -1081,15 +1081,15 @@ public abstract class Creature extends GameObject
 		{
 			if (skill.getSkillType() == SkillType.PET_SUMMON)
 			{
-				sendPacket(new SystemMessage(SystemMessage.SUMMON_A_PET));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SUMMONING_YOUR_PET));
 			}
 			else if (!skill.isHandler())
 			{
-				sendPacket(new SystemMessage(SystemMessage.YOU_USE_S1).addSkillName(magicId, level));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_USE_S1).addSkillName(magicId, level));
 			}
 			else
 			{
-				sendPacket(new SystemMessage(SystemMessage.YOU_USE_S1).addItemName(skill.getItemConsumeId()[0]));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_USE_S1).addItemName(skill.getItemConsumeId()[0]));
 			}
 		}
 		
@@ -1630,8 +1630,8 @@ public abstract class Creature extends GameObject
 		
 		if (Rnd.chance(calcStat(skill.isMagic() ? Stats.REFLECT_MAGIC_SKILL : Stats.REFLECT_PHYSIC_SKILL, 0, attacker, skill)))
 		{
-			sendPacket(new SystemMessage(SystemMessage.YOU_COUNTERED_C1S_ATTACK).addName(attacker));
-			attacker.sendPacket(new SystemMessage(SystemMessage.C1_DODGES_THE_ATTACK).addName(this));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_COUNTERED_C1_S_ATTACK).addCharName(attacker));
+			attacker.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_DODGED_THE_ATTACK).addCharName(this));
 			return true;
 		}
 		
@@ -1664,20 +1664,20 @@ public abstract class Creature extends GameObject
 		if (Rnd.chance(calcStat(Stats.COUNTER_ATTACK, 0, attacker, skill)))
 		{
 			double damage = (1189 * getPAtk(attacker)) / Math.max(attacker.getPDef(this), 1);
-			attacker.sendPacket(new SystemMessage(SystemMessage.C1S_IS_PERFORMING_A_COUNTERATTACK).addName(this));
+			attacker.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_PERFORMING_A_COUNTERATTACK).addCharName(this));
 			
 			if (blow)
 			{
-				sendPacket(new SystemMessage(SystemMessage.C1S_IS_PERFORMING_A_COUNTERATTACK).addName(this));
-				sendPacket(new SystemMessage(SystemMessage.C1_HAS_GIVEN_C2_DAMAGE_OF_S3).addName(this).addName(attacker).addNumber((long) damage));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_PERFORMING_A_COUNTERATTACK).addCharName(this));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2_S4).addCharName(this).addCharName(attacker).addLong((long) damage));
 				attacker.reduceCurrentHp(damage, damage, this, skill, true, true, false, false, false, false, true);
 			}
 			else
 			{
-				sendPacket(new SystemMessage(SystemMessage.C1S_IS_PERFORMING_A_COUNTERATTACK).addName(this));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_PERFORMING_A_COUNTERATTACK).addCharName(this));
 			}
 			
-			sendPacket(new SystemMessage(SystemMessage.C1_HAS_GIVEN_C2_DAMAGE_OF_S3).addName(this).addName(attacker).addNumber((long) damage));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2_S4).addCharName(this).addCharName(attacker).addLong((long) damage));
 			attacker.reduceCurrentHp(damage, damage, this, skill, true, true, false, false, false, false, true);
 		}
 	}
@@ -1978,7 +1978,7 @@ public abstract class Creature extends GameObject
 			{
 				if (!consumeItem(skill.getItemConsumeId()[i], itemConsume[i]))
 				{
-					sendPacket(skill.isHandler() ? SystemMsg.INCORRECT_ITEM_COUNT : SystemMsg.THERE_ARE_NOT_ENOUGH_NECESSARY_ITEMS_TO_USE_THE_SKILL);
+					sendPacket(skill.isHandler() ? SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT) : SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NOT_ENOUGH_NECESSARY_ITEMS_TO_USE_THE_SKILL));
 					return;
 				}
 			}
@@ -2048,18 +2048,18 @@ public abstract class Creature extends GameObject
 		{
 			if (skill.getSkillType() == SkillType.PET_SUMMON)
 			{
-				sendPacket(new SystemMessage(SystemMessage.SUMMON_A_PET));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SUMMONING_YOUR_PET));
 			}
 			else if (!skill.isHandler())
 			{
 				if (!skill.isAlterSkill())
 				{
-					sendPacket(new SystemMessage(SystemMessage.YOU_USE_S1).addSkillName(magicId, level));
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_USE_S1).addSkillName(magicId, level));
 				}
 			}
 			else
 			{
-				sendPacket(new SystemMessage(SystemMessage.YOU_USE_S1).addItemName(skill.getItemConsumeId()[0]));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_USE_S1).addItemName(skill.getItemConsumeId()[0]));
 			}
 		}
 		
@@ -2074,7 +2074,7 @@ public abstract class Creature extends GameObject
 		{
 			if (_currentMp < mpConsume1)
 			{
-				sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_MP));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_MP));
 				onCastEndTime(false);
 				return;
 			}
@@ -3647,7 +3647,7 @@ public abstract class Creature extends GameObject
 			
 			if ((Math.abs(getZ() - target.getZ()) > 1000) && !isFlying())
 			{
-				sendPacket(SystemMsg.CANNOT_SEE_TARGET);
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_SEE_TARGET));
 				return false;
 			}
 			
@@ -4377,7 +4377,7 @@ public abstract class Creature extends GameObject
 			
 			if (player != null)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 				player.sendActionFailed();
 			}
 			
@@ -4485,7 +4485,7 @@ public abstract class Creature extends GameObject
 		
 		if ((skill.getCastRange() < 32767) && (skill.getSkillType() != SkillType.TAKECASTLE) && (skill.getSkillType() != SkillType.TAKEFORTRESS) && !GeoEngine.canSeeTarget(this, aimingTarget, isFlying()))
 		{
-			sendPacket(SystemMsg.CANNOT_SEE_TARGET);
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_SEE_TARGET));
 			broadcastPacket(new MagicSkillCanceled(getObjectId()));
 			onCastEndTime(false);
 			return;
@@ -4530,7 +4530,7 @@ public abstract class Creature extends GameObject
 			
 			if ((_currentMp < mpConsume2) && isPlayable())
 			{
-				sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_MP));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_MP));
 				onCastEndTime(false);
 				return;
 			}
@@ -4608,7 +4608,7 @@ public abstract class Creature extends GameObject
 				}
 				else
 				{
-					sendPacket(SystemMsg.CANNOT_SEE_TARGET);
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_SEE_TARGET));
 				}
 				break;
 			
@@ -4752,7 +4752,7 @@ public abstract class Creature extends GameObject
 		{
 			if (sendMessage)
 			{
-				attacker.sendPacket(new SystemMessage(SystemMessage.THE_ATTACK_HAS_BEEN_BLOCKED));
+				attacker.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED));
 			}
 			
 			return;
@@ -4891,7 +4891,7 @@ public abstract class Creature extends GameObject
 		
 		if (isDamageBlocked() && (attacker != null) && (attacker != this))
 		{
-			attacker.sendPacket(new SystemMessage(SystemMessage.THE_ATTACK_HAS_BEEN_BLOCKED));
+			attacker.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED));
 			return;
 		}
 		
@@ -7562,7 +7562,7 @@ public abstract class Creature extends GameObject
 	{
 		if (miss && target.isPlayer() && !target.isDamageBlocked())
 		{
-			target.sendPacket(new SystemMessage(SystemMessage.C1_HAS_EVADED_C2S_ATTACK).addName(target).addName(this));
+			target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK).addCharName(target).addCharName(this));
 		}
 	}
 	

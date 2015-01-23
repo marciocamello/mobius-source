@@ -18,6 +18,7 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ExAutoSoulShot;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
 
@@ -78,7 +79,7 @@ public final class FishShots extends ScriptItemHandler
 		{
 			if (!isAutoSoulShot)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.CANNOT_USE_SOULSHOTS));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_USE_SOULSHOTS));
 			}
 			
 			return false;
@@ -94,11 +95,11 @@ public final class FishShots extends ScriptItemHandler
 			if (isAutoSoulShot)
 			{
 				player.removeAutoSoulShot(FishshotId);
-				player.sendPacket(new ExAutoSoulShot(FishshotId, false), new SystemMessage(SystemMessage.THE_AUTOMATIC_USE_OF_S1_WILL_NOW_BE_CANCELLED).addString(item.getName()));
+				player.sendPacket(new ExAutoSoulShot(FishshotId, false), SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED).addString(item.getName()));
 				return false;
 			}
 			
-			player.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_SPIRITSHOTS));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SPIRITSHOT_FOR_THAT));
 			return false;
 		}
 		
@@ -111,14 +112,14 @@ public final class FishShots extends ScriptItemHandler
 				return false;
 			}
 			
-			player.sendPacket(new SystemMessage(SystemMessage.THIS_FISHING_SHOT_IS_NOT_FIT_FOR_THE_FISHING_POLE_CRYSTAL));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_THE_WRONG_GRADE_OF_SOULSHOT_FOR_THAT_FISHING_POLE));
 			return false;
 		}
 		
 		if (player.getInventory().destroyItem(item, 1L))
 		{
 			weaponInst.setChargedFishshot(true);
-			player.sendPacket(new SystemMessage(SystemMessage.POWER_OF_MANA_ENABLED));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_SPIRITSHOT_HAS_BEEN_ENABLED));
 			player.broadcastPacket(new MagicSkillUse(player, player, _skillIds[grade], 1, 0, 0));
 		}
 		

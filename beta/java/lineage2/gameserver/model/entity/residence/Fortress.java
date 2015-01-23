@@ -24,7 +24,8 @@ import lineage2.gameserver.dao.FortressDAO;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.pledge.Clan;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
@@ -219,7 +220,7 @@ public class Fortress extends Residence
 		
 		if (getCycle() >= REMOVE_CYCLE)
 		{
-			getOwner().broadcastToOnlineMembers(SystemMsg.ENEMY_BLOOD_PLEDGES_HAVE_INTRUDED_INTO_THE_FORTRESS);
+			getOwner().broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.ENEMY_BLOOD_PLEDGES_HAVE_INTRUDED_INTO_THE_FORTRESS));
 			changeOwner(null);
 			return;
 		}

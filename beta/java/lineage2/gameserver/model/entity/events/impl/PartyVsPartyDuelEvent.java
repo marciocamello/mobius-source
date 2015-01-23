@@ -33,9 +33,9 @@ import lineage2.gameserver.network.serverpackets.ExDuelAskStart;
 import lineage2.gameserver.network.serverpackets.ExDuelEnd;
 import lineage2.gameserver.network.serverpackets.ExDuelReady;
 import lineage2.gameserver.network.serverpackets.SocialAction;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.InstantZone;
 
 /**
@@ -86,7 +86,7 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 		switch (_winner)
 		{
 			case NONE:
-				sendPacket(SystemMsg.THE_DUEL_HAS_ENDED_IN_A_TIE);
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_DUEL_HAS_ENDED_IN_A_TIE));
 				break;
 			
 			case RED:
@@ -97,7 +97,7 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 				
 				if (winner != null)
 				{
-					sendPacket(new SystemMessage2(SystemMsg.C1S_PARTY_HAS_WON_THE_DUEL).addName(winners.get(0).getPlayer()));
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_HAS_WON_THE_DUEL).addPcName(winners.get(0).getPlayer()));
 					
 					for (DuelSnapshotObject d : lossers)
 					{
@@ -106,7 +106,7 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 				}
 				else
 				{
-					sendPacket(SystemMsg.THE_DUEL_HAS_ENDED_IN_A_TIE);
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_DUEL_HAS_ENDED_IN_A_TIE));
 				}
 				break;
 		}
@@ -159,13 +159,13 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 	{
 		if (player.getParty() == null)
 		{
-			player.sendPacket(SystemMsg.YOU_ARE_UNABLE_TO_REQUEST_A_DUEL_AT_THIS_TIME);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_UNABLE_TO_REQUEST_A_DUEL_AT_THIS_TIME));
 			return false;
 		}
 		
 		if (target.getParty() == null)
 		{
-			player.sendPacket(SystemMsg.SINCE_THE_PERSON_YOU_CHALLENGED_IS_NOT_CURRENTLY_IN_A_PARTY_THEY_CANNOT_DUEL_AGAINST_YOUR_PARTY);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SINCE_THE_PERSON_YOU_CHALLENGED_IS_NOT_CURRENTLY_IN_A_PARTY_THEY_CANNOT_DUEL_AGAINST_YOUR_PARTY));
 			return false;
 		}
 		
@@ -174,7 +174,7 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 		
 		if ((player != party1.getPartyLeader()) || (target != party2.getPartyLeader()))
 		{
-			player.sendPacket(SystemMsg.YOU_ARE_UNABLE_TO_REQUEST_A_DUEL_AT_THIS_TIME);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_UNABLE_TO_REQUEST_A_DUEL_AT_THIS_TIME));
 			return false;
 		}
 		
@@ -208,8 +208,8 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 		request.set("duelType", 1);
 		player.setRequest(request);
 		target.setRequest(request);
-		player.sendPacket(new SystemMessage2(SystemMsg.C1S_PARTY_HAS_BEEN_CHALLENGED_TO_A_DUEL).addName(target));
-		target.sendPacket(new SystemMessage2(SystemMsg.C1S_PARTY_HAS_CHALLENGED_YOUR_PARTY_TO_A_DUEL).addName(player), new ExDuelAskStart(player.getName(), 1));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_HAS_BEEN_CHALLENGED_TO_A_DUEL).addPcName(target));
+		target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_HAS_CHALLENGED_YOUR_PARTY_TO_A_DUEL).addPcName(player), new ExDuelAskStart(player.getName(), 1));
 	}
 	
 	/**
@@ -284,7 +284,7 @@ public class PartyVsPartyDuelEvent extends DuelEvent
 			return;
 		}
 		
-		sendPacket(SystemMsg.THE_OTHER_PARTY_IS_FROZEN, team.revert().name());
+		sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_OTHER_PARTY_IS_FROZEN_PLEASE_WAIT_A_MOMENT), team.revert().name());
 		player.stopAttackStanceTask();
 		player.startFrozen();
 		player.setTeam(TeamType.NONE);

@@ -29,6 +29,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExMailArrived;
 import lineage2.gameserver.network.serverpackets.ShowBoard;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 
@@ -409,7 +410,7 @@ public final class PrivateMail extends Functions implements ScriptFile, ICommuni
 			
 			if (rset.next())
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOUVE_GOT_MAIL));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_GOT_MAIL));
 				player.sendPacket(ExMailArrived.STATIC);
 			}
 			rset.close();

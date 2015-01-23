@@ -14,8 +14,8 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.dao.CharacterPostFriendDAO;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 import org.apache.commons.lang3.StringUtils;
 import org.napile.primitive.maps.IntObjectMap;
@@ -68,12 +68,12 @@ public class RequestExDeletePostFriendForPostBox extends L2GameClientPacket
 		
 		if (key == 0)
 		{
-			player.sendPacket(SystemMsg.THE_NAME_IS_NOT_CURRENTLY_REGISTERED);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_NAME_IS_NOT_CURRENTLY_REGISTERED));
 			return;
 		}
 		
 		player.getPostFriends().remove(key);
 		CharacterPostFriendDAO.getInstance().delete(player, key);
-		player.sendPacket(new SystemMessage2(SystemMsg.S1_WAS_SUCCESSFULLY_DELETED_FROM_YOUR_CONTACT_LIST).addString(_name));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_WAS_SUCCESSFULLY_DELETED_FROM_YOUR_CONTACT_LIST).addString(_name));
 	}
 }

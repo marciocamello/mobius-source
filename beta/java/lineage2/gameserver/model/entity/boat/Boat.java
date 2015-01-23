@@ -29,8 +29,9 @@ import lineage2.gameserver.model.entity.events.impl.BoatWayEvent;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ActionFail;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.CharTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.utils.Location;
@@ -162,13 +163,13 @@ public abstract class Boat extends Creature
 		
 		if (player.getSummonList().size() > 0)
 		{
-			player.sendPacket(SystemMsg.YOU_SHOULD_RELEASE_YOUR_PET_OR_SERVITOR_SO_THAT_IT_DOES_NOT_FALL_OFF_OF_THE_BOAT_AND_DROWN, ActionFail.STATIC);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_SHOULD_RELEASE_YOUR_PET_OR_SERVITOR_SO_THAT_IT_DOES_NOT_FALL_OFF_OF_THE_BOAT_AND_DROWN), ActionFail.STATIC);
 			return;
 		}
 		
 		if (player.getTransformation() != 0)
 		{
-			player.sendPacket(SystemMsg.YOU_CANNOT_BOARD_A_SHIP_WHILE_YOU_ARE_POLYMORPHED, ActionFail.STATIC);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_BOARD_A_SHIP_WHILE_YOU_ARE_POLYMORPHED), ActionFail.STATIC);
 			return;
 		}
 		

@@ -21,8 +21,8 @@ import lineage2.gameserver.model.entity.events.objects.SiegeClanObject;
 import lineage2.gameserver.model.entity.residence.ClanHall;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.PlaySound;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -57,14 +57,14 @@ public class ClanHallSiegeEvent extends SiegeEvent<ClanHall, SiegeClanObject>
 		
 		if (getObjects(ATTACKERS).size() == 0)
 		{
-			broadcastInZone2(new SystemMessage2(SystemMsg.THE_SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST).addResidenceName(getResidence()));
+			broadcastInZone2(SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST).addCastleId(getResidence().getId()));
 			reCalcNextTime(false);
 			return;
 		}
 		
 		SiegeClanDAO.getInstance().delete(getResidence());
 		updateParticles(true, ATTACKERS);
-		broadcastTo(new SystemMessage2(SystemMsg.THE_SIEGE_TO_CONQUER_S1_HAS_BEGUN).addResidenceName(getResidence()), ATTACKERS);
+		broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_TO_CONQUER_S1_HAS_BEGUN).addCastleId(getResidence().getId()), ATTACKERS);
 		super.startEvent();
 	}
 	
@@ -81,12 +81,12 @@ public class ClanHallSiegeEvent extends SiegeEvent<ClanHall, SiegeClanObject>
 		{
 			newOwner.broadcastToOnlineMembers(PlaySound.SIEGE_VICTORY);
 			newOwner.incReputation(1700, false, toString());
-			broadcastTo(new SystemMessage2(SystemMsg.S1_CLAN_HAS_DEFEATED_S2).addString(newOwner.getName()).addResidenceName(getResidence()), ATTACKERS);
-			broadcastTo(new SystemMessage2(SystemMsg.THE_SIEGE_OF_S1_IS_FINISHED).addResidenceName(getResidence()), ATTACKERS);
+			broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.S1_CLAN_HAS_DEFEATED_S2).addString(newOwner.getName()).addCastleId(getResidence().getId()), ATTACKERS);
+			broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_IS_FINISHED).addCastleId(getResidence().getId()), ATTACKERS);
 		}
 		else
 		{
-			broadcastTo(new SystemMessage2(SystemMsg.THE_SIEGE_OF_S1_HAS_ENDED_IN_A_DRAW).addResidenceName(getResidence()), ATTACKERS);
+			broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_ENDED_IN_A_DRAW).addCastleId(getResidence().getId()), ATTACKERS);
 		}
 		
 		updateParticles(false, ATTACKERS);
@@ -97,17 +97,17 @@ public class ClanHallSiegeEvent extends SiegeEvent<ClanHall, SiegeClanObject>
 	
 	/**
 	 * Method setRegistrationOver.
-	 * @param b boolean
+	 * @param isOver boolean
 	 */
 	@Override
-	public void setRegistrationOver(boolean b)
+	public void setRegistrationOver(boolean isOver)
 	{
-		if (b)
+		if (isOver)
 		{
-			broadcastTo(new SystemMessage2(SystemMsg.THE_DEADLINE_TO_REGISTER_FOR_THE_SIEGE_OF_S1_HAS_PASSED).addResidenceName(getResidence()), ATTACKERS);
+			broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_DEADLINE_TO_REGISTER_FOR_THE_SIEGE_OF_S1_HAS_PASSED).addCastleId(getResidence().getId()), ATTACKERS);
 		}
 		
-		super.setRegistrationOver(b);
+		super.setRegistrationOver(isOver);
 	}
 	
 	/**
@@ -189,10 +189,10 @@ public class ClanHallSiegeEvent extends SiegeEvent<ClanHall, SiegeClanObject>
 		{
 			if (force)
 			{
-				targetPlayer.sendPacket(SystemMsg.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEFIELDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
+				targetPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEGROUNDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE));
 			}
 			
-			resurrectPlayer.sendPacket(force ? SystemMsg.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEFIELDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE : SystemMsg.INVALID_TARGET);
+			resurrectPlayer.sendPacket(force ? SystemMessage.getSystemMessage(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEGROUNDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE) : SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return false;
 		}
 		
@@ -202,10 +202,10 @@ public class ClanHallSiegeEvent extends SiegeEvent<ClanHall, SiegeClanObject>
 		{
 			if (force)
 			{
-				targetPlayer.sendPacket(SystemMsg.IF_A_BASE_CAMP_DOES_NOT_EXIST_RESURRECTION_IS_NOT_POSSIBLE);
+				targetPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.IF_A_BASE_CAMP_DOES_NOT_EXIST_RESURRECTION_IS_NOT_POSSIBLE));
 			}
 			
-			resurrectPlayer.sendPacket(force ? SystemMsg.IF_A_BASE_CAMP_DOES_NOT_EXIST_RESURRECTION_IS_NOT_POSSIBLE : SystemMsg.INVALID_TARGET);
+			resurrectPlayer.sendPacket(force ? SystemMessage.getSystemMessage(SystemMessageId.IF_A_BASE_CAMP_DOES_NOT_EXIST_RESURRECTION_IS_NOT_POSSIBLE) : SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return false;
 		}
 		
@@ -214,7 +214,7 @@ public class ClanHallSiegeEvent extends SiegeEvent<ClanHall, SiegeClanObject>
 			return true;
 		}
 		
-		resurrectPlayer.sendPacket(SystemMsg.INVALID_TARGET);
+		resurrectPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 		return false;
 	}
 }

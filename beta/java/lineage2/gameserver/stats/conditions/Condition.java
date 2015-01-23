@@ -12,7 +12,7 @@
  */
 package lineage2.gameserver.stats.conditions;
 
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Env;
 
 /**
@@ -22,7 +22,7 @@ import lineage2.gameserver.stats.Env;
 public abstract class Condition
 {
 	public static final Condition[] EMPTY_ARRAY = new Condition[0];
-	private SystemMsg _message;
+	private SystemMessageId _message;
 	
 	/**
 	 * Method setSystemMsg.
@@ -30,14 +30,14 @@ public abstract class Condition
 	 */
 	public final void setSystemMsg(int msgId)
 	{
-		_message = SystemMsg.valueOf(msgId);
+		_message = SystemMessageId.getSystemMessageId(msgId);
 	}
 	
 	/**
 	 * Method getSystemMsg.
 	 * @return SystemMsg
 	 */
-	public final SystemMsg getSystemMsg()
+	public final SystemMessageId getSystemMsg()
 	{
 		return _message;
 	}

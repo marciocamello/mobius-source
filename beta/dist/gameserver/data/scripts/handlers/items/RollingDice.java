@@ -18,6 +18,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.Dice;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -54,13 +55,13 @@ public final class RollingDice extends ScriptItemHandler
 		
 		if (player.isInOlympiadMode())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_USE_THAT_ITEM_IN_A_OLYMPIAD_MATCH));
 			return false;
 		}
 		
 		if (player.isSitting())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOVE_WHILE_SITTING));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_MOVE_WHILE_SITTING));
 			return false;
 		}
 		
@@ -68,11 +69,11 @@ public final class RollingDice extends ScriptItemHandler
 		
 		if (number == 0)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_MAY_NOT_THROW_THE_DICE_AT_THIS_TIMETRY_AGAIN_LATER));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_THROW_THE_DICE_AT_THIS_TIME_TRY_AGAIN_LATER));
 			return false;
 		}
 		
-		player.broadcastPacket(new Dice(player.getObjectId(), itemId, number, player.getX() - 30, player.getY() - 30, player.getZ()), new SystemMessage(SystemMessage.S1_HAS_ROLLED_S2).addString(player.getName()).addNumber(number));
+		player.broadcastPacket(new Dice(player.getObjectId(), itemId, number, player.getX() - 30, player.getY() - 30, player.getZ()), SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_ROLLED_A_S2).addString(player.getName()).addInt(number));
 		return true;
 	}
 	

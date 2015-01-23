@@ -32,7 +32,7 @@ import lineage2.gameserver.model.entity.events.objects.SpawnExObject;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
@@ -65,7 +65,7 @@ public final class GustavInstance extends SiegeGuardInstance implements _34Siege
 	{
 		super.onSpawn();
 		_canDead.set(false);
-		Functions.npcShout(this, NpcString.PREPARE_TO_DIE_FOREIGN_INVADERS_I_AM_GUSTAV_THE_ETERNAL_RULER_OF_THIS_FORTRESS_AND_I_HAVE_TAKEN_UP_MY_SWORD_TO_REPEL_THEE);
+		Functions.npcShout(this, NpcStringId.PREPARE_TO_DIE_FOREIGN_INVADERS_I_AM_GUSTAV_THE_ETERNAL_RULER_OF_THIS_FORTRESS_AND_I_HAVE_TAKEN_UP_MY_SWORD_TO_REPEL_THEE);
 	}
 	
 	/**
@@ -195,13 +195,13 @@ public final class GustavInstance extends SiegeGuardInstance implements _34Siege
 	
 	/**
 	 * Method teleChatSay.
-	 * @return NpcString
+	 * @return NpcStringId
 	 * @see npc.model.residences.clanhall._34SiegeGuard#teleChatSay()
 	 */
 	@Override
-	public NpcString teleChatSay()
+	public NpcStringId teleChatSay()
 	{
-		return NpcString.THIS_IS_UNBELIEVABLE_HAVE_I_REALLY_BEEN_DEFEATED_I_SHALL_RETURN_AND_TAKE_YOUR_HEAD;
+		return NpcStringId.THIS_IS_UNBELIEVABLE_HAVE_I_REALLY_BEEN_DEFEATED_I_SHALL_RETURN_AND_TAKE_YOUR_HEAD;
 	}
 	
 	/**

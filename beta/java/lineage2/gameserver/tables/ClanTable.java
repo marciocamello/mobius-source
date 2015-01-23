@@ -33,6 +33,7 @@ import lineage2.gameserver.model.pledge.SubUnit;
 import lineage2.gameserver.model.pledge.UnitMember;
 import lineage2.gameserver.network.serverpackets.PledgeShowMemberListDeleteAll;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.SiegeUtils;
 import lineage2.gameserver.utils.Util;
 
@@ -380,7 +381,7 @@ public class ClanTable
 		{
 			clanMember.setClan(null);
 			clanMember.setTitle(null);
-			clanMember.sendPacket(PledgeShowMemberListDeleteAll.STATIC, new SystemMessage(SystemMessage.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS));
+			clanMember.sendPacket(PledgeShowMemberListDeleteAll.STATIC, SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS));
 			clanMember.broadcastCharInfo();
 			clanMember.setLeaveClanTime(curtime);
 		}
@@ -388,7 +389,7 @@ public class ClanTable
 		clan.flush();
 		deleteClanFromDb(clan.getClanId());
 		_clans.remove(clan.getClanId());
-		player.sendPacket(new SystemMessage(SystemMessage.CLAN_HAS_DISPERSED));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_HAS_DISPERSED));
 		player.setDeleteClanTime(curtime);
 	}
 	
@@ -475,13 +476,13 @@ public class ClanTable
 		{
 			member.setAllyId(0);
 			member.broadcastClanStatus(false, true, false);
-			member.broadcastToOnlineMembers(new SystemMessage(SystemMessage.YOU_HAVE_WITHDRAWN_FROM_THE_ALLIANCE));
+			member.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_WITHDRAWN_FROM_THE_ALLIANCE));
 			member.setLeavedAlly();
 		}
 		
 		deleteAllyFromDb(allyId);
 		_alliances.remove(allyId);
-		player.sendPacket(new SystemMessage(SystemMessage.THE_ALLIANCE_HAS_BEEN_DISSOLVED));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_ALLIANCE_HAS_BEEN_DISSOLVED));
 		player.getClan().setDissolvedAlly();
 	}
 	
@@ -545,8 +546,8 @@ public class ClanTable
 		{
 			DbUtils.closeQuietly(con, statement);
 		}
-		clan1.broadcastToOnlineMembers(new SystemMessage(SystemMessage.CLAN_WAR_HAS_BEEN_DECLARED_AGAINST_S1_CLAN_IF_YOU_ARE_KILLED_DURING_THE_CLAN_WAR_BY_MEMBERS_OF_THE_OPPOSING_CLAN_THE_EXPERIENCE_PENALTY_WILL_BE_REDUCED_TO_1_4_OF_NORMAL).addString(clan2.getName()));
-		clan2.broadcastToOnlineMembers(new SystemMessage(SystemMessage.S1_CLAN_HAS_DECLARED_CLAN_WAR).addString(clan1.getName()));
+		clan1.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_DECLARED_A_CLAN_WAR_WITH_S1).addString(clan2.getName()));
+		clan2.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DECLARED_A_CLAN_WAR_THE_WAR_WILL_AUTOMATICALLY_START_IF_YOU_KILL_S1_CLAN_MEMBERS_5_TIMES_WITHIN_A_WEEK).addString(clan1.getName()));
 	}
 	
 	/**
@@ -579,8 +580,8 @@ public class ClanTable
 		{
 			DbUtils.closeQuietly(con, statement);
 		}
-		clan1.broadcastToOnlineMembers(new SystemMessage(SystemMessage.THE_WAR_AGAINST_S1_CLAN_HAS_BEEN_STOPPED).addString(clan2.getName()));
-		clan2.broadcastToOnlineMembers(new SystemMessage(SystemMessage.S1_CLAN_HAS_STOPPED_THE_WAR).addString(clan1.getName()));
+		clan1.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.THE_WAR_AGAINST_S1_CLAN_HAS_BEEN_STOPPED).addString(clan2.getName()));
+		clan2.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_S1_HAS_DECIDED_TO_STOP_THE_WAR).addString(clan1.getName()));
 	}
 	
 	/**

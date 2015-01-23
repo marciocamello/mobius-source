@@ -17,6 +17,7 @@ import lineage2.gameserver.model.Request;
 import lineage2.gameserver.model.Request.L2RequestType;
 import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -74,7 +75,7 @@ public class RequestAnswerJoinAlly extends L2GameClientPacket
 		if (requestor == null)
 		{
 			request.cancel();
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THAT_PLAYER_IS_NOT_ONLINE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
 			activeChar.sendActionFailed();
 			return;
 		}
@@ -96,14 +97,14 @@ public class RequestAnswerJoinAlly extends L2GameClientPacket
 		if (_response == 0)
 		{
 			request.cancel();
-			requestor.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_INVITE_A_CLAN_INTO_THE_ALLIANCE));
+			requestor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_INVITE_A_CLAN_INTO_THE_ALLIANCE));
 			return;
 		}
 		
 		try
 		{
 			Alliance ally = requestor.getAlliance();
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_ACCEPTED_THE_ALLIANCE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACCEPTED_THE_ALLIANCE));
 			activeChar.getClan().setAllyId(requestor.getAllyId());
 			activeChar.getClan().updateClanInDB();
 			ally.addAllyMember(activeChar.getClan(), true);

@@ -17,8 +17,8 @@ import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Request;
 import lineage2.gameserver.model.Request.L2RequestType;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.Location;
 
 /**
@@ -81,7 +81,7 @@ public class AnswerCoupleAction extends L2GameClientPacket
 		if (requestor == null)
 		{
 			request.cancel();
-			activeChar.sendPacket(SystemMsg.THAT_PLAYER_IS_NOT_ONLINE);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
 			activeChar.sendActionFailed();
 			return;
 		}
@@ -96,13 +96,13 @@ public class AnswerCoupleAction extends L2GameClientPacket
 		switch (_answer)
 		{
 			case -1:
-				requestor.sendPacket(new SystemMessage2(SystemMsg.C1_IS_SET_TO_REFUSE_COUPLE_ACTIONS_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION).addName(activeChar));
+				requestor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_SET_TO_REFUSE_COUPLE_ACTIONS_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION).addPcName(activeChar));
 				request.cancel();
 				break;
 			
 			case 0:
-				activeChar.sendPacket(SystemMsg.THE_COUPLE_ACTION_WAS_DENIED);
-				requestor.sendPacket(SystemMsg.THE_COUPLE_ACTION_WAS_CANCELLED);
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_COUPLE_ACTION_WAS_DENIED));
+				requestor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_COUPLE_ACTION_WAS_CANCELLED));
 				requestor.sendActionFailed();
 				request.cancel();
 				break;
@@ -138,7 +138,7 @@ public class AnswerCoupleAction extends L2GameClientPacket
 	{
 		if (!activeChar.isInRange(requestor, 300) || activeChar.isInRange(requestor, 25) || !GeoEngine.canSeeTarget(activeChar, requestor, false))
 		{
-			activeChar.sendPacket(SystemMsg.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS));
 			return false;
 		}
 		

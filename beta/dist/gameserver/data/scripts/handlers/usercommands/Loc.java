@@ -17,6 +17,7 @@ import lineage2.gameserver.handlers.UserCommandHandler;
 import lineage2.gameserver.instancemanager.MapRegionManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.mapregion.RestartArea;
 
@@ -51,11 +52,11 @@ public class Loc implements IUserCommandHandler, ScriptFile
 		
 		if (msgId > 0)
 		{
-			activeChar.sendPacket(new SystemMessage(msgId).addNumber(activeChar.getX()).addNumber(activeChar.getY()).addNumber(activeChar.getZ()));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(msgId).addInt(activeChar.getX()).addInt(activeChar.getY()).addInt(activeChar.getZ()));
 		}
 		else
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.S1).addString("Current location : " + activeChar.getX() + ", " + activeChar.getY() + ", " + activeChar.getZ()));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1).addString("Current location : " + activeChar.getX() + ", " + activeChar.getY() + ", " + activeChar.getZ()));
 		}
 		
 		return true;

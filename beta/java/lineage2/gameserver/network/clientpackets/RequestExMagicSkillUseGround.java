@@ -16,6 +16,7 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 
@@ -79,7 +80,7 @@ public class RequestExMagicSkillUseGround extends L2GameClientPacket
 			
 			if (!activeChar.isInRange(_loc, skill.getCastRange()))
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.YOUR_TARGET_IS_OUT_OF_RANGE));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE));
 				activeChar.sendActionFailed();
 				return;
 			}

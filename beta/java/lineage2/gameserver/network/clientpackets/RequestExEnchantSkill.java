@@ -22,6 +22,7 @@ import lineage2.gameserver.network.serverpackets.ExEnchantSkillResult;
 import lineage2.gameserver.network.serverpackets.ShortCutRegister;
 import lineage2.gameserver.network.serverpackets.SkillList;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.tables.SkillTreeTable;
@@ -114,13 +115,13 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				
 				if (activeChar.getSp() < requiredSp)
 				{
-					sendPacket(new SystemMessage(SystemMessage.SP_REQUIRED_FOR_SKILL_ENCHANT_IS_INSUFFICIENT));
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL));
 					return;
 				}
 				
 				if (activeChar.getAdena() < requiredAdena)
 				{
-					sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 					return;
 				}
 				
@@ -128,7 +129,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				{
 					if (Functions.getItemCount(activeChar, SkillTreeTable.NORMAL_ENCHANT_BOOK) == 0)
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL));
 						return;
 					}
 					
@@ -138,7 +139,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				{
 					if (Functions.getItemCount(activeChar, SkillTreeTable.NEW_ENCHANT_BOOK) == 0)
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL));
 						return;
 					}
 					
@@ -149,13 +150,13 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				{
 					activeChar.addExpAndSp(0, -1 * requiredSp);
 					Functions.removeItem(activeChar, 57, requiredAdena);
-					activeChar.sendPacket(new SystemMessage(SystemMessage.SP_HAS_DECREASED_BY_S1).addNumber(requiredSp), new SystemMessage(SystemMessage.SUCCEEDED_IN_ENCHANTING_SKILL_S1).addSkillName(_skillId, _skillLvl), new SkillList(activeChar), new ExEnchantSkillResult(1));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1).addInt(requiredSp), SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED).addSkillName(_skillId, _skillLvl), new SkillList(activeChar), new ExEnchantSkillResult(1));
 					Log.add(activeChar.getName() + "|Successfully enchanted|" + _skillId + "|to+" + _skillLvl + "|" + rate, "enchant_skills");
 				}
 				else
 				{
 					skill = SkillTable.getInstance().getInfo(_skillId, sl.getBaseLevel());
-					activeChar.sendPacket(new SystemMessage(SystemMessage.FAILED_IN_ENCHANTING_SKILL_S1).addSkillName(_skillId, _skillLvl), new ExEnchantSkillResult(0));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_FAILED_THE_SKILL_WILL_BE_INITIALIZED).addSkillName(_skillId, _skillLvl), new ExEnchantSkillResult(0));
 					Log.add(activeChar.getName() + "|Failed to enchant|" + _skillId + "|to+" + _skillLvl + "|" + rate, "enchant_skills");
 				}
 				
@@ -228,13 +229,13 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				
 				if (activeChar.getSp() < requiredSp)
 				{
-					sendPacket(new SystemMessage(SystemMessage.SP_REQUIRED_FOR_SKILL_ENCHANT_IS_INSUFFICIENT));
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL));
 					return;
 				}
 				
 				if (activeChar.getAdena() < requiredAdena)
 				{
-					sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 					return;
 				}
 				
@@ -242,7 +243,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				{
 					if (Functions.getItemCount(activeChar, SkillTreeTable.SAFE_ENCHANT_BOOK) == 0)
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL));
 						return;
 					}
 					
@@ -252,7 +253,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				{
 					if (Functions.getItemCount(activeChar, SkillTreeTable.NEW_SAFE_ENCHANT_BOOK) == 0)
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL));
 						return;
 					}
 					
@@ -264,14 +265,14 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 					activeChar.addSkill(skill, true);
 					activeChar.addExpAndSp(0, -1 * requiredSp);
 					Functions.removeItem(activeChar, 57, requiredAdena);
-					activeChar.sendPacket(new SystemMessage(SystemMessage.SP_HAS_DECREASED_BY_S1).addNumber(requiredSp), new SystemMessage(SystemMessage.SUCCEEDED_IN_ENCHANTING_SKILL_S1).addSkillName(_skillId, _skillLvl), new ExEnchantSkillResult(1));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1).addInt(requiredSp), SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED).addSkillName(_skillId, _skillLvl), new ExEnchantSkillResult(1));
 					activeChar.sendSkillList();
 					RequestExEnchantSkill.updateSkillShortcuts(activeChar, _skillId, _skillLvl);
 					Log.add(activeChar.getName() + "|Successfully safe enchanted|" + _skillId + "|to+" + _skillLvl + "|" + rate, "enchant_skills");
 				}
 				else
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.Skill_enchant_failed_Current_level_of_enchant_skill_S1_will_remain_unchanged).addSkillName(_skillId, _skillLvl), new ExEnchantSkillResult(0));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_FAILED_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_WILL_REMAIN_UNCHANGED).addSkillName(_skillId, _skillLvl), new ExEnchantSkillResult(0));
 					Log.add(activeChar.getName() + "|Failed to safe enchant|" + _skillId + "|to+" + _skillLvl + "|" + rate, "enchant_skills");
 				}
 				
@@ -338,7 +339,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				
 				if (Functions.getItemCount(activeChar, SkillTreeTable.UNTRAIN_ENCHANT_BOOK) == 0)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL));
 					return;
 				}
 				
@@ -348,13 +349,13 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				
 				if (_skillLvl > 100)
 				{
-					SystemMessage sm = new SystemMessage(SystemMessage.Untrain_of_enchant_skill_was_successful_Current_level_of_enchant_skill_S1_has_been_decreased_by_1);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UNTRAIN_OF_ENCHANT_SKILL_WAS_SUCCESSFUL_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_HAS_BEEN_DECREASED_BY_1);
 					sm.addSkillName(_skillId, _skillLvl);
 					activeChar.sendPacket(sm);
 				}
 				else
 				{
-					SystemMessage sm = new SystemMessage(SystemMessage.Untrain_of_enchant_skill_was_successful_Current_level_of_enchant_skill_S1_became_0_and_enchant_skill_will_be_initialized);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UNTRAIN_OF_ENCHANT_SKILL_WAS_SUCCESSFUL_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_BECAME_0_AND_ENCHANT_SKILL_WILL_BE_INITIALIZED);
 					sm.addSkillName(_skillId, _skillLvl);
 					activeChar.sendPacket(sm);
 				}
@@ -411,19 +412,19 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				
 				if (activeChar.getSp() < requiredSp)
 				{
-					sendPacket(new SystemMessage(SystemMessage.SP_REQUIRED_FOR_SKILL_ENCHANT_IS_INSUFFICIENT));
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL));
 					return;
 				}
 				
 				if (activeChar.getAdena() < requiredAdena)
 				{
-					sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 					return;
 				}
 				
 				if (Functions.getItemCount(activeChar, SkillTreeTable.CHANGE_ENCHANT_BOOK) == 0)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL));
 					return;
 				}
 				
@@ -447,15 +448,15 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				
 				if (levelPenalty == 0)
 				{
-					SystemMessage sm = new SystemMessage(SystemMessage.Enchant_skill_route_change_was_successful_Lv_of_enchant_skill_S1_will_remain);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ENCHANT_SKILL_ROUTE_CHANGE_WAS_SUCCESSFUL_LV_OF_ENCHANT_SKILL_S1_WILL_REMAIN);
 					sm.addSkillName(_skillId, _skillLvl);
 					activeChar.sendPacket(sm);
 				}
 				else
 				{
-					SystemMessage sm = new SystemMessage(SystemMessage.Enchant_skill_route_change_was_successful_Lv_of_enchant_skill_S1_has_been_decreased_by_S2);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ENCHANT_SKILL_ROUTE_CHANGE_WAS_SUCCESSFUL_LV_OF_ENCHANT_SKILL_S1_HAS_BEEN_DECREASED_BY_S2);
 					sm.addSkillName(_skillId, _skillLvl);
-					sm.addNumber(levelPenalty);
+					sm.addInt(levelPenalty);
 					activeChar.sendPacket(sm);
 				}
 				
@@ -529,13 +530,13 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				
 				if (activeChar.getSp() < requiredSp)
 				{
-					sendPacket(new SystemMessage(SystemMessage.SP_REQUIRED_FOR_SKILL_ENCHANT_IS_INSUFFICIENT));
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL));
 					return;
 				}
 				
 				if (activeChar.getAdena() < requiredAdena)
 				{
-					sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 					return;
 				}
 				
@@ -543,7 +544,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				{
 					if (Functions.getItemCount(activeChar, SkillTreeTable.ENCHANT_BOOK_LINDVIOR) == 0)
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL));
 						return;
 					}
 					
@@ -553,7 +554,7 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				{
 					if (Functions.getItemCount(activeChar, SkillTreeTable.ENCHANT_BOOK_LINDVIOR) == 0)
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL));
 						return;
 					}
 					
@@ -564,13 +565,13 @@ public class RequestExEnchantSkill extends L2GameClientPacket
 				{
 					activeChar.addExpAndSp(0, -1 * requiredSp);
 					Functions.removeItem(activeChar, 57, requiredAdena);
-					activeChar.sendPacket(new SystemMessage(SystemMessage.SP_HAS_DECREASED_BY_S1).addNumber(requiredSp), new SystemMessage(SystemMessage.SUCCEEDED_IN_ENCHANTING_SKILL_S1).addSkillName(_skillId, _skillLvl), new SkillList(activeChar), new ExEnchantSkillResult(1));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1).addInt(requiredSp), SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_WAS_SUCCESSFUL_S1_HAS_BEEN_ENCHANTED).addSkillName(_skillId, _skillLvl), new SkillList(activeChar), new ExEnchantSkillResult(1));
 					Log.add(activeChar.getName() + "|Successfully enchanted|" + _skillId + "|to+" + _skillLvl + "|" + rate, "enchant_skills");
 				}
 				else
 				{
 					skill = SkillTable.getInstance().getInfo(_skillId, sl.getBaseLevel());
-					activeChar.sendPacket(new SystemMessage(SystemMessage.FAILED_IN_ENCHANTING_SKILL_S1).addSkillName(_skillId, _skillLvl), new ExEnchantSkillResult(0));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_FAILED_THE_SKILL_WILL_BE_INITIALIZED).addSkillName(_skillId, _skillLvl), new ExEnchantSkillResult(0));
 					Log.add(activeChar.getName() + "|Failed to enchant|" + _skillId + "|to+" + _skillLvl + "|" + rate, "enchant_skills");
 				}
 				

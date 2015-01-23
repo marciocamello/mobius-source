@@ -18,6 +18,7 @@ import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExMultiPartyCommandChannelInfo;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
@@ -68,7 +69,7 @@ public class CommandChannel implements IUserCommandHandler, ScriptFile
 				}
 				else
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.ONLY_THE_CREATOR_OF_A_CHANNEL_CAN_USE_THE_CHANNEL_DISMISS_COMMAND));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_THE_CREATOR_OF_A_COMMAND_CHANNEL_CAN_USE_THE_CHANNEL_DISMISS_COMMAND));
 				}
 				break;
 			
@@ -80,7 +81,7 @@ public class CommandChannel implements IUserCommandHandler, ScriptFile
 				
 				if (!activeChar.getParty().isLeader(activeChar))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.ONLY_A_PARTY_LEADER_CAN_CHOOSE_THE_OPTION_TO_LEAVE_A_CHANNEL));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_LEAVE_A_COMMAND_CHANNEL));
 					return true;
 				}
 				
@@ -99,8 +100,8 @@ public class CommandChannel implements IUserCommandHandler, ScriptFile
 				
 				Party party = activeChar.getParty();
 				channel.removeParty(party);
-				party.broadCast(new SystemMessage(SystemMessage.YOU_HAVE_QUIT_THE_COMMAND_CHANNEL));
-				channel.broadCast(new SystemMessage(SystemMessage.S1_PARTY_HAS_LEFT_THE_COMMAND_CHANNEL).addString(activeChar.getName()));
+				party.broadCast(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_QUIT_THE_COMMAND_CHANNEL));
+				channel.broadCast(SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_HAS_LEFT_THE_COMMAND_CHANNEL).addString(activeChar.getName()));
 				break;
 			
 			case 97:

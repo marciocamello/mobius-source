@@ -27,8 +27,8 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.SubUnit;
 import lineage2.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 import lineage2.gameserver.network.serverpackets.SkillList;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.SkillTable;
 
 /**
@@ -97,7 +97,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 		
 		if (!checkSpellbook(player, skillLearn))
 		{
-			player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_THE_NECESSARY_MATERIALS_OR_PREREQUISITES_TO_LEARN_THIS_SKILL));
 			return;
 		}
 		
@@ -159,7 +159,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 			case CERTIFICATION:
 				if (!player.getActiveSubClass().isBase())
 				{
-					player.sendPacket(SystemMsg.THIS_SKILL_CANNOT_BE_LEARNED_WHILE_IN_THE_SUBCLASS_STATE);
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_SKILL_CANNOT_BE_LEARNED_WHILE_IN_THE_SUBCLASS_STATE_PLEASE_TRY_AGAIN_AFTER_CHANGING_TO_THE_MAIN_CLASS));
 					return;
 				}
 				
@@ -174,7 +174,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 			case DUAL_CERTIFICATION:
 				if (!player.getActiveSubClass().isBase())
 				{
-					player.sendPacket(SystemMsg.THIS_SKILL_CANNOT_BE_LEARNED_WHILE_IN_THE_SUBCLASS_STATE);
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_SKILL_CANNOT_BE_LEARNED_WHILE_IN_THE_SUBCLASS_STATE_PLEASE_TRY_AGAIN_AFTER_CHANGING_TO_THE_MAIN_CLASS));
 					return;
 				}
 				
@@ -230,7 +230,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 	{
 		if (player.getSp() < skillLearn.getCost())
 		{
-			player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_LEARN_THIS_SKILL);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_LEARN_THIS_SKILL));
 			return;
 		}
 		
@@ -242,7 +242,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 			}
 		}
 		
-		player.sendPacket(new SystemMessage2(SystemMsg.YOU_HAVE_EARNED_S1_SKILL).addSkillName(skill.getId(), skill.getLevel()));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S12).addSkillName(skill.getId(), skill.getLevel()));
 		player.setSp(player.getSp() - skillLearn.getCost());
 		player.addSkill(skill, true);
 		player.sendUserInfo();
@@ -269,7 +269,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 			}
 		}
 		
-		player.sendPacket(new SystemMessage2(SystemMsg.YOU_HAVE_EARNED_S1_SKILL).addSkillName(skill.getId(), skill.getLevel()));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S12).addSkillName(skill.getId(), skill.getLevel()));
 		player.addCertSkill(skill, isDual);
 		player.sendUserInfo();
 		player.updateStats();
@@ -294,7 +294,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 		
 		if (!player.isClanLeader())
 		{
-			player.sendPacket(SystemMsg.ONLY_THE_CLAN_LEADER_IS_ENABLED);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_THE_CLAN_LEADER_IS_ENABLED));
 			return;
 		}
 		
@@ -308,7 +308,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 		
 		if (clan.getReputationScore() < skillLearn.getCost())
 		{
-			player.sendPacket(SystemMsg.THE_CLAN_REPUTATION_SCORE_IS_TOO_LOW);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW));
 			return;
 		}
 		
@@ -322,7 +322,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 		
 		clan.incReputation(-skillLearn.getCost(), false, "AquireSkill: " + skillLearn.getId() + ", lvl " + skillLearn.getLevel());
 		clan.addSkill(skill, true);
-		clan.broadcastToOnlineMembers(new SystemMessage2(SystemMsg.THE_CLAN_SKILL_S1_HAS_BEEN_ADDED).addSkillName(skill));
+		clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_SKILL_S1_HAS_BEEN_ADDED).addSkillName(skill));
 		BypassHandler.getInstance().getBypass("ClanSkillList").onBypassFeedback(trainer, player, "ClanSkillList");
 	}
 	
@@ -352,7 +352,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 		
 		if ((player.getClanPrivileges() & Clan.CP_CL_TROOPS_FAME) != Clan.CP_CL_TROOPS_FAME)
 		{
-			player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT));
 			return;
 		}
 		
@@ -360,19 +360,19 @@ public class RequestAquireSkill extends L2GameClientPacket
 		
 		if (lvl >= skillLearn.getLevel())
 		{
-			player.sendPacket(SystemMsg.THIS_SQUAD_SKILL_HAS_ALREADY_BEEN_ACQUIRED);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_SQUAD_SKILL_HAS_ALREADY_BEEN_LEARNED));
 			return;
 		}
 		
 		if (lvl != (skillLearn.getLevel() - 1))
 		{
-			player.sendPacket(SystemMsg.THE_PREVIOUS_LEVEL_SKILL_HAS_NOT_BEEN_LEARNED);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_PREVIOUS_LEVEL_SKILL_HAS_NOT_BEEN_LEARNED));
 			return;
 		}
 		
 		if (clan.getReputationScore() < skillLearn.getCost())
 		{
-			player.sendPacket(SystemMsg.THE_CLAN_REPUTATION_SCORE_IS_TOO_LOW);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW));
 			return;
 		}
 		
@@ -386,7 +386,7 @@ public class RequestAquireSkill extends L2GameClientPacket
 		
 		clan.incReputation(-skillLearn.getCost(), false, "AquireSkill2: " + skillLearn.getId() + ", lvl " + skillLearn.getLevel());
 		sub.addSkill(skill, true);
-		player.sendPacket(new SystemMessage2(SystemMsg.THE_CLAN_SKILL_S1_HAS_BEEN_ADDED).addSkillName(skill));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_SKILL_S1_HAS_BEEN_ADDED).addSkillName(skill));
 		
 		if (trainer != null)
 		{

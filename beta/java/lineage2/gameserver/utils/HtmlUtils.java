@@ -12,7 +12,7 @@
  */
 package lineage2.gameserver.utils;
 
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.network.serverpackets.components.SysString;
 
 /**
@@ -90,7 +90,7 @@ public class HtmlUtils
 	 * @param params Object[]
 	 * @return String
 	 */
-	public static String htmlNpcString(NpcString id, Object... params)
+	public static String htmlNpcString(NpcStringId id, Object... params)
 	{
 		return htmlNpcString(id.getId(), params);
 	}

@@ -38,9 +38,9 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExPVPMatchCCMyRecord;
 import lineage2.gameserver.network.serverpackets.ExPVPMatchCCRecord;
 import lineage2.gameserver.network.serverpackets.ExPVPMatchCCRetire;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
@@ -251,7 +251,7 @@ public class KrateisCubeEvent extends GlobalEvent
 			giveEffects(player);
 			player.teleToLocation(teleportLocs.get(i));
 			player.addEvent(this);
-			player.sendPacket(new ExPVPMatchCCMyRecord(k), SystemMsg.THE_MATCH_HAS_STARTED);
+			player.sendPacket(new ExPVPMatchCCMyRecord(k), SystemMessage.getSystemMessage(SystemMessageId.THE_MATCH_HAS_STARTED_FIGHT));
 		}
 	}
 	
@@ -287,7 +287,7 @@ public class KrateisCubeEvent extends GlobalEvent
 			}
 			
 			player.removeEvent(this);
-			player.sendPacket(ExPVPMatchCCRetire.STATIC, SystemMsg.END_MATCH);
+			player.sendPacket(ExPVPMatchCCRetire.STATIC, SystemMessage.getSystemMessage(SystemMessageId.END_MATCH));
 			player.teleToLocation(RETURN_LOC);
 		}
 	}
@@ -344,7 +344,7 @@ public class KrateisCubeEvent extends GlobalEvent
 	@Override
 	public boolean canRessurect(Player resurrectPlayer, Creature creature, boolean force)
 	{
-		resurrectPlayer.sendPacket(SystemMsg.INVALID_TARGET);
+		resurrectPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 		return false;
 	}
 	
@@ -482,11 +482,11 @@ public class KrateisCubeEvent extends GlobalEvent
 		
 		if (a > 0)
 		{
-			p = new SystemMessage2(SystemMsg.S1_SECONDS_TO_GAME_END).addInteger(a);
+			p = SystemMessage.getSystemMessage(SystemMessageId.S1_SECOND_S_TO_GAME_END).addInt(a);
 		}
 		else
 		{
-			p = new SystemMessage2(SystemMsg.THE_MATCH_WILL_START_IN_S1_SECONDS).addInteger(-a);
+			p = SystemMessage.getSystemMessage(SystemMessageId.THE_MATCH_WILL_START_IN_S1_SECOND_S).addInt(-a);
 		}
 		
 		List<KrateisCubePlayerObject> players = getObjects(PARTICLE_PLAYERS);

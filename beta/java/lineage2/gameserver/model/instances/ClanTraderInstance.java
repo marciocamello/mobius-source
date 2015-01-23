@@ -16,6 +16,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
 /**
@@ -100,7 +101,7 @@ public final class ClanTraderInstance extends NpcInstance
 			{
 				player.getClan().incReputation(reputation, false, "ClanTrader " + itemId + " from " + player.getName());
 				player.getClan().broadcastToOnlineMembers(new PledgeShowInfoUpdate(player.getClan()));
-				player.sendPacket(new SystemMessage(SystemMessage.YOUR_CLAN_HAS_ADDED_1S_POINTS_TO_ITS_CLAN_REPUTATION_SCORE).addNumber(reputation));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ADDED_S1_POINT_S_TO_ITS_CLAN_REPUTATION).addInt(reputation));
 				html.setFile("default/" + getId() + "-ExchangeSuccess.htm");
 			}
 			else

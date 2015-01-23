@@ -21,6 +21,7 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q00727_HopeWithinTheDarkness extends Quest implements ScriptFile
@@ -129,7 +130,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest implements ScriptFile
 				{
 					if (!member.isDead() && member.getParty().isInReflection())
 					{
-						member.sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(5));
+						member.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES).addInt(5));
 						member.setVar("q727", "done", -1);
 					}
 				}

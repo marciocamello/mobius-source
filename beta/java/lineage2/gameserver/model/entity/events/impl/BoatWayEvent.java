@@ -26,7 +26,8 @@ import lineage2.gameserver.model.entity.boat.ClanAirShip;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.model.entity.events.objects.BoatPoint;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.MapUtils;
 
@@ -108,7 +109,7 @@ public class BoatWayEvent extends GlobalEvent
 				}
 				else
 				{
-					player.sendPacket(SystemMsg.YOU_DO_NOT_POSSESS_THE_CORRECT_TICKET_TO_BOARD_THE_BOAT);
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_POSSESS_THE_CORRECT_TICKET_TO_BOARD_THE_BOAT));
 					_boat.oustPlayer(player, _returnLoc, true);
 				}
 			}

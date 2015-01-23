@@ -25,8 +25,8 @@ import lineage2.gameserver.model.entity.olympiad.OlympiadDatabase;
 import lineage2.gameserver.network.serverpackets.ExHeroList;
 import lineage2.gameserver.network.serverpackets.ExReceiveOlympiad;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
 import org.slf4j.Logger;
@@ -126,7 +126,7 @@ public class OlympiadManagerInstance extends NpcInstance
 					if (passes > 0)
 					{
 						player.getInventory().addItem(Config.ALT_OLY_COMP_RITEM, passes);
-						player.sendPacket(SystemMessage2.obtainItems(Config.ALT_OLY_COMP_RITEM, passes, 0));
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(Config.ALT_OLY_COMP_RITEM).addLong(passes));
 					}
 					else
 					{
@@ -162,7 +162,7 @@ public class OlympiadManagerInstance extends NpcInstance
 				case 1:
 					if (!Olympiad.inCompPeriod() || Olympiad.isOlympiadEnd())
 					{
-						player.sendPacket(SystemMsg.THE_GRAND_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS));
 						return;
 					}
 					

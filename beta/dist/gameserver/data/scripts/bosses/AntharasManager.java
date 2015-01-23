@@ -32,7 +32,8 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.PlaySound;
 import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
@@ -207,7 +208,7 @@ public final class AntharasManager extends Functions implements ScriptFile, OnDe
 						pc.leaveMovieMode();
 					}
 					
-					broadcastScreenMessage(NpcString.ANTHARAS_YOU_CANNOT_HOPE_TO_DEFEAT_ME);
+					broadcastScreenMessage(NpcStringId.S1_YOU_CANNOT_HOPE_TO_DEFEAT_ME_WITH_YOUR_MEAGER_STRENGTH);
 					_antharas.broadcastPacket(new PlaySound(PlaySound.Type.MUSIC, "BS02_A", 1, _antharas.getObjectId(), _antharas.getLoc()));
 					_antharas.setAggroRange(_antharas.getTemplate().aggroRange);
 					_antharas.setRunning();
@@ -239,7 +240,7 @@ public final class AntharasManager extends Functions implements ScriptFile, OnDe
 						pc.altOnMagicUseTimer(pc, SkillTable.getInstance().getInfo(23312, 1));
 					}
 					
-					broadcastScreenMessage(NpcString.ANTHARAS_THE_EVIL_LAND_DRAGON_ANTHARAS_DEFEATED);
+					broadcastScreenMessage(NpcStringId.BLACK_COLOR_ATE_ALL_OF_RED_BLOOD_UNDERSTAND);
 					onAntharasDie();
 					break;
 			}
@@ -567,9 +568,9 @@ public final class AntharasManager extends Functions implements ScriptFile, OnDe
 	
 	/**
 	 * Method broadcastScreenMessage.
-	 * @param npcs NpcString
+	 * @param npcs NpcStringId
 	 */
-	public static void broadcastScreenMessage(NpcString npcs)
+	public static void broadcastScreenMessage(NpcStringId npcs)
 	{
 		for (Player p : getPlayersInside())
 		{
@@ -599,7 +600,7 @@ public final class AntharasManager extends Functions implements ScriptFile, OnDe
 		
 		if ((ccleader.getParty() == null) || !ccleader.getParty().isInCommandChannel())
 		{
-			ccleader.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_IN_A_CURRENT_COMMAND_CHANNEL));
+			ccleader.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_ASSOCIATED_WITH_THE_CURRENT_COMMAND_CHANNEL));
 			return;
 		}
 		
@@ -607,7 +608,7 @@ public final class AntharasManager extends Functions implements ScriptFile, OnDe
 		
 		if (!cc.getChannelLeader().equals(ccleader))
 		{
-			ccleader.sendPacket(new SystemMessage(SystemMessage.ONLY_THE_ALLIANCE_CHANNEL_LEADER_CAN_ATTEMPT_ENTRY));
+			ccleader.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_THE_ALLIANCE_CHANNEL_LEADER_CAN_ATTEMPT_ENTRY));
 			return;
 		}
 		

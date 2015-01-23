@@ -21,6 +21,7 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.ChestInstance;
 import lineage2.gameserver.model.instances.DoorInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 
 /**
@@ -55,7 +56,7 @@ public class Unlock extends Skill
 	{
 		if ((target == null) || ((target instanceof ChestInstance) && target.isDead()))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return false;
 		}
 		
@@ -66,7 +67,7 @@ public class Unlock extends Skill
 		
 		if (!target.isDoor() || (_unlockPower == 0))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return false;
 		}
 		
@@ -74,25 +75,25 @@ public class Unlock extends Skill
 		
 		if (door.isOpen())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.IT_IS_NOT_LOCKED));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.IT_IS_NOT_LOCKED));
 			return false;
 		}
 		
 		if (!door.isUnlockable())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_UNABLE_TO_UNLOCK_THE_DOOR));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_DOOR_CANNOT_BE_UNLOCKED));
 			return false;
 		}
 		
 		if (door.getKey() > 0)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_UNABLE_TO_UNLOCK_THE_DOOR));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_DOOR_CANNOT_BE_UNLOCKED));
 			return false;
 		}
 		
 		if ((_unlockPower - (door.getLevel() * 100)) < 0)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_UNABLE_TO_UNLOCK_THE_DOOR));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_DOOR_CANNOT_BE_UNLOCKED));
 			return false;
 		}
 		
@@ -121,7 +122,7 @@ public class Unlock extends Skill
 					}
 					else
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_UNLOCK_THE_DOOR));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_UNLOCK_THE_DOOR));
 					}
 				}
 				else if (targ instanceof ChestInstance)

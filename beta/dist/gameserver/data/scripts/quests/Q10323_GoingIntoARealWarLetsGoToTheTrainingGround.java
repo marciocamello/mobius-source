@@ -22,7 +22,7 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 import lineage2.gameserver.network.serverpackets.TutorialShowHtml;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
@@ -100,14 +100,14 @@ public class Q10323_GoingIntoARealWarLetsGoToTheTrainingGround extends Quest imp
 				qs.showTutorialHTML(TutorialShowHtml.QT_003, TutorialShowHtml.TYPE_WINDOW);
 				if (!player.isMageClass() || (player.getTemplate().getRace() == Race.orc))
 				{
-					player.sendPacket(new ExShowScreenMessage(NpcString.GOING_INTO_REAL_WAR_SOULSHOTS_ADDED, 4500, ScreenMessageAlign.TOP_CENTER));
+					player.sendPacket(new ExShowScreenMessage(NpcStringId.SPIRITSHOT_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
 					qs.startQuestTimer("soul_timer", 4000);
 					qs.giveItems(5789, 500);
 					qs.setCond(5);
 				}
 				else
 				{
-					player.sendPacket(new ExShowScreenMessage(NpcString.GOING_INTO_REAL_WAR_SPIRITSHOTS_ADDED, 4500, ScreenMessageAlign.TOP_CENTER));
+					player.sendPacket(new ExShowScreenMessage(NpcStringId.SPIRITSHOT_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
 					qs.startQuestTimer("spirit_timer", 4000);
 					qs.giveItems(5790, 500);
 					qs.setCond(4);
@@ -116,12 +116,12 @@ public class Q10323_GoingIntoARealWarLetsGoToTheTrainingGround extends Quest imp
 				
 			case "soul_timer":
 				htmltext = "2-3.htm";
-				player.sendPacket(new ExShowScreenMessage(NpcString.GOING_INTO_REAL_WAR_AUTOMATE_SOULSHOTS, 4500, ScreenMessageAlign.TOP_CENTER));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.AUTOMATE_SPIRITSHOT_AS_SHOWN_IN_THE_TUTORIAL, 4500, ScreenMessageAlign.TOP_CENTER));
 				break;
 			
 			case "spirit_timer":
 				htmltext = "2-3m.htm";
-				player.sendPacket(new ExShowScreenMessage(NpcString.GOING_INTO_REAL_WAR_AUTOMATE_SPIRITSHOTS, 4500, ScreenMessageAlign.TOP_CENTER));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.AUTOMATE_SPIRITSHOT_AS_SHOWN_IN_THE_TUTORIAL, 4500, ScreenMessageAlign.TOP_CENTER));
 				break;
 		}
 		
@@ -274,7 +274,7 @@ public class Q10323_GoingIntoARealWarLetsGoToTheTrainingGround extends Quest imp
 	{
 		soldierg = NpcUtils.spawnSingle(Soldier, Location.findPointToStay(SOLDIER_START_POINT[0], SOLDIER_START_POINT[1], SOLDIER_START_POINT[2], 50, 100, qs.getPlayer().getGeoIndex()));
 		soldierg.setFollowTarget(qs.getPlayer());
-		Functions.npcSay(soldierg, NpcString.S1_COME_WITH_ME_I_WILL_LEAD_YOU_TO_HOLDEN, ChatType.NPC_TELL, 800, qs.getPlayer().getName());
+		Functions.npcSay(soldierg, NpcStringId.S1_COME_WITH_ME_I_WILL_LEAD_YOU_TO_HOLDEN, ChatType.NPC_TELL, 800, qs.getPlayer().getName());
 	}
 	
 	private void despawnsoldier()

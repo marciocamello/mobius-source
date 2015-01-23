@@ -23,6 +23,7 @@ import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.reward.RewardItem;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.ItemFunctions;
 
@@ -69,13 +70,13 @@ public class Harvesting extends Skill
 				
 				if (!monster.isSeeded())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.THE_HARVEST_FAILED_BECAUSE_THE_SEED_WAS_NOT_SOWN));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_HARVEST_FAILED_BECAUSE_THE_SEED_WAS_NOT_SOWN));
 					continue;
 				}
 				
 				if (!monster.isSeeded(player))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOT_AUTHORIZED_TO_HARVEST));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_HARVEST));
 					continue;
 				}
 				
@@ -99,7 +100,7 @@ public class Harvesting extends Skill
 				
 				if (!Rnd.chance(SuccessRate))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.THE_HARVEST_HAS_FAILED));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_HARVEST_HAS_FAILED));
 					monster.clearHarvest();
 					continue;
 				}
@@ -122,11 +123,11 @@ public class Harvesting extends Skill
 				}
 				
 				player.getInventory().addItem(item.itemId, item.count);
-				player.sendPacket(new SystemMessage(SystemMessage.S1_HARVESTED_S3_S2_S).addName(player).addNumber(item.count).addItemName(item.itemId));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HARVESTED_S3_S2_S).addPcName(player).addLong(item.count).addItemName(item.itemId));
 				
 				if (player.isInParty())
 				{
-					SystemMessage smsg = new SystemMessage(SystemMessage.S1_HARVESTED_S3_S2_S).addString(player.getName()).addNumber(item.count).addItemName(item.itemId);
+					SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.C1_HARVESTED_S3_S2_S).addString(player.getName()).addLong(item.count).addItemName(item.itemId);
 					player.getParty().broadcastToPartyMembers(player, smsg);
 				}
 			}

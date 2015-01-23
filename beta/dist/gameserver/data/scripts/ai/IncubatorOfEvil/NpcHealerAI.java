@@ -19,7 +19,7 @@ import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.Priest;
 import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -53,7 +53,7 @@ public final class NpcHealerAI extends Priest
 		
 		if (Rnd.chance(3))
 		{
-			Functions.npcSay(actor, NpcString.DID_SOMEONE_CRY_MEDIC_HERE_BE_HEALED);
+			Functions.npcSay(actor, NpcStringId.DID_SOMEONE_CRY_MEDIC_HERE_BE_HEALED);
 		}
 		
 		return startAttack();

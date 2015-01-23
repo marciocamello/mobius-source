@@ -22,8 +22,8 @@ import lineage2.gameserver.model.entity.events.impl.FortressSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.attachment.FlagItemAttachment;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Util;
@@ -135,7 +135,7 @@ public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttach
 		_item.setOwnerId(0);
 		_item.setJdbcState(JdbcEntityState.UPDATED);
 		_item.update();
-		owner.sendPacket(new SystemMessage2(SystemMsg.YOU_HAVE_DROPPED_S1).addItemName(_item.getId()));
+		owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1).addItemName(_item.getId()));
 		_item.dropMe(null, _location);
 		_item.setDropTime(0);
 	}
@@ -181,7 +181,7 @@ public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttach
 	{
 		player.getInventory().equipItem(_item);
 		FortressSiegeEvent event = player.getEvent(FortressSiegeEvent.class);
-		event.broadcastTo(new SystemMessage2(SystemMsg.C1_HAS_ACQUIRED_THE_FLAG).addName(player), SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
+		event.broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_ACQUIRED_THE_FLAG).addPcName(player), SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
 	}
 	
 	/**
@@ -193,7 +193,7 @@ public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttach
 	@Override
 	public boolean canAttack(Player player)
 	{
-		player.sendPacket(SystemMsg.THAT_WEAPON_CANNOT_PERFORM_ANY_ATTACKS);
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_WEAPON_CANNOT_PERFORM_ANY_ATTACKS));
 		return false;
 	}
 	
@@ -211,7 +211,7 @@ public class FortressCombatFlagObject implements SpawnableObject, FlagItemAttach
 		
 		if (!Util.contains(skills, skill))
 		{
-			player.sendPacket(SystemMsg.THAT_WEAPON_CANNOT_USE_ANY_OTHER_SKILL_EXCEPT_THE_WEAPONS_SKILL);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_WEAPON_CANNOT_USE_ANY_OTHER_SKILL_EXCEPT_THE_WEAPON_S_SKILL));
 			return false;
 		}
 		

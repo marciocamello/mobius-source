@@ -16,6 +16,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ExPutItemResultForVariationMake;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -53,14 +54,14 @@ public class RequestConfirmTargetItem extends AbstractRefinePacket
 		{
 			if (item.isAugmented())
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.ONCE_AN_ITEM_IS_AUGMENTED_IT_CANNOT_BE_AUGMENTED_AGAIN));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONCE_AN_ITEM_IS_AUGMENTED_IT_CANNOT_BE_AUGMENTED_AGAIN));
 				return;
 			}
 			
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THIS_IS_NOT_A_SUITABLE_ITEM));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM));
 			return;
 		}
 		
-		activeChar.sendPacket(new ExPutItemResultForVariationMake(_itemObjId, item.getId()), new SystemMessage(SystemMessage.SELECT_THE_CATALYST_FOR_AUGMENTATION));
+		activeChar.sendPacket(new ExPutItemResultForVariationMake(_itemObjId, item.getId()), SystemMessage.getSystemMessage(SystemMessageId.SELECT_THE_CATALYST_FOR_AUGMENTATION));
 	}
 }

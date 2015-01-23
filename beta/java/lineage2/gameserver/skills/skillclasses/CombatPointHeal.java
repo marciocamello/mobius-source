@@ -17,6 +17,7 @@ import java.util.List;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.templates.StatsSet;
 
@@ -63,7 +64,7 @@ public class CombatPointHeal extends Skill
 					target.setCurrentCp(addToCp + target.getCurrentCp());
 				}
 				
-				target.sendPacket(new SystemMessage(SystemMessage.S1_CPS_WILL_BE_RESTORED).addNumber((long) addToCp));
+				target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CP_HAS_BEEN_RESTORED).addLong((long) addToCp));
 				getEffects(activeChar, target, getActivateRate() > 0, false);
 			}
 		}

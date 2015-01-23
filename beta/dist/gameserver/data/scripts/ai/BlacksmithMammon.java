@@ -15,7 +15,7 @@ package ai;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -26,11 +26,11 @@ public final class BlacksmithMammon extends DefaultAI
 {
 	private long _chatVar = 0;
 	private static final long chatDelay = 30 * 60 * 1000L;
-	private static final NpcString[] mamonText =
+	private static final NpcStringId[] mamonText =
 	{
-		NpcString.RULERS_OF_THE_SEAL_I_BRING_YOU_WONDROUS_GIFTS,
-		NpcString.RULERS_OF_THE_SEAL_I_HAVE_SOME_EXCELLENT_WEAPONS_TO_SHOW_YOU,
-		NpcString.IVE_BEEN_SO_BUSY_LATELY_IN_ADDITION_TO_PLANNING_MY_TRIP
+		NpcStringId.I_BRING_YOU_WONDROUS_GIFTS,
+		NpcStringId.I_HAVE_SOME_EXCELLENT_WEAPONS_TO_SHOW_YOU,
+		NpcStringId.I_VE_BEEN_SO_BUSY_LATELY_IN_ADDITION_TO_PLANNING_MY_TRIP
 	};
 	
 	/**

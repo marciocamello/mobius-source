@@ -25,6 +25,7 @@ import lineage2.gameserver.network.serverpackets.Earthquake;
 import lineage2.gameserver.network.serverpackets.ExRedSky;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
@@ -173,7 +174,7 @@ public class CursedWeapon
 		_loc = oldItem.getLoc();
 		oldItem.setDropTime(0);
 		_item = oldItem;
-		player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_DROPPED_S1).addItemName(oldItem.getId()));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1).addItemName(oldItem.getId()));
 		player.broadcastUserInfo();
 		player.broadcastPacket(new Earthquake(player.getLoc(), 30, 12));
 		return true;
@@ -281,7 +282,7 @@ public class CursedWeapon
 		player.getInventory().setPaperdollItem(Inventory.PAPERDOLL_LHAND, null);
 		player.getInventory().setPaperdollItem(Inventory.PAPERDOLL_RHAND, null);
 		player.getInventory().setPaperdollItem(Inventory.PAPERDOLL_RHAND, _item);
-		player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EQUIPPED_YOUR_S1).addItemName(_item.getId()));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1).addItemName(_item.getId()));
 		player.setTransformation(0);
 		player.setCursedWeaponEquippedId(_itemId);
 		player.setTransformation(_transformationId);

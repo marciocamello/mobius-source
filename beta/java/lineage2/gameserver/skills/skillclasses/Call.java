@@ -23,6 +23,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.Location;
 
@@ -164,17 +165,17 @@ public class Call extends Skill
 	{
 		if (activeChar.isAlikeDead() || activeChar.isInOlympiadMode() || activeChar.isInObserverMode() || activeChar.isFlying())
 		{
-			return new SystemMessage(SystemMessage.NOTHING_HAPPENED);
+			return SystemMessage.getSystemMessage(SystemMessageId.NOTHING_HAPPENED);
 		}
 		
 		if (activeChar.isInZoneBattle() || activeChar.isInZone(Zone.ZoneType.Siege) || activeChar.isInZone(NoRestart) || activeChar.isInZone(NoSummon) || activeChar.isInBoat() || (activeChar.getReflection() != ReflectionManager.DEFAULT))
 		{
-			return new SystemMessage(SystemMessage.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION);
+			return SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION);
 		}
 		
 		if (activeChar.isInStoreMode() || activeChar.isProcessingRequest())
 		{
-			return new SystemMessage(SystemMessage.YOU_CANNOT_SUMMON_DURING_A_TRADE_OR_WHILE_USING_THE_PRIVATE_SHOPS);
+			return SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_DURING_A_TRADE_OR_WHILE_USING_A_PRIVATE_STORE);
 		}
 		
 		return null;
@@ -189,34 +190,34 @@ public class Call extends Skill
 	{
 		if ((target == null) || !target.isPlayer() || target.getPlayer().isTerritoryFlagEquipped() || target.isFlying() || target.isInObserverMode() || !target.getPlayer().getPlayerAccess().UseTeleport)
 		{
-			return new SystemMessage(SystemMessage.INVALID_TARGET);
+			return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 		}
 		
 		if (target.isInOlympiadMode())
 		{
-			return new SystemMessage(SystemMessage.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_CURRENTLY_PARTICIPATING_IN_THE_GRAND_OLYMPIAD);
+			return SystemMessage.getSystemMessage(SystemMessageId.A_USER_PARTICIPATING_IN_THE_OLYMPIAD_CANNOT_USE_SUMMONING_OR_TELEPORTING);
 		}
 		
 		if (target.isInZoneBattle() || target.isInZone(Zone.ZoneType.Siege) || target.isInZone(NoRestart) || target.isInZone(NoSummon) || (target.getReflection() != ReflectionManager.DEFAULT) || target.isInBoat())
 		{
-			return new SystemMessage(SystemMessage.YOUR_TARGET_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING);
+			return SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_USE_SUMMONING_OR_TELEPORTING_IN_THIS_AREA);
 		}
 		
 		if (target.isAlikeDead())
 		{
-			return new SystemMessage(SystemMessage.S1_IS_DEAD_AT_THE_MOMENT_AND_CANNOT_BE_SUMMONED).addString(target.getName());
+			return SystemMessage.getSystemMessage(SystemMessageId.C1_IS_DEAD_AT_THE_MOMENT_AND_CANNOT_BE_SUMMONED_OR_TELEPORTED).addString(target.getName());
 		}
 		
 		if ((target.getPvpFlag() != 0) || target.isInCombat())
 		{
-			return new SystemMessage(SystemMessage.S1_IS_ENGAGED_IN_COMBAT_AND_CANNOT_BE_SUMMONED).addString(target.getName());
+			return SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ENGAGED_IN_COMBAT_AND_CANNOT_BE_SUMMONED_OR_TELEPORTED).addString(target.getName());
 		}
 		
 		Player pTarget = (Player) target;
 		
 		if ((pTarget.getPrivateStoreType() != Player.STORE_PRIVATE_NONE) || pTarget.isProcessingRequest())
 		{
-			return new SystemMessage(SystemMessage.S1_IS_CURRENTLY_TRADING_OR_OPERATING_A_PRIVATE_STORE_AND_CANNOT_BE_SUMMONED).addString(target.getName());
+			return SystemMessage.getSystemMessage(SystemMessageId.C1_IS_CURRENTLY_TRADING_OR_OPERATING_A_PRIVATE_STORE_AND_CANNOT_BE_SUMMONED_OR_TELEPORTED).addString(target.getName());
 		}
 		
 		return null;

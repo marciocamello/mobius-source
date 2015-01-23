@@ -15,7 +15,7 @@ package ai.IncubatorOfEvil;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -41,7 +41,7 @@ public final class VanguardEllis extends DefaultAI
 		
 		if (Rnd.chance(8))
 		{
-			Functions.npcSay(actor, NpcString.I_CAN_HEAL_YOU_DURING_COMBAT);
+			Functions.npcSay(actor, NpcStringId.I_CAN_HEAL_YOU_DURING_COMBAT);
 		}
 		
 		return false;

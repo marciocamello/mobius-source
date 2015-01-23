@@ -16,7 +16,8 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -78,7 +79,7 @@ public final class BuyHeroStatus extends Functions
 		}
 		else
 		{
-			player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 		}
 	}
 }

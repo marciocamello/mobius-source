@@ -45,7 +45,7 @@ public final class TeleportDeviceTautiInstance extends NpcInstance
 		if (command.equals("request_accept_tauti"))
 		{
 			/*
-			 * if(player.getParty() == null) { player.sendPacket(new SystemMessage(SystemMessage.ONLY_A_PARTY_LEADER_CAN_TRY_TO_ENTER)); return; } if(player.getParty().getCommandChannel() == null) { player.sendPacket(new
+			 * if(player.getParty() == null) { player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_TRY_TO_ENTER)); return; } if(player.getParty().getCommandChannel() == null) { player.sendPacket(new
 			 * SystemMessage(SystemMessage.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_IN_A_CURRENT_COMMAND_CHANNEL)); return; } if(!accepted && !player.getParty().getCommandChannel().isLeaderCommandChannel(player) && !player.getParty().isLeader(player)) { showChatWindow(player, "default/33678-no.htm");
 			 * return; }
 			 */
@@ -80,7 +80,7 @@ public final class TeleportDeviceTautiInstance extends NpcInstance
 			
 			// }
 			// else
-			// player.sendPacket(new SystemMessage(SystemMessage.ONLY_A_PARTY_LEADER_CAN_TRY_TO_ENTER));
+			// player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_TRY_TO_ENTER));
 		}
 		else
 		{

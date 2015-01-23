@@ -25,8 +25,8 @@ import lineage2.gameserver.model.entity.events.objects.SiegeClanObject;
 import lineage2.gameserver.model.entity.events.objects.ZoneObject;
 import lineage2.gameserver.model.instances.residences.SiegeFlagInstance;
 import lineage2.gameserver.model.pledge.Clan;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.funcs.FuncMul;
 import lineage2.gameserver.templates.StatsSet;
@@ -101,7 +101,7 @@ public class SummonSiegeFlag extends Skill
 			case ADVANCED:
 				if (player.isInZone(Zone.ZoneType.Residence))
 				{
-					player.sendPacket(SystemMsg.YOU_CANNOT_SET_UP_A_BASE_HERE, new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_SET_UP_A_BASE_HERE), SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
 					return false;
 				}
 				
@@ -109,7 +109,7 @@ public class SummonSiegeFlag extends Skill
 				
 				if (siegeEvent == null)
 				{
-					player.sendPacket(SystemMsg.YOU_CANNOT_SET_UP_A_BASE_HERE, new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_SET_UP_A_BASE_HERE), SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
 					return false;
 				}
 				
@@ -126,7 +126,7 @@ public class SummonSiegeFlag extends Skill
 				
 				if (!inZone)
 				{
-					player.sendPacket(SystemMsg.YOU_CANNOT_SET_UP_A_BASE_HERE, new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_SET_UP_A_BASE_HERE), SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
 					return false;
 				}
 				
@@ -134,13 +134,13 @@ public class SummonSiegeFlag extends Skill
 				
 				if (siegeClan == null)
 				{
-					player.sendPacket(SystemMsg.YOU_CANNOT_SUMMON_THE_ENCAMPMENT_BECAUSE_YOU_ARE_NOT_A_MEMBER_OF_THE_SIEGE_CLAN_INVOLVED_IN_THE_CASTLE__FORTRESS__HIDEOUT_SIEGE, new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_THE_ENCAMPMENT_BECAUSE_YOU_ARE_NOT_A_MEMBER_OF_THE_SIEGE_CLAN_INVOLVED_IN_THE_CASTLE_FORTRESS_CLAN_HALL_SIEGE), SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
 					return false;
 				}
 				
 				if (siegeClan.getFlag() != null)
 				{
-					player.sendPacket(SystemMsg.AN_OUTPOST_OR_HEADQUARTERS_CANNOT_BE_BUILT_BECAUSE_ONE_ALREADY_EXISTS, new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.AN_OUTPOST_OR_HEADQUARTERS_CANNOT_BE_BUILT_BECAUSE_ONE_ALREADY_EXISTS), SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
 					return false;
 				}
 				break;

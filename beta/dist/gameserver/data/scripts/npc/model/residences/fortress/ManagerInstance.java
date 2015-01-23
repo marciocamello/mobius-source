@@ -20,7 +20,7 @@ import lineage2.gameserver.model.entity.residence.Residence;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.HtmlUtils;
 import npc.model.residences.ResidenceManager;
@@ -77,7 +77,7 @@ public final class ManagerInstance extends ResidenceManager
 			{
 				html.setFile("residence2/fortress/fortress_steward022.htm");
 				html.replace("%castle_name%", HtmlUtils.htmlResidenceName(getFortress().getCastleId()));
-				html.replaceNpcString("%contract%", NpcString.CONTRACT_STATE);
+				html.replaceNpcString("%contract%", NpcStringId.CONTRACT_STATE);
 				long leftTime = (REWARD_CYCLE - (3600 - fortress.getCycleDelay()) - (fortress.getPaidCycle() * 3600)) / 60;
 				html.replace("%rent_cost%", String.valueOf(Fortress.CASTLE_FEE));
 				html.replace("%next_hour%", String.valueOf(leftTime / 60));
@@ -88,7 +88,7 @@ public final class ManagerInstance extends ResidenceManager
 				html.setFile("residence2/fortress/fortress_steward023.htm");
 			}
 			
-			html.replaceNpcString("%time_remained%", NpcString.S1HOUR_S2MINUTE, ownedTime / 60, ownedTime % 60);
+			html.replaceNpcString("%time_remained%", NpcStringId.S1HOUR_S2MINUTE, ownedTime / 60, ownedTime % 60);
 			player.sendPacket(html);
 		}
 		else

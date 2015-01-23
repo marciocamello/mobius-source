@@ -19,6 +19,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 
 /**
@@ -57,7 +58,7 @@ public class ClanGate extends Skill
 		
 		if (!player.isClanLeader())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.ONLY_THE_CLAN_LEADER_IS_ENABLED));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_THE_CLAN_LEADER_IS_ENABLED));
 			return false;
 		}
 		
@@ -87,7 +88,7 @@ public class ClanGate extends Skill
 		
 		Player player = (Player) activeChar;
 		Clan clan = player.getClan();
-		clan.broadcastToOtherOnlineMembers(new SystemMessage(SystemMessage.COURT_MAGICIAN__THE_PORTAL_HAS_BEEN_CREATED), player);
+		clan.broadcastToOtherOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.COURT_WIZARD_THE_PORTAL_HAS_BEEN_CREATED), player);
 		getEffects(activeChar, activeChar, getActivateRate() > 0, true);
 	}
 }

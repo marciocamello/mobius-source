@@ -36,8 +36,8 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.entity.events.EventType;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.pledge.Clan;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.Location;
@@ -301,7 +301,7 @@ public abstract class Residence implements JdbcEntity
 			for (Skill skill : _skills)
 			{
 				owner.addSkill(skill, false);
-				owner.broadcastToOnlineMembers(new SystemMessage2(SystemMsg.THE_CLAN_SKILL_S1_HAS_BEEN_ADDED).addSkillName(skill));
+				owner.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_SKILL_S1_HAS_BEEN_ADDED).addSkillName(skill));
 			}
 		}
 	}

@@ -21,7 +21,7 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.Scripts;
 import lineage2.gameserver.scripts.Scripts.ScriptClassAndMethod;
@@ -169,14 +169,14 @@ public class NpcHtmlMessage extends L2GameServerPacket
 	}
 	
 	// <fstring></fstring> npcstring-?.dat
-	public NpcHtmlMessage replaceNpcString(String pattern, NpcString npcString, Object... arg)
+	public NpcHtmlMessage replaceNpcString(String pattern, NpcStringId npcString, Object... arg)
 	{
 		if (pattern == null)
 		{
 			return this;
 		}
 		
-		if (npcString.getSize() != arg.length)
+		if (npcString.getParamCount() != arg.length)
 		{
 			throw new IllegalArgumentException("Not valid size of parameters: " + npcString);
 		}

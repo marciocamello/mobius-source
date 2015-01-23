@@ -18,6 +18,7 @@ import lineage2.gameserver.model.items.etcitems.LifeStoneInfo;
 import lineage2.gameserver.model.items.etcitems.LifeStoneManager;
 import lineage2.gameserver.network.serverpackets.ExPutIntensiveResultForVariationMake;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ItemTemplate.Grade;
 
 /**
@@ -57,7 +58,7 @@ public class RequestConfirmRefinerItem extends AbstractRefinePacket
 		
 		if ((targetItem == null) || (refinerItem == null))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THIS_IS_NOT_A_SUITABLE_ITEM));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM));
 			return;
 		}
 		
@@ -70,7 +71,7 @@ public class RequestConfirmRefinerItem extends AbstractRefinePacket
 		
 		if (!isValid(activeChar, targetItem, refinerItem))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THIS_IS_NOT_A_SUITABLE_ITEM));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM));
 			return;
 		}
 		
@@ -78,7 +79,7 @@ public class RequestConfirmRefinerItem extends AbstractRefinePacket
 		final Grade grade = targetItem.getTemplate().getItemGrade();
 		final int gemStoneId = getGemStoneId(grade);
 		final int gemStoneCount = getGemStoneCount(lsi.getGrade(), grade);
-		SystemMessage sm = new SystemMessage(SystemMessage.REQUIRES_S1_S2).addNumber(gemStoneCount).addItemName(gemStoneId);
+		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.REQUIRES_S2_S1).addInt(gemStoneCount).addItemName(gemStoneId);
 		activeChar.sendPacket(new ExPutIntensiveResultForVariationMake(_refinerItemObjId, refinerItemId, gemStoneId, gemStoneCount), sm);
 	}
 }

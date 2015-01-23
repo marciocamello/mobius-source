@@ -12,7 +12,7 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 
 public class ExShowScreenMessage extends NpcStringContainer
 {
@@ -48,7 +48,7 @@ public class ExShowScreenMessage extends NpcStringContainer
 	
 	public ExShowScreenMessage(String text, int time, ScreenMessageAlign text_align, boolean big_font, int type, int messageId, boolean showEffect)
 	{
-		super(NpcString.NONE, text);
+		super(NpcStringId.STRING_NONE, text);
 		_type = type;
 		_sysMessageId = messageId;
 		_time = time;
@@ -61,42 +61,42 @@ public class ExShowScreenMessage extends NpcStringContainer
 		_fade = false;
 	}
 	
-	public ExShowScreenMessage(NpcString t, int time, ScreenMessageAlign text_align, String... params)
+	public ExShowScreenMessage(NpcStringId t, int time, ScreenMessageAlign text_align, String... params)
 	{
 		this(t, time, text_align, true, STRING_TYPE, -1, false, false, 0, 0, 0, params);
 	}
 	
-	public ExShowScreenMessage(NpcString npcString, int time, ScreenMessageAlign text_align, boolean big_font, String... params)
+	public ExShowScreenMessage(NpcStringId npcString, int time, ScreenMessageAlign text_align, boolean big_font, String... params)
 	{
 		this(npcString, time, text_align, big_font, STRING_TYPE, -1, false, false, 0, 0, 0, params);
 	}
 	
-	public ExShowScreenMessage(NpcString npcString, int time, ScreenMessageAlign text_align, boolean big_font, boolean showEffect, String... params)
+	public ExShowScreenMessage(NpcStringId npcString, int time, ScreenMessageAlign text_align, boolean big_font, boolean showEffect, String... params)
 	{
 		this(npcString, time, text_align, big_font, STRING_TYPE, -1, showEffect, false, 0, 0, 0, params);
 	}
 	
-	public ExShowScreenMessage(NpcString npcString, int time, ScreenMessageAlign text_align, boolean big_font, boolean showEffect, boolean fade, String... params)
+	public ExShowScreenMessage(NpcStringId npcString, int time, ScreenMessageAlign text_align, boolean big_font, boolean showEffect, boolean fade, String... params)
 	{
 		this(npcString, time, text_align, big_font, STRING_TYPE, -1, showEffect, fade, 0, 0, 0, params);
 	}
 	
-	public ExShowScreenMessage(NpcString npcString, int time, ScreenMessageAlign text_align, boolean big_font, int type, int systemMsg, boolean showEffect, String... params)
+	public ExShowScreenMessage(NpcStringId npcString, int time, ScreenMessageAlign text_align, boolean big_font, int type, int systemMsg, boolean showEffect, String... params)
 	{
 		this(npcString, time, text_align, big_font, type, systemMsg, showEffect, false, 0, 0, 0, params);
 	}
 	
-	public ExShowScreenMessage(NpcString npcString, int time, ScreenMessageAlign text_align, boolean big_font, int type, int systemMsg, boolean showEffect, int unk, String... params)
+	public ExShowScreenMessage(NpcStringId npcString, int time, ScreenMessageAlign text_align, boolean big_font, int type, int systemMsg, boolean showEffect, int unk, String... params)
 	{
 		this(npcString, time, text_align, big_font, type, systemMsg, showEffect, false, unk, 0, 0, params);
 	}
 	
-	public ExShowScreenMessage(NpcString npcString, int time, ScreenMessageAlign text_align, boolean big_font, int type, int systemMsg, boolean showEffect, boolean fade, String... params)
+	public ExShowScreenMessage(NpcStringId npcString, int time, ScreenMessageAlign text_align, boolean big_font, int type, int systemMsg, boolean showEffect, boolean fade, String... params)
 	{
 		this(npcString, time, text_align, big_font, type, systemMsg, showEffect, fade, 0, 0, 0, params);
 	}
 	
-	public ExShowScreenMessage(NpcString npcString, int time, ScreenMessageAlign text_align, boolean big_font, int type, int systemMsg, boolean fade, boolean showEffect, int unk1, int unk2, int unk3, String... params)
+	public ExShowScreenMessage(NpcStringId npcString, int time, ScreenMessageAlign text_align, boolean big_font, int type, int systemMsg, boolean fade, boolean showEffect, int unk1, int unk2, int unk3, String... params)
 	{
 		super(npcString, params);
 		_type = type;

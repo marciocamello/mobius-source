@@ -19,8 +19,8 @@ import lineage2.gameserver.model.Request.L2RequestType;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.GameClient;
 import lineage2.gameserver.network.serverpackets.ExMentorAdd;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -51,25 +51,25 @@ public class RequestMenteeAdd extends L2GameClientPacket
 		
 		if (newMentee == null)
 		{
-			activeChar.sendPacket(new SystemMessage2(SystemMsg.THAT_PLAYER_IS_NOT_ONLINE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
 			return;
 		}
 		
 		if (activeChar.getClassId().getId() < 139)
 		{
-			activeChar.sendPacket(new SystemMessage2(SystemMsg.YOU_MUST_AWAKEN_IN_ORDER_TO_BECOME_A_MENTOR));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MUST_AWAKEN_IN_ORDER_TO_BECOME_A_MENTOR));
 			return;
 		}
 		
 		if (activeChar.getMentorSystem().getMenteeInfo().size() == 3)
 		{
-			activeChar.sendPacket(new SystemMessage2(SystemMsg.A_MENTOR_CAN_HAVE_UP_TO_3_MENTEES_AT_THE_SAME_TIME));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_MENTOR_CAN_HAVE_UP_TO_3_MENTEES_AT_THE_SAME_TIME));
 			return;
 		}
 		
 		if (newMentee.getMentorSystem().getMentor() != 0)
 		{
-			activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_ALREADY_HAS_A_MENTOR).addName(newMentee));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_HAS_A_MENTOR).addPcName(newMentee));
 			return;
 		}
 		
@@ -83,19 +83,19 @@ public class RequestMenteeAdd extends L2GameClientPacket
 		
 		if (activeChar.getName().equals(_newMentee))
 		{
-			activeChar.sendPacket(new SystemMessage2(SystemMsg.YOU_CANNOT_BECOME_YOUR_OWN_MENTEE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_BECOME_YOUR_OWN_MENTEE));
 			return;
 		}
 		
 		if (newMentee.getLevel() > 85)
 		{
-			activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_IS_ABOVE_LEVEL_86_AND_CANNOT_BECOME_A_MENTEE).addName(newMentee));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_IS_ABOVE_LEVEL_85_AND_CANNOT_BECOME_A_MENTEE).addPcName(newMentee));
 			return;
 		}
 		
 		if (!newMentee.getInventory().validateCapacity(33800, 1))
 		{
-			activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_DOES_NOT_HAVE_THE_ITEM_NEDEED_TO_BECOME_A_MENTEE).addName(newMentee));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_DOES_NOT_HAVE_THE_ITEM_NEEDED_TO_BECOME_A_MENTEE).addPcName(newMentee));
 			return;
 		}
 		
@@ -110,12 +110,12 @@ public class RequestMenteeAdd extends L2GameClientPacket
 			countDown = (countDown - numMins) / 60;
 			int numHours = (int) Math.floor(countDown % 24);
 			int numDays = (int) Math.floor((countDown - numHours) / 24);
-			activeChar.sendPacket(new SystemMessage2(SystemMsg.YOU_CAN_BOND_WITH_A_NEW_MENTEE_IN_S1_DAYS_S2_HOUR_S3_MINUTE).addInteger(numDays).addInteger(numHours).addInteger(numMins));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CAN_BOND_WITH_A_NEW_MENTEE_IN_S1_DAY_S_S2_HOUR_S_S3_MINUTE_S).addInt(numDays).addInt(numHours).addInt(numMins));
 			return;
 		}
 		
 		new Request(L2RequestType.MENTEE, activeChar, newMentee).setTimeout(10000L);
-		activeChar.sendPacket(new SystemMessage2(SystemMsg.YOU_HAVE_OFFERED_TO_BECOME_S1_MENTOR).addName(newMentee));
+		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OFFERED_TO_BECOME_S1_S_MENTOR).addPcName(newMentee));
 		newMentee.sendPacket(new ExMentorAdd(activeChar));
 	}
 }

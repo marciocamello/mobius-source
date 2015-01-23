@@ -31,7 +31,7 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SocialAction;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 import ai.NpcArcherAI;
@@ -202,7 +202,7 @@ public abstract class SagasSuperclass extends Quest
 				qs.giveItems(Ring_Shout, 1); // ring
 			}
 			
-			Functions.npcSay(npc, NpcString.THE_CRY_OF_FATE_PENDANT_WILL_BE_HELPFUL_TO_YOU_PLEASE_EQUIP_IT_AND_BRING_OUT_THE_POWER_OF_THE_PENDANT_TO_PREPARE_FOR_THE_NEXT_FIGHT);
+			Functions.npcSay(npc, NpcStringId.THE_CRY_OF_DESTINY_PENDANT_WILL_BE_HELPFUL_TO_YOU_PLEASE_EQUIP_IT_AND_BRING_OUT_THE_POWER_OF_THE_PENDANT_TO_PREPARE_FOR_THE_NEXT_FIGHT);
 		}
 		else if (event.equals("selection"))
 		{
@@ -244,7 +244,7 @@ public abstract class SagasSuperclass extends Quest
 			// init waves
 			qs.startQuestTimer("wave1", 2000);
 			player.teleToLocation(56168, -175576, -7974, player.getReflection().getId());
-			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
+			player.sendPacket(new ExShowScreenMessage(NpcStringId.CREATURES_RESURRECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			qs.setCond(8);
 			return null;
 		}
@@ -256,64 +256,64 @@ public abstract class SagasSuperclass extends Quest
 		else if (event.equals("2"))
 		{
 			initWave2(player);
-			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
+			player.sendPacket(new ExShowScreenMessage(NpcStringId.CREATURES_RESURRECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			return null;
 		}
 		else if (event.equals("3"))
 		{
-			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
+			player.sendPacket(new ExShowScreenMessage(NpcStringId.CREATURES_RESURRECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave3(player);
 			return null;
 		}
 		else if (event.equals("4"))
 		{
-			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
+			player.sendPacket(new ExShowScreenMessage(NpcStringId.CREATURES_RESURRECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave4(player);
 			return null;
 		}
 		else if (event.equals("5"))
 		{
-			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
+			player.sendPacket(new ExShowScreenMessage(NpcStringId.CREATURES_RESURRECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave5(player);
 			return null;
 		}
 		else if (event.equals("6"))
 		{
-			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
+			player.sendPacket(new ExShowScreenMessage(NpcStringId.CREATURES_RESURRECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave6(player);
 			return null;
 		}
 		else if (event.equals("8"))
 		{
-			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
+			player.sendPacket(new ExShowScreenMessage(NpcStringId.CREATURES_RESURRECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave8(player);
 			qs.startQuestTimer("9", 30000);
 			return null;
 		}
 		else if (event.equals("9"))
 		{
-			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
+			player.sendPacket(new ExShowScreenMessage(NpcStringId.CREATURES_RESURRECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave9(player);
 			qs.startQuestTimer("10", 30000);
 			return null;
 		}
 		else if (event.equals("10"))
 		{
-			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
+			player.sendPacket(new ExShowScreenMessage(NpcStringId.CREATURES_RESURRECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave10(player);
 			qs.startQuestTimer("11", 30000);
 			return null;
 		}
 		else if (event.equals("11"))
 		{
-			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
+			player.sendPacket(new ExShowScreenMessage(NpcStringId.CREATURES_RESURRECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave11(player);
 			qs.startQuestTimer("12", 30000);
 			return null;
 		}
 		else if (event.equals("12"))
 		{
-			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
+			player.sendPacket(new ExShowScreenMessage(NpcStringId.CREATURES_RESURRECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave12(player);
 			// boss is comming after we killed all the waves.
 			player.unsetVar("wave");
@@ -322,7 +322,7 @@ public abstract class SagasSuperclass extends Quest
 		}
 		else if (event.equals("13"))
 		{
-			player.sendPacket(new ExShowScreenMessage(NpcString.I_DEATH_WOUND_CHAMPION_OF_SHILEN_SHALL_END_YOUR_WORLD, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
+			player.sendPacket(new ExShowScreenMessage(NpcStringId.I_DEATH_WOUND_CHAMPION_OF_SHILEN_SHALL_END_YOUR_WORLD, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave13(player);
 			// boss is comming after we killed all the waves.
 			player.unsetVar("wave");
@@ -331,7 +331,7 @@ public abstract class SagasSuperclass extends Quest
 		}
 		else if (event.equals("firstStandCompleted"))
 		{
-			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_HAVE_STOPPED_THEIR_ATTACK_REST_AND_THEN_SPEAK_WITH_ADOLPH, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
+			player.sendPacket(new ExShowScreenMessage(NpcStringId.CREATURES_HAVE_STOPPED_THEIR_ATTACK_REST_AND_THEN_SPEAK_WITH_ADOLPH, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			qs.setCond(9);
 			return null;
 		}
@@ -341,7 +341,7 @@ public abstract class SagasSuperclass extends Quest
 			// init waves
 			qs.startQuestTimer("8", 30000);
 			qs.setCond(11);
-			player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
+			player.sendPacket(new ExShowScreenMessage(NpcStringId.CREATURES_RESURRECTED_DEFEND_YOURSELF, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			initWave7(player);
 			return null;
 		}
@@ -391,7 +391,7 @@ public abstract class SagasSuperclass extends Quest
 			qs.exitCurrentQuest(false);
 			qs.playSound(SOUND_FINISH);
 			player.broadcastUserInfo();
-			player.sendPacket(new ExShowScreenMessage(NpcString.CONGRATULATIONS_YOU_WILL_NOW_GRADUATE_FROM_THE_CLAN_ACADEMY_AND_LEAVE_YOUR_CURRENT_CLAN_AS_A_GRADUATE_OF_THE_ACADEMY_YOU_CAN_IMMEDIATELY_JOIN_A_CLAN_AS_A_REGULAR_MEMBER_WITHOUT_BEING_SUBJECT_TO_ANY_PENALTIES, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
+			player.sendPacket(new ExShowScreenMessage(NpcStringId.CONGRATULATIONS_YOU_WILL_NOW_GRADUATE_FROM_THE_CLAN_ACADEMY_AND_LEAVE_YOUR_CURRENT_CLAN_YOU_CAN_NOW_JOIN_A_CLAN_AS_A_REGULAR_MEMBER_WITHOUT_BEING_SUBJECT_TO_ANY_PENALTIES, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			return StartNPC + "-7.htm";
 		}
 		
@@ -406,7 +406,7 @@ public abstract class SagasSuperclass extends Quest
 		
 		if (npc.getId() == Death_wound)
 		{
-			player.sendPacket(new ExShowScreenMessage(NpcString.AGH_HUMANS_HA_IT_DOES_NOT_MATTER_YOUR_WORLD_WILL_END_ANYWAYS, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
+			player.sendPacket(new ExShowScreenMessage(NpcStringId.AGH_HUMANS_HA_IT_DOES_NOT_MATTER_YOUR_WORLD_WILL_END_ANYWAYS, 10000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			qs.startQuestTimer("secondStandCompleted", 1000);
 			return null;
 		}

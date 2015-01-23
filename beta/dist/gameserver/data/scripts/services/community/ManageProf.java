@@ -26,7 +26,7 @@ import lineage2.gameserver.model.base.SubClassType;
 import lineage2.gameserver.network.serverpackets.ExSubjobInfo;
 import lineage2.gameserver.network.serverpackets.ShowBoard;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.BbsUtil;
@@ -130,11 +130,11 @@ public final class ManageProf implements ScriptFile, ICommunityBoardHandler
 			}
 			else if (Config.CLASS_MASTERS_PRICE_ITEM_LIST[jobLevel] == 57)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			}
 			else
 			{
-				player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 			}
 		}
 		else if (bypass.startsWith(_commands[2]))
@@ -316,11 +316,11 @@ public final class ManageProf implements ScriptFile, ICommunityBoardHandler
 	{
 		if (player.getClassId().isOfLevel(ClassLevel.Second))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_COMPLETED_THE_QUEST_FOR_3RD_OCCUPATION_CHANGE_AND_MOVED_TO_ANOTHER_CLASS_CONGRATULATIONS));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_YOUR_THIRD_CLASS_TRANSFER_QUEST));
 		}
 		else
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.CONGRATULATIONS_YOU_HAVE_TRANSFERRED_TO_A_NEW_CLASS));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_A_CLASS_TRANSFER));
 		}
 		
 		player.setClassId(val, false, false);

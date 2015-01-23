@@ -18,7 +18,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.network.serverpackets.ExCallToChangeClass;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 
 /**
  * @author Mobius
@@ -67,7 +67,7 @@ public class RequestCallToChangeClass extends L2GameClientPacket
 			
 			if (player.isDead())
 			{
-				sendPacket(new ExShowScreenMessage(NpcString.YOU_CANNOT_TELEPORT_WHILE_YOU_ARE_DEAD, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, false, ExShowScreenMessage.STRING_TYPE, -1, false), new ExCallToChangeClass(_cId, false, false));
+				sendPacket(new ExShowScreenMessage(NpcStringId.YOU_CANNOT_TELEPORT_WHILE_YOU_ARE_DEAD, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, false, ExShowScreenMessage.STRING_TYPE, -1, false), new ExCallToChangeClass(_cId, false, false));
 				return;
 			}
 			

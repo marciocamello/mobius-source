@@ -36,6 +36,7 @@ import lineage2.gameserver.network.serverpackets.ExMailArrived;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.ShowBoard;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.ClanTable;
@@ -235,7 +236,7 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 			
 			if (clanId == 0)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.NOT_JOINED_IN_ANY_CLAN));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_JOINED_IN_ANY_CLAN));
 				onBypassCommand(player, "_clbbslist_1_0");
 				return;
 			}
@@ -250,7 +251,7 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 			
 			if (clan.getLevel() < 2)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_COMMUNITIES_IN_MY_CLAN_CLAN_COMMUNITIES_ARE_ALLOWED_FOR_CLANS_WITH_SKILL_LEVELS_OF_2_AND_HIGHER));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_COMMUNITIES_IN_MY_CLAN_CLAN_COMMUNITIES_ARE_ALLOWED_FOR_CLANS_WITH_SKILL_LEVELS_OF_2_AND_HIGHER));
 				onBypassCommand(player, "_clbbslist_1_0");
 				return;
 			}
@@ -555,7 +556,7 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 			
 			if ((arg3 == null) || (arg4 == null))
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.THE_MESSAGE_WAS_NOT_SENT));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MESSAGE_WAS_NOT_SENT));
 				onBypassCommand(player, "_clbbsclan_" + player.getClanId());
 				return;
 			}
@@ -571,7 +572,7 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 			
 			if (arg3.isEmpty() || arg4.isEmpty())
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.THE_MESSAGE_WAS_NOT_SENT));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MESSAGE_WAS_NOT_SENT));
 				onBypassCommand(player, "_clbbsclan_" + player.getClanId());
 				return;
 			}
@@ -617,16 +618,16 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 			}
 			catch (Exception e)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.THE_MESSAGE_WAS_NOT_SENT));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MESSAGE_WAS_NOT_SENT));
 				onBypassCommand(player, "_clbbsclan_" + player.getClanId());
 				return;
 			}
 			
-			player.sendPacket(new SystemMessage(SystemMessage.YOUVE_SENT_MAIL));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_SENT_MAIL));
 			
 			for (Player member : clan.getOnlineMembers(0))
 			{
-				member.sendPacket(new SystemMessage(SystemMessage.YOUVE_GOT_MAIL));
+				member.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_GOT_MAIL));
 				member.sendPacket(ExMailArrived.STATIC);
 			}
 			
@@ -692,7 +693,7 @@ public final class ClanCommunity extends Functions implements ScriptFile, ICommu
 				clan.setNotice("");
 			}
 			
-			player.sendPacket(new SystemMessage(SystemMessage.NOTICE_HAS_BEEN_SAVED));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_NOTICE_HAS_BEEN_SAVED));
 			onBypassCommand(player, "_announcepledgewriteform");
 		}
 	}

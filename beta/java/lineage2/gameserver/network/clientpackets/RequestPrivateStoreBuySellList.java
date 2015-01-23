@@ -21,6 +21,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.TradeItem;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.TradeHelper;
 
@@ -99,7 +100,7 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 		
 		if (seller.isInStoreMode())
 		{
-			seller.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
+			seller.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
@@ -111,13 +112,13 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 		
 		if (seller.isFishing())
 		{
-			seller.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DO_ANYTHING_ELSE_WHILE_FISHING));
+			seller.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING3));
 			return;
 		}
 		
 		if (!seller.getPlayerAccess().UseTrade)
 		{
-			seller.sendPacket(new SystemMessage(SystemMessage.THIS_ACCOUNT_CANOT_USE_PRIVATE_STORES));
+			seller.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SOME_LINEAGE_II_FEATURES_HAVE_BEEN_LIMITED_FOR_FREE_TRIALS_TRIAL_ACCOUNTS_AREN_T_ALLOWED_BUY_ITEMS_FROM_PRIVATE_STORES_TO_UNLOCK_ALL_OF_THE_FEATURES_OF_LINEAGE_II_PURCHASE_THE_FULL_VERSION_TODAY));
 			return;
 		}
 		
@@ -125,7 +126,7 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 		
 		if ((buyer == null) || (buyer.getPrivateStoreType() != Player.STORE_PRIVATE_BUY) || !seller.isInRangeZ(buyer, Creature.INTERACTION_DISTANCE))
 		{
-			seller.sendPacket(new SystemMessage(SystemMessage.THE_ATTEMPT_TO_SELL_HAS_FAILED));
+			seller.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_ATTEMPT_TO_SELL_HAS_FAILED));
 			seller.sendActionFailed();
 			return;
 		}
@@ -134,7 +135,7 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 		
 		if (buyList.isEmpty())
 		{
-			seller.sendPacket(new SystemMessage(SystemMessage.THE_ATTEMPT_TO_SELL_HAS_FAILED));
+			seller.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_ATTEMPT_TO_SELL_HAS_FAILED));
 			seller.sendActionFailed();
 			return;
 		}
@@ -198,7 +199,7 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 		catch (ArithmeticException ae)
 		{
 			sellList.clear();
-			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 			return;
 		}
 		finally
@@ -207,31 +208,31 @@ public class RequestPrivateStoreBuySellList extends L2GameClientPacket
 			{
 				if (sellList.size() != _count)
 				{
-					seller.sendPacket(new SystemMessage(SystemMessage.THE_ATTEMPT_TO_SELL_HAS_FAILED));
+					seller.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_ATTEMPT_TO_SELL_HAS_FAILED));
 					seller.sendActionFailed();
 					return;
 				}
 				
 				if (!buyer.getInventory().validateWeight(weight))
 				{
-					buyer.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
-					seller.sendPacket(new SystemMessage(SystemMessage.THE_ATTEMPT_TO_SELL_HAS_FAILED));
+					buyer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
+					seller.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_ATTEMPT_TO_SELL_HAS_FAILED));
 					seller.sendActionFailed();
 					return;
 				}
 				
 				if (!buyer.getInventory().validateCapacity(slots))
 				{
-					buyer.sendPacket(new SystemMessage(SystemMessage.YOUR_INVENTORY_IS_FULL));
-					seller.sendPacket(new SystemMessage(SystemMessage.THE_ATTEMPT_TO_SELL_HAS_FAILED));
+					buyer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_INVENTORY_IS_FULL));
+					seller.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_ATTEMPT_TO_SELL_HAS_FAILED));
 					seller.sendActionFailed();
 					return;
 				}
 				
 				if (!buyer.reduceAdena(totalCost))
 				{
-					buyer.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
-					seller.sendPacket(new SystemMessage(SystemMessage.THE_ATTEMPT_TO_SELL_HAS_FAILED));
+					buyer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+					seller.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_ATTEMPT_TO_SELL_HAS_FAILED));
 					seller.sendActionFailed();
 					return;
 				}

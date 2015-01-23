@@ -31,7 +31,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExSendUIEvent;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.tables.SkillTable;
 
 /**
@@ -80,10 +80,10 @@ public final class HarnakUndergroundRuins extends Reflection
 		{
 			if (!introShowed)
 			{
-				ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcString.AN_INTRUDER_INTERESTING), 2500);
-				ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcString.PROVE_YOUR_WORTH), 5000);
-				ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcString.PROVE_YOUR_WORTH), 7500);
-				ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcString.ONLY_THOSE_STRONG_ENOUGH_SHALL_PROCEED), 8500);
+				ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcStringId.AN_INTRUDER_INTERESTING), 2500);
+				ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcStringId.PROVE_YOUR_WORTH), 5000);
+				ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcStringId.PROVE_YOUR_WORTH), 7500);
+				ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcStringId.ONLY_THOSE_STRONG_ENOUGH_SHALL_PROCEED), 8500);
 				ThreadPoolManager.getInstance().schedule(new SpawnNpcTask(), 7500);
 				
 				for (ClassId classId1 : ClassId.VALUES)
@@ -128,7 +128,7 @@ public final class HarnakUndergroundRuins extends Reflection
 		
 		if (secondRoomGroup == 2)
 		{
-			ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcString.I_MUST_GO_HELP_SOME_MORE), 100);
+			ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcStringId.I_MUST_GO_HELP_SOME_MORE), 100);
 			Skill skill = SkillTable.getInstance().getInfo(DEFENSE_SKILL_ID, 1);
 			
 			for (Player player : getPlayers())
@@ -155,8 +155,8 @@ public final class HarnakUndergroundRuins extends Reflection
 	{
 		for (Player player : getPlayers())
 		{
-			player.sendPacket(new ExSendUIEvent(player, 0, 0, 60, 0, NpcString.REMAINING_TIME));
-			player.sendPacket(new ExShowScreenMessage(NpcString.NO_THE_SEAL_CONTROLS_HAVE_BEEN_EXPOSED_GUARDS_PROTECT_THE_SEAL_CONTROLS, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));
+			player.sendPacket(new ExSendUIEvent(player, 0, 0, 60, 0, NpcStringId.REMAINING_TIME));
+			player.sendPacket(new ExShowScreenMessage(NpcStringId.NO_THE_SEAL_CONTROLS_HAVE_BEEN_EXPOSED_GUARDS_PROTECT_THE_SEAL_CONTROLS, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));
 		}
 		
 		ThreadPoolManager.getInstance().schedule(new SpawnNpcByPlayerClass(THIRD_ROOM_MINIONS), 1);
@@ -186,9 +186,9 @@ public final class HarnakUndergroundRuins extends Reflection
 	
 	private class ScreenMessageTask extends RunnableImpl
 	{
-		private final NpcString msg;
+		private final NpcStringId msg;
 		
-		public ScreenMessageTask(NpcString msg)
+		public ScreenMessageTask(NpcStringId msg)
 		{
 			this.msg = msg;
 		}
@@ -257,9 +257,9 @@ public final class HarnakUndergroundRuins extends Reflection
 			{
 				if (state == 1)
 				{
-					ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcString._PROVE_YOUR_WORTH), 100);
-					ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcString.ARE_YOU_STRONG_OR_WEAK_OF_THE_LIGHT_OR_DARKNESS), 2600);
-					ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcString.ONLY_THOSE_OF_LIGHT_MAY_PASS_OTHERS_MUST_PROVE_THEIR_STRENGTH), 5100);
+					ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcStringId.PROVE_YOUR_WORTH2), 100);
+					ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcStringId.ARE_YOU_STRONG_OR_WEAK_OF_THE_LIGHT_OR_DARKNESS), 2600);
+					ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcStringId.ONLY_THOSE_OF_LIGHT_MAY_PASS_OTHERS_MUST_PROVE_THEIR_STRENGTH), 5100);
 					ThreadPoolManager.getInstance().schedule(new SpawnNpcByPlayerClass(SECOND_ROOM_FIRST_GROUP), 6900);
 				}
 				else if (state == 2)

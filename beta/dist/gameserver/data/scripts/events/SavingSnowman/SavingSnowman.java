@@ -40,8 +40,8 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.NpcSay;
 import lineage2.gameserver.network.serverpackets.RadarControl;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
@@ -647,11 +647,11 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		if (_snowman != null)
 		{
 			player.sendPacket(new RadarControl(2, 2, _snowman.getLoc()), new RadarControl(0, 1, _snowman.getLoc()));
-			player.sendPacket(new SystemMessage(SystemMessage.S2_S1).addZoneName(_snowman.getLoc()).addString("Look for the Snowman."));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_S1).addZoneName(_snowman.getLoc().getX(), _snowman.getLoc().getY(), _snowman.getLoc().getZ()).addString("Look for the Snowman."));
 		}
 		else
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOUR_TARGET_CANNOT_BE_FOUND));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND));
 		}
 	}
 	
@@ -675,7 +675,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		
 		if (getItemCount(player, 20107) < 1)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 			return;
 		}
 		
@@ -695,7 +695,14 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		ItemInstance item = ItemFunctions.createItem(item_id);
 		item.setEnchantLevel(enchant);
 		player.getInventory().addItem(item);
-		player.sendPacket(SystemMessage2.obtainItems(item_id, 1, enchant));
+		if (enchant > 0)
+		{
+			SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2).addInt(enchant).addItemName(item_id);
+		}
+		else
+		{
+			SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(item_id);
+		}
 	}
 	
 	/**
@@ -717,7 +724,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		
 		if (getItemCount(player, 57) < Config.EVENT_SAVING_SNOWMAN_LOTERY_PRICE)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			return;
 		}
 		
@@ -831,7 +838,7 @@ public final class SavingSnowman extends Functions implements ScriptFile, OnDeat
 		for (Player player : GameObjectsStorage.getAllPlayersForIterate())
 		{
 			Announcements.getInstance().announceToAll("Malicious Thomas D. Turkey captured Santa Claus' assistant - Snowman! Hurry up to save him!", ChatType.CRITICAL_ANNOUNCE);
-			player.sendPacket(new SystemMessage(SystemMessage.S2_S1).addZoneName(spawnPoint).addString("Look for the Snowman."));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_S1).addZoneName(spawnPoint.getX(), spawnPoint.getY(), spawnPoint.getZ()).addString("Look for the Snowman."));
 			player.sendPacket(new RadarControl(2, 2, spawnPoint), new RadarControl(0, 1, spawnPoint));
 		}
 		

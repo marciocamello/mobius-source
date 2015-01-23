@@ -34,7 +34,7 @@ import lineage2.gameserver.model.Skill.NextAction;
 import lineage2.gameserver.model.Skill.SkillType;
 import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.Location;
 
 /**
@@ -717,7 +717,7 @@ public class PlayableAI extends CharacterAI
 		
 		if (!canSee && ((range > 200) || (Math.abs(actor.getZ() - attack_target.getZ()) > 200)))
 		{
-			actor.sendPacket(SystemMsg.CANNOT_SEE_TARGET);
+			actor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_SEE_TARGET));
 			setIntention(AI_INTENTION_ACTIVE);
 			actor.sendActionFailed();
 			return;
@@ -734,7 +734,7 @@ public class PlayableAI extends CharacterAI
 		{
 			if (!canSee)
 			{
-				actor.sendPacket(SystemMsg.CANNOT_SEE_TARGET);
+				actor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_SEE_TARGET));
 				setIntention(AI_INTENTION_ACTIVE);
 				actor.sendActionFailed();
 				return;
@@ -821,7 +821,7 @@ public class PlayableAI extends CharacterAI
 		
 		if (!noRangeSkill && !canSee && ((range > 200) || (Math.abs(actor.getZ() - target.getZ()) > 200)))
 		{
-			actor.sendPacket(SystemMsg.CANNOT_SEE_TARGET);
+			actor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_SEE_TARGET));
 			setIntention(AI_INTENTION_ACTIVE);
 			actor.sendActionFailed();
 			return;
@@ -838,7 +838,7 @@ public class PlayableAI extends CharacterAI
 		{
 			if (!noRangeSkill && !canSee)
 			{
-				actor.sendPacket(SystemMsg.CANNOT_SEE_TARGET);
+				actor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_SEE_TARGET));
 				setIntention(AI_INTENTION_ACTIVE);
 				actor.sendActionFailed();
 				return;
@@ -874,7 +874,7 @@ public class PlayableAI extends CharacterAI
 		}
 		else
 		{
-			actor.sendPacket(new SystemMessage(SystemMessage.YOUR_TARGET_IS_OUT_OF_RANGE));
+			actor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE));
 			setIntention(AI_INTENTION_ACTIVE);
 			actor.sendActionFailed();
 		}

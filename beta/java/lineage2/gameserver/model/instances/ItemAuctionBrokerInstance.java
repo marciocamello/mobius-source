@@ -22,6 +22,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExItemAuctionInfo;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
 /**
@@ -112,7 +113,7 @@ public final class ItemAuctionBrokerInstance extends NpcInstance
 					}
 					else
 					{
-						player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU));
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU));
 					}
 				}
 				else
@@ -132,7 +133,7 @@ public final class ItemAuctionBrokerInstance extends NpcInstance
 				
 				if (currentAuction == null)
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.IT_IS_NOT_AN_AUCTION_PERIOD));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.IT_IS_NOT_AN_AUCTION_PERIOD));
 					
 					if (nextAuction != null)
 					{
@@ -144,7 +145,7 @@ public final class ItemAuctionBrokerInstance extends NpcInstance
 				
 				if (!player.getAndSetLastItemAuctionRequest())
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_OFFERINGS_I_OWN_OR_I_MADE_A_BID_FOR));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_OFFERINGS_I_OWN_OR_I_MADE_A_BID_FOR));
 					return;
 				}
 				

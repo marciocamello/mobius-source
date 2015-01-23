@@ -29,6 +29,7 @@ import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.PositionUtils;
 import lineage2.gameserver.utils.ReflectionUtils;
@@ -109,7 +110,7 @@ public final class StakatoNest extends Fighter
 		{
 			if (player != null)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.SHYEED_S_ROAR_FILLED_WITH_WRATH_RINGS_THROUGHOUT_THE_STAKATO_NEST));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SHYEED_S_ROAR_FILLED_WITH_WRATH_RINGS_THROUGHOUT_THE_STAKATO_NEST));
 			}
 		}
 		
@@ -240,7 +241,7 @@ public final class StakatoNest extends Fighter
 		
 		if (Rnd.chance(FAIL_COCOON_CHANCE))
 		{
-			caster.getPlayer().sendPacket(new SystemMessage(SystemMessage.NOTHING_HAPPENED));
+			caster.getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOTHING_HAPPENED));
 			return;
 		}
 		

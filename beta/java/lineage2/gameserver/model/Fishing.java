@@ -30,6 +30,7 @@ import lineage2.gameserver.network.serverpackets.ExFishingHpRegen;
 import lineage2.gameserver.network.serverpackets.ExFishingStart;
 import lineage2.gameserver.network.serverpackets.ExFishingStartCombat;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.FishTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
@@ -128,7 +129,7 @@ public class Fishing
 		_fisher.setFishing(true);
 		_fisher.broadcastCharInfo();
 		_fisher.broadcastPacket(new ExFishingStart(_fisher, _fish.getType(), _fisher.getFishLoc(), isNightLure(_lureId)));
-		_fisher.sendPacket(new SystemMessage(SystemMessage.STARTS_FISHING));
+		_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CAST_YOUR_LINE_AND_START_TO_FISH));
 		startLookingForFishTask();
 	}
 	
@@ -146,7 +147,7 @@ public class Fishing
 		_fisher.setFishing(false);
 		_fisher.broadcastPacket(new ExFishingEnd(_fisher, false));
 		_fisher.broadcastCharInfo();
-		_fisher.sendPacket(new SystemMessage(SystemMessage.CANCELS_FISHING));
+		_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_ATTEMPT_AT_FISHING_HAS_BEEN_CANCELLED));
 	}
 	
 	/**
@@ -164,7 +165,7 @@ public class Fishing
 		_fisher.setFishing(false);
 		_fisher.broadcastPacket(new ExFishingEnd(_fisher, win));
 		_fisher.broadcastCharInfo();
-		_fisher.sendPacket(new SystemMessage(SystemMessage.ENDS_FISHING));
+		_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_REEL_YOUR_LINE_IN_AND_STOP_FISHING));
 	}
 	
 	/**
@@ -202,7 +203,7 @@ public class Fishing
 		{
 			if (System.currentTimeMillis() >= _endTaskTime)
 			{
-				_fisher.sendPacket(new SystemMessage(SystemMessage.BAITS_HAVE_BEEN_LOST_BECAUSE_THE_FISH_GOT_AWAY));
+				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_BAIT_HAS_BEEN_LOST_BECAUSE_THE_FISH_GOT_AWAY));
 				stopFishingTask();
 				endFishing(false);
 				return;
@@ -210,7 +211,7 @@ public class Fishing
 			
 			if (!GameTimeController.getInstance().isNowNight() && isNightLure(_lureId))
 			{
-				_fisher.sendPacket(new SystemMessage(SystemMessage.BAITS_HAVE_BEEN_LOST_BECAUSE_THE_FISH_GOT_AWAY));
+				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_BAIT_HAS_BEEN_LOST_BECAUSE_THE_FISH_GOT_AWAY));
 				stopFishingTask();
 				endFishing(false);
 				return;
@@ -276,12 +277,12 @@ public class Fishing
 		{
 			if (_fishCurHP >= (_fish.getHP() * 2))
 			{
-				_fisher.sendPacket(new SystemMessage(SystemMessage.THE_FISH_GOT_AWAY));
+				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_BAIT_WAS_STOLEN_BY_THAT_FISH));
 				doDie(false);
 			}
 			else if (_time <= 0)
 			{
-				_fisher.sendPacket(new SystemMessage(SystemMessage.TIME_IS_UP_SO_THAT_FISH_GOT_AWAY));
+				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_FISH_IS_MORE_DETERMINED_THAN_YOU_ARE_IT_SPIT_THE_HOOK));
 				doDie(false);
 			}
 			else
@@ -369,7 +370,7 @@ public class Fishing
 		
 		ExFishingStartCombat efsc = new ExFishingStartCombat(_fisher, _time, _fish.getHP(), _combatMode, _fish.getGroup(), _deceptiveMode);
 		_fisher.broadcastPacket(efsc);
-		_fisher.sendPacket(new SystemMessage(SystemMessage.SUCCEEDED_IN_GETTING_A_BITE));
+		_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_GOT_A_BITE));
 		_fishingTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new FishCombatTask(), 1000L, 1000L);
 	}
 	
@@ -415,12 +416,12 @@ public class Fishing
 			if (!_fisher.isInPeaceZone() && Rnd.chance(5))
 			{
 				win = false;
-				_fisher.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_CAUGHT_A_MONSTER));
+				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_CAUGHT_GOLDEEN));
 				spawnPenaltyMonster(_fisher);
 			}
 			else
 			{
-				_fisher.sendPacket(new SystemMessage(SystemMessage.SUCCEEDED_IN_FISHING));
+				_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CAUGHT_SOMETHING));
 				ItemFunctions.addItem(_fisher, _fish.getId(), 1, true);
 				FishingChampionShipManager.getInstance().newFish(_fisher, _lureId);
 			}
@@ -461,7 +462,7 @@ public class Fishing
 		
 		if (Rnd.chance(10))
 		{
-			_fisher.sendPacket(new SystemMessage(SystemMessage.FISH_HAS_RESISTED));
+			_fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_FISH_HAS_RESISTED_YOUR_ATTEMPT_TO_BRING_IT_IN));
 			_gooduse = 0;
 			changeHp(0, pen);
 			return;
@@ -511,20 +512,20 @@ public class Fishing
 			case 1:
 				if (skillType == SkillType.PUMPING)
 				{
-					fisher.sendPacket(new SystemMessage(SystemMessage.PUMPING_IS_SUCCESSFUL_DAMAGE_S1).addNumber(dmg));
+					fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PUMPING_IS_SUCCESSFUL_CAUSING_S1_DAMAGE).addInt(dmg));
 					
 					if (pen == 50)
 					{
-						fisher.sendPacket(new SystemMessage(SystemMessage.YOUR_PUMPING_WAS_SUCCESSFUL_MASTERY_PENALTYS1_).addNumber(pen));
+						fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PUMPING_SUCCESSFUL_MASTERY_PENALTY_S1).addInt(pen));
 					}
 				}
 				else
 				{
-					fisher.sendPacket(new SystemMessage(SystemMessage.REELING_IS_SUCCESSFUL_DAMAGE_S1).addNumber(dmg));
+					fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_REEL_THAT_FISH_IN_CLOSER_AND_CAUSE_S1_DAMAGE).addInt(dmg));
 					
 					if (pen == 50)
 					{
-						fisher.sendPacket(new SystemMessage(SystemMessage.YOUR_REELING_WAS_SUCCESSFUL_MASTERY_PENALTYS1_).addNumber(pen));
+						fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.REELING_SUCCESSFUL_MASTERY_PENALTY_S1).addInt(pen));
 					}
 				}
 				break;
@@ -532,31 +533,31 @@ public class Fishing
 			case 2:
 				if (skillType == SkillType.PUMPING)
 				{
-					fisher.sendPacket(new SystemMessage(SystemMessage.PUMPING_FAILED_DAMAGE_S1).addNumber(dmg));
+					fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_DO_ANYTHING_WITH_THE_FISH_AND_IT_REGAINS_S1_HP).addInt(dmg));
 				}
 				else
 				{
-					fisher.sendPacket(new SystemMessage(SystemMessage.REELING_FAILED_DAMAGE_S1).addNumber(dmg));
+					fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_REEL_THAT_FISH_IN_FURTHER_AND_IT_REGAINS_S1_HP).addInt(dmg));
 				}
 				break;
 			
 			case 3:
 				if (skillType == SkillType.PUMPING)
 				{
-					fisher.sendPacket(new SystemMessage(SystemMessage.PUMPING_IS_SUCCESSFUL_DAMAGE_S1).addNumber(dmg));
+					fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PUMPING_IS_SUCCESSFUL_CAUSING_S1_DAMAGE).addInt(dmg));
 					
 					if (pen == 50)
 					{
-						fisher.sendPacket(new SystemMessage(SystemMessage.YOUR_PUMPING_WAS_SUCCESSFUL_MASTERY_PENALTYS1_).addNumber(pen));
+						fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PUMPING_SUCCESSFUL_MASTERY_PENALTY_S1).addInt(pen));
 					}
 				}
 				else
 				{
-					fisher.sendPacket(new SystemMessage(SystemMessage.REELING_IS_SUCCESSFUL_DAMAGE_S1).addNumber(dmg));
+					fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_REEL_THAT_FISH_IN_CLOSER_AND_CAUSE_S1_DAMAGE).addInt(dmg));
 					
 					if (pen == 50)
 					{
-						fisher.sendPacket(new SystemMessage(SystemMessage.YOUR_REELING_WAS_SUCCESSFUL_MASTERY_PENALTYS1_).addNumber(pen));
+						fisher.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.REELING_SUCCESSFUL_MASTERY_PENALTY_S1).addInt(pen));
 					}
 				}
 				break;

@@ -28,6 +28,7 @@ import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.network.serverpackets.DeleteObject;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Events;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Log;
@@ -1223,10 +1224,7 @@ public abstract class GameObject extends EventOwner
 		{
 			if (player.isClanAirShipDriver())
 			{
-				/*
-				 * 2740 : This action is prohibited while steering.
-				 */
-				player.sendPacket(new SystemMessage(SystemMessage.THIS_ACTION_IS_PROHIBITED_WHILE_CONTROLLING));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_ACTION_IS_PROHIBITED_WHILE_STEERING));
 			}
 			
 			return false;
@@ -1234,10 +1232,7 @@ public abstract class GameObject extends EventOwner
 		
 		if (player.isFrozen())
 		{
-			/*
-			 * 687 : You cannot move while frozen. Please wait.
-			 */
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOVE_IN_A_FROZEN_STATE_PLEASE_WAIT_A_MOMENT));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_MOVE_WHILE_FROZEN_PLEASE_WAIT));
 			return false;
 		}
 		

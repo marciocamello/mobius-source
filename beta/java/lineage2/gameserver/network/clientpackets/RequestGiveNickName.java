@@ -18,6 +18,7 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.UnitMember;
 import lineage2.gameserver.network.serverpackets.NickNameChanged;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.Util;
 
 /**
@@ -61,7 +62,7 @@ public class RequestGiveNickName extends L2GameClientPacket
 		if (activeChar.isNoble() && _target.matches(activeChar.getName()))
 		{
 			activeChar.setTitle(_title);
-			activeChar.sendPacket(new SystemMessage(SystemMessage.TITLE_HAS_CHANGED));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_TITLE_HAS_BEEN_CHANGED));
 			activeChar.broadcastPacket(new NickNameChanged(activeChar));
 			return;
 		}
@@ -72,7 +73,7 @@ public class RequestGiveNickName extends L2GameClientPacket
 		
 		if (activeChar.getClan().getLevel() < 3)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.TITLE_ENDOWMENT_IS_ONLY_POSSIBLE_WHEN_CLANS_SKILL_LEVELS_ARE_ABOVE_3));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_PLAYER_CAN_ONLY_BE_GRANTED_A_TITLE_IF_THE_CLAN_IS_LEVEL_3_OR_ABOVE));
 			return;
 		}
 		
@@ -84,7 +85,7 @@ public class RequestGiveNickName extends L2GameClientPacket
 			
 			if (member.isOnline())
 			{
-				member.getPlayer().sendPacket(new SystemMessage(SystemMessage.TITLE_HAS_CHANGED));
+				member.getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_TITLE_HAS_BEEN_CHANGED));
 				member.getPlayer().sendChanges();
 			}
 		}

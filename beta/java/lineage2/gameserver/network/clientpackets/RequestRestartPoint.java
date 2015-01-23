@@ -27,7 +27,8 @@ import lineage2.gameserver.model.entity.residence.ResidenceFunction;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.ActionFail;
 import lineage2.gameserver.network.serverpackets.Die;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.TeleportUtils;
@@ -96,12 +97,12 @@ public class RequestRestartPoint extends L2GameClientPacket
 				}
 				else if (ItemFunctions.removeItem(activeChar, 13300, 1, true) == 1)
 				{
-					activeChar.sendPacket(SystemMsg.YOU_HAVE_USED_THE_FEATHER_OF_BLESSING_TO_RESURRECT);
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_USED_THE_FEATHER_OF_BLESSING_TO_RESURRECT));
 					activeChar.doRevive(100);
 				}
 				else if (ItemFunctions.removeItem(activeChar, 10649, 1, true) == 1)
 				{
-					activeChar.sendPacket(SystemMsg.YOU_HAVE_USED_THE_FEATHER_OF_BLESSING_TO_RESURRECT);
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_USED_THE_FEATHER_OF_BLESSING_TO_RESURRECT));
 					activeChar.doRevive(100);
 				}
 				else

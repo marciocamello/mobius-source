@@ -26,6 +26,7 @@ import lineage2.gameserver.network.serverpackets.ExLoginVitalityEffectInfo;
 import lineage2.gameserver.network.serverpackets.LoginFail;
 import lineage2.gameserver.network.serverpackets.ServerClose;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.SecondaryPasswordAuth;
 
 /**
@@ -119,7 +120,7 @@ public class PlayerAuthResponse extends ReceivablePacket
 				
 				if (activeChar != null)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.ANOTHER_PERSON_HAS_LOGGED_IN_WITH_THE_SAME_ACCOUNT));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_LOGGED_IN_TO_TWO_PLACES_IF_YOU_SUSPECT_ACCOUNT_THEFT_WE_RECOMMEND_CHANGING_YOUR_PASSWORD_SCANNING_YOUR_COMPUTER_FOR_VIRUSES_AND_USING_AN_ANTI_VIRUS_SOFTWARE));
 					activeChar.logout();
 				}
 				else

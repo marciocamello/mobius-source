@@ -18,6 +18,7 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.PcInventory;
 import lineage2.gameserver.model.items.PetInventory;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -75,7 +76,7 @@ public class RequestGetItemFromPet extends L2GameClientPacket
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
@@ -87,7 +88,7 @@ public class RequestGetItemFromPet extends L2GameClientPacket
 		
 		if (activeChar.isFishing())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DO_THAT_WHILE_FISHING));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING));
 			return;
 		}
 		
@@ -111,13 +112,13 @@ public class RequestGetItemFromPet extends L2GameClientPacket
 		
 		if (!activeChar.getInventory().validateWeight(weight))
 		{
-			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
 			return;
 		}
 		
 		if (!activeChar.getInventory().validateCapacity(slots))
 		{
-			sendPacket(new SystemMessage(SystemMessage.YOUR_INVENTORY_IS_FULL));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_INVENTORY_IS_FULL));
 			return;
 		}
 		

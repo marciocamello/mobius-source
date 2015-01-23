@@ -20,7 +20,8 @@ import lineage2.gameserver.network.serverpackets.ExManageMpccRoomMember;
 import lineage2.gameserver.network.serverpackets.ExMpccRoomInfo;
 import lineage2.gameserver.network.serverpackets.ExMpccRoomMember;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -40,41 +41,41 @@ public class CCMatchingRoom extends MatchingRoom
 	public CCMatchingRoom(Player leader, int minLevel, int maxLevel, int maxMemberSize, int lootType, String topic)
 	{
 		super(leader, minLevel, maxLevel, maxMemberSize, lootType, topic);
-		leader.sendPacket(SystemMsg.THE_COMMAND_CHANNEL_MATCHING_ROOM_WAS_CREATED);
+		leader.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_COMMAND_CHANNEL_MATCHING_ROOM_WAS_CREATED));
 	}
 	
 	/**
 	 * Method notValidMessage.
-	 * @return SystemMsg
+	 * @return SystemMessage
 	 */
 	@Override
-	public SystemMsg notValidMessage()
+	public SystemMessage notValidMessage()
 	{
-		return SystemMsg.YOU_CANNOT_ENTER_THE_COMMAND_CHANNEL_MATCHING_ROOM_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS;
+		return SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ENTER_THE_COMMAND_CHANNEL_MATCHING_ROOM_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
 	}
 	
 	/**
 	 * Method enterMessage.
-	 * @return SystemMsg
+	 * @return SystemMessage
 	 */
 	@Override
-	public SystemMsg enterMessage()
+	public SystemMessage enterMessage()
 	{
-		return SystemMsg.C1_ENTERED_THE_COMMAND_CHANNEL_MATCHING_ROOM;
+		return SystemMessage.getSystemMessage(SystemMessageId.C1_ENTERED_THE_COMMAND_CHANNEL_MATCHING_ROOM);
 	}
 	
 	/**
 	 * Method exitMessage.
 	 * @param toOthers boolean
 	 * @param kick boolean
-	 * @return SystemMsg
+	 * @return SystemMessage
 	 */
 	@Override
-	public SystemMsg exitMessage(boolean toOthers, boolean kick)
+	public SystemMessage exitMessage(boolean toOthers, boolean kick)
 	{
 		if (!toOthers)
 		{
-			return kick ? SystemMsg.YOU_WERE_EXPELLED_FROM_THE_COMMAND_CHANNEL_MATCHING_ROOM : SystemMsg.YOU_EXITED_FROM_THE_COMMAND_CHANNEL_MATCHING_ROOM;
+			return kick ? SystemMessage.getSystemMessage(SystemMessageId.YOU_WERE_EXPELLED_FROM_THE_COMMAND_CHANNEL_MATCHING_ROOM) : SystemMessage.getSystemMessage(SystemMessageId.YOU_EXITED_FROM_THE_COMMAND_CHANNEL_MATCHING_ROOM);
 		}
 		
 		return null;
@@ -82,12 +83,12 @@ public class CCMatchingRoom extends MatchingRoom
 	
 	/**
 	 * Method closeRoomMessage.
-	 * @return SystemMsg
+	 * @return SystemMessage
 	 */
 	@Override
-	public SystemMsg closeRoomMessage()
+	public SystemMessage closeRoomMessage()
 	{
-		return SystemMsg.THE_COMMAND_CHANNEL_MATCHING_ROOM_WAS_CANCELLED;
+		return SystemMessage.getSystemMessage(SystemMessageId.THE_COMMAND_CHANNEL_MATCHING_ROOM_WAS_CANCELLED);
 	}
 	
 	/**

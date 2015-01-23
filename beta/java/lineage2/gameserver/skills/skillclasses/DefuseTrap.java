@@ -18,6 +18,7 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.TrapInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 
 /**
@@ -49,7 +50,7 @@ public class DefuseTrap extends Skill
 	{
 		if ((target == null) || !target.isTrap())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return false;
 		}
 		

@@ -51,8 +51,8 @@ import lineage2.gameserver.network.serverpackets.PartySmallWindowDeleteAll;
 import lineage2.gameserver.network.serverpackets.PartySpelled;
 import lineage2.gameserver.network.serverpackets.RelationChanged;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.taskmanager.LazyPrecisionTaskManager;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
@@ -237,7 +237,7 @@ public class Party implements PlayerGroup
 	 */
 	public void broadcastMessageToPartyMembers(String msg)
 	{
-		broadCast(new SystemMessage(msg));
+		broadCast(SystemMessage.getSystemMessage(SystemMessageId.S12).addString(msg));
 	}
 	
 	/**
@@ -327,8 +327,8 @@ public class Party implements PlayerGroup
 		List<L2GameServerPacket> addInfo = new ArrayList<>(4 + (_members.size() * 4));
 		List<L2GameServerPacket> pplayer = new ArrayList<>(20);
 		pplayer.add(new PartySmallWindowAll(this, player));
-		pplayer.add(new SystemMessage(SystemMessage.YOU_HAVE_JOINED_S1S_PARTY).addName(leader));
-		addInfo.add(new SystemMessage(SystemMessage.S1_HAS_JOINED_THE_PARTY).addName(player));
+		pplayer.add(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_JOINED_S1_S_PARTY).addPcName(leader));
+		addInfo.add(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_JOINED_THE_PARTY).addPcName(player));
 		addInfo.add(new PartySpelled(player, true));
 		
 		for (Summon summon : player.getSummonList())
@@ -453,11 +453,11 @@ public class Party implements PlayerGroup
 		
 		if (kick)
 		{
-			pplayer.add(new SystemMessage(SystemMessage.YOU_HAVE_BEEN_EXPELLED_FROM_THE_PARTY));
+			pplayer.add(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_BEEN_EXPELLED_FROM_THE_PARTY));
 		}
 		else
 		{
-			pplayer.add(new SystemMessage(SystemMessage.YOU_HAVE_WITHDRAWN_FROM_THE_PARTY));
+			pplayer.add(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_WITHDRAWN_FROM_THE_PARTY));
 		}
 		
 		pplayer.add(PartySmallWindowDeleteAll.STATIC);
@@ -472,11 +472,11 @@ public class Party implements PlayerGroup
 		
 		if (kick)
 		{
-			outsInfo.add(new SystemMessage(SystemMessage.S1_WAS_EXPELLED_FROM_THE_PARTY).addName(player));
+			outsInfo.add(SystemMessage.getSystemMessage(SystemMessageId.C1_WAS_EXPELLED_FROM_THE_PARTY).addPcName(player));
 		}
 		else
 		{
-			outsInfo.add(new SystemMessage(SystemMessage.S1_HAS_LEFT_THE_PARTY).addName(player));
+			outsInfo.add(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_LEFT_THE_PARTY).addPcName(player));
 		}
 		
 		List<L2GameServerPacket> pmember;
@@ -517,7 +517,7 @@ public class Party implements PlayerGroup
 					
 					if ((leader != null) && (leader.getReflection() == reflection))
 					{
-						leader.broadcastPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(1));
+						leader.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES).addInt(1));
 					}
 				}
 			}
@@ -588,7 +588,7 @@ public class Party implements PlayerGroup
 			return;
 		}
 		
-		SystemMessage msg = new SystemMessage(SystemMessage.S1_HAS_BECOME_A_PARTY_LEADER).addName(leader);
+		SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BECOME_THE_PARTY_LEADER).addPcName(leader);
 		
 		for (Player member : _members)
 		{
@@ -730,7 +730,18 @@ public class Party implements PlayerGroup
 			
 			player.broadcastPickUpMsg(item);
 			item.pickupMe();
-			broadcastToPartyMembers(target, SystemMessage2.obtainItemsBy(item, target));
+			if (item.getCount() > 1)
+			{
+				broadcastToPartyMembers(target, SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2).addCharName(target).addItemName(item.getId()).addLong(item.getCount()));
+			}
+			else if (item.isEquipable() && (item.getEnchantLevel() > 0))
+			{
+				broadcastToPartyMembers(target, SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2_S3).addCharName(target).addInt(item.getEnchantLevel()).addItemName(item.getId()));
+			}
+			else
+			{
+				broadcastToPartyMembers(target, SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2).addCharName(target).addItemName(item.getId()));
+			}
 		}
 		else
 		{
@@ -781,7 +792,7 @@ public class Party implements PlayerGroup
 		{
 			long count = member.equals(player) ? amount + ost : amount;
 			member.getInventory().addAdena(count);
-			member.sendPacket(SystemMessage2.obtainItems(ItemTemplate.ITEM_ID_ADENA, count, 0));
+			member.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA).addLong(count));
 		}
 		
 		if (fromNpc == null)
@@ -1233,7 +1244,7 @@ public class Party implements PlayerGroup
 		_changeLootAnswers = new CopyOnWriteArraySet<>();
 		_checkTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new ChangeLootCheck(), additionalTime + 1000, 5000);
 		broadcastToPartyMembers(getPartyLeader(), new ExAskModifyPartyLooting(getPartyLeader().getName(), type));
-		SystemMessage sm = new SystemMessage(SystemMessage.REQUESTING_APPROVAL_CHANGE_PARTY_LOOT_S1);
+		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.REQUESTING_APPROVAL_FOR_CHANGING_PARTY_LOOT_TO_S1);
 		sm.addSystemString(LOOT_SYSSTRINGS[type]);
 		getPartyLeader().sendPacket(sm);
 	}
@@ -1290,14 +1301,14 @@ public class Party implements PlayerGroup
 		{
 			broadCast(new ExSetPartyLooting(1, _requestChangeLoot));
 			_itemDistribution = _requestChangeLoot;
-			SystemMessage sm = new SystemMessage(SystemMessage.PARTY_LOOT_CHANGED_S1);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PARTY_LOOT_WAS_CHANGED_TO_S1);
 			sm.addSystemString(LOOT_SYSSTRINGS[_requestChangeLoot]);
 			broadCast(sm);
 		}
 		else
 		{
 			broadCast(new ExSetPartyLooting(0, (byte) 0));
-			broadCast(new SystemMessage(SystemMessage.PARTY_LOOT_CHANGE_CANCELLED));
+			broadCast(SystemMessage.getSystemMessage(SystemMessageId.PARTY_LOOT_CHANGE_WAS_CANCELLED));
 		}
 		
 		_changeLootAnswers = null;

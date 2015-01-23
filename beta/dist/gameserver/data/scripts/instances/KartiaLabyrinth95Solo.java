@@ -26,7 +26,8 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Util;
 
@@ -112,7 +113,7 @@ public final class KartiaLabyrinth95Solo extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_1, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.STAGE_1, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
@@ -134,7 +135,7 @@ public final class KartiaLabyrinth95Solo extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_2, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.STAGE_2, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
@@ -175,7 +176,7 @@ public final class KartiaLabyrinth95Solo extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_3, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.STAGE_3, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10488, -11910), 0);
@@ -237,7 +238,7 @@ public final class KartiaLabyrinth95Solo extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_4, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.STAGE_4, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
@@ -302,7 +303,7 @@ public final class KartiaLabyrinth95Solo extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_5, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.STAGE_5, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
@@ -369,7 +370,7 @@ public final class KartiaLabyrinth95Solo extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_6, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.STAGE_6, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
@@ -443,7 +444,7 @@ public final class KartiaLabyrinth95Solo extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_7, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.STAGE_7, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			addSpawnWithoutRespawn(KartiaGuard, new Location(-110600, -10584, -11910), 0);
@@ -559,7 +560,7 @@ public final class KartiaLabyrinth95Solo extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_1, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.STAGE_1, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			for (NpcInstance n : getNpcs())
@@ -593,7 +594,7 @@ public final class KartiaLabyrinth95Solo extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_2, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.STAGE_2, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			closeDoor(DOOR2_ID);
@@ -619,7 +620,7 @@ public final class KartiaLabyrinth95Solo extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_3, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.STAGE_3, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111848, -15560, -11445), 0);
@@ -644,7 +645,7 @@ public final class KartiaLabyrinth95Solo extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_4, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.STAGE_4, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111848, -15560, -11445), 0);
@@ -669,7 +670,7 @@ public final class KartiaLabyrinth95Solo extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_5, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.STAGE_5, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111848, -15560, -11445), 0);
@@ -694,7 +695,7 @@ public final class KartiaLabyrinth95Solo extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_6, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.STAGE_6, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111848, -15560, -11445), 0);
@@ -725,7 +726,7 @@ public final class KartiaLabyrinth95Solo extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_7, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.STAGE_7, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			addSpawnWithoutRespawn(KartiaWatchman, new Location(-111848, -15560, -11445), 0);
@@ -753,7 +754,7 @@ public final class KartiaLabyrinth95Solo extends Reflection
 			
 			for (Player p : getPlayers())
 			{
-				p.sendPacket(new SystemMessage(2106).addNumber(5));
+				p.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES).addInt(5));
 				p.addExpAndSp(975674677, 8509978, 0, 0, true, false, false);
 			}
 		}

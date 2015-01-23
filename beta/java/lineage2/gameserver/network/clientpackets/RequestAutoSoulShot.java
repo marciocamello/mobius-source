@@ -17,6 +17,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ExAutoSoulShot;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -66,7 +67,7 @@ public class RequestAutoSoulShot extends L2GameClientPacket
 		{
 			activeChar.addAutoSoulShot(_itemId);
 			activeChar.sendPacket(new ExAutoSoulShot(_itemId, true));
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THE_USE_OF_S1_WILL_NOW_BE_AUTOMATED).addString(item.getName()));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_ACTIVATED).addString(item.getName()));
 			IItemHandler handler = item.getTemplate().getHandler();
 			handler.useItem(activeChar, item, false);
 			return;
@@ -74,6 +75,6 @@ public class RequestAutoSoulShot extends L2GameClientPacket
 		
 		activeChar.removeAutoSoulShot(_itemId);
 		activeChar.sendPacket(new ExAutoSoulShot(_itemId, false));
-		activeChar.sendPacket(new SystemMessage(SystemMessage.THE_AUTOMATIC_USE_OF_S1_WILL_NOW_BE_CANCELLED).addString(item.getName()));
+		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED).addString(item.getName()));
 	}
 }

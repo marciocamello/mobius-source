@@ -19,6 +19,7 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 
 /**
@@ -63,38 +64,38 @@ public class ItemR extends Skill
 		if ((_item_r1 != 0) && (_item_r2 != 0) && (_item_r3 != 0))
 		{
 			player.getInventory().destroyItemByItemId(_item_del, 1);
-			player.sendPacket(new SystemMessage(SystemMessage.S2_S1_HAS_DISAPPEARED).addItemName(_item_del));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED).addItemName(_item_del));
 			
 			if (Rnd.chance(90))
 			{
 				player.getInventory().addItem(_item_r1, 1);
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1).addItemName(_item_r1));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1).addItemName(_item_r1));
 			}
 			else if (Rnd.chance(2))
 			{
 				player.getInventory().addItem(_item_r3, 1);
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1).addItemName(_item_r3));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1).addItemName(_item_r3));
 			}
 			else
 			{
 				player.getInventory().addItem(_item_r2, 1);
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1).addItemName(_item_r2));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1).addItemName(_item_r2));
 			}
 		}
 		else if ((_item_r1 != 0) && (_item_r2 != 0))
 		{
 			player.getInventory().destroyItemByItemId(_item_del, 1);
-			player.sendPacket(new SystemMessage(SystemMessage.S2_S1_HAS_DISAPPEARED).addItemName(_item_del));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED).addItemName(_item_del));
 			
 			if (Rnd.chance(90))
 			{
 				player.getInventory().addItem(_item_r1, 1);
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1).addItemName(_item_r1));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1).addItemName(_item_r1));
 			}
 			else
 			{
 				player.getInventory().addItem(_item_r2, 1);
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1).addItemName(_item_r2));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1).addItemName(_item_r2));
 			}
 		}
 		else

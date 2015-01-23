@@ -21,7 +21,7 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.RecipeBookItemList;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.RecipeTemplate;
 
 /**
@@ -72,64 +72,64 @@ public final class Recipes extends ScriptItemHandler
 			{
 				if (player.getDwarvenRecipeBook().size() >= player.getDwarvenRecipeLimit())
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.NO_FURTHER_RECIPES_MAY_BE_REGISTERED));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_FURTHER_RECIPES_MAY_BE_REGISTERED));
 					return false;
 				}
 				
 				if (rp.getLevel() > player.getSkillLevel(Skill.SKILL_CRAFTING))
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.CREATE_ITEM_LEVEL_IS_TOO_LOW_TO_REGISTER_THIS_RECIPE));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_CREATE_ITEM_LEVEL_IS_TOO_LOW_TO_REGISTER_THIS_RECIPE));
 					return false;
 				}
 				
 				if (player.hasRecipe(rp))
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.THAT_RECIPE_IS_ALREADY_REGISTERED));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_RECIPE_IS_ALREADY_REGISTERED));
 					return false;
 				}
 				
 				if (!player.getInventory().destroyItem(item, 1L))
 				{
-					player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 					return false;
 				}
 				
 				player.registerRecipe(rp, true);
-				player.sendPacket(new SystemMessage(SystemMessage.S1_HAS_BEEN_ADDED).addItemName(item.getId()));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED).addItemName(item.getId()));
 				player.sendPacket(new RecipeBookItemList(player, true));
 				return true;
 			}
 			
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOT_AUTHORIZED_TO_REGISTER_A_RECIPE));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_REGISTER_A_RECIPE));
 		}
 		else if (player.getCommonRecipeLimit() > 0)
 		{
 			if (player.getCommonRecipeBook().size() >= player.getCommonRecipeLimit())
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.NO_FURTHER_RECIPES_MAY_BE_REGISTERED));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_FURTHER_RECIPES_MAY_BE_REGISTERED));
 				return false;
 			}
 			
 			if (player.hasRecipe(rp))
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.THAT_RECIPE_IS_ALREADY_REGISTERED));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_RECIPE_IS_ALREADY_REGISTERED));
 				return false;
 			}
 			
 			if (!player.getInventory().destroyItem(item, 1L))
 			{
-				player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 				return false;
 			}
 			
 			player.registerRecipe(rp, true);
-			player.sendPacket(new SystemMessage(SystemMessage.S1_HAS_BEEN_ADDED).addItemName(item.getId()));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED).addItemName(item.getId()));
 			player.sendPacket(new RecipeBookItemList(player, false));
 			return true;
 		}
 		else
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOT_AUTHORIZED_TO_REGISTER_A_RECIPE));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_REGISTER_A_RECIPE));
 		}
 		
 		return false;

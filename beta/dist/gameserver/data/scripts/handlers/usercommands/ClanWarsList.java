@@ -21,6 +21,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
@@ -55,7 +56,7 @@ public class ClanWarsList implements IUserCommandHandler, ScriptFile
 		
 		if (clan == null)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.NOT_JOINED_IN_ANY_CLAN));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_JOINED_IN_ANY_CLAN));
 			return false;
 		}
 		
@@ -64,17 +65,17 @@ public class ClanWarsList implements IUserCommandHandler, ScriptFile
 		
 		if (id == 88)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage._ATTACK_LIST_));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLANS_YOU_VE_DECLARED_WAR_ON));
 			data = clan.getEnemyClans();
 		}
 		else if (id == 89)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage._UNDER_ATTACK_LIST_));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLANS_THAT_HAVE_DECLARED_WAR_ON_YOU));
 			data = clan.getAttackerClans();
 		}
 		else
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage._WAR_LIST_));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_WAR_LIST));
 			
 			for (Clan c : clan.getEnemyClans())
 			{
@@ -92,17 +93,17 @@ public class ClanWarsList implements IUserCommandHandler, ScriptFile
 			
 			if (alliance != null)
 			{
-				sm = new SystemMessage(SystemMessage.S1_S2_ALLIANCE).addString(clanName).addString(alliance.getAllyName());
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_ALLIANCE).addString(clanName).addString(alliance.getAllyName());
 			}
 			else
 			{
-				sm = new SystemMessage(SystemMessage.S1_NO_ALLIANCE_EXISTS).addString(clanName);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_NO_ALLIANCE_EXISTS).addString(clanName);
 			}
 			
 			activeChar.sendPacket(sm);
 		}
 		
-		activeChar.sendPacket(new SystemMessage(SystemMessage.__EQUALS__));
+		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.EMPTY3));
 		return true;
 	}
 	

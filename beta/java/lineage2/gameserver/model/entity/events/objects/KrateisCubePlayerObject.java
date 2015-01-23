@@ -21,8 +21,8 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.impl.KrateisCubeEvent;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.Location;
 
 /**
@@ -64,7 +64,7 @@ public class KrateisCubePlayerObject implements Serializable, Comparable<Krateis
 			}
 			else
 			{
-				_player.sendPacket(new SystemMessage2(SystemMsg.RESURRECTION_WILL_TAKE_PLACE_IN_THE_WAITING_ROOM_AFTER_S1_SECONDS).addInteger(_seconds));
+				_player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.RESURRECTION_WILL_TAKE_PLACE_IN_THE_WAITING_ROOM_AFTER_S1_SECOND_S).addInt(_seconds));
 				_ressurectTask = ThreadPoolManager.getInstance().schedule(this, 1000L);
 			}
 		}

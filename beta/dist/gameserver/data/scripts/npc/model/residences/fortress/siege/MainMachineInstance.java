@@ -19,8 +19,9 @@ import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.entity.events.objects.SpawnExObject;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
@@ -77,7 +78,7 @@ public final class MainMachineInstance extends NpcInstance
 			return;
 		}
 		
-		Functions.npcShout(this, NpcString.FORTRESS_POWER_DISABLED);
+		Functions.npcShout(this, NpcStringId.FORTRESS_POWER_DISABLED);
 		FortressSiegeEvent siegeEvent = getEvent(FortressSiegeEvent.class);
 		
 		if (siegeEvent == null)
@@ -87,7 +88,7 @@ public final class MainMachineInstance extends NpcInstance
 		
 		siegeEvent.spawnAction(FortressSiegeEvent.IN_POWER_UNITS, false);
 		siegeEvent.barrackAction(3, true);
-		siegeEvent.broadcastTo(SystemMsg.THE_BARRACKS_HAVE_BEEN_SEIZED, SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
+		siegeEvent.broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_BARRACKS_HAVE_BEEN_SEIZED), SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
 		onDecay();
 		siegeEvent.checkBarracks();
 	}
@@ -112,20 +113,20 @@ public final class MainMachineInstance extends NpcInstance
 			}
 		}
 		
-		NpcString msg = null;
+		NpcStringId msg = null;
 		
 		switch (machineNumber)
 		{
 			case 0:
-				msg = NpcString.MACHINE_NO_1_POWER_OFF;
+				msg = NpcStringId.MACHINE_NO_1_POWER_OFF;
 				break;
 			
 			case 1:
-				msg = NpcString.MACHINE_NO_2_POWER_OFF;
+				msg = NpcStringId.MACHINE_NO_2_POWER_OFF;
 				break;
 			
 			case 2:
-				msg = NpcString.MACHINE_NO_3_POWER_OFF;
+				msg = NpcStringId.MACHINE_NO_3_POWER_OFF;
 				break;
 			
 			default:

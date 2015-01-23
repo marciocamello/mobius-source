@@ -27,7 +27,7 @@ import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
@@ -150,7 +150,7 @@ public final class Valakas extends DefaultAI
 		
 		if (_counterAttackIndex > 2000)
 		{
-			ValakasManager.broadcastScreenMessage(NpcString.VALAKAS_HEIGHTENED_BY_COUNTERATTACKS);
+			ValakasManager.broadcastScreenMessage(NpcStringId.BECAUSE_THE_COWARDLY_COUNTERATTACKS_CONTINUED_VALAKAS_FURY_HAS_REACHED_ITS_MAXIMUM_NVALAKAS_P_ATK_IS_GREATLY_INCREASED);
 			_counterAttackIndex = 0;
 			return chooseTaskAndTargets(s_berserk, actor, 0);
 		}
@@ -181,25 +181,25 @@ public final class Valakas extends DefaultAI
 					}, 20000L);
 				}
 				
-				ValakasManager.broadcastScreenMessage(NpcString.VALAKAS_RANGED_ATTACKS_ENRAGED_TARGET_FREE);
+				ValakasManager.broadcastScreenMessage(NpcStringId.VALAKAS_HAS_BEEN_ENRAGED_BY_THE_LONG_RANGE_CONCENTRATION_ATTACKS_AND_IS_COMING_TOWARD_ITS_TARGET_WITH_EVEN_GREATER_ZEAL);
 				_rangedAttacksIndex = 0;
 			}
 			else
 			{
-				ValakasManager.broadcastScreenMessage(NpcString.VALAKAS_RANGED_ATTACKS_PROVOKED);
+				ValakasManager.broadcastScreenMessage(NpcStringId.LONG_RANGE_CONCENTRATION_ATTACKS_HAVE_ENRAGED_VALAKAS_NIF_YOU_CONTINUE_IT_MAY_BECOME_A_DANGEROUS_SITUATION);
 				_rangedAttacksIndex = 0;
 				return chooseTaskAndTargets(s_berserk, actor, 0);
 			}
 		}
 		else if (_attacksIndex > 3000)
 		{
-			ValakasManager.broadcastScreenMessage(NpcString.VALAKAS_PDEF_ISM_DECREACED_SLICED_DASH);
+			ValakasManager.broadcastScreenMessage(NpcStringId.SOME_WARRIOR_S_BLOW_HAS_LEFT_A_HUGE_GASH_BETWEEN_THE_GREAT_SCALES_OF_VALAKAS_NVALAKAS_P_DEF_IS_GREATLY_DECREASED);
 			_attacksIndex = 0;
 			return chooseTaskAndTargets(s_defence_down, actor, 0);
 		}
 		else if (defenceDownTimer < System.currentTimeMillis())
 		{
-			ValakasManager.broadcastScreenMessage(NpcString.VALAKAS_FINDS_YOU_ATTACKS_ANNOYING_SILENCE);
+			ValakasManager.broadcastScreenMessage(NpcStringId.ANNOYING_CONCENTRATION_ATTACKS_ARE_DISRUPTING_VALAKAS_CONCENTRATION_NIF_IT_CONTINUES_YOU_MAY_GET_A_GREAT_OPPORTUNITY);
 			defenceDownTimer = System.currentTimeMillis() + defenceDownReuse + (Rnd.get(60) * 1000L);
 			return chooseTaskAndTargets(s_fear, target, distance);
 		}

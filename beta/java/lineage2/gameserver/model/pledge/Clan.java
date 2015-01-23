@@ -47,6 +47,7 @@ import lineage2.gameserver.network.serverpackets.PledgeSkillList;
 import lineage2.gameserver.network.serverpackets.PledgeSkillListAdd;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.skills.effects.EffectTemplate;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.tables.ClanTable;
@@ -1210,7 +1211,7 @@ public class Clan implements Iterable<UnitMember>
 	{
 		if ((_reputation >= 0) && (rep < 0))
 		{
-			broadcastToOnlineMembers(new SystemMessage(SystemMessage.SINCE_THE_CLAN_REPUTATION_SCORE_HAS_DROPPED_TO_0_OR_LOWER_YOUR_CLAN_SKILLS_WILL_BE_DE_ACTIVATED));
+			broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.SINCE_THE_CLAN_REPUTATION_HAS_DROPPED_BELOW_0_YOUR_CLAN_SKILL_S_WILL_BE_DE_ACTIVATED));
 			
 			for (UnitMember member : this)
 			{
@@ -1222,7 +1223,7 @@ public class Clan implements Iterable<UnitMember>
 		}
 		else if ((_reputation < 0) && (rep >= 0))
 		{
-			broadcastToOnlineMembers(new SystemMessage(SystemMessage.THE_CLAN_SKILL_WILL_BE_ACTIVATED_BECAUSE_THE_CLANS_REPUTATION_SCORE_HAS_REACHED_TO_0_OR_HIGHER));
+			broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.CLAN_SKILLS_WILL_NOW_BE_ACTIVATED_SINCE_THE_CLAN_REPUTATION_IS_1_OR_HIGHER));
 			
 			for (UnitMember member : this)
 			{
@@ -1637,7 +1638,7 @@ public class Clan implements Iterable<UnitMember>
 		{
 			if (temp == SUBUNIT_ACADEMY)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOUR_CLAN_HAS_ALREADY_ESTABLISHED_A_CLAN_ACADEMY));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ALREADY_ESTABLISHED_A_CLAN_ACADEMY));
 			}
 			else
 			{
@@ -1656,7 +1657,7 @@ public class Clan implements Iterable<UnitMember>
 			case SUBUNIT_ROYAL2:
 				if (getReputationScore() < 5000)
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.THE_CLAN_REPUTATION_SCORE_IS_TOO_LOW));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW));
 					return SUBUNIT_NONE;
 				}
 				
@@ -1669,7 +1670,7 @@ public class Clan implements Iterable<UnitMember>
 			case SUBUNIT_KNIGHT4:
 				if (getReputationScore() < 10000)
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.THE_CLAN_REPUTATION_SCORE_IS_TOO_LOW));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW));
 					return SUBUNIT_NONE;
 				}
 				

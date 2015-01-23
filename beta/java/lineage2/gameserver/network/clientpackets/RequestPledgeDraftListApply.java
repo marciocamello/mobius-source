@@ -16,6 +16,7 @@ import lineage2.gameserver.instancemanager.ClanEntryManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.entry.PledgeWaitingInfo;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 public class RequestPledgeDraftListApply extends L2GameClientPacket
 {
@@ -41,7 +42,7 @@ public class RequestPledgeDraftListApply extends L2GameClientPacket
 		
 		if (activeChar.getClan() != null)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.ONLY_THE_CLAN_LEADER_OR_SOMEONE_WITH_RANK_MANAGEMENT_AUTHORITY_MAY_REGISTER_THE_CLAN));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_THE_CLAN_LEADER_OR_SOMEONE_WITH_RANK_MANAGEMENT_AUTHORITY_MAY_REGISTER_THE_CLAN));
 			return;
 		}
 		
@@ -51,7 +52,7 @@ public class RequestPledgeDraftListApply extends L2GameClientPacket
 			{
 				if (ClanEntryManager.getInstance().removeFromWaitingList(activeChar.getObjectId()))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.ENTRY_APPLICATION_CANCELLED_YOU_MAY_APPLY_TO_A_NEW_CLAN_AFTER_5_MINUTES));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ENTRY_APPLICATION_CANCELLED_YOU_MAY_APPLY_TO_A_NEW_CLAN_AFTER_5_MINUTES));
 				}
 				break;
 			}
@@ -61,12 +62,12 @@ public class RequestPledgeDraftListApply extends L2GameClientPacket
 				
 				if (ClanEntryManager.getInstance().addToWaitingList(activeChar.getObjectId(), pledgeDraftList))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.ENTERED_INTO_WAITING_LIST_NAME_IS_AUTOMATICALLY_DELETED_AFTER_30_DAYS_IF_DELETE_FROM_WAITING_LIST_IS_USED_YOU_CANNOT_ENTER_NAMES_INTO_THE_WAITING_LIST_FOR_5_MINUTES));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ENTERED_INTO_WAITING_LIST_NAME_IS_AUTOMATICALLY_DELETED_AFTER_30_DAYS_IF_DELETE_FROM_WAITING_LIST_IS_USED_YOU_CANNOT_ENTER_NAMES_INTO_THE_WAITING_LIST_FOR_5_MINUTES));
 				}
 				else
 				{
-					SystemMessage sm = new SystemMessage(SystemMessage.YOU_MAY_APPLY_FOR_ENTRY_AFTER_S1_MINUTE_S_DUE_TO_CANCELLING_YOUR_APPLICATION);
-					sm.addNumber(ClanEntryManager.getInstance().getPlayerLockTime(activeChar.getObjectId()));
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_APPLY_FOR_ENTRY_AFTER_S1_MINUTE_S_DUE_TO_CANCELLING_YOUR_APPLICATION);
+					sm.addLong(ClanEntryManager.getInstance().getPlayerLockTime(activeChar.getObjectId()));
 					activeChar.sendPacket(sm);
 				}
 				break;

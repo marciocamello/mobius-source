@@ -29,6 +29,7 @@ import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.network.serverpackets.ShopPreviewInfo;
 import lineage2.gameserver.network.serverpackets.ShopPreviewList;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ArmorTemplate.ArmorType;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
@@ -95,7 +96,7 @@ public class RequestPreviewItem extends L2GameClientPacket
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
@@ -179,7 +180,7 @@ public class RequestPreviewItem extends L2GameClientPacket
 				
 				if (itemList.containsKey(paperdoll))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.THOSE_ITEMS_MAY_NOT_BE_TRIED_ON_SIMULTANEOUSLY));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CAN_NOT_TRY_THOSE_ITEMS_ON_AT_THE_SAME_TIME));
 					return;
 				}
 				
@@ -189,13 +190,13 @@ public class RequestPreviewItem extends L2GameClientPacket
 			
 			if (!activeChar.reduceAdena(totalPrice))
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 				return;
 			}
 		}
 		catch (ArithmeticException ae)
 		{
-			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 			return;
 		}
 		
@@ -228,7 +229,7 @@ public class RequestPreviewItem extends L2GameClientPacket
 		@Override
 		public void runImpl()
 		{
-			_activeChar.sendPacket(new SystemMessage(SystemMessage.TRYING_ON_MODE_HAS_ENDED));
+			_activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NO_LONGER_TRYING_ON_EQUIPMENT2));
 			_activeChar.sendUserInfo();
 		}
 	}

@@ -17,7 +17,7 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
@@ -101,7 +101,7 @@ public class Q10740_NeverForget extends Quest implements ScriptFile
 						break;
 					case 3:
 						htmltext = "33951-6.htm";
-						qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
+						qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
 						qs.giveItems(57, 1600);
 						qs.giveItems(875, 1); // Ring of Knowledge
 						qs.giveItems(875, 1); // Ring of Knowledge

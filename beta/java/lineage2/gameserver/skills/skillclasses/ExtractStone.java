@@ -24,7 +24,7 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.network.serverpackets.PlaySound;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 
 /**
@@ -92,13 +92,13 @@ public class ExtractStone extends Skill
 	{
 		if ((target == null) || !target.isNpc() || (getItemId(target.getId()) == 0))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return false;
 		}
 		
 		if (!_npcIds.isEmpty() && !_npcIds.contains(new Integer(target.getId())))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return false;
 		}
 		
@@ -194,12 +194,19 @@ public class ExtractStone extends Skill
 				{
 					player.getInventory().addItem(itemId, count);
 					player.sendPacket(new PlaySound(Quest.SOUND_ITEMGET));
-					player.sendPacket(SystemMessage2.obtainItems(itemId, count, 0));
+					if (count > 1)
+					{
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(itemId).addLong(count));
+					}
+					else
+					{
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(itemId));
+					}
 					player.sendChanges();
 				}
 				else
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.THE_COLLECTION_HAS_FAILED));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_COLLECTION_HAS_FAILED));
 				}
 				
 				target.doDie(player);

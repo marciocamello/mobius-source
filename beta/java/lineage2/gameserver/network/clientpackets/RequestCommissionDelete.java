@@ -14,7 +14,8 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.instancemanager.commission.CommissionShopManager;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -52,6 +53,6 @@ public class RequestCommissionDelete extends L2GameClientPacket
 		}
 		
 		CommissionShopManager.getInstance().returnBuyItem(activeChar, _bidId, itemObjId);
-		activeChar.sendPacket(SystemMsg.CANCELLATION_OF_SALE_FOR_THE_ITEM_IS_SUCCESSFUL);
+		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANCELLATION_OF_SALE_FOR_THE_ITEM_IS_SUCCESSFUL));
 	}
 }

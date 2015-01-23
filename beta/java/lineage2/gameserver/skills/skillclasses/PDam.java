@@ -19,6 +19,7 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.FinishRotating;
 import lineage2.gameserver.network.serverpackets.StartRotating;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Formulas;
 import lineage2.gameserver.stats.Formulas.AttackInfo;
 import lineage2.gameserver.templates.StatsSet;
@@ -68,7 +69,7 @@ public class PDam extends Skill
 					target.broadcastPacket(new StartRotating(target, target.getHeading(), 1, 65535));
 					target.broadcastPacket(new FinishRotating(target, activeChar.getHeading(), 65535));
 					target.setHeading(activeChar.getHeading());
-					target.sendPacket(new SystemMessage(SystemMessage.S1_S2S_EFFECT_CAN_BE_FELT).addSkillName(_displayId, _displayLevel));
+					target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT).addSkillName(_displayId, _displayLevel));
 				}
 				
 				reflected = target.checkReflectSkill(activeChar, this);

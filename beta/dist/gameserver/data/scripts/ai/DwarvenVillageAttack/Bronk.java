@@ -20,7 +20,7 @@ import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -81,7 +81,7 @@ public final class Bronk extends Dwarvs
 		switch (timerId)
 		{
 			case 1:
-				Functions.npcSayInRange(getActor(), 1500, NpcString.MM_IM_SEE);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.MM_I_SEE);
 				final List<NpcInstance> list = r.getAllByNpcId(TOROCCO_ID, true);
 				
 				if (list.size() > 0)
@@ -92,27 +92,27 @@ public final class Bronk extends Dwarvs
 				break;
 			
 			case 2:
-				Functions.npcSayInRange(getActor(), 1500, NpcString.THANK_YOU_FOR_THE_REPORT_ROGIN);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.THANK_YOU_FOR_THE_REPORT_ROGIN);
 				addTimer(3, 1600);
 				break;
 			
 			case 3:
-				Functions.npcSayInRange(getActor(), 1500, NpcString.SOLDIERS_WERE_FIGHTING_A_BATTLE_THAT_CANT_BE_WON);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.SOLDIERS_WE_RE_FIGHTING_A_BATTLE_THAT_CAN_T_BE_WON);
 				addTimer(4, 1600);
 				break;
 			
 			case 4:
-				Functions.npcSayInRange(getActor(), 1500, NpcString.BUT_WE_HAVE_TO_DEFEND_OUR_VILLAGE_SO_WERE_FIGHTING);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.BUT_WE_HAVE_TO_DEFEND_OUR_VILLAGE_SO_WE_RE_FIGHTING);
 				addTimer(5, 1600);
 				break;
 			
 			case 5:
-				Functions.npcSayInRange(getActor(), 1500, NpcString.FOR_THE_FINE_WINES_AND_TREASURES_OF_ADEN);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.FOR_THE_FINE_WINES_AND_TREASURES_OF_ADEN);
 				addTimer(6, 1600);
 				break;
 			
 			case 6:
-				Functions.npcSayInRange(getActor(), 1500, NpcString.IM_PROUD_OF_EVERY_ONE_OF);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.I_M_PROUD_OF_EVERY_ONE_OF);
 				addTimer(7, 1600);
 				addTimer(7, 2400);
 				addTimer(7, 3600);
@@ -129,7 +129,7 @@ public final class Bronk extends Dwarvs
 				break;
 			
 			case 9:
-				Functions.npcSayInRange(getActor(), 1500, NpcString.UGH_IFI_SEE_YOU_IN_THE_SPIRIT_WORLD_FIRST_ROUND_IS_ON_ME);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.UGH_IF_I_SEE_YOU_IN_THE_SPIRIT_WORLD_FIRST_ROUND_IS_ON_ME);
 				addTimer(11, 1000);
 				addTimer(10, 1600);
 				addTimer(10, 2400);

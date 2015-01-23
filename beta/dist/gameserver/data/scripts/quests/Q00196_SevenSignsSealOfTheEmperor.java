@@ -22,6 +22,7 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
@@ -108,8 +109,8 @@ public class Q00196_SevenSignsSealOfTheEmperor extends Quest implements ScriptFi
 			case "shunaiman_q196_2.htm":
 				qs.setCond(4);
 				qs.playSound(SOUND_MIDDLE);
-				player.sendPacket(new SystemMessage(SystemMessage.BY_USING_THE_SKILL_OF_EINHASAD_S_HOLY_SWORD_DEFEAT_THE_EVIL_LILIMS));
-				player.sendPacket(new SystemMessage(SystemMessage.BY_USING_THE_HOLY_WATER_OF_EINHASAD_OPEN_THE_DOOR_POSSESSED_BY_THE_CURSE_OF_FLAMES));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.BY_USING_THE_SKILL_OF_EINHASAD_S_HOLY_SWORD_DEFEAT_THE_EVIL_LILIMS));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.BY_USING_THE_HOLY_WATER_OF_EINHASAD_OPEN_THE_DOOR_POSSESSED_BY_THE_CURSE_OF_FLAMES));
 				qs.giveItems(SacredSwordofEinhasad, 1);
 				qs.giveItems(ElmoredenHolyWater, 1);
 				break;
@@ -117,12 +118,12 @@ public class Q00196_SevenSignsSealOfTheEmperor extends Quest implements ScriptFi
 			case "courtmagician_q196_2.htm":
 				qs.playSound(SOUND_ITEMGET);
 				qs.giveItems(CourtMagiciansMagicStaff, 1);
-				player.sendPacket(new SystemMessage(SystemMessage.BY_USING_THE_COURT_MAGICIAN_S_MAGIC_STAFF_OPEN_THE_DOOR_ON_WHICH_THE_MAGICIAN_S_BARRIER_IS));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.BY_USING_THE_COURT_WIZARD_S_MAGIC_STAFF_OPEN_THE_DOOR_ON_WHICH_THE_MAGICIAN_S_BARRIER_IS_PLACED));
 				break;
 			
 			case "free_anakim":
 				player.showQuestMovie(ExStartScenePlayer.SCENE_SSQ_SEALING_EMPEROR_1ST);
-				player.sendPacket(new SystemMessage(SystemMessage.IN_ORDER_TO_HELP_ANAKIM_ACTIVATE_THE_SEALING_DEVICE_OF_THE_EMPEROR_WHO_IS_POSSESED_BY_THE_EVIL));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.IN_ORDER_TO_HELP_ANAKIM_ACTIVATE_THE_SEALING_DEVICE_OF_THE_EMPEROR_WHO_IS_POSSESSED_BY_THE_EVIL_MAGICAL_CURSE_MAGICAL_CURSE_IS_VERY_POWERFUL_SO_WE_MUST_BE_CAREFUL));
 				ref.openDoor(door11);
 				ThreadPoolManager.getInstance().schedule(new SpawnLilithRoom(ref), 17000);
 				return null;

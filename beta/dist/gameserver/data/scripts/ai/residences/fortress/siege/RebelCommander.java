@@ -14,7 +14,7 @@ package ai.residences.fortress.siege;
 
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import ai.residences.SiegeGuardFighter;
 
@@ -41,6 +41,6 @@ public final class RebelCommander extends SiegeGuardFighter
 	public void onEvtDead(Creature killer)
 	{
 		super.onEvtDead(killer);
-		Functions.npcSay(getActor(), NpcString.DONT_THINK_THAT_ITS_GONNA_END_LIKE_THIS);
+		Functions.npcSay(getActor(), NpcStringId.DON_T_THINK_THAT_IT_S_GONNA_END_LIKE_THIS_YOUR_AMBITION_WILL_SOON_BE_DESTROYED_AS_WELL);
 	}
 }

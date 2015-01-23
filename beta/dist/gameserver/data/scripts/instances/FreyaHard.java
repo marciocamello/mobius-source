@@ -35,9 +35,9 @@ import lineage2.gameserver.network.serverpackets.ExSendUIEvent;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.Location;
 
 /**
@@ -236,7 +236,7 @@ public final class FreyaHard extends Reflection
 			// screen message
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.BEGIN_STAGE_1_FREYA, 6000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.BEGIN_STAGE_12, 6000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
 			}
 			
 			// spawning few guards
@@ -262,7 +262,7 @@ public final class FreyaHard extends Reflection
 			
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.FREYA_HAS_STARTED_TO_MOVE, 4000, ScreenMessageAlign.MIDDLE_CENTER, true));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.FREYA_HAS_STARTED_TO_MOVE, 4000, ScreenMessageAlign.MIDDLE_CENTER, true));
 			}
 			
 			// Spawning Freya Throne
@@ -382,7 +382,7 @@ public final class FreyaHard extends Reflection
 		{
 			for (Player p : getPlayers())
 			{
-				p.sendPacket(new ExSendUIEvent(p, 0, 0, 60, 0, NpcString.TIME_REMAINING_UNTIL_NEXT_BATTLE));
+				p.sendPacket(new ExSendUIEvent(p, 0, 0, 60, 0, NpcStringId.TIME_REMAINING_UNTIL_NEXT_BATTLE));
 			}
 			
 			ThreadPoolManager.getInstance().schedule(new SecondStage(), 60000L);
@@ -403,7 +403,7 @@ public final class FreyaHard extends Reflection
 			
 			for (Player p : getPlayers())
 			{
-				p.sendPacket(new ExShowScreenMessage(NpcString.BEGIN_STAGE_2_FREYA, 6000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
+				p.sendPacket(new ExShowScreenMessage(NpcStringId.BEGIN_STAGE_22, 6000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
 			}
 			
 			secondStageGuardSpawn = ThreadPoolManager.getInstance().scheduleAtFixedRate(new GuardSpawnTask(4), 2000L, 60000L);
@@ -466,7 +466,7 @@ public final class FreyaHard extends Reflection
 		{
 			for (Player p : getPlayers())
 			{
-				p.sendPacket(new ExSendUIEvent(p, 0, 0, 60, 0, NpcString.TIME_REMAINING_UNTIL_NEXT_BATTLE));
+				p.sendPacket(new ExSendUIEvent(p, 0, 0, 60, 0, NpcStringId.TIME_REMAINING_UNTIL_NEXT_BATTLE));
 			}
 			
 			secondStageGuardSpawn.cancel(true);
@@ -518,7 +518,7 @@ public final class FreyaHard extends Reflection
 			
 			for (Player p : getPlayers())
 			{
-				p.sendPacket(new ExShowScreenMessage(NpcString.BEGIN_STAGE_3_FREYA, 6000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
+				p.sendPacket(new ExShowScreenMessage(NpcStringId.BEGIN_STAGE_32, 6000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
 				p.sendPacket(new ExChangeClientEffectInfo(2));
 			}
 			
@@ -570,7 +570,7 @@ public final class FreyaHard extends Reflection
 			for (Player p : getPlayers())
 			{
 				p.unblock();
-				p.sendPacket(new ExShowScreenMessage(NpcString.BEGIN_STAGE_4_FREYA, 6000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
+				p.sendPacket(new ExShowScreenMessage(NpcStringId.BEGIN_STAGE_4, 6000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
 			}
 			
 			addSpawnWithoutRespawn(Jinia, new Location(114727, -114700, -11200, -16260), 0);
@@ -644,7 +644,7 @@ public final class FreyaHard extends Reflection
 			
 			for (Player p : getPlayers())
 			{
-				p.sendPacket(new SystemMessage2(SystemMsg.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addInteger(5));
+				p.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES).addInt(5));
 			}
 		}
 	}

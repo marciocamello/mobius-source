@@ -20,6 +20,7 @@ import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
@@ -69,7 +70,7 @@ public class AdminDisconnect implements IAdminCommandHandler, ScriptFile
 					
 					if (!target.isPlayer())
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 						break;
 					}
 					
@@ -102,7 +103,7 @@ public class AdminDisconnect implements IAdminCommandHandler, ScriptFile
 				}
 				
 				player.sendMessage("You where kicked by a GM.");
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_BEEN_DISCONNECTED_FROM_THE_SERVER_PLEASE_LOGIN_AGAIN));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_BEEN_DISCONNECTED_FROM_THE_SERVER_PLEASE_LOGIN_AGAIN));
 				ThreadPoolManager.getInstance().schedule(new RunnableImpl()
 				{
 					@Override

@@ -27,8 +27,7 @@ import lineage2.gameserver.model.items.attachment.PickableAttachment;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.templates.item.ArmorTemplate.ArmorType;
 import lineage2.gameserver.templates.item.ItemTemplate;
@@ -101,7 +100,18 @@ public final class ItemFunctions
 		
 		if (notify)
 		{
-			player.sendPacket(SystemMessage2.obtainItems(itemId, count, 0));
+			if (itemId == 57)
+			{
+				SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA).addLong(count);
+			}
+			else if (count > 1)
+			{
+				SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(itemId).addLong(count);
+			}
+			else
+			{
+				SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(itemId);
+			}
 		}
 	}
 	
@@ -162,7 +172,18 @@ public final class ItemFunctions
 		
 		if ((removed > 0) && notify)
 		{
-			player.sendPacket(SystemMessage2.removeItems(itemId, removed));
+			if (itemId == 57)
+			{
+				SystemMessage.getSystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED).addLong(removed);
+			}
+			else if (removed > 1)
+			{
+				SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED).addItemName(itemId).addLong(removed);
+			}
+			else
+			{
+				SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED).addItemName(itemId);
+			}
 		}
 		
 		return removed;
@@ -188,7 +209,7 @@ public final class ItemFunctions
 	{
 		if (!item.isEquipable())
 		{
-			return new SystemMessage(SystemMessage.ITEM_NOT_AVAILABLE_FOR_PETS);
+			return SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 		}
 		
 		int petId = pet.getId();
@@ -198,7 +219,7 @@ public final class ItemFunctions
 			return null;
 		}
 		
-		return new SystemMessage(SystemMessage.ITEM_NOT_AVAILABLE_FOR_PETS);
+		return SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 	}
 	
 	/**
@@ -215,7 +236,7 @@ public final class ItemFunctions
 		
 		if ((item.isHeroWeapon() || (item.getId() == 6842)) && !player.isHero())
 		{
-			return new SystemMessage(SystemMessage.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+			return SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 		}
 		
 		if (!player.isAwaking())
@@ -223,55 +244,55 @@ public final class ItemFunctions
 			// Ertheia Update - Kamael can use robes and heavy armors.
 			if ((player.getRace() == Race.kamael) && ((item.getItemType() == ArmorType.SIGIL) || (item.getItemType() == WeaponType.NONE)))
 			{
-				return new SystemMessage(SystemMessage.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+				return SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 			}
 			// Ertheia Update - Ertheia Wizards cannot equip shields and sigils.
 			if (((player.getRace() == Race.ertheia) && (player.isMageClass())) && ((item.getItemType() == ArmorType.SIGIL) || (item.getItemType() == WeaponType.NONE)))
 			{
-				return new SystemMessage(SystemMessage.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+				return SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 			}
 			
 			if ((player.getRace() != Race.kamael) && ((item.getItemType() == WeaponType.CROSSBOW) || (item.getItemType() == WeaponType.RAPIER) || (item.getItemType() == WeaponType.ANCIENTSWORD)))
 			{
-				return new SystemMessage(SystemMessage.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+				return SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 			}
 		}
 		
 		if ((itemId >= 7850) && (itemId <= 7859) && (player.getLvlJoinedAcademy() == 0))
 		{
-			return new SystemMessage(SystemMessage.THIS_ITEM_CAN_ONLY_BE_WORN_BY_A_MEMBER_OF_THE_CLAN_ACADEMY);
+			return SystemMessage.getSystemMessage(SystemMessageId.THIS_ITEM_CAN_ONLY_BE_WORN_BY_A_MEMBER_OF_THE_CLAN_ACADEMY);
 		}
 		
 		if (isClanApellaItem(itemId) && (player.getPledgeClass() < Player.RANK_WISEMAN))
 		{
-			return new SystemMessage(SystemMessage.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+			return SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 		}
 		
 		if ((item.getItemType() == WeaponType.DUALDAGGER) && ((player.getSkillLevel(923) < 1) && (player.getSkillLevel(10502) < 1)))
 		{
-			return new SystemMessage(SystemMessage.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+			return SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 		}
 		
 		if (Util.contains(ItemTemplate.ITEM_ID_CASTLE_CIRCLET, itemId) && ((clan == null) || (itemId != ItemTemplate.ITEM_ID_CASTLE_CIRCLET[clan.getCastle()])))
 		{
-			return new SystemMessage(SystemMessage.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+			return SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 		}
 		
 		if ((itemId == 6841) && ((clan == null) || !player.isClanLeader() || (clan.getCastle() == 0)))
 		{
-			return new SystemMessage(SystemMessage.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+			return SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 		}
 		
 		if ((targetSlot == ItemTemplate.SLOT_LR_HAND) || (targetSlot == ItemTemplate.SLOT_L_HAND) || (targetSlot == ItemTemplate.SLOT_R_HAND))
 		{
 			if ((itemId != player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND)) && CursedWeaponsManager.getInstance().isCursed(player.getInventory().getPaperdollItemId(Inventory.PAPERDOLL_RHAND)))
 			{
-				return new SystemMessage(SystemMessage.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+				return SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 			}
 			
 			if (player.isCursedWeaponEquipped() && (itemId != player.getCursedWeaponEquippedId()))
 			{
-				return new SystemMessage(SystemMessage.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+				return SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 			}
 		}
 		
@@ -279,17 +300,17 @@ public final class ItemFunctions
 		{
 			if (item.getName().contains("Knight") && ((player.getPledgeClass() < Player.RANK_KNIGHT) || (player.getCastle() == null)))
 			{
-				return new SystemMessage(SystemMessage.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+				return SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 			}
 			
 			if (item.getName().contains("Kamael") && (player.getRace() != Race.kamael))
 			{
-				return new SystemMessage(SystemMessage.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+				return SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 			}
 			
 			if (!player.getOpenCloak())
 			{
-				return new SystemMessage(SystemMessage.THE_CLOAK_CANNOT_BE_EQUIPPED_BECAUSE_A_NECESSARY_ITEM_IS_NOT_EQUIPPED);
+				return SystemMessage.getSystemMessage(SystemMessageId.THE_CLOAK_CANNOT_BE_EQUIPPED_BECAUSE_YOUR_ARMOR_SET_IS_NOT_COMPLETE);
 			}
 		}
 		
@@ -299,7 +320,7 @@ public final class ItemFunctions
 			
 			if (count <= 0)
 			{
-				return new SystemMessage2(SystemMsg.YOU_CANNOT_WEAR_S1_BECAUSE_YOU_ARE_NOT_WEARING_A_BRACELET).addItemName(itemId);
+				return SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_WEAR_S1_BECAUSE_YOU_ARE_NOT_WEARING_A_BRACELET).addItemName(itemId);
 			}
 			
 			ItemInstance deco;
@@ -317,7 +338,7 @@ public final class ItemFunctions
 					
 					if ((--count <= 0) || (deco.getId() == itemId))
 					{
-						return new SystemMessage2(SystemMsg.YOU_CANNOT_EQUIP_S1_BECAUSE_YOU_DO_NOT_HAVE_ANY_AVAILABLE_SLOTS).addItemName(itemId);
+						return SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_EQUIP_S1_BECAUSE_YOU_DO_NOT_HAVE_ANY_AVAILABLE_SLOTS).addItemName(itemId);
 					}
 				}
 			}
@@ -348,13 +369,13 @@ public final class ItemFunctions
 	{
 		if (!player.getInventory().validateWeight(item))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
 			return false;
 		}
 		
 		if (!player.getInventory().validateCapacity(item))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOUR_INVENTORY_IS_FULL));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_INVENTORY_IS_FULL));
 			return false;
 		}
 		

@@ -23,7 +23,8 @@ import lineage2.gameserver.model.base.AcquireType;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.AcquireSkillDone;
 import lineage2.gameserver.network.serverpackets.AcquireSkillList;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
@@ -57,7 +58,7 @@ public final class ClanSkillList implements IBypassHandler, ScriptFile
 	{
 		if ((player.getClan() == null) || !player.isClanLeader())
 		{
-			player.sendPacket(SystemMsg.ONLY_THE_CLAN_LEADER_IS_ENABLED);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_THE_CLAN_LEADER_IS_ENABLED));
 			player.sendActionFailed();
 			return;
 		}
@@ -73,7 +74,7 @@ public final class ClanSkillList implements IBypassHandler, ScriptFile
 		if (skills.size() == 0)
 		{
 			player.sendPacket(AcquireSkillDone.STATIC);
-			player.sendPacket(SystemMsg.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_OTHER_SKILLS_TO_LEARN));
 		}
 		else
 		{

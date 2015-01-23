@@ -18,12 +18,10 @@ package lineage2.gameserver.network.serverpackets.components;
  */
 public enum SysString
 {
-	// Text: Passenger Boat Info
-	PASSENGER_BOAT_INFO(801),
-	// Text: Previous
-	PREVIOUS(1037),
-	// Text: Next
-	NEXT(1038);
+	PASSENGER_BOAT_INFO(801), // Text: Passenger Boat Info
+	PREVIOUS(1037), // Text: Previous
+	NEXT(1038); // Text: Next
+	
 	private static final SysString[] VALUES = values();
 	private final int _id;
 	

@@ -19,6 +19,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import bosses.BelethManager;
@@ -78,7 +79,7 @@ public final class BelethCoffinInstance extends NpcInstance
 			
 			CommandChannel channel = player.getParty().getCommandChannel();
 			Functions.addItem(player, RING, 1);
-			SystemMessage smsg = new SystemMessage(SystemMessage.S1_HAS_OBTAINED_S2);
+			SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2);
 			smsg.addString(player.getName());
 			smsg.addItemName(RING);
 			channel.broadCast(smsg);

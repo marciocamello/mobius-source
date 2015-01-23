@@ -17,6 +17,7 @@ import lineage2.gameserver.handlers.UserCommandHandler;
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
@@ -61,34 +62,34 @@ public class PartyInfo implements IUserCommandHandler, ScriptFile
 		
 		int memberCount = playerParty.getMemberCount();
 		int lootDistribution = playerParty.getLootDistribution();
-		activeChar.sendPacket(new SystemMessage(SystemMessage._PARTY_INFORMATION_));
+		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PARTY_INFORMATION));
 		
 		switch (lootDistribution)
 		{
 			case Party.ITEM_LOOTER:
-				activeChar.sendPacket(new SystemMessage(SystemMessage.LOOTING_METHOD_FINDERS_KEEPERS));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.LOOTING_METHOD_FINDERS_KEEPERS));
 				break;
 			
 			case Party.ITEM_ORDER:
-				activeChar.sendPacket(new SystemMessage(SystemMessage.LOOTING_METHOD_BY_TURN));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.LOOTING_METHOD_BY_TURN));
 				break;
 			
 			case Party.ITEM_ORDER_SPOIL:
-				activeChar.sendPacket(new SystemMessage(SystemMessage.LOOTING_METHOD_BY_TURN_INCLUDING_SPOIL));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.LOOTING_METHOD_BY_TURN_INCLUDING_SPOIL));
 				break;
 			
 			case Party.ITEM_RANDOM:
-				activeChar.sendPacket(new SystemMessage(SystemMessage.LOOTING_METHOD_RANDOM));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.LOOTING_METHOD_RANDOM));
 				break;
 			
 			case Party.ITEM_RANDOM_SPOIL:
-				activeChar.sendPacket(new SystemMessage(SystemMessage.LOOTING_METHOD_RANDOM_INCLUDING_SPOIL));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.LOOTING_METHOD_RANDOM_INCLUDING_SPOIL));
 				break;
 		}
 		
-		activeChar.sendPacket(new SystemMessage(SystemMessage.PARTY_LEADER_S1).addString(partyLeader.getName()));
+		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PARTY_LEADER_C1).addString(partyLeader.getName()));
 		activeChar.sendMessage("Members: " + memberCount + "/9.");
-		activeChar.sendPacket(new SystemMessage(SystemMessage.__DASHES__));
+		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.EMPTY4));
 		return true;
 	}
 	

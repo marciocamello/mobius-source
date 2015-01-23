@@ -19,7 +19,7 @@ import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.model.SimpleSpawner;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.npc.NpcTemplate;
@@ -43,11 +43,11 @@ public final class Mammons extends Functions implements ScriptFile
 	static NpcInstance MerchantNpc;
 	static NpcInstance BlacksmithNpc;
 	private static ScheduledFuture<?> _mammonTeleportTask;
-	static final NpcString[] mammonText =
+	static final NpcStringId[] mammonText =
 	{
-		NpcString.RULERS_OF_THE_SEAL_I_BRING_YOU_WONDROUS_GIFTS,
-		NpcString.RULERS_OF_THE_SEAL_I_HAVE_SOME_EXCELLENT_WEAPONS_TO_SHOW_YOU,
-		NpcString.IVE_BEEN_SO_BUSY_LATELY_IN_ADDITION_TO_PLANNING_MY_TRIP
+		NpcStringId.I_BRING_YOU_WONDROUS_GIFTS,
+		NpcStringId.I_HAVE_SOME_EXCELLENT_WEAPONS_TO_SHOW_YOU,
+		NpcStringId.I_VE_BEEN_SO_BUSY_LATELY_IN_ADDITION_TO_PLANNING_MY_TRIP
 	};
 	static final Location[] MAMMON_PRIEST_POINTS =
 	{

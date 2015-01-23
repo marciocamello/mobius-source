@@ -24,7 +24,7 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 import lineage2.gameserver.network.serverpackets.TutorialShowHtml;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
@@ -78,13 +78,13 @@ public class Q10735_ASpecialPower extends Quest implements ScriptFile
 			
 			case "more_monsters":
 				htmltext = "33944-3.htm";
-				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ATTACK_THE_MONSTER, 4500, ScreenMessageAlign.TOP_CENTER));
+				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.ATTACK_THE_MONSTER, 4500, ScreenMessageAlign.TOP_CENTER));
 				break;
 			
 			case "skill_fight":
 				qs.setCond(6);
 				htmltext = "33944-7.htm";
-				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.FIGHT_USING_SKILLS, 4500, ScreenMessageAlign.TOP_CENTER));
+				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.FIGHT_USING_SKILLS, 4500, ScreenMessageAlign.TOP_CENTER));
 				qs.getPlayer().getReflection().addSpawnWithoutRespawn(Ratel, new Location(-75112, 240760, -3615, 0), 0);
 				qs.getPlayer().getReflection().addSpawnWithoutRespawn(Ratel, new Location(-75016, 240456, -3628, 0), 0);
 				break;
@@ -144,7 +144,7 @@ public class Q10735_ASpecialPower extends Quest implements ScriptFile
 						
 						qs.getPlayer().getReflection().addSpawnWithoutRespawn(Floato, new Location(-75112, 240760, -3615, 0), 0);
 						qs.getPlayer().getReflection().addSpawnWithoutRespawn(Floato, new Location(-75016, 240456, -3628, 0), 0);
-						qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ATTACK_THE_MONSTER, 4500, ScreenMessageAlign.TOP_CENTER));
+						qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.ATTACK_THE_MONSTER, 4500, ScreenMessageAlign.TOP_CENTER));
 						
 						break;
 					
@@ -156,7 +156,7 @@ public class Q10735_ASpecialPower extends Quest implements ScriptFile
 						if (killedFloato == 2)
 						{
 							// Automate Spiritshot as shown in the Tutorial.
-							qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.GOING_INTO_REAL_WAR_AUTOMATE_SOULSHOTS, 4500, ScreenMessageAlign.TOP_CENTER));
+							qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.AUTOMATE_SPIRITSHOT_AS_SHOWN_IN_THE_TUTORIAL, 4500, ScreenMessageAlign.TOP_CENTER));
 							qs.showTutorialHTML(TutorialShowHtml.QT_003, TutorialShowHtml.TYPE_WINDOW);
 							htmltext = "33944-4.htm";
 							qs.giveItems(2509, 150); // 150 Spiritshot
@@ -167,7 +167,7 @@ public class Q10735_ASpecialPower extends Quest implements ScriptFile
 							htmltext = "33944-5.htm";
 							qs.getPlayer().getReflection().addSpawnWithoutRespawn(Floato, new Location(-75112, 240760, -3615, 0), 0);
 							qs.getPlayer().getReflection().addSpawnWithoutRespawn(Floato, new Location(-75016, 240456, -3628, 0), 0);
-							qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ATTACK_THE_MONSTER, 4500, ScreenMessageAlign.TOP_CENTER));
+							qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.ATTACK_THE_MONSTER, 4500, ScreenMessageAlign.TOP_CENTER));
 							qs.playSound(SOUND_MIDDLE);
 							qs.setCond(4);
 						}
@@ -247,7 +247,7 @@ public class Q10735_ASpecialPower extends Quest implements ScriptFile
 					{
 						qs.setCond(cond + 1);
 						qs.playSound(SOUND_MIDDLE);
-						qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.TALK_TO_AYANTHE_TO_LEAVE_THE_TRAINING_GROUNDS, 4500, ScreenMessageAlign.TOP_CENTER));
+						qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.TALK_TO_AYANTHE_TO_LEAVE_THE_TRAINING_GROUNDS, 4500, ScreenMessageAlign.TOP_CENTER));
 						killedRatel = 0;
 					}
 				}

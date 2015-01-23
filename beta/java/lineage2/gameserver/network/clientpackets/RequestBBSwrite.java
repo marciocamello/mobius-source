@@ -16,8 +16,8 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.handlers.CommunityBoardManager;
 import lineage2.gameserver.handlers.ICommunityBoardHandler;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -65,7 +65,7 @@ public class RequestBBSwrite extends L2GameClientPacket
 		{
 			if (!Config.COMMUNITYBOARD_ENABLED)
 			{
-				activeChar.sendPacket(new SystemMessage2(SystemMsg.THE_COMMUNITY_SERVER_IS_CURRENTLY_OFFLINE));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_COMMUNITY_SERVER_IS_CURRENTLY_OFFLINE));
 			}
 			else
 			{

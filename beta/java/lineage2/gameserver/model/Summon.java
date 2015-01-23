@@ -44,7 +44,8 @@ import lineage2.gameserver.network.serverpackets.PetItemList;
 import lineage2.gameserver.network.serverpackets.PetStatusShow;
 import lineage2.gameserver.network.serverpackets.PetStatusUpdate;
 import lineage2.gameserver.network.serverpackets.RelationChanged;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.skills.effects.EffectTemplate;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;
@@ -1068,7 +1069,7 @@ public abstract class Summon extends Playable
 		
 		if ((player != null) && isSkillDisabled(skill))
 		{
-			player.sendPacket(SystemMsg.THAT_PET_SERVITOR_SKILL_CANNOT_BE_USED_BECAUSE_IT_IS_RECHARGING);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PET_SERVITOR_SKILL_CANNOT_BE_USED_BECAUSE_IT_IS_RECHARGING));
 		}
 	}
 	

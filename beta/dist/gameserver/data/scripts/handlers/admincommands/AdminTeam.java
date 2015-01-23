@@ -18,7 +18,8 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.TeamType;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
@@ -61,7 +62,7 @@ public final class AdminTeam implements IAdminCommandHandler, ScriptFile
 		
 		if ((object == null) || !object.isCreature())
 		{
-			activeChar.sendPacket(SystemMsg.INVALID_TARGET);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return false;
 		}
 		

@@ -16,7 +16,7 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
@@ -107,32 +107,32 @@ public class SorosSubAI extends DefaultAI
 			return;
 		}
 		
-		NpcString ns;
+		NpcStringId ns;
 		
 		switch (Rnd.get(6))
 		{
 			case 1:
-				ns = NpcString.SOMETHING_LIKE_THAT_COMES_OUT_OF_THE_RUINS;
+				ns = NpcStringId.SOMETHING_LIKE_THAT_COMES_OUT_OF_THE_RUINS;
 				break;
 			
 			case 2:
-				ns = NpcString.SOMETHING_LIKE_THAT_COMES_OUT_OF_THE_RUINS;
+				ns = NpcStringId.SOMETHING_LIKE_THAT_COMES_OUT_OF_THE_RUINS;
 				break;
 			
 			case 3:
-				ns = NpcString.SOMETHING_LIKE_THAT_COMES_OUT_OF_THE_RUINS;
+				ns = NpcStringId.SOMETHING_LIKE_THAT_COMES_OUT_OF_THE_RUINS;
 				break;
 			
 			case 4:
-				ns = NpcString.SOMETHING_LIKE_THAT_COMES_OUT_OF_THE_RUINS;
+				ns = NpcStringId.SOMETHING_LIKE_THAT_COMES_OUT_OF_THE_RUINS;
 				break;
 			
 			case 5:
-				ns = NpcString.SOMETHING_LIKE_THAT_COMES_OUT_OF_THE_RUINS;
+				ns = NpcStringId.SOMETHING_LIKE_THAT_COMES_OUT_OF_THE_RUINS;
 				break;
 			
 			default:
-				ns = NpcString.SOMETHING_LIKE_THAT_COMES_OUT_OF_THE_RUINS;
+				ns = NpcStringId.SOMETHING_LIKE_THAT_COMES_OUT_OF_THE_RUINS;
 				break;
 		}
 		

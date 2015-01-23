@@ -18,7 +18,8 @@ import lineage2.gameserver.model.items.PcInventory;
 import lineage2.gameserver.model.items.etcitems.EnchantScrollInfo;
 import lineage2.gameserver.model.items.etcitems.EnchantScrollManager;
 import lineage2.gameserver.network.serverpackets.ExPutEnchantTargetItemResult;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.Log;
 
 /**
@@ -81,7 +82,7 @@ public class RequestExTryToPutEnchantTargetItem extends AbstractEnchantPacket
 		if (!checkItem(itemToEnchant, esi))
 		{
 			player.sendPacket(ExPutEnchantTargetItemResult.FAIL);
-			player.sendPacket(SystemMsg.INAPPROPRIATE_ENCHANT_CONDITIONS);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS));
 			player.setEnchantScroll(null);
 			return;
 		}
@@ -96,7 +97,7 @@ public class RequestExTryToPutEnchantTargetItem extends AbstractEnchantPacket
 		if ((itemToEnchant.getEnchantLevel() >= esi.getMax()) || (itemToEnchant.getEnchantLevel() < esi.getMin()))
 		{
 			player.sendPacket(ExPutEnchantTargetItemResult.FAIL);
-			player.sendPacket(SystemMsg.INAPPROPRIATE_ENCHANT_CONDITIONS);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS));
 			player.setEnchantScroll(null);
 			return;
 		}

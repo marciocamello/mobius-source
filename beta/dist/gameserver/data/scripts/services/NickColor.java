@@ -16,7 +16,7 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -77,11 +77,11 @@ public final class NickColor extends Functions
 		}
 		else if (Config.SERVICES_CHANGE_NICK_COLOR_ITEM == 57)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 		}
 		else
 		{
-			player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 		}
 	}
 }

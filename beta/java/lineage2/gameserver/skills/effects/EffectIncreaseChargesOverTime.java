@@ -14,6 +14,7 @@ package lineage2.gameserver.skills.effects;
 
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Env;
 
 /**
@@ -50,7 +51,7 @@ public class EffectIncreaseChargesOverTime extends Effect
 		{
 			if (getSkill().isToggle())
 			{
-				getEffected().sendPacket(new SystemMessage(SystemMessage.YOUR_SKILL_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_HP));
+				getEffected().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_SKILL_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_HP));
 				return false;
 			}
 		}

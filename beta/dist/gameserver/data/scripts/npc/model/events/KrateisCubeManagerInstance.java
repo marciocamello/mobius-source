@@ -24,7 +24,8 @@ import lineage2.gameserver.model.entity.events.impl.KrateisCubeRunnerEvent;
 import lineage2.gameserver.model.entity.events.objects.KrateisCubePlayerObject;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
 /**
@@ -111,13 +112,13 @@ public final class KrateisCubeManagerInstance extends NpcInstance
 		{
 			if (Olympiad.isRegistered(player) || HandysBlockCheckerManager.isRegistered(player))
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_BE_SIMULTANEOUSLY_REGISTERED_FOR_PVP_MATCHES_SUCH_AS_THE_OLYMPIAD_UNDERGROUND_COLISEUM_AERIAL_CLEFT_KRATEIS_CUBE_AND_HANDYS_BLOCK_CHECKERS);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_BE_SIMULTANEOUSLY_REGISTERED_FOR_PVP_MATCHES_SUCH_AS_THE_OLYMPIAD_UNDERGROUND_COLISEUM_AERIAL_CLEFT_KRATEI_S_CUBE_AND_HANDY_S_BLOCK_CHECKERS));
 				return;
 			}
 			
 			if (player.isCursedWeaponEquipped())
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_REGISTER_WHILE_IN_POSSESSION_OF_A_CURSED_WEAPON);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_REGISTER_WHILE_IN_POSSESSION_OF_A_CURSED_WEAPON));
 				return;
 			}
 			

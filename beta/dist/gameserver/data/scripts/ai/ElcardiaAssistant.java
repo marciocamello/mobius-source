@@ -28,7 +28,7 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.QuestState;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
@@ -203,21 +203,21 @@ public final class ElcardiaAssistant extends DefaultAI
 						
 						if (qs.getCond() == 1)
 						{
-							Functions.npcSay(actor, NpcString.I_MUST_ASK_LIBRARIAN_SOPHIA_ABOUT_THE_BOOK);
+							Functions.npcSay(actor, NpcStringId.I_MUST_ASK_LIBRARIAN_SOPHIA_ABOUT_THE_BOOK);
 						}
 						else if (qs.getCond() == 2)
 						{
-							Functions.npcSay(actor, NpcString.WHAT_TOOK_SO_LONG_I_WAITED_FOR_EVER);
+							Functions.npcSay(actor, NpcStringId.WHAT_TOOK_SO_LONG_I_WAITED_FOR_EVER);
 						}
 						else if (qs.getCond() >= 5)
 						{
 							if (Rnd.chance(50))
 							{
-								Functions.npcSay(actor, NpcString.THE_BOOK_THAT_WE_SEEK_IS_CERTAINLY_HERE);
+								Functions.npcSay(actor, NpcStringId.THE_BOOK_THAT_WE_SEEK_IS_CERTAINLY_HERE_SEARCH_INCH_BY_INCH);
 							}
 							else
 							{
-								Functions.npcSay(actor, NpcString.AN_UNDERGROUND_LIBRARY);
+								Functions.npcSay(actor, NpcStringId.AN_UNDERGROUND_LIBRARY_I_HATE_DAMP_AND_SMELLY_PLACES);
 							}
 						}
 					}
@@ -234,11 +234,11 @@ public final class ElcardiaAssistant extends DefaultAI
 							{
 								if (Rnd.chance(70))
 								{
-									Functions.npcSay(actor, NpcString.IT_SEEMS_THAT_YOU_CANNOT_REMEMBER_TO_THE_ROOM_OF_THE_WATCHER_WHO_FOUND_THE_BOOK);
+									Functions.npcSay(actor, NpcStringId.IT_SEEMS_THAT_YOU_CANNOT_REMEMBER_TO_THE_ROOM_OF_THE_WATCHER_WHO_FOUND_THE_BOOK);
 								}
 								else
 								{
-									Functions.npcSay(actor, NpcString.REMEMBER_THE_CONTENT_OF_THE_BOOKS_THAT_YOU_FOUND);
+									Functions.npcSay(actor, NpcStringId.REMEMBER_THE_CONTENT_OF_THE_BOOKS_THAT_YOU_FOUND_YOU_CAN_T_TAKE_THEM_OUT_WITH_YOU);
 								}
 							}
 							
@@ -265,7 +265,7 @@ public final class ElcardiaAssistant extends DefaultAI
 						}
 						else if (qs2.getCond() == 3)
 						{
-							Functions.npcSay(actor, NpcString.YOUR_WORK_HERE_IS_DONE_SO_RETURN_TO_THE_CENTRAL_GUARDIAN);
+							Functions.npcSay(actor, NpcStringId.YOUR_WORK_HERE_IS_DONE_SO_RETURN_TO_THE_CENTRAL_GUARDIAN);
 						}
 					}
 					
@@ -279,15 +279,15 @@ public final class ElcardiaAssistant extends DefaultAI
 							{
 								if (Rnd.chance(30))
 								{
-									Functions.npcSay(actor, NpcString.TO_REMOVE_THE_BARRIER_YOU_MUST_FIND_THE_RELICS_THAT_FIT_THE_BARRIER_AND_ACTIVATE_THE_DEVICE);
+									Functions.npcSay(actor, NpcStringId.TO_REMOVE_THE_BARRIER_YOU_MUST_FIND_THE_RELICS_THAT_FIT_THE_BARRIER_AND_ACTIVATE_THE_DEVICE);
 								}
 								else if (Rnd.chance(30))
 								{
-									Functions.npcSay(actor, NpcString.THE_GUARDIAN_OF_THE_SEAL_DOESNT_SEEM_TO_GET_INJURED_AT_ALL_UNTIL_THE_BARRIER_IS_DESTROYED);
+									Functions.npcSay(actor, NpcStringId.THE_GUARDIAN_OF_THE_SEAL_DOESN_T_SEEM_TO_GET_INJURED_AT_ALL_UNTIL_THE_BARRIER_IS_DESTROYED);
 								}
 								else
 								{
-									Functions.npcSay(actor, NpcString.THE_DEVICE_LOCATED_IN_THE_ROOM_IN_FRONT_OF_THE_GUARDIAN_OF_THE_SEAL_IS_DEFINITELY_THE_BARRIER_THAT_CONTROLS_THE_GUARDIANS_POWER);
+									Functions.npcSay(actor, NpcStringId.THE_DEVICE_LOCATED_IN_THE_ROOM_IN_FRONT_OF_THE_GUARDIAN_OF_THE_SEAL_IS_DEFINITELY_THE_BARRIER_THAT_CONTROLS_THE_GUARDIAN_S_POWER);
 								}
 							}
 							

@@ -16,8 +16,8 @@ import lineage2.gameserver.listener.actor.OnCurrentHpDamageListener;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Summon;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;
 
@@ -51,12 +51,12 @@ public class EffectDamageHealToEffectorAndPets extends EffectDamOverTime
 			if (forEachHeal > 0.0D)
 			{
 				_effector.setCurrentHp(_effector.getCurrentHp() + forEachHeal, false);
-				_effector.sendPacket(new SystemMessage2(SystemMsg.S1_HP_HAS_BEEN_RESTORED).addInteger(Math.round(forEachHeal)));
+				_effector.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED).addLong(Math.round(forEachHeal)));
 			}
 			if (forEachHealMp > 0.0D)
 			{
 				_effector.setCurrentMp(_effector.getCurrentMp() + forEachHealMp);
-				_effector.sendPacket(new SystemMessage2(SystemMsg.S1_MP_HAS_BEEN_RESTORED).addInteger(Math.round(forEachHealMp)));
+				_effector.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_MP_HAS_BEEN_RESTORED).addLong(Math.round(forEachHealMp)));
 			}
 		}
 	}

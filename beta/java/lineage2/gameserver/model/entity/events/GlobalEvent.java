@@ -43,9 +43,9 @@ import lineage2.gameserver.model.entity.events.objects.SpawnableObject;
 import lineage2.gameserver.model.entity.events.objects.ZoneObject;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.taskmanager.actionrunner.ActionRunner;
 import lineage2.gameserver.templates.item.ItemTemplate;
@@ -736,7 +736,7 @@ public abstract class GlobalEvent extends LoggerObject
 	 * @param force boolean
 	 * @return SystemMsg
 	 */
-	public SystemMsg checkForAttack(Creature target, Creature attacker, Skill skill, boolean force)
+	public SystemMessage checkForAttack(Creature target, Creature attacker, Skill skill, boolean force)
 	{
 		return null;
 	}
@@ -891,7 +891,18 @@ public abstract class GlobalEvent extends LoggerObject
 					if ((object != null) && object.isPlayable())
 					{
 						((Playable) object).getInventory().destroyItem(item);
-						object.getPlayer().sendPacket(SystemMessage2.removeItems(item));
+						if (item.getId() == 57)
+						{
+							object.getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED).addLong(item.getCount()));
+						}
+						else if (item.getCount() > 1)
+						{
+							object.getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED).addItemName(item.getId()).addLong(item.getCount()));
+						}
+						else
+						{
+							object.getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED).addItemName(item.getId()));
+						}
 					}
 				}
 				

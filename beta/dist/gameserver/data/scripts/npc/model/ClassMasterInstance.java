@@ -22,7 +22,7 @@ import lineage2.gameserver.model.base.ClassLevel;
 import lineage2.gameserver.model.instances.MerchantInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.HtmlUtils;
@@ -158,11 +158,11 @@ public final class ClassMasterInstance extends MerchantInstance
 			}
 			else if (Config.CLASS_MASTERS_PRICE_ITEM_LIST[jobLevel] == 57)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			}
 			else
 			{
-				player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 			}
 		}
 		else
@@ -180,11 +180,11 @@ public final class ClassMasterInstance extends MerchantInstance
 	{
 		if (player.getClassId().isOfLevel(ClassLevel.First))
 		{
-			player.sendPacket(SystemMsg.CONGRATULATIONS__YOUVE_COMPLETED_YOUR_THIRDCLASS_TRANSFER_QUEST);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_YOUR_THIRD_CLASS_TRANSFER_QUEST));
 		}
 		else
 		{
-			player.sendPacket(SystemMsg.CONGRATULATIONS__YOUVE_COMPLETED_A_CLASS_TRANSFER);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_A_CLASS_TRANSFER));
 		}
 		
 		player.setClassId(val, false, false);

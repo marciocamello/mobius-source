@@ -19,7 +19,8 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.skill.restoration.RestorationInfo;
 import lineage2.gameserver.templates.skill.restoration.RestorationItem;
@@ -46,7 +47,7 @@ public class Restoration extends Skill
 			
 			if ((player.getWeightPenalty() >= 3) || (player.getInventory().getSize() > (player.getInventoryLimit() - 10)))
 			{
-				player.sendPacket(SystemMsg.THE_CORRESPONDING_WORK_CANNOT_BE_PROCEEDED_BECAUSE_THE_INVENTORY_WEIGHTQUANTITY_LIMIT_HAS_BEEN_EXCEEDED);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_CORRESPONDING_WORK_CANNOT_BE_PROCEEDED_BECAUSE_THE_INVENTORY_WEIGHT_QUANTITY_LIMIT_HAS_BEEN_EXCEEDED));
 				return false;
 			}
 		}
@@ -77,7 +78,7 @@ public class Restoration extends Skill
 		{
 			if (ItemFunctions.getItemCount(playable, itemConsumeId) < itemConsumeCount)
 			{
-				playable.sendPacket(SystemMsg.THERE_ARE_NOT_ENOUGH_NECESSARY_ITEMS_TO_USE_THE_SKILL);
+				playable.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NOT_ENOUGH_NECESSARY_ITEMS_TO_USE_THE_SKILL));
 				return;
 			}
 			

@@ -23,7 +23,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 
 /**
@@ -64,7 +64,7 @@ public class Sowing extends Skill
 			return;
 		}
 		
-		player.sendPacket(SystemMessage2.removeItems(seedId, 1L));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED).addItemName(seedId));
 		
 		for (Creature target : targets)
 		{
@@ -108,11 +108,11 @@ public class Sowing extends Skill
 				
 				if (Rnd.chance(SuccessRate) && monster.setSeeded(player, seedId, altSeed))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.THE_SEED_WAS_SUCCESSFULLY_SOWN));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_SEED_WAS_SUCCESSFULLY_SOWN));
 				}
 				else
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.THE_SEED_WAS_NOT_SOWN));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_SEED_WAS_NOT_SOWN));
 				}
 			}
 		}

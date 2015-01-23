@@ -19,6 +19,7 @@ import lineage2.gameserver.model.mail.Mail;
 import lineage2.gameserver.network.serverpackets.ExNoticePostArrived;
 import lineage2.gameserver.network.serverpackets.ExShowReceivedPostList;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -58,31 +59,31 @@ public class RequestRejectPostAttachment extends L2GameClientPacket
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_CANCEL_BECAUSE_THE_PRIVATE_SHOP_OR_WORKSHOP_IS_IN_PROGRESS));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CANCEL_BECAUSE_THE_PRIVATE_STORE_OR_WORKSHOP_IS_IN_PROGRESS));
 			return;
 		}
 		
 		if (activeChar.isInTrade())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_CANCEL_DURING_AN_EXCHANGE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CANCEL_DURING_AN_EXCHANGE));
 			return;
 		}
 		
 		if (activeChar.getEnchantScroll() != null)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_CANCEL_DURING_AN_ITEM_ENHANCEMENT_OR_ATTRIBUTE_ENHANCEMENT));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CANCEL_DURING_AN_ITEM_ENHANCEMENT_OR_ATTRIBUTE_ENHANCEMENT));
 			return;
 		}
 		
 		if (!activeChar.isInPeaceZone())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_CANCEL_IN_A_NON_PEACE_ZONE_LOCATION));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CANCEL_IN_A_NON_PEACE_ZONE_LOCATION));
 			return;
 		}
 		
 		if (activeChar.isFishing())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DO_THAT_WHILE_FISHING));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING));
 			return;
 		}
 		

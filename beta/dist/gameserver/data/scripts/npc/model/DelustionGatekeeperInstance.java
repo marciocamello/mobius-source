@@ -23,6 +23,7 @@ import lineage2.gameserver.model.entity.DelusionChamber;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
 /**
@@ -63,7 +64,7 @@ public final class DelustionGatekeeperInstance extends NpcInstance
 			
 			if (rooms == null)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.SYSTEM_ERROR));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SYSTEM_ERROR));
 				return;
 			}
 			

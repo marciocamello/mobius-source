@@ -39,7 +39,8 @@ import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.NpcSay;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
@@ -222,7 +223,7 @@ public class Functions
 	 */
 	public static void npcSayInRange(NpcInstance npc, String text, int range)
 	{
-		npcSayInRange(npc, range, NpcString.NONE, text);
+		npcSayInRange(npc, range, NpcStringId.STRING_NONE, text);
 	}
 	
 	/**
@@ -232,7 +233,7 @@ public class Functions
 	 * @param fStringId NpcString
 	 * @param params String[]
 	 */
-	public static void npcSayInRange(NpcInstance npc, int range, NpcString fStringId, String... params)
+	public static void npcSayInRange(NpcInstance npc, int range, NpcStringId fStringId, String... params)
 	{
 		if (npc == null)
 		{
@@ -266,7 +267,7 @@ public class Functions
 	 * @param npcString NpcString
 	 * @param params String[]
 	 */
-	public static void npcSay(NpcInstance npc, NpcString npcString, String... params)
+	public static void npcSay(NpcInstance npc, NpcStringId npcString, String... params)
 	{
 		npcSayInRange(npc, 1500, npcString, params);
 	}
@@ -279,7 +280,7 @@ public class Functions
 	 */
 	public static void npcSayToPlayer(NpcInstance npc, Player player, String text)
 	{
-		npcSayToPlayer(npc, player, NpcString.NONE, ChatType.TELL, text);
+		npcSayToPlayer(npc, player, NpcStringId.STRING_NONE, ChatType.TELL, text);
 	}
 	
 	/**
@@ -289,7 +290,7 @@ public class Functions
 	 * @param npcString NpcString
 	 * @param params String[]
 	 */
-	public static void npcSayToPlayer(NpcInstance npc, Player player, NpcString npcString, String... params)
+	public static void npcSayToPlayer(NpcInstance npc, Player player, NpcStringId npcString, String... params)
 	{
 		if (npc == null)
 		{
@@ -307,7 +308,7 @@ public class Functions
 	 * @param chatType ChatType
 	 * @param params String[]
 	 */
-	public static void npcSayToPlayer(NpcInstance npc, Player player, NpcString npcString, ChatType chatType, String... params)
+	public static void npcSayToPlayer(NpcInstance npc, Player player, NpcStringId npcString, ChatType chatType, String... params)
 	{
 		if (npc == null)
 		{
@@ -324,7 +325,7 @@ public class Functions
 	 */
 	public static void npcShout(NpcInstance npc, String text)
 	{
-		npcShout(npc, NpcString.NONE, text);
+		npcShout(npc, NpcStringId.STRING_NONE, text);
 	}
 	
 	/**
@@ -333,7 +334,7 @@ public class Functions
 	 * @param npcString NpcString
 	 * @param params String[]
 	 */
-	public static void npcShout(NpcInstance npc, NpcString npcString, String... params)
+	public static void npcShout(NpcInstance npc, NpcStringId npcString, String... params)
 	{
 		if (npc == null)
 		{
@@ -370,7 +371,7 @@ public class Functions
 	 * @param range int
 	 * @param replacements String[]
 	 */
-	public static void npcSay(NpcInstance npc, NpcString address, ChatType type, int range, String... replacements)
+	public static void npcSay(NpcInstance npc, NpcStringId address, ChatType type, int range, String... replacements)
 	{
 		if (npc == null)
 		{
@@ -435,7 +436,7 @@ public class Functions
 		
 		if (player.getSummonList().getPet() != null)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_HAVE_A_PET));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ALREADY_HAVE_A_PET));
 			return false;
 		}
 		
@@ -691,7 +692,7 @@ public class Functions
 		mail.setExpireTime((720 * 3600) + (int) (System.currentTimeMillis() / 1000L));
 		mail.save();
 		receiver.sendPacket(ExNoticePostArrived.STATIC_TRUE);
-		receiver.sendPacket(new SystemMessage(SystemMessage.THE_MAIL_HAS_ARRIVED));
+		receiver.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MAIL_HAS_ARRIVED));
 	}
 	
 	/**

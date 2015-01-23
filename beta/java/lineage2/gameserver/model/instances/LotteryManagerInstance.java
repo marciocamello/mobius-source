@@ -20,8 +20,8 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.HtmlUtils;
 import lineage2.gameserver.utils.ItemFunctions;
@@ -120,13 +120,13 @@ public class LotteryManagerInstance extends NpcInstance
 		{
 			if (!LotteryManager.getInstance().isStarted())
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.LOTTERY_TICKETS_ARE_NOT_CURRENTLY_BEING_SOLD));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.LOTTERY_TICKETS_ARE_NOT_CURRENTLY_BEING_SOLD));
 				return;
 			}
 			
 			if (!LotteryManager.getInstance().isSellableTickets())
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.TICKETS_FOR_THE_CURRENT_LOTTERY_ARE_NO_LONGER_AVAILABLE));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TICKETS_FOR_THE_CURRENT_LOTTERY_ARE_NO_LONGER_AVAILABLE));
 				return;
 			}
 			
@@ -192,13 +192,13 @@ public class LotteryManagerInstance extends NpcInstance
 		{
 			if (!LotteryManager.getInstance().isStarted())
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.LOTTERY_TICKETS_ARE_NOT_CURRENTLY_BEING_SOLD));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.LOTTERY_TICKETS_ARE_NOT_CURRENTLY_BEING_SOLD));
 				return;
 			}
 			
 			if (!LotteryManager.getInstance().isSellableTickets())
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.TICKETS_FOR_THE_CURRENT_LOTTERY_ARE_NO_LONGER_AVAILABLE));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TICKETS_FOR_THE_CURRENT_LOTTERY_ARE_NO_LONGER_AVAILABLE));
 				return;
 			}
 			
@@ -226,13 +226,13 @@ public class LotteryManagerInstance extends NpcInstance
 			
 			if (player.getAdena() < price)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 				return;
 			}
 			
 			player.reduceAdena(price, true);
-			sm = new SystemMessage(SystemMessage.ACQUIRED__S1_S2);
-			sm.addNumber(lotonumber);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.ACQUIRED_S1_S2);
+			sm.addInt(lotonumber);
 			sm.addItemName(4442);
 			player.sendPacket(sm);
 			ItemInstance item = ItemFunctions.createItem(4442);
@@ -265,7 +265,7 @@ public class LotteryManagerInstance extends NpcInstance
 				if ((item.getId() == 4442) && (item.getCustomType1() < lotonumber))
 				{
 					message += "<a action=\"bypass -h npc_%objectId%_Loto " + item.getObjectId() + "\">" + item.getCustomType1();
-					message += " " + HtmlUtils.htmlNpcString(NpcString.EVENT_NUMBER) + " ";
+					message += " " + HtmlUtils.htmlNpcString(NpcStringId.EVENT_NUMBER) + " ";
 					int[] numbers = LotteryManager.getInstance().decodeNumbers(item.getEnchantLevel(), item.getCustomType2());
 					
 					for (int i = 0; i < 5; i++)
@@ -282,19 +282,19 @@ public class LotteryManagerInstance extends NpcInstance
 						switch (check[0])
 						{
 							case 1:
-								message += HtmlUtils.htmlNpcString(NpcString.FIRST_PRIZE);
+								message += HtmlUtils.htmlNpcString(NpcStringId.FIRST_PRIZE);
 								break;
 							
 							case 2:
-								message += HtmlUtils.htmlNpcString(NpcString.SECOND_PRIZE);
+								message += HtmlUtils.htmlNpcString(NpcStringId.SECOND_PRIZE);
 								break;
 							
 							case 3:
-								message += HtmlUtils.htmlNpcString(NpcString.THIRD_PRIZE);
+								message += HtmlUtils.htmlNpcString(NpcStringId.THIRD_PRIZE);
 								break;
 							
 							case 4:
-								message += HtmlUtils.htmlNpcString(NpcString.FOURTH_PRIZE);
+								message += HtmlUtils.htmlNpcString(NpcStringId.FOURTH_PRIZE);
 								break;
 						}
 						
@@ -307,7 +307,7 @@ public class LotteryManagerInstance extends NpcInstance
 			
 			if (message.length() == 0)
 			{
-				message += HtmlUtils.htmlNpcString(NpcString.THERE_HAS_BEEN_NO_WINNING_LOTTERY_TICKET);
+				message += HtmlUtils.htmlNpcString(NpcStringId.THERE_HAS_BEEN_NO_WINNING_LOTTERY_TICKET);
 			}
 			
 			html.replace("%result%", message);
@@ -331,7 +331,7 @@ public class LotteryManagerInstance extends NpcInstance
 			
 			if (player.getInventory().destroyItem(item, 1L))
 			{
-				player.sendPacket(SystemMessage2.removeItems(4442, 1));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED).addItemName(4442));
 				int adena = check[1];
 				
 				if (adena > 0)

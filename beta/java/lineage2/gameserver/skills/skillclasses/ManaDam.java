@@ -18,6 +18,7 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Formulas;
 import lineage2.gameserver.templates.StatsSet;
 
@@ -90,7 +91,7 @@ public class ManaDam extends Skill
 					
 					if (crit)
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.MAGIC_CRITICAL_HIT));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.M_CRITICAL));
 						damage *= 2.0;
 						damage += activeChar.getMagicCriticalDmg(target, this);
 					}
@@ -99,7 +100,7 @@ public class ManaDam extends Skill
 				}
 				else
 				{
-					SystemMessage msg = new SystemMessage(SystemMessage.C1_RESISTED_C2S_MAGIC).addName(target).addName(activeChar);
+					SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_C2_S_MAGIC).addCharName(target).addCharName(activeChar);
 					activeChar.sendPacket(msg);
 					target.sendPacket(msg);
 					target.reduceCurrentHp(1., 0, activeChar, this, true, true, false, true, false, false, true);

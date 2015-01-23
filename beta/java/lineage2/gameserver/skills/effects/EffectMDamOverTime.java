@@ -14,6 +14,7 @@ package lineage2.gameserver.skills.effects;
 
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Formulas;
 
@@ -57,7 +58,7 @@ public class EffectMDamOverTime extends Effect
 		{
 			if (!getSkill().isOffensive())
 			{
-				_effected.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_HP));
+				_effected.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_HP));
 			}
 			
 			if (getSkill().isUsingWhileCasting())

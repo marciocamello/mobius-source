@@ -16,6 +16,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.L2FriendSay;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.Log;
 
 /**
@@ -54,7 +55,7 @@ public class RequestSendL2FriendSay extends L2GameClientPacket
 		{
 			if ((activeChar.getNoChannelRemained() > 0) || (activeChar.getNoChannel() < 0))
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_BECOME_EVEN_LONGER));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER));
 				return;
 			}
 			
@@ -65,13 +66,13 @@ public class RequestSendL2FriendSay extends L2GameClientPacket
 		
 		if (targetPlayer == null)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THAT_PLAYER_IS_NOT_ONLINE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
 			return;
 		}
 		
 		if (targetPlayer.isBlockAll())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THE_PERSON_IS_IN_A_MESSAGE_REFUSAL_MODE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PERSON_IS_IN_MESSAGE_REFUSAL_MODE));
 			return;
 		}
 		

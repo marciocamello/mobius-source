@@ -24,7 +24,8 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SkillList;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -198,7 +199,7 @@ public final class ArmorSetListener implements OnEquipListener
 			{
 				if (!player.getOpenCloak() && (player.getInventory().setPaperdollItem(Inventory.PAPERDOLL_BACK, null) != null))
 				{
-					player.sendPacket(SystemMsg.YOUR_CLOAK_HAS_BEEN_UNEQUIPPED_BECAUSE_YOUR_ARMOR_SET_IS_NO_LONGER_COMPLETE);
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLOAK_HAS_BEEN_UNEQUIPPED_BECAUSE_YOUR_ARMOR_SET_IS_NO_LONGER_COMPLETE));
 				}
 			}
 			

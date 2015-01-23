@@ -24,6 +24,7 @@ import lineage2.gameserver.model.items.TradeItem;
 import lineage2.gameserver.network.serverpackets.SendTradeDone;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.TradePressOtherOk;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.Log;
 
 /**
@@ -86,7 +87,7 @@ public class TradeDone extends L2GameClientPacket
 		{
 			request.cancel();
 			parthner1.sendPacket(SendTradeDone.FAIL);
-			parthner1.sendPacket(new SystemMessage(SystemMessage.THAT_PLAYER_IS_NOT_ONLINE));
+			parthner1.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
 			parthner1.sendActionFailed();
 			return;
 		}
@@ -103,18 +104,18 @@ public class TradeDone extends L2GameClientPacket
 		{
 			request.cancel();
 			parthner1.sendPacket(SendTradeDone.FAIL);
-			parthner2.sendPacket(SendTradeDone.FAIL, new SystemMessage(SystemMessage.C1_HAS_CANCELLED_THE_TRADE).addString(parthner1.getName()));
+			parthner2.sendPacket(SendTradeDone.FAIL, SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_CANCELLED_THE_TRADE).addString(parthner1.getName()));
 			return;
 		}
 		
 		if (!parthner1.isInRangeZ(parthner2, Creature.INTERACTION_DISTANCE))
 		{
-			parthner1.sendPacket(new SystemMessage(SystemMessage.YOUR_TARGET_IS_OUT_OF_RANGE));
+			parthner1.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE));
 			return;
 		}
 		
 		request.confirm(parthner1);
-		parthner2.sendPacket(new SystemMessage(SystemMessage.C1_HAS_CONFIRMED_THE_TRADE).addString(parthner1.getName()), TradePressOtherOk.STATIC);
+		parthner2.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_CONFIRMED_THE_TRADE).addString(parthner1.getName()), TradePressOtherOk.STATIC);
 		
 		if (!request.isConfirmed(parthner2))
 		{
@@ -154,13 +155,13 @@ public class TradeDone extends L2GameClientPacket
 			
 			if (!parthner2.getInventory().validateWeight(weight))
 			{
-				parthner2.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
+				parthner2.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
 				return;
 			}
 			
 			if (!parthner2.getInventory().validateCapacity(slots))
 			{
-				parthner2.sendPacket(new SystemMessage(SystemMessage.YOUR_INVENTORY_IS_FULL));
+				parthner2.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_INVENTORY_IS_FULL));
 				return;
 			}
 			
@@ -186,13 +187,13 @@ public class TradeDone extends L2GameClientPacket
 			
 			if (!parthner1.getInventory().validateWeight(weight))
 			{
-				parthner1.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
+				parthner1.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
 				return;
 			}
 			
 			if (!parthner1.getInventory().validateCapacity(slots))
 			{
-				parthner1.sendPacket(new SystemMessage(SystemMessage.YOUR_INVENTORY_IS_FULL));
+				parthner1.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_INVENTORY_IS_FULL));
 				return;
 			}
 			
@@ -212,8 +213,8 @@ public class TradeDone extends L2GameClientPacket
 				parthner1.getInventory().addItem(item);
 			}
 			
-			parthner1.sendPacket(new SystemMessage(SystemMessage.YOUR_TRADE_IS_SUCCESSFUL));
-			parthner2.sendPacket(new SystemMessage(SystemMessage.YOUR_TRADE_IS_SUCCESSFUL));
+			parthner1.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_TRADE_WAS_SUCCESSFUL));
+			parthner2.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_TRADE_WAS_SUCCESSFUL));
 			success = true;
 		}
 		finally

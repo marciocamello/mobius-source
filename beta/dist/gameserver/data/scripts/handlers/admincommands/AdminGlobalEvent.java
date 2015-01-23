@@ -17,7 +17,8 @@ import lineage2.gameserver.handlers.IAdminCommandHandler;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
@@ -50,7 +51,7 @@ public final class AdminGlobalEvent implements IAdminCommandHandler, ScriptFile
 				
 				if (object == null)
 				{
-					activeChar.sendPacket(SystemMsg.INVALID_TARGET);
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 				}
 				else
 				{

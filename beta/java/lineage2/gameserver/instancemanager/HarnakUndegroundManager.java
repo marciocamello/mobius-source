@@ -16,7 +16,7 @@ import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.Earthquake;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.utils.NpcUtils;
 
 import org.slf4j.Logger;
@@ -77,14 +77,14 @@ public class HarnakUndegroundManager
 						{
 							if (players.isInRange(player, 1000))
 							{
-								players.sendPacket(new ExShowScreenMessage(NpcString.ALL_SEALS_HAVE_BEEN_BROKEN_GHOST_OF_HARNAK_WILL_APPEAR_SOON, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
+								players.sendPacket(new ExShowScreenMessage(NpcStringId.ALL_SEALS_HAVE_BEEN_BROKEN_GHOST_OF_HARNAK_WILL_APPEAR_SOON, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 								player.broadcastPacket(new Earthquake(players.getLoc(), 50, 4));
 							}
 						}
 					}
 					else
 					{
-						player.sendPacket(new ExShowScreenMessage(NpcString.ALL_SEALS_HAVE_BEEN_BROKEN_GHOST_OF_HARNAK_WILL_APPEAR_SOON, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
+						player.sendPacket(new ExShowScreenMessage(NpcStringId.ALL_SEALS_HAVE_BEEN_BROKEN_GHOST_OF_HARNAK_WILL_APPEAR_SOON, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 						player.broadcastPacket(new Earthquake(player.getLoc(), 50, 4));
 					}
 					secondStageAltarCount = 0;
@@ -117,14 +117,14 @@ public class HarnakUndegroundManager
 						{
 							if (players.isInRange(player, 1000))
 							{
-								players.sendPacket(new ExShowScreenMessage(NpcString.ALL_JAILS_ARE_OPEN_GHOST_OF_HARNAK_WILL_APPEAR_SOON, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
+								players.sendPacket(new ExShowScreenMessage(NpcStringId.ALL_JAILS_ARE_OPEN_GHOST_OF_HARNAK_WILL_APPEAR_SOON, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 								player.broadcastPacket(new Earthquake(player.getLoc(), 50, 4));
 							}
 						}
 					}
 					else
 					{
-						player.sendPacket(new ExShowScreenMessage(NpcString.ALL_JAILS_ARE_OPEN_GHOST_OF_HARNAK_WILL_APPEAR_SOON, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
+						player.sendPacket(new ExShowScreenMessage(NpcStringId.ALL_JAILS_ARE_OPEN_GHOST_OF_HARNAK_WILL_APPEAR_SOON, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 						player.broadcastPacket(new Earthquake(player.getLoc(), 50, 4));
 					}
 					thirdStageAltarCount = 0;

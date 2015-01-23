@@ -19,6 +19,7 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
 import org.slf4j.Logger;
@@ -112,7 +113,7 @@ public class KamalokaBossInstance extends LostCaptainInstance
 						p.setCurrentMp(newMp + p.getCurrentMp());
 					}
 					
-					p.sendPacket(new SystemMessage(SystemMessage.S1_MPS_HAVE_BEEN_RESTORED).addNumber(Math.round(newMp)));
+					p.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_MP_HAS_BEEN_RESTORED).addLong(Math.round(newMp)));
 				}
 			}
 			catch (Exception e)

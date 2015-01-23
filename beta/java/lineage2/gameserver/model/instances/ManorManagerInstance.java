@@ -31,6 +31,7 @@ import lineage2.gameserver.network.serverpackets.ExShowSeedInfo;
 import lineage2.gameserver.network.serverpackets.ExShowSellCropList;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.manor.CropProcure;
 import lineage2.gameserver.templates.manor.SeedProduction;
 import lineage2.gameserver.templates.npc.NpcTemplate;
@@ -94,7 +95,7 @@ public class ManorManagerInstance extends MerchantInstance
 		{
 			if (CastleManorManager.getInstance().isUnderMaintenance())
 			{
-				player.sendPacket(ActionFail.STATIC, new SystemMessage(SystemMessage.THE_MANOR_SYSTEM_IS_CURRENTLY_UNDER_MAINTENANCE));
+				player.sendPacket(ActionFail.STATIC, SystemMessage.getSystemMessage(SystemMessageId.THE_MANOR_SYSTEM_IS_CURRENTLY_UNDER_MAINTENANCE));
 				return;
 			}
 			
@@ -120,7 +121,7 @@ public class ManorManagerInstance extends MerchantInstance
 				case 1:
 					if (castleId != castle.getId())
 					{
-						player.sendPacket(new SystemMessage(SystemMessage._HERE_YOU_CAN_BUY_ONLY_SEEDS_OF_S1_MANOR));
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.HERE_YOU_CAN_BUY_ONLY_SEEDS_OF_S1_MANOR));
 					}
 					else
 					{

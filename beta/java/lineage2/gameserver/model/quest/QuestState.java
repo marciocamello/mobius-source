@@ -40,10 +40,11 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ExShowQuestMark;
 import lineage2.gameserver.network.serverpackets.PlaySound;
 import lineage2.gameserver.network.serverpackets.QuestList;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.TutorialEnableClientEvent;
 import lineage2.gameserver.network.serverpackets.TutorialShowHtml;
 import lineage2.gameserver.network.serverpackets.TutorialShowQuestionMark;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.spawn.PeriodOfDay;
 import lineage2.gameserver.utils.ItemFunctions;
@@ -674,7 +675,19 @@ public final class QuestState
 			player.getInventory().addItem(item);
 		}
 		
-		player.sendPacket(SystemMessage2.obtainItems(template.getId(), count, 0));
+		if (itemId == 57)
+		{
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA).addLong(count));
+		}
+		else if (count > 1)
+		{
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(itemId).addLong(count));
+		}
+		else
+		{
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(itemId));
+		}
+		
 		player.sendChanges();
 	}
 	
@@ -1246,7 +1259,20 @@ public final class QuestState
 		}
 		
 		player.getInventory().destroyItemByItemId(itemId, count);
-		player.sendPacket(SystemMessage2.removeItems(itemId, count));
+		
+		if (itemId == 57)
+		{
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED).addLong(count));
+		}
+		else if (count > 1)
+		{
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED).addItemName(itemId).addLong(count));
+		}
+		else
+		{
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED).addItemName(itemId));
+		}
+		
 		return count;
 	}
 	

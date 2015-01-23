@@ -32,6 +32,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -363,7 +364,7 @@ public class FishingChampionShipManager
 					
 					if (rewardCnt > 0)
 					{
-						SystemMessage smsg = new SystemMessage(SystemMessage.YOU_HAVE_EARNED_S2_S1S).addItemName(Config.ALT_FISH_CHAMPIONSHIP_REWARD_ITEM).addNumber(rewardCnt);
+						SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(Config.ALT_FISH_CHAMPIONSHIP_REWARD_ITEM).addInt(rewardCnt);
 						pl.sendPacket(smsg);
 						pl.getInventory().addItem(Config.ALT_FISH_CHAMPIONSHIP_REWARD_ITEM, rewardCnt);
 						pl.sendItemList(false);

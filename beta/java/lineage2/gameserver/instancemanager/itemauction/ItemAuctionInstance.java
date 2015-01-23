@@ -37,6 +37,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.ItemInstance.ItemLocation;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -462,7 +463,7 @@ public class ItemAuctionInstance
 	 */
 	void onAuctionFinished(ItemAuction auction)
 	{
-		auction.broadcastToAllBidders(new SystemMessage(SystemMessage.S1_S_AUCTION_HAS_ENDED).addNumber(auction.getAuctionId()));
+		auction.broadcastToAllBidders(SystemMessage.getSystemMessage(SystemMessageId.S1_S_AUCTION_HAS_ENDED).addInt(auction.getAuctionId()));
 		ItemAuctionBid bid = auction.getHighestBid();
 		
 		if (bid != null)
@@ -473,7 +474,7 @@ public class ItemAuctionInstance
 			if (player != null)
 			{
 				player.getWarehouse().addItem(item);
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_BID_THE_HIGHEST_PRICE_AND_HAVE_WON_THE_ITEM_THE_ITEM_CAN_BE_FOUND_IN_YOUR_PERSONAL));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_BID_THE_HIGHEST_PRICE_AND_HAVE_WON_THE_ITEM_THE_ITEM_CAN_BE_FOUND_IN_YOUR_PERSONAL_WAREHOUSE));
 				_log.info("ItemAuction: Auction " + auction.getAuctionId() + " has finished. Highest bid by (name) " + player.getName() + " for instance " + _instanceId);
 			}
 			else

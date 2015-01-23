@@ -18,6 +18,7 @@ import lineage2.gameserver.model.base.EnchantSkillLearn;
 import lineage2.gameserver.network.serverpackets.ExEnchantSkillInfo;
 import lineage2.gameserver.network.serverpackets.ExEnchantSkillResult;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.tables.SkillTreeTable;
@@ -107,7 +108,7 @@ public final class RequestExEnchantSkillUntrain extends L2GameClientPacket
 		{
 			if (Functions.getItemCount(activeChar, SkillTreeTable.UNTRAIN_ENCHANT_BOOK) == 0)
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL));
 				return;
 			}
 			
@@ -117,7 +118,7 @@ public final class RequestExEnchantSkillUntrain extends L2GameClientPacket
 		{
 			if (Functions.getItemCount(activeChar, SkillTreeTable.UNTRAIN_NEW_ENCHANT_BOOK) == 0)
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL));
 				return;
 			}
 			
@@ -129,13 +130,13 @@ public final class RequestExEnchantSkillUntrain extends L2GameClientPacket
 		
 		if (_skillLvl > 100)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.Untrain_of_enchant_skill_was_successful_Current_level_of_enchant_skill_S1_has_been_decreased_by_1);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UNTRAIN_OF_ENCHANT_SKILL_WAS_SUCCESSFUL_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_HAS_BEEN_DECREASED_BY_1);
 			sm.addSkillName(_skillId, _skillLvl);
 			activeChar.sendPacket(sm);
 		}
 		else
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.Untrain_of_enchant_skill_was_successful_Current_level_of_enchant_skill_S1_became_0_and_enchant_skill_will_be_initialized);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UNTRAIN_OF_ENCHANT_SKILL_WAS_SUCCESSFUL_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_BECAME_0_AND_ENCHANT_SKILL_WILL_BE_INITIALIZED);
 			sm.addSkillName(_skillId, _skillLvl);
 			activeChar.sendPacket(sm);
 		}

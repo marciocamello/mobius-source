@@ -33,6 +33,7 @@ import lineage2.gameserver.model.instances.OlympiadManagerInstance;
 import lineage2.gameserver.network.GameClient;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Scripts;
 
 import org.slf4j.Logger;
@@ -250,7 +251,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 			{
 				if (!Config.COMMUNITYBOARD_ENABLED)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.THE_COMMUNITY_SERVER_IS_CURRENTLY_OFFLINE));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_COMMUNITY_SERVER_IS_CURRENTLY_OFFLINE));
 				}
 				else
 				{

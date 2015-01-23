@@ -16,7 +16,7 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
@@ -107,16 +107,16 @@ public class GuardianSubAI extends DefaultAI
 			return;
 		}
 		
-		NpcString ns;
+		NpcStringId ns;
 		
 		switch (Rnd.get(1))
 		{
 			case 1:
-				ns = NpcString.INFORMATION_IS_COLLECTED_IN_THE_MUSEUM_WHERE_CAN_LEARN_ABOUT_THE_HEROES;
+				ns = NpcStringId.INFORMATION_IS_COLLECTED_IN_THE_MUSEUM_WHERE_CAN_LEARN_ABOUT_THE_HEROES;
 				break;
 			
 			default:
-				ns = NpcString.INFORMATION_IS_COLLECTED_IN_THE_MUSEUM_WHERE_CAN_LEARN_ABOUT_THE_HEROES;
+				ns = NpcStringId.INFORMATION_IS_COLLECTED_IN_THE_MUSEUM_WHERE_CAN_LEARN_ABOUT_THE_HEROES;
 				break;
 		}
 		

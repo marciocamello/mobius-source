@@ -33,8 +33,7 @@ import lineage2.gameserver.network.serverpackets.ExResponseCommissionItemList;
 import lineage2.gameserver.network.serverpackets.ExResponseCommissionList;
 import lineage2.gameserver.network.serverpackets.ExShowCommission;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ExItemType;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
@@ -193,7 +192,7 @@ public class CommissionShopManager
 			
 			if ((fee > player.getAdena()) || !player.reduceAdena(fee, false))
 			{
-				player.sendPacket(new SystemMessage2(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA_TO_REGISTER_THE_ITEM));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_TO_REGISTER_THE_ITEM));
 				return;
 			}
 			
@@ -318,7 +317,7 @@ public class CommissionShopManager
 		{
 			if (itemInfo.getItem().getOwnerId() != player.getObjectId())
 			{
-				player.sendPacket(new SystemMessage2(SystemMsg.ITEM_PURCHASE_HAS_FAILED));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ITEM_PURCHASE_HAS_FAILED));
 				return;
 			}
 			
@@ -367,7 +366,7 @@ public class CommissionShopManager
 		{
 			if (itemInfo.getItem().getOwnerId() == player.getObjectId())
 			{
-				player.sendPacket(new SystemMessage2(SystemMsg.ITEM_PURCHASE_HAS_FAILED));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ITEM_PURCHASE_HAS_FAILED));
 				player.sendPacket(ExResponseCommissionBuyItem.FAILED);
 				return;
 			}
@@ -427,7 +426,7 @@ public class CommissionShopManager
 			if (receiver != null)
 			{
 				receiver.sendPacket(ExNoticePostArrived.STATIC_TRUE);
-				receiver.sendPacket(new SystemMessage(SystemMessage.THE_MAIL_HAS_ARRIVED));
+				receiver.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MAIL_HAS_ARRIVED));
 			}
 			
 			Log.LogItem(player, Log.CommissionItemSold, itemInfo.getItem());
@@ -478,7 +477,7 @@ public class CommissionShopManager
 				if (receiver != null)
 				{
 					receiver.sendPacket(ExNoticePostArrived.STATIC_TRUE);
-					receiver.sendPacket(new SystemMessage(SystemMessage.THE_MAIL_HAS_ARRIVED));
+					receiver.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MAIL_HAS_ARRIVED));
 				}
 			}
 		}

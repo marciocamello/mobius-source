@@ -15,8 +15,9 @@ package lineage2.gameserver.skills.effects;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.network.serverpackets.FlyToLocation;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.ValidateLocation;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.utils.Location;
 
@@ -62,7 +63,7 @@ public class EffectTargetToMe extends Effect
 			if ((flyLoc == null) || getEffector().isInWater())
 			{
 				// _log.info("EffectTargetToMe Loc null check this!");
-				_effected.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+				_effected.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 				return;
 			}
 			

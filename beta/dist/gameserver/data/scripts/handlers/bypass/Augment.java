@@ -19,6 +19,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExShowVariationCancelWindow;
 import lineage2.gameserver.network.serverpackets.ExShowVariationMakeWindow;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
@@ -54,11 +55,11 @@ public final class Augment implements IBypassHandler, ScriptFile
 		
 		if (cmdChoice == 1)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.SELECT_THE_ITEM_TO_BE_AUGMENTED), ExShowVariationMakeWindow.STATIC);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SELECT_THE_ITEM_TO_BE_AUGMENTED), ExShowVariationMakeWindow.STATIC);
 		}
 		else if (cmdChoice == 2)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.SELECT_THE_ITEM_FROM_WHICH_YOU_WISH_TO_REMOVE_AUGMENTATION), ExShowVariationCancelWindow.STATIC);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SELECT_THE_ITEM_FROM_WHICH_YOU_WISH_TO_REMOVE_AUGMENTATION), ExShowVariationCancelWindow.STATIC);
 		}
 	}
 	

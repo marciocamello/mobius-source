@@ -19,9 +19,9 @@ import lineage2.gameserver.model.Request;
 import lineage2.gameserver.model.Request.L2RequestType;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.AskJoinParty;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -63,7 +63,7 @@ public class RequestJoinParty extends L2GameClientPacket
 		
 		if (activeChar.isProcessingRequest())
 		{
-			activeChar.sendPacket(SystemMsg.WAITING_FOR_ANOTHER_REPLY);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WAITING_FOR_ANOTHER_REPLY));
 			return;
 		}
 		
@@ -71,20 +71,20 @@ public class RequestJoinParty extends L2GameClientPacket
 		
 		if (target == null)
 		{
-			activeChar.sendPacket(SystemMsg.THAT_PLAYER_IS_NOT_ONLINE);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
 			return;
 		}
 		
 		if (target == activeChar)
 		{
-			activeChar.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 			activeChar.sendActionFailed();
 			return;
 		}
 		
 		if (target.isBusy())
 		{
-			activeChar.sendPacket(new SystemMessage2(SystemMsg.C1_IS_ON_ANOTHER_TASK).addName(target));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER).addPcName(target));
 			return;
 		}
 		
@@ -100,19 +100,19 @@ public class RequestJoinParty extends L2GameClientPacket
 		{
 			if (activeChar.getParty().getMemberCount() >= Party.MAX_SIZE)
 			{
-				activeChar.sendPacket(SystemMsg.THE_PARTY_IS_FULL);
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_PARTY_IS_FULL));
 				return;
 			}
 			
 			if (Config.PARTY_LEADER_ONLY_CAN_INVITE && !activeChar.getParty().isLeader(activeChar))
 			{
-				activeChar.sendPacket(SystemMsg.ONLY_THE_LEADER_CAN_GIVE_OUT_INVITATIONS);
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_THE_LEADER_CAN_GIVE_OUT_INVITATIONS));
 				return;
 			}
 		}
 		
 		new Request(L2RequestType.PARTY, activeChar, target).setTimeout(10000L).set("itemDistribution", _itemDistribution);
 		target.sendPacket(new AskJoinParty(activeChar.getName(), _itemDistribution));
-		activeChar.sendPacket(new SystemMessage2(SystemMsg.C1_HAS_BEEN_INVITED_TO_THE_PARTY).addName(target));
+		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_INVITED_TO_THE_PARTY).addPcName(target));
 	}
 }

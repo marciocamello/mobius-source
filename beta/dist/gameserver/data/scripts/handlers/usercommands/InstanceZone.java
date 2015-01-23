@@ -16,8 +16,8 @@ import lineage2.gameserver.data.xml.holder.InstantZoneHolder;
 import lineage2.gameserver.handlers.IUserCommandHandler;
 import lineage2.gameserver.handlers.UserCommandHandler;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
@@ -48,7 +48,7 @@ public class InstanceZone implements IUserCommandHandler, ScriptFile
 		
 		if (activeChar.getActiveReflection() != null)
 		{
-			activeChar.sendPacket(new SystemMessage2(SystemMsg.INSTANT_ZONE_CURRENTLY_IN_USE_S1).addInstanceName(activeChar.getActiveReflection().getInstancedZoneId()));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_CURRENTLY_IN_USE_S1).addInstanceName(activeChar.getActiveReflection().getInstancedZoneId()));
 		}
 		
 		int limit;
@@ -65,17 +65,17 @@ public class InstanceZone implements IUserCommandHandler, ScriptFile
 				
 				if (!showMsg)
 				{
-					activeChar.sendPacket(SystemMsg.INSTANCE_ZONE_TIME_LIMIT);
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_TIME_LIMIT));
 					showMsg = true;
 				}
 				
-				activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_WILL_BE_AVAILABLE_FOR_REUSE_AFTER_S2_HOURS_S3_MINUTES).addInstanceName(i).addInteger(limit / 60).addInteger(limit % 60));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HOUR_S_S3_MINUTE_S).addInstanceName(i).addInt(limit / 60).addInt(limit % 60));
 			}
 		}
 		
 		if (noLimit)
 		{
-			activeChar.sendPacket(SystemMsg.THERE_IS_NO_INSTANCE_ZONE_UNDER_A_TIME_LIMIT);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_IS_NO_INSTANT_ZONE_UNDER_A_TIME_LIMIT));
 		}
 		
 		return true;

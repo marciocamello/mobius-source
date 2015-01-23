@@ -22,6 +22,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Formulas;
 import lineage2.gameserver.stats.Formulas.AttackInfo;
 import lineage2.gameserver.templates.StatsSet;
@@ -69,7 +70,7 @@ public class Spoil extends Skill
 				{
 					if (((MonsterInstance) target).isSpoiled())
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.ALREADY_SPOILED));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.IT_HAS_ALREADY_BEEN_SPOILED));
 					}
 					else
 					{
@@ -112,11 +113,11 @@ public class Spoil extends Skill
 						
 						if (success && monster.setSpoiled((Player) activeChar))
 						{
-							activeChar.sendPacket(new SystemMessage(SystemMessage.THE_SPOIL_CONDITION_HAS_BEEN_ACTIVATED));
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_SPOIL_CONDITION_HAS_BEEN_ACTIVATED));
 						}
 						else
 						{
-							activeChar.sendPacket(new SystemMessage(SystemMessage.S1_HAS_FAILED).addSkillName(_id, getDisplayLevel()));
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_FAILED).addSkillName(_id, getDisplayLevel()));
 						}
 					}
 				}

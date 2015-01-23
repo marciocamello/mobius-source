@@ -18,7 +18,7 @@ import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -91,7 +91,7 @@ public final class Rogin extends Dwarvs
 				break;
 			
 			case "SHOUT_ALL":
-				Functions.npcSayInRange(getActor(), 1500, NpcString.CHIEF_);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.CHIEF2);
 				break;
 			
 			default:
@@ -122,12 +122,12 @@ public final class Rogin extends Dwarvs
 		switch (timerId)
 		{
 			case 1:
-				Functions.npcSayInRange(getActor(), 1500, NpcString.CHIEF_REPORTING_IN);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.CHIEF_REPORTING_IN);
 				addTimer(2, 1600);
 				break;
 			
 			case 2:
-				Functions.npcSayInRange(getActor(), 1500, NpcString.ENEMIES_ARE_APPROACHING_FROM_THE_SOUTH);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.ENEMIES_ARE_APPROACHING_FORM_THE_SOUTH);
 				list = r.getAllByNpcId(BRONK_ID, true);
 				
 				if (list.size() > 0)
@@ -138,12 +138,12 @@ public final class Rogin extends Dwarvs
 				break;
 			
 			case 3:
-				Functions.npcSayInRange(getActor(), 1500, NpcString.THE_ELDERS_HAVENT_BEEN_MOVED_TO_SAFETY);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.THE_ELDERS_HAVEN_T_BEEN_MOVED_TO_SAFETY);
 				addTimer(4, 1600);
 				break;
 			
 			case 4:
-				Functions.npcSayInRange(getActor(), 1500, NpcString.MANY_RESIDENTS_STILL_HAVENT_LEFT_THEIR_HOMES);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.MANY_RESIDENTS_STILL_HAVEN_T_LEFT_THEIR_HOMES);
 				list = r.getAllByNpcId(BRONK_ID, true);
 				
 				if (list.size() > 0)

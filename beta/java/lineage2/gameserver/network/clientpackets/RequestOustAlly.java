@@ -16,6 +16,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.ClanTable;
 
 /**
@@ -60,7 +61,7 @@ public class RequestOustAlly extends L2GameClientPacket
 		
 		if (alliance == null)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOT_CURRENTLY_ALLIED_WITH_ANY_CLANS));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_CURRENTLY_ALLIED_WITH_ANY_CLANS));
 			return;
 		}
 		
@@ -68,7 +69,7 @@ public class RequestOustAlly extends L2GameClientPacket
 		
 		if (!activeChar.isAllyLeader())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.FEATURE_AVAILABLE_TO_ALLIANCE_LEADERS_ONLY));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS));
 			return;
 		}
 		
@@ -89,11 +90,11 @@ public class RequestOustAlly extends L2GameClientPacket
 			
 			if (alliance.getLeader().equals(clan))
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_WITHDRAW_FROM_THE_ALLIANCE));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_WITHDRAW_FROM_THE_ALLIANCE));
 				return;
 			}
 			
-			clan.broadcastToOnlineMembers(new SystemMessage("Your clan has been expelled from " + alliance.getAllyName() + " alliance."), new SystemMessage(SystemMessage.A_CLAN_THAT_HAS_WITHDRAWN_OR_BEEN_EXPELLED_CANNOT_ENTER_INTO_AN_ALLIANCE_WITHIN_ONE_DAY_OF_WITHDRAWAL_OR_EXPULSION));
+			clan.broadcastToOnlineMembers(SystemMessage.sendString("Your clan has been expelled from " + alliance.getAllyName() + " alliance."), SystemMessage.getSystemMessage(SystemMessageId.A_CLAN_THAT_HAS_WITHDRAWN_OR_BEEN_EXPELLED_CANNOT_ENTER_INTO_AN_ALLIANCE_WITHIN_ONE_DAY_OF_WITHDRAWAL_OR_EXPULSION));
 			clan.setAllyId(0);
 			clan.setLeavedAlly();
 			alliance.broadcastAllyStatus();

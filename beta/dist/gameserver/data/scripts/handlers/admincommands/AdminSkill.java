@@ -33,6 +33,7 @@ import lineage2.gameserver.network.serverpackets.PledgeSkillList;
 import lineage2.gameserver.network.serverpackets.SkillCoolTime;
 import lineage2.gameserver.network.serverpackets.SkillList;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.stats.Calculator;
 import lineage2.gameserver.stats.Env;
@@ -186,7 +187,7 @@ public class AdminSkill implements IAdminCommandHandler, ScriptFile
 		
 		if (!target_obj.isCreature())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return;
 		}
 		
@@ -244,7 +245,7 @@ public class AdminSkill implements IAdminCommandHandler, ScriptFile
 		}
 		else
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return;
 		}
 		
@@ -293,7 +294,7 @@ public class AdminSkill implements IAdminCommandHandler, ScriptFile
 		final GameObject target = activeChar.getTarget();
 		if ((target == null) || !target.isPlayer())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return;
 		}
 		
@@ -302,13 +303,13 @@ public class AdminSkill implements IAdminCommandHandler, ScriptFile
 		
 		if (clan == null)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THE_TARGET_MUST_BE_A_CLAN_MEMBER));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_TARGET_MUST_BE_A_CLAN_MEMBER));
 			return;
 		}
 		
 		if (!player.isClanLeader())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.S1_IS_NOT_A_CLAN_LEADER).addName(player));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER).addPcName(player));
 		}
 		
 		Collection<SkillLearn> skills = SkillAcquireHolder.getInstance().getAvailableSkills(player, AcquireType.CLAN);
@@ -350,7 +351,7 @@ public class AdminSkill implements IAdminCommandHandler, ScriptFile
 		}
 		else
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return;
 		}
 		
@@ -397,7 +398,7 @@ public class AdminSkill implements IAdminCommandHandler, ScriptFile
 		
 		if (!(target.isPlayer() && ((activeChar == target) || activeChar.getPlayerAccess().CanEditCharAll)))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return;
 		}
 		
@@ -434,7 +435,7 @@ public class AdminSkill implements IAdminCommandHandler, ScriptFile
 		}
 		else
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return;
 		}
 		
@@ -487,7 +488,7 @@ public class AdminSkill implements IAdminCommandHandler, ScriptFile
 		}
 		else
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return;
 		}
 		
@@ -534,7 +535,7 @@ public class AdminSkill implements IAdminCommandHandler, ScriptFile
 		}
 		else
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return;
 		}
 		
@@ -578,7 +579,7 @@ public class AdminSkill implements IAdminCommandHandler, ScriptFile
 		}
 		else
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return;
 		}
 		
@@ -607,7 +608,7 @@ public class AdminSkill implements IAdminCommandHandler, ScriptFile
 		}
 		else
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return;
 		}
 		
@@ -649,7 +650,7 @@ public class AdminSkill implements IAdminCommandHandler, ScriptFile
 		}
 		else
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return;
 		}
 		

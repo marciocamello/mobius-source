@@ -32,7 +32,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.EventTrigger;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.PlaySound;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
@@ -314,15 +314,15 @@ public class Istina extends Fighter
 		
 		if (seed < 0.33D)
 		{
-			npc.broadcastPacket(new ExShowScreenMessage(NpcString.ISTINA_SOUL_STONE_STARTS_POWERFULLY_ILLUMINATING_IN_GREEN, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, 0, true));
+			npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.ISTINA_S_SOUL_STONE_STARTS_POWERFULLY_ILLUMINATING_IN_GREEN, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, 0, true));
 		}
 		else if ((seed >= 0.33D) && (seed < 0.66D))
 		{
-			npc.broadcastPacket(new ExShowScreenMessage(NpcString.ISTINA_SOUL_STONE_STARTS_POWERFULLY_ILLUMINATING_IN_BLUE, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, 0, true));
+			npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.ISTINA_S_SOUL_STONE_STARTS_POWERFULLY_ILLUMINATING_IN_BLUE, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, 0, true));
 		}
 		else
 		{
-			npc.broadcastPacket(new ExShowScreenMessage(NpcString.ISTINA_SOUL_STONE_STARTS_POWERFULLY_ILLUMINATING_IN_RED, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, 0, true));
+			npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.ISTINA_S_SOUL_STONE_STARTS_POWERFULLY_ILLUMINATING_IN_RED, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, 0, true));
 		}
 		npc.broadcastPacket(new PlaySound("istina.istina_voice_01"));
 		ThreadPoolManager.getInstance().schedule(new runAuthorityRing(npc), 500);
@@ -387,7 +387,7 @@ public class Istina extends Fighter
 			{
 				_npc.setNpcState(2);
 				_npc.setNpcState(0);
-				_npc.broadcastPacket(new ExShowScreenMessage(NpcString.POWERFUL_ACIDIC_ENERGY_IS_ERUPTING_FROM_ISTINAS_BODY, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, 0, true));
+				_npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.THERE_IS_STILL_LOTS_OF_TIME_LEFT_DO_NOT_STOP_HERE, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, 0, true));
 			}
 			else if ((!_hasBarrier) && (hasBarrier))
 			{
@@ -396,11 +396,11 @@ public class Istina extends Fighter
 			
 			if ((_hasFlood) && (hasFlood))
 			{
-				_npc.broadcastPacket(new ExShowScreenMessage(NpcString.ISTINA_GETS_FURIOUS_AND_RECKLESSLY_CRAZY, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, 0, true));
+				_npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.ISTINA_GETS_FURIOUS_AND_RECKLESSLY_CRAZY, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, 0, true));
 			}
 			else if ((_hasFlood) && (!hasFlood))
 			{
-				_npc.broadcastPacket(new ExShowScreenMessage(NpcString.BERSERKER_OF_ISTINA_HAS_BEEN_DISABLED, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, 0, true));
+				_npc.broadcastPacket(new ExShowScreenMessage(NpcStringId.BERSERKER_OF_ISTINA_HAS_BEEN_DISABLED, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, 0, true));
 			}
 		}
 	}

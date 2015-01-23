@@ -22,6 +22,7 @@ import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.reward.RewardItem;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Formulas;
 import lineage2.gameserver.stats.Formulas.AttackInfo;
 import lineage2.gameserver.templates.StatsSet;
@@ -62,7 +63,7 @@ public class Plunder extends Skill
 		
 		if (!target.isMonster())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return false;
 		}
 		
@@ -104,11 +105,11 @@ public class Plunder extends Skill
 						
 						if (success && monster.setSpoiled((Player) activeChar))
 						{
-							activeChar.sendPacket(new SystemMessage(SystemMessage.S1_HAS_SUCCEEDED).addSkillName(_id, getDisplayLevel()));
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_SUCCEEDED).addSkillName(_id, getDisplayLevel()));
 						}
 						else
 						{
-							activeChar.sendPacket(new SystemMessage(SystemMessage.S1_HAS_FAILED).addSkillName(_id, getDisplayLevel()));
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_FAILED).addSkillName(_id, getDisplayLevel()));
 							return;
 						}
 					}
@@ -182,15 +183,15 @@ public class Plunder extends Skill
 				
 				if (item.count == 1)
 				{
-					smsg = new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1);
+					smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
 					smsg.addItemName(item.itemId);
 					player.sendPacket(smsg);
 				}
 				else
 				{
-					smsg = new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S2_S1);
+					smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
 					smsg.addItemName(item.itemId);
-					smsg.addNumber(item.count);
+					smsg.addLong(item.count);
 					player.sendPacket(smsg);
 				}
 			}

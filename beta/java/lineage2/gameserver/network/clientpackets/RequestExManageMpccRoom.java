@@ -14,7 +14,8 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.matching.MatchingRoom;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -72,6 +73,6 @@ public class RequestExManageMpccRoom extends L2GameClientPacket
 		room.setMinLevel(_minLevel);
 		room.setMaxLevel(_maxLevel);
 		room.broadCast(room.infoRoomPacket());
-		player.sendPacket(SystemMsg.THE_COMMAND_CHANNEL_MATCHING_ROOM_INFORMATION_WAS_EDITED);
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_COMMAND_CHANNEL_MATCHING_ROOM_INFORMATION_WAS_EDITED));
 	}
 }

@@ -18,6 +18,7 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.etcitems.AttributeStoneManager;
 import lineage2.gameserver.network.serverpackets.ExChooseInventoryAttributeItem;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -45,7 +46,7 @@ public final class AttributeStones extends ScriptItemHandler
 		
 		if (player.getPrivateStoreType() != Player.STORE_PRIVATE_NONE)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_ADD_ELEMENTAL_POWER_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ADD_ELEMENTAL_POWER_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP));
 			return false;
 		}
 		
@@ -55,7 +56,7 @@ public final class AttributeStones extends ScriptItemHandler
 		}
 		
 		player.setEnchantScroll(item);
-		player.sendPacket(new SystemMessage(SystemMessage.PLEASE_SELECT_ITEM_TO_ADD_ELEMENTAL_POWER));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PLEASE_SELECT_ITEM_TO_ADD_ELEMENTAL_POWER));
 		player.sendPacket(new ExChooseInventoryAttributeItem(player, item));
 		return true;
 	}

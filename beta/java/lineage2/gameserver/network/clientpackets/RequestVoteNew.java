@@ -15,7 +15,7 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -56,13 +56,13 @@ public class RequestVoteNew extends L2GameClientPacket
 		
 		if ((target == null) || !target.isPlayer() || (target.getObjectId() != _targetObjectId))
 		{
-			activeChar.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 			return;
 		}
 		
 		if (target.getObjectId() == activeChar.getObjectId())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_RECOMMEND_YOURSELF));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_RECOMMEND_YOURSELF));
 			return;
 		}
 		
@@ -70,22 +70,22 @@ public class RequestVoteNew extends L2GameClientPacket
 		
 		if (activeChar.getRecomLeft() <= 0)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOT_AUTHORIZED_TO_MAKE_FURTHER_RECOMMENDATIONS_AT_THIS_TIME_YOU_WILL_RECEIVE_MORE_RECOMMENDATION_CREDITS_EACH_DAY_AT_1_PM));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_MAKE_FURTHER_RECOMMENDATIONS_AT_THIS_TIME_YOU_WILL_RECEIVE_MORE_RECOMMENDATION_CREDITS_EACH_DAY_AT_1_P_M));
 			return;
 		}
 		
 		if (targetPlayer.getRecomHave() >= 255)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOUR_SELECTED_TARGET_CAN_NO_LONGER_RECEIVE_A_RECOMMENDATION));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_SELECTED_TARGET_CAN_NO_LONGER_RECEIVE_A_RECOMMENDATION));
 			return;
 		}
 		
 		activeChar.giveRecom(targetPlayer);
-		SystemMessage sm = new SystemMessage(SystemMessage.YOU_HAVE_RECOMMENDED_C1_YOU_HAVE_S2_RECOMMENDATIONS_LEFT);
+		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_RECOMMENDED_C1_YOU_HAVE_S2_RECOMMENDATIONS_LEFT);
 		sm.addString(target.getName());
-		sm.addNumber(activeChar.getRecomLeft());
+		sm.addInt(activeChar.getRecomLeft());
 		activeChar.sendPacket(sm);
-		sm = new SystemMessage(SystemMessage.YOU_HAVE_BEEN_RECOMMENDED_BY_C1);
+		sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_BEEN_RECOMMENDED_BY_C1);
 		sm.addString(activeChar.getName());
 		targetPlayer.sendPacket(sm);
 	}

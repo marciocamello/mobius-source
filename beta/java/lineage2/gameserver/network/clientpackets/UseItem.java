@@ -16,8 +16,8 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ExUseSharedGroupItem;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.skills.TimeStamp;
 import lineage2.gameserver.tables.PetDataTable;
 
@@ -64,11 +64,11 @@ public class UseItem extends L2GameClientPacket
 		{
 			if (PetDataTable.isPetControlItem(item))
 			{
-				activeChar.sendPacket(SystemMsg.YOU_CANNOT_SUMMON_DURING_A_TRADE_OR_WHILE_USING_A_PRIVATE_STORE);
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_DURING_A_TRADE_OR_WHILE_USING_A_PRIVATE_STORE));
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMsg.YOU_MAY_NOT_USE_ITEMS_IN_A_PRIVATE_STORE_OR_PRIVATE_WORK_SHOP);
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_USE_ITEMS_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP));
 			}
 			
 			return;
@@ -76,7 +76,7 @@ public class UseItem extends L2GameClientPacket
 		
 		if (activeChar.isFishing() && ((itemId < 6535) || (itemId > 6540)))
 		{
-			activeChar.sendPacket(SystemMsg.YOU_CANNOT_DO_THAT_WHILE_FISHING_2);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING3));
 			return;
 		}
 		
@@ -98,19 +98,19 @@ public class UseItem extends L2GameClientPacket
 		
 		if (item.getTemplate().isForPet())
 		{
-			activeChar.sendPacket(SystemMsg.YOU_MAY_NOT_EQUIP_A_PET_ITEM);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_EQUIP_A_PET_ITEM));
 			return;
 		}
 		
 		if (Config.ALT_IMPROVED_PETS_LIMITED_USE && activeChar.isMageClass() && (item.getId() == 10311))
 		{
-			activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(itemId));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(itemId));
 			return;
 		}
 		
 		if (Config.ALT_IMPROVED_PETS_LIMITED_USE && !activeChar.isMageClass() && (item.getId() == 10313))
 		{
-			activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(itemId));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(itemId));
 			return;
 		}
 		
@@ -127,7 +127,7 @@ public class UseItem extends L2GameClientPacket
 		
 		if (activeChar.getEffectList().containEffectFromSkills(IDENTIFY_CRISIS))
 		{
-			activeChar.sendPacket(SystemMsg.YOU_CAN_NOT_CHANGE_CLASS_DUE_TO_DISRUPTION_OF_THE_IDENTIFICATION);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CHANGE_THE_CLASS_BECAUSE_OF_IDENTITY_CRISIS));
 			activeChar.sendActionFailed();
 			return;
 		}

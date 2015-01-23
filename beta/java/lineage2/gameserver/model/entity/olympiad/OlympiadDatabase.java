@@ -30,6 +30,7 @@ import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.instancemanager.ServerVariables;
 import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 
 import org.slf4j.Logger;
@@ -284,7 +285,7 @@ public class OlympiadDatabase
 	 */
 	public static synchronized void setNewOlympiadEnd()
 	{
-		Announcements.getInstance().announceToAll(new SystemMessage(SystemMessage.OLYMPIAD_PERIOD_S1_HAS_STARTED).addNumber(Olympiad._currentCycle));
+		Announcements.getInstance().announceToAll(SystemMessage.getSystemMessage(SystemMessageId.ROUND_S1_OF_THE_OLYMPIAD_GAMES_HAS_STARTED).addInt(Olympiad._currentCycle));
 		Calendar currentTime = Calendar.getInstance();
 		currentTime.set(Calendar.DAY_OF_MONTH, 1);
 		currentTime.add(Calendar.MONTH, 1);

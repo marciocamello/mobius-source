@@ -21,7 +21,7 @@ import lineage2.gameserver.model.GameObjectTasks;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.player.PlayerTemplate;
 import lineage2.gameserver.utils.Location;
 
@@ -144,16 +144,16 @@ public class CloneInstance extends ClonePlayer
 		
 		if (crit)
 		{
-			owner.sendPacket(SystemMsg.SUMMONED_MONSTERS_CRITICAL_HIT);
+			owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SUMMONED_MONSTER_S_CRITICAL_HIT));
 		}
 		
 		if (miss)
 		{
-			owner.sendPacket(new SystemMessage(SystemMessage.C1S_ATTACK_WENT_ASTRAY).addString("Clone of " + owner.getName()));
+			owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_S_ATTACK_WENT_ASTRAY).addString("Clone of " + owner.getName()));
 		}
 		else if (!target.isInvul())
 		{
-			owner.sendPacket(new SystemMessage(SystemMessage.C1_HAS_GIVEN_C2_DAMAGE_OF_S3).addString("Clone of " + owner.getName()).addName(target).addNumber(damage));
+			owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2_S4).addString("Clone of " + owner.getName()).addCharName(target).addInt(damage));
 		}
 	}
 	
@@ -166,7 +166,7 @@ public class CloneInstance extends ClonePlayer
 	public void displayReceiveDamageMessage(Creature attacker, int damage)
 	{
 		Player owner = getPlayer();
-		owner.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RECEIVED_DAMAGE_OF_S3_FROM_C2).addString("Clone of " + owner.getName()).addName(attacker).addNumber((long) damage));
+		owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2).addString("Clone of " + owner.getName()).addCharName(attacker).addLong(damage));
 	}
 	
 	@Override

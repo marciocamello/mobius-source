@@ -18,6 +18,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
 /**
@@ -92,7 +93,7 @@ public class FameManagerInstance extends NpcInstance
 				player.setFame(player.getFame() - 1000, "CRP");
 				player.getClan().incReputation(50, false, "FameManager from " + player.getName());
 				player.getClan().broadcastToOnlineMembers(new PledgeShowInfoUpdate(player.getClan()));
-				player.sendPacket(new SystemMessage(SystemMessage.ACQUIRED_50_CLAN_FAME_POINTS));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_50_CLAN_REPUTATION));
 				html.setFile("default/" + getId() + "-okclancrp.htm");
 			}
 			

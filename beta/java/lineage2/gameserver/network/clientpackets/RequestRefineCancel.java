@@ -20,6 +20,7 @@ import lineage2.gameserver.network.serverpackets.ExVariationCancelResult;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
 import lineage2.gameserver.network.serverpackets.ShortCutRegister;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.item.ItemTemplate.Grade;
 
@@ -75,7 +76,7 @@ public final class RequestRefineCancel extends L2GameClientPacket
 		
 		if ((targetItem == null) || !targetItem.isAugmented())
 		{
-			activeChar.sendPacket(new ExVariationCancelResult(0), new SystemMessage(SystemMessage.AUGMENTATION_REMOVAL_CAN_ONLY_BE_DONE_ON_AN_AUGMENTED_ITEM));
+			activeChar.sendPacket(new ExVariationCancelResult(0), SystemMessage.getSystemMessage(SystemMessageId.AUGMENTATION_REMOVAL_CAN_ONLY_BE_DONE_ON_AN_AUGMENTED_ITEM));
 			return;
 		}
 		
@@ -88,7 +89,7 @@ public final class RequestRefineCancel extends L2GameClientPacket
 		
 		if (!activeChar.reduceAdena(price, true))
 		{
-			activeChar.sendPacket(new ExVariationCancelResult(0), new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+			activeChar.sendPacket(new ExVariationCancelResult(0), SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			return;
 		}
 		
@@ -110,7 +111,7 @@ public final class RequestRefineCancel extends L2GameClientPacket
 		
 		InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(targetItem);
-		SystemMessage sm = new SystemMessage(SystemMessage.AUGMENTATION_HAS_BEEN_SUCCESSFULLY_REMOVED_FROM_YOUR_S1);
+		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.AUGMENTATION_HAS_BEEN_SUCCESSFULLY_REMOVED_FROM_YOUR_S1);
 		sm.addItemName(targetItem.getId());
 		activeChar.sendPacket(new ExVariationCancelResult(1), iu, sm);
 		

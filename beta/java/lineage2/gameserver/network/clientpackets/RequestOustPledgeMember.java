@@ -18,7 +18,7 @@ import lineage2.gameserver.model.pledge.UnitMember;
 import lineage2.gameserver.network.serverpackets.PledgeShowMemberListDelete;
 import lineage2.gameserver.network.serverpackets.PledgeShowMemberListDeleteAll;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -55,7 +55,7 @@ public class RequestOustPledgeMember extends L2GameClientPacket
 		
 		if (member == null)
 		{
-			activeChar.sendPacket(SystemMsg.THE_TARGET_MUST_BE_A_CLAN_MEMBER);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_TARGET_MUST_BE_A_CLAN_MEMBER));
 			return;
 		}
 		
@@ -63,19 +63,19 @@ public class RequestOustPledgeMember extends L2GameClientPacket
 		
 		if (member.isOnline() && member.getPlayer().isInCombat())
 		{
-			activeChar.sendPacket(SystemMsg.A_CLAN_MEMBER_MAY_NOT_BE_DISMISSED_DURING_COMBAT);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_CLAN_MEMBER_MAY_NOT_BE_DISMISSED_DURING_COMBAT));
 			return;
 		}
 		
 		if (member.isClanLeader())
 		{
-			activeChar.sendPacket(SystemMsg.THIS_CLAN_MEMBER_CANNOT_WITHDRAW_OR_BE_EXPELLED_WHILE_PARTICIPATING_IN_A_TERRITORY_WAR);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_CLAN_MEMBER_CANNOT_WITHDRAW_OR_BE_EXPELLED_WHILE_PARTICIPATING_IN_A_TERRITORY_WAR));
 			return;
 		}
 		
 		int subUnitType = member.getPledgeType();
 		clan.removeClanMember(subUnitType, member.getObjectId());
-		clan.broadcastToOnlineMembers(new SystemMessage(SystemMessage.CLAN_MEMBER_S1_HAS_BEEN_EXPELLED).addString(_target), new PledgeShowMemberListDelete(_target));
+		clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_BEEN_EXPELLED).addString(_target), new PledgeShowMemberListDelete(_target));
 		clan.setExpelledMember();
 		
 		if (memberPlayer == null)
@@ -98,6 +98,6 @@ public class RequestOustPledgeMember extends L2GameClientPacket
 		memberPlayer.setLeaveClanCurTime();
 		memberPlayer.broadcastCharInfo();
 		memberPlayer.store(true);
-		memberPlayer.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS), PledgeShowMemberListDeleteAll.STATIC);
+		memberPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS), PledgeShowMemberListDeleteAll.STATIC);
 	}
 }

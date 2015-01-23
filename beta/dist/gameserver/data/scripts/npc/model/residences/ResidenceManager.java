@@ -27,7 +27,8 @@ import lineage2.gameserver.model.instances.MerchantInstance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.HtmlUtils;
@@ -225,7 +226,7 @@ public abstract class ResidenceManager extends MerchantInstance
 		{
 			if (!isHaveRigths(player, getPrivDismiss()))
 			{
-				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT));
 				return;
 			}
 			
@@ -289,7 +290,7 @@ public abstract class ResidenceManager extends MerchantInstance
 			}
 			else
 			{
-				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT));
 			}
 		}
 		else if (actualCommand.equals("closeDoors"))
@@ -305,14 +306,14 @@ public abstract class ResidenceManager extends MerchantInstance
 			}
 			else
 			{
-				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT));
 			}
 		}
 		else if (actualCommand.equals("functions"))
 		{
 			if (!isHaveRigths(player, getPrivUseFunctions()))
 			{
-				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT));
 				return;
 			}
 			
@@ -458,7 +459,7 @@ public abstract class ResidenceManager extends MerchantInstance
 		{
 			if (!isHaveRigths(player, getPrivSetFunctions()))
 			{
-				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT));
 				return;
 			}
 			
@@ -484,7 +485,7 @@ public abstract class ResidenceManager extends MerchantInstance
 					
 					if (!success)
 					{
-						player.sendPacket(SystemMsg.THERE_IS_NOT_ENOUGH_ADENA_IN_THE_CLAN_HALL_WAREHOUSE);
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_IS_NOT_ENOUGH_ADENA_IN_THE_CLAN_HALL_WAREHOUSE));
 					}
 					else
 					{
@@ -516,7 +517,7 @@ public abstract class ResidenceManager extends MerchantInstance
 					
 					if (!success)
 					{
-						player.sendPacket(SystemMsg.THERE_IS_NOT_ENOUGH_ADENA_IN_THE_CLAN_HALL_WAREHOUSE);
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_IS_NOT_ENOUGH_ADENA_IN_THE_CLAN_HALL_WAREHOUSE));
 					}
 					else
 					{
@@ -544,7 +545,7 @@ public abstract class ResidenceManager extends MerchantInstance
 					
 					if (!success)
 					{
-						player.sendPacket(SystemMsg.THERE_IS_NOT_ENOUGH_ADENA_IN_THE_CLAN_HALL_WAREHOUSE);
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_IS_NOT_ENOUGH_ADENA_IN_THE_CLAN_HALL_WAREHOUSE));
 					}
 					else
 					{
@@ -571,7 +572,7 @@ public abstract class ResidenceManager extends MerchantInstance
 		{
 			if (!isHaveRigths(player, getPrivUseFunctions()))
 			{
-				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT));
 				return;
 			}
 			

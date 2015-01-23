@@ -33,8 +33,7 @@ import lineage2.gameserver.model.instances.SymbolInstance;
 import lineage2.gameserver.model.instances.TrapInstance;
 import lineage2.gameserver.model.instances.TreeInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.funcs.FuncAdd;
 import lineage2.gameserver.tables.SkillTable;
@@ -87,7 +86,7 @@ public class SummonServitor extends Skill
 		
 		if (player.isProcessingRequest())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.PETS_AND_SERVITORS_ARE_NOT_AVAILABLE_AT_THIS_TIME));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PETS_AND_SERVITORS_ARE_NOT_AVAILABLE_AT_THIS_TIME));
 			return false;
 		}
 		
@@ -96,7 +95,7 @@ public class SummonServitor extends Skill
 			case TRAP:
 				if (player.isInZonePeace())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.A_MALICIOUS_SKILL_CANNOT_BE_USED_IN_A_PEACE_ZONE));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_MALICIOUS_SKILL_CANNOT_BE_USED_IN_A_PEACE_ZONE));
 					return false;
 				}
 				break;
@@ -107,7 +106,7 @@ public class SummonServitor extends Skill
 			case TREE:
 				if (player.isMounted() || !player.getSummonList().canSummon(_summonType, _summonPoint))
 				{
-					player.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
 					return false;
 				}
 				break;
@@ -115,7 +114,7 @@ public class SummonServitor extends Skill
 			case AGATHION:
 				if ((player.getAgathionId() > 0) && (_npcId != 0))
 				{
-					player.sendPacket(SystemMsg.AN_AGATHION_HAS_ALREADY_BEEN_SUMMONED);
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.AN_AGATHION_HAS_ALREADY_BEEN_SUMMONED));
 					return false;
 				}
 				break;

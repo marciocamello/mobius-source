@@ -18,8 +18,9 @@ import lineage2.gameserver.model.Request;
 import lineage2.gameserver.model.Request.L2RequestType;
 import lineage2.gameserver.network.serverpackets.ActionFail;
 import lineage2.gameserver.network.serverpackets.JoinParty;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -84,7 +85,7 @@ public class RequestAnswerJoinParty extends L2GameClientPacket
 		if (requestor == null)
 		{
 			request.cancel();
-			activeChar.sendPacket(SystemMsg.THAT_PLAYER_IS_NOT_ONLINE);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
 			activeChar.sendActionFailed();
 			return;
 		}
@@ -106,7 +107,7 @@ public class RequestAnswerJoinParty extends L2GameClientPacket
 		if (activeChar.isInOlympiadMode())
 		{
 			request.cancel();
-			activeChar.sendPacket(SystemMsg.A_PARTY_CANNOT_BE_FORMED_IN_THIS_AREA);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_PARTY_CANNOT_BE_FORMED_IN_THIS_AREA));
 			requestor.sendPacket(JoinParty.FAIL);
 			return;
 		}
@@ -123,8 +124,8 @@ public class RequestAnswerJoinParty extends L2GameClientPacket
 		if ((party != null) && (party.getMemberCount() >= Party.MAX_SIZE))
 		{
 			request.cancel();
-			activeChar.sendPacket(SystemMsg.THE_PARTY_IS_FULL);
-			requestor.sendPacket(SystemMsg.THE_PARTY_IS_FULL);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_PARTY_IS_FULL));
+			requestor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_PARTY_IS_FULL));
 			requestor.sendPacket(JoinParty.FAIL);
 			return;
 		}

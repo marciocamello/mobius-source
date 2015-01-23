@@ -26,8 +26,8 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.SoulCrystal;
 import lineage2.gameserver.templates.npc.AbsorbInfo;
@@ -227,7 +227,7 @@ public class Q00350_EnhanceYourWeapon extends Quest implements ScriptFile
 		
 		for (PlayerResult target : targets)
 		{
-			if ((target == null) || (target.getMessage() == SystemMsg.THE_SOUL_CRYSTAL_SUCCEEDED_IN_ABSORBING_A_SOUL))
+			if ((target == null) || (target.getMessage() == SystemMessage.getSystemMessage(SystemMessageId.THE_SOUL_CRYSTAL_SUCCEEDED_IN_ABSORBING_A_SOUL)))
 			{
 				continue;
 			}
@@ -257,11 +257,11 @@ public class Q00350_EnhanceYourWeapon extends Quest implements ScriptFile
 					continue;
 				}
 				
-				target.setMessage(SystemMsg.THE_SOUL_CRYSTAL_WAS_NOT_ABLE_TO_ABSORB_THE_SOUL);
+				target.setMessage(SystemMessage.getSystemMessage(SystemMessageId.THE_SOUL_CRYSTAL_WAS_NOT_ABLE_TO_ABSORB_THE_SOUL));
 				
 				if (soulCrystal != null)
 				{
-					target.setMessage(SystemMsg.THE_SOUL_CRYSTAL_CAUSED_RESONATION_AND_FAILED_AT_ABSORBING_A_SOUL);
+					target.setMessage(SystemMessage.getSystemMessage(SystemMessageId.THE_SOUL_CRYSTAL_CAUSED_RESONATION_AND_FAILED_AT_ABSORBING_A_SOUL));
 					break;
 				}
 				
@@ -275,7 +275,7 @@ public class Q00350_EnhanceYourWeapon extends Quest implements ScriptFile
 			
 			if (!info.canAbsorb(soulCrystal.getLevel() + 1))
 			{
-				target.setMessage(SystemMsg.THE_SOUL_CRYSTAL_IS_REFUSING_TO_ABSORB_THE_SOUL);
+				target.setMessage(SystemMessage.getSystemMessage(SystemMessageId.THE_SOUL_CRYSTAL_IS_REFUSING_TO_ABSORB_THE_SOUL));
 				continue;
 			}
 			
@@ -293,19 +293,19 @@ public class Q00350_EnhanceYourWeapon extends Quest implements ScriptFile
 			
 			if (nextItemId == 0)
 			{
-				target.setMessage(SystemMsg.THE_SOUL_CRYSTAL_WAS_NOT_ABLE_TO_ABSORB_THE_SOUL);
+				target.setMessage(SystemMessage.getSystemMessage(SystemMessageId.THE_SOUL_CRYSTAL_WAS_NOT_ABLE_TO_ABSORB_THE_SOUL));
 				continue;
 			}
 			
 			if (targetPlayer.consumeItem(soulCrystal.getId(), 1))
 			{
 				targetPlayer.getInventory().addItem(nextItemId, 1);
-				targetPlayer.sendPacket(SystemMessage2.obtainItems(nextItemId, 1, 0));
-				target.setMessage(SystemMsg.THE_SOUL_CRYSTAL_SUCCEEDED_IN_ABSORBING_A_SOUL);
+				targetPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(nextItemId));
+				target.setMessage(SystemMessage.getSystemMessage(SystemMessageId.THE_SOUL_CRYSTAL_SUCCEEDED_IN_ABSORBING_A_SOUL));
 			}
 			else
 			{
-				target.setMessage(SystemMsg.THE_SOUL_CRYSTAL_WAS_NOT_ABLE_TO_ABSORB_THE_SOUL);
+				target.setMessage(SystemMessage.getSystemMessage(SystemMessageId.THE_SOUL_CRYSTAL_WAS_NOT_ABLE_TO_ABSORB_THE_SOUL));
 			}
 		}
 	}
@@ -313,7 +313,7 @@ public class Q00350_EnhanceYourWeapon extends Quest implements ScriptFile
 	private static class PlayerResult
 	{
 		private final Player _player;
-		private SystemMsg _message;
+		private SystemMessage _message;
 		
 		public PlayerResult(Player player)
 		{
@@ -325,12 +325,12 @@ public class Q00350_EnhanceYourWeapon extends Quest implements ScriptFile
 			return _player;
 		}
 		
-		public SystemMsg getMessage()
+		public SystemMessage getMessage()
 		{
 			return _message;
 		}
 		
-		public void setMessage(SystemMsg message)
+		public void setMessage(SystemMessage message)
 		{
 			_message = message;
 		}

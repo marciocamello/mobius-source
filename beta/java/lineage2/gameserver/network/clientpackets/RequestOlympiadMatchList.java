@@ -15,7 +15,8 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.network.serverpackets.ExReceiveOlympiad;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -46,7 +47,7 @@ public class RequestOlympiadMatchList extends L2GameClientPacket
 		
 		if (!Olympiad.inCompPeriod() || Olympiad.isOlympiadEnd())
 		{
-			player.sendPacket(SystemMsg.THE_GRAND_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_OLYMPIAD_GAMES_ARE_NOT_CURRENTLY_IN_PROGRESS));
 			return;
 		}
 		

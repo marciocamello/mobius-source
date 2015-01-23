@@ -25,9 +25,9 @@ import lineage2.gameserver.network.serverpackets.ExDuelAskStart;
 import lineage2.gameserver.network.serverpackets.ExDuelEnd;
 import lineage2.gameserver.network.serverpackets.ExDuelReady;
 import lineage2.gameserver.network.serverpackets.SocialAction;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -76,7 +76,7 @@ public class PlayerVsPlayerDuelEvent extends DuelEvent
 		
 		if (sm != null)
 		{
-			player.sendPacket(SystemMsg.YOU_ARE_UNABLE_TO_REQUEST_A_DUEL_AT_THIS_TIME);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_UNABLE_TO_REQUEST_A_DUEL_AT_THIS_TIME));
 			return false;
 		}
 		
@@ -95,8 +95,8 @@ public class PlayerVsPlayerDuelEvent extends DuelEvent
 		request.set("duelType", 0);
 		player.setRequest(request);
 		target.setRequest(request);
-		player.sendPacket(new SystemMessage2(SystemMsg.C1_HAS_BEEN_CHALLENGED_TO_A_DUEL).addName(target));
-		target.sendPacket(new SystemMessage2(SystemMsg.C1_HAS_CHALLENGED_YOU_TO_A_DUEL).addName(player), new ExDuelAskStart(player.getName(), 0));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_CHALLENGED_TO_A_DUEL).addPcName(target));
+		target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_CHALLENGED_YOU_TO_A_DUEL).addPcName(player), new ExDuelAskStart(player.getName(), 0));
 	}
 	
 	/**
@@ -138,14 +138,14 @@ public class PlayerVsPlayerDuelEvent extends DuelEvent
 		switch (_winner)
 		{
 			case NONE:
-				sendPacket(SystemMsg.THE_DUEL_HAS_ENDED_IN_A_TIE);
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_DUEL_HAS_ENDED_IN_A_TIE));
 				break;
 			
 			case RED:
 			case BLUE:
 				List<DuelSnapshotObject> winners = getObjects(_winner.name());
 				List<DuelSnapshotObject> lossers = getObjects(_winner.revert().name());
-				sendPacket(new SystemMessage2(SystemMsg.C1_HAS_WON_THE_DUEL).addName(winners.get(0).getPlayer()));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_WON_THE_DUEL).addPcName(winners.get(0).getPlayer()));
 				
 				for (DuelSnapshotObject d : lossers)
 				{

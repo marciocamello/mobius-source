@@ -33,9 +33,9 @@ import lineage2.gameserver.model.entity.residence.Fortress;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.PlaySound;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.TimeUtils;
 
@@ -92,7 +92,7 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 			
 			if (siegeCommanders.isSpawned())
 			{
-				siegeEvent.broadcastTo(SystemMsg.THE_BARRACKS_FUNCTION_HAS_BEEN_RESTORED, SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
+				siegeEvent.broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_BARRACKS_FUNCTION_HAS_BEEN_RESTORED), SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
 			}
 		}
 	}
@@ -185,7 +185,7 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		SiegeClanDAO.getInstance().delete(getResidence());
 		flagPoleUpdate(true);
 		updateParticles(true, ATTACKERS, DEFENDERS);
-		broadcastTo(new SystemMessage2(SystemMsg.THE_FORTRESS_BATTLE_S1_HAS_BEGUN).addResidenceName(getResidence()), ATTACKERS, DEFENDERS);
+		broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_FORTRESS_BATTLE_S1_HAS_BEGUN).addCastleId(getResidence().getId()), ATTACKERS, DEFENDERS);
 		super.startEvent();
 	}
 	
@@ -198,7 +198,7 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 	{
 		spawnAction(COMBAT_FLAGS, false);
 		updateParticles(false, ATTACKERS, DEFENDERS);
-		broadcastTo(new SystemMessage2(SystemMsg.THE_FORTRESS_BATTLE_OF_S1_HAS_FINISHED).addResidenceName(getResidence()), ATTACKERS, DEFENDERS);
+		broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_FORTRESS_BATTLE_OF_S1_HAS_FINISHED).addCastleId(getResidence().getId()), ATTACKERS, DEFENDERS);
 		Clan ownerClan = getResidence().getOwner();
 		
 		if (ownerClan != null)
@@ -207,7 +207,7 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 			{
 				ownerClan.broadcastToOnlineMembers(PlaySound.SIEGE_VICTORY);
 				ownerClan.incReputation(1700, false, toString());
-				broadcastTo(new SystemMessage2(SystemMsg.S1_IS_VICTORIOUS_IN_THE_FORTRESS_BATTLE_OF_S2).addString(ownerClan.getName()).addResidenceName(getResidence()), ATTACKERS, DEFENDERS);
+				broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.S1_IS_VICTORIOUS_IN_THE_FORTRESS_BATTLE_OF_S2).addString(ownerClan.getName()).addCastleId(getResidence().getId()), ATTACKERS, DEFENDERS);
 				getResidence().getOwnDate().setTimeInMillis(System.currentTimeMillis());
 				getResidence().startCycleTask();
 				spawnEnvoy();
@@ -288,16 +288,16 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 	@Override
 	public void announce(int val)
 	{
-		SystemMessage2 msg;
+		SystemMessage msg;
 		int min = val / 60;
 		
 		if (min > 0)
 		{
-			msg = new SystemMessage2(SystemMsg.S1_MINUTES_UNTIL_THE_FORTRESS_BATTLE_STARTS).addInteger(min);
+			msg = SystemMessage.getSystemMessage(SystemMessageId.S1_MINUTE_S_UNTIL_THE_FORTRESS_BATTLE_STARTS).addInt(min);
 		}
 		else
 		{
-			msg = new SystemMessage2(SystemMsg.S1_SECONDS_UNTIL_THE_FORTRESS_BATTLE_STARTS).addInteger(val);
+			msg = SystemMessage.getSystemMessage(SystemMessageId.S1_SECOND_S_UNTIL_THE_FORTRESS_BATTLE_STARTS).addInt(val);
 		}
 		
 		broadcastTo(msg, ATTACKERS, DEFENDERS);
@@ -399,7 +399,7 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 					return;
 				}
 				
-				Functions.npcShout(npc, NpcString.THE_COMMAND_GATE_HAS_OPENED_CAPTURE_THE_FLAG_QUICKLY_AND_RAISE_IT_HIGH_TO_PROCLAIM_OUR_VICTORY);
+				Functions.npcShout(npc, NpcStringId.THE_COMMAND_GATE_HAS_OPENED_CAPTURE_THE_FLAG_QUICKLY_AND_RAISE_IT_HIGH_TO_PROCLAIM_OUR_VICTORY);
 				spawnFlags();
 			}
 			else
@@ -424,7 +424,7 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		}
 		
 		spawnAction(FortressSiegeEvent.GUARDS_LIVE_WITH_C_CENTER, false);
-		broadcastTo(SystemMsg.ALL_BARRACKS_ARE_OCCUPIED, SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
+		broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.ALL_BARRACKS_ARE_OCCUPIED), SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
 	}
 	
 	/**
@@ -502,10 +502,10 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		{
 			if (force)
 			{
-				targetPlayer.sendPacket(SystemMsg.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEFIELDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
+				targetPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEGROUNDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE));
 			}
 			
-			resurrectPlayer.sendPacket(force ? SystemMsg.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEFIELDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE : SystemMsg.INVALID_TARGET);
+			resurrectPlayer.sendPacket(force ? SystemMessage.getSystemMessage(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEGROUNDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE) : SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return false;
 		}
 		
@@ -515,10 +515,10 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 		{
 			if (force)
 			{
-				targetPlayer.sendPacket(SystemMsg.IF_A_BASE_CAMP_DOES_NOT_EXIST_RESURRECTION_IS_NOT_POSSIBLE);
+				targetPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.IF_A_BASE_CAMP_DOES_NOT_EXIST_RESURRECTION_IS_NOT_POSSIBLE));
 			}
 			
-			resurrectPlayer.sendPacket(force ? SystemMsg.IF_A_BASE_CAMP_DOES_NOT_EXIST_RESURRECTION_IS_NOT_POSSIBLE : SystemMsg.INVALID_TARGET);
+			resurrectPlayer.sendPacket(force ? SystemMessage.getSystemMessage(SystemMessageId.IF_A_BASE_CAMP_DOES_NOT_EXIST_RESURRECTION_IS_NOT_POSSIBLE) : SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return false;
 		}
 		
@@ -527,7 +527,7 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 			return true;
 		}
 		
-		resurrectPlayer.sendPacket(SystemMsg.INVALID_TARGET);
+		resurrectPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 		return false;
 	}
 	
@@ -548,7 +548,7 @@ public class FortressSiegeEvent extends SiegeEvent<Fortress, SiegeClanObject>
 			
 			if (getResidence().getOwner() != null)
 			{
-				getResidence().getOwner().broadcastToOnlineMembers(SystemMsg.ENEMY_BLOOD_PLEDGES_HAVE_INTRUDED_INTO_THE_FORTRESS);
+				getResidence().getOwner().broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.ENEMY_BLOOD_PLEDGES_HAVE_INTRUDED_INTO_THE_FORTRESS));
 			}
 		}
 	}

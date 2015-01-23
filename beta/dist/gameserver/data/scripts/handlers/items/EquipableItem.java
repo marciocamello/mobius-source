@@ -18,6 +18,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 import gnu.trove.set.hash.TIntHashSet;
@@ -73,13 +74,13 @@ public final class EquipableItem extends ScriptItemHandler
 		
 		if (player.isCastingNow())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_MAY_NOT_EQUIP_ITEMS_WHILE_CASTING_OR_PERFORMING_A_SKILL));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CHANGE_WEAPONS_DURING_AN_ATTACK));
 			return false;
 		}
 		
 		if (player.isStunned() || player.isSleeping() || player.isParalyzed() || player.isAlikeDead() || player.isWeaponEquipBlocked() || player.isAirBinded() || player.isKnockedBack() || player.isKnockedDown() || player.isPulledNow())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
 			return false;
 		}
 		
@@ -89,14 +90,14 @@ public final class EquipableItem extends ScriptItemHandler
 		{
 			if (player.isMounted() || player.isCursedWeaponEquipped() || (player.getActiveWeaponFlagAttachment() != null) || player.isClanAirShipDriver())
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
 				return false;
 			}
 		}
 		
 		if (item.isCursed())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(item.getId()));
 			return false;
 		}
 		
@@ -141,13 +142,13 @@ public final class EquipableItem extends ScriptItemHandler
 		
 		if (item.getEnchantLevel() > 0)
 		{
-			sm = new SystemMessage(SystemMessage.EQUIPPED__S1_S2);
-			sm.addNumber(item.getEnchantLevel());
+			sm = SystemMessage.getSystemMessage(SystemMessageId.EQUIPPED_S1_S2);
+			sm.addInt(item.getEnchantLevel());
 			sm.addItemName(item.getId());
 		}
 		else
 		{
-			sm = new SystemMessage(SystemMessage.YOU_HAVE_EQUIPPED_YOUR_S1).addItemName(item.getId());
+			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1).addItemName(item.getId());
 		}
 		
 		player.sendPacket(sm);

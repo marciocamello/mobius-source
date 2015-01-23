@@ -17,8 +17,8 @@ import java.util.Calendar;
 import lineage2.gameserver.handlers.IUserCommandHandler;
 import lineage2.gameserver.handlers.UserCommandHandler;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
@@ -49,11 +49,11 @@ public class MyBirthday implements IUserCommandHandler, ScriptFile
 		
 		Calendar c = Calendar.getInstance();
 		c.setTimeInMillis(activeChar.getCreateTime());
-		activeChar.sendPacket(new SystemMessage2(SystemMsg.C1S_BIRTHDAY_IS_S3S4S2).addName(activeChar).addInteger(c.get(Calendar.YEAR)).addInteger(c.get(Calendar.MONTH) + 1).addInteger(c.get(Calendar.DAY_OF_MONTH)));
+		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_S_BIRTHDAY_IS_S3_S4_S2).addPcName(activeChar).addInt(c.get(Calendar.YEAR)).addInt(c.get(Calendar.MONTH) + 1).addInt(c.get(Calendar.DAY_OF_MONTH)));
 		
 		if ((c.get(Calendar.MONTH) == Calendar.FEBRUARY) && (c.get(Calendar.DAY_OF_WEEK) == 29))
 		{
-			activeChar.sendPacket(SystemMsg.A_CHARACTER_BORN_ON_FEBRUARY_29_WILL_RECEIVE_A_GIFT_ON_FEBRUARY_28);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_CHARACTER_BORN_ON_FEBRUARY_29_WILL_RECEIVE_A_GIFT_ON_FEBRUARY_28));
 		}
 		
 		return true;

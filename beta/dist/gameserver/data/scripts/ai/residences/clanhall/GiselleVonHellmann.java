@@ -19,7 +19,7 @@ import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.entity.events.impl.ClanHallSiegeEvent;
 import lineage2.gameserver.model.entity.events.objects.SpawnExObject;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.PositionUtils;
@@ -54,7 +54,7 @@ public final class GiselleVonHellmann extends SiegeGuardMystic
 		super.onEvtSpawn();
 		ZONE_1.setActive(true);
 		ZONE_2.setActive(true);
-		Functions.npcShout(getActor(), NpcString.ARISE_MY_FAITHFUL_SERVANTS_YOU_MY_PEOPLE_WHO_HAVE_INHERITED_THE_BLOOD);
+		Functions.npcShout(getActor(), NpcStringId.ARISE_MY_FAITHFUL_SERVANTS_YOU_MY_PEOPLE_WHO_HAVE_INHERITED_THE_BLOOD_IT_IS_THE_CALLING_OF_MY_DAUGHTER_THE_FEAST_OF_BLOOD_WILL_NOW_BEGIN);
 	}
 	
 	/**
@@ -68,7 +68,7 @@ public final class GiselleVonHellmann extends SiegeGuardMystic
 		super.onEvtDead(killer);
 		ZONE_1.setActive(false);
 		ZONE_2.setActive(false);
-		Functions.npcShout(actor, NpcString.AARGH_IF_I_DIE_THEN_THE_MAGIC_FORCE_FIELD_OF_BLOOD_WILL);
+		Functions.npcShout(actor, NpcStringId.AARGH_IF_I_DIE_THEN_THE_MAGIC_FORCE_FIELD_OF_BLOOD_WILL);
 		final ClanHallSiegeEvent siegeEvent = actor.getEvent(ClanHallSiegeEvent.class);
 		
 		if (siegeEvent == null)

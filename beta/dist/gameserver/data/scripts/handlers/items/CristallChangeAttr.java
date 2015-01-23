@@ -20,7 +20,8 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInfo;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ExChangeAttributeItemList;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.Util;
 
@@ -60,7 +61,7 @@ public final class CristallChangeAttr extends ScriptItemHandler
 		
 		if (player.getPrivateStoreType() != Player.STORE_PRIVATE_NONE)
 		{
-			player.sendPacket(SystemMsg.YOU_CAN_NOT_CHANGE_THE_ATTRIBUTE_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CHANGE_AN_ATTRIBUTE_WHILE_USING_A_PRIVATE_STORE_OR_WORKSHOP));
 			return false;
 		}
 		
@@ -119,7 +120,7 @@ public final class CristallChangeAttr extends ScriptItemHandler
 		
 		if (itemsList.size() == 0)
 		{
-			player.sendPacket(SystemMsg.THE_ITEM_FOR_CHANGING_AN_ATTRIBUTE_DOES_NOT_EXIST);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_ITEM_FOR_CHANGING_AN_ATTRIBUTE_DOES_NOT_EXIST));
 			return false;
 		}
 		

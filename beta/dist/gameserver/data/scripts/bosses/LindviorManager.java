@@ -29,7 +29,8 @@ import lineage2.gameserver.model.instances.BossInstance;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
@@ -391,9 +392,9 @@ public final class LindviorManager extends Functions implements ScriptFile, OnDe
 	
 	/**
 	 * Method broadcastScreenMessage.
-	 * @param npcs NpcString
+	 * @param npcs NpcStringId
 	 */
-	public static void broadcastScreenMessage(NpcString npcs)
+	public static void broadcastScreenMessage(NpcStringId npcs)
 	{
 		for (Player p : getPlayersInside())
 		{
@@ -420,7 +421,7 @@ public final class LindviorManager extends Functions implements ScriptFile, OnDe
 		
 		if ((!DEBUG && !player.isGM()) && ((player.getParty() == null) || !player.getParty().isInCommandChannel()))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_IN_A_CURRENT_COMMAND_CHANNEL));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_ASSOCIATED_WITH_THE_CURRENT_COMMAND_CHANNEL));
 			return;
 		}
 		
@@ -432,7 +433,7 @@ public final class LindviorManager extends Functions implements ScriptFile, OnDe
 		
 		if ((!DEBUG && !player.isGM()) && (((cc != null) && !cc.getChannelLeader().equals(player)) || (cc == null)))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.ONLY_THE_ALLIANCE_CHANNEL_LEADER_CAN_ATTEMPT_ENTRY));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_THE_ALLIANCE_CHANNEL_LEADER_CAN_ATTEMPT_ENTRY));
 			return;
 		}
 		

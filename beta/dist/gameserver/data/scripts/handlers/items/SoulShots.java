@@ -21,6 +21,7 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ExAutoSoulShot;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
@@ -93,7 +94,7 @@ public final class SoulShots extends ScriptItemHandler
 		{
 			if (!isAutoSoulShot)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.CANNOT_USE_SOULSHOTS));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_USE_SOULSHOTS));
 			}
 			
 			return false;
@@ -112,11 +113,11 @@ public final class SoulShots extends ScriptItemHandler
 			if (isAutoSoulShot)
 			{
 				player.removeAutoSoulShot(SoulshotId);
-				player.sendPacket(new ExAutoSoulShot(SoulshotId, false), new SystemMessage(SystemMessage.THE_AUTOMATIC_USE_OF_S1_WILL_NOW_BE_CANCELLED).addItemName(SoulshotId));
+				player.sendPacket(new ExAutoSoulShot(SoulshotId, false), SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED).addItemName(SoulshotId));
 				return false;
 			}
 			
-			player.sendPacket(new SystemMessage(SystemMessage.CANNOT_USE_SOULSHOTS));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_USE_SOULSHOTS));
 			return false;
 		}
 		
@@ -127,7 +128,7 @@ public final class SoulShots extends ScriptItemHandler
 				return false;
 			}
 			
-			player.sendPacket(new SystemMessage(SystemMessage.SOULSHOT_DOES_NOT_MATCH_WEAPON_GRADE));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_SOULSHOT_YOU_ARE_ATTEMPTING_TO_USE_DOES_NOT_MATCH_THE_GRADE_OF_YOUR_EQUIPPED_WEAPON));
 			return false;
 		}
 		
@@ -143,12 +144,12 @@ public final class SoulShots extends ScriptItemHandler
 		
 		if (!player.getInventory().destroyItem(item, soulShotConsumption))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_SOULSHOTS));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SOULSHOTS_FOR_THAT));
 			return false;
 		}
 		
 		weaponInst.setChargedSoulshot(ItemInstance.CHARGED_SOULSHOT);
-		player.sendPacket(new SystemMessage(SystemMessage.POWER_OF_THE_SPIRITS_ENABLED));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_SOULSHOTS_ARE_ENABLED));
 		player.broadcastPacket(new MagicSkillUse(player, player, _skillIds[grade], 1, 0, 0));
 		return true;
 	}

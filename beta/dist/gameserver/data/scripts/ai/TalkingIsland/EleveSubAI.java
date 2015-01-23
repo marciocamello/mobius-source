@@ -16,7 +16,7 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
@@ -107,32 +107,32 @@ public class EleveSubAI extends DefaultAI
 			return;
 		}
 		
-		NpcString ns;
+		NpcStringId ns;
 		
 		switch (Rnd.get(6))
 		{
 			case 1:
-				ns = NpcString.DON_T_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
+				ns = NpcStringId.DON_T_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
 				break;
 			
 			case 2:
-				ns = NpcString.DON_T_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
+				ns = NpcStringId.DON_T_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
 				break;
 			
 			case 3:
-				ns = NpcString.DON_T_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
+				ns = NpcStringId.DON_T_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
 				break;
 			
 			case 4:
-				ns = NpcString.DON_T_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
+				ns = NpcStringId.DON_T_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
 				break;
 			
 			case 5:
-				ns = NpcString.DON_T_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
+				ns = NpcStringId.DON_T_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
 				break;
 			
 			default:
-				ns = NpcString.DON_T_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
+				ns = NpcStringId.DON_T_KNOW_WHAT_TO_DO_LOOK_AT_THE_MAP;
 				break;
 		}
 		

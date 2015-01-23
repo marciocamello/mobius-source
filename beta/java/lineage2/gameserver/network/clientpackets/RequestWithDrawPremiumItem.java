@@ -17,7 +17,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.PremiumItem;
 import lineage2.gameserver.network.serverpackets.ExGetPremiumItemList;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -70,13 +70,13 @@ public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 		
 		if ((activeChar.getWeightPenalty() >= 3) || ((activeChar.getInventoryLimit() * 0.8) <= activeChar.getInventory().getSize()))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_RECEIVE_THE_VITAMIN_ITEM_BECAUSE_YOU_HAVE_EXCEED_YOUR_INVENTORY_WEIGHT_QUANTITY_LIMIT));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_RECEIVE_THE_DIMENSIONAL_ITEM_BECAUSE_YOU_HAVE_EXCEED_YOUR_INVENTORY_WEIGHT_QUANTITY_LIMIT));
 			return;
 		}
 		
 		if (activeChar.isProcessingRequest())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_RECEIVE_A_VITAMIN_ITEM_DURING_AN_EXCHANGE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_RECEIVE_A_DIMENSIONAL_ITEM_DURING_AN_EXCHANGE));
 			return;
 		}
 		
@@ -119,7 +119,7 @@ public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 		
 		if (activeChar.getPremiumItemList().isEmpty())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_MORE_VITAMIN_ITEMS_TO_BE_FOUND));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_MORE_DIMENSIONAL_ITEMS_TO_BE_FOUND));
 		}
 		else
 		{
@@ -136,6 +136,13 @@ public final class RequestWithDrawPremiumItem extends L2GameClientPacket
 	private void addItem(Player player, int itemId, long count)
 	{
 		player.getInventory().addItem(itemId, count);
-		player.sendPacket(SystemMessage2.obtainItems(itemId, count, 0));
+		if (count > 1)
+		{
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(itemId).addLong(count));
+		}
+		else
+		{
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(itemId));
+		}
 	}
 }

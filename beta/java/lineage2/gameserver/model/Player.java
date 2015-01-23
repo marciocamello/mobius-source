@@ -260,14 +260,13 @@ import lineage2.gameserver.network.serverpackets.SpecialCamera;
 import lineage2.gameserver.network.serverpackets.StatusUpdate;
 import lineage2.gameserver.network.serverpackets.StatusUpdate.StatusUpdateField;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
 import lineage2.gameserver.network.serverpackets.TargetSelected;
 import lineage2.gameserver.network.serverpackets.TargetUnselected;
 import lineage2.gameserver.network.serverpackets.TeleportToLocation;
 import lineage2.gameserver.network.serverpackets.UserInfo;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 import lineage2.gameserver.network.serverpackets.components.SceneMovie;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.skills.EffectType;
 import lineage2.gameserver.skills.TimeStamp;
 import lineage2.gameserver.skills.effects.EffectCubic;
@@ -707,15 +706,15 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if (hours > 0)
 		{
-			sendPacket(new SystemMessage(SystemMessage.THERE_ARE_S2_HOURS_S3_MINUTES_AND_S4_SECONDS_REMAINING_IN_S1S_REUSE_TIME).addSkillName(skill.getId(), skill.getDisplayLevel()).addNumber(hours).addNumber(minutes).addNumber(seconds));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME).addSkillName(skill.getId(), skill.getDisplayLevel()).addLong(hours).addLong(minutes).addLong(seconds));
 		}
 		else if (minutes > 0)
 		{
-			sendPacket(new SystemMessage(SystemMessage.THERE_ARE_S2_MINUTES_S3_SECONDS_REMAINING_IN_S1S_REUSE_TIME).addSkillName(skill.getId(), skill.getDisplayLevel()).addNumber(minutes).addNumber(seconds));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME).addSkillName(skill.getId(), skill.getDisplayLevel()).addLong(minutes).addLong(seconds));
 		}
 		else
 		{
-			sendPacket(new SystemMessage(SystemMessage.THERE_ARE_S2_SECONDS_REMAINING_IN_S1S_REUSE_TIME).addSkillName(skill.getId(), skill.getDisplayLevel()).addNumber(seconds));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME).addSkillName(skill.getId(), skill.getDisplayLevel()).addLong(seconds));
 		}
 	}
 	
@@ -1050,11 +1049,11 @@ public final class Player extends Playable implements PlayerGroup
 				
 				if (clanMember.getObjectId() == sponsor)
 				{
-					clanMember.sendPacket(new SystemMessage(SystemMessage.S1_YOUR_CLAN_ACADEMYS_APPRENTICE_HAS_LOGGED_OUT).addString(_name));
+					clanMember.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_APPRENTICE_C1_HAS_LOGGED_OUT).addString(_name));
 				}
 				else if (clanMember.getObjectId() == apprentice)
 				{
-					clanMember.sendPacket(new SystemMessage(SystemMessage.S1_YOUR_CLAN_ACADEMYS_SPONSOR_HAS_LOGGED_OUT).addString(_name));
+					clanMember.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_SPONSOR_C1_HAS_LOGGED_OUT).addString(_name));
 				}
 			}
 			
@@ -1439,7 +1438,7 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			if (msg)
 			{
-				sendPacket(new SystemMessage(SystemMessage.PROGRESS_IN_A_QUEST_IS_POSSIBLE_ONLY_WHEN_YOUR_INVENTORYS_WEIGHT_AND_VOLUME_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY));
 			}
 			
 			return false;
@@ -2450,11 +2449,11 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	public void changeClass(final int index)
 	{
-		SystemMsg msg = checkChangeClassCondition();
+		SystemMessageId msg = checkChangeClassCondition();
 		
 		if (msg != null)
 		{
-			sendPacket(msg);
+			sendPacket(SystemMessage.getSystemMessage(msg));
 			return;
 		}
 		
@@ -2480,44 +2479,44 @@ public final class Player extends Playable implements PlayerGroup
 			}
 		}
 		
-		sendPacket(new SystemMessage(SystemMessage.THE_TRANSFER_OF_SUB_CLASS_HAS_BEEN_COMPLETED).addClassName(oldClassId).addClassName(classId));
+		sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_SUCCESSFULLY_SWITCHED_S1_TO_S2).addClassId(oldClassId).addClassId(classId));
 		abortCast(true, true);
 	}
 	
 	/**
 	 * Method checkChangeClassCondition.
-	 * @return SystemMsg
+	 * @return SystemMessageId
 	 */
-	private SystemMsg checkChangeClassCondition()
+	private SystemMessageId checkChangeClassCondition()
 	{
 		if ((getWeightPenalty() >= 3) || ((getInventoryLimit() * 0.8) < getInventory().getSize()))
 		{
-			return SystemMsg.A_SUBCLASS_CANNOT_BE_CREATED_OR_CHANGED_BECAUSE_YOU_HAVE_EXCEEDED_YOUR_INVENTORY_LIMIT;
+			return SystemMessageId.A_SUBCLASS_CANNOT_BE_CREATED_OR_CHANGED_BECAUSE_YOU_HAVE_EXCEEDED_YOUR_INVENTORY_LIMIT;
 		}
 		
 		if (isInOlympiadMode())
 		{
-			return SystemMsg.THIS_TERRITORY_CAN_NOT_CHANGE_CLASS;
+			return SystemMessageId.YOU_CANNOT_CHANGE_A_CLASS_IN_THIS_REGION;
 		}
 		
 		if (isDead())
 		{
-			return SystemMsg.YOU_CAN_NOT_CHANGE_CLASS_IN_TRANSFORMATION;
+			return SystemMessageId.YOU_CANNOT_CHANGE_CLASSES_WHILE_YOU_ARE_TRANSFORMED;
 		}
 		
 		if (getTransformation() != 0)
 		{
-			return SystemMsg.YOU_CAN_NOT_CHANGE_CLASS_IN_TRANSFORMATION;
+			return SystemMessageId.YOU_CANNOT_CHANGE_CLASSES_WHILE_YOU_ARE_TRANSFORMED;
 		}
 		
 		if (isInDuel())
 		{
-			return SystemMsg.THIS_TERRITORY_CAN_NOT_CHANGE_CLASS;
+			return SystemMessageId.YOU_CANNOT_CHANGE_A_CLASS_IN_THIS_REGION;
 		}
 		
 		if (isInCombat() || isAttackingNow())
 		{
-			return SystemMsg.THIS_TERRITORY_CAN_NOT_CHANGE_CLASS;
+			return SystemMessageId.YOU_CANNOT_CHANGE_A_CLASS_IN_THIS_REGION;
 		}
 		
 		return null;
@@ -2785,14 +2784,14 @@ public final class Player extends Playable implements PlayerGroup
 			}
 			
 			_clan.removeClanMember(getObjectId());
-			SystemMessage sm = new SystemMessage(SystemMessage.CLAN_ACADEMY_MEMBER_S1_HAS_SUCCESSFULLY_COMPLETED_THE_2ND_CLASS_TRANSFER_AND_OBTAINED_S2_CLAN_REPUTATION_POINTS);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CLAN_ACADEMY_MEMBER_S1_HAS_SUCCESSFULLY_AWAKENED_OBTAINING_S2_CLAN_REPUTATION);
 			sm.addString(getName());
-			sm.addNumber(_clan.incReputation(earnedPoints, true, "Academy"));
+			sm.addInt(_clan.incReputation(earnedPoints, true, "Academy"));
 			_clan.broadcastToOnlineMembers(sm);
 			_clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListDelete(getName()), this);
 			setClan(null);
 			setTitle("");
-			sendPacket(new SystemMessage(SystemMessage.CONGRATULATIONS_YOU_WILL_NOW_GRADUATE_FROM_THE_CLAN_ACADEMY_AND_LEAVE_YOUR_CURRENT_CLAN_AS_A_GRADUATE_OF_THE_ACADEMY_YOU_CAN_IMMEDIATELY_JOIN_A_CLAN_AS_A_REGULAR_MEMBER_WITHOUT_BEING_SUBJECT_TO_ANY_PENALTIES));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_YOU_WILL_NOW_GRADUATE_FROM_THE_CLAN_ACADEMY_AND_LEAVE_YOUR_CURRENT_CLAN_YOU_CAN_NOW_JOIN_A_CLAN_WITHOUT_BEING_SUBJECT_TO_ANY_PENALTIES));
 			setLeaveClanTime(0);
 			broadcastCharInfo();
 			sendPacket(PledgeShowMemberListDeleteAll.STATIC);
@@ -3143,7 +3142,7 @@ public final class Player extends Playable implements PlayerGroup
 			if (!isCursedWeaponEquipped() && (addToSp > 0L) && (_karma < 0))
 			{
 				_karma = (int) (_karma + (addToSp / (Config.KARMA_SP_DIVIDER * Config.RATE_SP)));
-				sendPacket(new SystemMessage(SystemMessage.YOUR_KARMA_HAS_BEEN_CHANGED_TO_S1).addNumber(_karma));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_REPUTATION_HAS_BEEN_CHANGED_TO_S1).addInt(_karma));
 				addToExp = 0;
 				addToSp = 0;
 			}
@@ -3158,19 +3157,19 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if ((addToExp > 0L) && (addToSp > 0L) && ((bonusAddExp > 0L) || (bonusAddSp > 0L)))
 		{
-			sendPacket(new SystemMessage2(SystemMsg.YOU_HAVE_ACQUIRED_S1_EXP_BONUS_S2_AND_S3_SP_BONUS_S4).addLong(addToExp).addLong(bonusAddExp).addInteger(addToSp).addInteger((int) bonusAddSp));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_XP_BONUS_S2_AND_S3_SP_BONUS_S4).addLong(addToExp).addLong(bonusAddExp).addLong(addToSp).addInt((int) bonusAddSp));
 		}
 		else if ((addToSp > 0L) && (addToExp == 0L))
 		{
-			sendPacket(new SystemMessage(331).addNumber(addToSp));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_SP).addLong(addToSp));
 		}
 		else if ((addToSp > 0L) && (addToExp > 0L))
 		{
-			sendPacket(new SystemMessage(95).addNumber(addToExp).addNumber(addToSp));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_XP_AND_S2_SP).addLong(addToExp).addLong(addToSp));
 		}
 		else if ((addToSp == 0L) && (addToExp > 0L))
 		{
-			sendPacket(new SystemMessage(45).addNumber(addToExp));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_XP).addLong(addToExp));
 		}
 		
 		int level = getActiveSubClass().getLevel();
@@ -3576,45 +3575,45 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if ((request != null) && request.isInProgress() && (request.getOtherPlayer(this) != inviter))
 		{
-			return SystemMsg.WAITING_FOR_ANOTHER_REPLY.packet(inviter);
+			return SystemMessage.getSystemMessage(SystemMessageId.WAITING_FOR_ANOTHER_REPLY).packet(inviter);
 		}
 		
 		if (isBlockAll() || getMessageRefusal())
 		{
-			return SystemMsg.THAT_PERSON_IS_IN_MESSAGE_REFUSAL_MODE.packet(inviter);
+			return SystemMessage.getSystemMessage(SystemMessageId.THAT_PERSON_IS_IN_MESSAGE_REFUSAL_MODE).packet(inviter);
 		}
 		
 		if (isInParty())
 		{
-			return new SystemMessage2(SystemMsg.C1_IS_A_MEMBER_OF_ANOTHER_PARTY_AND_CANNOT_BE_INVITED).addName(this);
+			return SystemMessage.getSystemMessage(SystemMessageId.C1_IS_A_MEMBER_OF_ANOTHER_PARTY_AND_CANNOT_BE_INVITED).addPcName(this);
 		}
 		
 		if (inviter.getReflection() != getReflection())
 		{
 			if ((inviter.getReflection() != ReflectionManager.DEFAULT) && (getReflection() != ReflectionManager.DEFAULT))
 			{
-				return SystemMsg.INVALID_TARGET.packet(inviter);
+				return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET).packet(inviter);
 			}
 		}
 		
 		if (isCursedWeaponEquipped() || inviter.isCursedWeaponEquipped())
 		{
-			return SystemMsg.INVALID_TARGET.packet(inviter);
+			return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET).packet(inviter);
 		}
 		
 		if (inviter.isInOlympiadMode() || isInOlympiadMode())
 		{
-			return SystemMsg.A_USER_CURRENTLY_PARTICIPATING_IN_THE_OLYMPIAD_CANNOT_SEND_PARTY_AND_FRIEND_INVITATIONS.packet(inviter);
+			return SystemMessage.getSystemMessage(SystemMessageId.A_USER_CURRENTLY_PARTICIPATING_IN_THE_OLYMPIAD_CANNOT_SEND_PARTY_AND_FRIEND_INVITATIONS).packet(inviter);
 		}
 		
 		if (!inviter.getPlayerAccess().CanJoinParty || !getPlayerAccess().CanJoinParty)
 		{
-			return SystemMsg.INVALID_TARGET.packet(inviter);
+			return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET).packet(inviter);
 		}
 		
 		if (getTeam() != TeamType.NONE)
 		{
-			return SystemMsg.INVALID_TARGET.packet(inviter);
+			return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET).packet(inviter);
 		}
 		
 		return null;
@@ -3846,7 +3845,7 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if (notify && result)
 		{
-			sendPacket(SystemMessage2.removeItems(ItemTemplate.ITEM_ID_ADENA, adena));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED).addLong(adena));
 		}
 		
 		return result;
@@ -3879,7 +3878,7 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if ((item != null) && notify)
 		{
-			sendPacket(SystemMessage2.obtainItems(ItemTemplate.ITEM_ID_ADENA, adena, 0));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA).addLong(adena));
 		}
 		
 		return item;
@@ -4283,12 +4282,12 @@ public final class Player extends Playable implements PlayerGroup
 				
 				if (item.getId() == 57)
 				{
-					sm = new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
-					sm.addNumber(item.getCount());
+					sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
+					sm.addLong(item.getCount());
 				}
 				else
 				{
-					sm = new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_PICK_UP_S1);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
 					sm.addItemName(item.getId());
 				}
 				
@@ -4357,8 +4356,23 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		
 		Log.LogItem(this, log, item);
-		sendPacket(SystemMessage2.obtainItems(item));
 		getInventory().addItem(item);
+		if (item.getId() == 57)
+		{
+			SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA).addLong(item.getCount());
+		}
+		else if (item.getCount() > 1)
+		{
+			SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(item.getId()).addLong(item.getCount());
+		}
+		else if (item.isEquipable() && (item.getEnchantLevel() > 0))
+		{
+			SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2).addInt(item.getEnchantLevel()).addItemName(item.getId());
+		}
+		else
+		{
+			SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(item.getId());
+		}
 		
 		if (attachment != null)
 		{
@@ -4771,8 +4785,8 @@ public final class Player extends Playable implements PlayerGroup
 			{
 				if ((pk.getClan().getReputationScore() > 0) && (_clan.getLevel() >= 5) && (_clan.getReputationScore() > 0) && (pk.getClan().getLevel() >= 5))
 				{
-					_clan.broadcastToOtherOnlineMembers(new SystemMessage(SystemMessage.YOUR_CLAN_MEMBER_S1_WAS_KILLED_S2_POINTS_HAVE_BEEN_DEDUCTED_FROM_YOUR_CLAN_REPUTATION_SCORE_AND_ADDED_TO_YOUR_OPPONENT_CLAN_REPUTATION_SCORE).addString(getName()).addNumber(-_clan.incReputation(-repValue, true, "ClanWar")), this);
-					pk.getClan().broadcastToOtherOnlineMembers(new SystemMessage(SystemMessage.FOR_KILLING_AN_OPPOSING_CLAN_MEMBER_S1_POINTS_HAVE_BEEN_DEDUCTED_FROM_YOUR_OPPONENTS_CLAN_REPUTATION_SCORE).addNumber(pk.getClan().incReputation(repValue, true, "ClanWar")), pk);
+					_clan.broadcastToOtherOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_MEMBER_C1_WAS_KILLED_S2_POINT_S_HAVE_BEEN_DEDUCTED_FROM_YOUR_CLAN_REPUTATION_AND_ADDED_TO_YOUR_OPPONENT_S_CLAN_REPUTATION).addString(getName()).addInt(-_clan.incReputation(-repValue, true, "ClanWar")), this);
+					pk.getClan().broadcastToOtherOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.FOR_KILLING_AN_OPPOSING_CLAN_MEMBER_S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_YOUR_OPPONENTS_CLAN_REPUTATION).addInt(pk.getClan().incReputation(repValue, true, "ClanWar")), pk);
 				}
 			}
 			
@@ -4897,18 +4911,33 @@ public final class Player extends Playable implements PlayerGroup
 				
 				if (item.getEnchantLevel() > 0)
 				{
-					sendPacket(new SystemMessage(SystemMessage.DROPPED__S1_S2).addNumber(item.getEnchantLevel()).addItemName(item.getId()));
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_DROPPED).addInt(item.getEnchantLevel()).addItemName(item.getId()));
 				}
 				else
 				{
-					sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_DROPPED_S1).addItemName(item.getId()));
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_DROPPED_S1).addItemName(item.getId()));
 				}
 				
 				if (killer.isPlayable() && ((Config.AUTO_LOOT && Config.AUTO_LOOT_PK) || isInFlyingTransform()))
 				{
 					killer.getPlayer().getInventory().addItem(item);
 					Log.LogItem(this, Log.Pickup, item);
-					killer.getPlayer().sendPacket(SystemMessage2.obtainItems(item));
+					if (item.getId() == 57)
+					{
+						SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA).addLong(item.getCount());
+					}
+					else if (item.getCount() > 1)
+					{
+						SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(item.getId()).addLong(item.getCount());
+					}
+					else if (item.isEquipable() && (item.getEnchantLevel() > 0))
+					{
+						SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2).addInt(item.getEnchantLevel()).addItemName(item.getId());
+					}
+					else
+					{
+						SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(item.getId());
+					}
 				}
 				else
 				{
@@ -4979,7 +5008,7 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if (!isSalvation() && isOnSiegeField() && isCharmOfCourage())
 		{
-			ask(new ConfirmDlg(SystemMsg.YOUR_CHARM_OF_COURAGE_IS_TRYING_TO_RESURRECT_YOU, 60000), new ReviveAnswerListener(this, 100, false));
+			ask(new ConfirmDlg(SystemMessageId.YOUR_CHARM_OF_COURAGE_IS_TRYING_TO_RESURRECT_YOU_WOULD_YOU_LIKE_TO_RESURRECT_NOW).addTime(60000), new ReviveAnswerListener(this, 100, false));
 			setCharmOfCourage(false);
 		}
 		
@@ -5341,7 +5370,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		if (levels > 0)
 		{
-			sendPacket(new SystemMessage(SystemMessage.YOUR_LEVEL_HAS_INCREASED));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_LEVEL_HAS_INCREASED));
 			broadcastPacket(new SocialAction(getObjectId(), SocialAction.LEVEL_UP));
 			setCurrentHpMp(getMaxHp(), getMaxMp());
 			setCurrentCp(getMaxCp());
@@ -5420,8 +5449,8 @@ public final class Player extends Playable implements PlayerGroup
 				if ((getLevel() > 84) && cclass.isBase() && getClassId().isOfLevel(ClassLevel.Fourth))
 				{
 					getMentorSystem().remove(mentorName, false, true);
-					sendPacket(new SystemMessage2(SystemMsg.YOU_REACHED_LEVEL_86_RELATIONSHIP_WITH_S1_CAME_TO_AN_END).addString(mentorName));
-					mentorPlayer.sendPacket(new SystemMessage2(SystemMsg.THE_MENTEE_S1_HAS_REACHED_LEVEL_86).addName(this));
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_MENTOR_MENTEE_RELATIONSHIP_WITH_YOUR_MENTOR_S1_HAS_ENDED_AS_YOU_ARE_AN_AWAKENED_CHARACTER_OF_LV_85_OR_ABOVE_YOU_CAN_NO_LONGER_BE_PAIRED_WITH_A_MENTOR).addString(mentorName));
+					mentorPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_AWAKENED_AND_THE_MENTOR_MENTEE_RELATIONSHIP_HAS_ENDED_THE_MENTOR_CANNOT_OBTAIN_ANOTHER_MENTEE_FOR_ONE_DAY_AFTER_THE_MENTEE_S_GRADUATION).addPcName(this));
 					mentorPlayer.getMentorSystem().remove(_name, true, false);
 					
 					if (mentorPlayer.getMentorSystem().getMenteeInfo().size() == 0)
@@ -5896,7 +5925,7 @@ public final class Player extends Playable implements PlayerGroup
 			return;
 		}
 		
-		sendPacket(SystemMsg.YOU_CAREFULLY_NOCK_AN_ARROW);
+		sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CAREFULLY_NOCK_AN_ARROW));
 		
 		if (!getInventory().destroyItemByObjectId(getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LHAND), 1L))
 		{
@@ -7643,7 +7672,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		if (getHennaEmptySlots() == 0)
 		{
-			sendPacket(SystemMsg.NO_SLOT_EXISTS_TO_DRAW_THE_SYMBOL);
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_SLOT_EXISTS_TO_DRAW_THE_SYMBOL));
 			return false;
 		}
 		
@@ -7871,7 +7900,18 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		if (getInventory().destroyItemByItemId(itemConsumeId, itemCount))
 		{
-			sendPacket(SystemMessage2.removeItems(itemConsumeId, itemCount));
+			if (itemConsumeId == 57)
+			{
+				SystemMessage.getSystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED).addLong(itemCount);
+			}
+			else if (itemCount > 1)
+			{
+				SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED).addItemName(itemConsumeId).addLong(itemCount);
+			}
+			else
+			{
+				SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED).addItemName(itemConsumeId);
+			}
 			return true;
 		}
 		
@@ -8150,14 +8190,14 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		if (wpn.getEnchantLevel() > 0)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.EQUIPMENT_OF__S1_S2_HAS_BEEN_REMOVED);
-			sm.addNumber(wpn.getEnchantLevel());
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+			sm.addInt(wpn.getEnchantLevel());
 			sm.addItemName(wpn.getId());
 			sendPacket(sm);
 		}
 		else
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.S1__HAS_BEEN_DISARMED);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_UNEQUIPPED);
 			sm.addItemName(wpn.getId());
 			sendPacket(sm);
 		}
@@ -8572,7 +8612,6 @@ public final class Player extends Playable implements PlayerGroup
 			updateTargetSelectionInfo();
 		}
 		
-		// TODO: Test this !!
 		sendUserInfo();
 		
 		for (Summon summon : getSummonList())
@@ -8928,7 +8967,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		if ((charName == null) || charName.equals(getName()) || isInBlockList(charName))
 		{
-			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_REGISTER_THE_USER_TO_YOUR_IGNORE_LIST));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_REGISTER_THE_USER_TO_YOUR_IGNORE_LIST));
 			return;
 		}
 		
@@ -8938,13 +8977,13 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			if (block_target.isGM())
 			{
-				sendPacket(new SystemMessage(SystemMessage.YOU_MAY_NOT_IMPOSE_A_BLOCK_ON_A_GM));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_IMPOSE_A_BLOCK_ON_A_GM));
 				return;
 			}
 			
 			_blockList.put(block_target.getObjectId(), block_target.getName());
-			sendPacket(new SystemMessage(SystemMessage.S1_HAS_BEEN_ADDED_TO_YOUR_IGNORE_LIST).addString(block_target.getName()));
-			block_target.sendPacket(new SystemMessage(SystemMessage.S1__HAS_PLACED_YOU_ON_HIS_HER_IGNORE_LIST).addString(getName()));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED_TO_YOUR_IGNORE_LIST).addString(block_target.getName()));
+			block_target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_PLACED_YOU_ON_HIS_HER_IGNORE_LIST).addString(getName()));
 			return;
 		}
 		
@@ -8952,18 +8991,18 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if (charId == 0)
 		{
-			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_REGISTER_THE_USER_TO_YOUR_IGNORE_LIST));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_REGISTER_THE_USER_TO_YOUR_IGNORE_LIST));
 			return;
 		}
 		
 		if (Config.PLAYER_ACCESS.containsKey(getAccessLevel()) && Config.PLAYER_ACCESS.get(getAccessLevel()).IsGM)
 		{
-			sendPacket(new SystemMessage(SystemMessage.YOU_MAY_NOT_IMPOSE_A_BLOCK_ON_A_GM));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_IMPOSE_A_BLOCK_ON_A_GM));
 			return;
 		}
 		
 		_blockList.put(charId, charName);
-		sendPacket(new SystemMessage(SystemMessage.S1_HAS_BEEN_ADDED_TO_YOUR_IGNORE_LIST).addString(charName));
+		sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED_TO_YOUR_IGNORE_LIST).addString(charName));
 	}
 	
 	/**
@@ -8985,11 +9024,11 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if (charId == 0)
 		{
-			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_DELETE_THE_CHARACTER_FROM_IGNORE_LIST));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_DELETE_THE_CHARACTER2));
 			return;
 		}
 		
-		sendPacket(new SystemMessage(SystemMessage.S1_HAS_BEEN_REMOVED_FROM_YOUR_IGNORE_LIST).addString(_blockList.remove(charId)));
+		sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_REMOVED_FROM_YOUR_IGNORE_LIST).addString(_blockList.remove(charId)));
 		Player block_target = GameObjectsStorage.getPlayer(charId);
 		
 		if (block_target != null)
@@ -10114,19 +10153,19 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			if ((reviveAsk.isForPet() == pet) && (reviveAsk.getPower() >= percent))
 			{
-				reviver.sendPacket(new SystemMessage(SystemMessage.BETTER_RESURRECTION_HAS_BEEN_ALREADY_PROPOSED));
+				reviver.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.RESURRECTION_HAS_ALREADY_BEEN_PROPOSED));
 				return;
 			}
 			
 			if (pet && !reviveAsk.isForPet())
 			{
-				reviver.sendPacket(new SystemMessage(SystemMessage.SINCE_THE_MASTER_WAS_IN_THE_PROCESS_OF_BEING_RESURRECTED_THE_ATTEMPT_TO_RESURRECT_THE_PET_HAS_BEEN_CANCELLED));
+				reviver.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_PET_CANNOT_BE_RESURRECTED_WHILE_IT_S_OWNER_IS_IN_THE_PROCESS_OF_RESURRECTING));
 				return;
 			}
 			
 			if (pet && isDead())
 			{
-				reviver.sendPacket(new SystemMessage(SystemMessage.WHILE_A_PET_IS_ATTEMPTING_TO_RESURRECT_IT_CANNOT_HELP_IN_RESURRECTING_ITS_MASTER));
+				reviver.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WHILE_A_PET_IS_BEING_RESURRECTED_IT_CANNOT_HELP_IN_RESURRECTING_ITS_MASTER));
 				return;
 			}
 		}
@@ -10135,8 +10174,8 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if ((pet && (petInstance != null) && petInstance.isDead()) || (!pet && isDead()))
 		{
-			ConfirmDlg pkt = new ConfirmDlg(SystemMsg.C1_IS_MAKING_AN_ATTEMPT_TO_RESURRECT_YOU_IF_YOU_CHOOSE_THIS_PATH_S2_EXPERIENCE_WILL_BE_RETURNED_FOR_YOU, 0);
-			pkt.addName(reviver).addString(Math.round(percent) + " percent");
+			ConfirmDlg pkt = new ConfirmDlg(SystemMessageId.C1_IS_ATTEMPTING_TO_DO_A_RESURRECTION_THAT_RESTORES_S2_S3_XP_ACCEPT).addTime(0);
+			pkt.addPcName(reviver).addString(Math.round(percent) + " percent");
 			ask(pkt, new ReviveAnswerListener(this, percent, pet));
 		}
 	}
@@ -10149,8 +10188,8 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	public void summonCharacterRequest(final Creature summoner, final Location loc, final int summonConsumeCrystal)
 	{
-		ConfirmDlg cd = new ConfirmDlg(SystemMsg.C1_WISHES_TO_SUMMON_YOU_FROM_S2, 60000);
-		cd.addName(summoner).addZoneName(loc);
+		ConfirmDlg cd = new ConfirmDlg(SystemMessageId.C1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT).addTime(60000);
+		cd.addCharName(summoner).addZoneName(loc.getX(), loc.getY(), loc.getZ());
 		ask(cd, new SummonAnswerListener(this, loc, summonConsumeCrystal));
 	}
 	
@@ -10162,7 +10201,7 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	public void scriptRequest(String text, String scriptName, Object[] args)
 	{
-		ask(new ConfirmDlg(SystemMsg.S1, 30000).addString(text), new ScriptAnswerListener(this, scriptName, args));
+		ask(new ConfirmDlg(SystemMessageId.S1).addString(text).addTime(30000), new ScriptAnswerListener(this, scriptName, args));
 	}
 	
 	/**
@@ -11451,15 +11490,15 @@ public final class Player extends Playable implements PlayerGroup
 			
 			if (diff > 0)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessage.YOUR_SOUL_HAS_INCREASED_BY_S1_SO_IT_IS_NOW_AT_S2);
-				sm.addNumber(diff);
-				sm.addNumber(i);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SOUL_COUNT_HAS_INCREASED_BY_S1_IT_IS_NOW_AT_S2);
+				sm.addInt(diff);
+				sm.addInt(i);
 				sendPacket(sm);
 			}
 		}
 		else if (max == i)
 		{
-			sendPacket(new SystemMessage(SystemMessage.SOUL_CANNOT_BE_ABSORBED_ANY_MORE));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SOUL_CANNOT_BE_ABSORBED_ANYMORE));
 			return;
 		}
 		
@@ -11479,7 +11518,7 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if ((i != 0) && (i > _increasedForce))
 		{
-			sendPacket(new SystemMessage(SystemMessage.YOUR_FORCE_HAS_INCREASED_TO_S1_LEVEL).addNumber(i));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_FORCE_HAS_INCREASED_TO_LEVEL_S1).addInt(i));
 		}
 		
 		_increasedForce = i;
@@ -11524,7 +11563,7 @@ public final class Player extends Playable implements PlayerGroup
 				setCurrentHp(curHp - damage, false);
 			}
 			
-			sendPacket(new SystemMessage(SystemMessage.YOU_RECEIVED_S1_DAMAGE_FROM_TAKING_A_HIGH_FALL).addNumber(damage));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_RECEIVED_S1_FALLING_DAMAGE).addInt(damage));
 		}
 	}
 	
@@ -11575,12 +11614,12 @@ public final class Player extends Playable implements PlayerGroup
 			{
 				if ((_curHpPercent > _hp[i]) && (_newHpPercent <= _hp[i]))
 				{
-					sendPacket(new SystemMessage(SystemMessage.SINCE_HP_HAS_DECREASED_THE_EFFECT_OF_S1_CAN_BE_FELT).addSkillName(skills[i], level));
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SINCE_YOUR_HP_HAS_DECREASED_THE_EFFECT_OF_S1_CAN_BE_FELT).addSkillName(skills[i], level));
 					needsUpdate = true;
 				}
 				else if ((_curHpPercent <= _hp[i]) && (_newHpPercent > _hp[i]))
 				{
-					sendPacket(new SystemMessage(SystemMessage.SINCE_HP_HAS_INCREASED_THE_EFFECT_OF_S1_WILL_DISAPPEAR).addSkillName(skills[i], level));
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SINCE_YOUR_HP_HAS_INCREASED_THE_EFFECT_OF_S1_WILL_DISAPPEAR).addSkillName(skills[i], level));
 					needsUpdate = true;
 				}
 			}
@@ -11592,12 +11631,12 @@ public final class Player extends Playable implements PlayerGroup
 			{
 				if ((_curHpPercent > _effects_hp[i]) && (_newHpPercent <= _effects_hp[i]))
 				{
-					sendPacket(new SystemMessage(SystemMessage.SINCE_HP_HAS_DECREASED_THE_EFFECT_OF_S1_CAN_BE_FELT).addSkillName(_effects_skills_id[i], 1));
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SINCE_YOUR_HP_HAS_DECREASED_THE_EFFECT_OF_S1_CAN_BE_FELT).addSkillName(_effects_skills_id[i], 1));
 					needsUpdate = true;
 				}
 				else if ((_curHpPercent <= _effects_hp[i]) && (_newHpPercent > _effects_hp[i]))
 				{
-					sendPacket(new SystemMessage(SystemMessage.SINCE_HP_HAS_INCREASED_THE_EFFECT_OF_S1_WILL_DISAPPEAR).addSkillName(_effects_skills_id[i], 1));
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SINCE_YOUR_HP_HAS_INCREASED_THE_EFFECT_OF_S1_WILL_DISAPPEAR).addSkillName(_effects_skills_id[i], 1));
 					needsUpdate = true;
 				}
 			}
@@ -11620,11 +11659,11 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			if (GameTimeController.getInstance().isNowNight())
 			{
-				sendPacket(new SystemMessage(SystemMessage.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT).addSkillName(294, level));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT).addSkillName(294, level));
 			}
 			else
 			{
-				sendPacket(new SystemMessage(SystemMessage.IT_IS_DAWN_AND_THE_EFFECT_OF_S1_WILL_NOW_DISAPPEAR).addSkillName(294, level));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.IT_IS_DAWN_AND_THE_EFFECT_OF_S1_WILL_NOW_DISAPPEAR).addSkillName(294, level));
 			}
 		}
 		
@@ -11712,11 +11751,11 @@ public final class Player extends Playable implements PlayerGroup
 			
 			if (isOnSiegeField)
 			{
-				sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_ENTERED_A_COMBAT_ZONE));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE));
 			}
 			else
 			{
-				sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_LEFT_A_COMBAT_ZONE));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE));
 				
 				if (!isTeleporting() && (getPvpFlag() == 0))
 				{
@@ -11828,7 +11867,7 @@ public final class Player extends Playable implements PlayerGroup
 	@Override
 	public void sendMessage(String message)
 	{
-		sendPacket(new SystemMessage(message));
+		sendPacket(SystemMessage.sendString(message));
 	}
 	
 	private Location _lastClientPosition;
@@ -12454,7 +12493,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		
 		_pcBangPoints += count;
-		sendPacket(new SystemMessage(doublePoints ? SystemMessage.DOUBLE_POINTS_YOU_AQUIRED_S1_PC_BANG_POINT : SystemMessage.YOU_ACQUIRED_S1_PC_BANG_POINT).addNumber(count));
+		sendPacket(SystemMessage.getSystemMessage(doublePoints ? SystemMessageId.DOUBLE_POINTS_YOU_EARNED_S1_PC_POINT_S : SystemMessageId.YOU_EARNED_S1_PC_POINT_S).addInt(count));
 		sendPacket(new ExPCCafePointInfo(this, count, 1, 2, 12));
 	}
 	
@@ -12471,7 +12510,7 @@ public final class Player extends Playable implements PlayerGroup
 		}
 		
 		_pcBangPoints -= count;
-		sendPacket(new SystemMessage(SystemMessage.YOU_ARE_USING_S1_POINT).addNumber(count));
+		sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_USING_S1_POINT).addInt(count));
 		sendPacket(new ExPCCafePointInfo(this, 0, 1, 2, 12));
 		return true;
 	}
@@ -13078,7 +13117,7 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if (fame > _fame)
 		{
-			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_ACQUIRED_S1_REPUTATION_SCORE).addNumber(fame - _fame));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_FAME).addInt(fame - _fame));
 		}
 		
 		_fame = fame;
@@ -13122,11 +13161,11 @@ public final class Player extends Playable implements PlayerGroup
 			{
 				if (newVitality == 0)
 				{
-					sendPacket(new SystemMessage(SystemMessage.VITALITY_IS_FULLY_EXHAUSTED));
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_VITALITY_IS_FULLY_EXHAUSTED));
 				}
 				else if (newVitality == Config.MAX_VITALITY)
 				{
-					sendPacket(new SystemMessage(SystemMessage.YOUR_VITALITY_IS_AT_MAXIMUM));
+					sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_VITALITY_IS_AT_MAXIMUM));
 				}
 			}
 			
@@ -13653,7 +13692,7 @@ public final class Player extends Playable implements PlayerGroup
 	private void onActive()
 	{
 		setNonAggroTime(0);
-		sendPacket(new SystemMessage(SystemMessage.YOU_ARE_PROTECTED_AGGRESSIVE_MONSTERS));
+		sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NO_LONGER_PROTECTED_FROM_AGGRESSIVE_MONSTERS));
 		ThreadPoolManager.getInstance().execute(new RunnableImpl()
 		{
 			@Override
@@ -14112,61 +14151,61 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		if (target.getPrivateStoreType() != Player.STORE_PRIVATE_NONE)
 		{
-			sendPacket(new SystemMessage(SystemMessage.COUPLE_ACTION_CANNOT_C1_TARGET_IN_PRIVATE_STORE).addName(target));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_PRIVATE_STORE_MODE_OR_IN_A_BATTLE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION).addPcName(target));
 			return false;
 		}
 		
 		if (target.isFishing())
 		{
-			sendPacket(new SystemMessage(SystemMessage.COUPLE_ACTION_CANNOT_C1_TARGET_IS_FISHING).addName(target));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_FISHING_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION).addPcName(target));
 			return false;
 		}
 		
 		if (target.isInCombat())
 		{
-			sendPacket(new SystemMessage(SystemMessage.COUPLE_ACTION_CANNOT_C1_TARGET_IS_IN_COMBAT).addName(target));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_BATTLE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION).addPcName(target));
 			return false;
 		}
 		
 		if (target.isCursedWeaponEquipped())
 		{
-			sendPacket(new SystemMessage(SystemMessage.COUPLE_ACTION_CANNOT_C1_TARGET_IS_CURSED_WEAPON_EQUIPED).addName(target));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_CHAOTIC_STATE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION).addPcName(target));
 			return false;
 		}
 		
 		if (target.isInOlympiadMode())
 		{
-			sendPacket(new SystemMessage(SystemMessage.COUPLE_ACTION_CANNOT_C1_TARGET_IS_IN_OLYMPIAD).addName(target));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_PARTICIPATING_IN_THE_OLYMPIAD_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION).addPcName(target));
 			return false;
 		}
 		
 		if (target.isOnSiegeField())
 		{
-			sendPacket(new SystemMessage(SystemMessage.COUPLE_ACTION_CANNOT_C1_TARGET_IS_IN_SIEGE).addName(target));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_CASTLE_SIEGE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION).addPcName(target));
 			return false;
 		}
 		
 		if (target.isInBoat() || (target.getMountNpcId() != 0))
 		{
-			sendPacket(new SystemMessage(SystemMessage.COUPLE_ACTION_CANNOT_C1_TARGET_IS_IN_VEHICLE_MOUNT_OTHER).addName(target));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_RIDING_A_SHIP_STEED_OR_STRIDER_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION).addPcName(target));
 			return false;
 		}
 		
 		if (target.isTeleporting())
 		{
-			sendPacket(new SystemMessage(SystemMessage.COUPLE_ACTION_CANNOT_C1_TARGET_IS_TELEPORTING).addName(target));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_CURRENTLY_TELEPORTING_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION).addPcName(target));
 			return false;
 		}
 		
 		if (target.getTransformation() != 0)
 		{
-			sendPacket(new SystemMessage(SystemMessage.COUPLE_ACTION_CANNOT_C1_TARGET_IS_IN_TRANSFORM).addName(target));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_CURRENTLY_TRANSFORMING_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION).addPcName(target));
 			return false;
 		}
 		
 		if (target.isDead())
 		{
-			sendPacket(new SystemMessage(SystemMessage.COUPLE_ACTION_CANNOT_C1_TARGET_IS_DEAD).addName(target));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_CURRENTLY_DEAD_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION).addPcName(target));
 			return false;
 		}
 		
@@ -14192,32 +14231,32 @@ public final class Player extends Playable implements PlayerGroup
 			if (magic)
 			{
 				sendPacket(new ExMagicAttackInfo(this, target, 1));
-				sendPacket(new SystemMessage(SystemMessage.MAGIC_CRITICAL_HIT).addName(this));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.M_CRITICAL).addPcName(this));
 			}
 			else
 			{
-				sendPacket(new SystemMessage(SystemMessage.C1_HAD_A_CRITICAL_HIT).addName(this));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_LANDED_A_CRITICAL_HIT).addPcName(this));
 			}
 		}
 		
 		if (miss)
 		{
-			sendPacket(new SystemMessage(SystemMessage.C1S_ATTACK_WENT_ASTRAY).addName(this));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_S_ATTACK_WENT_ASTRAY).addPcName(this));
 		}
 		else if (!target.isDamageBlocked())
 		{
-			sendPacket(new SystemMessage(SystemMessage.C1_HAS_GIVEN_C2_DAMAGE_OF_S3).addName(this).addName(target).addNumber(damage).addDamage(target, target, -damage));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2_S4).addPcName(this).addCharName(target).addInt(damage).addPopup(target.getId(), target.getId(), -damage));
 		}
 		
 		if (target.isPlayer())
 		{
 			if (shld && (damage > 1))
 			{
-				target.sendPacket(SystemMsg.YOUR_SHIELD_DEFENSE_HAS_SUCCEEDED);
+				target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_SHIELD_DEFENSE_HAS_SUCCEEDED));
 			}
 			else if (shld && (damage == 1))
 			{
-				target.sendPacket(SystemMsg.YOUR_EXCELLENT_SHIELD_DEFENSE_WAS_A_SUCCESS);
+				target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_EXCELLENT_SHIELD_DEFENSE_WAS_A_SUCCESS));
 			}
 		}
 	}
@@ -14232,7 +14271,7 @@ public final class Player extends Playable implements PlayerGroup
 	{
 		if (attacker != this)
 		{
-			sendPacket(new SystemMessage(SystemMessage.C1_HAS_RECEIVED_DAMAGE_OF_S3_FROM_C2).addName(this).addName(attacker).addNumber(damage));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2).addPcName(this).addCharName(attacker).addInt(damage));
 		}
 	}
 	
@@ -14317,15 +14356,15 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if (hours > 0)
 		{
-			sendPacket(new SystemMessage2(item.getTemplate().getReuseType().getMessages()[2]).addItemName(item.getTemplate().getId()).addInteger(hours).addInteger(minutes).addInteger(seconds));
+			sendPacket(SystemMessage.getSystemMessage(item.getTemplate().getReuseType().getMessages()[2]).addItemName(item.getTemplate().getId()).addLong(hours).addLong(minutes).addLong(seconds));
 		}
 		else if (minutes > 0)
 		{
-			sendPacket(new SystemMessage2(item.getTemplate().getReuseType().getMessages()[1]).addItemName(item.getTemplate().getId()).addInteger(minutes).addInteger(seconds));
+			sendPacket(SystemMessage.getSystemMessage(item.getTemplate().getReuseType().getMessages()[1]).addItemName(item.getTemplate().getId()).addLong(minutes).addLong(seconds));
 		}
 		else
 		{
-			sendPacket(new SystemMessage2(item.getTemplate().getReuseType().getMessages()[0]).addItemName(item.getTemplate().getId()).addInteger(seconds));
+			sendPacket(SystemMessage.getSystemMessage(item.getTemplate().getReuseType().getMessages()[0]).addItemName(item.getTemplate().getId()).addLong(seconds));
 		}
 	}
 	
@@ -14343,7 +14382,7 @@ public final class Player extends Playable implements PlayerGroup
 		
 		int rnd = Rnd.nextInt();
 		_askDialog = new ImmutablePair<>(rnd, listener);
-		dlg.setRequestId(rnd);
+		dlg.addRequesterId(rnd);
 		sendPacket(dlg);
 	}
 	
@@ -14441,7 +14480,7 @@ public final class Player extends Playable implements PlayerGroup
 		{
 			if (!e.getSkill().isOffensive() && !e.getSkill().isNewbie() && e.isCancelable() && !e.getSkill().isPreservedOnDeath())
 			{
-				sendPacket(new SystemMessage(SystemMessage.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED).addSkillName(e.getSkill().getId(), e.getSkill().getLevel()));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED).addSkillName(e.getSkill().getId(), e.getSkill().getLevel()));
 				e.exit();
 			}
 		}
@@ -14465,7 +14504,7 @@ public final class Player extends Playable implements PlayerGroup
 	 */
 	public void setInstanceReuse(int id, long time)
 	{
-		final SystemMessage msg = new SystemMessage(SystemMessage.INSTANT_ZONE_FROM_HERE__S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_ENTRY_POSSIBLE).addString(getName());
+		final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE).addString(getName());
 		sendPacket(msg);
 		_instancesReuses.put(id, time);
 		mysql.set("REPLACE INTO character_instances (obj_id, id, reuse) VALUES (?,?,?)", getObjectId(), id, time);
@@ -14592,19 +14631,19 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if (ReflectionManager.getInstance().size() > Config.MAX_REFLECTIONS_COUNT)
 		{
-			sendPacket(SystemMsg.THE_MAXIMUM_NUMBER_OF_INSTANCE_ZONES_HAS_BEEN_EXCEEDED);
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MAXIMUM_NUMBER_OF_INSTANT_ZONES_HAS_BEEN_EXCEEDED_YOU_CANNOT_ENTER));
 			return false;
 		}
 		
 		if (iz == null)
 		{
-			sendPacket(SystemMsg.SYSTEM_ERROR);
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SYSTEM_ERROR));
 			return false;
 		}
 		
 		if (ReflectionManager.getInstance().getCountByIzId(instancedZoneId) >= iz.getMaxChannels())
 		{
-			sendPacket(SystemMsg.THE_MAXIMUM_NUMBER_OF_INSTANCE_ZONES_HAS_BEEN_EXCEEDED);
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MAXIMUM_NUMBER_OF_INSTANT_ZONES_HAS_BEEN_EXCEEDED_YOU_CANNOT_ENTER));
 			return false;
 		}
 		
@@ -14622,7 +14661,7 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if ((getActiveReflection() != null) && (getActiveReflection().getInstancedZoneId() != instancedZoneId))
 		{
-			sendPacket(SystemMsg.YOU_HAVE_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON));
 			return false;
 		}
 		

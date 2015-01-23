@@ -23,7 +23,7 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
@@ -167,13 +167,13 @@ public final class Special extends SimpleItemHandler
 		
 		if ((t == null) || !t.isNpc() || !Util.contains(npcs, ((NpcInstance) t).getId()))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(8556));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(8556));
 			return false;
 		}
 		
 		if (player.getDistance(t) > 200)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOUR_TARGET_IS_OUT_OF_RANGE));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE));
 			return false;
 		}
 		
@@ -187,7 +187,7 @@ public final class Special extends SimpleItemHandler
 	{
 		if (!player.isInZone(ZoneType.Affected))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.THERE_WAS_NOTHING_FOUND_INSIDE_OF_THAT));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE));
 			return false;
 		}
 		
@@ -227,13 +227,13 @@ public final class Special extends SimpleItemHandler
 			}
 			else
 			{
-				player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 				return false;
 			}
 		}
 		else
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return false;
 		}
 		
@@ -266,11 +266,11 @@ public final class Special extends SimpleItemHandler
 				return false;
 			}
 			
-			player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 			return false;
 		}
 		
-		player.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 		return false;
 	}
 	
@@ -284,7 +284,7 @@ public final class Special extends SimpleItemHandler
 	{
 		if (player.isActionsDisabled() || player.isInOlympiadMode() || player.isInZone(ZoneType.NoEscape))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(14835));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(14835));
 			return false;
 		}
 		
@@ -326,7 +326,7 @@ public final class Special extends SimpleItemHandler
 	{
 		if (!player.isInZone(AntharasManager.getZone()) && !player.isInZone(ValakasManager.getZone()))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(21899));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(21899));
 			return false;
 		}
 		
@@ -339,7 +339,7 @@ public final class Special extends SimpleItemHandler
 	{
 		if (!player.isInZone(AntharasManager.getZone()) && !player.isInZone(ValakasManager.getZone()))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(21900));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(21900));
 			return false;
 		}
 		
@@ -352,7 +352,7 @@ public final class Special extends SimpleItemHandler
 	{
 		if (!player.isInZone(AntharasManager.getZone()) && !player.isInZone(ValakasManager.getZone()))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(21901));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(21901));
 			return false;
 		}
 		
@@ -365,7 +365,7 @@ public final class Special extends SimpleItemHandler
 	{
 		if (!player.isInZone(AntharasManager.getZone()) && !player.isInZone(ValakasManager.getZone()))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(21902));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(21902));
 			return false;
 		}
 		
@@ -378,7 +378,7 @@ public final class Special extends SimpleItemHandler
 	{
 		if (!player.isInZone(AntharasManager.getZone()) && !player.isInZone(ValakasManager.getZone()))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(21903));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(21903));
 			return false;
 		}
 		
@@ -392,7 +392,7 @@ public final class Special extends SimpleItemHandler
 	{
 		if (!player.isInZone(AntharasManager.getZone()) && !player.isInZone(ValakasManager.getZone()))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(21904));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(21904));
 			return false;
 		}
 		
@@ -406,7 +406,7 @@ public final class Special extends SimpleItemHandler
 	{
 		if (!player.isInZone(AntharasManager.getZone()))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(17268));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(17268));
 			return false;
 		}
 		
@@ -418,10 +418,10 @@ public final class Special extends SimpleItemHandler
 	// TODO ADD MISSING QUEST
 	/*
 	 * private boolean use17619(Player player, boolean ctrl) { //TODO[Iqman+Nosferatu] Define zone in cruma tower we can use this scroll only there!! QuestState qs = player.getQuestState(Q10352_LegacyOfCrumaTower.class); QuestState qs2 = player.getQuestState(Q00480_AnotherLegacyOfCrumaTower.class);
-	 * if(player.getVar("MechanismSpawn") != null || qs == null || qs.getCond() > 4) { if(qs2 == null || qs2.getCond() > 4 || player.getVar("MechanismSpawn") != null) { player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(17619)); return false; } }
-	 * Functions.removeItem(player, 17619, 1); NpcInstance npc = Functions.spawn(Location.findPointToStay(player.getLoc(), 50, 100, player.getGeoIndex()), 17619); player.setVar("MechanismSpawn", "1", 120000); if(qs != null && !qs.isCompleted()) { Quest q = QuestManager.getQuest(10352);
-	 * player.processQuestEvent(q.getName(), "advanceCond3", null); } if(qs2 != null && !qs2.isCompleted()) { Quest q2 = QuestManager.getQuest(480); player.processQuestEvent(q2.getName(), "advanceCond3", null); } Functions.executeTask("handlers.items.Special", "despawnNpc", new Object[] {npc,
-	 * player}, 120000); return true; } public static void despawnNpc(NpcInstance npc, Player player) { if(npc != null) npc.deleteMe(); if(player != null) player.unsetVar("CrystalsSpawn"); } private boolean use34033(Player player, boolean ctrl) { QuestState qs =
+	 * if(player.getVar("MechanismSpawn") != null || qs == null || qs.getCond() > 4) { if(qs2 == null || qs2.getCond() > 4 || player.getVar("MechanismSpawn") != null) { player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(17619));
+	 * return false; } } Functions.removeItem(player, 17619, 1); NpcInstance npc = Functions.spawn(Location.findPointToStay(player.getLoc(), 50, 100, player.getGeoIndex()), 17619); player.setVar("MechanismSpawn", "1", 120000); if(qs != null && !qs.isCompleted()) { Quest q =
+	 * QuestManager.getQuest(10352); player.processQuestEvent(q.getName(), "advanceCond3", null); } if(qs2 != null && !qs2.isCompleted()) { Quest q2 = QuestManager.getQuest(480); player.processQuestEvent(q2.getName(), "advanceCond3", null); } Functions.executeTask("handlers.items.Special",
+	 * "despawnNpc", new Object[] {npc, player}, 120000); return true; } public static void despawnNpc(NpcInstance npc, Player player) { if(npc != null) npc.deleteMe(); if(player != null) player.unsetVar("CrystalsSpawn"); } private boolean use34033(Player player, boolean ctrl) { QuestState qs =
 	 * player.getQuestState(_10304_ForTheForgottenHeroes.class); NpcHtmlMessage msg = new NpcHtmlMessage(5); if(player.getLevel() >= 90 && qs == null) { Quest q = QuestManager.getQuest(10304); QuestState st = player.getQuestState(q.getClass()); st = q.newQuestState(player, Quest.CREATED);
 	 * st.setState(Quest.STARTED); st.setCond(1); useItem(player, 34033, 1); Functions.addItem(player, 17618, 1); msg.setFile("quests/_10304_ForTheForgottenHeroes/2.htm"); player.sendPacket(msg); } else { msg.setFile("quests/_10304_ForTheForgottenHeroes/4.htm"); player.sendPacket(msg); return false;
 	 * } return true; }
@@ -435,7 +435,7 @@ public final class Special extends SimpleItemHandler
 	 */
 	private static long useItem(Player player, int itemId, long count)
 	{
-		player.sendPacket(new SystemMessage(SystemMessage.YOU_USE_S1).addItemName(itemId));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_USE_S1).addItemName(itemId));
 		return Functions.removeItem(player, itemId, count);
 	}
 }

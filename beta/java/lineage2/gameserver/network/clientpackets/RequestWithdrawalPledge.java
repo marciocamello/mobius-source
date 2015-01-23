@@ -18,8 +18,7 @@ import lineage2.gameserver.model.pledge.UnitMember;
 import lineage2.gameserver.network.serverpackets.PledgeShowMemberListDelete;
 import lineage2.gameserver.network.serverpackets.PledgeShowMemberListDeleteAll;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -58,7 +57,7 @@ public class RequestWithdrawalPledge extends L2GameClientPacket
 		
 		if (activeChar.isInCombat())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.ONE_CANNOT_LEAVE_ONES_CLAN_DURING_COMBAT));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_LEAVE_A_CLAN_WHILE_ENGAGED_IN_COMBAT));
 			return;
 		}
 		
@@ -85,7 +84,7 @@ public class RequestWithdrawalPledge extends L2GameClientPacket
 		
 		int subUnitType = activeChar.getPledgeType();
 		clan.removeClanMember(subUnitType, activeChar.getObjectId());
-		clan.broadcastToOnlineMembers(new SystemMessage2(SystemMsg.S1_HAS_WITHDRAWN_FROM_THE_CLAN).addString(activeChar.getName()), new PledgeShowMemberListDelete(activeChar.getName()));
+		clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_WITHDRAWN_FROM_THE_CLAN).addString(activeChar.getName()), new PledgeShowMemberListDelete(activeChar.getName()));
 		
 		if (subUnitType == Clan.SUBUNIT_ACADEMY)
 		{
@@ -101,6 +100,6 @@ public class RequestWithdrawalPledge extends L2GameClientPacket
 		
 		activeChar.setLeaveClanCurTime();
 		activeChar.broadcastCharInfo();
-		activeChar.sendPacket(SystemMsg.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN, PledgeShowMemberListDeleteAll.STATIC);
+		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_WITHDRAW_FROM_THE_S1_CLAN), PledgeShowMemberListDeleteAll.STATIC);
 	}
 }

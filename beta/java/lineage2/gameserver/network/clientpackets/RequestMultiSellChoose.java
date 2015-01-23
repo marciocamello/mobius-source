@@ -30,7 +30,7 @@ import lineage2.gameserver.model.items.ItemAttributes;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.PcInventory;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 
@@ -151,7 +151,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
@@ -163,7 +163,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 		
 		if (activeChar.isFishing())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DO_THAT_WHILE_FISHING));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING));
 			return;
 		}
 		
@@ -233,14 +233,14 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 			
 			if (!inventory.validateWeight(weight))
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
 				activeChar.sendActionFailed();
 				return;
 			}
 			
 			if (!inventory.validateCapacity(slots))
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.YOUR_INVENTORY_IS_FULL));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_INVENTORY_IS_FULL));
 				activeChar.sendActionFailed();
 				return;
 			}
@@ -263,19 +263,19 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 				{
 					if (activeChar.getClan() == null)
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOT_A_CLAN_MEMBER));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_A_CLAN_MEMBER_AND_CANNOT_PERFORM_THIS_ACTION));
 						return;
 					}
 					
 					if (activeChar.getClan().getReputationScore() < totalAmount)
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.THE_CLAN_REPUTATION_SCORE_IS_TOO_LOW));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW));
 						return;
 					}
 					
 					if (activeChar.getClan().getLeaderId() != activeChar.getObjectId())
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.S1_IS_NOT_A_CLAN_LEADER).addString(activeChar.getName()));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER).addString(activeChar.getName()));
 						return;
 					}
 					if (!ingridient.getMantainIngredient())
@@ -287,7 +287,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 				{
 					if (activeChar.getPcBangPoints() < totalAmount)
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_SHORT_OF_ACCUMULATED_POINTS));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_SHORT_OF_PC_POINTS));
 						return;
 					}
 					if (!ingridient.getMantainIngredient())
@@ -299,7 +299,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 				{
 					if (activeChar.getFame() < totalAmount)
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_FAME_POINTS));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_FAME_TO_DO_THAT));
 						return;
 					}
 					if (!ingridient.getMantainIngredient())
@@ -331,7 +331,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 								
 								if (itemToTake == null)
 								{
-									activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
+									activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 									return;
 								}
 								
@@ -357,7 +357,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 								
 								if (itemToTake == null)
 								{
-									activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
+									activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 									return;
 								}
 								
@@ -378,7 +378,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 						
 						if ((item == null) || (item.getCount() < totalAmount))
 						{
-							activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 							return;
 						}
 						
@@ -391,7 +391,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 				
 				if (activeChar.getAdena() < totalPrice)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 					return;
 				}
 			}
@@ -407,7 +407,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 					if (id.getId() == ItemTemplate.ITEM_ID_CLAN_REPUTATION_SCORE)
 					{
 						activeChar.getClan().incReputation((int) -count, false, "MultiSell");
-						activeChar.sendPacket(new SystemMessage(SystemMessage.S1_POINTS_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_REPUTATION_SCORE).addNumber(count));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION).addLong(count));
 					}
 					else if (id.getId() == ItemTemplate.ITEM_ID_PC_BANG_POINTS)
 					{
@@ -416,7 +416,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 					else if (id.getId() == ItemTemplate.ITEM_ID_FAME)
 					{
 						activeChar.setFame(activeChar.getFame() - (int) count, "MultiSell");
-						activeChar.sendPacket(new SystemMessage(SystemMessage.S2_S1_HAS_DISAPPEARED).addNumber(count).addString("Fame"));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED).addLong(count).addString("Fame"));
 					}
 					else
 					{
@@ -429,7 +429,14 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 								augmentationId = id.getItem().getAugmentationId();
 							}
 							
-							activeChar.sendPacket(SystemMessage2.removeItems(id.getId(), count));
+							if (count > 1)
+							{
+								activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED).addItemName(id.getId()).addLong(count));
+							}
+							else
+							{
+								activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED).addItemName(id.getId()));
+							}
 							continue;
 						}
 						return;
@@ -455,7 +462,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 					if (in.getItemId() == ItemTemplate.ITEM_ID_CLAN_REPUTATION_SCORE)
 					{
 						activeChar.getClan().incReputation((int) (in.getItemCount() * _amount), false, "MultiSell");
-						activeChar.sendPacket(new SystemMessage(SystemMessage.YOUR_CLAN_HAS_ADDED_1S_POINTS_TO_ITS_CLAN_REPUTATION_SCORE).addNumber(in.getItemCount() * _amount));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_ADDED_S1_POINT_S_TO_ITS_CLAN_REPUTATION).addLong(in.getItemCount() * _amount));
 					}
 					else if (in.getItemId() == ItemTemplate.ITEM_ID_PC_BANG_POINTS)
 					{
@@ -498,7 +505,19 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 							product.setAttributes(in.getItemAttributes().clone());
 						}
 						
-						activeChar.sendPacket(SystemMessage2.obtainItems(product));
+						if (product.getCount() > 1)
+						{
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(product.getId()).addLong(product.getCount()));
+						}
+						else if (enchantLevel > 0)
+						{
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2).addInt(product.getEnchantLevel()).addItemName(product.getId()));
+						}
+						else
+						{
+							activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(product.getId()));
+						}
+						
 						inventory.addItem(product);
 					}
 				}
@@ -506,7 +525,7 @@ public class RequestMultiSellChoose extends L2GameClientPacket
 		}
 		catch (ArithmeticException ae)
 		{
-			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 			return;
 		}
 		finally

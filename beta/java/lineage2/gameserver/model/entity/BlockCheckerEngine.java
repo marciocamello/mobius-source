@@ -46,6 +46,7 @@ import lineage2.gameserver.network.serverpackets.ExCubeGameEnd;
 import lineage2.gameserver.network.serverpackets.ExCubeGameExtendedChangePoints;
 import lineage2.gameserver.network.serverpackets.RelationChanged;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ReflectionUtils;
@@ -575,23 +576,23 @@ public final class BlockCheckerEngine
 			switch (seconds)
 			{
 				case 5:
-					_holder.broadCastPacketToTeam(new SystemMessage(SystemMessage.BLOCK_CHECKER_WILL_END_IN_5_SECONDS));
+					_holder.broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.BLOCK_CHECKER_WILL_END_IN_5_SECONDS));
 					break;
 				
 				case 4:
-					_holder.broadCastPacketToTeam(new SystemMessage(SystemMessage.BLOCK_CHECKER_WILL_END_IN_4_SECONDS));
+					_holder.broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.BLOCK_CHECKER_WILL_END_IN_4_SECONDS));
 					break;
 				
 				case 3:
-					_holder.broadCastPacketToTeam(new SystemMessage(SystemMessage.BLOCK_CHECKER_WILL_END_IN_3_SECONDS));
+					_holder.broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.BLOCK_CHECKER_WILL_END_IN_3_SECONDS));
 					break;
 				
 				case 2:
-					_holder.broadCastPacketToTeam(new SystemMessage(SystemMessage.BLOCK_CHECKER_WILL_END_IN_2_SECONDS));
+					_holder.broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.BLOCK_CHECKER_WILL_END_IN_2_SECONDS));
 					break;
 				
 				case 1:
-					_holder.broadCastPacketToTeam(new SystemMessage(SystemMessage.BLOCK_CHECKER_WILL_END_IN_1_SECOND));
+					_holder.broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.BLOCK_CHECKER_WILL_END_IN_1_SECOND));
 					break;
 			}
 			
@@ -674,14 +675,14 @@ public final class BlockCheckerEngine
 			{
 				rewardAsWinner(true);
 				rewardAsLooser(false);
-				SystemMessage msg = new SystemMessage(SystemMessage.THE_C1_TEAM_HAS_WON).addString("Red Team");
+				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.THE_C1_TEAM_HAS_WON).addString("Red Team");
 				_holder.broadCastPacketToTeam(msg);
 			}
 			else if (_bluePoints > _redPoints)
 			{
 				rewardAsWinner(false);
 				rewardAsLooser(true);
-				SystemMessage msg = new SystemMessage(SystemMessage.THE_C1_TEAM_HAS_WON).addString("Blue Team");
+				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.THE_C1_TEAM_HAS_WON).addString("Blue Team");
 				_holder.broadCastPacketToTeam(msg);
 			}
 			else
@@ -700,7 +701,7 @@ public final class BlockCheckerEngine
 		private void addRewardItemWithMessage(int id, long count, Player player)
 		{
 			player.getInventory().addItem(id, (long) (count * Config.ALT_RATE_COINS_REWARD_BLOCK_CHECKER));
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S2_S1).addItemName(id).addNumber(count));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1).addItemName(id).addLong(count));
 		}
 		
 		/**

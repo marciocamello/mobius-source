@@ -18,8 +18,8 @@ import lineage2.gameserver.model.Request.L2RequestType;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.matching.MatchingRoom;
 import lineage2.gameserver.network.serverpackets.ExAskJoinPartyRoom;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -61,13 +61,13 @@ public class RequestAskJoinPartyRoom extends L2GameClientPacket
 		
 		if (player.isProcessingRequest())
 		{
-			player.sendPacket(SystemMsg.WAITING_FOR_ANOTHER_REPLY);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WAITING_FOR_ANOTHER_REPLY));
 			return;
 		}
 		
 		if (targetPlayer.isProcessingRequest())
 		{
-			player.sendPacket(new SystemMessage2(SystemMsg.C1_IS_ON_ANOTHER_TASK).addName(targetPlayer));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER).addPcName(targetPlayer));
 			return;
 		}
 		
@@ -85,19 +85,19 @@ public class RequestAskJoinPartyRoom extends L2GameClientPacket
 		
 		if (room.getLeader() != player)
 		{
-			player.sendPacket(SystemMsg.ONLY_A_ROOM_LEADER_MAY_INVITE_OTHERS_TO_A_PARTY_ROOM);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_A_ROOM_LEADER_MAY_INVITE_OTHERS_TO_A_PARTY_ROOM));
 			return;
 		}
 		
 		if (room.getPlayers().size() >= room.getMaxMembersSize())
 		{
-			player.sendPacket(SystemMsg.THE_PARTY_ROOM_IS_FULL);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_PARTY_ROOM_IS_FULL_NO_MORE_CHARACTERS_CAN_BE_INVITED_IN));
 			return;
 		}
 		
 		new Request(L2RequestType.PARTY_ROOM, player, targetPlayer).setTimeout(10000L);
 		targetPlayer.sendPacket(new ExAskJoinPartyRoom(player.getName(), room.getTopic()));
-		player.sendPacket(new SystemMessage2(SystemMsg.S1_HAS_SENT_AN_INVITATION_TO_ROOM_S2).addName(player).addString(room.getTopic()));
-		targetPlayer.sendPacket(new SystemMessage2(SystemMsg.S1_HAS_SENT_AN_INVITATION_TO_ROOM_S2).addName(player).addString(room.getTopic()));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_SENT_AN_INVITATION_TO_ROOM_S2).addPcName(player).addString(room.getTopic()));
+		targetPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_SENT_AN_INVITATION_TO_ROOM_S2).addPcName(player).addString(room.getTopic()));
 	}
 }

@@ -23,6 +23,7 @@ import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.network.serverpackets.ExVoteSystemInfo;
 import lineage2.gameserver.network.serverpackets.MagicSkillLaunched;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -170,8 +171,8 @@ public class GameObjectTasks
 			}
 			
 			int hoursInGame = player.getHoursInGame();
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_BEEN_PLAYING_FOR_AN_EXTENDED_PERIOD_OF_TIME_PLEASE_CONSIDER_TAKING_A_BREAK).addNumber(hoursInGame));
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_OBTAINED_S1_RECOMMENDS).addNumber(player.addRecomLeft()));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_PLAYED_FOR_S1_HOUR_S_PLEASE_TAKE_A_BREAK).addInt(hoursInGame));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_OBTAINED_S1_RECOMMENDATION_S).addInt(player.addRecomLeft()));
 		}
 	}
 	
@@ -246,7 +247,7 @@ public class GameObjectTasks
 			
 			double reduceHp = player.getMaxHp() < 100 ? 1 : player.getMaxHp() / 100;
 			player.reduceCurrentHp(reduceHp, 0, player, null, false, false, true, false, false, false, false);
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_RECEIVED_S1_DAMAGE_BECAUSE_YOU_WERE_UNABLE_TO_BREATHE).addNumber((long) reduceHp));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_TAKEN_S1_DAMAGE_BECAUSE_YOU_WERE_UNABLE_TO_BREATHE).addLong((long) reduceHp));
 		}
 	}
 	

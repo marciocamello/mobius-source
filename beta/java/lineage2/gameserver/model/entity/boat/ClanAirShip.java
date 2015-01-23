@@ -31,7 +31,8 @@ import lineage2.gameserver.model.instances.ControlKeyInstance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.DeleteObject;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.AirshipDock;
 import lineage2.gameserver.utils.Location;
 
@@ -172,7 +173,7 @@ public class ClanAirShip extends AirShip
 			
 			if (getCurrentFuel() < point.getFuel())
 			{
-				player.sendPacket(SystemMsg.YOUR_SHIP_CANNOT_TELEPORT_BECAUSE_IT_DOES_NOT_HAVE_ENOUGH_FUEL_FOR_THE_TRIP);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_AIRSHIP_CANNOT_TELEPORT_BECAUSE_DUE_TO_LOW_FUEL));
 				return;
 			}
 			
@@ -231,7 +232,7 @@ public class ClanAirShip extends AirShip
 			
 			if (player.getTargetId() != _controlKey.getObjectId())
 			{
-				player.sendPacket(SystemMsg.YOU_MUST_TARGET_THE_ONE_YOU_WISH_TO_CONTROL);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MUST_TARGET_THE_ONE_YOU_WISH_TO_CONTROL));
 				return;
 			}
 			
@@ -241,67 +242,67 @@ public class ClanAirShip extends AirShip
 			
 			if (((x * x) + (y * y) + (z * z)) > 2500)
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_BECAUSE_YOU_ARE_TOO_FAR);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CONTROL_BECAUSE_YOU_ARE_TOO_FAR));
 				return;
 			}
 			
 			if (player.getTransformation() != 0)
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_THE_HELM_WHILE_TRANSFORMED);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_TRANSFORMED));
 				return;
 			}
 			
 			if (player.isParalyzed())
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_THE_HELM_WHILE_YOU_ARE_PETRIFIED);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_YOU_ARE_PETRIFIED));
 				return;
 			}
 			
 			if (player.isDead() || player.isFakeDeath())
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_THE_HELM_WHEN_YOU_ARE_DEAD);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHEN_YOU_ARE_DEAD));
 				return;
 			}
 			
 			if (player.isFishing())
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_THE_HELM_WHILE_FISHING);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_FISHING));
 				return;
 			}
 			
 			if (player.isInCombat())
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_THE_HELM_WHILE_IN_A_BATTLE);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_IN_A_BATTLE));
 				return;
 			}
 			
 			if (player.isInDuel())
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_THE_HELM_WHILE_IN_A_DUEL);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_IN_A_DUEL));
 				return;
 			}
 			
 			if (player.isSitting())
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_THE_HELM_WHILE_IN_A_SITTING_POSITION);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_IN_A_SITTING_POSITION));
 				return;
 			}
 			
 			if (player.isCastingNow())
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_THE_HELM_WHILE_USING_A_SKILL);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_USING_A_SKILL));
 				return;
 			}
 			
 			if (player.isCursedWeaponEquipped())
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_THE_HELM_WHILE_A_CURSED_WEAPON_IS_EQUIPPED);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_A_CURSED_WEAPON_IS_EQUIPPED));
 				return;
 			}
 			
 			if (player.getActiveWeaponFlagAttachment() != null)
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_CONTROL_THE_HELM_WHILE_HOLDING_A_FLAG);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CONTROL_THE_HELM_WHILE_HOLDING_A_FLAG));
 				return;
 			}
 			
@@ -347,11 +348,11 @@ public class ClanAirShip extends AirShip
 		
 		if ((_currentFuel == 0) && (old > 0))
 		{
-			broadcastPacketToPassengers(SystemMsg.THE_AIRSHIPS_FUEL_EP_HAS_RUN_OUT);
+			broadcastPacketToPassengers(SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_S_FUEL_EP_HAS_RUN_OUT_THE_AIRSHIP_S_SPEED_WILL_BE_GREATLY_DECREASED_IN_THIS_CONDITION));
 		}
 		else if (_currentFuel < 40)
 		{
-			broadcastPacketToPassengers(SystemMsg.THE_AIRSHIPS_FUEL_EP_WILL_SOON_RUN_OUT);
+			broadcastPacketToPassengers(SystemMessage.getSystemMessage(SystemMessageId.THE_AIRSHIP_S_FUEL_EP_WILL_SOON_RUN_OUT));
 		}
 		
 		broadcastCharInfo();

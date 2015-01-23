@@ -16,8 +16,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
@@ -54,7 +53,7 @@ public final class Util extends Functions
 		
 		if ((price > 0) && (player.getAdena() < price))
 		{
-			player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			return;
 		}
 		
@@ -105,7 +104,7 @@ public final class Util extends Functions
 			
 			if ((castle != null) && castle.getSiegeEvent().isInProgress())
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_TELEPORT_TO_A_VILLAGE_THAT_IS_IN_A_SIEGE));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_TELEPORT_TO_A_VILLAGE_THAT_IS_IN_A_SIEGE));
 				return;
 			}
 		}
@@ -150,11 +149,22 @@ public final class Util extends Functions
 		{
 			if (!player.getInventory().destroyItemByItemId(item, count))
 			{
-				player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 				return;
 			}
 			
-			player.sendPacket(SystemMessage2.removeItems(item, count));
+			if (item == 57)
+			{
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_ADENA_DISAPPEARED).addLong(count));
+			}
+			else if (count > 1)
+			{
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED).addItemName(item).addLong(count));
+			}
+			else
+			{
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED).addItemName(item));
+			}
 		}
 		
 		final int x = Integer.parseInt(param[0]);
@@ -255,7 +265,7 @@ public final class Util extends Functions
 		
 		if (getItemCount(player, item) < price)
 		{
-			player.sendPacket((item == 57) ? SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA : SystemMsg.INCORRECT_ITEM_COUNT);
+			player.sendPacket((item == 57) ? SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA) : SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 			return;
 		}
 		

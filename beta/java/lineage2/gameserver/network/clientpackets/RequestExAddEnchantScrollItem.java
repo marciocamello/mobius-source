@@ -19,7 +19,8 @@ import lineage2.gameserver.model.items.PcInventory;
 import lineage2.gameserver.model.items.etcitems.EnchantScrollInfo;
 import lineage2.gameserver.model.items.etcitems.EnchantScrollManager;
 import lineage2.gameserver.network.serverpackets.ExPutEnchantScrollItemResult;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.Log;
 
 public class RequestExAddEnchantScrollItem extends L2GameClientPacket
@@ -67,7 +68,7 @@ public class RequestExAddEnchantScrollItem extends L2GameClientPacket
 		if ((!itemToEnchant.canBeEnchanted()) || (itemToEnchant.isStackable()))
 		{
 			player.sendPacket(ExPutEnchantScrollItemResult.FAIL);
-			player.sendPacket(SystemMsg.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL));
 			player.sendActionFailed();
 			return;
 		}
@@ -75,14 +76,14 @@ public class RequestExAddEnchantScrollItem extends L2GameClientPacket
 		if ((itemToEnchant.getLocation() != ItemLocation.INVENTORY) && (itemToEnchant.getLocation() != ItemLocation.PAPERDOLL))
 		{
 			player.sendPacket(ExPutEnchantScrollItemResult.FAIL);
-			player.sendPacket(SystemMsg.INAPPROPRIATE_ENCHANT_CONDITIONS);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS));
 			return;
 		}
 		
 		if (player.isInStoreMode())
 		{
 			player.sendPacket(ExPutEnchantScrollItemResult.FAIL);
-			player.sendPacket(SystemMsg.YOU_CANNOT_ENCHANT_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ENCHANT_WHILE_OPERATING_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP));
 			return;
 		}
 		
@@ -100,7 +101,7 @@ public class RequestExAddEnchantScrollItem extends L2GameClientPacket
 		if (itemToEnchant.getTemplate().getItemGrade().externalOrdinal != enchantScroll.getGrade().externalOrdinal)
 		{
 			player.sendPacket(ExPutEnchantScrollItemResult.FAIL);
-			player.sendPacket(SystemMsg.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL));
 			player.sendActionFailed();
 			return;
 		}
@@ -112,7 +113,7 @@ public class RequestExAddEnchantScrollItem extends L2GameClientPacket
 				if (itemType == 0)
 				{
 					player.sendPacket(ExPutEnchantScrollItemResult.FAIL);
-					player.sendPacket(SystemMsg.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL);
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL));
 					player.sendActionFailed();
 					return;
 				}
@@ -122,7 +123,7 @@ public class RequestExAddEnchantScrollItem extends L2GameClientPacket
 				if ((itemType == 1) || (itemType == 2))
 				{
 					player.sendPacket(ExPutEnchantScrollItemResult.FAIL);
-					player.sendPacket(SystemMsg.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL);
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.DOES_NOT_FIT_STRENGTHENING_CONDITIONS_OF_THE_SCROLL));
 					player.sendActionFailed();
 					return;
 				}
@@ -132,7 +133,7 @@ public class RequestExAddEnchantScrollItem extends L2GameClientPacket
 		if ((itemToEnchant.getEnchantLevel() >= enchantScroll.getMax()) || (itemToEnchant.getEnchantLevel() < enchantScroll.getMin()))
 		{
 			player.sendPacket(ExPutEnchantScrollItemResult.FAIL);
-			player.sendPacket(SystemMsg.INAPPROPRIATE_ENCHANT_CONDITIONS);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS));
 			return;
 		}
 		

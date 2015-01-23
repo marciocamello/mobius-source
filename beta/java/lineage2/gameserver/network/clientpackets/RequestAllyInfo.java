@@ -20,6 +20,7 @@ import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.ClanTable;
 
 /**
@@ -72,23 +73,23 @@ public class RequestAllyInfo extends L2GameClientPacket
 		}
 		
 		List<L2GameServerPacket> packets = new ArrayList<>(7 + (5 * clancount));
-		packets.add(new SystemMessage(SystemMessage._ALLIANCE_INFORMATION_));
-		packets.add(new SystemMessage(SystemMessage.ALLIANCE_NAME_S1).addString(player.getClan().getAlliance().getAllyName()));
-		packets.add(new SystemMessage(SystemMessage.CONNECTION_S1_TOTAL_S2).addNumber(online[0]).addNumber(count[0]));
-		packets.add(new SystemMessage(SystemMessage.ALLIANCE_LEADER_S2_OF_S1).addString(leaderclan.getName()).addString(leaderclan.getLeaderName()));
-		packets.add(new SystemMessage(SystemMessage.AFFILIATED_CLANS_TOTAL_S1_CLAN_S).addNumber(clancount));
-		packets.add(new SystemMessage(SystemMessage._CLAN_INFORMATION_));
+		packets.add(SystemMessage.getSystemMessage(SystemMessageId.ALLIANCE_INFORMATION));
+		packets.add(SystemMessage.getSystemMessage(SystemMessageId.ALLIANCE_NAME_S1).addString(player.getClan().getAlliance().getAllyName()));
+		packets.add(SystemMessage.getSystemMessage(SystemMessageId.CONNECTION_S1_TOTAL_S2).addInt(online[0]).addInt(count[0]));
+		packets.add(SystemMessage.getSystemMessage(SystemMessageId.ALLIANCE_LEADER_S2_OF_S1).addString(leaderclan.getName()).addString(leaderclan.getLeaderName()));
+		packets.add(SystemMessage.getSystemMessage(SystemMessageId.AFFILIATED_CLANS_TOTAL_S1_CLAN_S).addInt(clancount));
+		packets.add(SystemMessage.getSystemMessage(SystemMessageId.CLAN_INFORMATION));
 		
 		for (int i = 0; i < clancount; i++)
 		{
-			packets.add(new SystemMessage(SystemMessage.CLAN_NAME_S1).addString(clans[i].getName()));
-			packets.add(new SystemMessage(SystemMessage.CLAN_LEADER_S1).addString(clans[i].getLeaderName()));
-			packets.add(new SystemMessage(SystemMessage.CLAN_LEVEL_S1).addNumber(clans[i].getLevel()));
-			packets.add(new SystemMessage(SystemMessage.CONNECTION_S1_TOTAL_S2).addNumber(online[i + 1]).addNumber(count[i + 1]));
-			packets.add(new SystemMessage(SystemMessage.__DASHES__));
+			packets.add(SystemMessage.getSystemMessage(SystemMessageId.CLAN_NAME_S1).addString(clans[i].getName()));
+			packets.add(SystemMessage.getSystemMessage(SystemMessageId.CLAN_LEADER_S1).addString(clans[i].getLeaderName()));
+			packets.add(SystemMessage.getSystemMessage(SystemMessageId.CLAN_LEVEL_S1).addInt(clans[i].getLevel()));
+			packets.add(SystemMessage.getSystemMessage(SystemMessageId.CONNECTION_S1_TOTAL_S2).addInt(online[i + 1]).addInt(count[i + 1]));
+			packets.add(SystemMessage.getSystemMessage(SystemMessageId.EMPTY4));
 		}
 		
-		packets.add(new SystemMessage(SystemMessage.__EQUALS__));
+		packets.add(SystemMessage.getSystemMessage(SystemMessageId.EMPTY3));
 		player.sendPacket(packets);
 	}
 }

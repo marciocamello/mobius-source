@@ -19,8 +19,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.DoorInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.DoorTemplate;
 import gnu.trove.set.hash.TIntHashSet;
 
@@ -71,7 +70,7 @@ public final class Keys extends ScriptItemHandler
 		
 		if ((target == null) || !target.isDoor())
 		{
-			player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 			return false;
 		}
 		
@@ -79,29 +78,29 @@ public final class Keys extends ScriptItemHandler
 		
 		if (door.isOpen())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.IT_IS_NOT_LOCKED));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.IT_IS_NOT_LOCKED));
 			return false;
 		}
 		
 		if ((door.getKey() <= 0) || (item.getId() != door.getKey()))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_UNABLE_TO_UNLOCK_THE_DOOR));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_DOOR_CANNOT_BE_UNLOCKED));
 			return false;
 		}
 		
 		if (player.getDistance(door) > 300)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_CONTROL_BECAUSE_YOU_ARE_TOO_FAR));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CONTROL_BECAUSE_YOU_ARE_TOO_FAR));
 			return false;
 		}
 		
 		if (!player.getInventory().destroyItem(item, 1L))
 		{
-			player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 			return false;
 		}
 		
-		player.sendPacket(SystemMessage2.removeItems(item.getId(), 1));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED).addItemName(item.getId()));
 		player.sendMessage("Successfully opened!");
 		door.openMe(player, true);
 		return true;

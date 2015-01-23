@@ -26,7 +26,8 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.ItemInstance.ItemLocation;
 import lineage2.gameserver.model.items.PcInventory;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Log;
 
@@ -240,7 +241,18 @@ public class DelayedItemsManager extends RunnableImpl
 						
 						if (notify && (ITEM_COUNT > 0))
 						{
-							player.sendPacket(SystemMessage2.obtainItems(ITEM_ID, stackable ? ITEM_COUNT : 1, ITEM_ENCHANT));
+							if ((stackable ? ITEM_COUNT : 1) > 1)
+							{
+								player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(ITEM_ID).addLong(ITEM_COUNT));
+							}
+							else if (ITEM_ENCHANT > 0)
+							{
+								player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2).addInt(ITEM_ENCHANT).addItemName(ITEM_ID));
+							}
+							else
+							{
+								player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(ITEM_ID));
+							}
 						}
 					}
 					

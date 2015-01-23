@@ -19,6 +19,7 @@ import lineage2.gameserver.model.Fishing;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 
@@ -51,7 +52,7 @@ public class ReelingPumping extends Skill
 	{
 		if (!((Player) activeChar).isFishing())
 		{
-			activeChar.sendPacket(getSkillType() == SkillType.PUMPING ? new SystemMessage(SystemMessage.PUMPING_SKILL_IS_AVAILABLE_ONLY_WHILE_FISHING) : new SystemMessage(SystemMessage.REELING_SKILL_IS_AVAILABLE_ONLY_WHILE_FISHING));
+			activeChar.sendPacket(getSkillType() == SkillType.PUMPING ? SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_ONLY_USE_THE_PUMPING_SKILL_WHILE_YOU_ARE_FISHING) : SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_ONLY_USE_THE_REELING_SKILL_WHILE_YOU_ARE_FISHING));
 			activeChar.sendActionFailed();
 			return false;
 		}
@@ -88,7 +89,7 @@ public class ReelingPumping extends Skill
 		
 		if (player.getSkillLevel(1315) < (getLevel() - 2))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.SINCE_THE_SKILL_LEVEL_OF_REELING_PUMPING_IS_HIGHER_THAN_THE_LEVEL_OF_YOUR_FISHING_MASTERY_A_PENALTY_OF_S1_WILL_BE_APPLIED));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.DUE_TO_YOUR_REELING_AND_OR_PUMPING_SKILL_BEING_THREE_OR_MORE_LEVELS_HIGHER_THAN_YOUR_FISHING_SKILL_A_S1_DAMAGE_PENALTY_WILL_BE_APPLIED));
 			pen = 50;
 			int penatlydmg = dmg - pen;
 			dmg = penatlydmg;

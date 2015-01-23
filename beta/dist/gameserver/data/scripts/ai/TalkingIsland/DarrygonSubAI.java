@@ -16,7 +16,7 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
@@ -107,32 +107,32 @@ public class DarrygonSubAI extends DefaultAI
 			return;
 		}
 		
-		NpcString ns;
+		NpcStringId ns;
 		
 		switch (Rnd.get(6))
 		{
 			case 1:
-				ns = NpcString.YOU_WILL_FIND_PANTHEON_IN_THE_MUSEUM;
+				ns = NpcStringId.YOU_WILL_FIND_PANTHEON_IN_THE_MUSEUM;
 				break;
 			
 			case 2:
-				ns = NpcString.IT_S_DANGEROUS_OUT_THERE_IF_YOU_DON_T_KNOW_WHAT_YOU_RE_DOING;
+				ns = NpcStringId.IT_S_DANGEROUS_OUT_THERE_IF_YOU_DON_T_KNOW_WHAT_YOU_RE_DOING;
 				break;
 			
 			case 3:
-				ns = NpcString.YOU_WILL_FIND_PANTHEON_IN_THE_MUSEUM;
+				ns = NpcStringId.YOU_WILL_FIND_PANTHEON_IN_THE_MUSEUM;
 				break;
 			
 			case 4:
-				ns = NpcString.IT_S_DANGEROUS_OUT_THERE_IF_YOU_DON_T_KNOW_WHAT_YOU_RE_DOING;
+				ns = NpcStringId.IT_S_DANGEROUS_OUT_THERE_IF_YOU_DON_T_KNOW_WHAT_YOU_RE_DOING;
 				break;
 			
 			case 5:
-				ns = NpcString.YOU_WILL_FIND_PANTHEON_IN_THE_MUSEUM;
+				ns = NpcStringId.YOU_WILL_FIND_PANTHEON_IN_THE_MUSEUM;
 				break;
 			
 			default:
-				ns = NpcString.IT_S_DANGEROUS_OUT_THERE_IF_YOU_DON_T_KNOW_WHAT_YOU_RE_DOING;
+				ns = NpcStringId.IT_S_DANGEROUS_OUT_THERE_IF_YOU_DON_T_KNOW_WHAT_YOU_RE_DOING;
 				break;
 		}
 		

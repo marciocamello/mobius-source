@@ -17,6 +17,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.ItemFunctions;
 
 /**
@@ -77,12 +78,12 @@ public class RequestPetGetItem extends L2GameClientPacket
 			
 			if (item.getId() == 57)
 			{
-				sm = new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
-				sm.addNumber(item.getCount());
+				sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1_ADENA);
+				sm.addLong(item.getCount());
 			}
 			else
 			{
-				sm = new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_PICK_UP_S1);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1);
 				sm.addItemName(item.getId());
 			}
 			

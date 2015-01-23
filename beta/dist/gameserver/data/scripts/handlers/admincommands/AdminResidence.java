@@ -33,7 +33,8 @@ import lineage2.gameserver.model.entity.residence.Fortress;
 import lineage2.gameserver.model.entity.residence.Residence;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.utils.HtmlUtils;
@@ -181,7 +182,7 @@ public final class AdminResidence implements IAdminCommandHandler, ScriptFile
 					
 					if (clan == null)
 					{
-						activeChar.sendPacket(SystemMsg.INCORRECT_NAME);
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_NAME_PLEASE_TRY_AGAIN));
 						AdminCommandHandler.getInstance().useAdminCommandHandler(activeChar, "admin_residence " + r.getId());
 						return false;
 					}

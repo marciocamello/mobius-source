@@ -23,8 +23,7 @@ import lineage2.gameserver.model.base.BaseStats;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 
 import org.apache.commons.lang3.tuple.Pair;
@@ -66,7 +65,7 @@ public class Resurrect extends Skill
 		
 		if ((target == null) || ((target != activeChar) && !target.isDead()))
 		{
-			activeChar.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 			return false;
 		}
 		
@@ -75,13 +74,13 @@ public class Resurrect extends Skill
 		
 		if (pcTarget == null)
 		{
-			player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 			return false;
 		}
 		
 		if (player.isInOlympiadMode() || pcTarget.isInOlympiadMode())
 		{
-			player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 			return false;
 		}
 		
@@ -89,7 +88,7 @@ public class Resurrect extends Skill
 		{
 			if (!e.canRessurect(player, target, forceUse))
 			{
-				player.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
 				return false;
 			}
 		}
@@ -105,11 +104,11 @@ public class Resurrect extends Skill
 				{
 					if (reviveAsk.isForPet())
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.BETTER_RESURRECTION_HAS_BEEN_ALREADY_PROPOSED));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.RESURRECTION_HAS_ALREADY_BEEN_PROPOSED));
 					}
 					else
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.SINCE_THE_MASTER_WAS_IN_THE_PROCESS_OF_BEING_RESURRECTED_THE_ATTEMPT_TO_RESURRECT_THE_PET_HAS_BEEN_CANCELLED));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_PET_CANNOT_BE_RESURRECTED_WHILE_IT_S_OWNER_IS_IN_THE_PROCESS_OF_RESURRECTING));
 					}
 					
 					return false;
@@ -117,7 +116,7 @@ public class Resurrect extends Skill
 				
 				if (!(_canPet || (_targetType == SkillTargetType.TARGET_PET)))
 				{
-					player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 					return false;
 				}
 			}
@@ -130,11 +129,11 @@ public class Resurrect extends Skill
 				{
 					if (reviveAsk.isForPet())
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.WHILE_A_PET_IS_ATTEMPTING_TO_RESURRECT_IT_CANNOT_HELP_IN_RESURRECTING_ITS_MASTER));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WHILE_A_PET_IS_BEING_RESURRECTED_IT_CANNOT_HELP_IN_RESURRECTING_ITS_MASTER));
 					}
 					else
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.BETTER_RESURRECTION_HAS_BEEN_ALREADY_PROPOSED));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.RESURRECTION_HAS_ALREADY_BEEN_PROPOSED));
 					}
 					
 					return false;
@@ -142,7 +141,7 @@ public class Resurrect extends Skill
 				
 				if (_targetType == SkillTargetType.TARGET_PET)
 				{
-					player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 					return false;
 				}
 			}

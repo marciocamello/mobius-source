@@ -21,7 +21,7 @@ import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -32,10 +32,10 @@ public final class Exterminator extends Fighter
 {
 	private NpcInstance mob = null;
 	private boolean _firstTimeAttacked = true;
-	public static final NpcString[] MsgText =
+	public static final NpcStringId[] MsgText =
 	{
-		NpcString.DRIVE_DEVICE_ENTIRE_DESTRUCTION_MOVING_SUSPENSION,
-		NpcString.DRIVE_DEVICE_PARTIAL_DESTRUCTION_IMPULSE_RESULT
+		NpcStringId.DRIVE_DEVICE_ENTIRE_DESTRUCTION_MOVING_SUSPENSION,
+		NpcStringId.DRIVE_DEVICE_PARTIAL_DESTRUCTION_IMPULSE_RESULT
 	};
 	
 	/**
@@ -63,7 +63,7 @@ public final class Exterminator extends Fighter
 		
 		if (getIntention() == CtrlIntention.AI_INTENTION_ACTIVE)
 		{
-			Functions.npcSay(actor, NpcString.TARGET_THREAT_LEVEL_LAUNCHING_STRONGEST_COUNTERMEASURE, ChatType.SHOUT, 5000);
+			Functions.npcSay(actor, NpcStringId.TARGET_THREAT_LEVEL_LAUNCHING_STRONGEST_COUNTERMEASURE, ChatType.SHOUT, 5000);
 		}
 		
 		super.onIntentionAttack(target);
@@ -139,7 +139,7 @@ public final class Exterminator extends Fighter
 		}
 		else if (Rnd.chance(10))
 		{
-			Functions.npcSay(actor, NpcString.TARGET_THREAT_LEVEL_LAUNCHING_STRONGEST_COUNTERMEASURE, ChatType.SHOUT, 5000);
+			Functions.npcSay(actor, NpcStringId.TARGET_THREAT_LEVEL_LAUNCHING_STRONGEST_COUNTERMEASURE, ChatType.SHOUT, 5000);
 		}
 		
 		super.onEvtAttacked(attacker, damage);

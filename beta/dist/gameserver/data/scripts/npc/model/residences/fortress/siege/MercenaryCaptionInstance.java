@@ -22,7 +22,7 @@ import lineage2.gameserver.model.entity.events.objects.DoorObject;
 import lineage2.gameserver.model.entity.events.objects.SiegeClanObject;
 import lineage2.gameserver.model.entity.residence.Fortress;
 import lineage2.gameserver.model.instances.MonsterInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import ai.residences.fortress.siege.MercenaryCaption;
@@ -67,7 +67,7 @@ public final class MercenaryCaptionInstance extends MonsterInstance
 				return;
 			}
 			
-			Functions.npcShout(MercenaryCaptionInstance.this, NpcString.WE_HAVE_BROKEN_THROUGH_THE_GATE_DESTROY_THE_ENCAMPMENT_AND_MOVE_TO_THE_COMMAND_POST);
+			Functions.npcShout(MercenaryCaptionInstance.this, NpcStringId.WE_HAVE_BROKEN_THROUGH_THE_GATE_DESTROY_THE_ENCAMPMENT_AND_MOVE_TO_THE_COMMAND_POST);
 			List<DoorObject> objects = event.getObjects(FortressSiegeEvent.ENTER_DOORS);
 			
 			for (DoorObject d : objects)
@@ -153,7 +153,7 @@ public final class MercenaryCaptionInstance extends MonsterInstance
 	public void onDeath(Creature killer)
 	{
 		super.onDeath(killer);
-		Functions.npcShout(this, NpcString.THE_GODS_HAVE_FORSAKEN_US__RETREAT);
+		Functions.npcShout(this, NpcStringId.THE_GODS_HAVE_FORSAKEN_US_RETREAT);
 	}
 	
 	/**

@@ -18,6 +18,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
 
@@ -60,7 +61,7 @@ public class Escape implements IUserCommandHandler, ScriptFile
 		
 		if (activeChar.isTerritoryFlagEquipped())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD));
 			return false;
 		}
 		

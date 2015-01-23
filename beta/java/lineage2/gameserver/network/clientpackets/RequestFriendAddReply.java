@@ -17,6 +17,7 @@ import lineage2.gameserver.model.Request;
 import lineage2.gameserver.model.Request.L2RequestType;
 import lineage2.gameserver.network.serverpackets.L2Friend;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -81,7 +82,7 @@ public class RequestFriendAddReply extends L2GameClientPacket
 		if (requestor == null)
 		{
 			request.cancel();
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THE_USER_WHO_REQUESTED_TO_BECOME_FRIENDS_IS_NOT_FOUND_IN_THE_GAME));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_USER_WHO_REQUESTED_TO_BECOME_FRIENDS_IS_NOT_FOUND_IN_THE_GAME));
 			activeChar.sendActionFailed();
 			return;
 		}
@@ -96,14 +97,14 @@ public class RequestFriendAddReply extends L2GameClientPacket
 		if (_response == 0)
 		{
 			request.cancel();
-			requestor.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_INVITE_A_FRIEND));
+			requestor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_ADD_A_FRIEND_TO_YOUR_FRIENDS_LIST));
 			activeChar.sendActionFailed();
 			return;
 		}
 		
 		requestor.getFriendList().addFriend(activeChar);
 		activeChar.getFriendList().addFriend(requestor);
-		requestor.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_SUCCEEDED_IN_INVITING_A_FRIEND), new SystemMessage(SystemMessage.S1_HAS_BEEN_ADDED_TO_YOUR_FRIEND_LIST).addString(activeChar.getName()), new L2Friend(activeChar, true));
-		activeChar.sendPacket(new SystemMessage(SystemMessage.S1_HAS_JOINED_AS_A_FRIEND).addString(requestor.getName()), new L2Friend(requestor, true));
+		requestor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PERSON_HAS_BEEN_SUCCESSFULLY_ADDED_TO_YOUR_FRIEND_LIST), SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED_TO_YOUR_FRIENDS_LIST).addString(activeChar.getName()), new L2Friend(activeChar, true));
+		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_JOINED_AS_A_FRIEND).addString(requestor.getName()), new L2Friend(requestor, true));
 	}
 }

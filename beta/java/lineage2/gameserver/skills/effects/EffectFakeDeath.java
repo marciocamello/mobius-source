@@ -18,6 +18,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ChangeWaitType;
 import lineage2.gameserver.network.serverpackets.Revive;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Env;
 
 /**
@@ -83,8 +84,8 @@ public final class EffectFakeDeath extends Effect
 		{
 			if (getSkill().isToggle())
 			{
-				getEffected().sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_MP));
-				getEffected().sendPacket(new SystemMessage(SystemMessage.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED).addSkillName(getSkill().getId(), getSkill().getDisplayLevel()));
+				getEffected().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_MP));
+				getEffected().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED).addSkillName(getSkill().getId(), getSkill().getDisplayLevel()));
 				return false;
 			}
 		}

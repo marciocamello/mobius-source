@@ -16,7 +16,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.DoorInstance;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExSendUIEvent;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ReflectionUtils;
 
@@ -57,7 +57,7 @@ public final class AltarGatekeeperInstance extends NpcInstance
 		if (command.startsWith("start"))
 		{
 			_savedTime = System.currentTimeMillis();
-			player.sendPacket(new ExSendUIEvent(player, 0, 1, (int) (System.currentTimeMillis() - _savedTime) / 1000, 0, NpcString.ELAPSED_TIME));
+			player.sendPacket(new ExSendUIEvent(player, 0, 1, (int) (System.currentTimeMillis() - _savedTime) / 1000, 0, NpcStringId.ELAPSED_TIME));
 			_door1.openMe();
 			_door2.openMe();
 			_door3.openMe();

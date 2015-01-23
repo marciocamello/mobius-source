@@ -98,11 +98,11 @@ import lineage2.gameserver.network.serverpackets.SSQInfo;
 import lineage2.gameserver.network.serverpackets.ShortCutInit;
 import lineage2.gameserver.network.serverpackets.SkillCoolTime;
 import lineage2.gameserver.network.serverpackets.SkillList;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.TargetUnselected;
 import lineage2.gameserver.network.serverpackets.UserInfo;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.skills.AbnormalEffect;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.item.ItemTemplate;
@@ -227,7 +227,7 @@ public class EnterWorld extends L2GameClientPacket
 			activeChar.sendPacket(new ExCastleState(castle));
 		}
 		
-		activeChar.sendPacket(SystemMsg.WELCOME_TO_THE_WORLD_OF_LINEAGE_II);
+		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WELCOME_TO_THE_WORLD_OF_LINEAGE_II));
 		Announcements.getInstance().showAnnouncements(activeChar);
 		
 		if (first)
@@ -340,7 +340,6 @@ public class EnterWorld extends L2GameClientPacket
 		}
 		
 		activeChar.entering = false;
-		// TODO: Test this !!!
 		activeChar.sendUserInfo();
 		
 		if (activeChar.isSitting())
@@ -389,7 +388,7 @@ public class EnterWorld extends L2GameClientPacket
 			if (activeChar.getVarB("gm_silence"))
 			{
 				activeChar.setMessageRefusal(true);
-				activeChar.sendPacket(SystemMsg.MESSAGE_REFUSAL_MODE);
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MESSAGE_REFUSAL_MODE));
 			}
 			
 			if (activeChar.getVarB("gm_invul"))
@@ -443,7 +442,7 @@ public class EnterWorld extends L2GameClientPacket
 		
 		if ((entry != null) && (entry.getValue() instanceof ReviveAnswerListener))
 		{
-			sendPacket(new ConfirmDlg(SystemMsg.C1_IS_MAKING_AN_ATTEMPT_TO_RESURRECT_YOU_IF_YOU_CHOOSE_THIS_PATH_S2_EXPERIENCE_WILL_BE_RETURNED_FOR_YOU, 0).addString("Other player").addString("some"));
+			sendPacket(new ConfirmDlg(SystemMessageId.C1_IS_ATTEMPTING_TO_DO_A_RESURRECTION_THAT_RESTORES_S2_S3_XP_ACCEPT).addString("Other player").addString("some"));
 		}
 		
 		if (activeChar.isCursedWeaponEquipped())
@@ -520,7 +519,6 @@ public class EnterWorld extends L2GameClientPacket
 		}
 		else
 		{
-			// TODO: test this !!!
 			activeChar.sendUserInfo();
 		}
 		
@@ -605,7 +603,7 @@ public class EnterWorld extends L2GameClientPacket
 			if (activeChar.getRace() == Race.ertheia)
 			{
 				activeChar.sendPacket(new ExShowUsmVideo(ExShowUsmVideo.ERTHEIA));
-				activeChar.sendPacket(new ExShowScreenMessage(NpcString.QUEEN_NAVARI_CALLS, 18000, ScreenMessageAlign.TOP_CENTER));
+				activeChar.sendPacket(new ExShowScreenMessage(NpcStringId.QUEEN_NAVARI_CALLS, 18000, ScreenMessageAlign.TOP_CENTER));
 			}
 			else
 			{
@@ -656,7 +654,7 @@ public class EnterWorld extends L2GameClientPacket
 		member.setPlayerInstance(activeChar, false);
 		int sponsor = activeChar.getSponsor();
 		int apprentice = activeChar.getApprentice();
-		L2GameServerPacket msg = new SystemMessage2(SystemMsg.CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME).addName(activeChar);
+		L2GameServerPacket msg = SystemMessage.getSystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_LOGGED_INTO_GAME).addPcName(activeChar);
 		PledgeShowMemberListUpdate memberUpdate = new PledgeShowMemberListUpdate(activeChar);
 		
 		for (Player clanMember : clan.getOnlineMembers(activeChar.getObjectId()))
@@ -665,11 +663,11 @@ public class EnterWorld extends L2GameClientPacket
 			
 			if (clanMember.getObjectId() == sponsor)
 			{
-				clanMember.sendPacket(new SystemMessage2(SystemMsg.YOUR_APPRENTICE_C1_HAS_LOGGED_OUT).addName(activeChar));
+				clanMember.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_APPRENTICE_C1_HAS_LOGGED_OUT).addPcName(activeChar));
 			}
 			else if (clanMember.getObjectId() == apprentice)
 			{
-				clanMember.sendPacket(new SystemMessage2(SystemMsg.YOUR_SPONSOR_C1_HAS_LOGGED_IN).addName(activeChar));
+				clanMember.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_SPONSOR_C1_HAS_LOGGED_IN).addPcName(activeChar));
 			}
 			else
 			{
@@ -698,7 +696,7 @@ public class EnterWorld extends L2GameClientPacket
 		
 		if (clan.getWarehouse().getCountOf(ItemTemplate.ITEM_ID_ADENA) < clanHall.getRentalFee())
 		{
-			activeChar.sendPacket(new SystemMessage2(SystemMsg.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_ME_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW).addLong(clanHall.getRentalFee()));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW).addLong(clanHall.getRentalFee()));
 		}
 	}
 	

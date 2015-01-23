@@ -21,7 +21,7 @@ import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.tables.PetDataTable.L2Pet;
@@ -211,11 +211,11 @@ public final class exchange extends Functions
 		}
 		else if (Config.SERVICES_CHANGE_PET_NAME_ITEM == 57)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 		}
 		else
 		{
-			player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 		}
 	}
 	
@@ -260,11 +260,11 @@ public final class exchange extends Functions
 		}
 		else if (Config.SERVICES_EXCHANGE_BABY_PET_ITEM == 57)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 		}
 		else
 		{
-			player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 		}
 	}
 	
@@ -315,11 +315,11 @@ public final class exchange extends Functions
 		}
 		else if (Config.SERVICES_EXCHANGE_BABY_PET_ITEM == 57)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 		}
 		else
 		{
-			player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 		}
 	}
 	
@@ -370,11 +370,11 @@ public final class exchange extends Functions
 		}
 		else if (Config.SERVICES_EXCHANGE_BABY_PET_ITEM == 57)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 		}
 		else
 		{
-			player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 		}
 	}
 	

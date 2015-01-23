@@ -19,7 +19,7 @@ import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -57,7 +57,7 @@ public final class BrazierOfPurity extends CharacterAI
 		if (_firstTimeAttacked)
 		{
 			_firstTimeAttacked = false;
-			Functions.npcSay(actor, NpcString.THE_PURIFICATION_FIELD_IS_BEING_ATTACKED_GUARDIAN_SPIRITS_PROTECT_THE_MAGIC_FORCE, ChatType.ALL, 15000);
+			Functions.npcSay(actor, NpcStringId.THE_PURIFICATION_FIELD_IS_BEING_ATTACKED_GUARDIAN_SPIRITS_PROTECT_THE_MAGIC_FORCE, ChatType.ALL, 15000);
 			final List<NpcInstance> around = actor.getAroundNpc(1500, 300);
 			
 			if ((around != null) && !around.isEmpty())

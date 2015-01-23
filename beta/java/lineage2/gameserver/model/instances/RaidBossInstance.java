@@ -37,6 +37,7 @@ import lineage2.gameserver.model.entity.HeroDiary;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
@@ -169,7 +170,7 @@ public class RaidBossInstance extends MonsterInstance
 					}
 				}
 				
-				player.getParty().broadCast(new SystemMessage(SystemMessage.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
+				player.getParty().broadCast(SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
 			}
 			else
 			{
@@ -178,7 +179,7 @@ public class RaidBossInstance extends MonsterInstance
 					Hero.getInstance().addHeroDiary(player.getObjectId(), HeroDiary.ACTION_RAID_KILLED, getId());
 				}
 				
-				player.sendPacket(new SystemMessage(SystemMessage.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_YOUR_RAID_WAS_SUCCESSFUL));
 			}
 			
 			Quest q = QuestManager.getQuest(508);
@@ -316,7 +317,7 @@ public class RaidBossInstance extends MonsterInstance
 					continue;
 				}
 				
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EARNED_S1_RAID_POINTS).addNumber(playerReward));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_RAID_POINT_S).addInt(playerReward));
 				RaidBossSpawnManager.getInstance().addPoints(player.getObjectId(), getId(), playerReward);
 			}
 		}

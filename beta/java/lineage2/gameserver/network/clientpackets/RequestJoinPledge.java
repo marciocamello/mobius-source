@@ -19,7 +19,7 @@ import lineage2.gameserver.model.Request.L2RequestType;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.AskJoinPledge;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Creative Infinity
@@ -61,7 +61,7 @@ public class RequestJoinPledge extends L2GameClientPacket
 		
 		if (activeChar.isProcessingRequest())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.WAITING_FOR_ANOTHER_REPLY));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WAITING_FOR_ANOTHER_REPLY));
 			return;
 		}
 		
@@ -69,19 +69,19 @@ public class RequestJoinPledge extends L2GameClientPacket
 		
 		if (!clan.canInvite())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.AFTER_A_CLAN_MEMBER_IS_DISMISSED_FROM_A_CLAN_THE_CLAN_MUST_WAIT_AT_LEAST_A_DAY_BEFORE_ACCEPTING_A_NEW_MEMBER));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.AFTER_A_CLAN_MEMBER_IS_DISMISSED_FROM_A_CLAN_THE_CLAN_MUST_WAIT_AT_LEAST_A_DAY_BEFORE_ACCEPTING_A_NEW_MEMBER));
 			return;
 		}
 		
 		if (_objectId == activeChar.getObjectId())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_ASK_YOURSELF_TO_APPLY_TO_A_CLAN));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ASK_YOURSELF_TO_APPLY_TO_A_CLAN));
 			return;
 		}
 		
 		if ((activeChar.getClanPrivileges() & Clan.CP_CL_INVITE_CLAN) != Clan.CP_CL_INVITE_CLAN)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.ONLY_THE_LEADER_CAN_GIVE_OUT_INVITATIONS));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_THE_LEADER_CAN_GIVE_OUT_INVITATIONS));
 			return;
 		}
 		
@@ -89,7 +89,7 @@ public class RequestJoinPledge extends L2GameClientPacket
 		
 		if ((object == null) || !object.isPlayer())
 		{
-			activeChar.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 			return;
 		}
 		
@@ -97,31 +97,31 @@ public class RequestJoinPledge extends L2GameClientPacket
 		
 		if (member.getClan() == activeChar.getClan())
 		{
-			activeChar.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 			return;
 		}
 		
 		if (!member.getPlayerAccess().CanJoinClan)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_JOIN_THE_CLAN_BECAUSE_ONE_DAY_HAS_NOT_YET_PASSED_SINCE_HE_SHE_LEFT_ANOTHER_CLAN).addName(member));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_CANNOT_JOIN_THE_CLAN_BECAUSE_ONE_DAY_HAS_NOT_YET_PASSED_SINCE_THEY_LEFT_ANOTHER_CLAN).addPcName(member));
 			return;
 		}
 		
 		if (member.getClan() != null)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.S1_IS_WORKING_WITH_ANOTHER_CLAN).addName(member));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_IS_ALREADY_A_MEMBER_OF_ANOTHER_CLAN).addPcName(member));
 			return;
 		}
 		
 		if (member.isBusy())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.S1_IS_BUSY_PLEASE_TRY_AGAIN_LATER).addName(member));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER).addPcName(member));
 			return;
 		}
 		
 		if ((_pledgeType == Clan.SUBUNIT_ACADEMY) && ((member.getLevel() > 75) || (member.getClassLevel() > 3)))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.TO_JOIN_A_CLAN_ACADEMY_CHARACTERS_MUST_BE_LEVEL_40_OR_BELOW_NOT_BELONG_ANOTHER_CLAN_AND_NOT_YET_COMPLETED_THEIR_2ND_CLASS_TRANSFER));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.IN_ORDER_TO_JOIN_THE_CLAN_ACADEMY_YOU_MUST_BE_UNAFFILIATED_WITH_A_CLAN_AND_BE_AN_UNAWAKENED_CHARACTER_LV_84_OR_BELOW_FPR_BOTH_MAIN_AND_SUBCLASS));
 			return;
 		}
 		
@@ -129,11 +129,11 @@ public class RequestJoinPledge extends L2GameClientPacket
 		{
 			if (_pledgeType == 0)
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.S1_IS_FULL_AND_CANNOT_ACCEPT_ADDITIONAL_CLAN_MEMBERS_AT_THIS_TIME).addString(clan.getName()));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_IS_FULL_AND_CANNOT_ACCEPT_ADDITIONAL_CLAN_MEMBERS_AT_THIS_TIME).addString(clan.getName()));
 			}
 			else
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.THE_ACADEMY_ROYAL_GUARD_ORDER_OF_KNIGHTS_IS_FULL_AND_CANNOT_ACCEPT_NEW_MEMBERS_AT_THIS_TIME));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_ACADEMY_ROYAL_GUARD_ORDER_OF_KNIGHTS_IS_FULL_AND_CANNOT_ACCEPT_NEW_MEMBERS_AT_THIS_TIME));
 			}
 			
 			return;

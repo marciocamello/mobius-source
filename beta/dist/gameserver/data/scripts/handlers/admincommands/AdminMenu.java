@@ -22,6 +22,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.AdminFunctions;
 import lineage2.gameserver.utils.Location;
@@ -128,7 +129,7 @@ public class AdminMenu implements IAdminCommandHandler, ScriptFile
 			}
 			else
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			}
 		}
 		else if (fullString.startsWith("admin_kick_menu"))
@@ -181,7 +182,7 @@ public class AdminMenu implements IAdminCommandHandler, ScriptFile
 		}
 		else
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return;
 		}
 		

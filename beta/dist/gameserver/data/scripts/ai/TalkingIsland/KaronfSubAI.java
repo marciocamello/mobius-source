@@ -16,7 +16,7 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
@@ -107,32 +107,32 @@ public class KaronfSubAI extends DefaultAI
 			return;
 		}
 		
-		NpcString ns;
+		NpcStringId ns;
 		
 		switch (Rnd.get(6))
 		{
 			case 1:
-				ns = NpcString.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON;
+				ns = NpcStringId.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON;
 				break;
 			
 			case 2:
-				ns = NpcString.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON;
+				ns = NpcStringId.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON;
 				break;
 			
 			case 3:
-				ns = NpcString.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON;
+				ns = NpcStringId.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON;
 				break;
 			
 			case 4:
-				ns = NpcString.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON;
+				ns = NpcStringId.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON;
 				break;
 			
 			case 5:
-				ns = NpcString.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON;
+				ns = NpcStringId.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON;
 				break;
 			
 			default:
-				ns = NpcString.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON;
+				ns = NpcStringId.WHEN_YOU_GO_TO_THE_MUSEUM_SPEAK_TO_PANTHEON;
 				break;
 		}
 		

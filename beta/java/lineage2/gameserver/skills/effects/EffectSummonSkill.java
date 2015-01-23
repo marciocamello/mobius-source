@@ -15,6 +15,7 @@ package lineage2.gameserver.skills.effects;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Env;
 
 /**
@@ -53,7 +54,7 @@ public class EffectSummonSkill extends Effect
 		
 		if (player.isMounted())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(_skill.getId(), _skill.getLevel()));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(_skill.getId(), _skill.getLevel()));
 			return false;
 		}
 		
@@ -107,7 +108,7 @@ public class EffectSummonSkill extends Effect
 		{
 			if (getSkill().isToggle())
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_MP), new SystemMessage(SystemMessage.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED).addSkillName(getSkill().getId(), getSkill().getDisplayLevel()));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_MP), SystemMessage.getSystemMessage(SystemMessageId.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED).addSkillName(getSkill().getId(), getSkill().getDisplayLevel()));
 				return false;
 			}
 		}

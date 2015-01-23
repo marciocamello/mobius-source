@@ -28,7 +28,7 @@ import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.instances.ManorManagerInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.manor.CropProcure;
 
@@ -98,7 +98,7 @@ public class RequestProcureCrop extends L2GameClientPacket
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
@@ -166,7 +166,7 @@ public class RequestProcureCrop extends L2GameClientPacket
 		}
 		catch (ArithmeticException ae)
 		{
-			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 			return;
 		}
 		
@@ -176,13 +176,13 @@ public class RequestProcureCrop extends L2GameClientPacket
 		{
 			if (!activeChar.getInventory().validateWeight(weight))
 			{
-				sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
 				return;
 			}
 			
 			if (!activeChar.getInventory().validateCapacity(slots))
 			{
-				sendPacket(new SystemMessage(SystemMessage.YOUR_INVENTORY_IS_FULL));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_INVENTORY_IS_FULL));
 				return;
 			}
 			
@@ -208,7 +208,14 @@ public class RequestProcureCrop extends L2GameClientPacket
 					continue;
 				}
 				
-				activeChar.sendPacket(SystemMessage2.obtainItems(rewradItemId, rewradItemCount, 0));
+				if (rewradItemCount > 1)
+				{
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(rewradItemId).addLong(rewradItemCount));
+				}
+				else
+				{
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(rewradItemId));
+				}
 			}
 		}
 		catch (ArithmeticException ae)

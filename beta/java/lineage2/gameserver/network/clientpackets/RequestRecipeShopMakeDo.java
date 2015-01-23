@@ -21,8 +21,7 @@ import lineage2.gameserver.model.items.ManufactureItem;
 import lineage2.gameserver.network.serverpackets.RecipeShopItemInfo;
 import lineage2.gameserver.network.serverpackets.StatusUpdate.StatusUpdateField;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.RecipeTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.TradeHelper;
@@ -69,7 +68,7 @@ public class RequestRecipeShopMakeDo extends L2GameClientPacket
 		
 		if (buyer.isInStoreMode())
 		{
-			buyer.sendPacket(SystemMsg.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+			buyer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
@@ -81,13 +80,13 @@ public class RequestRecipeShopMakeDo extends L2GameClientPacket
 		
 		if (buyer.isFishing())
 		{
-			buyer.sendPacket(SystemMsg.YOU_CANNOT_DO_THAT_WHILE_FISHING_2);
+			buyer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING3));
 			return;
 		}
 		
 		if (!buyer.getPlayerAccess().UseTrade)
 		{
-			buyer.sendPacket(SystemMsg.SOME_LINEAGE_II_FEATURES_HAVE_BEEN_LIMITED_FOR_FREE_TRIALS_____);
+			buyer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SOME_LINEAGE_II_FEATURES_HAVE_BEEN_LIMITED_FOR_FREE_TRIALS_TRIAL_ACCOUNTS_AREN_T_ALLOWED_BUY_ITEMS_FROM_PRIVATE_STORES_TO_UNLOCK_ALL_OF_THE_FEATURES_OF_LINEAGE_II_PURCHASE_THE_FULL_VERSION_TODAY));
 			return;
 		}
 		
@@ -121,8 +120,8 @@ public class RequestRecipeShopMakeDo extends L2GameClientPacket
 		
 		if (recipe.getMaterials().length == 0)
 		{
-			manufacturer.sendPacket(SystemMsg.THE_RECIPE_IS_INCORRECT);
-			buyer.sendPacket(SystemMsg.THE_RECIPE_IS_INCORRECT);
+			manufacturer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_RECIPE_IS_INCORRECT));
+			buyer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_RECIPE_IS_INCORRECT));
 			return;
 		}
 		
@@ -136,8 +135,8 @@ public class RequestRecipeShopMakeDo extends L2GameClientPacket
 		
 		if (manufacturer.getCurrentMp() < recipe.getMpConsume())
 		{
-			manufacturer.sendPacket(SystemMsg.NOT_ENOUGH_MP);
-			buyer.sendPacket(SystemMsg.NOT_ENOUGH_MP, new RecipeShopItemInfo(buyer, manufacturer, _recipeId, _price, success));
+			manufacturer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_MP));
+			buyer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_MP), new RecipeShopItemInfo(buyer, manufacturer, _recipeId, _price, success));
 			return;
 		}
 		
@@ -147,7 +146,7 @@ public class RequestRecipeShopMakeDo extends L2GameClientPacket
 		{
 			if (buyer.getAdena() < _price)
 			{
-				buyer.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA, new RecipeShopItemInfo(buyer, manufacturer, _recipeId, _price, success));
+				buyer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA), new RecipeShopItemInfo(buyer, manufacturer, _recipeId, _price, success));
 				return;
 			}
 			
@@ -164,14 +163,14 @@ public class RequestRecipeShopMakeDo extends L2GameClientPacket
 				
 				if ((item == null) || (material.getCount() > item.getCount()))
 				{
-					buyer.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_MATERIALS_TO_PERFORM_THAT_ACTION, new RecipeShopItemInfo(buyer, manufacturer, _recipeId, _price, success));
+					buyer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_MATERIALS_TO_PERFORM_THAT_ACTION), new RecipeShopItemInfo(buyer, manufacturer, _recipeId, _price, success));
 					return;
 				}
 			}
 			
 			if (!buyer.reduceAdena(_price, false))
 			{
-				buyer.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA, new RecipeShopItemInfo(buyer, manufacturer, _recipeId, _price, success));
+				buyer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA), new RecipeShopItemInfo(buyer, manufacturer, _recipeId, _price, success));
 				return;
 			}
 			
@@ -183,7 +182,14 @@ public class RequestRecipeShopMakeDo extends L2GameClientPacket
 				}
 				
 				buyer.getInventory().destroyItemByItemId(material.getId(), material.getCount());
-				buyer.sendPacket(SystemMessage2.removeItems(material.getId(), material.getCount()));
+				if (material.getCount() > 1)
+				{
+					buyer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED).addItemName(material.getId()).addLong(material.getCount()));
+				}
+				else
+				{
+					buyer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED).addItemName(material.getId()));
+				}
 			}
 			
 			long tax = TradeHelper.getTax(manufacturer, _price);
@@ -211,30 +217,30 @@ public class RequestRecipeShopMakeDo extends L2GameClientPacket
 			
 			if (itemsCount > 1)
 			{
-				SystemMessage sm = new SystemMessage(SystemMessage.S1_CREATED_S2_S3_AT_THE_PRICE_OF_S4_ADENA);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_CREATED_S3_S2_S_AT_THE_PRICE_OF_S4_ADENA);
 				sm.addString(manufacturer.getName());
 				sm.addItemName(itemId);
-				sm.addNumber(itemsCount);
-				sm.addNumber(_price);
+				sm.addLong(itemsCount);
+				sm.addLong(_price);
 				buyer.sendPacket(sm);
-				sm = new SystemMessage(SystemMessage.S2_S3_HAVE_BEEN_SOLD_TO_S1_FOR_S4_ADENA);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S3_S2_S_HAVE_BEEN_SOLD_TO_C1_FOR_S4_ADENA);
 				sm.addString(buyer.getName());
 				sm.addItemName(itemId);
-				sm.addNumber(itemsCount);
-				sm.addNumber(_price);
+				sm.addLong(itemsCount);
+				sm.addLong(_price);
 				manufacturer.sendPacket(sm);
 			}
 			else
 			{
-				SystemMessage sm = new SystemMessage(SystemMessage.S1_CREATED_S2_AFTER_RECEIVING_S3_ADENA);
+				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_CREATED_S2_AFTER_RECEIVING_S3_ADENA);
 				sm.addString(manufacturer.getName());
 				sm.addItemName(itemId);
-				sm.addNumber(_price);
+				sm.addLong(_price);
 				buyer.sendPacket(sm);
-				sm = new SystemMessage(SystemMessage.S2_IS_SOLD_TO_S1_AT_THE_PRICE_OF_S3_ADENA);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S2_IS_SOLD_TO_C1_FOR_THE_PRICE_OF_S3_ADENA);
 				sm.addString(buyer.getName());
 				sm.addItemName(itemId);
-				sm.addNumber(_price);
+				sm.addLong(_price);
 				manufacturer.sendPacket(sm);
 			}
 			
@@ -242,15 +248,15 @@ public class RequestRecipeShopMakeDo extends L2GameClientPacket
 		}
 		else
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.S1_HAS_FAILED_TO_CREATE_S2_AT_THE_PRICE_OF_S3_ADENA);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_FAILED_TO_CREATE_S2_AT_THE_PRICE_OF_S3_ADENA);
 			sm.addString(manufacturer.getName());
 			sm.addItemName(itemId);
-			sm.addNumber(_price);
+			sm.addLong(_price);
 			buyer.sendPacket(sm);
-			sm = new SystemMessage(SystemMessage.THE_ATTEMPT_TO_CREATE_S2_FOR_S1_AT_THE_PRICE_OF_S3_ADENA_HAS_FAILED);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_FAILED_TO_CREATE_S2_FOR_C1_AT_THE_PRICE_OF_S3_ADENA);
 			sm.addString(buyer.getName());
 			sm.addItemName(itemId);
-			sm.addNumber(_price);
+			sm.addLong(_price);
 			manufacturer.sendPacket(sm);
 		}
 		

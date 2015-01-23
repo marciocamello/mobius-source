@@ -19,7 +19,7 @@ import lineage2.gameserver.model.Request;
 import lineage2.gameserver.model.Request.L2RequestType;
 import lineage2.gameserver.network.serverpackets.AskJoinAlliance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -59,13 +59,13 @@ public class RequestJoinAlly extends L2GameClientPacket
 		
 		if (activeChar.isProcessingRequest())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.WAITING_FOR_ANOTHER_REPLY));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WAITING_FOR_ANOTHER_REPLY));
 			return;
 		}
 		
 		if (activeChar.getAlliance().getMembersCount() >= Config.ALT_MAX_ALLY_SIZE)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_INVITE_A_CLAN_INTO_THE_ALLIANCE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_INVITE_A_CLAN_INTO_THE_ALLIANCE));
 			return;
 		}
 		
@@ -73,7 +73,7 @@ public class RequestJoinAlly extends L2GameClientPacket
 		
 		if ((obj == null) || !obj.isPlayer() || (obj == activeChar))
 		{
-			activeChar.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 			return;
 		}
 		
@@ -81,13 +81,13 @@ public class RequestJoinAlly extends L2GameClientPacket
 		
 		if (!activeChar.isAllyLeader())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.FEATURE_AVAILABLE_TO_ALLIANCE_LEADERS_ONLY));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS));
 			return;
 		}
 		
 		if ((target.getAlliance() != null) || activeChar.getAlliance().isMember(target.getClan().getClanId()))
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.S1_CLAN_IS_ALREADY_A_MEMBER_OF_S2_ALLIANCE);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CLAN_IS_ALREADY_A_MEMBER_OF_S2_ALLIANCE);
 			sm.addString(target.getClan().getName());
 			sm.addString(target.getAlliance().getAllyName());
 			activeChar.sendPacket(sm);
@@ -96,19 +96,19 @@ public class RequestJoinAlly extends L2GameClientPacket
 		
 		if (!target.isClanLeader())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.S1_IS_NOT_A_CLAN_LEADER).addString(target.getName()));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER).addString(target.getName()));
 			return;
 		}
 		
 		if (activeChar.isAtWarWith(target.getClanId()) > 0)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_MAY_NOT_ALLY_WITH_A_CLAN_YOU_ARE_AT_BATTLE_WITH));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_ALLY_WITH_A_CLAN_YOU_ARE_CURRENTLY_AT_WAR_WITH_THAT_WOULD_BE_DIABOLICAL_AND_TREACHEROUS));
 			return;
 		}
 		
 		if (!target.getClan().canJoinAlly())
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.S1_CLAN_CANNOT_JOIN_THE_ALLIANCE_BECAUSE_ONE_DAY_HAS_NOT_YET_PASSED_SINCE_IT_LEFT_ANOTHER_ALLIANCE);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CLAN_CANNOT_JOIN_THE_ALLIANCE_BECAUSE_ONE_DAY_HAS_NOT_YET_PASSED_SINCE_THEY_LEFT_ANOTHER_ALLIANCE);
 			sm.addString(target.getClan().getName());
 			activeChar.sendPacket(sm);
 			return;
@@ -122,12 +122,12 @@ public class RequestJoinAlly extends L2GameClientPacket
 		
 		if (target.isBusy())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.S1_IS_BUSY_PLEASE_TRY_AGAIN_LATER).addString(target.getName()));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER).addString(target.getName()));
 			return;
 		}
 		
 		new Request(L2RequestType.ALLY, activeChar, target).setTimeout(10000L);
-		target.sendPacket(new SystemMessage(SystemMessage.S2_THE_LEADER_OF_S1_HAS_REQUESTED_AN_ALLIANCE).addString(activeChar.getAlliance().getAllyName()).addName(activeChar));
+		target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_LEADER_S2_HAS_REQUESTED_AN_ALLIANCE).addString(activeChar.getAlliance().getAllyName()).addPcName(activeChar));
 		target.sendPacket(new AskJoinAlliance(activeChar.getObjectId(), activeChar.getName(), activeChar.getAlliance().getAllyName()));
 		return;
 	}

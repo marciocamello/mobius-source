@@ -14,6 +14,7 @@ package lineage2.gameserver.skills.effects;
 
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;
 
@@ -70,7 +71,7 @@ public class EffectHeal extends Effect
 		
 		if (addToHp > 0)
 		{
-			_effected.sendPacket(new SystemMessage(SystemMessage.S1_HPS_HAVE_BEEN_RESTORED).addNumber(Math.round(addToHp)));
+			_effected.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED).addLong(Math.round(addToHp)));
 			_effected.setCurrentHp(addToHp + _effected.getCurrentHp(), false);
 		}
 	}

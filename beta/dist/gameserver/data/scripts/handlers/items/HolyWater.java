@@ -16,7 +16,8 @@ import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import npc.model.HellboundRemnantInstance;
 
 /**
@@ -55,7 +56,7 @@ public final class HolyWater extends SimpleItemHandler
 		
 		if ((target == null) || !(target instanceof HellboundRemnantInstance))
 		{
-			player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 			return false;
 		}
 		
@@ -63,7 +64,7 @@ public final class HolyWater extends SimpleItemHandler
 		
 		if (npc.isDead())
 		{
-			player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 			return false;
 		}
 		

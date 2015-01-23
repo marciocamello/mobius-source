@@ -19,7 +19,7 @@ import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 
 public final class NpcWarriorAI extends Fighter
@@ -53,11 +53,11 @@ public final class NpcWarriorAI extends Fighter
 			switch (actor.getId())
 			{
 				case 33172:
-					Functions.npcSay(actor, NpcString.THE_ONLY_GOOD_SHILEN_CREATURE_IS_A_DEAD_ONE);
+					Functions.npcSay(actor, NpcStringId.THE_ONLY_GOOD_SHILEN_CREATURE_IS_A_DEAD_ONE);
 					break;
 				
 				case 33170:
-					Functions.npcSay(actor, NpcString.GET_BEHIND_ME_GET_BEHIND_ME);
+					Functions.npcSay(actor, NpcStringId.GET_BEHIND_ME_GET_BEHIND_ME);
 					break;
 				
 				default:

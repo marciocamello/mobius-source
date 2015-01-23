@@ -32,6 +32,7 @@ import lineage2.gameserver.network.serverpackets.ExBR_AgathionEnergyInfo;
 import lineage2.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.taskmanager.DelayedItemsManager;
 import lineage2.gameserver.templates.item.EtcItemTemplate.EtcItemType;
 import lineage2.gameserver.templates.item.ItemTemplate;
@@ -843,19 +844,19 @@ public class PcInventory extends Inventory
 			
 			if (mana == 10)
 			{
-				sm = new SystemMessage(SystemMessage.S1S_REMAINING_MANA_IS_NOW_10);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_REMAINING_MANA_IS_NOW_10);
 			}
 			else if (mana == 5)
 			{
-				sm = new SystemMessage(SystemMessage.S1S_REMAINING_MANA_IS_NOW_5);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_REMAINING_MANA_IS_NOW_5);
 			}
 			else if (mana == 1)
 			{
-				sm = new SystemMessage(SystemMessage.S1S_REMAINING_MANA_IS_NOW_1_IT_WILL_DISAPPEAR_SOON);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_REMAINING_MANA_IS_NOW_1_IT_WILL_DISAPPEAR_SOON);
 			}
 			else if (mana <= 0)
 			{
-				sm = new SystemMessage(SystemMessage.S1S_REMAINING_MANA_IS_NOW_0_AND_THE_ITEM_HAS_DISAPPEARED);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_REMAINING_MANA_IS_NOW_0_AND_THE_ITEM_HAS_DISAPPEARED);
 			}
 			else
 			{
@@ -911,7 +912,7 @@ public class PcInventory extends Inventory
 			
 			if (left <= 0)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.THE_LIMITED_TIME_ITEM_HAS_BEEN_DELETED).addItemName(item.getId()));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_LIMITED_TIME_ITEM_HAS_DISAPPEARED_BECAUSE_THE_REMAINING_TIME_RAN_OUT).addItemName(item.getId()));
 			}
 		}
 	}

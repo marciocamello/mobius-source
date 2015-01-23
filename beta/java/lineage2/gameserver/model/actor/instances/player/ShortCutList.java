@@ -25,6 +25,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ExAutoSoulShot;
 import lineage2.gameserver.network.serverpackets.ShortCutInit;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -88,7 +89,7 @@ public class ShortCutList
 		{
 			if (player.getInventory().getItemByObjectId(sc.getId()) == null)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_MORE_ITEMS_IN_THE_SHORTCUT));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_MORE_ITEMS_IN_THE_SHORTCUT));
 				deleteShortCut(sc.getSlot(), sc.getPage());
 				sc = null;
 			}

@@ -16,6 +16,7 @@ import java.util.Collection;
 
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -77,26 +78,26 @@ public class RequestBlock extends L2GameClientPacket
 				
 				if (blockList != null)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage._IGNORE_LIST_));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.IGNORE_LIST));
 					
 					for (String name : blockList)
 					{
 						activeChar.sendMessage(name);
 					}
 					
-					activeChar.sendPacket(new SystemMessage(SystemMessage.__EQUALS__));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.EMPTY3));
 				}
 				break;
 			
 			case ALLBLOCK:
 				activeChar.setBlockAll(true);
-				activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOW_BLOCKING_EVERYTHING));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOW_BLOCKING_EVERYTHING));
 				activeChar.sendEtcStatusUpdate();
 				break;
 			
 			case ALLUNBLOCK:
 				activeChar.setBlockAll(false);
-				activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NO_LONGER_BLOCKING_EVERYTHING));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NO_LONGER_BLOCKING_EVERYTHING));
 				activeChar.sendEtcStatusUpdate();
 				break;
 			

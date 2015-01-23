@@ -23,7 +23,7 @@ import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.model.instances.RaidBossInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.mapregion.DomainArea;
 
@@ -75,7 +75,7 @@ public final class Seed extends ScriptItemHandler
 		
 		if (!player.getTarget().isMonster() || (player.getTarget() instanceof RaidBossInstance) || ((player.getTarget() instanceof MinionInstance) && (((MinionInstance) player.getTarget()).getLeader() instanceof RaidBossInstance)) || (player.getTarget() instanceof ChestInstance) || ((((MonsterInstance) playable.getTarget()).getChampion() > 0) && !item.isAltSeed()))
 		{
-			player.sendPacket(SystemMsg.THE_TARGET_IS_UNAVAILABLE_FOR_SEEDING);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_TARGET_IS_UNAVAILABLE_FOR_SEEDING));
 			return false;
 		}
 		
@@ -83,19 +83,19 @@ public final class Seed extends ScriptItemHandler
 		
 		if (target == null)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return false;
 		}
 		
 		if (target.isDead())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return false;
 		}
 		
 		if (target.isSeeded())
 		{
-			player.sendPacket(SystemMsg.THE_SEED_HAS_BEEN_SOWN);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_SEED_HAS_BEEN_SOWN));
 			return false;
 		}
 		
@@ -103,7 +103,7 @@ public final class Seed extends ScriptItemHandler
 		
 		if ((seedId == 0) || (player.getInventory().getItemByItemId(item.getId()) == null))
 		{
-			player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 			return false;
 		}
 		
@@ -112,7 +112,7 @@ public final class Seed extends ScriptItemHandler
 		
 		if (ManorDataHolder.getInstance().getCastleIdForSeed(seedId) != castleId)
 		{
-			player.sendPacket(SystemMsg.THIS_SEED_MAY_NOT_BE_SOWN_HERE);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_SEED_MAY_NOT_BE_SOWN_HERE));
 			return false;
 		}
 		

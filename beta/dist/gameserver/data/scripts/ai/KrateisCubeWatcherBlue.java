@@ -22,8 +22,8 @@ import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
 /**
@@ -78,7 +78,7 @@ public final class KrateisCubeWatcherBlue extends DefaultAI
 				if (valCP > 0)
 				{
 					cha.setCurrentCp(valCP + cha.getCurrentCp());
-					cha.sendPacket(new SystemMessage2(SystemMsg.S1_CP_HAS_BEEN_RESTORED).addInteger(Math.round(valCP)));
+					cha.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CP_HAS_BEEN_RESTORED).addLong(Math.round(valCP)));
 				}
 				
 				double valHP = cha.getMaxHp() - cha.getCurrentHp();
@@ -86,7 +86,7 @@ public final class KrateisCubeWatcherBlue extends DefaultAI
 				if (valHP > 0)
 				{
 					cha.setCurrentHp(valHP + cha.getCurrentHp(), false);
-					cha.sendPacket(new SystemMessage2(SystemMsg.S1_HP_HAS_BEEN_RESTORED).addInteger(Math.round(valHP)));
+					cha.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED).addLong(Math.round(valHP)));
 				}
 				
 				double valMP = cha.getMaxMp() - cha.getCurrentMp();
@@ -94,7 +94,7 @@ public final class KrateisCubeWatcherBlue extends DefaultAI
 				if (valMP > 0)
 				{
 					cha.setCurrentMp(valMP + cha.getCurrentMp());
-					cha.sendPacket(new SystemMessage2(SystemMsg.S1_MP_HAS_BEEN_RESTORED).addInteger(Math.round(valMP)));
+					cha.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_MP_HAS_BEEN_RESTORED).addLong(Math.round(valMP)));
 				}
 			}
 		}

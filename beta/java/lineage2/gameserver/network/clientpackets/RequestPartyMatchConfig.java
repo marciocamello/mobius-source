@@ -18,7 +18,8 @@ import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.matching.CCMatchingRoom;
 import lineage2.gameserver.network.serverpackets.ListPartyWaiting;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -67,11 +68,11 @@ public class RequestPartyMatchConfig extends L2GameClientPacket
 		}
 		else if ((channel != null) && !channel.getParties().contains(party))
 		{
-			player.sendPacket(SystemMsg.THE_COMMAND_CHANNEL_AFFILIATED_PARTYS_PARTY_MEMBER_CANNOT_USE_THE_MATCHING_SCREEN);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_COMMAND_CHANNEL_AFFILIATED_PARTY_S_PARTY_MEMBER_CANNOT_USE_THE_MATCHING_SCREEN));
 		}
 		else if ((party != null) && !party.isLeader(player))
 		{
-			player.sendPacket(SystemMsg.THE_LIST_OF_PARTY_ROOMS_CAN_ONLY_BE_VIEWED_BY_A_PERSON_WHO_IS_NOT_PART_OF_A_PARTY);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_LIST_OF_PARTY_ROOMS_CAN_ONLY_BE_VIEWED_BY_A_PERSON_WHO_IS_NOT_PART_OF_A_PARTY));
 		}
 		else
 		{

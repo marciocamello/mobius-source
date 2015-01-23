@@ -16,7 +16,7 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
@@ -107,32 +107,32 @@ public class MorganSubAI extends DefaultAI
 			return;
 		}
 		
-		NpcString ns;
+		NpcStringId ns;
 		
 		switch (Rnd.get(6))
 		{
 			case 1:
-				ns = NpcString.DON_T_GO_HUNTING_WITHOUT_SOULSHOT;
+				ns = NpcStringId.DON_T_GO_HUNTING_WITHOUT_SOULSHOT;
 				break;
 			
 			case 2:
-				ns = NpcString.BELOW_LEVEL_75_BE_SURE_TO_RECEIVE_NEWBIE_BUFFS;
+				ns = NpcStringId.BELOW_LEVEL_75_BE_SURE_TO_RECEIVE_NEWBIE_BUFFS;
 				break;
 			
 			case 3:
-				ns = NpcString.DON_T_GO_HUNTING_WITHOUT_SOULSHOT;
+				ns = NpcStringId.DON_T_GO_HUNTING_WITHOUT_SOULSHOT;
 				break;
 			
 			case 4:
-				ns = NpcString.BELOW_LEVEL_75_BE_SURE_TO_RECEIVE_NEWBIE_BUFFS;
+				ns = NpcStringId.BELOW_LEVEL_75_BE_SURE_TO_RECEIVE_NEWBIE_BUFFS;
 				break;
 			
 			case 5:
-				ns = NpcString.DON_T_GO_HUNTING_WITHOUT_SOULSHOT;
+				ns = NpcStringId.DON_T_GO_HUNTING_WITHOUT_SOULSHOT;
 				break;
 			
 			default:
-				ns = NpcString.BELOW_LEVEL_75_BE_SURE_TO_RECEIVE_NEWBIE_BUFFS;
+				ns = NpcStringId.BELOW_LEVEL_75_BE_SURE_TO_RECEIVE_NEWBIE_BUFFS;
 				break;
 		}
 		

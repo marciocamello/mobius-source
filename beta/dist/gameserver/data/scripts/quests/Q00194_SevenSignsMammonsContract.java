@@ -19,6 +19,7 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
 
@@ -79,7 +80,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest implements ScriptFil
 			case "colin_q194_3a.htm":
 				if ((player.getTransformation() != 0) || player.isMounted())
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
 					return null;
 				}
 				negateSpeedBuffs(player);
@@ -101,7 +102,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest implements ScriptFil
 			case "colin_q194_6.htm":
 				if ((player.getTransformation() != 0) || player.isMounted())
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
 					return null;
 				}
 				qs.setCond(7);
@@ -125,7 +126,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest implements ScriptFil
 			case "colin_q194_9.htm":
 				if ((player.getTransformation() != 0) || player.isMounted())
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
 					return null;
 				}
 				qs.setCond(10);
@@ -163,7 +164,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest implements ScriptFil
 			case "colin_q194_11a.htm":
 				if ((player.getTransformation() != 0) || player.isMounted())
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
 					return null;
 				}
 				negateSpeedBuffs(player);
@@ -173,7 +174,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest implements ScriptFil
 			case "colin_q194_12a.htm":
 				if ((player.getTransformation() != 0) || player.isMounted())
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
 					return null;
 				}
 				negateSpeedBuffs(player);
@@ -183,7 +184,7 @@ public class Q00194_SevenSignsMammonsContract extends Quest implements ScriptFil
 			case "colin_q194_13a.htm":
 				if ((player.getTransformation() != 0) || player.isMounted())
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
 					return null;
 				}
 				negateSpeedBuffs(player);

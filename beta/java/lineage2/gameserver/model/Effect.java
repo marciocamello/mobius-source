@@ -26,6 +26,7 @@ import lineage2.gameserver.network.serverpackets.ExOlympiadSpelledInfo;
 import lineage2.gameserver.network.serverpackets.IconEffectPacket;
 import lineage2.gameserver.network.serverpackets.ShortBuffStatusUpdate;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.skills.AbnormalEffect;
 import lineage2.gameserver.skills.EffectType;
 import lineage2.gameserver.skills.effects.EffectTemplate;
@@ -651,7 +652,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 		{
 			if (!getSkill().isHideStartMessage() && (getEffected().getEffectList().getEffectsCountForSkill(getSkill().getId()) == 1))
 			{
-				getEffected().sendPacket(new SystemMessage(SystemMessage.S1_S2S_EFFECT_CAN_BE_FELT).addSkillName(_displayId, _displayLevel));
+				getEffected().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT).addSkillName(_displayId, _displayLevel));
 			}
 			
 			return;
@@ -723,7 +724,7 @@ public abstract class Effect extends RunnableImpl implements Comparable<Effect>,
 			
 			if (msg)
 			{
-				getEffected().sendPacket(new SystemMessage(SystemMessage.S1_HAS_WORN_OFF).addSkillName(_displayId, _displayLevel));
+				getEffected().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_WORN_OFF).addSkillName(_displayId, _displayLevel));
 			}
 		}
 	}

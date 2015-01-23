@@ -15,7 +15,7 @@ package ai.IncubatorOfEvil;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -41,7 +41,7 @@ public final class VanguardXaok extends DefaultAI
 		
 		if (Rnd.chance(8))
 		{
-			Functions.npcSay(actor, NpcString.WHAT_DO_I_FEEL_WHEN_I_KILL_SHILENS_MONSTERS_RECOIL);
+			Functions.npcSay(actor, NpcStringId.WHAT_DO_I_FEEL_WHEN_I_KILL_SHILEN_S_MONSTERS_RECOIL);
 		}
 		
 		return false;

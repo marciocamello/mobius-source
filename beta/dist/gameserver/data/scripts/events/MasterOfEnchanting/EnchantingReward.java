@@ -17,6 +17,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 
@@ -113,16 +114,16 @@ public final class EnchantingReward extends Functions implements ScriptFile
 			
 			if (hours > 0)
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessage.THERE_ARE_S1_HOURSS_AND_S2_MINUTES_REMAINING_UNTIL_THE_TIME_WHEN_THE_ITEM_CAN_BE_PURCHASED);
-				sm.addNumber(hours);
-				sm.addNumber(minutes);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S1_HOUR_S_AND_S2_MINUTE_S_REMAINING_UNTIL_THE_ITEM_CAN_BE_PURCHASED_AGAIN);
+				sm.addInt(hours);
+				sm.addInt(minutes);
 				player.sendPacket(sm);
 				show("scripts/events/MasterOfEnchanting/32599-scroll24.htm", player);
 			}
 			else if (minutes > 0)
 			{
-				final SystemMessage sm = new SystemMessage(SystemMessage.THERE_ARE_S1_MINUTES_REMAINING_UNTIL_THE_TIME_WHEN_THE_ITEM_CAN_BE_PURCHASED);
-				sm.addNumber(minutes);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S1_MINUTE_S_REMAINING_UNTIL_THE_ITEM_CAN_BE_PURCHASED_AGAIN);
+				sm.addInt(minutes);
 				player.sendPacket(sm);
 				show("scripts/events/MasterOfEnchanting/32599-scroll24.htm", player);
 			}

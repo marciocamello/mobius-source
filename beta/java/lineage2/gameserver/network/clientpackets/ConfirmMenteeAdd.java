@@ -15,8 +15,8 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Request;
 import lineage2.gameserver.network.serverpackets.ExMentorList;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.MentorUtil;
 
 /**
@@ -77,7 +77,7 @@ public class ConfirmMenteeAdd extends L2GameClientPacket
 		if (requestor == null)
 		{
 			request.cancel();
-			activeChar.sendPacket(SystemMsg.THAT_PLAYER_IS_NOT_ONLINE);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
 			activeChar.sendActionFailed();
 			return;
 		}
@@ -92,14 +92,14 @@ public class ConfirmMenteeAdd extends L2GameClientPacket
 		if (_answer == 0)
 		{
 			request.cancel();
-			requestor.sendPacket(new SystemMessage2(SystemMsg.S1_HAS_DECLINED_BECOMING_YOUR_MENTEE).addString(activeChar.getName()));
+			requestor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DECLINED_BECOMING_YOUR_MENTEE).addString(activeChar.getName()));
 			return;
 		}
 		
 		if (requestor.isActionsDisabled())
 		{
 			request.cancel();
-			activeChar.sendPacket(new SystemMessage2(SystemMsg.C1_IS_ON_ANOTHER_TASK).addString(requestor.getName()));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER).addString(requestor.getName()));
 			activeChar.sendActionFailed();
 			return;
 		}
@@ -108,8 +108,8 @@ public class ConfirmMenteeAdd extends L2GameClientPacket
 		{
 			requestor.getMentorSystem().addMentee(activeChar);
 			activeChar.getMentorSystem().addMentor(requestor);
-			activeChar.sendPacket(new SystemMessage2(SystemMsg.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTOR).addName(requestor), new ExMentorList(activeChar));
-			requestor.sendPacket(new SystemMessage2(SystemMsg.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTEE).addName(activeChar), new ExMentorList(requestor));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTOR).addPcName(requestor), new ExMentorList(activeChar));
+			requestor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FROM_NOW_ON_S1_WILL_BE_YOUR_MENTEE).addPcName(activeChar), new ExMentorList(requestor));
 			MentorUtil.applyMentoringConditions(requestor);
 			MentorUtil.applyMentoringConditions(activeChar);
 			MentorUtil.addSkillsToMentor(requestor);

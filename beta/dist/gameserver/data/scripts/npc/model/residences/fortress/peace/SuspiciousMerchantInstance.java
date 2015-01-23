@@ -24,8 +24,8 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.Privilege;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
@@ -155,7 +155,7 @@ public final class SuspiciousMerchantInstance extends NpcInstance
 			siegeEvent.addObject(SiegeEvent.ATTACKERS, siegeClan);
 			SiegeClanDAO.getInstance().insert(fortress, siegeClan);
 			siegeEvent.reCalcNextTime(false);
-			player.sendPacket(new SystemMessage2(SystemMsg.YOUR_CLAN_HAS_BEEN_REGISTERED_TO_S1S_FORTRESS_BATTLE).addResidenceName(fortress));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_BEEN_REGISTERED_TO_S1_S_FORTRESS_BATTLE).addCastleId(fortress.getId()));
 			showChatWindow(player, "residence2/fortress/fortress_ordery005.htm");
 		}
 		else if (command.equals("cancel"))

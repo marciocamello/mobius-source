@@ -23,7 +23,7 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.network.serverpackets.SetSummonRemainTime;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
@@ -157,7 +157,7 @@ public class SummonInstance extends Summon
 			
 			if (_lifetimeCountdown <= 0)
 			{
-				owner.sendPacket(new SystemMessage(SystemMessage.SERVITOR_DISAPPEASR_BECAUSE_THE_SUMMONING_TIME_IS_OVER));
+				owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_SERVITOR_HAS_VANISHED_YOU_LL_NEED_TO_SUMMON_A_NEW_ONE));
 				_disappearTask = null;
 				unSummon();
 				return;
@@ -242,16 +242,16 @@ public class SummonInstance extends Summon
 		
 		if (crit)
 		{
-			owner.sendPacket(SystemMsg.SUMMONED_MONSTERS_CRITICAL_HIT);
+			owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SUMMONED_MONSTER_S_CRITICAL_HIT));
 		}
 		
 		if (miss)
 		{
-			owner.sendPacket(new SystemMessage(SystemMessage.C1S_ATTACK_WENT_ASTRAY).addName(this));
+			owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_S_ATTACK_WENT_ASTRAY).addCharName(this));
 		}
 		else if (!target.isInvul())
 		{
-			owner.sendPacket(new SystemMessage(SystemMessage.C1_HAS_GIVEN_C2_DAMAGE_OF_S3).addName(this).addName(target).addNumber(damage).addDamage(target, target, -damage));
+			owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2_S4).addCharName(this).addCharName(target).addInt(damage).addPopup(target.getId(), target.getId(), -damage));
 		}
 	}
 	
@@ -264,7 +264,7 @@ public class SummonInstance extends Summon
 	public void displayReceiveDamageMessage(Creature attacker, int damage)
 	{
 		Player owner = getPlayer();
-		owner.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RECEIVED_DAMAGE_OF_S3_FROM_C2).addName(this).addName(attacker).addNumber(damage).addDamage(this, attacker, -damage));
+		owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2).addCharName(this).addCharName(attacker).addInt(damage).addPopup(getId(), attacker.getId(), -damage));
 	}
 	
 	/**

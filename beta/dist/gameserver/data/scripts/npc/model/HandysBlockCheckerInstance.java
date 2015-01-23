@@ -22,6 +22,7 @@ import lineage2.gameserver.network.serverpackets.ExCubeGameChangeTimeToStart;
 import lineage2.gameserver.network.serverpackets.ExCubeGameRequestReady;
 import lineage2.gameserver.network.serverpackets.ExCubeGameTeamList;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
 /**
@@ -93,13 +94,13 @@ public final class HandysBlockCheckerInstance extends NpcInstance
 		{
 			if (eventIsFull(arena))
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_REGISTER_BECAUSE_CAPACITY_HAS_BEEN_EXCEEDED));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_REGISTER_BECAUSE_CAPACITY_HAS_BEEN_EXCEEDED));
 				return;
 			}
 			
 			if (HandysBlockCheckerManager.getInstance().arenaIsBeingUsed(arena))
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.THE_MATCH_IS_BEING_PREPARED_PLEASE_TRY_AGAIN_LATER));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MATCH_IS_BEING_PREPARED_PLEASE_TRY_AGAIN_LATER));
 				return;
 			}
 			

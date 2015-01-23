@@ -22,6 +22,7 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.etcitems.CrystallizationManager;
 import lineage2.gameserver.network.serverpackets.ExGetCrystalizingEstimation;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ItemTemplate.Grade;
 
 /**
@@ -63,7 +64,7 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 		
 		if (player.isInStoreMode())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
@@ -83,7 +84,7 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 		
 		if (item.isHeroWeapon())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.HERO_WEAPONS_CANNOT_BE_DESTROYED));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.HERO_WEAPONS_CANNOT_BE_DESTROYED));
 			return;
 		}
 		
@@ -95,13 +96,13 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 		
 		if (player.isInStoreMode())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
 		if (player.isFishing())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DO_THAT_WHILE_FISHING));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING));
 			return;
 		}
 		
@@ -215,7 +216,7 @@ public class RequestCrystallizeEstimate extends L2GameClientPacket
 		
 		if (!canCrystallize)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.CANNOT_CRYSTALLIZE_CRYSTALLIZATION_SKILL_LEVEL_TOO_LOW));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW));
 			player.sendActionFailed();
 			return;
 		}

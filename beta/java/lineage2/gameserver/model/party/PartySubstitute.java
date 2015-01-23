@@ -29,7 +29,8 @@ import lineage2.gameserver.model.actor.listener.CharListenerList;
 import lineage2.gameserver.model.base.ClassType2;
 import lineage2.gameserver.network.serverpackets.ExWaitWaitingSubStituteInfo;
 import lineage2.gameserver.network.serverpackets.PartySmallWindowUpdate;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.skills.effects.EffectTemplate;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.tables.SkillTable;
@@ -61,7 +62,7 @@ public class PartySubstitute
 	{
 		_waitingParty.add(p);
 		p.sendPacket(new ExWaitWaitingSubStituteInfo(ExWaitWaitingSubStituteInfo.WAITING_OK));
-		p.sendPacket(SystemMsg.STARTED_SEARCHING_THE_PARTY);
+		p.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_REGISTERED_ON_THE_WAITING_LIST));
 	}
 	
 	public boolean isPlayerToParty(Player p)
@@ -73,7 +74,7 @@ public class PartySubstitute
 	{
 		_waitingParty.remove(p);
 		p.sendPacket(new ExWaitWaitingSubStituteInfo(ExWaitWaitingSubStituteInfo.WAITING_CANCEL));
-		p.sendPacket(SystemMsg.STOPPED_SEARCHING_THE_PARTY);
+		p.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.STOPPED_SEARCHING_THE_PARTY));
 	}
 	
 	public void addPlayerToReplace(Player p)

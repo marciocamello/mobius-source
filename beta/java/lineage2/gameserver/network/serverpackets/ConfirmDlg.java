@@ -12,34 +12,64 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
- * @author VISTALL
- * @date 23/03/2011
+ * ConfirmDlg server packet implementation.
+ * @author kombat, UnAfraid
  */
-public class ConfirmDlg extends SysMsgContainer<ConfirmDlg>
+public class ConfirmDlg extends AbstractMessagePacket<ConfirmDlg>
 {
-	private final int _time;
-	private int _requestId;
+	private int _time;
+	private int _requesterId;
 	
-	public ConfirmDlg(SystemMsg msg, int time)
+	public ConfirmDlg(SystemMessageId smId)
 	{
-		super(msg);
+		super(smId);
+	}
+	
+	public ConfirmDlg(int id)
+	{
+		this(SystemMessageId.getSystemMessageId(id));
+	}
+	
+	public ConfirmDlg(String text)
+	{
+		this(SystemMessageId.S13);
+		addString(text);
+	}
+	
+	public ConfirmDlg addTime(int time)
+	{
 		_time = time;
+		return this;
+	}
+	
+	public ConfirmDlg addRequesterId(int id)
+	{
+		_requesterId = id;
+		return this;
+	}
+	
+	@Override
+	protected void writeParamsSize(int size)
+	{
+		writeD(size);
+	}
+	
+	@Override
+	protected void writeParamType(int type)
+	{
+		writeD(type);
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
-		writeC(0xf3);
-		writeElements();
+		writeC(0xF3);
+		writeD(getId());
+		writeMe();
 		writeD(_time);
-		writeD(_requestId);
-	}
-	
-	public void setRequestId(int requestId)
-	{
-		_requestId = requestId;
+		writeD(_requesterId);
 	}
 }

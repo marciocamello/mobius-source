@@ -29,9 +29,9 @@ import lineage2.gameserver.model.entity.events.objects.DuelSnapshotObject;
 import lineage2.gameserver.network.serverpackets.ExDuelStart;
 import lineage2.gameserver.network.serverpackets.ExDuelUpdateUserInfo;
 import lineage2.gameserver.network.serverpackets.PlaySound;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -150,7 +150,7 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 	public void startEvent()
 	{
 		updatePlayers(true, false);
-		sendPackets(new ExDuelStart(this), PlaySound.B04_S01, SystemMsg.LET_THE_DUEL_BEGIN);
+		sendPackets(new ExDuelStart(this), PlaySound.B04_S01, SystemMessage.getSystemMessage(SystemMessageId.LET_THE_DUEL_BEGIN));
 		
 		for (DuelSnapshotObject $snapshot : this)
 		{
@@ -220,55 +220,55 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 		
 		if (target.isInCombat())
 		{
-			packet = new SystemMessage2(SystemMsg.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_BATTLE).addName(target);
+			packet = SystemMessage.getSystemMessage(SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_BATTLE).addPcName(target);
 		}
 		else if (target.isDead() || target.isAlikeDead() || (target.getCurrentHpPercents() < 50) || (target.getCurrentMpPercents() < 50) || (target.getCurrentCpPercents() < 50))
 		{
-			packet = new SystemMessage2(SystemMsg.C1_CANNOT_DUEL_BECAUSE_C1S_HP_OR_MP_IS_BELOW_50).addName(target);
+			packet = SystemMessage.getSystemMessage(SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_S_HP_OR_MP_IS_BELOW_50).addPcName(target);
 		}
 		else if (target.getEvent(DuelEvent.class) != null)
 		{
-			packet = new SystemMessage2(SystemMsg.C1_CANNOT_DUEL_BECAUSE_C1_IS_ALREADY_ENGAGED_IN_A_DUEL).addName(target);
+			packet = SystemMessage.getSystemMessage(SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_ALREADY_ENGAGED_IN_A_DUEL).addPcName(target);
 		}
 		else if ((target.getEvent(ClanHallSiegeEvent.class) != null) || (target.getEvent(ClanHallNpcSiegeEvent.class) != null))
 		{
-			packet = new SystemMessage2(SystemMsg.C1_CANNOT_DUEL_BECAUSE_C1_IS_PARTICIPATING_IN_A_CLAN_HALL_WAR).addName(target);
+			packet = SystemMessage.getSystemMessage(SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_PARTICIPATING_IN_A_CLAN_HALL_WAR).addPcName(target);
 		}
 		else if (target.getEvent(SiegeEvent.class) != null)
 		{
-			packet = new SystemMessage2(SystemMsg.C1_CANNOT_DUEL_BECAUSE_C1_IS_PARTICIPATING_IN_A_SIEGE_WAR).addName(target);
+			packet = SystemMessage.getSystemMessage(SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_PARTICIPATING_IN_A_SIEGE_WAR).addPcName(target);
 		}
 		else if (target.isInOlympiadMode())
 		{
-			packet = new SystemMessage2(SystemMsg.C1_CANNOT_DUEL_BECAUSE_C1_IS_PARTICIPATING_IN_THE_OLYMPIAD).addName(target);
+			packet = SystemMessage.getSystemMessage(SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_PARTICIPATING_IN_THE_OLYMPIAD_OR_THE_CEREMONY_OF_CHAOS).addPcName(target);
 		}
 		else if (target.isCursedWeaponEquipped() || (target.isChaotic()) || (target.getPvpFlag() > 0))
 		{
-			packet = new SystemMessage2(SystemMsg.C1_CANNOT_DUEL_BECAUSE_C1_IS_IN_A_CHAOTIC_STATE).addName(target);
+			packet = SystemMessage.getSystemMessage(SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_IN_A_CHAOTIC_OR_PURPLE_STATE).addPcName(target);
 		}
 		else if (target.isInStoreMode())
 		{
-			packet = new SystemMessage2(SystemMsg.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_A_PRIVATE_STORE_OR_MANUFACTURE).addName(target);
+			packet = SystemMessage.getSystemMessage(SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_A_PRIVATE_STORE_OR_MANUFACTURE).addPcName(target);
 		}
 		else if (target.isMounted() || target.isInBoat())
 		{
-			packet = new SystemMessage2(SystemMsg.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_RIDING_A_BOAT_STEED_OR_STRIDER).addName(target);
+			packet = SystemMessage.getSystemMessage(SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_RIDING_A_BOAT_FENRIR_OR_STRIDER).addPcName(target);
 		}
 		else if (target.isFishing())
 		{
-			packet = new SystemMessage2(SystemMsg.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_FISHING).addName(target);
+			packet = SystemMessage.getSystemMessage(SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_FISHING).addPcName(target);
 		}
 		else if (target.isInCombatZone() || target.isInPeaceZone() || target.isInWater() || target.isInZone(Zone.ZoneType.NoRestart))
 		{
-			packet = new SystemMessage2(SystemMsg.C1_CANNOT_MAKE_A_CHALLENGE_TO_A_DUEL_BECAUSE_C1_IS_CURRENTLY_IN_A_DUELPROHIBITED_AREA_PEACEFUL_ZONE__SEVEN_SIGNS_ZONE__NEAR_WATER__RESTART_PROHIBITED_AREA).addName(target);
+			packet = SystemMessage.getSystemMessage(SystemMessageId.C1_CANNOT_MAKE_A_CHALLENGE_TO_A_DUEL_BECAUSE_C1_IS_CURRENTLY_IN_A_DUEL_PROHIBITED_AREA_PEACEFUL_ZONE_BATTLE_ZONE_NEAR_WATER_RESTART_PROHIBITED_AREA).addPcName(target);
 		}
 		else if (!requestor.isInRangeZ(target, 1200))
 		{
-			packet = new SystemMessage2(SystemMsg.C1_CANNOT_RECEIVE_A_DUEL_CHALLENGE_BECAUSE_C1_IS_TOO_FAR_AWAY).addName(target);
+			packet = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_TOO_FAR_AWAY_TO_RECEIVE_A_DUEL_CHALLENGE).addPcName(target);
 		}
 		else if (target.getTransformation() != 0)
 		{
-			packet = new SystemMessage2(SystemMsg.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_POLYMORPHED).addName(target);
+			packet = SystemMessage.getSystemMessage(SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_POLYMORPHED).addPcName(target);
 		}
 		
 		return packet;
@@ -313,18 +313,18 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 	 * @return SystemMsg
 	 */
 	@Override
-	public SystemMsg checkForAttack(Creature target, Creature attacker, Skill skill, boolean force)
+	public SystemMessage checkForAttack(Creature target, Creature attacker, Skill skill, boolean force)
 	{
 		if ((target.getTeam() == TeamType.NONE) || (attacker.getTeam() == TeamType.NONE) || (target.getTeam() == attacker.getTeam()))
 		{
-			return SystemMsg.INVALID_TARGET;
+			return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 		}
 		
 		DuelEvent duelEvent = target.getEvent(DuelEvent.class);
 		
 		if ((duelEvent == null) || (duelEvent != this))
 		{
-			return SystemMsg.INVALID_TARGET;
+			return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 		}
 		
 		return null;
@@ -378,7 +378,8 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 	
 	/**
 	 * Method iterator.
-	 * @return Iterator<DuelSnapshotObject> * @see java.lang.Iterable#iterator()
+	 * @return Iterator<DuelSnapshotObject>
+	 * @see java.lang.Iterable#iterator()
 	 */
 	@Override
 	public Iterator<DuelSnapshotObject> iterator()
@@ -400,11 +401,11 @@ public abstract class DuelEvent extends GlobalEvent implements Iterable<DuelSnap
 	
 	/**
 	 * Method announce.
-	 * @param i int
+	 * @param seconds int
 	 */
 	@Override
-	public void announce(int i)
+	public void announce(int seconds)
 	{
-		sendPacket(new SystemMessage2(SystemMsg.THE_DUEL_WILL_BEGIN_IN_S1_SECONDS).addInteger(i));
+		sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_DUEL_WILL_BEGIN_IN_S1_SECOND_S).addInt(seconds));
 	}
 }

@@ -21,7 +21,7 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExRotation;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import quests.Q10365_SeekerEscort;
 
@@ -31,7 +31,7 @@ import quests.Q10365_SeekerEscort;
  */
 public final class SeekerEscort extends DefaultAI
 {
-	// private final static NpcString SeekerEscort_STRING = NpcString.RUFF_RUFF_RRRRRR;
+	// private final static NpcStringId SeekerEscort_STRING = NpcStringId.RUFF_RUFF_RRRRRR;
 	
 	private static final int SAY_INTERVAL = 3000;
 	private static final int SAY_RAFF = 50000;
@@ -127,14 +127,14 @@ public final class SeekerEscort extends DefaultAI
 			st.set("seeksp", 0);
 			st.set("zone", 1);
 			st.unset("saytimes");
-			target.sendPacket(new ExShowScreenMessage(NpcString.KING_HAS_RETURNED_TO_DEF_RETURN_TO_DEF_AND_START_AGAIN, 5500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
+			target.sendPacket(new ExShowScreenMessage(NpcStringId.KING_HAS_RETURNED_TO_DEF_RETURN_TO_DEF_AND_START_AGAIN, 5500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
 			return false;
 		}
 		
 		if ((lastSayTimer + SAY_RAFF) < System.currentTimeMillis())
 		{
 			lastSayTimer = System.currentTimeMillis();
-			Functions.npcSay(actor, NpcString.RUFF_RUFF_RRRRRR, ChatType.NPC_ALL, 800, st.getPlayer().getName());
+			Functions.npcSay(actor, NpcStringId.RUFF_RUFF_RRRRRR, ChatType.NPC_ALL, 800, st.getPlayer().getName());
 		}
 		
 		if (zone == 1)
@@ -166,7 +166,7 @@ public final class SeekerEscort extends DefaultAI
 				actor.setHeading(heading);
 				actor.broadcastPacket(new ExRotation(actor.getObjectId(), heading));
 				lastSayTime = System.currentTimeMillis();
-				target.sendPacket(new ExShowScreenMessage(NpcString.CATCH_UP_TO_KING_HES_WAITING, 1500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
+				target.sendPacket(new ExShowScreenMessage(NpcStringId.CATCH_UP_TO_KING_HE_S_WAITING, 1500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
 				st.set("saytimes", ++saytimes);
 			}
 		}
@@ -175,7 +175,7 @@ public final class SeekerEscort extends DefaultAI
 			if ((actor.getDistance(target) >= 100) && ((lastSayTime + SAY_INTERVAL) < System.currentTimeMillis()))
 			{
 				lastSayTime = System.currentTimeMillis();
-				target.sendPacket(new ExShowScreenMessage(NpcString.YOU_MUST_MOVE_TO_EXPLORATION_AREA_5_IN_ORDER_TO_CONTINUE, 2000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
+				target.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_MUST_MOVE_TO_EXPLORATION_AREA_5_IN_ORDER_TO_CONTINUE, 2000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
 				st.set("saytimes", ++saytimes);
 			}
 			else if (actor.getDistance(target) < 100)
@@ -215,7 +215,7 @@ public final class SeekerEscort extends DefaultAI
 				actor.setHeading(heading);
 				actor.broadcastPacket(new ExRotation(actor.getObjectId(), heading));
 				lastSayTime = System.currentTimeMillis();
-				target.sendPacket(new ExShowScreenMessage(NpcString.CATCH_UP_TO_KING_HES_WAITING, 1500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
+				target.sendPacket(new ExShowScreenMessage(NpcStringId.CATCH_UP_TO_KING_HE_S_WAITING, 1500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
 				st.set("saytimes", ++saytimes);
 			}
 		}

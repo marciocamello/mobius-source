@@ -16,7 +16,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
 import org.slf4j.Logger;
@@ -91,15 +91,15 @@ public class MammonsInstance extends NpcInstance
 					
 					if ((ancientAdenaAmount < ancientAdenaConvert) || (ancientAdenaConvert < 1))
 					{
-						player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 						return;
 					}
 					
 					if (player.getInventory().destroyItemByItemId(ANCIENT_ADENA_ID, ancientAdenaConvert))
 					{
 						player.addAdena(ancientAdenaConvert);
-						player.sendPacket(SystemMessage2.removeItems(ANCIENT_ADENA_ID, ancientAdenaConvert));
-						player.sendPacket(SystemMessage2.obtainItems(57, ancientAdenaConvert, 0));
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED).addItemName(ANCIENT_ADENA_ID).addLong(ancientAdenaConvert));
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA).addLong(ancientAdenaConvert));
 					}
 					break;
 				

@@ -19,7 +19,7 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.TutorialShowHtml;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
@@ -161,7 +161,7 @@ public class Q10322_SearchingForTheMysteriousPower extends Quest implements Scri
 				else if (cond == 6)
 				{
 					htmltext = "1-5.htm";
-					Functions.npcSayToPlayer(npc, qs.getPlayer(), NpcString.WEAPONS_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ChatType.NPC_ALL);
+					Functions.npcSayToPlayer(npc, qs.getPlayer(), NpcStringId.WEAPONS_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, ChatType.NPC_ALL);
 					qs.getPlayer().addExpAndSp(300, 800);
 					qs.giveItems(57, 69);
 					qs.giveItems(17, 500);
@@ -221,7 +221,7 @@ public class Q10322_SearchingForTheMysteriousPower extends Quest implements Scri
 	{
 		soldierg = NpcUtils.spawnSingle(Soldier, Location.findPointToStay(SOLDIER_START_POINT[0], SOLDIER_START_POINT[1], SOLDIER_START_POINT[2], 50, 100, qs.getPlayer().getGeoIndex()));
 		soldierg.setFollowTarget(qs.getPlayer());
-		Functions.npcSay(soldierg, NpcString.S1_COME_WITH_ME_I_WILL_LEAD_YOU_TO_IBANE, ChatType.NPC_ALL, 800, qs.getPlayer().getName());
+		Functions.npcSay(soldierg, NpcStringId.S1_COME_WITH_ME_I_WILL_LEAD_YOU_TO_IBANE, ChatType.NPC_ALL, 800, qs.getPlayer().getName());
 	}
 	
 	private void despawnsoldier()

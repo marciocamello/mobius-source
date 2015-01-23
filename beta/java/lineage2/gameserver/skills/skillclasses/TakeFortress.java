@@ -25,8 +25,8 @@ import lineage2.gameserver.model.entity.events.objects.FortressCombatFlagObject;
 import lineage2.gameserver.model.entity.events.objects.StaticObjectObject;
 import lineage2.gameserver.model.instances.StaticObjectInstance;
 import lineage2.gameserver.model.items.attachment.ItemAttachment;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 
 /**
@@ -70,7 +70,7 @@ public class TakeFortress extends Skill
 		
 		if (!(flagPole instanceof StaticObjectInstance) || (((StaticObjectInstance) flagPole).getType() != 3))
 		{
-			activeChar.sendPacket(SystemMsg.THE_TARGET_IS_NOT_A_FLAGPOLE_SO_A_FLAG_CANNOT_BE_DISPLAYED);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_TARGET_IS_NOT_A_FLAGPOLE_SO_A_FLAG_CANNOT_BE_DISPLAYED));
 			return false;
 		}
 		
@@ -82,7 +82,7 @@ public class TakeFortress extends Skill
 			{
 				if (ch.isCastingNow() && (ch.getCastingSkill() == this))
 				{
-					activeChar.sendPacket(SystemMsg.A_FLAG_IS_ALREADY_BEING_DISPLAYED_ANOTHER_FLAG_CANNOT_BE_DISPLAYED);
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_FLAG_IS_ALREADY_BEING_DISPLAYED_ANOTHER_FLAG_CANNOT_BE_DISPLAYED));
 					return false;
 				}
 			}
@@ -92,7 +92,7 @@ public class TakeFortress extends Skill
 		
 		if (player.getClan() == null)
 		{
-			activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
 			return false;
 		}
 		
@@ -100,13 +100,13 @@ public class TakeFortress extends Skill
 		
 		if (siegeEvent == null)
 		{
-			activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
 			return false;
 		}
 		
 		if (player.isMounted())
 		{
-			activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
 			return false;
 		}
 		
@@ -114,19 +114,19 @@ public class TakeFortress extends Skill
 		
 		if (!(attach instanceof FortressCombatFlagObject) || (((FortressCombatFlagObject) attach).getEvent() != siegeEvent))
 		{
-			activeChar.sendPacket(new SystemMessage2(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
 			return false;
 		}
 		
 		if (!player.isInRangeZ(target, getCastRange()))
 		{
-			player.sendPacket(SystemMsg.YOUR_TARGET_IS_OUT_OF_RANGE);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE));
 			return false;
 		}
 		
 		if (first)
 		{
-			siegeEvent.broadcastTo(new SystemMessage2(SystemMsg.S1_CLAN_IS_TRYING_TO_DISPLAY_A_FLAG).addString(player.getClan().getName()), SiegeEvent.DEFENDERS);
+			siegeEvent.broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.S1_CLAN_IS_TRYING_TO_DISPLAY_A_FLAG).addString(player.getClan().getName()), SiegeEvent.DEFENDERS);
 		}
 		
 		return true;

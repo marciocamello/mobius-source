@@ -18,6 +18,7 @@ import java.util.StringTokenizer;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
@@ -61,13 +62,13 @@ public final class MoonlightTombstoneInstance extends NpcInstance
 		{
 			if (player.getParty() == null)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER));
 				return;
 			}
 			
 			if (!player.getParty().isLeader(player))
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.ONLY_A_PARTY_LEADER_CAN_TRY_TO_ENTER));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
 				return;
 			}
 			
@@ -93,7 +94,7 @@ public final class MoonlightTombstoneInstance extends NpcInstance
 				Functions.removeItem(player, KEY_ID, 1);
 				player.getReflection().startCollapseTimer(COLLAPSE_TIME * 60 * 1000L);
 				_activated = true;
-				broadcastPacketToOthers(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(COLLAPSE_TIME));
+				broadcastPacketToOthers(SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES).addLong(COLLAPSE_TIME));
 				player.getReflection().setCoreLoc(player.getReflection().getReturnLoc());
 				player.getReflection().setReturnLoc(new Location(16280, 283448, -9704));
 				Functions.show("default/32343-1.htm", player, this);

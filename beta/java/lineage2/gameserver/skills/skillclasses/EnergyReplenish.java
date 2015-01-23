@@ -19,8 +19,8 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 
 /**
@@ -68,7 +68,7 @@ public class EnergyReplenish extends Skill
 		
 		if ((item == null) || ((item.getTemplate().getAgathionEnergy() - item.getAgathionEnergy()) < _addEnergy))
 		{
-			player.sendPacket(SystemMsg.YOUR_ENERGY_CANNOT_BE_REPLENISHED_BECAUSE_CONDITIONS_ARE_NOT_MET);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_REPLENISH_ENERGY_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 			return false;
 		}
 		
@@ -86,7 +86,7 @@ public class EnergyReplenish extends Skill
 		for (Creature cha : targets)
 		{
 			cha.setAgathionEnergy(cha.getAgathionEnergy() + _addEnergy);
-			cha.sendPacket(new SystemMessage2(SystemMsg.ENERGY_S1_REPLENISHED).addInteger(_addEnergy));
+			cha.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ENERGY_WAS_REPLENISHED_BY_S1).addInt(_addEnergy));
 		}
 	}
 }

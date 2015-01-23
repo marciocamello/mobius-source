@@ -17,7 +17,7 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10330_ToTheRuinsOfYeSagira extends Quest implements ScriptFile
@@ -49,7 +49,7 @@ public class Q10330_ToTheRuinsOfYeSagira extends Quest implements ScriptFile
 				break;
 			
 			case "6.htm":
-				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ARMOR_HAS_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
+				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.ARMOR_HAS_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
 				qs.giveItems(57, 619);
 				qs.giveItems(29, 1);
 				qs.giveItems(22, 1);

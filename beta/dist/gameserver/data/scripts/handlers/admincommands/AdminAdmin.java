@@ -33,6 +33,7 @@ import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.PlaySound;
 import lineage2.gameserver.network.serverpackets.PlaySound.Type;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.stats.Stats;
@@ -126,7 +127,7 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 					{
 						activeChar.unsetVar("gm_silence");
 						activeChar.setMessageRefusal(false);
-						activeChar.sendPacket(new SystemMessage(SystemMessage.MESSAGE_ACCEPTANCE_MODE));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MESSAGE_ACCEPTANCE_MODE));
 						activeChar.sendEtcStatusUpdate();
 					}
 					else
@@ -137,7 +138,7 @@ public class AdminAdmin implements IAdminCommandHandler, ScriptFile
 						}
 						
 						activeChar.setMessageRefusal(true);
-						activeChar.sendPacket(new SystemMessage(SystemMessage.MESSAGE_REFUSAL_MODE));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MESSAGE_REFUSAL_MODE));
 						activeChar.sendEtcStatusUpdate();
 					}
 					break;

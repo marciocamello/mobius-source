@@ -16,7 +16,7 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
@@ -107,36 +107,36 @@ public class HeraSubAI extends DefaultAI
 			return;
 		}
 		
-		NpcString ns;
+		NpcStringId ns;
 		
 		switch (Rnd.get(7))
 		{
 			case 1:
-				ns = NpcString.WHY_HAVE_THE_HEROES_ABANDONED_US;
+				ns = NpcStringId.WHY_HAVE_THE_HEROES_ABANDONED_US;
 				break;
 			
 			case 2:
-				ns = NpcString.WHY_HAVE_THE_HEROES_ABANDONED_US;
+				ns = NpcStringId.WHY_HAVE_THE_HEROES_ABANDONED_US;
 				break;
 			
 			case 3:
-				ns = NpcString.WHY_HAVE_THE_HEROES_ABANDONED_US;
+				ns = NpcStringId.WHY_HAVE_THE_HEROES_ABANDONED_US;
 				break;
 			
 			case 4:
-				ns = NpcString.WHY_HAVE_THE_HEROES_ABANDONED_US;
+				ns = NpcStringId.WHY_HAVE_THE_HEROES_ABANDONED_US;
 				break;
 			
 			case 5:
-				ns = NpcString.WHY_HAVE_THE_HEROES_ABANDONED_US;
+				ns = NpcStringId.WHY_HAVE_THE_HEROES_ABANDONED_US;
 				break;
 			
 			case 6:
-				ns = NpcString.WHY_HAVE_THE_HEROES_ABANDONED_US;
+				ns = NpcStringId.WHY_HAVE_THE_HEROES_ABANDONED_US;
 				break;
 			
 			default:
-				ns = NpcString.WHY_HAVE_THE_HEROES_ABANDONED_US;
+				ns = NpcStringId.WHY_HAVE_THE_HEROES_ABANDONED_US;
 				break;
 		}
 		

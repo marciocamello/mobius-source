@@ -18,7 +18,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 
@@ -214,13 +214,13 @@ public class Q00463_IMustBeAGenius extends Quest implements ScriptFile
 			{
 				qs.giveItems(CORPSE_LOG, _number);
 				qs.playSound(SOUND_ITEMGET);
-				Functions.npcSay(npc, NpcString.ATT__ATTACK__S1__RO__ROGUE__S2, qs.getPlayer().getName(), String.valueOf(_number));
+				Functions.npcSay(npc, NpcStringId.ATT_ATTACK_S1_RO_ROGUE_S2, qs.getPlayer().getName(), String.valueOf(_number));
 			}
 			else if ((_number < 0) && ((qs.getQuestItemsCount(CORPSE_LOG) + _number) > 0))
 			{
 				qs.takeItems(CORPSE_LOG, Math.abs(_number));
 				qs.playSound(SOUND_ITEMGET);
-				Functions.npcSay(npc, NpcString.ATT__ATTACK__S1__RO__ROGUE__S2, qs.getPlayer().getName(), String.valueOf(_number));
+				Functions.npcSay(npc, NpcStringId.ATT_ATTACK_S1_RO_ROGUE_S2, qs.getPlayer().getName(), String.valueOf(_number));
 			}
 			
 			if (qs.getQuestItemsCount(CORPSE_LOG) >= _day_number)

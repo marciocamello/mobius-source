@@ -15,7 +15,7 @@ package ai.GuillotineFortress;
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -48,12 +48,12 @@ public final class GuillotineNpcInvestigator extends GuillotineNpcPriest
 		switch (timerId)
 		{
 			case 1:
-				Functions.npcSayInRange(getActor(), 1000, NpcString.NOTHING_COMES_OUT_NEITHER_FROM_INSIDE_OR_OUSIDE);
+				Functions.npcSayInRange(getActor(), 1000, NpcStringId.NOTHING_COMES_OUT_NEITHER_FROM_INSIDE_OR_OUTSIDE);
 				addTimer(2, 3000);
 				break;
 			
 			case 2:
-				Functions.npcSayInRange(getActor(), 1000, NpcString.AS_IT_DIDNT_EXIST);
+				Functions.npcSayInRange(getActor(), 1000, NpcStringId.AS_IT_DIDN_T_EXIST);
 				addTimer(3, 3000);
 				break;
 			
@@ -63,7 +63,7 @@ public final class GuillotineNpcInvestigator extends GuillotineNpcPriest
 				break;
 			
 			case 4:
-				Functions.npcSayInRange(getActor(), 1000, NpcString.SHOULD_VE_REPORT_IT_TO_THE_KINGDOM);
+				Functions.npcSayInRange(getActor(), 1000, NpcStringId.SHOULD_WE_REPORT_IT_TO_THE_KINGDOM);
 				addTimer(5, 3000);
 				break;
 			
@@ -78,7 +78,7 @@ public final class GuillotineNpcInvestigator extends GuillotineNpcPriest
 				break;
 			
 			case 7:
-				Functions.npcSayInRange(getActor(), 1000, NpcString.PLEASE_33381);
+				Functions.npcSayInRange(getActor(), 1000, NpcStringId.PLEASE);
 				addTimer(8, 3000);
 				break;
 		}

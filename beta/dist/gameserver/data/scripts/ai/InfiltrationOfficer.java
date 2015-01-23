@@ -24,7 +24,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.NpcSay;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.utils.Location;
 
 /**
@@ -239,7 +239,7 @@ public final class InfiltrationOfficer extends Guard implements OnAttackListener
 			
 			if ((System.currentTimeMillis() - lastOfficerSay) > 3000)
 			{
-				actor.broadcastPacket(new NpcSay(actor, ChatType.ALL, NpcString.DONT_COME_BACK_HERE));
+				actor.broadcastPacket(new NpcSay(actor, ChatType.ALL, NpcStringId.DON_T_COME_BACK_HERE));
 				lastOfficerSay = System.currentTimeMillis();
 			}
 		}
@@ -257,7 +257,7 @@ public final class InfiltrationOfficer extends Guard implements OnAttackListener
 	{
 		if (getActor().getFollowTarget() != null)
 		{
-			getActor().getFollowTarget().sendPacket(new ExShowScreenMessage(NpcString.IF_TERAIN_DIES_MISSION_WILL_FAIL, 3000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, true));
+			getActor().getFollowTarget().sendPacket(new ExShowScreenMessage(NpcStringId.IF_TERAIN_DIES_THE_MISSION_WILL_FAIL, 3000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, true));
 		}
 	}
 }

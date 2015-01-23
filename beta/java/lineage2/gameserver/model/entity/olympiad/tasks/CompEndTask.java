@@ -19,6 +19,7 @@ import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.entity.olympiad.OlympiadDatabase;
 import lineage2.gameserver.model.entity.olympiad.OlympiadManager;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -54,7 +55,7 @@ public class CompEndTask extends RunnableImpl
 				return;
 			}
 			
-			Announcements.getInstance().announceToAll(new SystemMessage(SystemMessage.THE_OLYMPIAD_GAME_HAS_ENDED));
+			Announcements.getInstance().announceToAll(SystemMessage.getSystemMessage(SystemMessageId.MUCH_CARNAGE_HAS_BEEN_LEFT_FOR_THE_CLEANUP_CREW_OF_THE_OLYMPIAD_STADIUM_BATTLES_IN_THE_OLYMPIAD_GAMES_ARE_NOW_OVER));
 			_log.info("Olympiad System: Olympiad Game Ended");
 			OlympiadDatabase.save();
 		}

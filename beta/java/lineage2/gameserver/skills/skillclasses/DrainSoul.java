@@ -16,7 +16,8 @@ import java.util.List;
 
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Skill;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 
 /**
@@ -48,7 +49,7 @@ public class DrainSoul extends Skill
 	{
 		if (!target.isMonster())
 		{
-			activeChar.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 			return false;
 		}
 		

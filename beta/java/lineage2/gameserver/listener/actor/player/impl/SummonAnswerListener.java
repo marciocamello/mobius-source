@@ -15,8 +15,8 @@ package lineage2.gameserver.listener.actor.player.impl;
 import lineage2.commons.lang.reference.HardReference;
 import lineage2.gameserver.listener.actor.player.OnAnswerListener;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.Location;
 
 /**
@@ -64,12 +64,19 @@ public class SummonAnswerListener implements OnAnswerListener
 		{
 			if (player.getInventory().destroyItemByItemId(8615, _count))
 			{
-				player.sendPacket(SystemMessage2.removeItems(8615, _count));
+				if (_count > 1)
+				{
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED).addItemName(8615).addLong(_count));
+				}
+				else
+				{
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED).addItemName(8615));
+				}
 				player.teleToLocation(_location);
 			}
 			else
 			{
-				player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 			}
 		}
 		else

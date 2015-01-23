@@ -17,7 +17,7 @@ import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -116,7 +116,7 @@ public final class EssagirWarriors extends DefaultAI
 		if ((lastSayTimer + SAY_RAFF) < System.currentTimeMillis())
 		{
 			lastSayTimer = System.currentTimeMillis();
-			Functions.npcSay(actor, NpcString.IT_S_HERE, ChatType.NPC_ALL, 800);
+			Functions.npcSay(actor, NpcStringId.IT_S_HERE, ChatType.NPC_ALL, 800);
 		}
 		
 		return true;

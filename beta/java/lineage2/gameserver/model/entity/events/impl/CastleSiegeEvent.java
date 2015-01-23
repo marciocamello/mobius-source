@@ -45,8 +45,8 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.UnitMember;
 import lineage2.gameserver.network.serverpackets.PlaySound;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.support.MerchantGuard;
 import lineage2.gameserver.utils.Location;
 
@@ -178,7 +178,7 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 		if (!_firstStep)
 		{
 			_firstStep = true;
-			broadcastTo(SystemMsg.THE_TEMPORARY_ALLIANCE_OF_THE_CASTLE_ATTACKER_TEAM_HAS_BEEN_DISSOLVED, ATTACKERS, DEFENDERS);
+			broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_TEMPORARY_ALLIANCE_OF_THE_CASTLE_ATTACKER_TEAM_HAS_BEEN_DISSOLVED), ATTACKERS, DEFENDERS);
 			
 			if (_oldOwner != null)
 			{
@@ -236,11 +236,11 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 		{
 			if (_oldOwner == null)
 			{
-				broadcastToWorld(new SystemMessage2(SystemMsg.THE_SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST).addResidenceName(getResidence()));
+				broadcastToWorld(SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST).addCastleId(getResidence().getId()));
 			}
 			else
 			{
-				broadcastToWorld(new SystemMessage2(SystemMsg.S1S_SIEGE_WAS_CANCELED_BECAUSE_THERE_WERE_NO_CLANS_THAT_PARTICIPATED).addResidenceName(getResidence()));
+				broadcastToWorld(SystemMessage.getSystemMessage(SystemMessageId.S1_S_SIEGE_WAS_CANCELED_BECAUSE_THERE_WERE_NO_CLANS_THAT_PARTICIPATED).addCastleId(getResidence().getId()));
 			}
 			
 			reCalcNextTime(false);
@@ -249,8 +249,8 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 		
 		SiegeClanDAO.getInstance().delete(getResidence());
 		updateParticles(true, ATTACKERS, DEFENDERS);
-		broadcastTo(SystemMsg.THE_TEMPORARY_ALLIANCE_OF_THE_CASTLE_ATTACKER_TEAM_IS_IN_EFFECT, ATTACKERS);
-		broadcastTo(new SystemMessage2(SystemMsg.YOU_ARE_PARTICIPATING_IN_THE_SIEGE_OF_S1_THIS_SIEGE_IS_SCHEDULED_FOR_2_HOURS).addResidenceName(getResidence()), ATTACKERS, DEFENDERS);
+		broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_TEMPORARY_ALLIANCE_OF_THE_CASTLE_ATTACKER_TEAM_IS_IN_EFFECT_IT_WILL_BE_DISSOLVED_WHEN_THE_CASTLE_LORD_IS_REPLACED), ATTACKERS);
+		broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_PARTICIPATING_IN_THE_SIEGE_OF_S1_THIS_SIEGE_IS_SCHEDULED_FOR_2_HOURS).addCastleId(getResidence().getId()), ATTACKERS, DEFENDERS);
 		super.startEvent();
 		
 		if (_oldOwner == null)
@@ -282,7 +282,7 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 			siegeClan.deleteFlag();
 		}
 		
-		broadcastToWorld(new SystemMessage2(SystemMsg.THE_SIEGE_OF_S1_IS_FINISHED).addResidenceName(getResidence()));
+		broadcastToWorld(SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_IS_FINISHED).addCastleId(getResidence().getId()));
 		removeObjects(DEFENDERS);
 		removeObjects(DEFENDERS_WAITING);
 		removeObjects(DEFENDERS_REFUSED);
@@ -293,16 +293,16 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 			if (_oldOwner == ownerClan)
 			{
 				getResidence().setRewardCount(getResidence().getRewardCount() + 1);
-				ownerClan.broadcastToOnlineMembers(new SystemMessage2(SystemMsg.SINCE_YOUR_CLAN_EMERGED_VICTORIOUS_FROM_THE_SIEGE_S1_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLANS_REPUTATION_SCORE).addInteger(ownerClan.incReputation(1500, false, toString())));
+				ownerClan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.SINCE_YOUR_CLAN_EMERGED_VICTORIOUS_FROM_THE_SIEGE_S1_POINT_S_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION).addInt(ownerClan.incReputation(1500, false, toString())));
 			}
 			else
 			{
-				broadcastToWorld(new SystemMessage2(SystemMsg.CLAN_S1_IS_VICTORIOUS_OVER_S2S_CASTLE_SIEGE).addString(ownerClan.getName()).addResidenceName(getResidence()));
-				ownerClan.broadcastToOnlineMembers(new SystemMessage2(SystemMsg.SINCE_YOUR_CLAN_EMERGED_VICTORIOUS_FROM_THE_SIEGE_S1_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLANS_REPUTATION_SCORE).addInteger(ownerClan.incReputation(3000, false, toString())));
+				broadcastToWorld(SystemMessage.getSystemMessage(SystemMessageId.CLAN_S1_IS_VICTORIOUS_OVER_S2_S_CASTLE_SIEGE).addString(ownerClan.getName()).addCastleId(getResidence().getId()));
+				ownerClan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.SINCE_YOUR_CLAN_EMERGED_VICTORIOUS_FROM_THE_SIEGE_S1_POINT_S_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION).addInt(ownerClan.incReputation(3000, false, toString())));
 				
 				if (_oldOwner != null)
 				{
-					_oldOwner.broadcastToOnlineMembers(new SystemMessage2(SystemMsg.YOUR_CLAN_HAS_FAILED_TO_DEFEND_THE_CASTLE_S1_POINTS_HAVE_BEEN_DEDUCTED_FROM_YOU_CLAN_REPUTATION_SCORE_AND_ADDED_TO_YOUR_OPPONENTS).addInteger(-_oldOwner.incReputation(-3000, false, toString())));
+					_oldOwner.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_FAILED_TO_DEFEND_THE_CASTLE_S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_YOUR_CLAN_REPUTATION_AND_ADDED_TO_YOUR_OPPONENTS).addInt(-_oldOwner.incReputation(-3000, false, toString())));
 				}
 				
 				for (UnitMember member : ownerClan)
@@ -328,7 +328,7 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 		else
 		{
 			
-			broadcastToWorld(new SystemMessage2(SystemMsg.THE_SIEGE_OF_S1_HAS_ENDED_IN_A_DRAW).addResidenceName(getResidence()));
+			broadcastToWorld(SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_ENDED_IN_A_DRAW).addCastleId(getResidence().getId()));
 			getResidence().getOwnDate().setTimeInMillis(0);
 			getResidence().getLastSiegeDate().setTimeInMillis(0);
 			
@@ -406,7 +406,7 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 	{
 		if (b)
 		{
-			broadcastToWorld(new SystemMessage2(SystemMsg.THE_DEADLINE_TO_REGISTER_FOR_THE_SIEGE_OF_S1_HAS_PASSED).addResidenceName(getResidence()));
+			broadcastToWorld(SystemMessage.getSystemMessage(SystemMessageId.THE_DEADLINE_TO_REGISTER_FOR_THE_SIEGE_OF_S1_HAS_PASSED).addCastleId(getResidence().getId()));
 		}
 		
 		super.setRegistrationOver(b);
@@ -415,21 +415,21 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 	@Override
 	public void announce(int val)
 	{
-		SystemMessage2 msg;
+		SystemMessage msg;
 		int min = val / 60;
 		int hour = min / 60;
 		
 		if (hour > 0)
 		{
-			msg = new SystemMessage2(SystemMsg.S1_HOURS_UNTIL_CASTLE_SIEGE_CONCLUSION).addInteger(hour);
+			msg = SystemMessage.getSystemMessage(SystemMessageId.S1_HOUR_S_UNTIL_CASTLE_SIEGE_CONCLUSION).addInt(hour);
 		}
 		else if (min > 0)
 		{
-			msg = new SystemMessage2(SystemMsg.S1_MINUTES_UNTIL_CASTLE_SIEGE_CONCLUSION).addInteger(min);
+			msg = SystemMessage.getSystemMessage(SystemMessageId.S1_MINUTE_S_UNTIL_CASTLE_SIEGE_CONCLUSION).addInt(min);
 		}
 		else
 		{
-			msg = new SystemMessage2(SystemMsg.THIS_CASTLE_SIEGE_WILL_END_IN_S1_SECONDS).addInteger(val);
+			msg = SystemMessage.getSystemMessage(SystemMessageId.THIS_CASTLE_SIEGE_WILL_END_IN_S1_SECOND_S).addInt(val);
 		}
 		
 		broadcastTo(msg, ATTACKERS, DEFENDERS);
@@ -540,7 +540,7 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 	
 	private void setNextSiegeTime(long g)
 	{
-		broadcastToWorld(new SystemMessage2(SystemMsg.S1_HAS_ANNOUNCED_THE_NEXT_CASTLE_SIEGE_TIME).addResidenceName(getResidence()));
+		broadcastToWorld(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_ANNOUNCED_THE_NEXT_CASTLE_SIEGE_TIME).addCastleId(getResidence().getId()));
 		clearActions();
 		getResidence().getSiegeDate().setTimeInMillis(g);
 		getResidence().setJdbcState(JdbcEntityState.UPDATED);
@@ -582,10 +582,10 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 		{
 			if (force)
 			{
-				targetPlayer.sendPacket(SystemMsg.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEFIELDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
+				targetPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEGROUNDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE));
 			}
 			
-			resurrectPlayer.sendPacket(force ? SystemMsg.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEFIELDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE : SystemMsg.INVALID_TARGET);
+			resurrectPlayer.sendPacket(SystemMessage.getSystemMessage(force ? SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEGROUNDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE : SystemMessageId.INVALID_TARGET));
 			return false;
 		}
 		
@@ -602,10 +602,10 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 			{
 				if (force)
 				{
-					targetPlayer.sendPacket(SystemMsg.IF_A_BASE_CAMP_DOES_NOT_EXIST_RESURRECTION_IS_NOT_POSSIBLE);
+					targetPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.IF_A_BASE_CAMP_DOES_NOT_EXIST_RESURRECTION_IS_NOT_POSSIBLE));
 				}
 				
-				resurrectPlayer.sendPacket(force ? SystemMsg.IF_A_BASE_CAMP_DOES_NOT_EXIST_RESURRECTION_IS_NOT_POSSIBLE : SystemMsg.INVALID_TARGET);
+				resurrectPlayer.sendPacket(SystemMessage.getSystemMessage(force ? SystemMessageId.IF_A_BASE_CAMP_DOES_NOT_EXIST_RESURRECTION_IS_NOT_POSSIBLE : SystemMessageId.INVALID_TARGET));
 				return false;
 			}
 		}
@@ -626,10 +626,10 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 			{
 				if (force)
 				{
-					targetPlayer.sendPacket(SystemMsg.THE_GUARDIAN_TOWER_HAS_BEEN_DESTROYED_AND_RESURRECTION_IS_NOT_POSSIBLE);
+					targetPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_GUARDIAN_TOWER_HAS_BEEN_DESTROYED_AND_RESURRECTION_IS_NOT_POSSIBLE));
 				}
 				
-				resurrectPlayer.sendPacket(force ? SystemMsg.THE_GUARDIAN_TOWER_HAS_BEEN_DESTROYED_AND_RESURRECTION_IS_NOT_POSSIBLE : SystemMsg.INVALID_TARGET);
+				resurrectPlayer.sendPacket(SystemMessage.getSystemMessage(force ? SystemMessageId.THE_GUARDIAN_TOWER_HAS_BEEN_DESTROYED_AND_RESURRECTION_IS_NOT_POSSIBLE : SystemMessageId.INVALID_TARGET));
 			}
 		}
 		
@@ -638,7 +638,7 @@ public class CastleSiegeEvent extends SiegeEvent<Castle, SiegeClanObject>
 			return true;
 		}
 		
-		resurrectPlayer.sendPacket(SystemMsg.INVALID_TARGET);
+		resurrectPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 		return false;
 	}
 }

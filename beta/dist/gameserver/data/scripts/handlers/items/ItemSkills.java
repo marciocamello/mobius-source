@@ -19,7 +19,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import gnu.trove.set.hash.TIntHashSet;
 
@@ -89,11 +89,11 @@ public final class ItemSkills extends ScriptItemHandler
 		{
 			if (!player.getInventory().destroyItem(item, 1))
 			{
-				player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 				return false;
 			}
 			
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_USE_S1).addItemName(item.getId()));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_USE_S1).addItemName(item.getId()));
 		}
 		
 		for (int i = 0; i < skills.length; i++)

@@ -19,6 +19,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.residences.SiegeFlagInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.templates.StatsSet;
 
@@ -133,19 +134,19 @@ public class HealWithCp extends Skill
 				
 				if (getId() == 4051)
 				{
-					target.sendPacket(new SystemMessage(SystemMessage.REJUVENATING_HP));
+					target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.REJUVENATING_HP));
 				}
 				else if (target.isPlayer())
 				{
 					if (activeChar == target)
 					{
-						activeChar.sendPacket(new SystemMessage(1066).addNumber(Math.round(addToHp)));
-						activeChar.sendPacket(new SystemMessage(1405).addNumber(Math.round(addToCp)));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED).addLong(Math.round(addToHp)));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CP_HAS_BEEN_RESTORED).addLong(Math.round(addToCp)));
 					}
 					else
 					{
-						target.sendPacket(new SystemMessage(1067).addString(activeChar.getName()).addNumber(Math.round(addToHp)));
-						target.sendPacket(new SystemMessage(1406).addString(activeChar.getName()).addNumber(Math.round(addToCp)));
+						target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_HP_HAS_BEEN_RESTORED_BY_C1).addString(activeChar.getName()).addLong(Math.round(addToHp)));
+						target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_CP_HAS_BEEN_RESTORED_BY_C1).addString(activeChar.getName()).addLong(Math.round(addToCp)));
 					}
 				}
 				else if (target.isPet())

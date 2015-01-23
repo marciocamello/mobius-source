@@ -21,7 +21,7 @@ import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.NpcSay;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.utils.MapUtils;
 
 /**
@@ -33,7 +33,7 @@ public class NpcSayAction implements EventAction
 	private final int _npcId;
 	private final int _range;
 	private final ChatType _chatType;
-	private final NpcString _text;
+	private final NpcStringId _text;
 	
 	/**
 	 * Constructor for NpcSayAction.
@@ -42,7 +42,7 @@ public class NpcSayAction implements EventAction
 	 * @param type ChatType
 	 * @param string NpcString
 	 */
-	public NpcSayAction(int npcId, int range, ChatType type, NpcString string)
+	public NpcSayAction(int npcId, int range, ChatType type, NpcStringId string)
 	{
 		_npcId = npcId;
 		_range = range;

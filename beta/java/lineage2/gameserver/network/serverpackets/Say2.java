@@ -13,21 +13,21 @@
 package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.network.serverpackets.components.SysString;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 public class Say2 extends NpcStringContainer
 {
 	private final ChatType _type;
 	private SysString _sysString;
-	private SystemMsg _systemMsg;
+	private SystemMessageId _systemMsg;
 	private final int _objectId;
 	private String _charName;
 	
-	public Say2(int objectId, ChatType type, SysString st, SystemMsg sm)
+	public Say2(int objectId, ChatType type, SysString st, SystemMessageId sm)
 	{
-		super(NpcString.NONE);
+		super(NpcStringId.STRING_NONE);
 		_objectId = objectId;
 		_type = type;
 		_sysString = st;
@@ -36,10 +36,10 @@ public class Say2 extends NpcStringContainer
 	
 	public Say2(int objectId, ChatType type, String charName, String text)
 	{
-		this(objectId, type, charName, NpcString.NONE, text);
+		this(objectId, type, charName, NpcStringId.STRING_NONE, text);
 	}
 	
-	public Say2(int objectId, ChatType type, String charName, NpcString npcString, String... params)
+	public Say2(int objectId, ChatType type, String charName, NpcStringId npcString, String... params)
 	{
 		super(npcString, params);
 		_objectId = objectId;

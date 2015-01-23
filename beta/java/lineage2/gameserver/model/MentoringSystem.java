@@ -18,8 +18,8 @@ import java.util.List;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.dao.MentoringDAO;
 import lineage2.gameserver.network.serverpackets.ExMentorList;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.MentorUtil;
 
 import org.apache.commons.lang3.StringUtils;
@@ -77,11 +77,11 @@ public class MentoringSystem
 		
 		if (otherSideMentee != null)
 		{
-			otherSideMentee.sendPacket(new SystemMessage2(SystemMsg.THE_MENTORING_RELATIONSHIP_WITH_S1_HAS_BEEN_CANCELED).addString((isMentor) ? name : _mentor.getName()));
+			otherSideMentee.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MENTORING_RELATIONSHIP_WITH_S1_HAS_BEEN_CANCELED_THE_MENTOR_CANNOT_OBTAIN_ANOTHER_MENTEE_FOR_TWO_DAYS).addString((isMentor) ? name : _mentor.getName()));
 			MentorUtil.removeEffectsFromPlayer(otherSideMentee);
 		}
 		
-		_mentor.sendPacket(new SystemMessage2(SystemMsg.THE_MENTORING_RELATIONSHIP_WITH_S1_HAS_BEEN_CANCELED).addString((isMentor) ? name : _mentor.getName()));
+		_mentor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MENTORING_RELATIONSHIP_WITH_S1_HAS_BEEN_CANCELED_THE_MENTOR_CANNOT_OBTAIN_ANOTHER_MENTEE_FOR_TWO_DAYS).addString((isMentor) ? name : _mentor.getName()));
 	}
 	
 	private int removeMentee(String name)
@@ -212,11 +212,11 @@ public class MentoringSystem
 				
 				if (online)
 				{
-					menteePlayer.sendPacket(new SystemMessage2((mentee.isMentor()) ? SystemMsg.YOU_MENTEE_S1_HAS_CONNECTED : SystemMsg.YOU_MENTOR_S1_HAS_CONNECTED).addString(_mentor.getName()));
+					menteePlayer.sendPacket(SystemMessage.getSystemMessage((mentee.isMentor()) ? SystemMessageId.YOUR_MENTEE_S1_HAS_CONNECTED : SystemMessageId.YOUR_MENTOR_S1_HAS_CONNECTED).addString(_mentor.getName()));
 				}
 				else
 				{
-					menteePlayer.sendPacket(new SystemMessage2((mentee.isMentor()) ? SystemMsg.YOU_MENTEE_S1_HAS_DISCONNECTED : SystemMsg.YOU_MENTOR_S1_HAS_DISCONNECTED).addString(_mentor.getName()));
+					menteePlayer.sendPacket(SystemMessage.getSystemMessage((mentee.isMentor()) ? SystemMessageId.YOUR_MENTEE_S1_HAS_DISCONNECTED : SystemMessageId.YOUR_MENTOR_S1_HAS_DISCONNECTED).addString(_mentor.getName()));
 				}
 				
 				menteePlayer.sendPacket(new ExMentorList(menteePlayer));

@@ -16,7 +16,7 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
@@ -107,32 +107,32 @@ public class RotinaSubAI extends DefaultAI
 			return;
 		}
 		
-		NpcString ns;
+		NpcStringId ns;
 		
 		switch (Rnd.get(6))
 		{
 			case 1:
-				ns = NpcString.YOU_LL_EARN_TONS_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
+				ns = NpcStringId.YOU_LL_EARN_TONS_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
 				break;
 			
 			case 2:
-				ns = NpcString.YOU_LL_EARN_TONS_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
+				ns = NpcStringId.YOU_LL_EARN_TONS_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
 				break;
 			
 			case 3:
-				ns = NpcString.YOU_LL_EARN_TONS_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
+				ns = NpcStringId.YOU_LL_EARN_TONS_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
 				break;
 			
 			case 4:
-				ns = NpcString.YOU_LL_EARN_TONS_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
+				ns = NpcStringId.YOU_LL_EARN_TONS_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
 				break;
 			
 			case 5:
-				ns = NpcString.YOU_LL_EARN_TONS_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
+				ns = NpcStringId.YOU_LL_EARN_TONS_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
 				break;
 			
 			default:
-				ns = NpcString.YOU_LL_EARN_TONS_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
+				ns = NpcStringId.YOU_LL_EARN_TONS_OF_ITEMS_USING_THE_TRAINING_GROUNDS;
 				break;
 		}
 		

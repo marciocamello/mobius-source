@@ -22,6 +22,7 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.L2Friend;
 import lineage2.gameserver.network.serverpackets.L2FriendStatus;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -67,16 +68,16 @@ public class FriendList
 		if (objectId > 0)
 		{
 			Player friendChar = World.getPlayer(objectId);
-			_owner.sendPacket(new SystemMessage(SystemMessage.S1_HAS_BEEN_REMOVED_FROM_YOUR_FRIEND_LIST).addString(name), new L2Friend(name, false, friendChar != null, objectId));
+			_owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_REMOVED_FROM_YOUR_FRIENDS_LIST).addString(name), new L2Friend(name, false, friendChar != null, objectId));
 			
 			if (friendChar != null)
 			{
-				friendChar.sendPacket(new SystemMessage(SystemMessage.S1__HAS_BEEN_DELETED_FROM_YOUR_FRIENDS_LIST).addString(_owner.getName()), new L2Friend(_owner, false));
+				friendChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_DELETED_FROM_YOUR_FRIENDS_LIST).addString(_owner.getName()), new L2Friend(_owner, false));
 			}
 		}
 		else
 		{
-			_owner.sendPacket(new SystemMessage(SystemMessage.S1_IS_NOT_ON_YOUR_FRIEND_LIST).addString(name));
+			_owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_NOT_ON_YOUR_FRIEND_LIST).addString(name));
 		}
 	}
 	
@@ -103,7 +104,7 @@ public class FriendList
 				
 				if (login)
 				{
-					friendPlayer.sendPacket(new SystemMessage(SystemMessage.S1_FRIEND_HAS_LOGGED_IN).addString(_owner.getName()));
+					friendPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_FRIEND_S1_JUST_LOGGED_IN).addString(_owner.getName()));
 				}
 				
 				friendPlayer.sendPacket(new L2FriendStatus(_owner, login));

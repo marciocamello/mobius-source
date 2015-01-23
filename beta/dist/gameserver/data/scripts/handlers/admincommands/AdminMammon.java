@@ -109,7 +109,7 @@ public class AdminMammon implements IAdminCommandHandler, ScriptFile
 		}
 		else if (fullString.startsWith("admin_msg"))
 		{
-			activeChar.sendPacket(new SystemMessage(Integer.parseInt(fullString.substring(10).trim())));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(Integer.parseInt(fullString.substring(10).trim())));
 		}
 		
 		return true;

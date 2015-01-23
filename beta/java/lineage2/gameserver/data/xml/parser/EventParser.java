@@ -53,9 +53,9 @@ import lineage2.gameserver.model.entity.events.objects.StaticObjectObject;
 import lineage2.gameserver.model.entity.events.objects.ZoneObject;
 import lineage2.gameserver.network.serverpackets.PlaySound;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.network.serverpackets.components.SysString;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.Location;
 
 import org.dom4j.Element;
@@ -360,7 +360,7 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 				int npc = Integer.parseInt(actionElement.attributeValue("npc"));
 				ChatType chat = ChatType.valueOf(actionElement.attributeValue("chat"));
 				int range = Integer.parseInt(actionElement.attributeValue("range"));
-				NpcString string = NpcString.valueOf(actionElement.attributeValue("text"));
+				NpcStringId string = NpcStringId.getNpcStringId(actionElement.attributeValue("text"));
 				NpcSayAction action = new NpcSayAction(npc, range, chat, string);
 				actions.add(action);
 			}
@@ -431,11 +431,11 @@ public final class EventParser extends AbstractDirParser<EventHolder>
 				
 				if (sysString != null)
 				{
-					sayAction = new SayAction(range, chat, sysString, SystemMsg.valueOf(text));
+					sayAction = new SayAction(range, chat, sysString, SystemMessageId.getSystemMessageId(text));
 				}
 				else
 				{
-					sayAction = new SayAction(range, chat, how, NpcString.valueOf(text));
+					sayAction = new SayAction(range, chat, how, NpcStringId.getNpcStringId(text));
 				}
 				
 				actions.add(sayAction);

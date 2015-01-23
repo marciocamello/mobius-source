@@ -16,6 +16,7 @@ import lineage2.gameserver.cache.CrestCache;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -60,7 +61,7 @@ public class RequestSetPledgeCrest extends L2GameClientPacket
 		{
 			if (clan.getLevel() < 3)
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.CLAN_CREST_REGISTRATION_IS_ONLY_POSSIBLE_WHEN_CLANS_SKILL_LEVELS_ARE_ABOVE_3));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_CLAN_CREST_CAN_ONLY_BE_REGISTERED_WHEN_THE_CLAN_S_SKILL_LEVEL_IS_3_OR_ABOVE));
 				return;
 			}
 			

@@ -21,6 +21,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Formulas;
 import lineage2.gameserver.stats.Formulas.AttackInfo;
 import lineage2.gameserver.templates.StatsSet;
@@ -67,7 +68,7 @@ public class Charge extends Skill
 		
 		if ((getPower() <= 0) && (getId() != 2165) && (player.getIncreasedForce() >= _charges))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOUR_FORCE_HAS_REACHED_MAXIMUM_CAPACITY_));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_FORCE_HAS_REACHED_MAXIMUM_CAPACITY));
 			return false;
 		}
 		else if (getId() == 2165)
@@ -143,7 +144,7 @@ public class Charge extends Skill
 	{
 		if (player.getIncreasedForce() >= _charges)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOUR_FORCE_HAS_REACHED_MAXIMUM_CAPACITY_));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_FORCE_HAS_REACHED_MAXIMUM_CAPACITY));
 			return;
 		}
 		

@@ -17,7 +17,7 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
@@ -165,7 +165,7 @@ public class Q10739_SupplyAndDemand extends Quest implements ScriptFile
 					qs.takeItems(Accessory_Supply_Box, 1);
 					qs.getPlayer().addExpAndSp(8136, 0);
 					htmltext = "33951-1.htm";
-					qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
+					qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
 					qs.playSound(SOUND_FINISH);
 					qs.exitCurrentQuest(false);
 				}

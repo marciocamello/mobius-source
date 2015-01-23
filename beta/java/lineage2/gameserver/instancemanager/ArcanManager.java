@@ -20,7 +20,7 @@ import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.network.serverpackets.EventTrigger;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.utils.ReflectionUtils;
 
 public class ArcanManager
@@ -84,7 +84,7 @@ public class ArcanManager
 			player.sendPacket(trigger);
 			if (message && zone.getInsidePlayers().contains(player))
 			{
-				L2GameServerPacket sm = new ExShowScreenMessage(NpcString.DARK_POWER_SEEPS_OUT_FROM_THE_MIDDLE_OF_THE_TOWN, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, 0, true);
+				L2GameServerPacket sm = new ExShowScreenMessage(NpcStringId.DARK_POWER_SEEPS_OUT_FROM_THE_MIDDLE_OF_THE_TOWN, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, 0, true);
 				player.sendPacket(sm);
 			}
 		}

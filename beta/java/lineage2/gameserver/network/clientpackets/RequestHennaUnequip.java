@@ -13,7 +13,8 @@
 package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.Henna;
 
 /**
@@ -61,13 +62,13 @@ public class RequestHennaUnequip extends L2GameClientPacket
 				
 				if (player.getAdena() < price)
 				{
-					player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 					break;
 				}
 				
 				player.reduceAdena(price);
 				player.removeHenna(i);
-				player.sendPacket(SystemMsg.THE_SYMBOL_HAS_BEEN_DELETED);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_SYMBOL_HAS_BEEN_DELETED));
 				break;
 			}
 		}

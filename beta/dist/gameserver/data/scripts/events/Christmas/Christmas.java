@@ -26,6 +26,7 @@ import lineage2.gameserver.model.SimpleSpawner;
 import lineage2.gameserver.model.actor.listener.CharListenerList;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 
@@ -352,7 +353,7 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 				return;
 			}
 			
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 		}
 		
 		if (var[0].equals("1"))
@@ -364,7 +365,7 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 				return;
 			}
 			
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 		}
 		
 		if (var[0].equals("2"))
@@ -376,7 +377,7 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 				return;
 			}
 			
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 		}
 		
 		if (var[0].equals("3"))
@@ -388,7 +389,7 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 				return;
 			}
 			
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 		}
 		
 		if (var[0].equals("4"))
@@ -400,7 +401,7 @@ public final class Christmas extends Functions implements ScriptFile, OnDeathLis
 				return;
 			}
 			
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_REQUIRED_ITEMS));
 		}
 	}
 	

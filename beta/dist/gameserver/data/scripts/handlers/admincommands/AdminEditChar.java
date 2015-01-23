@@ -39,6 +39,7 @@ import lineage2.gameserver.network.serverpackets.ExPCCafePointInfo;
 import lineage2.gameserver.network.serverpackets.GMViewItemList;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.HtmlUtils;
@@ -526,7 +527,7 @@ public class AdminEditChar implements IAdminCommandHandler, ScriptFile
 				
 				if ((transformId != 0) && (activeChar.getTransformation() != 0))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
 					return false;
 				}
 				
@@ -544,7 +545,7 @@ public class AdminEditChar implements IAdminCommandHandler, ScriptFile
 			
 			if ((target == null) || !target.isPlayer())
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.SELECT_TARGET));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SELECT_TARGET));
 				return false;
 			}
 			
@@ -562,7 +563,7 @@ public class AdminEditChar implements IAdminCommandHandler, ScriptFile
 					return false;
 				}
 				
-				player.sendPacket(new SystemMessage(SystemMessage.CONGRATULATIONS_YOU_HAVE_TRANSFERRED_TO_A_NEW_CLASS));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_A_CLASS_TRANSFER));
 			}
 			else
 			{
@@ -934,7 +935,7 @@ public class AdminEditChar implements IAdminCommandHandler, ScriptFile
 		
 		if (target == null)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return;
 		}
 		
@@ -973,7 +974,7 @@ public class AdminEditChar implements IAdminCommandHandler, ScriptFile
 		
 		if (target == null)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return;
 		}
 		
@@ -1012,7 +1013,7 @@ public class AdminEditChar implements IAdminCommandHandler, ScriptFile
 		
 		if ((target == null) || !target.isPlayer())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.SELECT_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SELECT_TARGET));
 			return;
 		}
 		
@@ -1072,7 +1073,7 @@ public class AdminEditChar implements IAdminCommandHandler, ScriptFile
 		
 		if ((target == null) || !target.isPlayer())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.SELECT_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SELECT_TARGET));
 			return;
 		}
 		
@@ -1218,7 +1219,7 @@ public class AdminEditChar implements IAdminCommandHandler, ScriptFile
 		}
 		else
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return;
 		}
 		
@@ -1267,13 +1268,13 @@ public class AdminEditChar implements IAdminCommandHandler, ScriptFile
 		
 		if (target == null)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.SELECT_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SELECT_TARGET));
 			return;
 		}
 		
 		if (!target.isPlayable())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return;
 		}
 		

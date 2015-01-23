@@ -21,6 +21,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
@@ -134,7 +135,7 @@ public final class WorkshopServantInstance extends NpcInstance
 		{
 			if (!player.isInParty())
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER));
 				return;
 			}
 			
@@ -142,7 +143,7 @@ public final class WorkshopServantInstance extends NpcInstance
 			
 			if (!party.isLeader(player))
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.ONLY_A_PARTY_LEADER_CAN_TRY_TO_ENTER));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
 				return;
 			}
 			
@@ -150,7 +151,7 @@ public final class WorkshopServantInstance extends NpcInstance
 			{
 				if (!this.isInRange(p, 500))
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.ITS_TOO_FAR_FROM_THE_NPC_TO_WORK));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_TOO_FAR_FROM_THE_NPC_FOR_THAT_TO_WORK));
 					return;
 				}
 			}

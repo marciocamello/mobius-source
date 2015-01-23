@@ -20,6 +20,7 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Formulas;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.funcs.FuncTemplate;
@@ -71,7 +72,7 @@ public class NegateStats extends Skill
 			{
 				if (!_negateOffensive && !Formulas.calcSkillSuccess(activeChar, target, this, getActivateRate()))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RESISTED_YOUR_S2).addString(target.getName()).addSkillName(getId(), getLevel()));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2).addString(target.getName()).addSkillName(getId(), getLevel()));
 					continue;
 				}
 				
@@ -92,7 +93,7 @@ public class NegateStats extends Skill
 						
 						if ((skill.isOffensive() == _negateOffensive) && containsStat(e, stat) && skill.isCancelable())
 						{
-							target.sendPacket(new SystemMessage(SystemMessage.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED).addSkillName(e.getSkill().getId(), e.getSkill().getDisplayLevel()));
+							target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED).addSkillName(e.getSkill().getId(), e.getSkill().getDisplayLevel()));
 							e.exit();
 							count++;
 						}

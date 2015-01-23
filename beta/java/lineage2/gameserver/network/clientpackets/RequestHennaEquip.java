@@ -15,7 +15,7 @@ package lineage2.gameserver.network.clientpackets;
 import lineage2.gameserver.data.xml.holder.HennaHolder;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.Henna;
 
 /**
@@ -52,7 +52,7 @@ public class RequestHennaEquip extends L2GameClientPacket
 		
 		if ((temp == null) || !temp.isForThisClass(player))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.THE_SYMBOL_CANNOT_BE_DRAWN));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_SYMBOL_CANNOT_BE_DRAWN));
 			return;
 		}
 		
@@ -63,13 +63,13 @@ public class RequestHennaEquip extends L2GameClientPacket
 		{
 			if (player.consumeItem(temp.getDyeId(), temp.getDrawCount()) && player.reduceAdena(temp.getPrice()))
 			{
-				player.sendPacket(SystemMsg.THE_SYMBOL_HAS_BEEN_ADDED);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_SYMBOL_HAS_BEEN_ADDED));
 				player.addHenna(temp);
 			}
 		}
 		else
 		{
-			player.sendPacket(SystemMsg.THE_SYMBOL_CANNOT_BE_DRAWN);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_SYMBOL_CANNOT_BE_DRAWN));
 		}
 	}
 }

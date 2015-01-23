@@ -23,6 +23,7 @@ import lineage2.gameserver.network.serverpackets.ActionFail;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SetupGauge;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.SoulCrystal;
 import gnu.trove.set.hash.TIntHashSet;
@@ -71,7 +72,7 @@ public final class SoulCrystals extends ScriptItemHandler
 		
 		if ((player.getTarget() == null) || !player.getTarget().isMonster())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET), ActionFail.STATIC);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET), ActionFail.STATIC);
 			return false;
 		}
 		
@@ -85,7 +86,7 @@ public final class SoulCrystals extends ScriptItemHandler
 		
 		if (target.getCurrentHpPercents() >= 50)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.THE_SOUL_CRYSTAL_WAS_NOT_ABLE_TO_ABSORB_A_SOUL), ActionFail.STATIC);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_SOUL_CRYSTAL_WAS_NOT_ABLE_TO_ABSORB_THE_SOUL), ActionFail.STATIC);
 			return false;
 		}
 		

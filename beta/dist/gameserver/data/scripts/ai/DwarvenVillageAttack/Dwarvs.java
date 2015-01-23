@@ -21,7 +21,7 @@ import lineage2.gameserver.model.AggroList;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Util;
@@ -116,12 +116,12 @@ public class Dwarvs extends Fighter
 		switch (event)
 		{
 			case "SHOUT_ALL_1":
-				Functions.npcSayInRange(getActor(), 1500, NpcString.valueOf(MESSAGES_1[Rnd.get(MESSAGES_1.length)]));
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.getNpcStringId(MESSAGES_1[Rnd.get(MESSAGES_1.length)]));
 				startBattle = true;
 				break;
 			
 			case "SHOUT_ALL_2":
-				Functions.npcSayInRange(getActor(), 1500, NpcString.valueOf(MESSAGES_2[Rnd.get(MESSAGES_2.length)]));
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.getNpcStringId(MESSAGES_2[Rnd.get(MESSAGES_2.length)]));
 				break;
 			
 			case "TENTACLE_DIE":

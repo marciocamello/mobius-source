@@ -20,6 +20,7 @@ import lineage2.gameserver.model.Request.L2RequestType;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.ExAskJoinMPCC;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -59,13 +60,13 @@ public class RequestExMPCCAskJoin extends L2GameClientPacket
 		
 		if (activeChar.isProcessingRequest())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.WAITING_FOR_ANOTHER_REPLY));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WAITING_FOR_ANOTHER_REPLY));
 			return;
 		}
 		
 		if (!activeChar.isInParty())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_AUTHORITY_TO_INVITE_SOMEONE_TO_THE_COMMAND_CHANNEL));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_AUTHORITY_TO_INVITE_SOMEONE_TO_THE_COMMAND_CHANNEL));
 			return;
 		}
 		
@@ -73,13 +74,13 @@ public class RequestExMPCCAskJoin extends L2GameClientPacket
 		
 		if (target == null)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THAT_PLAYER_IS_NOT_CURRENTLY_ONLINE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_CURRENTLY_ONLINE));
 			return;
 		}
 		
 		if ((activeChar == target) || !target.isInParty() || (activeChar.getParty() == target.getParty()))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_INVITED_WRONG_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_INVITED_THE_WRONG_TARGET));
 			return;
 		}
 		
@@ -90,19 +91,19 @@ public class RequestExMPCCAskJoin extends L2GameClientPacket
 		
 		if (target == null)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THAT_PLAYER_IS_NOT_CURRENTLY_ONLINE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_CURRENTLY_ONLINE));
 			return;
 		}
 		
 		if (target.getParty().isInCommandChannel())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.S1_PARTY_IS_ALREADY_A_MEMBER_OF_THE_COMMAND_CHANNEL).addString(target.getName()));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_S_PARTY_IS_ALREADY_A_MEMBER_OF_THE_COMMAND_CHANNEL).addString(target.getName()));
 			return;
 		}
 		
 		if (target.isBusy())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.S1_IS_BUSY_PLEASE_TRY_AGAIN_LATER).addString(target.getName()));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER).addString(target.getName()));
 			return;
 		}
 		
@@ -112,7 +113,7 @@ public class RequestExMPCCAskJoin extends L2GameClientPacket
 		{
 			if (activeParty.getCommandChannel().getChannelLeader() != activeChar)
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_AUTHORITY_TO_INVITE_SOMEONE_TO_THE_COMMAND_CHANNEL));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_AUTHORITY_TO_INVITE_SOMEONE_TO_THE_COMMAND_CHANNEL));
 				return;
 			}
 			

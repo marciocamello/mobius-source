@@ -13,7 +13,7 @@
 package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 
 public class ExSendUIEvent extends NpcStringContainer
 {
@@ -25,13 +25,13 @@ public class ExSendUIEvent extends NpcStringContainer
 	
 	public ExSendUIEvent(Player player, int isHide, int isIncrease, int startTime, int endTime, String... params)
 	{
-		this(player, isHide, isIncrease, startTime, endTime, NpcString.NONE, params);
+		this(player, isHide, isIncrease, startTime, endTime, NpcStringId.STRING_NONE, params);
 	}
 	
 	/*
-	 * public ExSendUIEvent(Player player, boolean isHide, boolean isIncrease, int startTime, int endTime, NpcString npcString, String... params) { super(npcString, params); _objectId = player.getObjectId(); _isHide = isHide; _isIncrease = isIncrease; _startTime = startTime; _endTime = endTime; }
+	 * public ExSendUIEvent(Player player, boolean isHide, boolean isIncrease, int startTime, int endTime, NpcStringId npcString, String... params) { super(npcString, params); _objectId = player.getObjectId(); _isHide = isHide; _isIncrease = isIncrease; _startTime = startTime; _endTime = endTime; }
 	 */
-	public ExSendUIEvent(Player player, int isHide, int isIncrease, int startTime, int endTime, NpcString npcString, String... params)
+	public ExSendUIEvent(Player player, int isHide, int isIncrease, int startTime, int endTime, NpcStringId npcString, String... params)
 	{
 		super(npcString, params);
 		_objectId = player.getObjectId();

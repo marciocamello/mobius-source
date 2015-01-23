@@ -25,7 +25,7 @@ import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.TradeOtherAdd;
 import lineage2.gameserver.network.serverpackets.TradeOwnAdd;
 import lineage2.gameserver.network.serverpackets.TradeUpdate;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -92,7 +92,7 @@ public class AddTradeItem extends L2GameClientPacket
 		{
 			request.cancel();
 			parthner1.sendPacket(SendTradeDone.FAIL);
-			parthner1.sendPacket(new SystemMessage(SystemMessage.THAT_PLAYER_IS_NOT_ONLINE));
+			parthner1.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
 			parthner1.sendActionFailed();
 			return;
 		}
@@ -107,7 +107,7 @@ public class AddTradeItem extends L2GameClientPacket
 		
 		if (request.isConfirmed(parthner1) || request.isConfirmed(parthner2))
 		{
-			parthner1.sendPacket(SystemMsg.YOU_MAY_NO_LONGER_ADJUST_ITEMS_IN_THE_TRADE_BECAUSE_THE_TRADE_HAS_BEEN_CONFIRMED);
+			parthner1.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NO_LONGER_ADJUST_ITEMS_IN_THE_TRADE_BECAUSE_THE_TRADE_HAS_BEEN_CONFIRMED));
 			parthner1.sendActionFailed();
 			return;
 		}
@@ -116,7 +116,7 @@ public class AddTradeItem extends L2GameClientPacket
 		
 		if ((item == null) || !item.canBeTraded(parthner1))
 		{
-			parthner1.sendPacket(SystemMsg.THIS_ITEM_CANNOT_BE_TRADED_OR_SOLD);
+			parthner1.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_ITEM_CANNOT_BE_TRADED_OR_SOLD));
 			return;
 		}
 		
@@ -140,7 +140,7 @@ public class AddTradeItem extends L2GameClientPacket
 		}
 		catch (ArithmeticException ae)
 		{
-			parthner1.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+			parthner1.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 			return;
 		}
 		

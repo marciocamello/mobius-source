@@ -17,7 +17,8 @@ import lineage2.gameserver.network.serverpackets.ExClosePartyRoom;
 import lineage2.gameserver.network.serverpackets.ExPartyRoomMember;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.PartyRoomInfo;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -42,49 +43,49 @@ public class PartyMatchingRoom extends MatchingRoom
 	
 	/**
 	 * Method notValidMessage.
-	 * @return SystemMsg
+	 * @return SystemMessage
 	 */
 	@Override
-	public SystemMsg notValidMessage()
+	public SystemMessage notValidMessage()
 	{
-		return SystemMsg.YOU_DO_NOT_MEET_THE_REQUIREMENTS_TO_ENTER_THAT_PARTY_ROOM;
+		return SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIREMENTS_TO_ENTER_THAT_PARTY_ROOM);
 	}
 	
 	/**
 	 * Method enterMessage.
-	 * @return SystemMsg
+	 * @return SystemMessage
 	 */
 	@Override
-	public SystemMsg enterMessage()
+	public SystemMessage enterMessage()
 	{
-		return SystemMsg.C1_HAS_ENTERED_THE_PARTY_ROOM;
+		return SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_ENTERED_THE_PARTY_ROOM);
 	}
 	
 	/**
 	 * Method exitMessage.
 	 * @param toOthers boolean
 	 * @param kick boolean
-	 * @return SystemMsg
+	 * @return SystemMessage
 	 */
 	@Override
-	public SystemMsg exitMessage(boolean toOthers, boolean kick)
+	public SystemMessage exitMessage(boolean toOthers, boolean kick)
 	{
 		if (toOthers)
 		{
-			return kick ? SystemMsg.C1_HAS_BEEN_KICKED_FROM_THE_PARTY_ROOM : SystemMsg.C1_HAS_LEFT_THE_PARTY_ROOM;
+			return kick ? SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_KICKED_FROM_THE_PARTY_ROOM) : SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_LEFT_THE_PARTY_ROOM);
 		}
 		
-		return kick ? SystemMsg.YOU_HAVE_BEEN_OUSTED_FROM_THE_PARTY_ROOM : SystemMsg.YOU_HAVE_EXITED_THE_PARTY_ROOM;
+		return kick ? SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_BEEN_OUSTED_FROM_THE_PARTY_ROOM) : SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EXITED_THE_PARTY_ROOM);
 	}
 	
 	/**
 	 * Method closeRoomMessage.
-	 * @return SystemMsg
+	 * @return SystemMessage
 	 */
 	@Override
-	public SystemMsg closeRoomMessage()
+	public SystemMessage closeRoomMessage()
 	{
-		return SystemMsg.THE_PARTY_ROOM_HAS_BEEN_DISBANDED;
+		return SystemMessage.getSystemMessage(SystemMessageId.THE_PARTY_ROOM_HAS_BEEN_DISBANDED);
 	}
 	
 	/**

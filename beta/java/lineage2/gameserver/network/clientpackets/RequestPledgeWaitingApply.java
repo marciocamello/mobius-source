@@ -21,6 +21,7 @@ import lineage2.gameserver.model.pledge.entry.PledgeApplicantInfo;
 import lineage2.gameserver.network.serverpackets.ExPledgeRecruitApplyInfo;
 import lineage2.gameserver.network.serverpackets.ExPledgeWaitingListAlarm;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.ClanTable;
 
 public class RequestPledgeWaitingApply extends L2GameClientPacket
@@ -69,8 +70,8 @@ public class RequestPledgeWaitingApply extends L2GameClientPacket
 		}
 		else
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.YOU_MAY_APPLY_FOR_ENTRY_AFTER_S1_MINUTE_S_DUE_TO_CANCELLING_YOUR_APPLICATION);
-			sm.addNumber(ClanEntryManager.getInstance().getPlayerLockTime(activeChar.getObjectId()));
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_APPLY_FOR_ENTRY_AFTER_S1_MINUTE_S_DUE_TO_CANCELLING_YOUR_APPLICATION);
+			sm.addLong(ClanEntryManager.getInstance().getPlayerLockTime(activeChar.getObjectId()));
 			activeChar.sendPacket(sm);
 		}
 	}

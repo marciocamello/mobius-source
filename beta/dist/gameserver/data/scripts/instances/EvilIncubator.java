@@ -28,7 +28,7 @@ import lineage2.gameserver.network.serverpackets.Earthquake;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.NpcSay;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.utils.Location;
 
 /**
@@ -104,10 +104,10 @@ public final class EvilIncubator extends Reflection
 		addSpawnWithoutRespawn(ADOLPH_HELPERS2, new Location(56357, -172654, -7952, 49044), 0);
 		addSpawnWithoutRespawn(ADOLPH_HELPERS3, new Location(56067, -172651, -7952, 49356), 0);
 		addSpawnWithoutRespawn(ADOLPH_HELPERS4, new Location(55970, -172654, -7952, 49208), 0);
-		ThreadPoolManager.getInstance().schedule(new SayChatTask(NpcString.I_CAN_HEAL_YOU_DURING_COMBAT, ADOLPH_HELPERS1), 10000);
-		ThreadPoolManager.getInstance().schedule(new SayChatTask(NpcString.I_HIT_THINGS_THEY_FALL_DEAD, ADOLPH_HELPERS2), 6000);
-		ThreadPoolManager.getInstance().schedule(new SayChatTask(NpcString.WHAT_DO_I_FEEL_WHEN_I_KILL_SHILENS_MONSTERS_RECOIL, ADOLPH_HELPERS3), 3000);
-		ThreadPoolManager.getInstance().schedule(new SayChatTask(NpcString.MY_SUMMONS_ARE_NOT_AFRAID_OF_SHILENS_MONSTER, ADOLPH_HELPERS4), 9000);
+		ThreadPoolManager.getInstance().schedule(new SayChatTask(NpcStringId.I_CAN_HEAL_YOU_DURING_COMBAT, ADOLPH_HELPERS1), 10000);
+		ThreadPoolManager.getInstance().schedule(new SayChatTask(NpcStringId.I_HIT_THINGS_THEY_FALL_DEAD, ADOLPH_HELPERS2), 6000);
+		ThreadPoolManager.getInstance().schedule(new SayChatTask(NpcStringId.WHAT_DO_I_FEEL_WHEN_I_KILL_SHILEN_S_MONSTERS_RECOIL, ADOLPH_HELPERS3), 3000);
+		ThreadPoolManager.getInstance().schedule(new SayChatTask(NpcStringId.MY_SUMMONS_ARE_NOT_AFRAID_OF_SHILEN_S_MONSTERS, ADOLPH_HELPERS4), 9000);
 	}
 	
 	public void startFirstWave(Player player)
@@ -135,10 +135,10 @@ public final class EvilIncubator extends Reflection
 		addSpawnWithoutRespawn(VAL_DEFENSE_WALL, new Location(56280, -176226, -7952, 48740), 0);
 		addSpawnWithoutRespawn(VAL_DEFENSE_WALL, new Location(56473, -176248, -7952, 49824), 0);
 		addSpawnWithoutRespawn(VAL_DEFENSE_WALL, new Location(56077, -176202, -7944, 49180), 0);
-		ThreadPoolManager.getInstance().schedule(new SayChatTask(NpcString.DID_SOMEONE_CRY_MEDIC_HERE_BE_HEALED, ADOLPH_HELPERS1), 11000);
-		ThreadPoolManager.getInstance().schedule(new SayChatTask(NpcString.THE_ONLY_GOOD_SHILEN_CREATURE_IS_A_DEAD_ONE, ADOLPH_HELPERS2), 2000);
-		ThreadPoolManager.getInstance().schedule(new SayChatTask(NpcString.BOOM_HEADSHOT, ADOLPH_HELPERS3), 5000);
-		ThreadPoolManager.getInstance().schedule(new SayChatTask(NpcString.I_M_ON_FIRE_NO_WAIT_THAT_WOULD_BE_YOU, ADOLPH_HELPERS4), 7000);
+		ThreadPoolManager.getInstance().schedule(new SayChatTask(NpcStringId.DID_SOMEONE_CRY_MEDIC_HERE_BE_HEALED, ADOLPH_HELPERS1), 11000);
+		ThreadPoolManager.getInstance().schedule(new SayChatTask(NpcStringId.THE_ONLY_GOOD_SHILEN_CREATURE_IS_A_DEAD_ONE, ADOLPH_HELPERS2), 2000);
+		ThreadPoolManager.getInstance().schedule(new SayChatTask(NpcStringId.BOOM_HEADSHOT, ADOLPH_HELPERS3), 5000);
+		ThreadPoolManager.getInstance().schedule(new SayChatTask(NpcStringId.I_M_ON_FIRE_NO_WAIT_THAT_WOULD_BE_YOU, ADOLPH_HELPERS4), 7000);
 		ThreadPoolManager.getInstance().schedule(new FirstWaveTask(), 10000);
 	}
 	
@@ -189,24 +189,24 @@ public final class EvilIncubator extends Reflection
 	{
 		if (state == 1)
 		{
-			ADOLPH.get(0).broadcastPacket(new NpcSay(ADOLPH.get(0), ChatType.NPC_ALL, NpcString.CREATURES_HAVE_STOPPED_ATTACKING_USE_THIS_TIME_TO_REST_AND_RECOVER));
+			ADOLPH.get(0).broadcastPacket(new NpcSay(ADOLPH.get(0), ChatType.NPC_ALL, NpcStringId.CREATURES_HAVE_STOPPED_ATTACKING_USE_THIS_TIME_TO_REST_AND_RECOVER));
 			
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_HAVE_STOPPER_THEIR_ATTACK_REST_AND_THEN_SPEEAK_WITH_ADOLPH, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.CREATURES_HAVE_STOPPED_THEIR_ATTACK_REST_AND_THEN_SPEAK_WITH_ADOLPH, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 			}
 		}
 		
 		if (state == 2)
 		{
-			ADOLPH.get(0).broadcastPacket(new NpcSay(ADOLPH.get(0), ChatType.NPC_ALL, NpcString.THE_CRY_OF_FATE_PENDANT_WILL_BE_HELPFUL_TO_YOU_PLEASE_EQUIP_IT_AND_BRING_OUT_THE_POWER_OF_THE_PENDANT_TO_PREPARE_FOR_THE_NEXT_FIGHT));
+			ADOLPH.get(0).broadcastPacket(new NpcSay(ADOLPH.get(0), ChatType.NPC_ALL, NpcStringId.THE_CRY_OF_DESTINY_PENDANT_WILL_BE_HELPFUL_TO_YOU_PLEASE_EQUIP_IT_AND_BRING_OUT_THE_POWER_OF_THE_PENDANT_TO_PREPARE_FOR_THE_NEXT_FIGHT));
 		}
 		
 		if (state == 3)
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.AGH_HUMANS_HA_IT_DOES_NOT_MATTER_YOUR_WORLD_WILL_END_ANYWAYS, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.AGH_HUMANS_HA_IT_DOES_NOT_MATTER_YOUR_WORLD_WILL_END_ANYWAYS, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 			}
 		}
 	}
@@ -255,10 +255,10 @@ public final class EvilIncubator extends Reflection
 	
 	private class SayChatTask extends RunnableImpl
 	{
-		private final NpcString msg;
+		private final NpcStringId msg;
 		private final int npcId;
 		
-		public SayChatTask(NpcString msg, int npcId)
+		public SayChatTask(NpcStringId msg, int npcId)
 		{
 			this.msg = msg;
 			this.npcId = npcId;
@@ -296,7 +296,7 @@ public final class EvilIncubator extends Reflection
 			{
 				for (Player player : getPlayers())
 				{
-					player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
+					player.sendPacket(new ExShowScreenMessage(NpcStringId.CREATURES_RESURRECTED_DEFEND_YOURSELF, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 				}
 				
 				spawnMonsters();
@@ -306,7 +306,7 @@ public final class EvilIncubator extends Reflection
 			{
 				for (Player player : getPlayers())
 				{
-					player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
+					player.sendPacket(new ExShowScreenMessage(NpcStringId.CREATURES_RESURRECTED_DEFEND_YOURSELF, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 				}
 				
 				spawnMonsters();
@@ -329,7 +329,7 @@ public final class EvilIncubator extends Reflection
 			{
 				for (Player player : getPlayers())
 				{
-					player.sendPacket(new ExShowScreenMessage(NpcString.CREATURES_RESURECTED_DEFEND_YOURSELF, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
+					player.sendPacket(new ExShowScreenMessage(NpcStringId.CREATURES_RESURRECTED_DEFEND_YOURSELF, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 				}
 				
 				spawnMonsters();
@@ -339,7 +339,7 @@ public final class EvilIncubator extends Reflection
 			{
 				for (Player player : getPlayers())
 				{
-					player.sendPacket(new ExShowScreenMessage(NpcString.I_DEATH_WOUND_CHAMPION_OF_SHILEN_SHALL_END_YOUR_WORLD, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
+					player.sendPacket(new ExShowScreenMessage(NpcStringId.I_DEATH_WOUND_CHAMPION_OF_SHILEN_SHALL_END_YOUR_WORLD, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 					player.broadcastPacket(new Earthquake(ADOLPH.get(0).getLoc(), 50, 4));
 				}
 				

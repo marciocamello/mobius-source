@@ -24,9 +24,9 @@ import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.Location;
 
 public final class FortunaInstance extends Reflection
@@ -167,7 +167,7 @@ public final class FortunaInstance extends Reflection
 			
 			for (Player p : getPlayers())
 			{
-				p.sendPacket(new SystemMessage2(SystemMsg.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addInteger(5.0D));
+				p.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES).addLong((long) 5.0D));
 			}
 		}
 	}
@@ -221,7 +221,7 @@ public final class FortunaInstance extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.YOTEMAK, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.YOENTUMAK_THE_WAITER_APPEARS, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
 			
 			NpcInstance hornapiraid = addSpawnWithoutRespawn(25846, new Location(42104, -175320, -7974, 15956), 0);
@@ -241,7 +241,7 @@ public final class FortunaInstance extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.LAST_STAGE, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.FINAL_STAGE, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
 			
 			addSpawnWithoutRespawn(23085, new Location(41448, -175608, -7974), 0);
@@ -265,7 +265,7 @@ public final class FortunaInstance extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.VELIKOPLEPNO, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.AMAZING_BUT_THIS_IS_THE_END_FULL_FORCE_ADVANCE, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FinalStageMainMob1SubStage(), 10000L);
@@ -283,7 +283,7 @@ public final class FortunaInstance extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.MUKSHUANDHOPNAP, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.MUKSHU_THE_COWARD_AND_BLIND_HORNAFI_APPEARS, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
 			
 			addSpawnWithoutRespawn(25838, new Location(42102, -175325, -7974), 0);
@@ -398,7 +398,7 @@ public final class FortunaInstance extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_7, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.STAGE_7, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
 			
 			addSpawnWithoutRespawn(23085, new Location(41448, -175608, -7974), 0);
@@ -422,7 +422,7 @@ public final class FortunaInstance extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.POGLOTIVSE, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.DARKNESS_SWALLOW_EVERYTHING_AWAY, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			ThreadPoolManager.getInstance().schedule(new FortunaInstance.SevenStageMainMob1SubStage(), 10000L);
@@ -440,7 +440,7 @@ public final class FortunaInstance extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.RESINA, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.SIR_LESYINDA_OF_THE_BLACK_SHADOW_APPEARS, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
 			
 			NpcInstance resindaraid = addSpawnWithoutRespawn(25841, new Location(42104, -175320, -7974, 15956), 0);
@@ -555,7 +555,7 @@ public final class FortunaInstance extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_6, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.STAGE_6, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
 			
 			addSpawnWithoutRespawn(23081, new Location(41448, -175608, -7974), 0);
@@ -576,7 +576,7 @@ public final class FortunaInstance extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.VSETOLKONACHINAETSA, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.THIS_IS_ONLY_THE_START, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			ThreadPoolManager.getInstance().schedule(new FortunaInstance.SixStageMainMob1SubStage(), 10000L);
@@ -672,7 +672,7 @@ public final class FortunaInstance extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.BONUS_STAGE, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.BONUS_STAGE, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
 			
 			addSpawnWithoutRespawn(23081, new Location(41448, -175608, -7974), 0);
@@ -706,7 +706,7 @@ public final class FortunaInstance extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.KONYAR, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.MAGICAL_WARRIOR_KONYAR_APPEARS, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
 			
 			NpcInstance konyarraid = addSpawnWithoutRespawn(25843, new Location(42104, -175320, -7974, 15956), 0);
@@ -843,7 +843,7 @@ public final class FortunaInstance extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_5, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.STAGE_5, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
 			
 			addSpawnWithoutRespawn(23078, new Location(41448, -175608, -7974), 0);
@@ -864,7 +864,7 @@ public final class FortunaInstance extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.PRIDETSAOTPRAVITNEMNOGO, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.WE_NEED_A_LITTLE_MORE, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FiveStageMainMob1SubStage(), 10000L);
@@ -882,7 +882,7 @@ public final class FortunaInstance extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.KINEN, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.ENRAGED_MASTER_KINEN_APPEARS, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
 			
 			NpcInstance plaksaraid = addSpawnWithoutRespawn(25840, new Location(42104, -175320, -7974, 15956), 0);
@@ -1015,7 +1015,7 @@ public final class FortunaInstance extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_4, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.STAGE_4, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
 			
 			addSpawnWithoutRespawn(23078, new Location(41448, -175608, -7974), 0);
@@ -1036,7 +1036,7 @@ public final class FortunaInstance extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.POGLOTITESVET, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.BLOODSUCKING_CREATURES_ABSORB_THE_LIGHT_AND_FILL_IT_INTO_DARKNESS, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			ThreadPoolManager.getInstance().schedule(new FortunaInstance.FourStageMainMob1SubStage(), 10000L);
@@ -1054,7 +1054,7 @@ public final class FortunaInstance extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.PLAKSA, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.WEEPING_YUI_APPEARS, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
 			
 			NpcInstance plaksaraid = addSpawnWithoutRespawn(25837, new Location(42104, -175320, -7974, 15956), 0);
@@ -1187,7 +1187,7 @@ public final class FortunaInstance extends Reflection
 		{
 			/* 44 */for (Player player : getPlayers())
 			{
-				/* 45 */player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_3, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
+				/* 45 */player.sendPacket(new ExShowScreenMessage(NpcStringId.STAGE_3, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
 			
 			/* 47 */addSpawnWithoutRespawn(23078, new Location(41448, -175608, -7974), 0);
@@ -1211,7 +1211,7 @@ public final class FortunaInstance extends Reflection
 		{
 			/* 32 */for (Player player : getPlayers())
 			{
-				/* 33 */player.sendPacket(new ExShowScreenMessage(NpcString.POSMOTRIM, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				/* 33 */player.sendPacket(new ExShowScreenMessage(NpcStringId.LET_S_SEE_HOW_MUCH_YOU_CAN_ENDURE, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			/* 35 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.FreeStageMainMob1SubStage(), 10000L);
@@ -1339,7 +1339,7 @@ public final class FortunaInstance extends Reflection
 		{
 			/* 46 */for (Player player : getPlayers())
 			{
-				/* 47 */player.sendPacket(new ExShowScreenMessage(NpcString.STAGE_2, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
+				/* 47 */player.sendPacket(new ExShowScreenMessage(NpcStringId.STAGE_2, 6000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_RIGHT, true, 1, -1, true, new String[0]));
 			}
 			
 			/* 49 */addSpawnWithoutRespawn(23077, new Location(41448, -175608, -7974), 0);
@@ -1363,7 +1363,7 @@ public final class FortunaInstance extends Reflection
 		{
 			/* 34 */for (Player player : getPlayers())
 			{
-				/* 35 */player.sendPacket(new ExShowScreenMessage(NpcString.AETTEKTO, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				/* 35 */player.sendPacket(new ExShowScreenMessage(NpcStringId.THOSE_WHO_CAME_HERE_LOOKING_FOR_CURSED_ONES_WELCOME, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			/* 37 */ThreadPoolManager.getInstance().schedule(new FortunaInstance.TwoStageMainMob1SubStage(), 30000L);
@@ -1402,7 +1402,7 @@ public final class FortunaInstance extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.ZAVECHNIYPOKOI, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.FOR_THE_ETERNAL_REST_OF_THE_FORGOTTEN_HEROES, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			addSpawnWithoutRespawn(33589, new Location(42104, -175320, -7974), 0);
@@ -1563,7 +1563,7 @@ public final class FortunaInstance extends Reflection
 			
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.WHO_POTR_OUR_SAFETY, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.WHO_DARE_TO_INTERRUPT_OUR_REST, 6000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, 1, -1, true, new String[0]));
 			}
 			
 			ThreadPoolManager.getInstance().schedule(new FortunaInstance.OneStageMain(), 20000L);

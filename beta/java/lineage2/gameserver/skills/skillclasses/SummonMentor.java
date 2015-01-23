@@ -23,7 +23,7 @@ import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.network.serverpackets.ConfirmDlg;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 
 /**
@@ -64,7 +64,7 @@ public class SummonMentor extends Skill
 			
 			if (p.getActiveWeaponFlagAttachment() != null)
 			{
-				activeChar.sendPacket(SystemMsg.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD);
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD));
 				return false;
 			}
 			
@@ -76,7 +76,7 @@ public class SummonMentor extends Skill
 			
 			if (p.isInOlympiadMode())
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_USE_THAT_SKILL_IN_A_OLYMPIAD_MATCH));
 				return false;
 			}
 		}
@@ -119,7 +119,7 @@ public class SummonMentor extends Skill
 				return;
 			}
 			
-			mentor.ask(new ConfirmDlg(SystemMsg.S1, 30000).addString("Teleport to Mentee? " + activeChar.getName()), new MentorAnswerListener(mentor, activeChar.getName()));
+			mentor.ask(new ConfirmDlg(SystemMessageId.YOU_HAVE_REQUESTED_A_TELEPORT_TO_S1_DO_YOU_WISH_TO_CONTINUE).addString(activeChar.getName()), new MentorAnswerListener(mentor, activeChar.getName()));
 		}
 		else
 		{

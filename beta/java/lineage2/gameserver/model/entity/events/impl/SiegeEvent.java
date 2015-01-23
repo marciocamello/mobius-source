@@ -42,8 +42,9 @@ import lineage2.gameserver.model.instances.SummonInstance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.RelationChanged;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.templates.DoorTemplate;
 import lineage2.gameserver.utils.Location;
@@ -83,7 +84,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 				return;
 			}
 			
-			broadcastTo(SystemMsg.THE_CASTLE_GATE_HAS_BEEN_DESTROYED, SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
+			broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_CASTLE_GATE_HAS_BEEN_DESTROYED), SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
 		}
 	}
 	
@@ -669,7 +670,7 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 				}
 				else
 				{
-					player.sendPacket(SystemMsg.IF_A_BASE_CAMP_DOES_NOT_EXIST_RESURRECTION_IS_NOT_POSSIBLE);
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.IF_A_BASE_CAMP_DOES_NOT_EXIST_RESURRECTION_IS_NOT_POSSIBLE));
 				}
 				break;
 			
@@ -753,10 +754,10 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 	 * @param attacker Creature
 	 * @param skill Skill
 	 * @param force boolean
-	 * @return SystemMsg
+	 * @return SystemMessage
 	 */
 	@Override
-	public SystemMsg checkForAttack(Creature target, Creature attacker, Skill skill, boolean force)
+	public SystemMessage checkForAttack(Creature target, Creature attacker, Skill skill, boolean force)
 	{
 		SiegeEvent<?, ?> siegeEvent = target.getEvent(SiegeEvent.class);
 		
@@ -781,26 +782,26 @@ public abstract class SiegeEvent<R extends Residence, S extends SiegeClanObject>
 		
 		if ((siegeClan1 == null) && attacker.isSiegeGuard())
 		{
-			return SystemMsg.INVALID_TARGET;
+			return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 		}
 		
 		Player playerAttacker = attacker.getPlayer();
 		
 		if (playerAttacker == null)
 		{
-			return SystemMsg.INVALID_TARGET;
+			return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 		}
 		
 		SiegeClanObject siegeClan2 = getSiegeClan(SiegeEvent.ATTACKERS, playerAttacker.getClan());
 		
 		if ((siegeClan1 != null) && (siegeClan2 != null) && isAttackersInAlly())
 		{
-			return SystemMsg.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE;
+			return SystemMessage.getSystemMessage(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
 		}
 		
 		if ((siegeClan1 == null) && (siegeClan2 == null))
 		{
-			return SystemMsg.INVALID_TARGET;
+			return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 		}
 		
 		return null;

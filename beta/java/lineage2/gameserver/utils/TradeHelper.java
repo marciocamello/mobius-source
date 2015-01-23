@@ -19,6 +19,7 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.items.TradeItem;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -43,7 +44,7 @@ public final class TradeHelper
 	{
 		if (!player.getPlayerAccess().UseTrade)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.THIS_ACCOUNT_CANOT_USE_PRIVATE_STORES));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SOME_LINEAGE_II_FEATURES_HAVE_BEEN_LIMITED_FOR_FREE_TRIALS_TRIAL_ACCOUNTS_AREN_T_ALLOWED_BUY_ITEMS_FROM_PRIVATE_STORES_TO_UNLOCK_ALL_OF_THE_FEATURES_OF_LINEAGE_II_PURCHASE_THE_FULL_VERSION_TODAY));
 			return false;
 		}
 		
@@ -57,7 +58,7 @@ public final class TradeHelper
 		
 		if ((tradeBan != null) && (tradeBan.equals("-1") || (Long.parseLong(tradeBan) >= System.currentTimeMillis())))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_CURRENTLY_BANNED_FROM_ACTIVITIES_RELATED_TO_THE_PRIVATE_STORE_AND_PRIVATE_WORKSHOP));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_CURRENTLY_BLOCKED_FROM_USING_THE_PRIVATE_STORE_AND_PRIVATE_WORKSHOP));
 			return false;
 		}
 		
@@ -67,20 +68,20 @@ public final class TradeHelper
 		{
 			if (!Config.SERVICES_NO_TRADE_ONLY_OFFLINE || (Config.SERVICES_NO_TRADE_ONLY_OFFLINE && player.isInOfflineMode()))
 			{
-				player.sendPacket(storeType == Player.STORE_PRIVATE_MANUFACTURE ? new SystemMessage(SystemMessage.A_PRIVATE_WORKSHOP_MAY_NOT_BE_OPENED_IN_THIS_AREA) : new SystemMessage(SystemMessage.A_PRIVATE_STORE_MAY_NOT_BE_OPENED_IN_THIS_AREA));
+				player.sendPacket(storeType == Player.STORE_PRIVATE_MANUFACTURE ? SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_WORKSHOP_HERE) : SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE));
 				return false;
 			}
 		}
 		
 		if (player.isCastingNow())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.A_PRIVATE_STORE_MAY_NOT_BE_OPENED_WHILE_USING_A_SKILL));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_PRIVATE_STORE_MAY_NOT_BE_OPENED_WHILE_USING_A_SKILL));
 			return false;
 		}
 		
 		if (player.isInCombat())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.WHILE_YOU_ARE_ENGAGED_IN_COMBAT_YOU_CANNOT_OPERATE_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WHILE_YOU_ARE_ENGAGED_IN_COMBAT_YOU_CANNOT_OPERATE_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP));
 			return false;
 		}
 		
@@ -131,19 +132,19 @@ public final class TradeHelper
 		{
 			if (item.getEnchantLevel() > 0)
 			{
-				seller.sendPacket(new SystemMessage(SystemMessage._S2S3_HAS_BEEN_SOLD_TO_S1_AT_THE_PRICE_OF_S4_ADENA).addString(buyer.getName()).addNumber(item.getEnchantLevel()).addItemName(item.getId()).addNumber(price));
-				buyer.sendPacket(new SystemMessage(SystemMessage._S2S3_HAS_BEEN_PURCHASED_FROM_S1_AT_THE_PRICE_OF_S4_ADENA).addString(seller.getName()).addNumber(item.getEnchantLevel()).addItemName(item.getId()).addNumber(price));
+				seller.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_S3_HAS_BEEN_SOLD_TO_C1_AT_THE_PRICE_OF_S4_ADENA).addString(buyer.getName()).addInt(item.getEnchantLevel()).addItemName(item.getId()).addLong(price));
+				buyer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_S3_HAS_BEEN_PURCHASED_FROM_C1_AT_THE_PRICE_OF_S4_ADENA).addString(seller.getName()).addInt(item.getEnchantLevel()).addItemName(item.getId()).addLong(price));
 			}
 			else
 			{
-				seller.sendPacket(new SystemMessage(SystemMessage.S2_IS_SOLD_TO_S1_AT_THE_PRICE_OF_S3_ADENA).addString(buyer.getName()).addItemName(item.getId()).addNumber(price));
-				buyer.sendPacket(new SystemMessage(SystemMessage.S2_HAS_BEEN_PURCHASED_FROM_S1_AT_THE_PRICE_OF_S3_ADENA).addString(seller.getName()).addItemName(item.getId()).addNumber(price));
+				seller.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_IS_SOLD_TO_C1_FOR_THE_PRICE_OF_S3_ADENA).addString(buyer.getName()).addItemName(item.getId()).addLong(price));
+				buyer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_HAS_BEEN_PURCHASED_FROM_C1_AT_THE_PRICE_OF_S3_ADENA).addString(seller.getName()).addItemName(item.getId()).addLong(price));
 			}
 		}
 		else
 		{
-			seller.sendPacket(new SystemMessage(SystemMessage.S2_S3_HAVE_BEEN_SOLD_TO_S1_FOR_S4_ADENA).addString(buyer.getName()).addItemName(item.getId()).addNumber(item.getCount()).addNumber(price));
-			buyer.sendPacket(new SystemMessage(SystemMessage.S3_S2_HAS_BEEN_PURCHASED_FROM_S1_FOR_S4_ADENA).addString(seller.getName()).addItemName(item.getId()).addNumber(item.getCount()).addNumber(price));
+			seller.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S3_S2_S_HAVE_BEEN_SOLD_TO_C1_FOR_S4_ADENA).addString(buyer.getName()).addItemName(item.getId()).addLong(item.getCount()).addLong(price));
+			buyer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S3_S2_S_HAVE_BEEN_PURCHASED_FROM_C1_FOR_S4_ADENA).addString(seller.getName()).addItemName(item.getId()).addLong(item.getCount()).addLong(price));
 		}
 	}
 	

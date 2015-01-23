@@ -32,7 +32,7 @@ import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.SubUnit;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.tables.SubClassTable;
@@ -202,11 +202,11 @@ public final class Rename extends Functions
 		{
 			if (Config.SERVICES_SEPARATE_SUB_ITEM == 57)
 			{
-				player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			}
 			else
 			{
-				player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 			}
 			
 			return;
@@ -352,11 +352,11 @@ public final class Rename extends Functions
 		{
 			if (Config.SERVICES_CHANGE_BASE_ITEM == 57)
 			{
-				player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			}
 			else
 			{
-				player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 			}
 			
 			return;
@@ -421,11 +421,11 @@ public final class Rename extends Functions
 		{
 			if (Config.SERVICES_CHANGE_NICK_ITEM == 57)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			}
 			else
 			{
-				player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 			}
 			
 			return;
@@ -472,11 +472,11 @@ public final class Rename extends Functions
 		{
 			if (Config.SERVICES_CHANGE_SEX_ITEM == 57)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			}
 			else
 			{
-				player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 			}
 			
 			return;
@@ -524,7 +524,7 @@ public final class Rename extends Functions
 		
 		if ((player.getClan() == null) || !player.isClanLeader())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.S1_IS_NOT_A_CLAN_LEADER).addName(player));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER).addPcName(player));
 			return;
 		}
 		
@@ -554,7 +554,7 @@ public final class Rename extends Functions
 		
 		if ((player.getClan() == null) || !player.isClanLeader())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.S1_IS_NOT_A_CLAN_LEADER).addName(player));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_A_CLAN_LEADER).addPcName(player));
 			return;
 		}
 		
@@ -566,13 +566,13 @@ public final class Rename extends Functions
 		
 		if (!Util.isMatchingRegexp(param[0], Config.CLAN_NAME_TEMPLATE))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.CLAN_NAME_IS_INCORRECT));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_NAME_IS_INVALID));
 			return;
 		}
 		
 		if (ClanTable.getInstance().getClanByName(param[0]) != null)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.THIS_NAME_ALREADY_EXISTS));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_NAME_ALREADY_EXISTS));
 			return;
 		}
 		
@@ -580,11 +580,11 @@ public final class Rename extends Functions
 		{
 			if (Config.SERVICES_CHANGE_CLAN_NAME_ITEM == 57)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			}
 			else
 			{
-				player.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 			}
 			
 			return;

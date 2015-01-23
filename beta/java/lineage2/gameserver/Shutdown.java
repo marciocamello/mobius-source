@@ -29,6 +29,7 @@ import lineage2.gameserver.model.entity.olympiad.OlympiadDatabase;
 import lineage2.gameserver.network.GameClient;
 import lineage2.gameserver.network.loginservercon.LoginServerCommunication;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Scripts;
 import lineage2.gameserver.utils.Util;
 
@@ -95,7 +96,7 @@ public class Shutdown extends Thread
 				case 20:
 				case 10:
 				case 5:
-					Announcements.getInstance().announceToAll(new SystemMessage(SystemMessage.THE_SERVER_WILL_BE_COMING_DOWN_IN_S1_SECONDS__PLEASE_FIND_A_SAFE_PLACE_TO_LOG_OUT).addNumber(shutdownCounter));
+					Announcements.getInstance().announceToAll(SystemMessage.getSystemMessage(SystemMessageId.THE_SERVER_WILL_BE_COMING_DOWN_IN_S1_SECOND_S_PLEASE_FIND_A_SAFE_PLACE_TO_LOG_OUT).addInt(shutdownCounter));
 					break;
 				
 				case 0:

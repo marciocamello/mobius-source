@@ -23,7 +23,11 @@ import org.apache.commons.lang3.tuple.Pair;
  */
 public class ConfirmDlg extends L2GameClientPacket
 {
-	private int _answer, _requestId;
+	@SuppressWarnings("unused")
+	private int _messageId;
+	
+	private int _answer;
+	private int _requesterId;
 	
 	/**
 	 * Method readImpl.
@@ -31,9 +35,9 @@ public class ConfirmDlg extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		readD();
+		_messageId = readD();
 		_answer = readD();
-		_requestId = readD();
+		_requesterId = readD();
 	}
 	
 	/**
@@ -51,7 +55,7 @@ public class ConfirmDlg extends L2GameClientPacket
 		
 		Pair<Integer, OnAnswerListener> entry = activeChar.getAskListener(true);
 		
-		if ((entry == null) || (entry.getKey() != _requestId))
+		if ((entry == null) || (entry.getKey() != _requesterId))
 		{
 			return;
 		}

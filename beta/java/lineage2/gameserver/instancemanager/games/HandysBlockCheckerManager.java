@@ -31,6 +31,7 @@ import lineage2.gameserver.network.serverpackets.ExCubeGameChangeTeam;
 import lineage2.gameserver.network.serverpackets.ExCubeGameRemovePlayer;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import gnu.trove.map.hash.TIntIntHashMap;
 
 /**
@@ -147,13 +148,13 @@ public final class HandysBlockCheckerManager
 			
 			if (isRegistered(player))
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_ALREADY_BEEN_REGISTERED_IN_A_WAITING_LIST_OF_AN_EVENT).addName(player));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_REGISTERED_ON_THE_MATCH_WAITING_LIST).addPcName(player));
 				return false;
 			}
 			
 			if (player.isCursedWeaponEquipped())
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_REGISTER_WHILE_POSSESSING_A_CURSED_WEAPON));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_REGISTER_WHILE_IN_POSSESSION_OF_A_CURSED_WEAPON));
 				return false;
 			}
 			
@@ -161,19 +162,19 @@ public final class HandysBlockCheckerManager
 			
 			if (krateis.isRegistered(player))
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.APPLICANTS_FOR_THE_OLYMPIAD_UNDERGROUND_COLISEUM_OR_KRATEI_S_CUBE_MATCHES_CANNOT_REGISTER));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.APPLICANTS_FOR_THE_OLYMPIAD_UNDERGROUND_COLISEUM_OR_KRATEI_S_CUBE_MATCHES_CANNOT_REGISTER));
 				return false;
 			}
 			
 			if (Olympiad.isRegistered(player))
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.APPLICANTS_FOR_THE_OLYMPIAD_UNDERGROUND_COLISEUM_OR_KRATEI_S_CUBE_MATCHES_CANNOT_REGISTER));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.APPLICANTS_FOR_THE_OLYMPIAD_UNDERGROUND_COLISEUM_OR_KRATEI_S_CUBE_MATCHES_CANNOT_REGISTER));
 				return false;
 			}
 			
 			if (_registrationPenalty.contains(player.getObjectId()))
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MAKE_ANOTHER_REQUEST_FOR_10_SECONDS_AFTER_CANCELLING_A_MATCH_REGISTRATION));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MUST_WAIT_10_SECONDS_BEFORE_ATTEMPTING_TO_REGISTER_AGAIN));
 				return false;
 			}
 			
@@ -519,7 +520,7 @@ public final class HandysBlockCheckerManager
 			
 			if (redSize > (blueSize + 1))
 			{
-				broadCastPacketToTeam(new SystemMessage(SystemMessage.THE_TEAM_WAS_ADJUSTED_BECAUSE_THE_POPULATION_RATIO_WAS_NOT_CORRECT));
+				broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.TEAM_MEMBERS_WERE_MODIFIED_BECAUSE_THE_TEAMS_WERE_UNBALANCED));
 				int needed = redSize - (blueSize + 1);
 				
 				for (int i = 0; i < (needed + 1); i++)
@@ -536,7 +537,7 @@ public final class HandysBlockCheckerManager
 			}
 			else if (blueSize > (redSize + 1))
 			{
-				broadCastPacketToTeam(new SystemMessage(SystemMessage.THE_TEAM_WAS_ADJUSTED_BECAUSE_THE_POPULATION_RATIO_WAS_NOT_CORRECT));
+				broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.TEAM_MEMBERS_WERE_MODIFIED_BECAUSE_THE_TEAMS_WERE_UNBALANCED));
 				int needed = blueSize - (redSize + 1);
 				
 				for (int i = 0; i < (needed + 1); i++)

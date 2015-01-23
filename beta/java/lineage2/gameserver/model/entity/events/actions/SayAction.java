@@ -20,9 +20,9 @@ import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.Say2;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.network.serverpackets.components.SysString;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -33,9 +33,9 @@ public class SayAction implements EventAction
 	private final int _range;
 	private final ChatType _chatType;
 	private String _how;
-	private NpcString _text;
+	private NpcStringId _text;
 	private SysString _sysString;
-	private SystemMsg _systemMsg;
+	private SystemMessageId _systemMsg;
 	
 	/**
 	 * Constructor for SayAction.
@@ -53,13 +53,13 @@ public class SayAction implements EventAction
 	 * @param range int
 	 * @param type ChatType
 	 * @param sysString SysString
-	 * @param systemMsg SystemMsg
+	 * @param systemMessageId SystemMsg
 	 */
-	public SayAction(int range, ChatType type, SysString sysString, SystemMsg systemMsg)
+	public SayAction(int range, ChatType type, SysString sysString, SystemMessageId systemMessageId)
 	{
 		this(range, type);
 		_sysString = sysString;
-		_systemMsg = systemMsg;
+		_systemMsg = systemMessageId;
 	}
 	
 	/**
@@ -69,7 +69,7 @@ public class SayAction implements EventAction
 	 * @param how String
 	 * @param string NpcString
 	 */
-	public SayAction(int range, ChatType type, String how, NpcString string)
+	public SayAction(int range, ChatType type, String how, NpcStringId string)
 	{
 		this(range, type);
 		_text = string;

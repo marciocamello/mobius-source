@@ -24,7 +24,7 @@ import lineage2.gameserver.model.Zone.ZoneType;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.tables.SkillTable;
 
 /**
@@ -68,7 +68,7 @@ public final class Maguen extends Fighter
 		
 		if (!getActor().isInZone(ZoneType.Dummy) && (around != null) && !around.isEmpty())
 		{
-			final ExShowScreenMessage sm = new ExShowScreenMessage(NpcString.MAGUEN_APPEARANCE, 5000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true);
+			final ExShowScreenMessage sm = new ExShowScreenMessage(NpcStringId.MAGUEN_APPEARANCE, 5000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true);
 			
 			for (Creature character : around)
 			{

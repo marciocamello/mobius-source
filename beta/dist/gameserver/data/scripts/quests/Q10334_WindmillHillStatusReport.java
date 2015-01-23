@@ -17,7 +17,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10334_WindmillHillStatusReport extends Quest implements ScriptFile
@@ -56,7 +56,7 @@ public class Q10334_WindmillHillStatusReport extends Quest implements ScriptFile
 			
 			case "qet_rev":
 				htmltext = "1-3.htm";
-				player.sendPacket(new ExShowScreenMessage(NpcString.WEAPONS_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.WEAPONS_HAVE_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER));
 				qs.getPlayer().addExpAndSp(200000, 6000);
 				qs.giveItems(57, 849);
 				qs.exitCurrentQuest(false);

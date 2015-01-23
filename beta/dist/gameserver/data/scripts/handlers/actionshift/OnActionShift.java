@@ -36,7 +36,7 @@ import lineage2.gameserver.model.instances.SummonInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestEventType;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.utils.HtmlUtils;
@@ -800,7 +800,7 @@ public final class OnActionShift extends Functions
 	 */
 	private String nameNpc(NpcInstance npc)
 	{
-		if (npc.getNameNpcString() == NpcString.NONE)
+		if (npc.getNameNpcString() == NpcStringId.STRING_NONE)
 		{
 			return HtmlUtils.htmlNpcName(npc.getId());
 		}

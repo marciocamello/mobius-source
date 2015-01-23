@@ -24,7 +24,7 @@ import lineage2.gameserver.model.base.SkillTrait;
 import lineage2.gameserver.model.instances.ReflectionBossInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.skills.EffectType;
 import lineage2.gameserver.skills.effects.EffectTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate;
@@ -177,14 +177,14 @@ public class Formulas
 					{
 						info.lethal = true;
 						info.lethal_dmg = target.getCurrentCp();
-						target.sendPacket(new SystemMessage(SystemMessage.CP_DISAPPEARS_WHEN_HIT_WITH_A_HALF_KILL_SKILL));
+						target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_CP_WAS_DRAINED_BECAUSE_YOU_WERE_HIT_WITH_A_HALF_KILL_SKILL));
 					}
 					else
 					{
 						info.lethal_dmg = target.getCurrentHp() / 2;
 					}
 					
-					attacker.sendPacket(new SystemMessage(SystemMessage.HALF_KILL));
+					attacker.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.HALF_KILL));
 				}
 				else if (Rnd.chance(info.lethal2))
 				{
@@ -192,14 +192,14 @@ public class Formulas
 					{
 						info.lethal = true;
 						info.lethal_dmg = (target.getCurrentHp() + target.getCurrentCp()) - 1.1;
-						target.sendPacket(SystemMsg.LETHAL_STRIKE);
+						target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.LETHAL_STRIKE));
 					}
 					else
 					{
 						info.lethal_dmg = target.getCurrentHp() - 1;
 					}
 					
-					attacker.sendPacket(SystemMsg.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL);
+					attacker.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.HIT_WITH_LETHAL_STRIKE));
 				}
 			}
 			
@@ -356,18 +356,18 @@ public class Formulas
 			{
 				if (info.damage == 1)
 				{
-					target.sendPacket(SystemMsg.YOUR_EXCELLENT_SHIELD_DEFENSE_WAS_A_SUCCESS);
+					target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_EXCELLENT_SHIELD_DEFENSE_WAS_A_SUCCESS));
 				}
 				else
 				{
-					target.sendPacket(SystemMsg.YOUR_SHIELD_DEFENSE_HAS_SUCCEEDED);
+					target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_SHIELD_DEFENSE_HAS_SUCCEEDED));
 				}
 			}
 			
 			if ((info.damage > 1) && !skill.hasEffects() && Rnd.chance(target.calcStat(Stats.PSKILL_EVASION, 0, attacker, skill)))
 			{
-				attacker.sendPacket(new SystemMessage(SystemMessage.C1S_ATTACK_WENT_ASTRAY).addName(attacker));
-				target.sendPacket(new SystemMessage(SystemMessage.C1_HAS_EVADED_C2S_ATTACK).addName(target).addName(attacker));
+				attacker.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_S_ATTACK_WENT_ASTRAY).addCharName(attacker));
+				target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK).addCharName(target).addCharName(attacker));
 				info.damage = 0;
 			}
 			
@@ -380,7 +380,7 @@ public class Formulas
 			{
 				info.miss = true;
 				info.damage = 0;
-				attacker.sendPacket(new SystemMessage(SystemMessage.C1S_ATTACK_WENT_ASTRAY).addName(attacker));
+				attacker.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_S_ATTACK_WENT_ASTRAY).addCharName(attacker));
 			}
 			
 			if (blow)
@@ -391,7 +391,7 @@ public class Formulas
 					{
 						info.lethal = true;
 						info.lethal_dmg = target.getCurrentCp();
-						target.sendPacket(new SystemMessage(SystemMessage.CP_DISAPPEARS_WHEN_HIT_WITH_A_HALF_KILL_SKILL));
+						target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_CP_WAS_DRAINED_BECAUSE_YOU_WERE_HIT_WITH_A_HALF_KILL_SKILL));
 					}
 					else if (target.isLethalImmune())
 					{
@@ -402,7 +402,7 @@ public class Formulas
 						info.lethal_dmg = target.getCurrentHp() / 2;
 					}
 					
-					attacker.sendPacket(new SystemMessage(SystemMessage.HALF_KILL));
+					attacker.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.HALF_KILL));
 				}
 				else if (Rnd.chance(info.lethal2))
 				{
@@ -410,7 +410,7 @@ public class Formulas
 					{
 						info.lethal = true;
 						info.lethal_dmg = (target.getCurrentHp() + target.getCurrentCp()) - 1.1;
-						target.sendPacket(SystemMsg.LETHAL_STRIKE);
+						target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.LETHAL_STRIKE));
 					}
 					else if (target.isLethalImmune())
 					{
@@ -421,7 +421,7 @@ public class Formulas
 						info.lethal_dmg = target.getCurrentHp() - 1;
 					}
 					
-					attacker.sendPacket(SystemMsg.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL);
+					attacker.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.HIT_WITH_LETHAL_STRIKE));
 				}
 			}
 			
@@ -506,7 +506,7 @@ public class Formulas
 			{
 				info.lethal = true;
 				info.lethal_dmg = target.getCurrentCp();
-				target.sendPacket(new SystemMessage(SystemMessage.CP_DISAPPEARS_WHEN_HIT_WITH_A_HALF_KILL_SKILL));
+				target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_CP_WAS_DRAINED_BECAUSE_YOU_WERE_HIT_WITH_A_HALF_KILL_SKILL));
 			}
 			else if (!target.isLethalImmune())
 			{
@@ -518,7 +518,7 @@ public class Formulas
 				power *= 2;
 			}
 			
-			attacker.sendPacket(new SystemMessage(SystemMessage.HALF_KILL));
+			attacker.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.HALF_KILL));
 		}
 		else if (Rnd.chance(skill.getLethal2()))
 		{
@@ -526,7 +526,7 @@ public class Formulas
 			{
 				info.lethal = true;
 				info.lethal_dmg = (target.getCurrentHp() + target.getCurrentCp()) - 1.1;
-				target.sendPacket(SystemMsg.LETHAL_STRIKE);
+				target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.LETHAL_STRIKE));
 			}
 			else if (!target.isLethalImmune())
 			{
@@ -538,7 +538,7 @@ public class Formulas
 				power *= 3;
 			}
 			
-			attacker.sendPacket(SystemMsg.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL);
+			attacker.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.HIT_WITH_LETHAL_STRIKE));
 		}
 		
 		if (power == 0)
@@ -573,13 +573,13 @@ public class Formulas
 			if (Rnd.chance(5))
 			{
 				info.damage = 0;
-				target.sendPacket(SystemMsg.YOUR_EXCELLENT_SHIELD_DEFENSE_WAS_A_SUCCESS);
-				attacker.sendPacket(new SystemMessage(SystemMessage.C1_RESISTED_C2S_MAGIC).addName(target).addName(attacker));
+				target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_EXCELLENT_SHIELD_DEFENSE_WAS_A_SUCCESS));
+				attacker.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_C2_S_MAGIC).addCharName(target).addCharName(attacker));
 			}
 			else
 			{
-				target.sendPacket(SystemMsg.YOUR_SHIELD_DEFENSE_HAS_SUCCEEDED);
-				attacker.sendPacket(new SystemMessage(SystemMessage.YOUR_OPPONENT_HAS_RESISTANCE_TO_MAGIC_THE_DAMAGE_WAS_DECREASED));
+				target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_SHIELD_DEFENSE_HAS_SUCCEEDED));
+				attacker.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_OPPONENT_HAS_MAGIC_RESISTANCE_THE_DAMAGE_WAS_DECREASED));
 			}
 		}
 		
@@ -616,14 +616,14 @@ public class Formulas
 			if (levelDiff > 9)
 			{
 				info.damage = 0;
-				SystemMessage msg = new SystemMessage(SystemMessage.C1_RESISTED_C2S_MAGIC).addName(target).addName(attacker);
+				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_C2_S_MAGIC).addCharName(target).addCharName(attacker);
 				attacker.sendPacket(msg);
 				target.sendPacket(msg);
 			}
 			else
 			{
 				info.damage /= 2;
-				SystemMessage msg = new SystemMessage(SystemMessage.DAMAGE_IS_DECREASED_BECAUSE_C1_RESISTED_AGAINST_C2S_MAGIC).addName(target).addName(attacker);
+				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.DAMAGE_IS_DECREASED_BECAUSE_C1_RESISTED_C2_S_MAGIC).addCharName(target).addCharName(attacker);
 				attacker.sendPacket(msg);
 				target.sendPacket(msg);
 			}
@@ -631,8 +631,8 @@ public class Formulas
 		
 		if ((info.damage > 1) && skill.isMagic() && calcMagicMiss(attacker, target))
 		{
-			attacker.sendPacket(new SystemMessage(SystemMessage.C1S_ATTACK_WENT_ASTRAY).addName(attacker));
-			target.sendPacket(new SystemMessage(SystemMessage.C1_HAS_EVADED_C2S_ATTACK).addName(target).addName(attacker));
+			attacker.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_S_ATTACK_WENT_ASTRAY).addCharName(attacker));
+			target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK).addCharName(target).addCharName(attacker));
 			info.damage = 0;
 		}
 		

@@ -29,7 +29,7 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
@@ -96,29 +96,29 @@ public class TautiInstance extends Reflection
 	
 	public final AtomicInteger raidplayers = new AtomicInteger();
 	
-	private static final NpcString[] KUNDAS_MESSAGES =
+	private static final NpcStringId[] KUNDAS_MESSAGES =
 	{
-		NpcString.EVERYONE_DIE,
-		NpcString.FOR_TAUTI,
-		NpcString.EVEN_RATS_STRUNGGLE_WHEN_YOU_STEP_ON_THEM,
-		NpcString.YOU_RAT_LIKE_CREATURES,
-		NpcString.TODAY_MY_WEAPON_WILL_FEAST_ON_YOUR_PETRAS,
-		NpcString.HAHAHAHA_HAHAHAHA_PUNY_INSECTS,
-		NpcString.I_WILL_PUNISH_YOU_IN_THE_NAME_TAUTI_THE_CRIME_IS_STEALING_THE_PUNISHMENT_IS_DEATH,
-		NpcString.FIGHT_FOR_THE_SAKE_OF_OUR_FUTURE
+		NpcStringId.EVERYONE_DIE,
+		NpcStringId.FOR_TAUTI,
+		NpcStringId.EVEN_RATS_STRUGGLE_WHEN_YOU_STEP_ON_THEM,
+		NpcStringId.YOU_RAT_LIKE_CREATURES,
+		NpcStringId.TODAY_IS_A_FEASTING_DAY_FOR_MY_WEAPON_ON_YOUR_PETRAS,
+		NpcStringId.HAHAHAHA_HAHAHAHA_PUNY_INSECTS,
+		NpcStringId.I_WILL_PUNISH_YOU_IN_THE_NAME_OF_TAUTI_THE_CRIME_IS_STEALING_THE_PUNISHMENT_IS_DEATH,
+		NpcStringId.FIGHT_FOR_THE_SAKE_OF_OUR_FUTURE
 	};
 	
-	private static final NpcString[] SOFAS_MESSAGES =
+	private static final NpcStringId[] SOFAS_MESSAGES =
 	{
-		NpcString.FOR_OUR_FRIENDS_AND_FAMILY,
-		NpcString.YOU_KUNDANOMUS_MY_WEAPON_ISNT_GREAT_BUT_I_WILL_STILL_CUT_OFF_YOUR_HEADS_WITH_IT,
-		NpcString.GIVE_ME_FREEDOM_OR_GIVE_ME_DEATH,
-		NpcString.US_TODAY_HERE_WE_SHALL_WRITE_HISTORY_BY_DEFEATING_TAUTI_FOR_FREEDOM_AND_HAPPINESS,
-		NpcString.WE_ARE_NOT_YOUR_PETS_OR_CATTLE,
-		NpcString.YOU_WILL_DIE_AND_I_WILL_LIVE,
-		NpcString.WE_CANNOT_FORGIVE_TAUTI_FOR_FEEDING_ON_US_ANYMORE,
-		NpcString.FIGHT_FOR_THE_SAKE_OF_OUR_FUTURE,
-		NpcString.IF_WE_ALL_FALL_HERE_OUR_PLAN_WILL_CERTAINLY_FAIL_PLEASE_PROTECT_MY_FRIENDS
+		NpcStringId.FOR_OUR_FRIENDS_AND_FAMILY,
+		NpcStringId.YOU_WORTHLESS_KUNDAS_MY_WEAPON_MAY_NOT_BE_THE_BST_BUT_IT_S_STILL_ENOUGH_TO_CUT_YOUR_HEADS_OFF,
+		NpcStringId.GIVE_ME_FREEDOM_OR_GIVE_ME_DEATH,
+		NpcStringId.US_TODAY_HERE_WE_SHALL_WRITE_NEW_HISTORY_BY_DEFEATING_TAUTI_FOR_FREEDOM_AND_HAPPINESS,
+		NpcStringId.WE_ARE_NOT_YOUR_PETS_OR_CATTLE,
+		NpcStringId.YOU_WILL_DIE_AND_I_WILL_LIVE,
+		NpcStringId.WE_CANNOT_FORGIVE_TAUTI_FOR_FEEDING_ON_US_ANYMORE,
+		NpcStringId.FIGHT_FOR_THE_SAKE_OF_OUR_FUTURE,
+		NpcStringId.IF_WE_ALL_FALL_HERE_OUR_PLAN_WILL_CERTAINLY_FAIL_PLEASE_PROTECT_MY_FRIENDS
 	};
 	
 	@Override
@@ -225,7 +225,7 @@ public class TautiInstance extends Reflection
 					
 					for (Player player : getPlayers())
 					{
-						player.sendPacket(new ExShowScreenMessage(NpcString.JAHAK_IS_INFUSING_ITS_PETRA_TO_TAUTI, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
+						player.sendPacket(new ExShowScreenMessage(NpcStringId.ZAHAK_IS_INFUSING_ITS_PETRA_TO_TAUTI, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 					}
 					
 					ThreadPoolManager.getInstance().schedule(new RunnableImpl()
@@ -239,7 +239,7 @@ public class TautiInstance extends Reflection
 							
 							for (Player player : getPlayers())
 							{
-								player.sendPacket(new ExShowScreenMessage(NpcString.LORD_TAUTI_REVEIVE_MY_PETRA_AND_BE_STRENGTHENED_THEN_DEFEAT_THESE_FEEBLE_WRETCHES, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
+								player.sendPacket(new ExShowScreenMessage(NpcStringId.LORD_TAUTI_RECEIVE_MY_PETRA_AND_BE_STRENGTHENED_THEN_DEFEAT_THESE_FEEBLE_WRETCHES, 5000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, true, 0));
 							}
 						}
 					}, 5000L);
@@ -302,10 +302,10 @@ public class TautiInstance extends Reflection
 	
 	private class SayChatTask extends RunnableImpl
 	{
-		private final NpcString _msg;
+		private final NpcStringId _msg;
 		private final int _npcId;
 		
-		public SayChatTask(NpcString msg, int npcId)
+		public SayChatTask(NpcStringId msg, int npcId)
 		{
 			_msg = msg;
 			_npcId = npcId;

@@ -22,7 +22,8 @@ import lineage2.gameserver.network.serverpackets.ActionFail;
 import lineage2.gameserver.network.serverpackets.ExBaseAttributeCancelResult;
 import lineage2.gameserver.network.serverpackets.ExShowBaseAttributeCancelWindow;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -82,7 +83,7 @@ public class RequestExRemoveItemAttribute extends L2GameClientPacket
 		
 		if (!activeChar.reduceAdena(ExShowBaseAttributeCancelWindow.getAttributeRemovePrice(itemToUnnchant), true))
 		{
-			activeChar.sendPacket(new ExBaseAttributeCancelResult(false, itemToUnnchant, element), SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA, ActionFail.STATIC);
+			activeChar.sendPacket(new ExBaseAttributeCancelResult(false, itemToUnnchant, element), SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA), ActionFail.STATIC);
 			return;
 		}
 		

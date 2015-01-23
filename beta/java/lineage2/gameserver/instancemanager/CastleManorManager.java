@@ -31,6 +31,7 @@ import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.items.Warehouse;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.templates.manor.CropProcure;
 import lineage2.gameserver.templates.manor.SeedProduction;
@@ -300,7 +301,7 @@ public class CastleManorManager
 			
 			c.saveCropData();
 			c.saveSeedData();
-			PlayerMessageStack.getInstance().mailto(clan.getLeaderId(), new SystemMessage(SystemMessage.THE_MANOR_INFORMATION_HAS_BEEN_UPDATED));
+			PlayerMessageStack.getInstance().mailto(clan.getLeaderId(), SystemMessage.getSystemMessage(SystemMessageId.THE_MANOR_INFORMATION_HAS_BEEN_UPDATED));
 			c.setNextPeriodApproved(false);
 		}
 	}
@@ -333,7 +334,7 @@ public class CastleManorManager
 				}
 				
 				Clan clan = c.getOwner();
-				PlayerMessageStack.getInstance().mailto(clan.getLeaderId(), new SystemMessage(SystemMessage.THE_AMOUNT_IS_NOT_SUFFICIENT_AND_SO_THE_MANOR_IS_NOT_IN_OPERATION));
+				PlayerMessageStack.getInstance().mailto(clan.getLeaderId(), SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_FUNDS_IN_THE_CLAN_WAREHOUSE_FOR_THE_MANOR_TO_OPERATE));
 			}
 			else
 			{

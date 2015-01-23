@@ -24,7 +24,7 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
@@ -132,7 +132,7 @@ public class AdminCreateItem implements IAdminCommandHandler, ScriptFile
 					GameObject target = activeChar.getTarget();
 					if ((target == null) || !target.isPlayer())
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.SELECT_TARGET));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SELECT_TARGET));
 						return false;
 					}
 					Player player = (Player) target;
@@ -263,7 +263,15 @@ public class AdminCreateItem implements IAdminCommandHandler, ScriptFile
 			}
 		}
 		
-		activeChar.sendPacket(SystemMessage2.obtainItems(itemId, count, 0));
+		if (count > 1)
+		{
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(itemId).addLong(count));
+		}
+		else
+		{
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(itemId));
+		}
+		
 		return createditem;
 	}
 	

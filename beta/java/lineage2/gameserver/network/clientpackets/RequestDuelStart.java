@@ -18,8 +18,8 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.entity.events.EventType;
 import lineage2.gameserver.model.entity.events.impl.DuelEvent;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -61,7 +61,7 @@ public class RequestDuelStart extends L2GameClientPacket
 		
 		if (player.isProcessingRequest())
 		{
-			player.sendPacket(SystemMsg.WAITING_FOR_ANOTHER_REPLY);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WAITING_FOR_ANOTHER_REPLY));
 			return;
 		}
 		
@@ -69,7 +69,7 @@ public class RequestDuelStart extends L2GameClientPacket
 		
 		if ((target == null) || (target == player))
 		{
-			player.sendPacket(SystemMsg.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL));
 			return;
 		}
 		
@@ -87,7 +87,7 @@ public class RequestDuelStart extends L2GameClientPacket
 		
 		if (target.isBusy())
 		{
-			player.sendPacket(new SystemMessage2(SystemMsg.C1_IS_ON_ANOTHER_TASK).addName(target));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ON_ANOTHER_TASK_PLEASE_TRY_AGAIN_LATER).addPcName(target));
 			return;
 		}
 		

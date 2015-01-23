@@ -30,7 +30,7 @@ import lineage2.gameserver.model.mail.Mail;
 import lineage2.gameserver.network.serverpackets.ExNoticePostArrived;
 import lineage2.gameserver.network.serverpackets.ExReplyWritePost;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.Log;
@@ -134,7 +134,7 @@ public class RequestExSendPost extends L2GameClientPacket
 			}
 			
 			activeChar.sendPacket(ExReplyWritePost.STATIC_TRUE);
-			activeChar.sendPacket(new SystemMessage(SystemMessage.MAIL_SUCCESSFULLY_SENT));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MAIL_SUCCESSFULLY_SENT));
 			return;
 		}
 		
@@ -147,19 +147,19 @@ public class RequestExSendPost extends L2GameClientPacket
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_FORWARD_BECAUSE_THE_PRIVATE_SHOP_OR_WORKSHOP_IS_IN_PROGRESS));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_FORWARD_BECAUSE_THE_PRIVATE_STORE_OR_WORKSHOP_IS_IN_PROGRESS));
 			return;
 		}
 		
 		if (activeChar.isInTrade())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_FORWARD_DURING_AN_EXCHANGE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_FORWARD_DURING_AN_EXCHANGE));
 			return;
 		}
 		
 		if (activeChar.getEnchantScroll() != null)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_FORWARD_DURING_AN_ITEM_ENHANCEMENT_OR_ATTRIBUTE_ENHANCEMENT));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_SEND_MAIL_WHILE_ENCHANTING_AN_ITEM_BESTOWING_AN_ATTRIBUTE_OR_COMBINING_JEWELS));
 			return;
 		}
 		
@@ -171,25 +171,25 @@ public class RequestExSendPost extends L2GameClientPacket
 		
 		if (activeChar.getName().equals(_recieverName))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_SEND_A_MAIL_TO_YOURSELF));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_SEND_A_MAIL_TO_YOURSELF));
 			return;
 		}
 		
 		if ((_count > 0) && !activeChar.isInPeaceZone())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_FORWARD_IN_A_NON_PEACE_ZONE_LOCATION));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_FORWARD_IN_A_NON_PEACE_ZONE_LOCATION));
 			return;
 		}
 		
 		if (activeChar.isFishing())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DO_THAT_WHILE_FISHING));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING));
 			return;
 		}
 		
 		if (!activeChar._antiFlood.canMail())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THE_PREVIOUS_MAIL_WAS_FORWARDED_LESS_THAN_1_MINUTE_AGO_AND_THIS_CANNOT_BE_FORWARDED));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_PREVIOUS_MAIL_WAS_FORWARDED_LESS_THAN_1_MINUTE_AGO_AND_THIS_CANNOT_BE_FORWARDED));
 			return;
 		}
 		
@@ -197,7 +197,7 @@ public class RequestExSendPost extends L2GameClientPacket
 		{
 			if (!activeChar.getPlayerAccess().UseTrade)
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.THIS_ACCOUNT_CANOT_TRADE_ITEMS));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SOME_LINEAGE_II_FEATURES_HAVE_BEEN_LIMITED_FOR_FREE_TRIALS_TRIAL_ACCOUNTS_AREN_T_ALLOWED_TO_TRADE_ITEMS_AND_OR_ADENA_TO_UNLOCK_ALL_OF_THE_FEATURES_OF_LINEAGE_II_PURCHASE_THE_FULL_VERSION_TODAY));
 				activeChar.sendActionFailed();
 				return;
 			}
@@ -221,7 +221,7 @@ public class RequestExSendPost extends L2GameClientPacket
 		
 		if (activeChar.isInBlockList(_recieverName))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_BLOCKED_C1).addString(_recieverName));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_BLOCKED_C1).addString(_recieverName));
 			return;
 		}
 		
@@ -235,7 +235,7 @@ public class RequestExSendPost extends L2GameClientPacket
 			
 			if (target.isInBlockList(activeChar))
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.S1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_S1_).addString(_recieverName));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_C1).addString(_recieverName));
 				return;
 			}
 		}
@@ -247,7 +247,7 @@ public class RequestExSendPost extends L2GameClientPacket
 			{
 				if (mysql.simple_get_int("target_Id", "character_blocklist", "obj_Id=" + recieverId + " AND target_Id=" + activeChar.getObjectId()) > 0)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.S1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_S1_).addString(_recieverName));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BLOCKED_YOU_YOU_CANNOT_SEND_MAIL_TO_C1).addString(_recieverName));
 					return;
 				}
 			}
@@ -255,7 +255,7 @@ public class RequestExSendPost extends L2GameClientPacket
 		
 		if (recieverId == 0)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.WHEN_THE_RECIPIENT_DOESN_T_EXIST_OR_THE_CHARACTER_HAS_BEEN_DELETED_SENDING_MAIL_IS_NOT_POSSIBLE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WHEN_THE_RECIPIENT_DOESN_T_EXIST_OR_THE_CHARACTER_HAS_BEEN_DELETED_SENDING_MAIL_IS_NOT_POSSIBLE));
 			return;
 		}
 		
@@ -263,7 +263,7 @@ public class RequestExSendPost extends L2GameClientPacket
 		
 		if (_count > 8)
 		{
-			activeChar.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 			return;
 		}
 		
@@ -275,7 +275,7 @@ public class RequestExSendPost extends L2GameClientPacket
 		{
 			if (activeChar.getAdena() < serviceCost)
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_FORWARD_BECAUSE_YOU_DON_T_HAVE_ENOUGH_ADENA));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_FORWARD_BECAUSE_YOU_DON_T_HAVE_ENOUGH_ADENA));
 				return;
 			}
 			
@@ -287,7 +287,7 @@ public class RequestExSendPost extends L2GameClientPacket
 					
 					if ((item == null) || (item.getCount() < _itemQ[i]) || ((item.getId() == ItemTemplate.ITEM_ID_ADENA) && (item.getCount() < (_itemQ[i] + serviceCost))) || !item.canBeTraded(activeChar))
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.THE_ITEM_THAT_YOU_RE_TRYING_TO_SEND_CANNOT_BE_FORWARDED_BECAUSE_IT_ISN_T_PROPER));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_ITEM_THAT_YOU_RE_TRYING_TO_SEND_CANNOT_BE_FORWARDED_BECAUSE_IT_ISN_T_PROPER));
 						return;
 					}
 				}
@@ -295,7 +295,7 @@ public class RequestExSendPost extends L2GameClientPacket
 			
 			if (!activeChar.reduceAdena(serviceCost, true))
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_FORWARD_BECAUSE_YOU_DON_T_HAVE_ENOUGH_ADENA));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_FORWARD_BECAUSE_YOU_DON_T_HAVE_ENOUGH_ADENA));
 				return;
 			}
 			
@@ -345,12 +345,12 @@ public class RequestExSendPost extends L2GameClientPacket
 		
 		mail.save();
 		activeChar.sendPacket(ExReplyWritePost.STATIC_TRUE);
-		activeChar.sendPacket(new SystemMessage(SystemMessage.MAIL_SUCCESSFULLY_SENT));
+		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MAIL_SUCCESSFULLY_SENT));
 		
 		if (target != null)
 		{
 			target.sendPacket(ExNoticePostArrived.STATIC_TRUE);
-			target.sendPacket(new SystemMessage(SystemMessage.THE_MAIL_HAS_ARRIVED));
+			target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MAIL_HAS_ARRIVED));
 		}
 	}
 }

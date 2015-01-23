@@ -19,6 +19,7 @@ import lineage2.gameserver.model.base.EnchantSkillLearn;
 import lineage2.gameserver.network.serverpackets.ExEnchantSkillInfo;
 import lineage2.gameserver.network.serverpackets.ExEnchantSkillResult;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.tables.SkillTreeTable;
@@ -93,13 +94,13 @@ public final class RequestExEnchantSkillRouteChange extends L2GameClientPacket
 		
 		if (activeChar.getSp() < requiredSp)
 		{
-			sendPacket(new SystemMessage(SystemMessage.SP_REQUIRED_FOR_SKILL_ENCHANT_IS_INSUFFICIENT));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_ENCHANT_THAT_SKILL));
 			return;
 		}
 		
 		if (activeChar.getAdena() < requiredAdena)
 		{
-			sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			return;
 		}
 		
@@ -107,7 +108,7 @@ public final class RequestExEnchantSkillRouteChange extends L2GameClientPacket
 		{
 			if (Functions.getItemCount(activeChar, SkillTreeTable.CHANGE_ENCHANT_BOOK) == 0)
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL));
 				return;
 			}
 			
@@ -117,7 +118,7 @@ public final class RequestExEnchantSkillRouteChange extends L2GameClientPacket
 		{
 			if (Functions.getItemCount(activeChar, SkillTreeTable.NEW_CHANGE_ENCHANT_BOOK) == 0)
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.ITEMS_REQUIRED_FOR_SKILL_ENCHANT_ARE_INSUFFICIENT));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ALL_OF_THE_ITEMS_NEEDED_TO_ENCHANT_THAT_SKILL));
 				return;
 			}
 			
@@ -143,15 +144,15 @@ public final class RequestExEnchantSkillRouteChange extends L2GameClientPacket
 		
 		if (levelPenalty == 0)
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.Enchant_skill_route_change_was_successful_Lv_of_enchant_skill_S1_will_remain);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ENCHANT_SKILL_ROUTE_CHANGE_WAS_SUCCESSFUL_LV_OF_ENCHANT_SKILL_S1_WILL_REMAIN);
 			sm.addSkillName(_skillId, _skillLvl);
 			activeChar.sendPacket(sm);
 		}
 		else
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.Enchant_skill_route_change_was_successful_Lv_of_enchant_skill_S1_has_been_decreased_by_S2);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ENCHANT_SKILL_ROUTE_CHANGE_WAS_SUCCESSFUL_LV_OF_ENCHANT_SKILL_S1_HAS_BEEN_DECREASED_BY_S2);
 			sm.addSkillName(_skillId, _skillLvl);
-			sm.addNumber(levelPenalty);
+			sm.addInt(levelPenalty);
 			activeChar.sendPacket(sm);
 		}
 		

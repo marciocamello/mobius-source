@@ -26,6 +26,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.Zone.ZoneType;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
@@ -106,7 +107,7 @@ public class BookMarkList
 	public int incCapacity()
 	{
 		capacity++;
-		owner.sendPacket(new SystemMessage(SystemMessage.THE_NUMBER_OF_MY_TELEPORTS_SLOTS_HAS_BEEN_INCREASED));
+		owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_NUMBER_OF_MY_TELEPORTS_SLOTS_HAS_BEEN_INCREASED));
 		return getCapacity();
 	}
 	
@@ -232,7 +233,7 @@ public class BookMarkList
 		
 		if (elementData.size() >= getCapacity())
 		{
-			owner.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_NO_SPACE_TO_SAVE_THE_TELEPORT_LOCATION));
+			owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_NO_SPACE_TO_SAVE_THE_TELEPORT_LOCATION));
 			return false;
 		}
 		
@@ -240,7 +241,7 @@ public class BookMarkList
 		{
 			if (Functions.removeItem(owner, 20033, 1) != 1)
 			{
-				owner.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_BOOKMARK_THIS_LOCATION_BECAUSE_YOU_DO_NOT_HAVE_A_MY_TELEPORT_FLAG));
+				owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_BOOKMARK_THIS_LOCATION_BECAUSE_YOU_DO_NOT_HAVE_A_MY_TELEPORT_FLAG));
 				return false;
 			}
 		}
@@ -341,49 +342,49 @@ public class BookMarkList
 		
 		if (player.getActiveWeaponFlagAttachment() != null)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD));
 			return false;
 		}
 		
 		if (player.isInOlympiadMode())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_PARTICIPATING_IN_AN_OLYMPIAD_MATCH));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_PARTICIPATING_IN_AN_OLYMPIAD_MATCH));
 			return false;
 		}
 		
 		if (player.getReflection() != ReflectionManager.DEFAULT)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_USE_MY_TELEPORTS_IN_AN_INSTANT_ZONE));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_IN_AN_INSTANT_ZONE));
 			return false;
 		}
 		
 		if (player.isInDuel())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_USE_MY_TELEPORTS_DURING_A_DUEL));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_DURING_A_DUEL));
 			return false;
 		}
 		
 		if (player.isInCombat() || (player.getPvpFlag() != 0))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_USE_MY_TELEPORTS_DURING_A_BATTLE));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_DURING_A_BATTLE));
 			return false;
 		}
 		
 		if (player.isOnSiegeField() || player.isInZoneBattle())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_PARTICIPATING_A_LARGE_SCALE_BATTLE_SUCH_AS_A_CASTLE_SIEGE));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_PARTICIPATING_A_LARGE_SCALE_BATTLE_SUCH_AS_A_CASTLE_SIEGE_FORTRESS_SIEGE_OR_CLAN_HALL_SIEGE));
 			return false;
 		}
 		
 		if (player.isFlying())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_FLYING));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_FLYING));
 			return false;
 		}
 		
 		if (player.isInWater() || player.isInBoat())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_USE_MY_TELEPORTS_UNDERWATER));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_UNDERWATER));
 			return false;
 		}
 		
@@ -404,19 +405,19 @@ public class BookMarkList
 		
 		if (player.isAlikeDead())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_YOU_ARE_DEAD));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_YOU_ARE_DEAD));
 			return false;
 		}
 		
 		if (player.isInStoreMode() || player.isInTrade())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_SUMMON_DURING_A_TRADE_OR_WHILE_USING_THE_PRIVATE_SHOPS));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_SUMMON_DURING_A_TRADE_OR_WHILE_USING_A_PRIVATE_STORE));
 			return false;
 		}
 		
 		if (player.isInBoat() || player.isParalyzed() || player.isStunned() || player.isSleeping() || player.isAirBinded() || player.isKnockedBack() || player.isKnockedDown() || player.isPulledNow())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_YOU_ARE_IN_A_FLINT_OR_PARALYZED_STATE));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_YOU_ARE_IN_A_PETRIFIED_OR_PARALYZED_STATE));
 			return false;
 		}
 		
@@ -455,7 +456,7 @@ public class BookMarkList
 			
 			if (zone != null)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_USE_MY_TELEPORTS_TO_REACH_THIS_AREA));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_TO_REACH_THIS_AREA));
 				return false;
 			}
 		}

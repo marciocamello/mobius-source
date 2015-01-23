@@ -22,7 +22,7 @@ import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.utils.Location;
 
 import org.apache.commons.lang3.StringUtils;
@@ -72,8 +72,8 @@ public class NpcInfo extends L2GameServerPacket
 	private boolean _showName;
 	private boolean _canTarget;
 	int _state;
-	NpcString _nameNpcString = NpcString.NONE;
-	NpcString _titleNpcString = NpcString.NONE;
+	NpcStringId _nameNpcString = NpcStringId.STRING_NONE;
+	NpcStringId _titleNpcString = NpcStringId.STRING_NONE;
 	TeamType _team;
 	int _transformId;
 	private List<Integer> _aveList;

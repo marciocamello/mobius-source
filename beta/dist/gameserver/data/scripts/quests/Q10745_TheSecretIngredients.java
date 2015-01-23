@@ -19,7 +19,7 @@ import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.ReflectionUtils;
@@ -137,7 +137,7 @@ public class Q10745_TheSecretIngredients extends Quest implements ScriptFile
 					qs.takeItems(Dolkin_Report, 1);
 					qs.giveItems(57, 48000);
 					qs.getPlayer().addExpAndSp(241076, 5);
-					qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
+					qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.CHECK_YOUR_EQUIPMENT_IN_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
 					if (qs.getPlayer().getClassId().getId() == 182) // Ertheia Fighter
 					{
 						qs.giveItems(Faeron_Support_Box_Warrior, 1);
@@ -187,7 +187,7 @@ public class Q10745_TheSecretIngredients extends Quest implements ScriptFile
 						qs.setCond(2);
 						qs.playSound(SOUND_MIDDLE);
 						qs.giveItems(Secret_Ingredients, 1);
-						qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.TALK_TO_DOLKIN_AND_LEAVE_THE_KARAPHON_HABITAT, 4500, ScreenMessageAlign.TOP_CENTER));
+						qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.TALK_TO_DOLKIN_AND_LEAVE_THE_KARAPHON_HABITAT, 4500, ScreenMessageAlign.TOP_CENTER));
 						qs.getPlayer().getReflection().addSpawnWithoutRespawn(Dolkin2, new Location(-82100, 246311, -14152, 0), 0);
 					}
 			}

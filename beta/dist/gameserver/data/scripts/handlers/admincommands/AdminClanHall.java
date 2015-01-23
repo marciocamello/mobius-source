@@ -21,7 +21,8 @@ import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.entity.residence.ClanHall;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.ClanTable;
 
@@ -86,7 +87,7 @@ public class AdminClanHall implements IAdminCommandHandler, ScriptFile
 				
 				if (player.getClan() == null)
 				{
-					activeChar.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 				}
 				else
 				{

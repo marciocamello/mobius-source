@@ -21,6 +21,7 @@ import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.reward.RewardItem;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.ItemFunctions;
 
@@ -63,19 +64,19 @@ public class Sweep extends Skill
 		
 		if (!target.isMonster() || !target.isDead())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return false;
 		}
 		
 		if (!((MonsterInstance) target).isSpoiled())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.SWEEPER_FAILED_TARGET_NOT_SPOILED));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SWEEPER_FAILED_TARGET_NOT_SPOILED));
 			return false;
 		}
 		
 		if (!((MonsterInstance) target).isSpoiled((Player) activeChar))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER));
 			return false;
 		}
 		
@@ -108,7 +109,7 @@ public class Sweep extends Skill
 			
 			if (!target.isSpoiled(player))
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER));
 				continue;
 			}
 			
@@ -143,15 +144,15 @@ public class Sweep extends Skill
 				
 				if (item.count == 1)
 				{
-					smsg = new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S1);
+					smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
 					smsg.addItemName(item.itemId);
 					player.sendPacket(smsg);
 				}
 				else
 				{
-					smsg = new SystemMessage(SystemMessage.YOU_HAVE_OBTAINED_S2_S1);
+					smsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
 					smsg.addItemName(item.itemId);
-					smsg.addNumber(item.count);
+					smsg.addLong(item.count);
 					player.sendPacket(smsg);
 				}
 				
@@ -159,17 +160,17 @@ public class Sweep extends Skill
 				{
 					if (item.count == 1)
 					{
-						smsg = new SystemMessage(SystemMessage.S1_HAS_OBTAINED_S2_BY_USING_SWEEPER);
-						smsg.addName(player);
+						smsg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S2_BY_USING_SWEEPER);
+						smsg.addPcName(player);
 						smsg.addItemName(item.itemId);
 						player.getParty().broadcastToPartyMembers(player, smsg);
 					}
 					else
 					{
-						smsg = new SystemMessage(SystemMessage.S1_HAS_OBTAINED_3_S2_S_BY_USING_SWEEPER);
-						smsg.addName(player);
+						smsg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_OBTAINED_S3_S2_S_BY_USING_SWEEPER);
+						smsg.addPcName(player);
 						smsg.addItemName(item.itemId);
-						smsg.addNumber(item.count);
+						smsg.addLong(item.count);
 						player.getParty().broadcastToPartyMembers(player, smsg);
 					}
 				}

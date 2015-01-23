@@ -37,7 +37,7 @@ import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.Revive;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.skills.EffectType;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.tables.SkillTable;
@@ -187,19 +187,19 @@ public abstract class Playable extends Creature
 		
 		if ((target == null) || target.isDead())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return false;
 		}
 		
 		if (!isInRange(target, 2000))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOUR_TARGET_IS_OUT_OF_RANGE));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE));
 			return false;
 		}
 		
 		if (target.isDoor() && !target.isAttackable(this))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return false;
 		}
 		
@@ -215,13 +215,13 @@ public abstract class Playable extends Creature
 		
 		if (target.isInvisible() || (getReflection() != target.getReflection()) || !GeoEngine.canSeeTarget(this, target, false))
 		{
-			player.sendPacket(SystemMsg.CANNOT_SEE_TARGET);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_SEE_TARGET));
 			return false;
 		}
 		
 		if (player.isInZone(ZoneType.Epic) != target.isInZone(ZoneType.Epic))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return false;
 		}
 		
@@ -229,13 +229,13 @@ public abstract class Playable extends Creature
 		{
 			if (isInZoneBattle() != target.isInZoneBattle())
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 				return false;
 			}
 			
 			if (isInZonePeace() || target.isInZonePeace())
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE));
 				return false;
 			}
 			
@@ -306,7 +306,7 @@ public abstract class Playable extends Creature
 				if (_currentMp < bowMpConsume)
 				{
 					getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null, null);
-					player.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_MP));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_MP));
 					player.sendActionFailed();
 					return;
 				}
@@ -317,7 +317,7 @@ public abstract class Playable extends Creature
 			if (!player.checkAndEquipArrows())
 			{
 				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null, null);
-				player.sendPacket(player.getActiveWeaponInstance().getItemType() == WeaponType.BOW ? new SystemMessage(SystemMessage.YOU_HAVE_RUN_OUT_OF_ARROWS) : new SystemMessage(SystemMessage.NOT_ENOUGH_BOLTS));
+				player.sendPacket(player.getActiveWeaponInstance().getItemType() == WeaponType.BOW ? SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS) : SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_BOLTS));
 				player.sendActionFailed();
 				return;
 			}
@@ -349,13 +349,13 @@ public abstract class Playable extends Creature
 		
 		if (skill.isAoE() && isInPeaceZone())
 		{
-			getPlayer().sendPacket(new SystemMessage(SystemMessage.A_MALICIOUS_SKILL_CANNOT_BE_USED_IN_A_PEACE_ZONE));
+			getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_MALICIOUS_SKILL_CANNOT_BE_USED_IN_A_PEACE_ZONE));
 			return;
 		}
 		
 		if ((skill.getSkillType() == SkillType.DEBUFF) && target.isNpc() && target.isInvul() && !target.isMonster())
 		{
-			getPlayer().sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return;
 		}
 		
@@ -393,7 +393,7 @@ public abstract class Playable extends Creature
 		{
 			if (sendMessage)
 			{
-				attacker.sendPacket(new SystemMessage(SystemMessage.THE_ATTACK_HAS_BEEN_BLOCKED));
+				attacker.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED));
 			}
 			
 			return;
@@ -410,7 +410,7 @@ public abstract class Playable extends Creature
 				{
 					if (sendMessage)
 					{
-						pcAttacker.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+						pcAttacker.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 					}
 					
 					return;
@@ -421,7 +421,7 @@ public abstract class Playable extends Creature
 			{
 				if (sendMessage)
 				{
-					attacker.getPlayer().sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+					attacker.getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 				}
 				
 				return;
@@ -773,13 +773,13 @@ public abstract class Playable extends Creature
 			
 			if (item.getEnchantLevel() > 0)
 			{
-				int msg_id = isPlayer() ? SystemMessage.ATTENTION_S1_PICKED_UP__S2_S3 : SystemMessage.ATTENTION_S1_PET_PICKED_UP__S2_S3;
-				msg = new SystemMessage(msg_id).addString(player_name).addNumber(item.getEnchantLevel()).addItemName(item.getId());
+				SystemMessageId msg_id = isPlayer() ? SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2_S3 : SystemMessageId.ATTENTION_C1_S_PET_HAS_PICKED_UP_S2_S3;
+				msg = SystemMessage.getSystemMessage(msg_id).addString(player_name).addInt(item.getEnchantLevel()).addItemName(item.getId());
 			}
 			else
 			{
-				int msg_id = isPlayer() ? SystemMessage.ATTENTION_S1_PICKED_UP_S2 : SystemMessage.ATTENTION_S1_PET_PICKED_UP__S2_S3;
-				msg = new SystemMessage(msg_id).addString(player_name).addItemName(item.getId());
+				SystemMessageId msg_id = isPlayer() ? SystemMessageId.ATTENTION_C1_HAS_PICKED_UP_S2 : SystemMessageId.ATTENTION_C1_S_PET_HAS_PICKED_UP_S2_S3;
+				msg = SystemMessage.getSystemMessage(msg_id).addString(player_name).addItemName(item.getId());
 			}
 			
 			player.broadcastPacket(msg);

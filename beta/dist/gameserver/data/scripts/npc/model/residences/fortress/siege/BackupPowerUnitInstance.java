@@ -19,7 +19,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Util;
 
@@ -139,8 +139,8 @@ public final class BackupPowerUnitInstance extends NpcInstance
 			
 			case COND_ENTERED:
 				message.setFile("residence2/fortress/fortress_subpower004.htm");
-				message.replaceNpcString("%password%", _index == 0 ? NpcString.THE_MARKS_HAVE_NOT_BEEN_ASSEMBLED : _index == 1 ? NpcString.THE_1ST_MARK_IS_CORRECT : NpcString.THE_2ND_MARK_IS_CORRECT);
-				message.replaceNpcString("%try_count%", NpcString.ATTEMPT_S1__3_IS_IN_PROGRESS, _tryCount);
+				message.replaceNpcString("%password%", _index == 0 ? NpcStringId.THE_MARKS_HAVE_NOT_BEEN_ASSEMBLED : _index == 1 ? NpcStringId.THE_1ST_MARK_IS_CORRECT : NpcStringId.THE_2ND_MARK_IS_CORRECT);
+				message.replaceNpcString("%try_count%", NpcStringId.ATTEMPT_S1_3_IS_IN_PROGRESS_THIS_IS_THE_THIRD_ATTEMPT_ON_S1, _tryCount);
 				break;
 			
 			case COND_NO_ENTERED:

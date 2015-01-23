@@ -12,7 +12,7 @@
  */
 package npc.model.residences.clanhall;
 
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
 /**
@@ -34,22 +34,22 @@ public final class MikhailInstance extends _34BossMinionInstance
 	
 	/**
 	 * Method spawnChatSay.
-	 * @return NpcString
+	 * @return NpcStringId
 	 */
 	@Override
-	public NpcString spawnChatSay()
+	public NpcStringId spawnChatSay()
 	{
-		return NpcString.GLORY_TO_ADEN_THE_KINGDOM_OF_THE_LION_GLORY_TO_SIR_GUSTAV_OUR_IMMORTAL_LORD;
+		return NpcStringId.GLORY_TO_ADEN_THE_KINGDOM_OF_THE_LION_GLORY_TO_SIR_GUSTAV_OUR_IMMORTAL_LORD;
 	}
 	
 	/**
 	 * Method teleChatSay.
-	 * @return NpcString
+	 * @return NpcStringId
 	 * @see npc.model.residences.clanhall._34SiegeGuard#teleChatSay()
 	 */
 	@Override
-	public NpcString teleChatSay()
+	public NpcStringId teleChatSay()
 	{
-		return NpcString.COULD_IT_BE_THAT_I_HAVE_REACHED_MY_END_I_CANNOT_DIE_WITHOUT_HONOR_WITHOUT_THE_PERMISSION_OF_SIR_GUSTAV;
+		return NpcStringId.COULD_IT_BE_THAT_I_HAVE_REACHED_MY_END_I_CANNOT_DIE_WITHOUT_HONOR_WITHOUT_THE_PERMISSION_OF_SIR_GUSTAV;
 	}
 }

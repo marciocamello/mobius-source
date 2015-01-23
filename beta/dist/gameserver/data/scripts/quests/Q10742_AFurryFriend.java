@@ -26,7 +26,7 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExSendUIEvent;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.NpcUtils;
@@ -69,7 +69,7 @@ public class Q10742_AFurryFriend extends Quest implements ScriptFile
 				qs.setState(STARTED);
 				qs.setCond(1);
 				qs.playSound(SOUND_ACCEPT);
-				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.FOLLOW_RICKY, 4500, ScreenMessageAlign.TOP_CENTER));
+				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.FOLLOW_RICKY, 4500, ScreenMessageAlign.TOP_CENTER));
 				ricky = NpcUtils.spawnSingle(Ricky, new Location(-78138, 237328, -3548));
 				ricky.setRunning();
 				ThreadPoolManager.getInstance().schedule(new RickyMoveTask(ricky), 1000L);
@@ -77,7 +77,7 @@ public class Q10742_AFurryFriend extends Quest implements ScriptFile
 				break;
 			
 			case "quest_cont":
-				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.TAKE_RICKY_TO_LEIRA_IN_UNDER_2_MINUTES, 4500, ScreenMessageAlign.TOP_CENTER));
+				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.TAKE_RICKY_TO_LEIRA_IN_UNDER_2_MINUTES, 4500, ScreenMessageAlign.TOP_CENTER));
 				ricky = NpcUtils.spawnSingle(Ricky, new Location(qs.getPlayer().getX(), qs.getPlayer().getY(), qs.getPlayer().getZ()));
 				
 				if (seeRicky(ricky, qs.getPlayer()) == null)
@@ -90,7 +90,7 @@ public class Q10742_AFurryFriend extends Quest implements ScriptFile
 				}
 				
 				ThreadPoolManager.getInstance().schedule(new CheckRickyDistance(GameObjectsStorage.getByNpcId(Ricky), GameObjectsStorage.getByNpcId(Leira), qs), 500L);
-				qs.getPlayer().sendPacket(new ExSendUIEvent(qs.getPlayer(), 0, 0, 120, 0, NpcString.REMAINING_TIME));
+				qs.getPlayer().sendPacket(new ExSendUIEvent(qs.getPlayer(), 0, 0, 120, 0, NpcStringId.REMAINING_TIME));
 				qs.startQuestTimer("despawnRicky", 120 * 1000L, ricky);
 				htmltext = "33995-3.htm";
 				break;
@@ -155,7 +155,7 @@ public class Q10742_AFurryFriend extends Quest implements ScriptFile
 						final NpcInstance kiku = qs.addSpawn(Kiku, qs.getPlayer().getX() - Rnd.get(50), qs.getPlayer().getY() - Rnd.get(50), qs.getPlayer().getZ());
 						kiku.getAggroList().addDamageHate(qs.getPlayer(), 0, 10000);
 						kiku.setAggressionTarget(qs.getPlayer());
-						qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.RICKY_IS_NOT_HERE, 4500, ScreenMessageAlign.TOP_CENTER));
+						qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.RICKY_IS_NOT_HERE_NTRY_SEARCHING_ANOTHER_KIKU_S_CAVE, 4500, ScreenMessageAlign.TOP_CENTER));
 						htmltext = "33995-2.htm";
 					}
 				}
@@ -185,8 +185,8 @@ public class Q10742_AFurryFriend extends Quest implements ScriptFile
 				if ((ricky != null) && (leira != null) && (ricky.getDistance(leira) < 100))
 				{
 					qs.setCond(2);
-					qs.getPlayer().sendPacket(new ExSendUIEvent(qs.getPlayer(), 0, 0, 0, 0, NpcString.REMAINING_TIME));
-					qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.RICKY_HAS_FOUND_LEIRA, 4500, ScreenMessageAlign.TOP_CENTER));
+					qs.getPlayer().sendPacket(new ExSendUIEvent(qs.getPlayer(), 0, 0, 0, 0, NpcStringId.REMAINING_TIME));
+					qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.RICKY_HAS_FOUND_LEIRA, 4500, ScreenMessageAlign.TOP_CENTER));
 					ThreadPoolManager.getInstance().schedule(() ->
 					{
 						ricky.deleteMe();

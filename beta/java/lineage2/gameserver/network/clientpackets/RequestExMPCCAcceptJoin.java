@@ -17,7 +17,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Request;
 import lineage2.gameserver.model.Request.L2RequestType;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -77,7 +77,7 @@ public class RequestExMPCCAcceptJoin extends L2GameClientPacket
 		if (requestor == null)
 		{
 			request.cancel();
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THAT_PLAYER_IS_NOT_ONLINE));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
 			activeChar.sendActionFailed();
 			return;
 		}
@@ -92,22 +92,22 @@ public class RequestExMPCCAcceptJoin extends L2GameClientPacket
 		if (_response == 0)
 		{
 			request.cancel();
-			requestor.sendPacket(new SystemMessage(SystemMessage.S1_HAS_DECLINED_THE_CHANNEL_INVITATION).addString(activeChar.getName()));
+			requestor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_DECLINED_THE_CHANNEL_INVITATION).addString(activeChar.getName()));
 			return;
 		}
 		
 		if (!requestor.isInParty() || !activeChar.isInParty() || activeChar.getParty().isInCommandChannel())
 		{
 			request.cancel();
-			requestor.sendPacket(new SystemMessage(SystemMessage.NO_USER_HAS_BEEN_INVITED_TO_THE_COMMAND_CHANNEL));
+			requestor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_USER_HAS_BEEN_INVITED_TO_THE_COMMAND_CHANNEL));
 			return;
 		}
 		
 		if (activeChar.isTeleporting())
 		{
 			request.cancel();
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_JOIN_A_COMMAND_CHANNEL_WHILE_TELEPORTING));
-			requestor.sendPacket(new SystemMessage(SystemMessage.NO_USER_HAS_BEEN_INVITED_TO_THE_COMMAND_CHANNEL));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_JOIN_A_COMMAND_CHANNEL_WHILE_TELEPORTING));
+			requestor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NO_USER_HAS_BEEN_INVITED_TO_THE_COMMAND_CHANNEL));
 			return;
 		}
 		
@@ -128,7 +128,7 @@ public class RequestExMPCCAcceptJoin extends L2GameClientPacket
 					
 					if (haveItem)
 					{
-						requestor.sendPacket(SystemMessage2.removeItems(CommandChannel.STRATEGY_GUIDE_ID, 1));
+						requestor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED).addItemName(CommandChannel.STRATEGY_GUIDE_ID));
 					}
 				}
 				
@@ -138,7 +138,7 @@ public class RequestExMPCCAcceptJoin extends L2GameClientPacket
 				}
 				
 				CommandChannel channel = new CommandChannel(requestor);
-				requestor.sendPacket(new SystemMessage(SystemMessage.THE_COMMAND_CHANNEL_HAS_BEEN_FORMED));
+				requestor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_COMMAND_CHANNEL_HAS_BEEN_FORMED));
 				channel.addParty(activeChar.getParty());
 			}
 		}

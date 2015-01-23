@@ -26,6 +26,7 @@ import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.entity.olympiad.OlympiadDatabase;
 import lineage2.gameserver.model.entity.olympiad.OlympiadManager;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.StatsSet;
 
@@ -120,14 +121,14 @@ public class AdminOlympiad implements IAdminCommandHandler, ScriptFile
 				Olympiad._manager = new OlympiadManager();
 				Olympiad._inCompPeriod = true;
 				new Thread(Olympiad._manager).start();
-				Announcements.getInstance().announceToAll(new SystemMessage(SystemMessage.THE_OLYMPIAD_GAME_HAS_STARTED));
+				Announcements.getInstance().announceToAll(SystemMessage.getSystemMessage(SystemMessageId.SHARPEN_YOUR_SWORDS_TIGHTEN_THE_STITCHING_IN_YOUR_ARMOR_AND_MAKE_HASTE_TO_A_OLYMPIAD_MANAGER_BATTLES_IN_THE_OLYMPIAD_GAMES_ARE_NOW_TAKING_PLACE));
 				break;
 			}
 			
 			case "admin_oly_stop":
 			{
 				Olympiad._inCompPeriod = false;
-				Announcements.getInstance().announceToAll(new SystemMessage(SystemMessage.THE_OLYMPIAD_GAME_HAS_ENDED));
+				Announcements.getInstance().announceToAll(SystemMessage.getSystemMessage(SystemMessageId.MUCH_CARNAGE_HAS_BEEN_LEFT_FOR_THE_CLEANUP_CREW_OF_THE_OLYMPIAD_STADIUM_BATTLES_IN_THE_OLYMPIAD_GAMES_ARE_NOW_OVER));
 				
 				try
 				{

@@ -18,6 +18,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.Say2;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.GmListTable;
 
 /**
@@ -55,7 +56,7 @@ public final class RequestPetitionCancel extends L2GameClientPacket
 			}
 			else
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.PETITION_UNDER_PROCESS));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PETITION_IS_BEING_PROCESSED));
 			}
 		}
 		else if (PetitionManager.getInstance().isPlayerPetitionPending(activeChar))
@@ -63,18 +64,18 @@ public final class RequestPetitionCancel extends L2GameClientPacket
 			if (PetitionManager.getInstance().cancelActivePetition(activeChar))
 			{
 				int numRemaining = Config.MAX_PETITIONS_PER_PLAYER - PetitionManager.getInstance().getPlayerTotalPetitionCount(activeChar);
-				activeChar.sendPacket(new SystemMessage(SystemMessage.THE_PETITION_WAS_CANCELED_YOU_MAY_SUBMIT_S1_MORE_PETITIONS_TODAY).addString(String.valueOf(numRemaining)));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_PETITION_WAS_CANCELED_YOU_MAY_SUBMIT_S1_MORE_PETITION_S_TODAY).addString(String.valueOf(numRemaining)));
 				String msgContent = activeChar.getName() + " has canceled a pending petition.";
 				GmListTable.broadcastToGMs(new Say2(activeChar.getObjectId(), ChatType.HERO_VOICE, "Petition System", msgContent));
 			}
 			else
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.FAILED_TO_CANCEL_PETITION_PLEASE_TRY_AGAIN_LATER));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FAILED_TO_CANCEL_PETITION_PLEASE_TRY_AGAIN_LATER));
 			}
 		}
 		else
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_NOT_SUBMITTED_A_PETITION));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_NOT_SUBMITTED_A_PETITION));
 		}
 	}
 }

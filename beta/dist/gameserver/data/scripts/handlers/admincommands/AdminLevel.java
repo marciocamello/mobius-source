@@ -20,6 +20,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.Experience;
 import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.PetDataTable;
 
@@ -47,7 +48,7 @@ public class AdminLevel implements IAdminCommandHandler, ScriptFile
 	{
 		if ((target == null) || !(target.isPlayer() || target.isPet()))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return;
 		}
 		
@@ -92,7 +93,7 @@ public class AdminLevel implements IAdminCommandHandler, ScriptFile
 		
 		if ((target == null) || !(target.isPlayer() || target.isPet()))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 			return false;
 		}
 		

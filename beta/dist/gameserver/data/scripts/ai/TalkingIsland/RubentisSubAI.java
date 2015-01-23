@@ -16,7 +16,7 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
@@ -107,32 +107,32 @@ public class RubentisSubAI extends DefaultAI
 			return;
 		}
 		
-		NpcString ns;
+		NpcStringId ns;
 		
 		switch (Rnd.get(6))
 		{
 			case 1:
-				ns = NpcString.HUNTING_AT_THE_BEACH_IS_A_BAD_IDEA;
+				ns = NpcStringId.HUNTING_AT_THE_BEACH_IS_A_BAD_IDEA;
 				break;
 			
 			case 2:
-				ns = NpcString.ONLY_THE_STRONG_SURVIVE_AT_YE_SAGIRA_RUINS;
+				ns = NpcStringId.ONLY_THE_STRONG_SURVIVE_AT_RUINS_OF_YE_SAGIRA;
 				break;
 			
 			case 3:
-				ns = NpcString.HUNTING_AT_THE_BEACH_IS_A_BAD_IDEA;
+				ns = NpcStringId.HUNTING_AT_THE_BEACH_IS_A_BAD_IDEA;
 				break;
 			
 			case 4:
-				ns = NpcString.ONLY_THE_STRONG_SURVIVE_AT_YE_SAGIRA_RUINS;
+				ns = NpcStringId.ONLY_THE_STRONG_SURVIVE_AT_RUINS_OF_YE_SAGIRA;
 				break;
 			
 			case 5:
-				ns = NpcString.HUNTING_AT_THE_BEACH_IS_A_BAD_IDEA;
+				ns = NpcStringId.HUNTING_AT_THE_BEACH_IS_A_BAD_IDEA;
 				break;
 			
 			default:
-				ns = NpcString.ONLY_THE_STRONG_SURVIVE_AT_YE_SAGIRA_RUINS;
+				ns = NpcStringId.ONLY_THE_STRONG_SURVIVE_AT_RUINS_OF_YE_SAGIRA;
 				break;
 		}
 		

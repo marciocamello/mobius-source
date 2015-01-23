@@ -25,6 +25,7 @@ import lineage2.gameserver.model.pledge.UnitMember;
 import lineage2.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import lineage2.gameserver.network.serverpackets.PledgeStatusChanged;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.utils.Util;
@@ -70,13 +71,13 @@ public class AdminPledge implements IAdminCommandHandler, ScriptFile
 				{
 					if (target == null)
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 						return false;
 					}
 					
 					if (target.getPlayer().getLevel() < 10)
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOT_QUALIFIED_TO_CREATE_A_CLAN));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_CRITERIA_IN_ORDER_TO_CREATE_A_CLAN));
 						return false;
 					}
 					
@@ -84,13 +85,13 @@ public class AdminPledge implements IAdminCommandHandler, ScriptFile
 					
 					if (pledgeName.length() > 16)
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.CLAN_NAMES_LENGTH_IS_INCORRECT));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_NAME_S_LENGTH_IS_INCORRECT));
 						return false;
 					}
 					
 					if (!Util.isMatchingRegexp(pledgeName, Config.CLAN_NAME_TEMPLATE))
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.CLAN_NAME_IS_INCORRECT));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_NAME_IS_INVALID));
 						return false;
 					}
 					
@@ -99,13 +100,13 @@ public class AdminPledge implements IAdminCommandHandler, ScriptFile
 					if (clan != null)
 					{
 						target.sendPacket(clan.listAll());
-						target.sendPacket(new PledgeShowInfoUpdate(clan), new SystemMessage(SystemMessage.CLAN_HAS_BEEN_CREATED));
+						target.sendPacket(new PledgeShowInfoUpdate(clan), SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_BEEN_CREATED));
 						target.updatePledgeClass();
 						target.sendUserInfo();
 						return true;
 					}
 					
-					activeChar.sendPacket(new SystemMessage(SystemMessage.THIS_NAME_ALREADY_EXISTS));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_NAME_ALREADY_EXISTS));
 					return false;
 				}
 				catch (Exception e)
@@ -117,7 +118,7 @@ public class AdminPledge implements IAdminCommandHandler, ScriptFile
 			{
 				if (target.getClan() == null)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 					return false;
 				}
 				
@@ -131,7 +132,7 @@ public class AdminPledge implements IAdminCommandHandler, ScriptFile
 					
 					if (level == 5)
 					{
-						target.sendPacket(new SystemMessage(SystemMessage.NOW_THAT_YOUR_CLAN_LEVEL_IS_ABOVE_LEVEL_5_IT_CAN_ACCUMULATE_CLAN_REPUTATION_POINTS));
+						target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOW_THAT_YOUR_CLAN_LEVEL_IS_ABOVE_LEVEL_5_IT_CAN_ACCUMULATE_CLAN_REPUTATION));
 					}
 					
 					PledgeShowInfoUpdate pu = new PledgeShowInfoUpdate(clan);
@@ -140,7 +141,7 @@ public class AdminPledge implements IAdminCommandHandler, ScriptFile
 					for (Player member : clan.getOnlineMembers(0))
 					{
 						member.updatePledgeClass();
-						member.sendPacket(new SystemMessage(SystemMessage.CLANS_SKILL_LEVEL_HAS_INCREASED), pu, ps);
+						member.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_S_LEVEL_HAS_INCREASED), pu, ps);
 						member.broadcastUserInfo();
 					}
 					
@@ -155,7 +156,7 @@ public class AdminPledge implements IAdminCommandHandler, ScriptFile
 			{
 				if (target.getClan() == null)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 					return false;
 				}
 				
@@ -175,7 +176,7 @@ public class AdminPledge implements IAdminCommandHandler, ScriptFile
 					
 					if ((target.getClan() == null) || (target.getClan().getLevel() < 5))
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 						return false;
 					}
 					
@@ -193,7 +194,7 @@ public class AdminPledge implements IAdminCommandHandler, ScriptFile
 				
 				if (target.getClan() == null)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 					return false;
 				}
 				
@@ -213,7 +214,7 @@ public class AdminPledge implements IAdminCommandHandler, ScriptFile
 				
 				if (newLeader == null)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 					return false;
 				}
 				

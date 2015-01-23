@@ -24,7 +24,8 @@ import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
 import lineage2.gameserver.network.serverpackets.ShowBoard;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.item.EtcItemTemplate;
@@ -352,7 +353,7 @@ public final class EnchantCommunity extends Functions implements ScriptFile, ICo
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 			}
 		}
 		
@@ -393,7 +394,7 @@ public final class EnchantCommunity extends Functions implements ScriptFile, ICo
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 				}
 			}
 			else if (EhchantItem.isArmor())

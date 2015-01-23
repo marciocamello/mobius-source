@@ -14,7 +14,7 @@ package ai.TalkingIsland;
 
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -54,7 +54,7 @@ public final class Apprentice extends DefaultAI
 		
 		if (actor != null)
 		{
-			final NpcString ns = NpcString.RIDING_KOOKARU;
+			final NpcStringId ns = NpcStringId.TRY_RIDING_A_KUKURI;
 			Functions.npcSay(actor, ns);
 		}
 		

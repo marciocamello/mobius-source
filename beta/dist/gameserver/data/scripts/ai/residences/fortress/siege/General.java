@@ -18,8 +18,9 @@ import lineage2.gameserver.model.entity.events.impl.FortressSiegeEvent;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.entity.residence.Fortress;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import npc.model.residences.SiegeGuardInstance;
@@ -54,7 +55,7 @@ public final class General extends SiegeGuardFighter
 		
 		if (Rnd.chance(1))
 		{
-			Functions.npcSay(actor, NpcString.DO_YOU_NEED_MY_POWER_YOU_SEEM_TO_BE_STRUGGLING);
+			Functions.npcSay(actor, NpcStringId.DO_YOU_NEED_MY_POWER_YOU_SEEM_TO_BE_STRUGGLING);
 		}
 	}
 	
@@ -97,8 +98,8 @@ public final class General extends SiegeGuardFighter
 		}
 		
 		siegeEvent.barrackAction(4, true);
-		siegeEvent.broadcastTo(SystemMsg.THE_BARRACKS_HAVE_BEEN_SEIZED, SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
-		Functions.npcShout(actor, NpcString.I_FEEL_SO_MUCH_GRIEF_THAT_I_CANT_EVEN_TAKE_CARE_OF_MYSELF);
+		siegeEvent.broadcastTo(SystemMessage.getSystemMessage(SystemMessageId.THE_BARRACKS_HAVE_BEEN_SEIZED), SiegeEvent.ATTACKERS, SiegeEvent.DEFENDERS);
+		Functions.npcShout(actor, NpcStringId.I_FEEL_SO_MUCH_GRIEF_THAT_I_CAN_T_EVEN_TAKE_CARE_OF_MYSELF_THERE_ISN_T_ANY_REASON_FOR_ME_TO_STAY_HERE_ANY_LONGER);
 		super.onEvtDead(killer);
 		siegeEvent.checkBarracks();
 	}

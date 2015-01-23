@@ -26,6 +26,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Spawner;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.InstantZone;
 import lineage2.gameserver.utils.Location;
 import npc.model.PathfinderInstance;
@@ -175,7 +176,7 @@ public final class KamalokaNightmare extends Reflection
 					
 					if (p != null)
 					{
-						p.getPlayer().sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(delay_after_spawn / 60000));
+						p.getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES).addInt(delay_after_spawn / 60000));
 						InstantZone iz = KamalokaNightmare.this.getInstancedZone();
 						
 						if (iz != null)

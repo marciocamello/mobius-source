@@ -252,7 +252,7 @@ public class Zone
 				
 				if (message > 0)
 				{
-					cha.sendPacket(new SystemMessage(message).addNumber(hp));
+					cha.sendPacket(SystemMessage.getSystemMessage(message).addInt(hp));
 				}
 			}
 			
@@ -262,7 +262,7 @@ public class Zone
 				
 				if (message > 0)
 				{
-					cha.sendPacket(new SystemMessage(message).addNumber(mp));
+					cha.sendPacket(SystemMessage.getSystemMessage(message).addInt(mp));
 				}
 			}
 			
@@ -664,7 +664,7 @@ public class Zone
 		{
 			if (getEnteringMessageId() != 0)
 			{
-				actor.sendPacket(new SystemMessage(getEnteringMessageId()));
+				actor.sendPacket(SystemMessage.getSystemMessage(getEnteringMessageId()));
 			}
 			
 			if (getTemplate().getEventId() != 0)
@@ -718,7 +718,7 @@ public class Zone
 		{
 			if ((getLeavingMessageId() != 0) && actor.isPlayer())
 			{
-				actor.sendPacket(new SystemMessage(getLeavingMessageId()));
+				actor.sendPacket(SystemMessage.getSystemMessage(getLeavingMessageId()));
 			}
 			
 			if ((getTemplate().getEventId() != 0) && actor.isPlayer())

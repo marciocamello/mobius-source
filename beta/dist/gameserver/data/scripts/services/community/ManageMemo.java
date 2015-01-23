@@ -28,6 +28,7 @@ import lineage2.gameserver.handlers.ICommunityBoardHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.ShowBoard;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 
 import org.slf4j.Logger;
@@ -184,7 +185,7 @@ public final class ManageMemo implements ScriptFile, ICommunityBoardHandler
 		{
 			if (getMemoCount(player) >= 100)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.MEMO_BOX_IS_FULL_100_MEMO_MAXIMUM));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MEMO_BOX_IS_FULL_THERE_IS_A_100_MEMO_LIMIT));
 				onBypassCommand(player, "_mmlist_1");
 				return;
 			}
@@ -350,7 +351,7 @@ public final class ManageMemo implements ScriptFile, ICommunityBoardHandler
 		{
 			if (getMemoCount(player) >= 100)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.MEMO_BOX_IS_FULL_100_MEMO_MAXIMUM));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MEMO_BOX_IS_FULL_THERE_IS_A_100_MEMO_LIMIT));
 				onBypassCommand(player, "_mmlist_1");
 				return;
 			}

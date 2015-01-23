@@ -46,6 +46,7 @@ import lineage2.gameserver.model.reward.RewardList;
 import lineage2.gameserver.model.reward.RewardType;
 import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.Faction;
@@ -1130,7 +1131,7 @@ public class MonsterInstance extends NpcInstance
 		if ((xp > 0) && (killer.getObjectId() == overhitAttackerId))
 		{
 			int overHitExp = calculateOverhitExp(xp);
-			killer.sendPacket(new SystemMessage(SystemMessage.OVER_HIT), new SystemMessage(SystemMessage.ACQUIRED_S1_BONUS_EXPERIENCE_THROUGH_OVER_HIT).addNumber(overHitExp));
+			killer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.OVER_HIT), SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_BONUS_XP_FROM_A_SUCCESSFUL_OVER_HIT).addInt(overHitExp));
 			xp += overHitExp;
 		}
 		

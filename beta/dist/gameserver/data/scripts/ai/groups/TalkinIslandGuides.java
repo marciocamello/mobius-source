@@ -19,7 +19,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExRotation;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -31,9 +31,9 @@ public final class TalkinIslandGuides extends DefaultAI
 	private final static int GOING_INTO_REAL_WAR_SOLDIER = 33014; // By quest "Going into the Real War"
 	private final static int BACKUP_SEEKERS_ASSASSIN = 33204; // By quest "Backup Seekers"
 	
-	private final static NpcString SEARCHING_MYST_POWER_STRING = NpcString.S1_COME_FOLLOW_ME;
-	private final static NpcString GOING_INTO_REAL_WAR_STRING = NpcString.S1_COME_FOLLOW_ME;
-	private final static NpcString BACKUP_SEEKERS_STRING = NpcString.HEY_KID_HURRY_UP_AND_FOLLOW_ME;
+	private final static NpcStringId SEARCHING_MYST_POWER_STRING = NpcStringId.S1_COME_FOLLOW_ME;
+	private final static NpcStringId GOING_INTO_REAL_WAR_STRING = NpcStringId.S1_COME_FOLLOW_ME;
+	private final static NpcStringId BACKUP_SEEKERS_STRING = NpcStringId.HEY_KID_HURRY_UP_AND_FOLLOW_ME;
 	
 	private static final int SAY_INTERVAL = 6000;
 	
@@ -101,21 +101,21 @@ public final class TalkinIslandGuides extends DefaultAI
 		
 		final int npcId = actor.getId();
 		int[][] coords;
-		NpcString string;
-		NpcString end_String;
+		NpcStringId string;
+		NpcStringId end_String;
 		// Select coords
 		switch (npcId)
 		{
 			case SEARCHING_MYST_POWER_SOLDIER:
 				coords = SMP_COORDS;
 				string = SEARCHING_MYST_POWER_STRING;
-				end_String = NpcString.S1_THAT_MAN_IN_FRONT_IS_IBANE;
+				end_String = NpcStringId.S1_THAT_MAN_IN_FRONT_IS_IBANE;
 				break;
 			
 			case BACKUP_SEEKERS_ASSASSIN:
 				coords = BS_COORDS;
 				string = BACKUP_SEEKERS_STRING;
-				end_String = NpcString.TALK_TO_THAT_APPRENTICE_AND_GET_ON_KOOKARU;
+				end_String = NpcStringId.TALK_TO_THAT_APPRENTICE_AND_GET_ON_KUKURI;
 				break;
 			
 			case GOING_INTO_REAL_WAR_SOLDIER:
@@ -132,7 +132,7 @@ public final class TalkinIslandGuides extends DefaultAI
 				}
 				
 				string = GOING_INTO_REAL_WAR_STRING;
-				end_String = NpcString.S1_THAT_MAN_IN_FRONT_IS_HOLDEN;
+				end_String = NpcStringId.S1_THAT_MAN_IN_FRONT_IS_HOLDEN;
 				break;
 			
 			default:

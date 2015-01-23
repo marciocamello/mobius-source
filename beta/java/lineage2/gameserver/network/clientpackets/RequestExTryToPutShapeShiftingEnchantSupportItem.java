@@ -20,7 +20,8 @@ import lineage2.gameserver.model.items.etcitems.AppearanceStone;
 import lineage2.gameserver.model.items.etcitems.AppearanceStone.ShapeType;
 import lineage2.gameserver.network.serverpackets.ExPutShapeShiftingExtractionItemResult;
 import lineage2.gameserver.network.serverpackets.ExShapeShiftingResult;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 public class RequestExTryToPutShapeShiftingEnchantSupportItem extends L2GameClientPacket
 {
@@ -108,13 +109,13 @@ public class RequestExTryToPutShapeShiftingEnchantSupportItem extends L2GameClie
 		// }
 		if (extracItem.getVisualId() > 0)
 		{
-			player.sendPacket(SystemMsg.YOU_CANNOT_EXTRACT_FROM_A_MODIFIED_ITEM);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_EXTRACT_FROM_A_MODIFIED_ITEM));
 			return;
 		}
 		
 		if (targetItem.getExItemType() != extracItem.getExItemType())
 		{
-			player.sendPacket(SystemMsg.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_ITEM_DOES_NOT_MEET_REQUIREMENTS));
 			return;
 		}
 		

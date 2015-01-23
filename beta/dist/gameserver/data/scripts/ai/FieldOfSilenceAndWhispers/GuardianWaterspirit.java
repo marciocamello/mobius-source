@@ -21,7 +21,7 @@ import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -32,10 +32,10 @@ public final class GuardianWaterspirit extends Fighter
 {
 	private NpcInstance mob = null;
 	private boolean _firstTimeAttacked = true;
-	public static final NpcString[] MsgText =
+	public static final NpcStringId[] MsgText =
 	{
-		NpcString.AH_AH_FROM_THE_MAGIC_FORCE_NO_MORE_I_WILL_BE_FREED,
-		NpcString.EVEN_THE_MAGIC_FORCE_BINDS_YOU_YOU_WILL_NEVER_BE_FORGIVEN
+		NpcStringId.AH_AH_FROM_THE_MAGIC_FORCE_NO_MORE_I_WILL_BE_FREED,
+		NpcStringId.EVEN_THE_MAGIC_FORCE_BINDS_YOU_YOU_WILL_NEVER_BE_FORGIVEN
 	};
 	
 	/**
@@ -63,7 +63,7 @@ public final class GuardianWaterspirit extends Fighter
 		
 		if (getIntention() == CtrlIntention.AI_INTENTION_ACTIVE)
 		{
-			Functions.npcSay(actor, NpcString.DEFEND_OUR_DOMAIN_EVEN_AT_RISK_OF_YOUR_OWN_LIFE, ChatType.SHOUT, 5000);
+			Functions.npcSay(actor, NpcStringId.DEFEND_OUR_DOMAIN_EVEN_AT_RISK_OF_YOUR_OWN_LIFE, ChatType.SHOUT, 5000);
 		}
 		
 		super.onIntentionAttack(target);
@@ -139,7 +139,7 @@ public final class GuardianWaterspirit extends Fighter
 		}
 		else if (Rnd.chance(10))
 		{
-			Functions.npcSay(actor, NpcString.DEFEND_OUR_DOMAIN_EVEN_AT_RISK_OF_YOUR_OWN_LIFE, ChatType.SHOUT, 5000);
+			Functions.npcSay(actor, NpcStringId.DEFEND_OUR_DOMAIN_EVEN_AT_RISK_OF_YOUR_OWN_LIFE, ChatType.SHOUT, 5000);
 		}
 		
 		super.onEvtAttacked(attacker, damage);

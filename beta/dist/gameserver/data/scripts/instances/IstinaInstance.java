@@ -30,7 +30,7 @@ import lineage2.gameserver.network.serverpackets.ExSendUIEvent;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.utils.Location;
 
 /**
@@ -209,14 +209,14 @@ public class IstinaInstance extends Reflection
 					{
 						for (Player player : getPlayers())
 						{
-							player.sendPacket(new ExShowScreenMessage(NpcString.AFTER_$s1_SECONDS_THE_CHARGING_MAGIC_BALLISTAS_STARTS, 500, ScreenMessageAlign.MIDDLE_CENTER, String.valueOf(_ballistaReadySeconds)));
+							player.sendPacket(new ExShowScreenMessage(NpcStringId.AFTER_S1_SECONDS_THE_CHARGING_MAGIC_BALLISTAS_STARTS, 500, ScreenMessageAlign.MIDDLE_CENTER, String.valueOf(_ballistaReadySeconds)));
 						}
 					}
 					else
 					{
 						for (Player player : getPlayers())
 						{
-							player.sendPacket(new ExShowScreenMessage(NpcString.START_CHARGING_MANA_BALLISTA, 3000, ScreenMessageAlign.MIDDLE_CENTER, String.valueOf(_ballistaReadySeconds)));
+							player.sendPacket(new ExShowScreenMessage(NpcStringId.START_CHARGING_MANA_BALLISTA, 3000, ScreenMessageAlign.MIDDLE_CENTER, String.valueOf(_ballistaReadySeconds)));
 						}
 						startBallista(_boss); // need to include mob
 						_ballista.setTargetable(true);
@@ -323,7 +323,7 @@ public class IstinaInstance extends Reflection
 				
 				for (Player player : getPlayers())
 				{
-					player.sendPacket(new ExSendUIEvent(player, 2, _ballistaSeconds, progress, 122520, NpcString.NONE2));
+					player.sendPacket(new ExSendUIEvent(player, 2, _ballistaSeconds, progress, 122520, NpcStringId.STRING_NONE));
 				}
 				
 				if (_instanceDone)

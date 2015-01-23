@@ -21,6 +21,7 @@ import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;
 
@@ -63,12 +64,12 @@ public class EffectHealAndDamage extends Effect
 			{
 				if (_effected == targetHeal)
 				{
-					_effected.sendPacket(new SystemMessage(SystemMessage.S1_HPS_HAVE_BEEN_RESTORED).addNumber(Math.round(hp)));
+					_effected.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED).addLong(Math.round(hp)));
 				}
 				else
 				{
 					getEffected().broadcastPacket(new MagicSkillUse(_effected, targetHeal, getSkill().getId(), getSkill().getLevel(), 0, 0));
-					targetHeal.sendPacket(new SystemMessage(SystemMessage.XS2S_HP_HAS_BEEN_RESTORED_BY_S1).addString(_effected.getName()).addNumber(Math.round(hp)));
+					targetHeal.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_HP_HAS_BEEN_RESTORED_BY_C1).addString(_effected.getName()).addLong(Math.round(hp)));
 				}
 			}
 		}

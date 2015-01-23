@@ -27,6 +27,7 @@ import lineage2.gameserver.network.serverpackets.ExMPCCPartyInfoUpdate;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -120,7 +121,7 @@ public class CommandChannel implements PlayerGroup
 	 */
 	public void disbandChannel()
 	{
-		broadCast(new SystemMessage(SystemMessage.THE_COMMAND_CHANNEL_HAS_BEEN_DISBANDED));
+		broadCast(SystemMessage.getSystemMessage(SystemMessageId.THE_COMMAND_CHANNEL_HAS_BEEN_DISBANDED));
 		
 		for (Party party : _commandChannelParties)
 		{
@@ -129,7 +130,7 @@ public class CommandChannel implements PlayerGroup
 			
 			if (isInReflection())
 			{
-				party.broadCast(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(1));
+				party.broadCast(SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES).addInt(1));
 			}
 		}
 		
@@ -255,7 +256,7 @@ public class CommandChannel implements PlayerGroup
 	public void setChannelLeader(Player newLeader)
 	{
 		_commandChannelLeader = newLeader;
-		broadCast(new SystemMessage(SystemMessage.COMMAND_CHANNEL_AUTHORITY_HAS_BEEN_TRANSFERRED_TO_S1).addString(newLeader.getName()));
+		broadCast(SystemMessage.getSystemMessage(SystemMessageId.COMMAND_CHANNEL_AUTHORITY_HAS_BEEN_TRANSFERRED_TO_C1).addString(newLeader.getName()));
 	}
 	
 	/**
@@ -355,7 +356,7 @@ public class CommandChannel implements PlayerGroup
 	{
 		if ((creator.getClan() == null) || !creator.isInParty() || !creator.getParty().isLeader(creator) || (creator.getPledgeClass() < Player.RANK_BARON))
 		{
-			creator.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_AUTHORITY_TO_USE_THE_COMMAND_CHANNEL));
+			creator.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.COMMAND_CHAT_CANNOT_BE_USED_BECAUSE_YOU_ARE_NOT_AN_ALLIANCE_LEADER_OR_PARTY_LEADER));
 			return false;
 		}
 		
@@ -364,7 +365,7 @@ public class CommandChannel implements PlayerGroup
 		
 		if (!haveSkill && !haveItem)
 		{
-			creator.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_AUTHORITY_TO_USE_THE_COMMAND_CHANNEL));
+			creator.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.COMMAND_CHAT_CANNOT_BE_USED_BECAUSE_YOU_ARE_NOT_AN_ALLIANCE_LEADER_OR_PARTY_LEADER));
 			return false;
 		}
 		

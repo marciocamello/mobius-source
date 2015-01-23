@@ -21,7 +21,7 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 import lineage2.gameserver.network.serverpackets.SocialAction;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.NpcUtils;
@@ -69,35 +69,35 @@ public class Q10363_RequestOfTheSeeker extends Quest implements ScriptFile
 				switch (cond)
 				{
 					case 1:
-						player.sendPacket(new ExShowScreenMessage(NpcString.YOU_SHOWN_YOUR_CONDOLENCES_TO_ONE_CORPSE, 4500, ScreenMessageAlign.TOP_CENTER));
+						player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_VE_SHOWN_YOUR_CONDOLENCES_TO_ONE_CORPSE, 4500, ScreenMessageAlign.TOP_CENTER));
 						qs.setCond(2);
 						qs.playSound(SOUND_MIDDLE);
 						((NpcInstance) npc1).doDie(player);
 						break;
 					
 					case 2:
-						player.sendPacket(new ExShowScreenMessage(NpcString.YOU_SHOWN_YOUR_CONDOLENCES_TO_SECOND_CORPSE, 4500, ScreenMessageAlign.TOP_CENTER));
+						player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_VE_SHOWN_YOUR_CONDOLENCES_TO_A_SECOND_CORPSE, 4500, ScreenMessageAlign.TOP_CENTER));
 						qs.setCond(3);
 						qs.playSound(SOUND_MIDDLE);
 						((NpcInstance) npc1).doDie(player);
 						break;
 					
 					case 3:
-						player.sendPacket(new ExShowScreenMessage(NpcString.YOU_SHOWN_YOUR_CONDOLENCES_TO_THIRD_CORPSE, 4500, ScreenMessageAlign.TOP_CENTER));
+						player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_VE_SHOWN_YOUR_CONDOLENCES_TO_A_THIRD_CORPSE, 4500, ScreenMessageAlign.TOP_CENTER));
 						qs.setCond(4);
 						qs.playSound(SOUND_MIDDLE);
 						((NpcInstance) npc1).doDie(player);
 						break;
 					
 					case 4:
-						player.sendPacket(new ExShowScreenMessage(NpcString.YOU_SHOWN_YOUR_CONDOLENCES_TO_FOURTH_CORPSE, 4500, ScreenMessageAlign.TOP_CENTER));
+						player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_VE_SHOWN_YOUR_CONDOLENCES_TO_A_FOURTH_CORPSE, 4500, ScreenMessageAlign.TOP_CENTER));
 						qs.setCond(5);
 						qs.playSound(SOUND_MIDDLE);
 						((NpcInstance) npc1).doDie(player);
 						break;
 					
 					case 5:
-						player.sendPacket(new ExShowScreenMessage(NpcString.YOU_SHOWN_YOUR_CONDOLENCES_TO_FIFTH_CORPSE, 4500, ScreenMessageAlign.TOP_CENTER));
+						player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_VE_SHOWN_YOUR_CONDOLENCES_TO_A_FIFTH_CORPSE, 4500, ScreenMessageAlign.TOP_CENTER));
 						qs.setCond(6);
 						qs.playSound(SOUND_MIDDLE);
 						((NpcInstance) npc1).doDie(player);
@@ -106,13 +106,13 @@ public class Q10363_RequestOfTheSeeker extends Quest implements ScriptFile
 				
 				if (cond == 6)
 				{
-					player.sendPacket(new ExShowScreenMessage(NpcString.GRUDGE_OF_YE_SAGIRA_VICTIMS_HAVE_BEEN_RELIEVED_WITH_YOUR_TEARS, 4500, ScreenMessageAlign.TOP_CENTER));
+					player.sendPacket(new ExShowScreenMessage(NpcStringId.GRUDGE_OF_YE_SAGIRA_VICTIMS_HAVE_BEEN_RELIEVED_WITH_YOUR_TEARS, 4500, ScreenMessageAlign.TOP_CENTER));
 					npc1.deleteMe();
 				}
 			}
 			else if ((dist >= 70) && ((target == corps1) || (target == corps2) || (target == corps3) || (target == corps4)))
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.YOU_ARE_TOO_FAR_FROM_CORPSE_TO_SHOW_YOUR_CONDOLENCES, 4500, ScreenMessageAlign.TOP_CENTER));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_ARE_TOO_FAR_FROM_THE_CORPSE_TO_SHOW_YOUR_CONDOLENCES, 4500, ScreenMessageAlign.TOP_CENTER));
 			}
 		}
 		else if ((actionId == SocialAction.LAUGH) || (actionId == SocialAction.DANCE))
@@ -121,7 +121,7 @@ public class Q10363_RequestOfTheSeeker extends Quest implements ScriptFile
 			{
 				if ((cond == 1) || (cond == 2) || (cond == 3) || (cond == 4) || (cond == 5) || (cond == 6))
 				{
-					player.sendPacket(new ExShowScreenMessage(NpcString.DONT_TOY_WITH_DEAD, 4500, ScreenMessageAlign.TOP_CENTER));
+					player.sendPacket(new ExShowScreenMessage(NpcStringId.DON_T_TOY_WITH_THE_DEAD, 4500, ScreenMessageAlign.TOP_CENTER));
 					NpcInstance asa = NpcUtils.spawnSingle(soul1, new Location(player.getX() - Rnd.get(100), player.getY() - Rnd.get(100), player.getZ(), 0));
 					asa.getAggroList().addDamageHate(qs.getPlayer(), 0, 10000);
 					asa.setAggressionTarget(player);
@@ -133,7 +133,7 @@ public class Q10363_RequestOfTheSeeker extends Quest implements ScriptFile
 			}
 			else if ((dist >= 70) && ((target == corps1) || (target == corps2) || (target == corps3) || (target == corps4)))
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.YOU_ARE_TOO_FAR_FROM_THE_CORPSE_TO_DO_THAT, 4500, ScreenMessageAlign.TOP_CENTER));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_ARE_TOO_FAR_FROM_THE_CORPSE, 4500, ScreenMessageAlign.TOP_CENTER));
 			}
 		}
 	}

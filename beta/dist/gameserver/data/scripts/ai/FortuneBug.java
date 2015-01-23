@@ -21,7 +21,7 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 
@@ -94,7 +94,7 @@ public final class FortuneBug extends DefaultAI
 			{
 				closestItem.deleteMe();
 				actor.altUseSkill(s_display_bug_of_fortune1, actor);
-				Functions.npcSayInRange(actor, 600, NpcString.YUMYUM_YUMYUM);
+				Functions.npcSayInRange(actor, 600, NpcStringId.NOM_NOM);
 				i_ai0++;
 				
 				if ((i_ai0 > 1) && (i_ai0 <= 10))
@@ -237,7 +237,7 @@ public final class FortuneBug extends DefaultAI
 		{
 			if (i_ai2 == 0)
 			{
-				Functions.npcSayInRange(actor, 600, NpcString.I_HAVENT_EATEN_ANYTHING_IM_SO_WEAK);
+				Functions.npcSayInRange(actor, 600, NpcStringId.I_HAVEN_T_EATEN_ANYTHING_I_M_SO_WEAK);
 			}
 			else
 			{
@@ -313,27 +313,27 @@ public final class FortuneBug extends DefaultAI
 			switch (i_ai0)
 			{
 				case 0:
-					Functions.npcSayInRange(actor, 600, Rnd.chance(50) ? NpcString.IF_YOU_HAVE_ITEMS_PLEASE_GIVE_THEM_TO_ME : NpcString.MY_STOMACH_IS_EMPTY);
+					Functions.npcSayInRange(actor, 600, Rnd.chance(50) ? NpcStringId.IF_YOU_HAVE_ITEMS_PLEASE_GIVE_THEM_TO_ME : NpcStringId.MY_STOMACH_IS_EMPTY);
 					break;
 				
 				case 1:
-					Functions.npcSayInRange(actor, 600, Rnd.chance(50) ? NpcString.IM_HUNGRY_IM_HUNGRY : NpcString.IM_STILL_NOT_FULL);
+					Functions.npcSayInRange(actor, 600, Rnd.chance(50) ? NpcStringId.I_M_HUNGRY_I_M_HUNGRY : NpcStringId.I_M_STILL_NOT_FULL);
 					break;
 				
 				case 2:
-					Functions.npcSayInRange(actor, 600, Rnd.chance(50) ? NpcString.IM_STILL_HUNGRY : NpcString.I_FEEL_A_LITTLE_WOOZY);
+					Functions.npcSayInRange(actor, 600, Rnd.chance(50) ? NpcStringId.I_M_STILL_HUNGRY : NpcStringId.I_FEEL_A_LITTLE_WOOZY);
 					break;
 				
 				case 3:
-					Functions.npcSayInRange(actor, 600, Rnd.chance(50) ? NpcString.GIVE_ME_SOMETHING_TO_EAT : NpcString.NOW_ITS_TIME_TO_EAT);
+					Functions.npcSayInRange(actor, 600, Rnd.chance(50) ? NpcStringId.GIVE_ME_SOMETHING_TO_EAT : NpcStringId.NOW_IT_S_TIME_TO_EAT);
 					break;
 				
 				case 4:
-					Functions.npcSayInRange(actor, 600, Rnd.chance(50) ? NpcString.I_ALSO_NEED_A_DESSERT : NpcString.IM_STILL_HUNGRY_);
+					Functions.npcSayInRange(actor, 600, Rnd.chance(50) ? NpcStringId.I_ALSO_NEED_DESSERT : NpcStringId.I_M_STILL_HUNGRY2);
 					break;
 				
 				case 5:
-					Functions.npcSayInRange(actor, 600, NpcString.IM_FULL_NOW_I_DONT_WANT_TO_EAT_ANYMORE);
+					Functions.npcSayInRange(actor, 600, NpcStringId.I_M_FULL_NOW_I_DON_T_WANT_TO_EAT_ANYMORE);
 					break;
 			}
 			

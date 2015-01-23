@@ -30,10 +30,11 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.TutorialShowHtml;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.network.serverpackets.components.SceneMovie;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.HtmlUtils;
@@ -141,7 +142,7 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 				officer.setRunning();
 				officer.setFollowTarget(qs.getPlayer());
 				officer.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, qs.getPlayer(), 150);
-				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.MARK_OF_BELIS_CAN_BE_ACQUIRED_FROM_ENEMIES, 7000, ScreenMessageAlign.TOP_CENTER));
+				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.MARK_OF_BELIS_CAN_BE_ACQUIRED_FROM_ENEMIES_NUSE_THEM_IN_THE_BELIS_VERIFICATION_SYSTEM, 7000, ScreenMessageAlign.TOP_CENTER));
 				qs.startQuestTimer("belise_mark_msg_timer", 10000);
 			}
 			
@@ -159,7 +160,7 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 			
 			if ((reflection != null) && (reflection.getInstancedZoneId() == INSTANCED_ZONE_ID) && (qs.getInt("stage") == 3))
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.MARK_OF_BELIS_CAN_BE_ACQUIRED_FROM_ENEMIES, 7000, ScreenMessageAlign.TOP_CENTER));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.MARK_OF_BELIS_CAN_BE_ACQUIRED_FROM_ENEMIES_NUSE_THEM_IN_THE_BELIS_VERIFICATION_SYSTEM, 7000, ScreenMessageAlign.TOP_CENTER));
 				qs.startQuestTimer("belise_mark_msg_timer", 10000);
 			}
 			
@@ -227,7 +228,7 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 				{
 					generator.setNpcState(1);
 					officer.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, generator, 1000);
-					Functions.npcSay(officer, NpcString.DONT_COME_BACK_HERE);
+					Functions.npcSay(officer, NpcStringId.DON_T_COME_BACK_HERE);
 					qs.startQuestTimer("stage_5_phrases_timer", 5000, officer);
 					qs.startQuestTimer("stage_5_spawn_timer", 5000, officer);
 				}
@@ -239,17 +240,17 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 		{
 			if (qs.getInt("stage") == 5)
 			{
-				Functions.npcSay(npc, NpcString.DONT_COME_BACK_HERE);
+				Functions.npcSay(npc, NpcStringId.DON_T_COME_BACK_HERE);
 				Player player = qs.getPlayer();
 				Reflection reflection = player.getActiveReflection();
 				
 				if ((reflection != null) && (reflection.getInstancedZoneId() == INSTANCED_ZONE_ID))
 				{
-					NpcString screenMsg = NpcString.BEHIND_YOU_THE_ENEMY_IS_AMBUSING_YOU;
+					NpcStringId screenMsg = NpcStringId.BEHIND_YOU_THE_ENEMY_IS_AMBUSHING_YOU;
 					
 					if (Rnd.chance(50))
 					{
-						screenMsg = NpcString.IF_TERAIN_DIES_MISSION_WILL_FAIL;
+						screenMsg = NpcStringId.IF_TERAIN_DIES_THE_MISSION_WILL_FAIL;
 					}
 					
 					player.sendPacket(new ExShowScreenMessage(screenMsg, 7000, ScreenMessageAlign.TOP_CENTER, true, true));
@@ -272,7 +273,7 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 					Reflection reflect = npc.getReflection();
 					NpcInstance defender = addSpawnToInstance(defenderNpcId, new Location(-116600, 213080, -8615, 21220), 0, reflect.getId());
 					/*
-					 * NpcString defenderPhrase = NpcString.FOCUS_ON_ATTACKING_THE_GUY_IN_THE_ROOM; if(Rnd.chance(50)) defenderPhrase = NpcString.KILL_THE_GUY_MESSING_WITH_THE_ELECTRIC_DEVICE; Functions.npcSay(defender, defenderPhrase);
+					 * NpcStringId defenderPhrase = NpcStringId.FOCUS_ON_ATTACKING_THE_GUY_IN_THE_ROOM; if(Rnd.chance(50)) defenderPhrase = NpcStringId.KILL_THE_GUY_MESSING_WITH_THE_ELECTRIC_DEVICE; Functions.npcSay(defender, defenderPhrase);
 					 */
 					NpcInstance officer = getNpcFromReflection(INFILTRATION_OFFICER, reflect);
 					
@@ -310,7 +311,7 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 				if (defenderKills >= NEED_DEFENDERS_KILLS_COUNT)
 				{
 					qs.set("stage", 6);
-					qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ELECTRONIC_DEVICE_HAS_BEEN_DESTROYED, 5000, ScreenMessageAlign.TOP_CENTER));
+					qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.ELECTRONIC_DEVICE_HAS_BEEN_DESTROYED, 5000, ScreenMessageAlign.TOP_CENTER));
 					reflect.openDoor(16240007);
 					reflect.getZone("[belise_labyrinth_03_1]").setActive(true);
 					reflect.getZone("[belise_labyrinth_03_2]").setActive(false);
@@ -406,7 +407,7 @@ public class Q10331_StartOfFate extends Quest implements ScriptFile
 			htmltext = htmltext.replace("<?CLASS_NAME?>", HtmlUtils.htmlClassName(classId));
 			Player player = qs.getPlayer();
 			player.setClassId(classId, false, false);
-			player.sendPacket(SystemMsg.CONGRATULATIONS__YOUVE_COMPLETED_A_CLASS_TRANSFER);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_A_CLASS_TRANSFER));
 			player.broadcastPacket(new MagicSkillUse(player, player, 5103, 1, 1000, 0));
 			MultiSellHolder.getInstance().SeparateAndSend(PROOF_OF_COURAGE_MULTISELL_ID, qs.getPlayer(), 0, npc.getId());
 			qs.showTutorialHTML(TutorialShowHtml.QT_009, TutorialShowHtml.TYPE_WINDOW);

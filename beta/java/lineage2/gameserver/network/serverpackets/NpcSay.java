@@ -14,7 +14,7 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 
 public class NpcSay extends NpcStringContainer
 {
@@ -24,10 +24,10 @@ public class NpcSay extends NpcStringContainer
 	
 	public NpcSay(NpcInstance npc, ChatType chatType, String text)
 	{
-		this(npc, chatType, NpcString.NONE, text);
+		this(npc, chatType, NpcStringId.STRING_NONE, text);
 	}
 	
-	public NpcSay(NpcInstance npc, ChatType chatType, NpcString npcString, String... params)
+	public NpcSay(NpcInstance npc, ChatType chatType, NpcStringId npcString, String... params)
 	{
 		super(npcString, params);
 		_objId = npc.getObjectId();

@@ -28,6 +28,7 @@ import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.taskmanager.EffectTaskManager;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
@@ -355,7 +356,7 @@ public class TreeInstance extends Summon
 	public void displayReceiveDamageMessage(Creature attacker, int damage)
 	{
 		Player owner = getPlayer();
-		owner.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RECEIVED_DAMAGE_OF_S3_FROM_C2).addName(this).addName(attacker).addNumber((long) damage));
+		owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RECEIVED_S3_DAMAGE_FROM_C2).addCharName(this).addCharName(attacker).addLong(damage));
 	}
 	
 	@Override

@@ -16,7 +16,7 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
@@ -107,32 +107,32 @@ public class MeiSubAI extends DefaultAI
 			return;
 		}
 		
-		NpcString ns;
+		NpcStringId ns;
 		
 		switch (Rnd.get(6))
 		{
 			case 1:
-				ns = NpcString.IF_YOU_IGNORE_THE_TRAINING_GROUNDS_YOU_LL_REGRET_IT;
+				ns = NpcStringId.IF_YOU_IGNORE_THE_TRAINING_GROUNDS_YOU_LL_REGRET_IT;
 				break;
 			
 			case 2:
-				ns = NpcString.IF_YOU_IGNORE_THE_TRAINING_GROUNDS_YOU_LL_REGRET_IT;
+				ns = NpcStringId.IF_YOU_IGNORE_THE_TRAINING_GROUNDS_YOU_LL_REGRET_IT;
 				break;
 			
 			case 3:
-				ns = NpcString.IF_YOU_IGNORE_THE_TRAINING_GROUNDS_YOU_LL_REGRET_IT;
+				ns = NpcStringId.IF_YOU_IGNORE_THE_TRAINING_GROUNDS_YOU_LL_REGRET_IT;
 				break;
 			
 			case 4:
-				ns = NpcString.IF_YOU_IGNORE_THE_TRAINING_GROUNDS_YOU_LL_REGRET_IT;
+				ns = NpcStringId.IF_YOU_IGNORE_THE_TRAINING_GROUNDS_YOU_LL_REGRET_IT;
 				break;
 			
 			case 5:
-				ns = NpcString.IF_YOU_IGNORE_THE_TRAINING_GROUNDS_YOU_LL_REGRET_IT;
+				ns = NpcStringId.IF_YOU_IGNORE_THE_TRAINING_GROUNDS_YOU_LL_REGRET_IT;
 				break;
 			
 			default:
-				ns = NpcString.IF_YOU_IGNORE_THE_TRAINING_GROUNDS_YOU_LL_REGRET_IT;
+				ns = NpcStringId.IF_YOU_IGNORE_THE_TRAINING_GROUNDS_YOU_LL_REGRET_IT;
 				break;
 		}
 		

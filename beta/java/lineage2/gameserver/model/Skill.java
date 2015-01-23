@@ -42,8 +42,7 @@ import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.skills.effects.EffectTemplate;
 import lineage2.gameserver.skills.skillclasses.AIeffects;
 import lineage2.gameserver.skills.skillclasses.Aggression;
@@ -1013,7 +1012,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			}
 		}
 		
-		activeChar.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(_displayId, _displayLevel));
+		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(_displayId, _displayLevel));
 		return false;
 	}
 	
@@ -1075,7 +1074,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		
 		if ((target != null) && (activeChar.getReflection() != target.getReflection()))
 		{
-			activeChar.sendPacket(SystemMsg.CANNOT_SEE_TARGET);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CANNOT_SEE_TARGET));
 			return false;
 		}
 		
@@ -1097,13 +1096,13 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		
 		if (first && (activeChar.getCurrentMp() < (isMagic() ? _mpConsume1 + activeChar.calcStat(Stats.MP_MAGIC_SKILL_CONSUME, _mpConsume2, target, this) : _mpConsume1 + activeChar.calcStat(Stats.MP_PHYSICAL_SKILL_CONSUME, _mpConsume2, target, this))))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_MP));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_MP));
 			return false;
 		}
 		
 		if (activeChar.getCurrentHp() < (_hpConsume + 1))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_HP));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_ENOUGH_HP));
 			return false;
 		}
 		
@@ -1114,13 +1113,13 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		
 		if (_soulsConsume > activeChar.getConsumedSouls())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THERE_IS_NOT_ENOUGHT_SOUL));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SOULS));
 			return false;
 		}
 		
 		if ((activeChar.getIncreasedForce() < _condCharges) || (activeChar.getIncreasedForce() < _numCharges))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOUR_FORCE_HAS_REACHED_MAXIMUM_CAPACITY_));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_FORCE_HAS_REACHED_MAXIMUM_CAPACITY));
 			return false;
 		}
 		
@@ -1128,7 +1127,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		{
 			if (player.isInFlyingTransform() && _isItemHandler && !flyingTransformUsage())
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(getItemConsumeId()[0]));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(getItemConsumeId()[0]));
 				return false;
 			}
 			
@@ -1147,7 +1146,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			
 			if (player.isInObserverMode())
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.OBSERVERS_CANNOT_PARTICIPATE));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE));
 				return false;
 			}
 			
@@ -1168,7 +1167,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 					{
 						if (activeChar == player)
 						{
-							player.sendPacket(isHandler() ? SystemMsg.INCORRECT_ITEM_COUNT : SystemMsg.THERE_ARE_NOT_ENOUGH_NECESSARY_ITEMS_TO_USE_THE_SKILL);
+							player.sendPacket(SystemMessage.getSystemMessage(isHandler() ? SystemMessageId.INCORRECT_ITEM_COUNT : SystemMessageId.THERE_ARE_NOT_ENOUGH_NECESSARY_ITEMS_TO_USE_THE_SKILL));
 						}
 						
 						return false;
@@ -1180,7 +1179,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			{
 				if (activeChar == player)
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.ONLY_FISHING_SKILLS_ARE_AVAILABLE));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_FISHING_SKILLS_MAY_BE_USED_AT_THIS_TIME));
 				}
 				
 				return false;
@@ -1189,17 +1188,17 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		
 		if ((getFlyType() != FlyType.NONE) && (getId() != 628) && (getId() != 821) && (activeChar.isImmobilized() || activeChar.isRooted()))
 		{
-			activeChar.getPlayer().sendPacket(new SystemMessage(SystemMessage.YOUR_TARGET_IS_OUT_OF_RANGE));
+			activeChar.getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE));
 			return false;
 		}
 		
 		if (first && (target != null) && (getFlyType() == FlyType.CHARGE) && activeChar.isInRange(target.getLoc(), Math.min(150, getFlyRadius())))
 		{
-			activeChar.getPlayer().sendPacket(new SystemMessage(SystemMessage.THERE_IS_NOT_ENOUGH_SPACE_TO_MOVE_THE_SKILL_CANNOT_BE_USED));
+			activeChar.getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_IS_NO_SPACE_TO_MOVE_TO_SO_TELEPORTATION_EFFECT_DOES_NOT_APPLY));
 			return false;
 		}
 		
-		SystemMsg msg = checkTarget(activeChar, target, target, forceUse, first);
+		SystemMessage msg = checkTarget(activeChar, target, target, forceUse, first);
 		
 		if ((msg != null) && (activeChar.getPlayer() != null))
 		{
@@ -1223,17 +1222,17 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			{
 				if (!p.test(env))
 				{
-					SystemMsg cond_msg = p.getSystemMsg();
+					SystemMessageId cond_msg = p.getSystemMsg();
 					
 					if (cond_msg != null)
 					{
-						if (cond_msg.size() > 0)
+						if (cond_msg.getParamCount() > 0)
 						{
-							activeChar.sendPacket(new SystemMessage2(cond_msg).addSkillName(this));
+							activeChar.sendPacket(SystemMessage.getSystemMessage(cond_msg).addSkillName(this));
 						}
 						else
 						{
-							activeChar.sendPacket(cond_msg);
+							activeChar.sendPacket(SystemMessage.getSystemMessage(cond_msg));
 						}
 					}
 					
@@ -1252,9 +1251,9 @@ public abstract class Skill extends StatTemplate implements Cloneable
 	 * @param aimingTarget Creature
 	 * @param forceUse boolean
 	 * @param first boolean
-	 * @return SystemMsg
+	 * @return SystemMessage
 	 */
-	public SystemMsg checkTarget(Creature activeChar, Creature target, Creature aimingTarget, boolean forceUse, boolean first)
+	public SystemMessage checkTarget(Creature activeChar, Creature target, Creature aimingTarget, boolean forceUse, boolean first)
 	{
 		if (((target == activeChar) && isNotTargetAoE()) || (activeChar.isPlayer() && (target == activeChar.getPlayer().getSummonList().getFirstServitor()) && (_targetType == SkillTargetType.TARGET_PET_AURA)))
 		{
@@ -1263,17 +1262,17 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		
 		if ((target == null) || (isOffensive() && (target == activeChar)))
 		{
-			return SystemMsg.THAT_IS_AN_INCORRECT_TARGET;
+			return SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 		}
 		
 		if (activeChar.getReflection() != target.getReflection())
 		{
-			return SystemMsg.CANNOT_SEE_TARGET;
+			return SystemMessage.getSystemMessage(SystemMessageId.CANNOT_SEE_TARGET);
 		}
 		
 		if (!first && (target != activeChar) && (target == aimingTarget) && (getCastRange() > 0) && (getCastRange() != 32767) && !activeChar.isInRange(target.getLoc(), getCastRange() + (getCastRange() < 200 ? 400 : 500)))
 		{
-			return SystemMsg.YOUR_TARGET_IS_OUT_OF_RANGE;
+			return SystemMessage.getSystemMessage(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE);
 		}
 		
 		if ((_skillType == SkillType.TAKECASTLE) || (_skillType == SkillType.TAKEFORTRESS))
@@ -1283,12 +1282,12 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		
 		if (!first && (target != activeChar) && ((_targetType == SkillTargetType.TARGET_MULTIFACE) || (_targetType == SkillTargetType.TARGET_MULTIFACE_AURA) || (_targetType == SkillTargetType.TARGET_TUNNEL)) && (_isBehind ? PositionUtils.isFacing(activeChar, target, (360 - _scopeAngle)) : !PositionUtils.isFacing(activeChar, target, _scopeAngle)))
 		{
-			return SystemMsg.YOUR_TARGET_IS_OUT_OF_RANGE;
+			return SystemMessage.getSystemMessage(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE);
 		}
 		
 		if (((target.isDead() != _isCorpse) && (_targetType != SkillTargetType.TARGET_AREA_AIM_CORPSE)) || (_isUndeadOnly && !target.isUndead()))
 		{
-			return SystemMsg.INVALID_TARGET;
+			return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 		}
 		
 		if (target.isNpc() && (!_skillHealStance && _isHealDamageSkill))
@@ -1298,7 +1297,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		
 		if (!target.isPlayer() && (_skillHealStance && _isHealDamageSkill))
 		{
-			return SystemMsg.INVALID_TARGET;
+			return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 		}
 		
 		if (_isAltUse || (_targetType == SkillTargetType.TARGET_FEEDABLE_BEAST) || (_targetType == SkillTargetType.TARGET_UNLOCKABLE) || (_targetType == SkillTargetType.TARGET_CHEST))
@@ -1316,17 +1315,17 @@ public abstract class Skill extends StatTemplate implements Cloneable
 			{
 				if (isPvM())
 				{
-					return SystemMsg.THAT_IS_AN_INCORRECT_TARGET;
+					return SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 				}
 				
 				if (player.isInZone(ZoneType.Epic) != pcTarget.isInZone(ZoneType.Epic))
 				{
-					return SystemMsg.THAT_IS_AN_INCORRECT_TARGET;
+					return SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 				}
 				
 				if (pcTarget.isInOlympiadMode() && (!player.isInOlympiadMode() || (player.getOlympiadGame() != pcTarget.getOlympiadGame())))
 				{
-					return SystemMsg.THAT_IS_AN_INCORRECT_TARGET;
+					return SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 				}
 				
 				if ((player.getBlockCheckerArena() > -1) && (pcTarget.getBlockCheckerArena() > -1) && (_targetType == SkillTargetType.TARGET_EVENT))
@@ -1338,40 +1337,40 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				{
 					if (player.isInOlympiadMode() && !player.isOlympiadCompStart())
 					{
-						return SystemMsg.INVALID_TARGET;
+						return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 					}
 					
 					if (player.isInOlympiadMode() && player.isOlympiadCompStart() && (player.getOlympiadSide() == pcTarget.getOlympiadSide()) && !forceUse)
 					{
-						return SystemMsg.THAT_IS_AN_INCORRECT_TARGET;
+						return SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 					}
 					
 					if (isAoE() && (getCastRange() < Integer.MAX_VALUE) && !GeoEngine.canSeeTarget(activeChar, target, activeChar.isFlying()))
 					{
-						return SystemMsg.CANNOT_SEE_TARGET;
+						return SystemMessage.getSystemMessage(SystemMessageId.CANNOT_SEE_TARGET);
 					}
 					
 					if ((activeChar.isInZoneBattle() != target.isInZoneBattle()) && !player.getPlayerAccess().PeaceAttack)
 					{
-						return SystemMsg.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE;
+						return SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
 					}
 					
 					if ((activeChar.isInZonePeace() || target.isInZonePeace()) && !player.getPlayerAccess().PeaceAttack)
 					{
-						return SystemMsg.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE;
+						return SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
 					}
 					
 					if (activeChar.isInZoneBattle())
 					{
 						if (!forceUse && !isForceUse() && (player.getParty() != null) && (player.getParty() == pcTarget.getParty()))
 						{
-							return SystemMsg.INVALID_TARGET;
+							return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 						}
 						
 						return null;
 					}
 					
-					SystemMsg msg = null;
+					SystemMessage msg = null;
 					
 					for (GlobalEvent e : player.getEvents())
 					{
@@ -1393,7 +1392,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 					{
 						if (!forceUse && (player.getParty() != null) && (player.getParty() == pcTarget.getParty()))
 						{
-							return SystemMsg.INVALID_TARGET;
+							return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 						}
 						
 						return null;
@@ -1403,17 +1402,17 @@ public abstract class Skill extends StatTemplate implements Cloneable
 					{
 						if (player == pcTarget)
 						{
-							return SystemMsg.INVALID_TARGET;
+							return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 						}
 						
 						if ((player.getParty() != null) && (player.getParty() == pcTarget.getParty()))
 						{
-							return SystemMsg.INVALID_TARGET;
+							return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 						}
 						
 						if ((player.getClanId() != 0) && (player.getClanId() == pcTarget.getClanId()))
 						{
-							return SystemMsg.INVALID_TARGET;
+							return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 						}
 					}
 					
@@ -1447,22 +1446,22 @@ public abstract class Skill extends StatTemplate implements Cloneable
 						return null;
 					}
 					
-					return SystemMsg.INVALID_TARGET;
+					return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 				}
 				
 				if ((_targetType == SkillTargetType.TARGET_MENTEE) && (pcTarget.getMentorSystem().getMentor() != player.getObjectId()))
 				{
-					return SystemMsg.INVALID_TARGET;
+					return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 				}
 				
 				if ((player.getParty() == null) && (_skillHealStance && _isHealDamageSkill))
 				{
-					return SystemMsg.INVALID_TARGET;
+					return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 				}
 				
 				if ((pcTarget == player) && (_skillHealStance && _isHealDamageSkill) && ((player.getParty() != null) && (player.getParty() != pcTarget.getParty())))
 				{
-					return SystemMsg.INVALID_TARGET;
+					return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 				}
 				
 				if ((pcTarget == player) && (_skillHealStance && _isHealDamageSkill) && ((player.getParty() != null) && (player.getParty() == pcTarget.getParty())))
@@ -1477,12 +1476,12 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				
 				if (player.isInOlympiadMode() && !forceUse && (player.getOlympiadSide() != pcTarget.getOlympiadSide()))
 				{
-					return SystemMsg.THAT_IS_AN_INCORRECT_TARGET;
+					return SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 				}
 				
 				if (!activeChar.isInZoneBattle() && target.isInZoneBattle())
 				{
-					return SystemMsg.INVALID_TARGET;
+					return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 				}
 				
 				if (forceUse || isForceUse())
@@ -1502,17 +1501,17 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				
 				if (player.atMutualWarWith(pcTarget))
 				{
-					return SystemMsg.INVALID_TARGET;
+					return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 				}
 				
 				if (pcTarget.getPvpFlag() != 0)
 				{
-					return SystemMsg.INVALID_TARGET;
+					return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 				}
 				
 				if (pcTarget.isChaotic())
 				{
-					return SystemMsg.INVALID_TARGET;
+					return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 				}
 				
 				return null;
@@ -1521,22 +1520,22 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		
 		if (isAoE() && isOffensive() && (!_skillHealStance && _isHealDamageSkill) && (getCastRange() < Integer.MAX_VALUE) && !GeoEngine.canSeeTarget(activeChar, target, activeChar.isFlying()))
 		{
-			return SystemMsg.CANNOT_SEE_TARGET;
+			return SystemMessage.getSystemMessage(SystemMessageId.CANNOT_SEE_TARGET);
 		}
 		
 		if (!forceUse && !isForceUse() && !isOffensive() && target.isAutoAttackable(activeChar))
 		{
-			return SystemMsg.INVALID_TARGET;
+			return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 		}
 		
 		if (!forceUse && !isForceUse() && isOffensive() && !target.isAutoAttackable(activeChar))
 		{
-			return SystemMsg.INVALID_TARGET;
+			return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 		}
 		
 		if (!target.isAttackable(activeChar))
 		{
-			return SystemMsg.INVALID_TARGET;
+			return SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET);
 		}
 		
 		return null;
@@ -2170,7 +2169,7 @@ public abstract class Skill extends StatTemplate implements Cloneable
 		{
 			if (effector.isPlayer())
 			{
-				effector.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RESISTED_YOUR_S2).addName(effected).addSkillName(_displayId, _displayLevel));
+				effector.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2).addCharName(effected).addSkillName(_displayId, _displayLevel));
 			}
 			
 			return;
@@ -2280,8 +2279,8 @@ public abstract class Skill extends StatTemplate implements Cloneable
 						{
 							if (Rnd.chance(target.calcStat(isMagic() ? Stats.REFLECT_MAGIC_DEBUFF : Stats.REFLECT_PHYSIC_DEBUFF, 0, effector, Skill.this)))
 							{
-								target.sendPacket(new SystemMessage(SystemMessage.YOU_COUNTERED_C1S_ATTACK).addName(effector));
-								effector.sendPacket(new SystemMessage(SystemMessage.C1_DODGES_THE_ATTACK).addName(target));
+								target.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_COUNTERED_C1_S_ATTACK).addCharName(effector));
+								effector.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_DODGED_THE_ATTACK).addCharName(target));
 								target = effector;
 								env.target = target;
 							}
@@ -2398,11 +2397,11 @@ public abstract class Skill extends StatTemplate implements Cloneable
 				{
 					if (success)
 					{
-						effector.sendPacket(new SystemMessage(SystemMessage.S1_HAS_SUCCEEDED).addSkillName(_displayId, _displayLevel));
+						effector.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_SUCCEEDED).addSkillName(_displayId, _displayLevel));
 					}
 					else
 					{
-						effector.sendPacket(new SystemMessage(SystemMessage.S1_HAS_FAILED).addSkillName(_displayId, _displayLevel));
+						effector.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_FAILED).addSkillName(_displayId, _displayLevel));
 					}
 				}
 			}

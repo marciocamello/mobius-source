@@ -40,7 +40,7 @@ import lineage2.gameserver.network.serverpackets.ExChangeNpcState;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
 import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.templates.item.WeaponTemplate;
@@ -286,7 +286,7 @@ public class PetInstance extends Summon
 		{
 			if (getInventory().destroyItem(item, 1L))
 			{
-				getPlayer().sendPacket(new SystemMessage(SystemMessage.PET_TOOK_S1_BECAUSE_HE_WAS_HUNGRY).addItemName(item.getId()));
+				getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_WAS_HUNGRY_SO_IT_ATE_S1).addItemName(item.getId()));
 				setCurrentFed(newFed);
 				sendStatusUpdate();
 			}
@@ -336,7 +336,7 @@ public class PetInstance extends Summon
 		
 		if ((addToExp > 0) || (addToSp > 0))
 		{
-			owner.sendPacket(new SystemMessage(SystemMessage.THE_PET_ACQUIRED_EXPERIENCE_POINTS_OF_S1).addNumber(addToExp));
+			owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_GAINED_S1_XP).addLong(addToExp));
 		}
 		
 		int old_level = _level;
@@ -444,7 +444,7 @@ public class PetInstance extends Summon
 	{
 		super.onDeath(killer);
 		Player owner = getPlayer();
-		owner.sendPacket(new SystemMessage(SystemMessage.THE_PET_HAS_BEEN_KILLED_IF_YOU_DO_NOT_RESURRECT_IT_WITHIN_24_HOURS_THE_PETS_BODY_WILL_DISAPPEAR_ALONG_WITH_ALL_THE_PETS_ITEMS));
+		owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_PET_HAS_BEEN_KILLED_IF_YOU_DON_T_RESURRECT_IT_WITHIN_24_HOURS_THE_PET_S_BODY_WILL_DISAPPEAR_ALONG_WITH_ALL_THE_PET_S_ITEMS));
 		startDecay(86400000L);
 		
 		if (PetDataTable.isVitaminPet(getId()))
@@ -475,7 +475,7 @@ public class PetInstance extends Summon
 		
 		if (item.isCursed())
 		{
-			owner.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_PICK_UP_S1).addItemName(item.getId()));
+			owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_PICK_UP_S1).addItemName(item.getId()));
 			return;
 		}
 		
@@ -504,13 +504,13 @@ public class PetInstance extends Summon
 			
 			if (!getInventory().validateWeight(item))
 			{
-				sendPacket(new SystemMessage(SystemMessage.EXCEEDED_PET_INVENTORYS_WEIGHT_LIMIT));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_CANNOT_CARRY_ANY_MORE_ITEMS2));
 				return;
 			}
 			
 			if (!getInventory().validateCapacity(item))
 			{
-				sendPacket(new SystemMessage(SystemMessage.DUE_TO_THE_VOLUME_LIMIT_OF_THE_PETS_INVENTORY_NO_MORE_ITEMS_CAN_BE_PLACED_THERE));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_CANNOT_CARRY_ANY_MORE_ITEMS));
 				return;
 			}
 			
@@ -1261,16 +1261,16 @@ public class PetInstance extends Summon
 		
 		if (crit)
 		{
-			owner.sendPacket(SystemMsg.SUMMONED_MONSTERS_CRITICAL_HIT);
+			owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SUMMONED_MONSTER_S_CRITICAL_HIT));
 		}
 		
 		if (miss)
 		{
-			owner.sendPacket(new SystemMessage(SystemMessage.C1S_ATTACK_WENT_ASTRAY).addName(this));
+			owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_S_ATTACK_WENT_ASTRAY).addCharName(this));
 		}
 		else
 		{
-			owner.sendPacket(new SystemMessage(SystemMessage.THE_PET_GAVE_DAMAGE_OF_S1).addNumber(damage).addDamage(target, target, -damage));
+			owner.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_HIT_FOR_S1_DAMAGE).addInt(damage).addPopup(target.getId(), target.getId(), -damage));
 		}
 	}
 	
@@ -1286,7 +1286,7 @@ public class PetInstance extends Summon
 		
 		if (!isDead())
 		{
-			SystemMessage sm = new SystemMessage(SystemMessage.THE_PET_RECEIVED_DAMAGE_OF_S2_CAUSED_BY_S1);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_RECEIVED_S2_DAMAGE_BY_C1);
 			
 			if (attacker.isNpc())
 			{
@@ -1297,7 +1297,7 @@ public class PetInstance extends Summon
 				sm.addString(attacker.getName());
 			}
 			
-			sm.addNumber((long) damage).addDamage(this, attacker, -damage);
+			sm.addLong(damage).addPopup(getId(), attacker.getId(), -damage);
 			owner.sendPacket(sm);
 		}
 	}

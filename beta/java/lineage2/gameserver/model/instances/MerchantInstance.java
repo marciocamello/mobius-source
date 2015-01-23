@@ -28,8 +28,7 @@ import lineage2.gameserver.network.serverpackets.ExBuySellList;
 import lineage2.gameserver.network.serverpackets.ExGetPremiumItemList;
 import lineage2.gameserver.network.serverpackets.ShopPreviewList;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.mapregion.DomainArea;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
@@ -229,7 +228,7 @@ public class MerchantInstance extends NpcInstance
 			case "ReceivePremium":
 				if (player.getPremiumItemList().isEmpty())
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_MORE_VITAMIN_ITEMS_TO_BE_FOUND));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_MORE_DIMENSIONAL_ITEMS_TO_BE_FOUND));
 					return;
 				}
 				player.sendPacket(new ExGetPremiumItemList(player));
@@ -243,7 +242,7 @@ public class MerchantInstance extends NpcInstance
 				}
 				else
 				{
-					player.sendPacket(new SystemMessage2(SystemMsg.YOU_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER));
 				}
 				break;
 			
@@ -255,7 +254,7 @@ public class MerchantInstance extends NpcInstance
 				}
 				else
 				{
-					player.sendPacket(new SystemMessage2(SystemMsg.YOU_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_PRIORITY_RIGHTS_ON_A_SWEEPER));
 				}
 				break;
 			

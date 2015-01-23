@@ -30,7 +30,7 @@ import lineage2.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import lineage2.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import lineage2.gameserver.network.serverpackets.PledgeStatusChanged;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.tables.SkillTable;
@@ -188,31 +188,31 @@ public final class VillageMasterInstance extends NpcInstance
 	{
 		if (player.getLevel() < 10)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOT_QUALIFIED_TO_CREATE_A_CLAN));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_MEET_THE_CRITERIA_IN_ORDER_TO_CREATE_A_CLAN));
 			return;
 		}
 		
 		if (player.getClanId() != 0)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_CREATE_A_CLAN));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_CREATE_A_CLAN));
 			return;
 		}
 		
 		if (!player.canCreateClan())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_MUST_WAIT_10_DAYS_BEFORE_CREATING_A_NEW_CLAN));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MUST_WAIT_10_DAYS_BEFORE_CREATING_A_NEW_CLAN));
 			return;
 		}
 		
 		if (clanName.length() > 16)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.CLAN_NAMES_LENGTH_IS_INCORRECT));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_NAME_S_LENGTH_IS_INCORRECT));
 			return;
 		}
 		
 		if (!Util.isMatchingRegexp(clanName, Config.CLAN_NAME_TEMPLATE))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.CLAN_NAME_IS_INCORRECT));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_NAME_IS_INVALID));
 			return;
 		}
 		
@@ -220,12 +220,12 @@ public final class VillageMasterInstance extends NpcInstance
 		
 		if (clan == null)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.THIS_NAME_ALREADY_EXISTS));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_NAME_ALREADY_EXISTS));
 			return;
 		}
 		
 		player.sendPacket(clan.listAll());
-		player.sendPacket(new PledgeShowInfoUpdate(clan), new SystemMessage(SystemMessage.CLAN_HAS_BEEN_CREATED));
+		player.sendPacket(new PledgeShowInfoUpdate(clan), SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_BEEN_CREATED));
 		player.updatePledgeClass();
 		player.broadcastCharInfo();
 	}
@@ -239,7 +239,7 @@ public final class VillageMasterInstance extends NpcInstance
 	{
 		if (!leader.isClanLeader())
 		{
-			leader.sendPacket(new SystemMessage(SystemMessage.ONLY_THE_CLAN_LEADER_IS_ENABLED));
+			leader.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_THE_CLAN_LEADER_IS_ENABLED));
 			return;
 		}
 		
@@ -297,13 +297,13 @@ public final class VillageMasterInstance extends NpcInstance
 		
 		if ((clan == null) || !player.isClanLeader())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_CREATE_A_CLAN));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_CREATE_A_CLAN));
 			return;
 		}
 		
 		if (!Util.isMatchingRegexp(clanName, Config.CLAN_NAME_TEMPLATE))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.CLAN_NAME_IS_INCORRECT));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_NAME_IS_INVALID));
 			return;
 		}
 		
@@ -313,20 +313,20 @@ public final class VillageMasterInstance extends NpcInstance
 		{
 			if (element.getName().equals(clanName))
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.ANOTHER_MILITARY_UNIT_IS_ALREADY_USING_THAT_NAME_PLEASE_ENTER_A_DIFFERENT_NAME));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ANOTHER_MILITARY_UNIT_IS_ALREADY_USING_THAT_NAME_PLEASE_ENTER_A_DIFFERENT_NAME));
 				return;
 			}
 		}
 		
 		if (ClanTable.getInstance().getClanByName(clanName) != null)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.ANOTHER_MILITARY_UNIT_IS_ALREADY_USING_THAT_NAME_PLEASE_ENTER_A_DIFFERENT_NAME));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ANOTHER_MILITARY_UNIT_IS_ALREADY_USING_THAT_NAME_PLEASE_ENTER_A_DIFFERENT_NAME));
 			return;
 		}
 		
 		if (clan.getLevel() < minClanLvl)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.THE_CONDITIONS_NECESSARY_TO_CREATE_A_MILITARY_UNIT_HAVE_NOT_BEEN_MET));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_CONDITIONS_NECESSARY_TO_CREATE_A_MILITARY_UNIT_HAVE_NOT_BEEN_MET));
 			return;
 		}
 		
@@ -360,22 +360,22 @@ public final class VillageMasterInstance extends NpcInstance
 		
 		if (pledgeType == Clan.SUBUNIT_ACADEMY)
 		{
-			sm = new SystemMessage(SystemMessage.CONGRATULATIONS_THE_S1S_CLAN_ACADEMY_HAS_BEEN_CREATED);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_THE_S1_S_CLAN_ACADEMY_HAS_BEEN_CREATED);
 			sm.addString(player.getClan().getName());
 		}
 		else if (pledgeType >= Clan.SUBUNIT_KNIGHT1)
 		{
-			sm = new SystemMessage(SystemMessage.THE_KNIGHTS_OF_S1_HAVE_BEEN_CREATED);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_KNIGHTS_OF_S1_HAVE_BEEN_CREATED);
 			sm.addString(player.getClan().getName());
 		}
 		else if (pledgeType >= Clan.SUBUNIT_ROYAL1)
 		{
-			sm = new SystemMessage(SystemMessage.THE_ROYAL_GUARD_OF_S1_HAVE_BEEN_CREATED);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_ROYAL_GUARD_OF_S1_HAVE_BEEN_CREATED);
 			sm.addString(player.getClan().getName());
 		}
 		else
 		{
-			sm = new SystemMessage(SystemMessage.CLAN_HAS_BEEN_CREATED);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_BEEN_CREATED);
 		}
 		
 		player.sendPacket(sm);
@@ -410,7 +410,7 @@ public final class VillageMasterInstance extends NpcInstance
 		
 		if (!player.isClanLeader())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.ONLY_THE_CLAN_LEADER_IS_ENABLED));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_THE_CLAN_LEADER_IS_ENABLED));
 			return;
 		}
 		
@@ -478,25 +478,25 @@ public final class VillageMasterInstance extends NpcInstance
 		
 		if (!player.isClanLeader())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.ONLY_THE_CLAN_LEADER_IS_ENABLED));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_THE_CLAN_LEADER_IS_ENABLED));
 			return;
 		}
 		
 		if (clan.getAllyId() != 0)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DISPERSE_THE_CLANS_IN_YOUR_ALLIANCE));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_DISPERSE_THE_CLANS_IN_YOUR_ALLIANCE));
 			return;
 		}
 		
 		if (clan.isAtWar() > 0)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DISSOLVE_A_CLAN_WHILE_ENGAGED_IN_A_WAR));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_DISSOLVE_A_CLAN_WHILE_ENGAGED_IN_A_WAR));
 			return;
 		}
 		
 		if ((clan.getCastle() != 0) || (clan.getHasHideout() != 0) || (clan.getHasFortress() != 0))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.UNABLE_TO_DISPERSE_YOUR_CLAN_OWNS_ONE_OR_MORE_CASTLES_OR_HIDEOUTS));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.UNABLE_TO_DISSOLVE_YOUR_CLAN_OWNS_ONE_OR_MORE_CASTLES_OR_CLAN_HALLS));
 			return;
 		}
 		
@@ -504,7 +504,7 @@ public final class VillageMasterInstance extends NpcInstance
 		{
 			if ((r.getSiegeEvent().getSiegeClan(SiegeEvent.ATTACKERS, clan) != null) || (r.getSiegeEvent().getSiegeClan(SiegeEvent.DEFENDERS, clan) != null) || (r.getSiegeEvent().getSiegeClan(CastleSiegeEvent.DEFENDERS_WAITING, clan) != null))
 			{
-				player.sendPacket(SystemMsg.UNABLE_TO_DISSOLVE_YOUR_CLAN_HAS_REQUESTED_TO_PARTICIPATE_IN_A_CASTLE_SIEGE);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.UNABLE_TO_DISSOLVE_YOUR_CLAN_HAS_REQUESTED_TO_PARTICIPATE_IN_A_CASTLE_SIEGE));
 				return;
 			}
 		}
@@ -527,7 +527,7 @@ public final class VillageMasterInstance extends NpcInstance
 		
 		if (!player.isClanLeader())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.ONLY_THE_CLAN_LEADER_IS_ENABLED));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_THE_CLAN_LEADER_IS_ENABLED));
 			return;
 		}
 		
@@ -650,7 +650,7 @@ public final class VillageMasterInstance extends NpcInstance
 			
 			if (clan.getLevel() == 5)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.NOW_THAT_YOUR_CLAN_LEVEL_IS_ABOVE_LEVEL_5_IT_CAN_ACCUMULATE_CLAN_REPUTATION_POINTS));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOW_THAT_YOUR_CLAN_LEVEL_IS_ABOVE_LEVEL_5_IT_CAN_ACCUMULATE_CLAN_REPUTATION));
 			}
 			
 			PledgeShowInfoUpdate pu = new PledgeShowInfoUpdate(clan);
@@ -661,14 +661,14 @@ public final class VillageMasterInstance extends NpcInstance
 				if (mbr.isOnline())
 				{
 					mbr.getPlayer().updatePledgeClass();
-					mbr.getPlayer().sendPacket(new SystemMessage(SystemMessage.CLANS_SKILL_LEVEL_HAS_INCREASED), pu, ps);
+					mbr.getPlayer().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_S_LEVEL_HAS_INCREASED), pu, ps);
 					mbr.getPlayer().broadcastCharInfo();
 				}
 			}
 		}
 		else
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.CLAN_HAS_FAILED_TO_INCREASE_SKILL_LEVEL));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_HAS_FAILED_TO_INCREASE_ITS_LEVEL));
 		}
 	}
 	
@@ -681,43 +681,43 @@ public final class VillageMasterInstance extends NpcInstance
 	{
 		if (!player.isClanLeader())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.ONLY_CLAN_LEADERS_MAY_CREATE_ALLIANCES));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_CLAN_LEADERS_MAY_CREATE_ALLIANCES));
 			return;
 		}
 		
 		if (player.getClan().getAllyId() != 0)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_BELONG_TO_ANOTHER_ALLIANCE));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ALREADY_BELONG_TO_ANOTHER_ALLIANCE));
 			return;
 		}
 		
 		if (allyName.length() > 16)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.INCORRECT_LENGTH_FOR_AN_ALLIANCE_NAME));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_LENGTH_FOR_AN_ALLIANCE_NAME));
 			return;
 		}
 		
 		if (!Util.isMatchingRegexp(allyName, Config.ALLY_NAME_TEMPLATE))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.INCORRECT_ALLIANCE_NAME));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ALLIANCE_NAME_PLEASE_TRY_AGAIN));
 			return;
 		}
 		
 		if (player.getClan().getLevel() < 5)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.TO_CREATE_AN_ALLIANCE_YOUR_CLAN_MUST_BE_LEVEL_5_OR_HIGHER));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TO_CREATE_AN_ALLIANCE_YOUR_CLAN_MUST_BE_LEVEL_5_OR_HIGHER));
 			return;
 		}
 		
 		if (ClanTable.getInstance().getAllyByName(allyName) != null)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.THIS_ALLIANCE_NAME_ALREADY_EXISTS));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_ALLIANCE_NAME_ALREADY_EXISTS));
 			return;
 		}
 		
 		if (!player.getClan().canCreateAlly())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_CREATE_A_NEW_ALLIANCE_WITHIN_1_DAY_AFTER_DISSOLUTION));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CREATE_A_NEW_ALLIANCE_WITHIN_1_DAY_OF_DISSOLUTION));
 			return;
 		}
 		
@@ -745,13 +745,13 @@ public final class VillageMasterInstance extends NpcInstance
 		
 		if (!player.isAllyLeader())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.FEATURE_AVAILABLE_TO_ALLIANCE_LEADERS_ONLY));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS));
 			return;
 		}
 		
 		if (player.getAlliance().getMembersCount() > 1)
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_FAILED_TO_DISSOLVE_THE_ALLIANCE));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_FAILED_TO_DISSOLVE_THE_ALLIANCE));
 			return;
 		}
 		

@@ -18,6 +18,7 @@ import lineage2.gameserver.model.items.etcitems.LifeStoneInfo;
 import lineage2.gameserver.model.items.etcitems.LifeStoneManager;
 import lineage2.gameserver.network.serverpackets.ExPutCommissionResultForVariationMake;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -60,7 +61,7 @@ public class RequestConfirmGemStone extends AbstractRefinePacket
 		
 		if ((targetItem == null) || (refinerItem == null) || (gemstoneItem == null))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THIS_IS_NOT_A_SUITABLE_ITEM));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM));
 			return;
 		}
 		
@@ -73,16 +74,16 @@ public class RequestConfirmGemStone extends AbstractRefinePacket
 		
 		if (!isValid(activeChar, targetItem, refinerItem, gemstoneItem))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.THIS_IS_NOT_A_SUITABLE_ITEM));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_IS_NOT_A_SUITABLE_ITEM));
 			return;
 		}
 		
 		if (_gemstoneCount != getGemStoneCount(lsi.getGrade(), targetItem.getTemplate().getItemGrade()))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.GEMSTONE_QUANTITY_IS_INCORRECT));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.GEMSTONE_QUANTITY_IS_INCORRECT));
 			return;
 		}
 		
-		activeChar.sendPacket(new ExPutCommissionResultForVariationMake(_gemstoneItemObjId, gemstoneItem.getId(), _gemstoneCount), new SystemMessage(SystemMessage.PRESS_THE_AUGMENT_BUTTON_TO_BEGIN));
+		activeChar.sendPacket(new ExPutCommissionResultForVariationMake(_gemstoneItemObjId, gemstoneItem.getId(), _gemstoneCount), SystemMessage.getSystemMessage(SystemMessageId.PRESS_THE_AUGMENT_BUTTON_TO_BEGIN));
 	}
 }

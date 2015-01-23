@@ -12,7 +12,7 @@
  */
 package npc.model.residences.clanhall;
 
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 
 /**
  * @author Mobius
@@ -22,7 +22,7 @@ public interface _34SiegeGuard
 {
 	/**
 	 * Method teleChatSay.
-	 * @return NpcString
+	 * @return NpcStringId
 	 */
-	NpcString teleChatSay();
+	NpcStringId teleChatSay();
 }

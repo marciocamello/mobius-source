@@ -19,7 +19,7 @@ import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.Mystic;
 import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -53,7 +53,7 @@ public final class NpcMageAI extends Mystic
 		
 		if (Rnd.chance(3))
 		{
-			Functions.npcSay(actor, NpcString.I_M_ON_FIRE_NO_WAIT_THAT_WOULD_BE_YOU);
+			Functions.npcSay(actor, NpcStringId.I_M_ON_FIRE_NO_WAIT_THAT_WOULD_BE_YOU);
 		}
 		
 		return startAttack();

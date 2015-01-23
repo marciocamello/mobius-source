@@ -23,9 +23,8 @@ import lineage2.gameserver.listener.actor.player.OnPlayerPartyLeaveListener;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.PlayerGroup;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
 
 /**
  * @author Mobius
@@ -129,7 +128,7 @@ public abstract class MatchingRoom implements PlayerGroup
 			return false;
 		}
 		
-		return addMember0(player, new SystemMessage2(enterMessage()).addName(player));
+		return addMember0(player, enterMessage().addPcName(player));
 	}
 	
 	/**
@@ -184,8 +183,8 @@ public abstract class MatchingRoom implements PlayerGroup
 		else
 		{
 			L2GameServerPacket infoPacket = infoRoomPacket();
-			SystemMsg exitMessage0 = exitMessage(true, oust);
-			L2GameServerPacket exitMessage = exitMessage0 != null ? new SystemMessage2(exitMessage0).addName(member) : null;
+			SystemMessage exitMessage0 = exitMessage(true, oust);
+			L2GameServerPacket exitMessage = exitMessage0 != null ? exitMessage0.addPcName(member) : null;
 			
 			for (Player player : this)
 			{
@@ -234,29 +233,29 @@ public abstract class MatchingRoom implements PlayerGroup
 	// ===============================================================================================================================================
 	/**
 	 * Method notValidMessage.
-	 * @return SystemMsg
+	 * @return SystemMessage
 	 */
-	public abstract SystemMsg notValidMessage();
+	public abstract SystemMessage notValidMessage();
 	
 	/**
 	 * Method enterMessage.
-	 * @return SystemMsg
+	 * @return SystemMessage
 	 */
-	public abstract SystemMsg enterMessage();
+	public abstract SystemMessage enterMessage();
 	
 	/**
 	 * Method exitMessage.
 	 * @param toOthers boolean
 	 * @param kick boolean
-	 * @return SystemMsg
+	 * @return SystemMessage
 	 */
-	public abstract SystemMsg exitMessage(boolean toOthers, boolean kick);
+	public abstract SystemMessage exitMessage(boolean toOthers, boolean kick);
 	
 	/**
 	 * Method closeRoomMessage.
-	 * @return SystemMsg
+	 * @return SystemMessage
 	 */
-	public abstract SystemMsg closeRoomMessage();
+	public abstract SystemMessage closeRoomMessage();
 	
 	/**
 	 * Method closeRoomPacket.

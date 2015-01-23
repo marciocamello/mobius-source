@@ -18,7 +18,7 @@ import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 
 /**
@@ -75,7 +75,7 @@ public final class Torocco extends Dwarvs
 		switch (timerId)
 		{
 			case 1:
-				Functions.npcSayInRange(getActor(), 1500, NpcString.ROGIN_IM_HERE);
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.ROGIN_I_M_HERE);
 				final List<NpcInstance> list = r.getAllByNpcId(ROGIN_ID, true);
 				
 				if (list.size() > 0)

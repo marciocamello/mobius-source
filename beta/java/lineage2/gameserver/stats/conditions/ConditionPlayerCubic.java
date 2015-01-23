@@ -14,6 +14,7 @@ package lineage2.gameserver.stats.conditions;
 
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;
 
@@ -60,7 +61,7 @@ public class ConditionPlayerCubic extends Condition
 		{
 			if (env.character == targetPlayer)
 			{
-				targetPlayer.sendPacket(new SystemMessage(SystemMessage.CUBIC_SUMMONING_FAILED));
+				targetPlayer.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FAILED_TO_SUMMON_CUBE));
 			}
 			
 			return false;

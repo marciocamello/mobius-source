@@ -19,8 +19,8 @@ import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.ItemFunctions;
 
 /**
@@ -36,21 +36,21 @@ public enum InstantZoneEntryType
 		{
 			if (player.isInParty())
 			{
-				player.sendPacket(SystemMsg.A_PARTY_CANNOT_BE_FORMED_IN_THIS_AREA);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_PARTY_CANNOT_BE_FORMED_IN_THIS_AREA));
 				return false;
 			}
 			
-			SystemMsg msg = checkPlayer(player, instancedZone);
+			SystemMessageId msg = checkPlayer(player, instancedZone);
 			
 			if (msg != null)
 			{
-				if (msg.size() > 0)
+				if (msg.getParamCount() > 0)
 				{
-					player.sendPacket(new SystemMessage2(msg).addName(player));
+					player.sendPacket(SystemMessage.getSystemMessage(msg).addPcName(player));
 				}
 				else
 				{
-					player.sendPacket(msg);
+					player.sendPacket(SystemMessage.getSystemMessage(msg));
 				}
 				
 				return false;
@@ -64,7 +64,7 @@ public enum InstantZoneEntryType
 		{
 			if (player.isCursedWeaponEquipped() || player.isInFlyingTransform())
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_ENTER_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 				return false;
 			}
 			
@@ -80,25 +80,25 @@ public enum InstantZoneEntryType
 			
 			if (party == null)
 			{
-				player.sendPacket(SystemMsg.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER));
 				return false;
 			}
 			
 			if (!party.isLeader(player))
 			{
-				player.sendPacket(SystemMsg.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_MAKE_THE_REQUEST_TO_ENTER));
 				return false;
 			}
 			
 			if (party.getMemberCount() < instancedZone.getMinParty())
 			{
-				player.sendPacket(new SystemMessage2(SystemMsg.YOU_MUST_HAVE_A_MINIMUM_OF_S1_PEOPLE_TO_ENTER_THIS_INSTANT_ZONE).addInteger(instancedZone.getMinParty()));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MUST_HAVE_A_MINIMUM_OF_S1_PEOPLE_TO_ENTER_THIS_INSTANCED_ZONE).addInt(instancedZone.getMinParty()));
 				return false;
 			}
 			
 			if (party.getMemberCount() > instancedZone.getMaxParty())
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_ENTER_DUE_TO_THE_PARTY_HAVING_EXCEEDED_THE_LIMIT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ENTER_DUE_TO_THE_PARTY_HAVING_EXCEEDED_THE_LIMIT));
 				return false;
 			}
 			
@@ -106,21 +106,21 @@ public enum InstantZoneEntryType
 			{
 				if (!player.isInRange(member, 500))
 				{
-					party.broadCast(new SystemMessage2(SystemMsg.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED).addName(member));
+					party.broadCast(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED).addPcName(member));
 					return false;
 				}
 				
-				SystemMsg msg = checkPlayer(member, instancedZone);
+				SystemMessageId msg = checkPlayer(member, instancedZone);
 				
 				if (msg != null)
 				{
-					if (msg.size() > 0)
+					if (msg.getParamCount() > 0)
 					{
-						party.broadCast(new SystemMessage2(msg).addName(member));
+						party.broadCast(SystemMessage.getSystemMessage(msg).addPcName(member));
 					}
 					else
 					{
-						member.sendPacket(msg);
+						member.sendPacket(SystemMessage.getSystemMessage(msg));
 					}
 					
 					return false;
@@ -137,19 +137,19 @@ public enum InstantZoneEntryType
 			
 			if (party == null)
 			{
-				player.sendPacket(SystemMsg.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_CURRENTLY_IN_A_PARTY_SO_YOU_CANNOT_ENTER));
 				return false;
 			}
 			
 			if (party.getMemberCount() > instanceZone.getMaxParty())
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_ENTER_DUE_TO_THE_PARTY_HAVING_EXCEEDED_THE_LIMIT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ENTER_DUE_TO_THE_PARTY_HAVING_EXCEEDED_THE_LIMIT));
 				return false;
 			}
 			
 			if (player.isCursedWeaponEquipped() || player.isInFlyingTransform())
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_ENTER_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 				return false;
 			}
 			
@@ -165,7 +165,7 @@ public enum InstantZoneEntryType
 			
 			if ((party == null) || (party.getCommandChannel() == null))
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_ASSOCIATED_WITH_THE_CURRENT_COMMAND_CHANNEL);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_ASSOCIATED_WITH_THE_CURRENT_COMMAND_CHANNEL));
 				return false;
 			}
 			
@@ -173,13 +173,13 @@ public enum InstantZoneEntryType
 			
 			if (cc.getMemberCount() < instancedZone.getMinParty())
 			{
-				player.sendPacket(new SystemMessage2(SystemMsg.YOU_MUST_HAVE_A_MINIMUM_OF_S1_PEOPLE_TO_ENTER_THIS_INSTANT_ZONE).addInteger(instancedZone.getMinParty()));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MUST_HAVE_A_MINIMUM_OF_S1_PEOPLE_TO_ENTER_THIS_INSTANCED_ZONE).addInt(instancedZone.getMinParty()));
 				return false;
 			}
 			
 			if (cc.getMemberCount() > instancedZone.getMaxParty())
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_ENTER_DUE_TO_THE_PARTY_HAVING_EXCEEDED_THE_LIMIT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ENTER_DUE_TO_THE_PARTY_HAVING_EXCEEDED_THE_LIMIT));
 				return false;
 			}
 			
@@ -187,21 +187,21 @@ public enum InstantZoneEntryType
 			{
 				if (!player.isInRange(member, 500))
 				{
-					cc.broadCast(new SystemMessage2(SystemMsg.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED).addName(member));
+					cc.broadCast(SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED).addPcName(member));
 					return false;
 				}
 				
-				SystemMsg msg = checkPlayer(member, instancedZone);
+				SystemMessageId msg = checkPlayer(member, instancedZone);
 				
 				if (msg != null)
 				{
-					if (msg.size() > 0)
+					if (msg.getParamCount() > 0)
 					{
-						cc.broadCast(new SystemMessage2(msg).addName(member));
+						cc.broadCast(SystemMessage.getSystemMessage(msg).addPcName(member));
 					}
 					else
 					{
-						member.sendPacket(msg);
+						member.sendPacket(SystemMessage.getSystemMessage(msg));
 					}
 					
 					return false;
@@ -218,7 +218,7 @@ public enum InstantZoneEntryType
 			
 			if ((commparty == null) || (commparty.getCommandChannel() == null))
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_ASSOCIATED_WITH_THE_CURRENT_COMMAND_CHANNEL);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_ARE_NOT_ASSOCIATED_WITH_THE_CURRENT_COMMAND_CHANNEL));
 				return false;
 			}
 			
@@ -226,13 +226,13 @@ public enum InstantZoneEntryType
 			
 			if (cc.getMemberCount() > instanceZone.getMaxParty())
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_ENTER_DUE_TO_THE_PARTY_HAVING_EXCEEDED_THE_LIMIT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ENTER_DUE_TO_THE_PARTY_HAVING_EXCEEDED_THE_LIMIT));
 				return false;
 			}
 			
 			if (player.isCursedWeaponEquipped() || player.isInFlyingTransform())
 			{
-				player.sendPacket(SystemMsg.YOU_CANNOT_ENTER_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS));
 				return false;
 			}
 			
@@ -259,33 +259,33 @@ public enum InstantZoneEntryType
 	 * Method checkPlayer.
 	 * @param player Player
 	 * @param instancedZone InstantZone
-	 * @return SystemMsg
+	 * @return SystemMessageId
 	 */
-	static SystemMsg checkPlayer(Player player, InstantZone instancedZone)
+	static SystemMessageId checkPlayer(Player player, InstantZone instancedZone)
 	{
 		if (player.getActiveReflection() != null)
 		{
-			return SystemMsg.YOU_HAVE_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON;
+			return SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON;
 		}
 		
 		if ((player.getLevel() < instancedZone.getMinLevel()) || (player.getLevel() > instancedZone.getMaxLevel()))
 		{
-			return SystemMsg.C1S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY;
+			return SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY;
 		}
 		
 		if (player.isCursedWeaponEquipped() || player.isInFlyingTransform())
 		{
-			return SystemMsg.YOU_CANNOT_ENTER_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS;
+			return SystemMessageId.YOU_CANNOT_ENTER_BECAUSE_YOU_DO_NOT_MEET_THE_REQUIREMENTS;
 		}
 		
 		if (InstantZoneHolder.getInstance().getMinutesToNextEntrance(instancedZone.getId(), player) > 0)
 		{
-			return SystemMsg.C1_MAY_NOT_REENTER_YET;
+			return SystemMessageId.C1_MAY_NOT_RE_ENTER_YET;
 		}
 		
 		if ((instancedZone.getRemovedItemId() > 0) && instancedZone.getRemovedItemNecessity() && (ItemFunctions.getItemCount(player, instancedZone.getRemovedItemId()) < 1))
 		{
-			return SystemMsg.C1S_ITEM_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED;
+			return SystemMessageId.C1_S_ITEM_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED;
 		}
 		
 		if (instancedZone.getRequiredQuestId() > 0)
@@ -295,7 +295,7 @@ public enum InstantZoneEntryType
 			
 			if ((qs == null) || (qs.getState() != Quest.STARTED))
 			{
-				return SystemMsg.C1S_QUEST_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED;
+				return SystemMessageId.C1_S_QUEST_REQUIREMENT_IS_NOT_SUFFICIENT_AND_CANNOT_BE_ENTERED;
 			}
 		}
 		

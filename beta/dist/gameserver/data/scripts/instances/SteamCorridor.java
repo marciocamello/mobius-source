@@ -23,9 +23,9 @@ import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExSendUIEvent;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.Location;
 
 /**
@@ -63,7 +63,7 @@ public class SteamCorridor extends Reflection
 	{
 		super.onPlayerEnter(player);
 		_savedTime = System.currentTimeMillis();
-		player.sendPacket(new ExSendUIEvent(player, 0, 1, (int) (System.currentTimeMillis() - _savedTime) / 1000, 0, NpcString.ELAPSED_TIME));
+		player.sendPacket(new ExSendUIEvent(player, 0, 1, (int) (System.currentTimeMillis() - _savedTime) / 1000, 0, NpcStringId.ELAPSED_TIME));
 		NpcInstance Boss = addSpawnWithoutRespawn(Kechi, new Location(154088, 215128, -12152, 31900), 0);
 		player.setVar("SteamStart", "true", -1);
 		Boss.addListener(_deathListener);
@@ -90,7 +90,7 @@ public class SteamCorridor extends Reflection
 				for (Player p : getPlayers())
 				{
 					p.sendPacket(new ExSendUIEvent(p, 1, 1, 0, 0));
-					p.sendPacket(new SystemMessage2(SystemMsg.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addInteger(5));
+					p.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES).addInt(5));
 					startCollapseTimer(5 * 60 * 1000L);
 					return;
 				}

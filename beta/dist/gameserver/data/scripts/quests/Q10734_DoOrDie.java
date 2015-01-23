@@ -24,7 +24,7 @@ import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.TutorialShowHtml;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
 
@@ -100,7 +100,7 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 				{
 					htmltext = "33942-3.htm";
 				}
-				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ATTACK_THE_TRAINING_DUMMY, 4500, ScreenMessageAlign.TOP_CENTER));
+				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.ATTACK_THE_TRAINING_DUMMY, 4500, ScreenMessageAlign.TOP_CENTER));
 				break;
 			
 			case "buffs_info":
@@ -118,7 +118,7 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 			case "buff":
 				doSupportMagic(npc, player);
 				qs.playSound(SOUND_MIDDLE);
-				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.ATTACK_THE_TRAINING_DUMMY, 4500, ScreenMessageAlign.TOP_CENTER));
+				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.ATTACK_THE_TRAINING_DUMMY, 4500, ScreenMessageAlign.TOP_CENTER));
 				qs.setCond(6);
 				if (qs.getPlayer().getClassId().getId() == 182) // Ertheia Fighter
 				{
@@ -174,7 +174,7 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 					
 					case 3:
 						htmltext = "33943-5.htm";
-						qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.TALK_TO_THE_APPRENTICE_ADVENTURERS_GUIDE, 4500, ScreenMessageAlign.TOP_CENTER));
+						qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.TALK_TO_THE_APPRENTICE_ADVENTURER_S_GUIDE, 4500, ScreenMessageAlign.TOP_CENTER));
 						qs.setCond(5);
 						qs.playSound(SOUND_MIDDLE);
 						break;
@@ -223,7 +223,7 @@ public class Q10734_DoOrDie extends Quest implements ScriptFile
 					
 					case 2:
 						htmltext = "33942-5.htm";
-						qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.TALK_TO_THE_APPRENTICE_ADVENTURERS_GUIDE, 4500, ScreenMessageAlign.TOP_CENTER));
+						qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.TALK_TO_THE_APPRENTICE_ADVENTURER_S_GUIDE, 4500, ScreenMessageAlign.TOP_CENTER));
 						qs.setCond(4);
 						qs.playSound(SOUND_MIDDLE);
 						break;

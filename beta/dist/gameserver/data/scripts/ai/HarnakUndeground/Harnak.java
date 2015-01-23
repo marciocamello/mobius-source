@@ -23,7 +23,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.tables.SkillTable;
 import quests.Q10338_SeizeYourDestiny;
 
@@ -86,17 +86,17 @@ public final class Harnak extends Fighter
 		if (!firstMsg)
 		{
 			firstMsg = true;
-			getActor().broadcastPacket(new ExShowScreenMessage(NpcString.FREE_ME_FROM_THIS_BINDING_OF_LIGHT, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));
+			getActor().broadcastPacket(new ExShowScreenMessage(NpcStringId.FREE_ME_FROM_THIS_BINDING_OF_LIGHT, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));
 		}
 		else if (!secondMsg && (getActor().getCurrentHpPercents() <= 80.0))
 		{
 			secondMsg = true;
-			getActor().broadcastPacket(new ExShowScreenMessage(NpcString.DESTROY_THE_GHOST_OF_HARNAK_THIS_CORRUPTED_CREATURE, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));
+			getActor().broadcastPacket(new ExShowScreenMessage(NpcStringId.DESTROY_THE_GHOST_OF_HARNAK_THIS_CORRUPTED_CREATURE, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));
 		}
 		else if (!thirdMsg && (getActor().getCurrentHpPercents() <= 60.0))
 		{
 			thirdMsg = true;
-			getActor().broadcastPacket(new ExShowScreenMessage(NpcString.FREE_ME_AND_I_PROMISE_YOU_THE_POWER_OF_GIANTS, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));
+			getActor().broadcastPacket(new ExShowScreenMessage(NpcStringId.FREE_ME_AND_I_PROMISE_YOU_THE_POWER_OF_GIANTS, 10000, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));
 		}
 		else if (!sealLaunched && (getActor().getCurrentHpPercents() <= 50.0))
 		{

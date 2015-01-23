@@ -31,7 +31,7 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.NpcInfo;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
@@ -51,34 +51,34 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 	private Future<?> _durationCheckTask = null;
 	private final List<Skill> _skills = new ArrayList<>();
 	@SuppressWarnings("unchecked")
-	private static final Map.Entry<NpcString, int[]>[] TAMED_DATA = new Map.Entry[6];
+	private static final Map.Entry<NpcStringId, int[]>[] TAMED_DATA = new Map.Entry[6];
 	static
 	{
-		TAMED_DATA[0] = new AbstractMap.SimpleImmutableEntry<>(NpcString.RECKLESS_S1, new int[]
+		TAMED_DATA[0] = new AbstractMap.SimpleImmutableEntry<>(NpcStringId.RECKLESS_S1, new int[]
 		{
 			6671
 		});
-		TAMED_DATA[1] = new AbstractMap.SimpleImmutableEntry<>(NpcString.S1_OF_BALANCE, new int[]
+		TAMED_DATA[1] = new AbstractMap.SimpleImmutableEntry<>(NpcStringId.S1_OF_BALANCE, new int[]
 		{
 			6431,
 			6666
 		});
-		TAMED_DATA[2] = new AbstractMap.SimpleImmutableEntry<>(NpcString.SHARP_S1, new int[]
+		TAMED_DATA[2] = new AbstractMap.SimpleImmutableEntry<>(NpcStringId.SHARP_S1, new int[]
 		{
 			6432,
 			6668
 		});
-		TAMED_DATA[3] = new AbstractMap.SimpleImmutableEntry<>(NpcString.USEFUL_S1, new int[]
+		TAMED_DATA[3] = new AbstractMap.SimpleImmutableEntry<>(NpcStringId.USEFUL_S1, new int[]
 		{
 			6433,
 			6670
 		});
-		TAMED_DATA[4] = new AbstractMap.SimpleImmutableEntry<>(NpcString.S1_OF_BLESSING, new int[]
+		TAMED_DATA[4] = new AbstractMap.SimpleImmutableEntry<>(NpcStringId.S1_OF_BLESSING, new int[]
 		{
 			6669,
 			6672
 		});
-		TAMED_DATA[5] = new AbstractMap.SimpleImmutableEntry<>(NpcString.SWIFT_S1, new int[]
+		TAMED_DATA[5] = new AbstractMap.SimpleImmutableEntry<>(NpcStringId.SWIFT_S1, new int[]
 		{
 			6434,
 			6667
@@ -157,7 +157,7 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 	 */
 	public void setTameType()
 	{
-		Map.Entry<NpcString, int[]> type = TAMED_DATA[Rnd.get(TAMED_DATA.length)];
+		Map.Entry<NpcStringId, int[]> type = TAMED_DATA[Rnd.get(TAMED_DATA.length)];
 		setNameNpcString(type.getKey());
 		setName("#" + getNameNpcStringByNpcId().getId());
 		
@@ -174,26 +174,26 @@ public final class TamedBeastInstance extends FeedableBeastInstance
 	
 	/**
 	 * Method getNameNpcStringByNpcId.
-	 * @return NpcString
+	 * @return NpcStringId
 	 */
-	public NpcString getNameNpcStringByNpcId()
+	public NpcStringId getNameNpcStringByNpcId()
 	{
 		switch (getId())
 		{
 			case 18869:
-				return NpcString.ALPEN_KOOKABURRA;
+				return NpcStringId.ALPEN_KOOKABURRA;
 				
 			case 18870:
-				return NpcString.ALPEN_COUGAR;
+				return NpcStringId.ALPEN_COUGAR;
 				
 			case 18871:
-				return NpcString.ALPEN_BUFFALO;
+				return NpcStringId.ALPEN_BUFFALO;
 				
 			case 18872:
-				return NpcString.ALPEN_GRENDEL;
+				return NpcStringId.ALPEN_GRENDEL;
 		}
 		
-		return NpcString.NONE;
+		return NpcStringId.STRING_NONE;
 	}
 	
 	/**

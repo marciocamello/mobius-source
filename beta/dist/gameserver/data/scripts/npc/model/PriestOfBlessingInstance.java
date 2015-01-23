@@ -21,6 +21,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Util;
@@ -279,7 +280,7 @@ public final class PriestOfBlessingInstance extends NpcInstance
 			}
 			else
 			{
-				player.sendPacket(new SystemMessage(SystemMessage._2_UNITS_OF_THE_ITEM_S1_IS_REQUIRED).addItemName(57).addNumber(price));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_S2_S1_S).addItemName(57).addInt(price));
 			}
 		}
 		else
@@ -289,11 +290,11 @@ public final class PriestOfBlessingInstance extends NpcInstance
 			
 			if (hours > 0)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_S1_HOURSS_AND_S2_MINUTES_REMAINING_UNTIL_THE_TIME_WHEN_THE_ITEM_CAN_BE_PURCHASED).addNumber(hours).addNumber(minutes));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S1_HOUR_S_AND_S2_MINUTE_S_REMAINING_UNTIL_THE_ITEM_CAN_BE_PURCHASED_AGAIN).addInt(hours).addInt(minutes));
 			}
 			else if (minutes > 0)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_S1_MINUTES_REMAINING_UNTIL_THE_TIME_WHEN_THE_ITEM_CAN_BE_PURCHASED).addNumber(minutes));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S1_MINUTE_S_REMAINING_UNTIL_THE_ITEM_CAN_BE_PURCHASED_AGAIN).addInt(minutes));
 			}
 			else if (player.reduceAdena(price, true))
 			{
@@ -302,7 +303,7 @@ public final class PriestOfBlessingInstance extends NpcInstance
 			}
 			else
 			{
-				player.sendPacket(new SystemMessage(SystemMessage._2_UNITS_OF_THE_ITEM_S1_IS_REQUIRED).addItemName(57).addNumber(price));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_S2_S1_S).addItemName(57).addInt(price));
 			}
 		}
 	}

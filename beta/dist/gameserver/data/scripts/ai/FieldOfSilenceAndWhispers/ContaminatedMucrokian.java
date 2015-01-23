@@ -19,7 +19,7 @@ import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
@@ -54,7 +54,7 @@ public final class ContaminatedMucrokian extends Fighter
 		
 		if (getIntention() == CtrlIntention.AI_INTENTION_ACTIVE)
 		{
-			Functions.npcSay(actor, NpcString.NAIA_WAGANAGEL_PEUTAGUN, ChatType.ALL, 5000);
+			Functions.npcSay(actor, NpcStringId.NAIA_WAGANAGEL_PEUTAGUN, ChatType.ALL, 5000);
 		}
 		
 		super.onIntentionAttack(target);

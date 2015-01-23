@@ -39,8 +39,9 @@ import lineage2.gameserver.network.serverpackets.ExShowSeedInfo;
 import lineage2.gameserver.network.serverpackets.ExShowSeedSetting;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.manor.CropProcure;
 import lineage2.gameserver.templates.manor.SeedProduction;
@@ -99,7 +100,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 		{
 			if (!isHaveRigths(player, Clan.CP_CS_MANAGE_SIEGE))
 			{
-				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT));
 				return;
 			}
 			
@@ -109,7 +110,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 		{
 			if (!player.isClanLeader())
 			{
-				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT));
 				return;
 			}
 			
@@ -124,7 +125,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 		{
 			if (!player.isClanLeader())
 			{
-				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT));
 				return;
 			}
 			
@@ -165,7 +166,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 				
 				if (treasure > player.getAdena())
 				{
-					player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 					return;
 				}
 				
@@ -188,7 +189,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 		{
 			if (!isHaveRigths(player, Clan.CP_CS_MANOR_ADMIN))
 			{
-				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT));
 				return;
 			}
 			
@@ -230,7 +231,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 		{
 			if (!isHaveRigths(player, Clan.CP_CS_MANOR_ADMIN))
 			{
-				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT));
 				return;
 			}
 			
@@ -238,7 +239,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 			// manor_menu_select?ask=X&state=Y&time=X
 			if (CastleManorManager.getInstance().isUnderMaintenance())
 			{
-				player.sendPacket(SystemMsg.THE_MANOR_SYSTEM_IS_CURRENTLY_UNDER_MAINTENANCE);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MANOR_SYSTEM_IS_CURRENTLY_UNDER_MAINTENANCE));
 				player.sendActionFailed();
 				return;
 			}
@@ -292,7 +293,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 				case 7: // Edit seed setup
 					if (castle.isNextPeriodApproved())
 					{
-						player.sendPacket(SystemMsg.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_430_AM_AND_8_PM);
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_4_30_AM_AND_8_PM));
 					}
 					else
 					{
@@ -303,7 +304,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 				case 8: // Edit crop setup
 					if (castle.isNextPeriodApproved())
 					{
-						player.sendPacket(SystemMsg.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_430_AM_AND_8_PM);
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_MANOR_CANNOT_BE_SET_UP_BETWEEN_4_30_AM_AND_8_PM));
 					}
 					else
 					{
@@ -316,7 +317,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 		{
 			if (!isHaveRigths(player, Clan.CP_CS_ENTRY_EXIT))
 			{
-				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT));
 				return;
 			}
 			
@@ -353,7 +354,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 		{
 			if (!isHaveRigths(player, Clan.CP_CS_TAXES))
 			{
-				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT));
 				return;
 			}
 			
@@ -435,7 +436,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 			
 			if (player.getClan().getAdenaCount() < price)
 			{
-				player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 				return;
 			}
 			
@@ -450,7 +451,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 		{
 			if (!isHaveRigths(player, Clan.CP_CS_ENTRY_EXIT))
 			{
-				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT));
 				return;
 			}
 			
@@ -470,7 +471,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 		{
 			if (!isHaveRigths(player, Clan.CP_CS_MANAGE_SIEGE))
 			{
-				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT));
 				return;
 			}
 			
@@ -535,7 +536,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 			
 			if (player.getClan().getAdenaCount() < price)
 			{
-				player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 				return;
 			}
 			
@@ -547,7 +548,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 		{
 			if (!isHaveRigths(player, Clan.CP_CS_USE_FUNCTIONS))
 			{
-				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT));
 				return;
 			}
 			
@@ -566,16 +567,16 @@ public final class ChamberlainLightInstance extends ResidenceManager
 			
 			for (Entry<List<Fortress>> entry : castle.getRelatedFortresses().entrySet())
 			{
-				NpcString type;
+				NpcStringId type;
 				
 				switch (entry.getKey())
 				{
 					case Fortress.DOMAIN:
-						type = NpcString.DOMAIN_FORTRESS;
+						type = NpcStringId.DOMAIN_FORTRESS;
 						break;
 					
 					case Fortress.BOUNDARY:
-						type = NpcString.BOUNDARY_FORTRESS;
+						type = NpcStringId.BOUNDARY_FORTRESS;
 						break;
 					
 					default:
@@ -587,20 +588,20 @@ public final class ChamberlainLightInstance extends ResidenceManager
 				for (Fortress fort : fortresses)
 				{
 					b.append(HtmlUtils.htmlResidenceName(fort.getId())).append(" (").append(HtmlUtils.htmlNpcString(type)).append(") : <font color=\"00FFFF\">");
-					NpcString contractType;
+					NpcStringId contractType;
 					
 					switch (fort.getContractState())
 					{
 						case Fortress.NOT_DECIDED:
-							contractType = NpcString.NONPARTISAN;
+							contractType = NpcStringId.NONPARTISAN;
 							break;
 						
 						case Fortress.INDEPENDENT:
-							contractType = NpcString.INDEPENDENT_STATE;
+							contractType = NpcStringId.INDEPENDENT_STATE;
 							break;
 						
 						case Fortress.CONTRACT_WITH_CASTLE:
-							contractType = NpcString.CONTRACT_STATE;
+							contractType = NpcStringId.CONTRACT_STATE;
 							break;
 						
 						default:
@@ -618,7 +619,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 		{
 			if (!player.isClanLeader())
 			{
-				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT));
 				return;
 			}
 			
@@ -642,7 +643,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 		{
 			if (!player.isClanLeader())
 			{
-				player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT));
 				return;
 			}
 			
@@ -855,7 +856,7 @@ public final class ChamberlainLightInstance extends ResidenceManager
 		
 		if (!player.hasPrivilege(Privilege.CS_FS_SIEGE_WAR))
 		{
-			player.sendPacket(SystemMsg.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT));
 			return false;
 		}
 		

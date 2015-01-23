@@ -26,7 +26,7 @@ import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.model.instances.ManorManagerInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.manor.CropProcure;
 
@@ -99,7 +99,7 @@ public class RequestProcureCropList extends L2GameClientPacket
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
@@ -190,7 +190,7 @@ public class RequestProcureCropList extends L2GameClientPacket
 		}
 		catch (ArithmeticException ae)
 		{
-			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 			return;
 		}
 		
@@ -200,19 +200,19 @@ public class RequestProcureCropList extends L2GameClientPacket
 		{
 			if (!activeChar.getInventory().validateWeight(weight))
 			{
-				sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT));
 				return;
 			}
 			
 			if (!activeChar.getInventory().validateCapacity(slots))
 			{
-				sendPacket(new SystemMessage(SystemMessage.YOUR_INVENTORY_IS_FULL));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_INVENTORY_IS_FULL));
 				return;
 			}
 			
 			if (activeChar.getInventory().getAdena() < totalFee)
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 				return;
 			}
 			
@@ -262,9 +262,9 @@ public class RequestProcureCropList extends L2GameClientPacket
 				
 				if (rewardItemCount < 1)
 				{
-					SystemMessage sm = new SystemMessage(SystemMessage.FAILED_IN_TRADING_S2_OF_CROP_S1);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.FAILED_IN_TRADING_S2_OF_S1_CROPS);
 					sm.addItemName(cropId);
-					sm.addNumber(count);
+					sm.addLong(count);
 					activeChar.sendPacket(sm);
 					continue;
 				}
@@ -283,10 +283,10 @@ public class RequestProcureCropList extends L2GameClientPacket
 				
 				if (!activeChar.reduceAdena(fee, false))
 				{
-					SystemMessage sm = new SystemMessage(SystemMessage.FAILED_IN_TRADING_S2_OF_CROP_S1);
+					SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.FAILED_IN_TRADING_S2_OF_S1_CROPS);
 					sm.addItemName(cropId);
-					sm.addNumber(count);
-					activeChar.sendPacket(sm, new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+					sm.addLong(count);
+					activeChar.sendPacket(sm, SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 					continue;
 				}
 				
@@ -299,11 +299,28 @@ public class RequestProcureCropList extends L2GameClientPacket
 					continue;
 				}
 				
-				activeChar.sendPacket(new SystemMessage(SystemMessage.TRADED_S2_OF_CROP_S1).addItemName(cropId).addNumber(count), SystemMessage2.removeItems(cropId, count), SystemMessage2.obtainItems(rewardItemId, rewardItemCount, 0));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TRADED_S2_OF_S1_CROPS).addItemName(cropId).addLong(count));
+				if (count > 1)
+				{
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED).addItemName(cropId).addLong(count));
+				}
+				else
+				{
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_DISAPPEARED).addItemName(cropId));
+				}
+				
+				if (rewardItemCount > 1)
+				{
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(rewardItemId).addLong(rewardItemCount));
+				}
+				else
+				{
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(rewardItemId));
+				}
 				
 				if (fee > 0L)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.S1_ADENA_HAS_BEEN_PAID_FOR_PURCHASING_FEES).addNumber(fee));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_ADENA_HAS_BEEN_WITHDRAWN_TO_PAY_FOR_PURCHASING_FEES).addLong(fee));
 				}
 			}
 		}

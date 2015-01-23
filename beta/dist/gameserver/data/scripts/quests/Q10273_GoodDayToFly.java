@@ -17,6 +17,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
 
@@ -54,7 +55,7 @@ public class Q10273_GoodDayToFly extends Quest implements ScriptFile
 			case "32557-09.htm":
 				if (player.getTransformation() != 0)
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
 					return null;
 				}
 				qs.set("transform", "1");
@@ -64,7 +65,7 @@ public class Q10273_GoodDayToFly extends Quest implements ScriptFile
 			case "32557-10.htm":
 				if (player.getTransformation() != 0)
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
 					return null;
 				}
 				SkillTable.getInstance().getInfo(5983, 1).getEffects(player, player, false, false);
@@ -73,7 +74,7 @@ public class Q10273_GoodDayToFly extends Quest implements ScriptFile
 			case "32557-13.htm":
 				if (player.getTransformation() != 0)
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ALREADY_POLYMORPHED_AND_CANNOT_POLYMORPH_AGAIN));
 					return null;
 				}
 				if (qs.getInt("transform") == 1)

@@ -18,6 +18,7 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ExAutoSoulShot;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 
 /**
@@ -85,7 +86,7 @@ public final class SpiritShot extends ScriptItemHandler
 		{
 			if (!isAutoSoulShot)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.CANNOT_USE_SPIRITSHOTS));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_USE_SPIRITSHOTS));
 			}
 			
 			return false;
@@ -106,11 +107,11 @@ public final class SpiritShot extends ScriptItemHandler
 			if (isAutoSoulShot)
 			{
 				player.removeAutoSoulShot(SoulshotId);
-				player.sendPacket(new ExAutoSoulShot(SoulshotId, false), new SystemMessage(SystemMessage.THE_AUTOMATIC_USE_OF_S1_WILL_NOW_BE_CANCELLED).addItemName(SoulshotId));
+				player.sendPacket(new ExAutoSoulShot(SoulshotId, false), SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED).addItemName(SoulshotId));
 				return false;
 			}
 			
-			player.sendPacket(new SystemMessage(SystemMessage.CANNOT_USE_SPIRITSHOTS));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_USE_SPIRITSHOTS));
 			return false;
 		}
 		
@@ -121,7 +122,7 @@ public final class SpiritShot extends ScriptItemHandler
 				return false;
 			}
 			
-			player.sendPacket(new SystemMessage(SystemMessage.SPIRITSHOT_DOES_NOT_MATCH_WEAPON_GRADE));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_SPIRITSHOT_DOES_NOT_MATCH_THE_WEAPON_S_GRADE));
 			return false;
 		}
 		
@@ -130,18 +131,18 @@ public final class SpiritShot extends ScriptItemHandler
 			if (isAutoSoulShot)
 			{
 				player.removeAutoSoulShot(SoulshotId);
-				player.sendPacket(new ExAutoSoulShot(SoulshotId, false), new SystemMessage(SystemMessage.THE_AUTOMATIC_USE_OF_S1_WILL_NOW_BE_CANCELLED).addItemName(SoulshotId));
+				player.sendPacket(new ExAutoSoulShot(SoulshotId, false), SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED).addItemName(SoulshotId));
 				return false;
 			}
 			
-			player.sendPacket(new SystemMessage(SystemMessage.NOT_ENOUGH_SPIRITSHOTS));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SPIRITSHOT_FOR_THAT));
 			return false;
 		}
 		
 		if (player.getInventory().destroyItem(item, soulSpiritConsumption))
 		{
 			weaponInst.setChargedSpiritshot(ItemInstance.CHARGED_SPIRITSHOT);
-			player.sendPacket(new SystemMessage(SystemMessage.POWER_OF_MANA_ENABLED));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_SPIRITSHOT_HAS_BEEN_ENABLED));
 			player.broadcastPacket(new MagicSkillUse(player, player, _skillIds[grade], 1, 0, 0));
 		}
 		

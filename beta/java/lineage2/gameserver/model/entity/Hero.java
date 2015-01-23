@@ -38,6 +38,7 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.StatsSet;
@@ -386,7 +387,7 @@ public class Hero
 		if ((player.getClan() != null) && (player.getClan().getLevel() >= 5))
 		{
 			player.getClan().incReputation(5000, true, "Hero:activateHero:" + player);
-			player.getClan().broadcastToOtherOnlineMembers(new SystemMessage(SystemMessage.CLAN_MEMBER_S1_WAS_NAMED_A_HERO_2S_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION_SCORE).addString(player.getName()).addNumber(Math.round(5000 * Config.RATE_CLAN_REP_SCORE)), player);
+			player.getClan().broadcastToOtherOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.CLAN_MEMBER_C1_WAS_NAMED_A_HERO_S2_POINTS_HAVE_BEEN_ADDED_TO_YOUR_CLAN_REPUTATION).addString(player.getName()).addLong(Math.round(5000 * Config.RATE_CLAN_REP_SCORE)), player);
 		}
 		
 		player.broadcastUserInfo();

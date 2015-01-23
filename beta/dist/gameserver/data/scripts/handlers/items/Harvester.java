@@ -17,7 +17,8 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.model.items.ItemInstance;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.SkillTable;
 
 /**
@@ -56,7 +57,7 @@ public final class Harvester extends SimpleItemHandler
 		
 		if ((target == null) || !target.isMonster())
 		{
-			player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 			return false;
 		}
 		
@@ -64,7 +65,7 @@ public final class Harvester extends SimpleItemHandler
 		
 		if (!monster.isDead())
 		{
-			player.sendPacket(SystemMsg.THAT_IS_AN_INCORRECT_TARGET);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET));
 			return false;
 		}
 		

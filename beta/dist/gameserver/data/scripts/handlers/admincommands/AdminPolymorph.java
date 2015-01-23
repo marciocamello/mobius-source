@@ -18,6 +18,7 @@ import lineage2.gameserver.handlers.IAdminCommandHandler;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
@@ -64,7 +65,7 @@ public class AdminPolymorph implements IAdminCommandHandler, ScriptFile
 			case "admin_poly":
 				if ((target == null) || !target.isPlayer())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 					return false;
 				}
 				
@@ -92,7 +93,7 @@ public class AdminPolymorph implements IAdminCommandHandler, ScriptFile
 			case "admin_unpoly":
 				if ((target == null) || !target.isPlayer())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 					return false;
 				}
 				

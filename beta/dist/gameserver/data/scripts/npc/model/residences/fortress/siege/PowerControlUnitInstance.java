@@ -22,7 +22,7 @@ import lineage2.gameserver.model.entity.events.impl.FortressSiegeEvent;
 import lineage2.gameserver.model.entity.events.objects.SpawnExObject;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Util;
 
@@ -151,8 +151,8 @@ public final class PowerControlUnitInstance extends NpcInstance
 			
 			case COND_ENTERED:
 				message.setFile("residence2/fortress/fortress_inner_controller004.htm");
-				message.replaceNpcString("%password%", _index == 0 ? NpcString.PASSWORD_HAS_NOT_BEEN_ENTERED : _index == 1 ? NpcString.FIRST_PASSWORD_HAS_BEEN_ENTERED : NpcString.SECOND_PASSWORD_HAS_BEEN_ENTERED);
-				message.replaceNpcString("%try_count%", NpcString.ATTEMPT_S1__3_IS_IN_PROGRESS, _tryCount);
+				message.replaceNpcString("%password%", _index == 0 ? NpcStringId.PASSWORD_HAS_NOT_BEEN_ENTERED : _index == 1 ? NpcStringId.FIRST_PASSWORD_HAS_BEEN_ENTERED : NpcStringId.SECOND_PASSWORD_HAS_BEEN_ENTERED);
+				message.replaceNpcString("%try_count%", NpcStringId.ATTEMPT_S1_3_IS_IN_PROGRESS_THIS_IS_THE_THIRD_ATTEMPT_ON_S1, _tryCount);
 				break;
 			
 			case COND_NO_ENTERED:

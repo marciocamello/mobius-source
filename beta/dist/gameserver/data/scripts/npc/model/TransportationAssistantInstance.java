@@ -15,6 +15,7 @@ package npc.model;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
 /**
@@ -38,19 +39,19 @@ public final class TransportationAssistantInstance extends NpcInstance
 		
 		if (player.isCursedWeaponEquipped())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOVE_IN_THIS_STATE));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_MOVE_IN_THIS_STATE));
 			return;
 		}
 		
 		if (player.isDead())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOVE_IN_THIS_STATE));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_MOVE_IN_THIS_STATE));
 			return;
 		}
 		
 		if (player.isCastingNow() || player.isInCombat() || player.isAttackingNow())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_MOVE_IN_THIS_STATE));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_MOVE_IN_THIS_STATE));
 			return;
 		}
 		

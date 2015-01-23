@@ -18,6 +18,7 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Formulas;
 import lineage2.gameserver.templates.StatsSet;
 
@@ -50,7 +51,7 @@ public class DestroySummon extends Skill
 			{
 				if ((getActivateRate() > 0) && !Formulas.calcSkillSuccess(activeChar, target, this, getActivateRate()))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.C1_HAS_RESISTED_YOUR_S2).addString(target.getName()).addSkillName(getId(), getLevel()));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_RESISTED_YOUR_S2).addString(target.getName()).addSkillName(getId(), getLevel()));
 					continue;
 				}
 				

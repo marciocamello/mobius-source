@@ -16,6 +16,7 @@ import lineage2.gameserver.cache.CrestCache;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 public class RequestSetPledgeCrestLarge extends L2GameClientPacket
 {
@@ -85,13 +86,13 @@ public class RequestSetPledgeCrestLarge extends L2GameClientPacket
 			{
 				if ((clan.getCastle() == 0) && (clan.getHasHideout() == 0))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.THE_CLANS_EMBLEM_WAS_SUCCESSFULLY_REGISTERED__ONLY_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_A_CASTLE_CAN_GET_THEIR_EMBLEM_DISPLAYED_ON_CLAN_RELATED_ITEMS));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_MARK_WAS_SUCCESSFULLY_REGISTERED_THE_SYMBOL_WILL_APPEAR_ON_THE_CLAN_FLAG_AND_THE_INSIGNIA_IS_ONLY_DISPLAYED_ON_ITEMS_PERTAINING_TO_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_CASTLE));
 					return;
 				}
 				
 				int crestId = 0;
 				crestId = CrestCache.getInstance().savePledgeCrestLarge(clan.getClanId(), CrestCache.getInstance().crestLargeTmp);
-				activeChar.sendPacket(new SystemMessage(SystemMessage.THE_CLANS_EMBLEM_WAS_SUCCESSFULLY_REGISTERED__ONLY_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_A_CASTLE_CAN_GET_THEIR_EMBLEM_DISPLAYED_ON_CLAN_RELATED_ITEMS));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_MARK_WAS_SUCCESSFULLY_REGISTERED_THE_SYMBOL_WILL_APPEAR_ON_THE_CLAN_FLAG_AND_THE_INSIGNIA_IS_ONLY_DISPLAYED_ON_ITEMS_PERTAINING_TO_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_CASTLE));
 				clan.setCrestLargeId(crestId);
 				clan.broadcastClanStatus(false, true, false);
 			}
@@ -116,7 +117,7 @@ public class RequestSetPledgeCrestLarge extends L2GameClientPacket
 			{
 				if ((clan.getCastle() == 0) && (clan.getHasHideout() == 0))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.THE_CLANS_EMBLEM_WAS_SUCCESSFULLY_REGISTERED__ONLY_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_A_CASTLE_CAN_GET_THEIR_EMBLEM_DISPLAYED_ON_CLAN_RELATED_ITEMS));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_MARK_WAS_SUCCESSFULLY_REGISTERED_THE_SYMBOL_WILL_APPEAR_ON_THE_CLAN_FLAG_AND_THE_INSIGNIA_IS_ONLY_DISPLAYED_ON_ITEMS_PERTAINING_TO_A_CLAN_THAT_OWNS_A_CLAN_HALL_OR_CASTLE));
 					return;
 				}
 				

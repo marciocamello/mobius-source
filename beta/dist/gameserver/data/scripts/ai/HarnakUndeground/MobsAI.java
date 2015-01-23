@@ -25,7 +25,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
@@ -97,7 +97,7 @@ public final class MobsAI extends Fighter
 		
 		if (MSG1_ID > 0)
 		{
-			Functions.npcSayInRange(getActor(), 1500, NpcString.valueOf(MSG1_ID));
+			Functions.npcSayInRange(getActor(), 1500, NpcStringId.getNpcStringId(MSG1_ID));
 		}
 		
 		addTaskMove(ROOM_ID == 1 ? moveLoc1 : moveLoc2, false);
@@ -231,7 +231,7 @@ public final class MobsAI extends Fighter
 		{
 			if (MSG2_ID > 0)
 			{
-				Functions.npcSayInRange(getActor(), 1500, NpcString.valueOf(MSG2_ID));
+				Functions.npcSayInRange(getActor(), 1500, NpcStringId.getNpcStringId(MSG2_ID));
 			}
 		}
 	}

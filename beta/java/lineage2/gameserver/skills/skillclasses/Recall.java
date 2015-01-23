@@ -20,7 +20,7 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Zone.ZoneType;
 import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.utils.Location;
 
@@ -79,7 +79,7 @@ public class Recall extends Skill
 			{
 				if ((player.getClan() == null) || (player.getClan().getHasHideout() == 0))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(_itemConsumeId[0]));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(_itemConsumeId[0]));
 					return false;
 				}
 			}
@@ -87,7 +87,7 @@ public class Recall extends Skill
 			{
 				if ((player.getClan() == null) || (player.getClan().getCastle() == 0))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(_itemConsumeId[0]));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(_itemConsumeId[0]));
 					return false;
 				}
 			}
@@ -95,7 +95,7 @@ public class Recall extends Skill
 			{
 				if ((player.getClan() == null) || (player.getClan().getHasFortress() == 0))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(_itemConsumeId[0]));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addItemName(_itemConsumeId[0]));
 					return false;
 				}
 			}
@@ -107,7 +107,7 @@ public class Recall extends Skill
 			
 			if (player.getActiveWeaponFlagAttachment() != null)
 			{
-				activeChar.sendPacket(SystemMsg.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD);
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD));
 				return false;
 			}
 			else if (player.isInDuel() || (player.getTeam() != TeamType.NONE))
@@ -117,7 +117,7 @@ public class Recall extends Skill
 			}
 			else if (player.isInOlympiadMode())
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.THIS_SKILL_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_USE_THAT_SKILL_IN_A_OLYMPIAD_MATCH));
 				return false;
 			}
 		}
@@ -161,19 +161,19 @@ public class Recall extends Skill
 				
 				if (pcTarget.getActiveWeaponFlagAttachment() != null)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_TELEPORT_WHILE_IN_POSSESSION_OF_A_WARD));
 					continue;
 				}
 				
 				if (pcTarget.isInOlympiadMode())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_SUMMON_PLAYERS_WHO_ARE_CURRENTLY_PARTICIPATING_IN_THE_GRAND_OLYMPIAD));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_USER_PARTICIPATING_IN_THE_OLYMPIAD_CANNOT_USE_SUMMONING_OR_TELEPORTING));
 					return;
 				}
 				
 				if (pcTarget.isInObserverMode())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(getId(), getLevel()));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(getId(), getLevel()));
 					return;
 				}
 				

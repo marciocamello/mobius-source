@@ -28,7 +28,7 @@ import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 import lineage2.gameserver.network.serverpackets.SocialAction;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
@@ -213,7 +213,7 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 			case "Darin_q10385_03.htm":
 				if (cond == 19)
 				{
-					qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.TALK_TO_ROXXIE, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
+					qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.SPEAK_WITH_ROXXY, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
 				}
 				break;
 			
@@ -228,7 +228,7 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 			case "Biotin_q10385_03.htm":
 				if (cond == 20)
 				{
-					qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcString.GET_OUT_OF_THE_TEMPLE, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
+					qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.GO_OUTSIDE_THE_TEMPLE, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
 					qs.setCond(21);
 					qs.playSound(SOUND_MIDDLE);
 				}
@@ -441,8 +441,8 @@ public class Q10385_RedThreadOfFate extends Quest implements ScriptFile, OnMagic
 				if ((npcId == AltarofShilen) && (cond == 16))
 				{
 					ItemFunctions.removeItem(qs.getPlayer(), Brightestlight, 1L, true);
-					player.sendPacket(new ExShowScreenMessage(NpcString.YOU_MUST_DESTROY_THE_MESSENGER_SHILEN, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
-					player.sendPacket(new ExShowScreenMessage(NpcString.THE_ONLY_GOOD_SHILEN_CREATURE_IS_A_DEAD_ONE, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
+					player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_MUST_DEFEAT_SHILEN_S_MESSENGER, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
+					player.sendPacket(new ExShowScreenMessage(NpcStringId.THE_ONLY_GOOD_SHILEN_CREATURE_IS_A_DEAD_ONE, 4500, ExShowScreenMessage.ScreenMessageAlign.TOP_CENTER, new String[0]));
 					NpcInstance mob = qs.addSpawn(ShilensMessenger, 28760, 11032, -4252);
 					mob.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, player, 100000);
 				}

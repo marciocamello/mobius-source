@@ -20,7 +20,8 @@ import java.util.regex.Pattern;
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Playable;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.utils.ItemFunctions;
 
@@ -105,7 +106,7 @@ public class EffectRestorationRandom extends Effect
 		}
 		else
 		{
-			getEffected().sendPacket(SystemMsg.THERE_WAS_NOTHING_FOUND_INSIDE);
+			getEffected().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE));
 		}
 	}
 	

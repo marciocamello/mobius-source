@@ -20,7 +20,7 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 
@@ -132,7 +132,7 @@ public class Balok extends Fighter
 			teleportPlayers.teleToLocation(new Location(coords[0], coords[1], coords[2], coords[3]));
 			for (Player player : npc.getReflection().getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.S1_LOCKED_AWAY_IN_THE_PRISON, 500, ScreenMessageAlign.MIDDLE_CENTER, String.valueOf(player.getName())));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.S1_LOCKED_AWAY_IN_THE_PRISON, 500, ScreenMessageAlign.MIDDLE_CENTER, String.valueOf(player.getName())));
 			}
 		}
 		

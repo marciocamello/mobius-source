@@ -18,6 +18,7 @@ import lineage2.gameserver.handlers.IVoicedCommandHandler;
 import lineage2.gameserver.handlers.VoicedCommandHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.skills.skillclasses.Call;
 import lineage2.gameserver.utils.Location;
@@ -43,7 +44,7 @@ public final class Relocate implements IVoicedCommandHandler, ScriptFile
 		{
 			if (!activeChar.isClanLeader())
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.ONLY_THE_CLAN_LEADER_IS_ENABLED));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_THE_CLAN_LEADER_IS_ENABLED));
 				return false;
 			}
 			

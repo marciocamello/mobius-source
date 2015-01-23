@@ -26,8 +26,8 @@ import lineage2.gameserver.model.entity.events.objects.AuctionSiegeClanObject;
 import lineage2.gameserver.model.entity.events.objects.SiegeClanObject;
 import lineage2.gameserver.model.entity.residence.ClanHall;
 import lineage2.gameserver.model.pledge.Clan;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.ClanTable;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
@@ -115,7 +115,7 @@ public class ClanHallAuctionEvent extends SiegeEvent<ClanHall, AuctionSiegeClanO
 		
 		if (winnerSiegeClan != null)
 		{
-			SystemMessage2 msg = new SystemMessage2(SystemMsg.THE_CLAN_HALL_WHICH_WAS_PUT_UP_FOR_AUCTION_HAS_BEEN_AWARDED_TO_S1_CLAN).addString(winnerSiegeClan.getClan().getName());
+			SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_HALL_WHICH_WAS_PUT_UP_FOR_AUCTION_HAS_BEEN_AWARDED_TO_S1_CLAN).addString(winnerSiegeClan.getClan().getName());
 			
 			for (AuctionSiegeClanObject $siegeClan : siegeClanObjects)
 			{
@@ -162,11 +162,11 @@ public class ClanHallAuctionEvent extends SiegeEvent<ClanHall, AuctionSiegeClanO
 				
 				if (player != null)
 				{
-					player.sendPacket(SystemMsg.THE_CLAN_HALL_WHICH_HAD_BEEN_PUT_UP_FOR_AUCTION_WAS_NOT_SOLD_AND_THEREFORE_HAS_BEEN_RELISTED);
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_HALL_WHICH_HAD_BEEN_PUT_UP_FOR_AUCTION_WAS_NOT_SOLD_AND_THEREFORE_HAS_BEEN_RE_LISTED));
 				}
 				else
 				{
-					PlayerMessageStack.getInstance().mailto(oldOwner.getLeaderId(), SystemMsg.THE_CLAN_HALL_WHICH_HAD_BEEN_PUT_UP_FOR_AUCTION_WAS_NOT_SOLD_AND_THEREFORE_HAS_BEEN_RELISTED.packet(null));
+					PlayerMessageStack.getInstance().mailto(oldOwner.getLeaderId(), SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_HALL_WHICH_HAD_BEEN_PUT_UP_FOR_AUCTION_WAS_NOT_SOLD_AND_THEREFORE_HAS_BEEN_RE_LISTED).packet(null));
 				}
 			}
 		}

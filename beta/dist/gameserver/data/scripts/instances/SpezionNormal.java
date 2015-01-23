@@ -26,7 +26,7 @@ import lineage2.gameserver.network.serverpackets.ExSendUIEvent;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
 
@@ -90,7 +90,7 @@ public final class SpezionNormal extends Reflection
 		{
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExSendUIEvent(player, 0, 0, Time[time_stage], 0, NpcString.INSTALLATION_CHARGE));
+				player.sendPacket(new ExSendUIEvent(player, 0, 0, Time[time_stage], 0, NpcStringId.ESCAPE_DEVICE_LOCATION_CHANGE));
 			}
 			
 			spawnByGroup("spassia_first_room");
@@ -123,8 +123,8 @@ public final class SpezionNormal extends Reflection
 			
 			for (Player player : getPlayers())
 			{
-				player.sendPacket(new ExShowScreenMessage(NpcString.LOCATION_PORTAL_CHANGED, 5000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
-				player.sendPacket(new ExSendUIEvent(player, 0, 0, 420, 0, NpcString.INSTALLATION_CHARGE));
+				player.sendPacket(new ExShowScreenMessage(NpcStringId.THE_LOCATION_OF_THE_ESCAPE_DEVICE_IS_MOVED, 5000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
+				player.sendPacket(new ExSendUIEvent(player, 0, 0, 420, 0, NpcStringId.ESCAPE_DEVICE_LOCATION_CHANGE));
 			}
 			
 			TeleportCube.teleToLocation(TELEPORT_CUBE_COORDS[Rnd.get(TELEPORT_CUBE_COORDS.length)]);
@@ -159,14 +159,14 @@ public final class SpezionNormal extends Reflection
 			{
 				for (Player player : getPlayers())
 				{
-					player.sendPacket(new ExShowScreenMessage(NpcString.THE_DOOR_OPENED, 5000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
+					player.sendPacket(new ExShowScreenMessage(NpcStringId.THE_DOOR_IS_OPEN, 5000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
 				}
 			}
 			else
 			{
 				for (Player player : getPlayers())
 				{
-					player.sendPacket(new ExShowScreenMessage(NpcString.THE_DOOR_OPENED_SOMEONE_HAS_TO_STAY_AND_WATCH_FOR_A_TIME_BOMB, 5000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
+					player.sendPacket(new ExShowScreenMessage(NpcStringId.THE_DOOR_IS_OPEN_SOMEBODY_NEEDS_TO_STAY_TO_WATCH_THE_TIME_BOMB, 5000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
 				}
 			}
 		}
@@ -188,7 +188,7 @@ public final class SpezionNormal extends Reflection
 		for (Player p : getPlayers())
 		{
 			p.showQuestMovie(ExStartScenePlayer.SCENE_SC_SPACIA_C);
-			p.sendPacket(new ExShowScreenMessage(NpcString.RESCUED_CHANGES_STATE_ONLY_AFTER_EXPOSURE_TO_LIGHT_IT, 5000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
+			p.sendPacket(new ExShowScreenMessage(NpcStringId.SPEZION_S_STATUS_WILL_ONLY_CHANGE_WHEN_EXPOSED_TO_LIGHT, 5000, ScreenMessageAlign.TOP_CENTER, true, 1, -1, true));
 		}
 		
 		SpezionBossNormal = addSpawnWithoutRespawn(SPEZION_NORMAL, new Location(184920, 143576, -11794, 0), 0);

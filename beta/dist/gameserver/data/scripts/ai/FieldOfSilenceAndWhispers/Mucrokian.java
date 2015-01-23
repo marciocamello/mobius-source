@@ -18,7 +18,7 @@ import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
@@ -28,10 +28,10 @@ import lineage2.gameserver.utils.Location;
  */
 public final class Mucrokian extends Fighter
 {
-	public static final NpcString[] MsgText =
+	public static final NpcStringId[] MsgText =
 	{
-		NpcString.PEUNGLUI_MUGLANEP_NAIA_WAGANAGEL_PEUTAGUN,
-		NpcString.PEUNGLUI_MUGLANEP
+		NpcStringId.PEUNGLUI_MUGLANEP_NAIA_WAGANAGEL_PEUTAGUN,
+		NpcStringId.PEUNGLUI_MUGLANEP
 	};
 	
 	/**

@@ -17,6 +17,7 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.SkillTable;
 
 /**
@@ -172,7 +173,7 @@ public class DeathPenalty
 			}
 			
 			skill.getEffects(player, player, false, false);
-			player.sendPacket(new SystemMessage(SystemMessage.THE_LEVEL_S1_SHILENS_BREATH_WILL_BE_ASSESSED).addNumber(getLevel(player)));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_BEEN_AFFLICTED_BY_SHILEN_S_BREATH_LEVEL_S1).addInt(getLevel(player)));
 		}
 		
 		player.updateStats();
@@ -221,7 +222,7 @@ public class DeathPenalty
 			}
 			
 			skill.getEffects(player, player, false, false);
-			player.sendPacket(new SystemMessage(SystemMessage.THE_LEVEL_S1_SHILENS_BREATH_WILL_BE_ASSESSED).addNumber(getLevel(player)));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_BEEN_AFFLICTED_BY_SHILEN_S_BREATH_LEVEL_S1).addInt(getLevel(player)));
 			player.updateStats();
 		}
 	}
@@ -256,11 +257,11 @@ public class DeathPenalty
 		if (getLevel(player) > 0)
 		{
 			player.broadcastPacket(new MagicSkillUse(player, player, _skillId, getLevel(player), 0, 0));
-			player.sendPacket(new SystemMessage(SystemMessage.THE_LEVEL_S1_SHILENS_BREATH_WILL_BE_ASSESSED).addNumber(getLevel(player)));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_BEEN_AFFLICTED_BY_SHILEN_S_BREATH_LEVEL_S1).addInt(getLevel(player)));
 		}
 		else
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.THE_SHILENS_BREATH_HAS_BEEN_LIFTED));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SHILEN_S_BREATH_HAS_BEEN_PURIFIED));
 		}
 		
 		player.updateStats();

@@ -18,6 +18,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.actor.instances.player.Friend;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -46,7 +47,7 @@ public class RequestFriendList extends L2GameClientPacket
 			return;
 		}
 		
-		activeChar.sendPacket(new SystemMessage(SystemMessage._FRIENDS_LIST_));
+		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FRIENDS_LIST));
 		Map<Integer, Friend> _list = activeChar.getFriendList().getList();
 		
 		for (Map.Entry<Integer, Friend> entry : _list.entrySet())
@@ -55,14 +56,14 @@ public class RequestFriendList extends L2GameClientPacket
 			
 			if (friend != null)
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.S1_CURRENTLY_ONLINE).addName(friend));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CURRENTLY_ONLINE).addPcName(friend));
 			}
 			else
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.S1_CURRENTLY_OFFLINE).addString(entry.getValue().getName()));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CURRENTLY_OFFLINE).addString(entry.getValue().getName()));
 			}
 		}
 		
-		activeChar.sendPacket(new SystemMessage(SystemMessage.__EQUALS__));
+		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.EMPTY3));
 	}
 }

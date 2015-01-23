@@ -22,7 +22,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
@@ -150,11 +150,11 @@ public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 				{
 					if (Rnd.chance(50))
 					{
-						Functions.npcSay(npcP, NpcString.AND_BRING_DOWN_THE_HAMMER_OF_JUSTICE);
+						Functions.npcSay(npcP, NpcStringId.AND_BRING_DOWN_THE_HAMMER_OF_JUSTICE);
 					}
 					else
 					{
-						Functions.npcSay(npcP, NpcString.FOR_THE_DESTRUCTION_AND_RESURRECTION);
+						Functions.npcSay(npcP, NpcStringId.FOR_THE_DESTRUCTION_AND_RESURRECTION);
 					}
 				}
 				
@@ -170,7 +170,7 @@ public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 			{
 				for (NpcInstance npcP : _Priests)
 				{
-					Functions.npcSay(npcP, NpcString.DEAR_THE_GODDESS_OF_DESTRUCTION_THE_LIGHT_AND_THEIR_CREATURES_FEAR_YOU);
+					Functions.npcSay(npcP, NpcStringId.DEAR_THE_GODDESS_OF_DESTRUCTION_THE_LIGHT_AND_THEIR_CREATURES_FEAR_YOU);
 				}
 				
 				_mainZhrec.broadcastPacket(new MagicSkillUse(_mainZhrec, 14497, 1, 5000, 0));
@@ -195,7 +195,7 @@ public class Q10301_ShadowOfTerrorBlackishRedFog extends Quest implements Script
 				player.getReflection().addSpawnWithoutRespawn(33365, new Location(player.getX() + Rnd.get(150), 85780 + Rnd.get(150), -7752, 15428), 0);
 				player.getReflection().addSpawnWithoutRespawn(33365, new Location(player.getX() + Rnd.get(150), 85780 + Rnd.get(150), -7752, 15428), 0);
 				player.getReflection().addSpawnWithoutRespawn(33365, new Location(player.getX() + Rnd.get(150), 85780 + Rnd.get(150), -7752, 15428), 0);
-				Functions.npcSay(npcP, NpcString.AH_UH_AH_UH_AH);
+				Functions.npcSay(npcP, NpcStringId.AH_UH_AH_UH_AH);
 				qs.startQuestTimer("ExitInstance", 3000); // exitInstance
 				return null;
 			}

@@ -24,7 +24,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -342,7 +342,7 @@ public class ItemAuction
 		
 		if (newBid < getAuctionInitBid())
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.YOUR_BID_PRICE_MUST_BE_HIGHER_THAN_THE_MINIMUM_PRICE_THAT_CAN_BE_BID));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_BID_PRICE_MUST_BE_HIGHER_THAN_THE_MINIMUM_PRICE_CURRENTLY_BEING_BID));
 			return;
 		}
 		
@@ -350,7 +350,7 @@ public class ItemAuction
 		{
 			if (Config.ALT_ITEM_AUCTION_MAX_BID == 100000000000L)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOUR_BID_CANNOT_EXCEED_100_BILLION));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.BIDDING_IS_NOT_ALLOWED_BECAUSE_THE_MAXIMUM_BIDDING_PRICE_EXCEEDS_100_BILLION));
 			}
 			else
 			{
@@ -370,7 +370,7 @@ public class ItemAuction
 		{
 			if ((_highestBid != null) && (newBid < _highestBid.getLastBid()))
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOUR_BID_MUST_BE_HIGHER_THAN_THE_CURRENT_HIGHEST_BID));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_BID_MUST_BE_HIGHER_THAN_THE_CURRENT_HIGHEST_BID));
 				return;
 			}
 			
@@ -387,19 +387,19 @@ public class ItemAuction
 				_auctionBids.put(charId, bid);
 				onPlayerBid(player, bid);
 				updatePlayerBid(bid, false);
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_SUBMITTED_A_BID_IN_THE_AUCTION_OF_S1).addNumber(newBid));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_SUBMITTED_A_BID_FOR_THE_AUCTION_OF_S1).addLong(newBid));
 				return;
 			}
 			
 			if (!Config.ALT_ITEM_AUCTION_CAN_REBID)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.SINCE_YOU_HAVE_ALREADY_SUBMITTED_A_BID_YOU_ARE_NOT_ALLOWED_TO_PARTICIPATE_IN_ANOTHER_AUCTION_AT_THIS_TIME));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SINCE_YOU_HAVE_ALREADY_SUBMITTED_A_BID_YOU_ARE_NOT_ALLOWED_TO_PARTICIPATE_IN_ANOTHER_AUCTION_AT_THIS_TIME));
 				return;
 			}
 			
 			if (bid.getLastBid() >= newBid)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.THE_SECOND_BID_AMOUNT_MUST_BE_HIGHER_THAN_THE_ORIGINAL));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_BID_AMOUNT_MUST_BE_HIGHER_THAN_THE_PREVIOUS_BID));
 				return;
 			}
 			
@@ -411,7 +411,7 @@ public class ItemAuction
 			bid.setLastBid(newBid);
 			onPlayerBid(player, bid);
 			updatePlayerBid(bid, false);
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_SUBMITTED_A_BID_IN_THE_AUCTION_OF_S1).addNumber(newBid));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_SUBMITTED_A_BID_FOR_THE_AUCTION_OF_S1).addLong(newBid));
 		}
 	}
 	
@@ -432,7 +432,7 @@ public class ItemAuction
 			
 			if (old != null)
 			{
-				old.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_BEEN_OUTBID));
+				old.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_BEEN_OUTBID));
 			}
 			
 			_highestBid = bid;
@@ -443,12 +443,12 @@ public class ItemAuction
 			if (_auctionEndingExtendState == 0)
 			{
 				_auctionEndingExtendState = 1;
-				broadcastToAllBidders(new SystemMessage(SystemMessage.BIDDER_EXISTS__THE_AUCTION_TIME_HAS_BEEN_EXTENDED_BY_5_MINUTES));
+				broadcastToAllBidders(SystemMessage.getSystemMessage(SystemMessageId.BIDDER_EXISTS_THE_AUCTION_TIME_HAS_BEEN_EXTENDED_BY_5_MINUTES));
 			}
 			else if ((_auctionEndingExtendState == 1) && (getAndSetLastBidPlayerObjectId(player.getObjectId()) != player.getObjectId()))
 			{
 				_auctionEndingExtendState = 2;
-				broadcastToAllBidders(new SystemMessage(SystemMessage.BIDDER_EXISTS__AUCTION_TIME_HAS_BEEN_EXTENDED_BY_3_MINUTES));
+				broadcastToAllBidders(SystemMessage.getSystemMessage(SystemMessageId.BIDDER_EXISTS_AUCTION_TIME_HAS_BEEN_EXTENDED_BY_3_MINUTES));
 			}
 		}
 	}
@@ -489,13 +489,13 @@ public class ItemAuction
 		switch (getAuctionState())
 		{
 			case CREATED:
-				player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU));
 				return;
 				
 			case FINISHED:
 				if (_startingTime < (System.currentTimeMillis() - Config.ALT_ITEM_AUCTION_MAX_CANCEL_TIME_IN_MILLIS))
 				{
-					player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU));
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU));
 					return;
 				}
 				break;
@@ -509,7 +509,7 @@ public class ItemAuction
 		{
 			if (_highestBid == null)
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU));
 				return;
 			}
 			
@@ -517,7 +517,7 @@ public class ItemAuction
 			
 			if ((bid == null) || bid.isCanceled())
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_NO_FUNDS_PRESENTLY_DUE_TO_YOU));
 				return;
 			}
 			
@@ -528,7 +528,7 @@ public class ItemAuction
 			}
 			
 			increaseItemCount(player, bid.getLastBid());
-			player.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_CANCELED_YOUR_BID));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_CANCELED_YOUR_BID));
 			
 			if (Config.ALT_ITEM_AUCTION_CAN_REBID)
 			{
@@ -555,7 +555,7 @@ public class ItemAuction
 		{
 			if (!player.reduceAdena(count, true))
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA_FOR_THIS_BID));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_FOR_THIS_BID));
 				return false;
 			}
 			
@@ -581,7 +581,18 @@ public class ItemAuction
 			player.getInventory().addItem(Config.ALT_ITEM_AUCTION_BID_ITEM_ID, count);
 		}
 		
-		player.sendPacket(SystemMessage2.obtainItems(Config.ALT_ITEM_AUCTION_BID_ITEM_ID, count, 0));
+		if (Config.ALT_ITEM_AUCTION_BID_ITEM_ID == 57)
+		{
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_ADENA).addLong(count));
+		}
+		else if (count > 1)
+		{
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S2_S1_S).addItemName(Config.ALT_ITEM_AUCTION_BID_ITEM_ID).addLong(count));
+		}
+		else
+		{
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName(Config.ALT_ITEM_AUCTION_BID_ITEM_ID));
+		}
 	}
 	
 	/**

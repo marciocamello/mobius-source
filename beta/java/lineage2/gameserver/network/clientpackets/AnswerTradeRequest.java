@@ -19,9 +19,9 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Request;
 import lineage2.gameserver.model.Request.L2RequestType;
 import lineage2.gameserver.model.items.TradeItem;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.TradeStart;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -80,7 +80,7 @@ public class AnswerTradeRequest extends L2GameClientPacket
 		if (requestor == null)
 		{
 			request.cancel();
-			activeChar.sendPacket(SystemMsg.THAT_PLAYER_IS_NOT_ONLINE);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
 			activeChar.sendActionFailed();
 			return;
 		}
@@ -95,21 +95,21 @@ public class AnswerTradeRequest extends L2GameClientPacket
 		if (_response == 0)
 		{
 			request.cancel();
-			requestor.sendPacket(new SystemMessage2(SystemMsg.C1_HAS_DENIED_YOUR_REQUEST_TO_TRADE).addString(activeChar.getName()));
+			requestor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_DENIED_YOUR_REQUEST_TO_TRADE).addString(activeChar.getName()));
 			return;
 		}
 		
 		if (!activeChar.isInRangeZ(requestor, Creature.INTERACTION_DISTANCE))
 		{
 			request.cancel();
-			activeChar.sendPacket(SystemMsg.YOUR_TARGET_IS_OUT_OF_RANGE);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE));
 			return;
 		}
 		
 		if (requestor.isActionsDisabled())
 		{
 			request.cancel();
-			activeChar.sendPacket(new SystemMessage2(SystemMsg.C1_IS_ON_ANOTHER_TASK).addString(requestor.getName()));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S2_HAS_BEEN_PURCHASED_FROM_C1_AT_THE_PRICE_OF_S3_ADENA).addString(requestor.getName()));
 			activeChar.sendActionFailed();
 			return;
 		}
@@ -118,9 +118,9 @@ public class AnswerTradeRequest extends L2GameClientPacket
 		{
 			new Request(L2RequestType.TRADE, activeChar, requestor);
 			requestor.setTradeList(new CopyOnWriteArrayList<TradeItem>());
-			requestor.sendPacket(new SystemMessage2(SystemMsg.YOU_BEGIN_TRADING_WITH_C1).addString(activeChar.getName()), new TradeStart(requestor, activeChar));
+			requestor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_BEGIN_TRADING_WITH_C1).addString(activeChar.getName()), new TradeStart(requestor, activeChar));
 			activeChar.setTradeList(new CopyOnWriteArrayList<TradeItem>());
-			activeChar.sendPacket(new SystemMessage2(SystemMsg.YOU_BEGIN_TRADING_WITH_C1).addString(requestor.getName()), new TradeStart(activeChar, requestor));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_BEGIN_TRADING_WITH_C1).addString(requestor.getName()), new TradeStart(activeChar, requestor));
 		}
 		finally
 		{

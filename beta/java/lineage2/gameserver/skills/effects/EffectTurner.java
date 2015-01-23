@@ -16,6 +16,7 @@ import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.network.serverpackets.FinishRotating;
 import lineage2.gameserver.network.serverpackets.StartRotating;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Env;
 
 /**
@@ -44,7 +45,7 @@ public class EffectTurner extends Effect
 		getEffected().broadcastPacket(new StartRotating(getEffected(), getEffected().getHeading(), 1, 65535));
 		getEffected().broadcastPacket(new FinishRotating(getEffected(), getEffector().getHeading(), 65535));
 		getEffected().setHeading(getEffector().getHeading());
-		getEffected().sendPacket(new SystemMessage(SystemMessage.S1_S2S_EFFECT_CAN_BE_FELT).addSkillName(_displayId, _displayLevel));
+		getEffected().sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT).addSkillName(_displayId, _displayLevel));
 		getEffected().startStunning();
 	}
 	

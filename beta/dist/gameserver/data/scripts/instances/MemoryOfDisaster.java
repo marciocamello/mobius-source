@@ -28,7 +28,7 @@ import lineage2.gameserver.network.serverpackets.EventTrigger;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.ExStartScenePlayer;
 import lineage2.gameserver.network.serverpackets.TutorialShowHtml;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.utils.Location;
 
 /**
@@ -143,16 +143,16 @@ public final class MemoryOfDisaster extends Reflection
 				player.sendPacket(new EventTrigger(23120700, true));
 			}
 			
-			ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcString.WATCH_THE_DWARVEN_VILLAGE_LAST_STAND), 2000);
+			ThreadPoolManager.getInstance().schedule(new ScreenMessageTask(NpcStringId.WATCH_THE_DWARVEN_VILLAGE_LAST_STAND), 2000);
 			ThreadPoolManager.getInstance().schedule(new SpawnRoginTask(), 7000);
 		}
 	}
 	
 	private class ScreenMessageTask extends RunnableImpl
 	{
-		private final NpcString msg;
+		private final NpcStringId msg;
 		
-		public ScreenMessageTask(NpcString msg)
+		public ScreenMessageTask(NpcStringId msg)
 		{
 			this.msg = msg;
 		}

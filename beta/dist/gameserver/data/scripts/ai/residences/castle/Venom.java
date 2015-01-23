@@ -15,7 +15,7 @@ package ai.residences.castle;
 import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.NpcUtils;
 
@@ -41,7 +41,7 @@ public final class Venom extends Fighter
 	public void onEvtSpawn()
 	{
 		super.onEvtSpawn();
-		Functions.npcShout(getActor(), NpcString.WHO_DARES_TO_COVET_THE_THRONE_OF_OUR_CASTLE__LEAVE_IMMEDIATELY_OR_YOU_WILL_PAY_THE_PRICE_OF_YOUR_AUDACITY_WITH_YOUR_VERY_OWN_BLOOD);
+		Functions.npcShout(getActor(), NpcStringId.WHO_DARES_TO_COVET_THE_THRONE_OF_OUR_CASTLE_LEAVE_IMMEDIATELY_OR_YOU_WILL_PAY_THE_PRICE_OF_YOUR_AUDACITY_WITH_YOUR_VERY_OWN_BLOOD);
 	}
 	
 	/**
@@ -52,7 +52,7 @@ public final class Venom extends Fighter
 	public void onEvtDead(Creature killer)
 	{
 		super.onEvtDead(killer);
-		Functions.npcShout(getActor(), NpcString.ITS_NOT_OVER_YET__IT_WONT_BE__OVER__LIKE_THIS__NEVER);
+		Functions.npcShout(getActor(), NpcStringId.IT_S_NOT_OVER_YET_IT_WON_T_BE_OVER_LIKE_THIS_NEVER);
 		NpcUtils.spawnSingle(29055, 12589, -49044, -3008, 120000);
 	}
 }

@@ -33,6 +33,7 @@ import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SkillCoolTime;
 import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.skills.AbnormalEffect;
 import lineage2.gameserver.tables.SkillTable;
@@ -252,7 +253,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 			case "admin_block":
 				if ((target == null) || !target.isCreature())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 					return false;
 				}
 				
@@ -270,7 +271,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 			case "admin_unblock":
 				if ((target == null) || !target.isCreature())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 					return false;
 				}
 				
@@ -297,7 +298,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				
 				if (!target.isCreature())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 					return false;
 				}
 				
@@ -311,7 +312,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 			case "admin_setinvul":
 				if ((target == null) || !target.isPlayer())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 					return false;
 				}
 				
@@ -426,7 +427,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				
 				if (!(target instanceof Creature))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 				}
 				else
 				{
@@ -464,7 +465,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 				}
 				else
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 					return false;
 				}
 				

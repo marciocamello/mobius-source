@@ -22,8 +22,7 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import handlers.items.ScriptItemHandler;
 
@@ -99,14 +98,14 @@ public final class Seed extends ScriptItemHandler
 		{
 			if ((npc.getId() == _npcIds[0]) || (npc.getId() == _npcIds[1]))
 			{
-				activeChar.sendPacket(new SystemMessage2(SystemMsg.SINCE_S1_ALREADY_EXISTS_NEARBY_YOU_CANNOT_SUMMON_IT_AGAIN).addName(npc));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SINCE_S1_ALREADY_EXISTS_NEARBY_YOU_CANNOT_SUMMON_IT_AGAIN).addNpcName(npc));
 				return false;
 			}
 		}
 		
 		if (World.getAroundNpc(activeChar, 100, 200).size() > 0)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_SUMMON_FROM_YOUR_CURRENT_LOCATION));
 			return false;
 		}
 		

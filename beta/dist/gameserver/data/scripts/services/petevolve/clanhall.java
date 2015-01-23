@@ -18,7 +18,8 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.model.items.ItemInstance;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.PetDataTable;
 import lineage2.gameserver.tables.PetDataTable.L2Pet;
@@ -135,7 +136,7 @@ public final class clanhall extends Functions
 		collar.setJdbcState(JdbcEntityState.UPDATED);
 		collar.update();
 		player.sendItemList(false);
-		player.sendPacket(SystemMessage2.obtainItems((fwd ? WHITE_WOLF_NECKLACE : GREAT_WOLF_NECKLACE), 1, 0));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName((fwd ? WHITE_WOLF_NECKLACE : GREAT_WOLF_NECKLACE)));
 		show("scripts/services/petevolve/end_msg3_gwolf.htm", player, npc);
 	}
 	
@@ -207,7 +208,7 @@ public final class clanhall extends Functions
 		collar.setJdbcState(JdbcEntityState.UPDATED);
 		collar.update();
 		player.sendItemList(false);
-		player.sendPacket(SystemMessage2.obtainItems((fwd ? WHITE_FENRIR_NECKLACE : FENRIR_NECKLACE), 1, 0));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName((fwd ? WHITE_FENRIR_NECKLACE : FENRIR_NECKLACE)));
 		show("scripts/services/petevolve/end_msg2_fenrir.htm", player, npc);
 	}
 	
@@ -279,7 +280,7 @@ public final class clanhall extends Functions
 		collar.setJdbcState(JdbcEntityState.UPDATED);
 		collar.update();
 		player.sendItemList(false);
-		player.sendPacket(SystemMessage2.obtainItems((fwd ? WHITE_FENRIR_NECKLACE : WHITE_WOLF_NECKLACE), 1, 0));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName((fwd ? WHITE_FENRIR_NECKLACE : WHITE_WOLF_NECKLACE)));
 		show("scripts/services/petevolve/yes_wolf.htm", player, npc);
 	}
 	
@@ -351,7 +352,7 @@ public final class clanhall extends Functions
 		collar.setJdbcState(JdbcEntityState.UPDATED);
 		collar.update();
 		player.sendItemList(false);
-		player.sendPacket(SystemMessage2.obtainItems((fwd ? RED_WS_ITEM : WIND_STRIDER_ITEM), 1, 0));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName((fwd ? RED_WS_ITEM : WIND_STRIDER_ITEM)));
 		show("scripts/services/petevolve/end_msg_strider.htm", player, npc);
 	}
 	
@@ -423,7 +424,7 @@ public final class clanhall extends Functions
 		collar.setJdbcState(JdbcEntityState.UPDATED);
 		collar.update();
 		player.sendItemList(false);
-		player.sendPacket(SystemMessage2.obtainItems((fwd ? RED_SS_ITEM : STAR_STRIDER_ITEM), 1, 0));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName((fwd ? RED_SS_ITEM : STAR_STRIDER_ITEM)));
 		show("scripts/services/petevolve/end_msg_strider.htm", player, npc);
 	}
 	
@@ -495,7 +496,7 @@ public final class clanhall extends Functions
 		collar.setJdbcState(JdbcEntityState.UPDATED);
 		collar.update();
 		player.sendItemList(false);
-		player.sendPacket(SystemMessage2.obtainItems((fwd ? RED_TW_ITEM : TWILING_STRIDER_ITEM), 1, 0));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1).addItemName((fwd ? RED_TW_ITEM : TWILING_STRIDER_ITEM)));
 		show("scripts/services/petevolve/end_msg_strider.htm", player, npc);
 	}
 }

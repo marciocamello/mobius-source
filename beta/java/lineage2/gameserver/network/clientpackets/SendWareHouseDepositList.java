@@ -22,7 +22,7 @@ import lineage2.gameserver.model.items.PcInventory;
 import lineage2.gameserver.model.items.Warehouse;
 import lineage2.gameserver.model.items.Warehouse.WarehouseType;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.Log;
 
@@ -96,7 +96,7 @@ public class SendWareHouseDepositList extends L2GameClientPacket
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
@@ -110,7 +110,7 @@ public class SendWareHouseDepositList extends L2GameClientPacket
 		
 		if ((whkeeper == null) || !activeChar.isInRangeZ(whkeeper, Creature.INTERACTION_DISTANCE))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.WAREHOUSE_IS_TOO_FAR));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_MOVED_TOO_FAR_AWAY_FROM_THE_WAREHOUSE_TO_PERFORM_THAT_ACTION));
 			return;
 		}
 		
@@ -179,12 +179,12 @@ public class SendWareHouseDepositList extends L2GameClientPacket
 			
 			if (slotsleft <= 0)
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.YOUR_WAREHOUSE_IS_FULL));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_WAREHOUSE_IS_FULL));
 			}
 			
 			if (items == 0)
 			{
-				activeChar.sendPacket(SystemMsg.INCORRECT_ITEM_COUNT);
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INCORRECT_ITEM_COUNT));
 				return;
 			}
 			
@@ -192,13 +192,13 @@ public class SendWareHouseDepositList extends L2GameClientPacket
 			
 			if ((fee + adenaDeposit) > activeChar.getAdena())
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_LACK_THE_FUNDS_NEEDED_TO_PAY_FOR_THIS_TRANSACTION));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_LACK_THE_FUNDS_NEEDED_TO_PAY_FOR_THIS_TRANSACTION));
 				return;
 			}
 			
 			if (!activeChar.reduceAdena(fee, true))
 			{
-				sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+				sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 				return;
 			}
 			
@@ -216,7 +216,7 @@ public class SendWareHouseDepositList extends L2GameClientPacket
 		}
 		catch (ArithmeticException ae)
 		{
-			sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 			return;
 		}
 		finally
@@ -225,6 +225,6 @@ public class SendWareHouseDepositList extends L2GameClientPacket
 			inventory.writeUnlock();
 		}
 		activeChar.sendChanges();
-		activeChar.sendPacket(new SystemMessage(SystemMessage.THE_TRANSACTION_IS_COMPLETE));
+		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_TRANSACTION_IS_COMPLETE));
 	}
 }

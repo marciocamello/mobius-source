@@ -21,8 +21,8 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ExAutoSoulShot;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
 import lineage2.gameserver.network.serverpackets.ShortCutInit;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 
@@ -64,7 +64,7 @@ public class KamaelWeaponExchange extends Skill
 		
 		if ((item != null) && (((WeaponTemplate) item.getTemplate()).getKamaelConvert() == 0))
 		{
-			activeChar.sendPacket(SystemMsg.YOU_CANNOT_CONVERT_THIS_ITEM);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CONVERT_THIS_ITEM));
 			return false;
 		}
 		
@@ -113,7 +113,7 @@ public class KamaelWeaponExchange extends Skill
 		iu.addNewItem(item);
 		activeChar.sendPacket(iu);
 		
-		player.sendPacket(new SystemMessage2(SystemMsg.YOU_HAVE_EQUIPPED_YOUR_S1).addItemNameWithAugmentation(item));
+		player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1).addItemName(item));
 		player.getInventory().equipItem(item);
 	}
 }

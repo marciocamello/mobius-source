@@ -16,7 +16,7 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
@@ -107,32 +107,32 @@ public class DevnoSubAI extends DefaultAI
 			return;
 		}
 		
-		NpcString ns;
+		NpcStringId ns;
 		
 		switch (Rnd.get(6))
 		{
 			case 1:
-				ns = NpcString.ONE_DAY_A_STATUE_OF_YOU_COULD_BE_MADE;
+				ns = NpcStringId.I_SEE_THAT_ADVENTURERS_ARE_RETURNING_TO_TALKING_ISLAND_FOR_THE_AWAKENING;
 				break;
 			
 			case 2:
-				ns = NpcString.ONE_DAY_A_STATUE_OF_YOU_COULD_BE_MADE;
+				ns = NpcStringId.I_SEE_THAT_ADVENTURERS_ARE_RETURNING_TO_TALKING_ISLAND_FOR_THE_AWAKENING;
 				break;
 			
 			case 3:
-				ns = NpcString.ONE_DAY_A_STATUE_OF_YOU_COULD_BE_MADE;
+				ns = NpcStringId.I_SEE_THAT_ADVENTURERS_ARE_RETURNING_TO_TALKING_ISLAND_FOR_THE_AWAKENING;
 				break;
 			
 			case 4:
-				ns = NpcString.ONE_DAY_A_STATUE_OF_YOU_COULD_BE_MADE;
+				ns = NpcStringId.I_SEE_THAT_ADVENTURERS_ARE_RETURNING_TO_TALKING_ISLAND_FOR_THE_AWAKENING;
 				break;
 			
 			case 5:
-				ns = NpcString.ONE_DAY_A_STATUE_OF_YOU_COULD_BE_MADE;
+				ns = NpcStringId.I_SEE_THAT_ADVENTURERS_ARE_RETURNING_TO_TALKING_ISLAND_FOR_THE_AWAKENING;
 				break;
 			
 			default:
-				ns = NpcString.ONE_DAY_A_STATUE_OF_YOU_COULD_BE_MADE;
+				ns = NpcStringId.I_SEE_THAT_ADVENTURERS_ARE_RETURNING_TO_TALKING_ISLAND_FOR_THE_AWAKENING;
 				break;
 		}
 		

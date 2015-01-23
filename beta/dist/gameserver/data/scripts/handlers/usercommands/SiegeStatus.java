@@ -17,7 +17,8 @@ import lineage2.gameserver.handlers.UserCommandHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.residence.Castle;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
@@ -43,7 +44,7 @@ public final class SiegeStatus implements IUserCommandHandler, ScriptFile
 	{
 		if (!player.isClanLeader())
 		{
-			player.sendPacket(SystemMsg.ONLY_THE_CLAN_LEADER_MAY_ISSUE_COMMANDS);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_THE_CLAN_LEADER_MAY_ISSUE_COMMANDS));
 			return false;
 		}
 		
@@ -58,7 +59,7 @@ public final class SiegeStatus implements IUserCommandHandler, ScriptFile
 		{
 			if (!player.isNoble())
 			{
-				player.sendPacket(SystemMsg.ONLY_A_CLAN_LEADER_THAT_IS_A_NOBLESSE_CAN_VIEW_THE_SIEGE_WAR_STATUS_WINDOW_DURING_A_SIEGE_WAR);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_A_CLAN_LEADER_THAT_IS_A_NOBLESSE_EXALTED_CAN_VIEW_THE_SIEGE_WAR_STATUS_WINDOW_DURING_A_SIEGE_WAR));
 				return false;
 			}
 		}

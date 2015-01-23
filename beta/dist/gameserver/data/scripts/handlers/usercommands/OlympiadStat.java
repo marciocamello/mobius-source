@@ -18,8 +18,8 @@ import lineage2.gameserver.handlers.UserCommandHandler;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
@@ -52,23 +52,23 @@ public class OlympiadStat implements IUserCommandHandler, ScriptFile
 		
 		if ((objectTarget == null) || !objectTarget.isPlayer() || !objectTarget.getPlayer().isNoble())
 		{
-			activeChar.sendPacket(SystemMsg.THIS_COMMAND_CAN_ONLY_BE_USED_BY_A_NOBLESSE);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_COMMAND_CAN_ONLY_BE_USED_WHEN_THE_TARGET_IS_AN_AWAKENED_NOBLESSE_EXALTED));
 			return true;
 		}
 		
 		Player playerTarget = objectTarget.getPlayer();
-		SystemMessage2 sm = new SystemMessage2(SystemMsg.FOR_THE_CURRENT_GRAND_OLYMPIAD_YOU_HAVE_PARTICIPATED_IN_S1_MATCHES_S2_WINS_S3_DEFEATS_YOU_CURRENTLY_HAVE_S4_OLYMPIAD_POINTS);
-		sm.addInteger(Olympiad.getCompetitionDone(playerTarget.getObjectId()));
-		sm.addInteger(Olympiad.getCompetitionWin(playerTarget.getObjectId()));
-		sm.addInteger(Olympiad.getCompetitionLoose(playerTarget.getObjectId()));
-		sm.addInteger(Olympiad.getNoblePoints(playerTarget.getObjectId()));
+		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.FOR_THE_CURRENT_OLYMPIAD_YOU_HAVE_PARTICIPATED_IN_S1_MATCH_ES_AND_HAD_S2_WIN_S_AND_S3_DEFEAT_S_YOU_CURRENTLY_HAVE_S4_OLYMPIAD_POINT_S);
+		sm.addInt(Olympiad.getCompetitionDone(playerTarget.getObjectId()));
+		sm.addInt(Olympiad.getCompetitionWin(playerTarget.getObjectId()));
+		sm.addInt(Olympiad.getCompetitionLoose(playerTarget.getObjectId()));
+		sm.addInt(Olympiad.getNoblePoints(playerTarget.getObjectId()));
 		activeChar.sendPacket(sm);
 		int[] ar = Olympiad.getWeekGameCounts(playerTarget.getObjectId());
-		sm = new SystemMessage2(SystemMsg.YOU_HAVE_S1_MATCHES_REMAINING_THAT_YOU_CAN_PARTICIPATE_IN_THIS_WEEK_S2_1_VS_1_CLASS_MATCHES_S3_1_VS_1_MATCHES__S4_3_VS_3_TEAM_MATCHES);
-		sm.addInteger(ar[0]);
-		sm.addInteger(ar[1]);
-		sm.addInteger(ar[2]);
-		sm.addInteger(ar[2]);
+		sm = SystemMessage.getSystemMessage(SystemMessageId.THE_MATCHES_THIS_WEEK_ARE_ALL_CLASS_BATTLES_THE_NUMBER_OF_MATCHES_THAT_ARE_ALLOWED_TO_PARTICIPATE_IS_S1);
+		sm.addInt(ar[0]);
+		sm.addInt(ar[1]);
+		sm.addInt(ar[2]);
+		sm.addInt(ar[2]);
 		activeChar.sendPacket(sm);
 		return true;
 	}

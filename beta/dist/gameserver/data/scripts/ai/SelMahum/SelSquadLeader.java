@@ -17,7 +17,7 @@ import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.Location;
 
@@ -31,11 +31,11 @@ public final class SelSquadLeader extends Fighter
 	private boolean isImmobilized;
 	private long busyTimeout = 0;
 	private long idleTimeout = 0;
-	private static final NpcString[] phrase =
+	private static final NpcStringId[] phrase =
 	{
-		NpcString.COME_AND_EAT,
-		NpcString.LOOKS_DELICIOUS,
-		NpcString.LETS_GO_EAT
+		NpcStringId.COME_AND_EAT,
+		NpcStringId.LOOKS_DELICIOUS,
+		NpcStringId.LET_S_GO_EAT
 	};
 	private static final int NPC_ID_FIRE = 18927;
 	private static final int NPC_ID_FIRE_FEED = 18933;

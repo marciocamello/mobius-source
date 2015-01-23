@@ -21,6 +21,7 @@ import lineage2.gameserver.model.items.TradeItem;
 import lineage2.gameserver.network.serverpackets.PrivateStoreManageListSell;
 import lineage2.gameserver.network.serverpackets.PrivateStoreMsgSell;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.utils.TradeHelper;
 
@@ -121,7 +122,7 @@ public class SetPrivateStoreSellList extends L2GameClientPacket
 		
 		if (sellList.size() > seller.getTradeLimit())
 		{
-			seller.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
+			seller.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED));
 			seller.sendPacket(new PrivateStoreManageListSell(seller, _package));
 			return;
 		}

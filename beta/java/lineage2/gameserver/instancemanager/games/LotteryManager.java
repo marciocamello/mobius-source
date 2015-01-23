@@ -27,6 +27,7 @@ import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -284,7 +285,7 @@ public class LotteryManager
 			}
 			
 			_isSellingTickets = false;
-			Announcements.getInstance().announceToAll(new SystemMessage(SystemMessage.LOTTERY_TICKET_SALES_HAVE_BEEN_TEMPORARILY_SUSPENDED));
+			Announcements.getInstance().announceToAll(SystemMessage.getSystemMessage(SystemMessageId.LOTTERY_TICKET_SALES_HAVE_BEEN_TEMPORARILY_SUSPENDED));
 		}
 	}
 	
@@ -472,17 +473,17 @@ public class LotteryManager
 			
 			if (count1 > 0)
 			{
-				sm = new SystemMessage(SystemMessage.THE_PRIZE_AMOUNT_FOR_THE_WINNER_OF_LOTTERY__S1__IS_S2_ADENA_WE_HAVE_S3_FIRST_PRIZE_WINNERS);
-				sm.addNumber(getId());
-				sm.addNumber(getPrize());
-				sm.addNumber(count1);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_PRIZE_AMOUNT_FOR_THE_WINNER_OF_LOTTERY_S1_IS_S2_ADENA_WE_HAVE_S3_FIRST_PRIZE_WINNERS);
+				sm.addInt(getId());
+				sm.addInt(getPrize());
+				sm.addInt(count1);
 				Announcements.getInstance().announceToAll(sm);
 			}
 			else
 			{
-				sm = new SystemMessage(SystemMessage.THE_PRIZE_AMOUNT_FOR_LUCKY_LOTTERY__S1__IS_S2_ADENA_THERE_WAS_NO_FIRST_PRIZE_WINNER_IN_THIS_DRAWING_THEREFORE_THE_JACKPOT_WILL_BE_ADDED_TO_THE_NEXT_DRAWING);
-				sm.addNumber(getId());
-				sm.addNumber(getPrize());
+				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_PRIZE_AMOUNT_FOR_LUCKY_LOTTERY_S1_IS_S2_ADENA_THERE_WAS_NO_FIRST_PRIZE_WINNER_IN_THIS_DRAWING_THEREFORE_THE_JACKPOT_WILL_BE_ADDED_TO_THE_NEXT_DRAWING);
+				sm.addInt(getId());
+				sm.addInt(getPrize());
 				Announcements.getInstance().announceToAll(sm);
 			}
 			

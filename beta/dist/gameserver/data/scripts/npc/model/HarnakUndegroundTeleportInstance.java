@@ -26,7 +26,7 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.NpcUtils;
@@ -56,16 +56,16 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 	final DeathListener _deathListener = new DeathListener();
 	int _stateSecond = 0;
 	int _stateThird = 0;
-	private static final NpcString[] FUCKED_HARNAK =
+	private static final NpcStringId[] FUCKED_HARNAK =
 	{
-		NpcString.THERES_A_NOBLE_KING_WHO_DID_NOT_FALL_BEFORE_THE_HAMMER_OF_OLD_GODS,
-		NpcString.ALL_THE_GIGANTS_TRUSTED_THEIR_LIVES_ON_THAT_COURAGE,
-		NpcString.SAVING_THE_LIVES_WITH_BEAUTIFUL_LADY_BELIS_SLASHING_THE_GODS,
-		NpcString.EVEN_THE_FIVE_DRAGONS_OF_DARKNESS_SWALLOWED_THE_FLAMES_IN_REVERENCE,
-		NpcString.SWORD_RUSTS_AND_MAGIC_IS_FORGOTTEN,
-		NpcString.LADY_GOES_UNDER_THE_VEIL_AND_THE_KING_FALLS_ON_THE_DUST,
-		NpcString.WHO_REMEMBERS_THE_HALLS_OF_HARNAK_AND_POWERS_OF_PLATINUM,
-		NpcString.ONLY_THE_SOULS_LEFT_TO_WEEP_IN_THE_ARMS_OF_EIGHT_KNIGHTS
+		NpcStringId.THERE_S_A_NOBLE_KING_WHO_DID_NOT_FALL_BEFORE_THE_HAMMER_OF_OLD_GODS,
+		NpcStringId.ALL_THE_GIANTS_TRUSTED_THEIR_LIVES_ON_THAT_COURAGE,
+		NpcStringId.SAVING_THE_LIVES_WITH_BEAUTIFUL_LADY_BELIS_SLASHING_THE_GODS,
+		NpcStringId.EVEN_THE_FIVE_DRAGONS_OF_DARKNESS_SWALLOWED_THE_FLAMES_IN_REVERENCE,
+		NpcStringId.SWORD_RUSTS_AND_MAGIC_IS_FORGOTTEN,
+		NpcStringId.LADY_GOES_UNDER_THE_VEIL_AND_THE_KING_FALLS_ON_THE_DUST,
+		NpcStringId.WHO_REMEMBERS_THE_HALLS_OF_HARNAK_AND_POWERS_OF_PLATINUM,
+		NpcStringId.ONLY_THE_SOULS_LEFT_TO_WEEP_IN_THE_ARMS_OF_EIGHT_KNIGHTS
 	};
 	
 	public HarnakUndegroundTeleportInstance(int objectId, NpcTemplate template)
@@ -339,13 +339,13 @@ public final class HarnakUndegroundTeleportInstance extends NpcInstance
 		{
 			if (self.isNpc() && (self.getId() == NOKTUM))
 			{
-				self.broadcastPacketToOthers(new ExShowScreenMessage(NpcString.GHOST_OF_HARNAK_CAN_ONLY_BE_HIT_NEAR_SOUL_CIRCLE, 5000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));
+				self.broadcastPacketToOthers(new ExShowScreenMessage(NpcStringId.GHOST_OF_HARNAK_CAN_ONLY_BE_HIT_NEAR_SOUL_CIRCLE, 5000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));
 				self.removeListener(_deathListener);
 			}
 			
 			if (self.isNpc() && (self.getId() == DEMONIC_NOKTUM))
 			{
-				self.broadcastPacketToOthers(new ExShowScreenMessage(NpcString.GHOST_OF_HARNAK_CAN_ONLY_BE_HIT_NEAR_SOUL_CIRCLE, 5000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));
+				self.broadcastPacketToOthers(new ExShowScreenMessage(NpcStringId.GHOST_OF_HARNAK_CAN_ONLY_BE_HIT_NEAR_SOUL_CIRCLE, 5000, ExShowScreenMessage.ScreenMessageAlign.BOTTOM_CENTER, true, ExShowScreenMessage.STRING_TYPE, 0, false, 0));
 				self.removeListener(_deathListener);
 			}
 		}

@@ -19,7 +19,7 @@ import lineage2.gameserver.ai.CtrlEvent;
 import lineage2.gameserver.ai.Ranger;
 import lineage2.gameserver.geodata.GeoEngine;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 
 public final class NpcArcherAI extends Ranger
@@ -53,7 +53,7 @@ public final class NpcArcherAI extends Ranger
 			switch (actor.getId())
 			{
 				case 33173:
-					Functions.npcSay(actor, NpcString.BOOM_HEADSHOT);
+					Functions.npcSay(actor, NpcStringId.BOOM_HEADSHOT);
 					break;
 				
 				default:

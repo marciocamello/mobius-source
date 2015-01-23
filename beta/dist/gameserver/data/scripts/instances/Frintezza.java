@@ -36,7 +36,8 @@ import lineage2.gameserver.network.serverpackets.MagicSkillCanceled;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SocialAction;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 import lineage2.gameserver.utils.Util;
@@ -366,24 +367,24 @@ public final class Frintezza extends Reflection
 			}
 			
 			int song = Math.max(1, Math.min(4, getSong()));
-			NpcString song_name;
+			NpcStringId song_name;
 			
 			switch (song)
 			{
 				case 1:
-					song_name = NpcString.REQUIEM_OF_HATRED;
+					song_name = NpcStringId.REQUIEM_OF_HATRED;
 					break;
 				
 				case 2:
-					song_name = NpcString.FRENETIC_TOCCATA;
+					song_name = NpcStringId.FRENETIC_TOCCATA;
 					break;
 				
 				case 3:
-					song_name = NpcString.FUGUE_OF_JUBILATION;
+					song_name = NpcStringId.FUGUE_OF_JUBILATION;
 					break;
 				
 				case 4:
-					song_name = NpcString.MOURNFUL_CHORALE_PRELUDE;
+					song_name = NpcStringId.MOURNFUL_CHORALE_PRELUDE;
 					break;
 				
 				default:
@@ -836,7 +837,7 @@ public final class Frintezza extends Reflection
 		
 		for (Player p : getPlayers())
 		{
-			p.sendPacket(new SystemMessage(SystemMessage.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTES).addNumber(15));
+			p.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES).addInt(15));
 		}
 		
 		for (NpcInstance n : getNpcs())

@@ -16,7 +16,7 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.ai.Fighter;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.instances.NpcInstance;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.tables.SkillTable;
 
@@ -26,15 +26,15 @@ import lineage2.gameserver.tables.SkillTable;
  */
 public final class Succubus extends Fighter
 {
-	private static final NpcString[] SAY_TEXT = new NpcString[]
+	private static final NpcStringId[] SAY_TEXT = new NpcStringId[]
 	{
-		NpcString.HAHAHA_YOU_DARE_TO_DISRUPT_ME_I_WILL_BE_YOUR_NIGHTMARE_FROM_WHICH_YOU_CAN_NEVER_AWAKEN,
-		NpcString.YOU_DARE_ATTACK_ME_I_WILL_FILL_YOUR_NIGHTMARES_WHITH_BLOOD,
-		NpcString.I_CANNOT_LET_YOU_STOP_THE_WRAITH_OF_SHILEN,
-		NpcString.ANSUCUBUS,
-		NpcString.HALT_YOURNIGHTMARES_WILL_FILL_YOU_WITH_DREAD,
-		NpcString.YOU_WONT_GET_AWAY,
-		NpcString.HOW_ALL__THAT_POWER_REMOED
+		NpcStringId.HAHAHA_YOU_DARE_TO_DISRUPT_ME_I_WILL_BE_YOUR_NIGHTMARE_FROM_WHICH_YOU_CAN_NEVER_AWAKEN,
+		NpcStringId.YOU_DARE_ATTACK_ME_I_WILL_FILL_YOUR_NIGHTMARES_WITH_BLOOD,
+		NpcStringId.I_CANNOT_LET_YOU_STOP_THE_WRAITH_OF_SHILEN,
+		NpcStringId.AH2,
+		NpcStringId.HALT_YOUR_NIGHTMARES_WILL_FILL_YOU_WITH_DREAD,
+		NpcStringId.YOU_WON_T_GET_AWAY,
+		NpcStringId.HOW_ALL_THAT_POWER_REMOVED
 	};
 	
 	/**
@@ -83,11 +83,11 @@ public final class Succubus extends Fighter
 		
 		if (Rnd.chance(25))
 		{
-			Functions.npcSay(actor, NpcString.TO_THINK_THAT_I_COULD_FAIL_IMPOSSIBLE);
+			Functions.npcSay(actor, NpcStringId.TO_THINK_THAT_I_COULD_FAIL_IMPOSSIBLE);
 		}
 		else
 		{
-			Functions.npcSay(actor, NpcString.SHILEN_I_HAVE_FAILED);
+			Functions.npcSay(actor, NpcStringId.SHILEN_I_HAVE_FAILED);
 		}
 		
 		super.onEvtDead(killer);

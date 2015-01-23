@@ -21,8 +21,8 @@ import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.model.instances.WarehouseInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
@@ -107,7 +107,7 @@ public final class ArenaManagerInstance extends WarehouseInstance
 			
 			if (neededmoney > currentmoney)
 			{
-				player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 				return;
 			}
 			
@@ -147,13 +147,13 @@ public final class ArenaManagerInstance extends WarehouseInstance
 			
 			if (neededmoney > currentmoney)
 			{
-				player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 				return;
 			}
 			
 			player.reduceAdena(neededmoney, true);
 			player.setCurrentCp(player.getMaxCp());
-			player.sendPacket(new SystemMessage2(SystemMsg.S1_CP_HAS_BEEN_RESTORED).addName(player));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_CP_HAS_BEEN_RESTORED).addPcName(player));
 		}
 		else if (command.equals("HPRecovery"))
 		{
@@ -167,13 +167,13 @@ public final class ArenaManagerInstance extends WarehouseInstance
 			
 			if (neededmoney > currentmoney)
 			{
-				player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 				return;
 			}
 			
 			player.reduceAdena(neededmoney, true);
 			player.setCurrentHp(player.getMaxHp(), false);
-			player.sendPacket(new SystemMessage2(SystemMsg.S1_HP_HAS_BEEN_RESTORED).addName(player));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HP_HAS_BEEN_RESTORED).addPcName(player));
 		}
 		else
 		{

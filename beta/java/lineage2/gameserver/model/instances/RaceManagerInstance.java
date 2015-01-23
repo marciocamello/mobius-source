@@ -29,6 +29,7 @@ import lineage2.gameserver.network.serverpackets.MonRaceInfo;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.PlaySound;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Location;
@@ -98,26 +99,26 @@ public class RaceManagerInstance extends NpcInstance
 			history = new ArrayList<>();
 			managers = new CopyOnWriteArraySet<>();
 			ThreadPoolManager s = ThreadPoolManager.getInstance();
-			s.scheduleAtFixedRate(new Announcement(SystemMessage.TICKETS_ARE_NOW_AVAILABLE_FOR_THE_S1TH_MONSTER_RACE), 0, 10 * MINUTE);
-			s.scheduleAtFixedRate(new Announcement(SystemMessage.WE_ARE_NOW_SELLING_TICKETS_FOR_THE_S1TH_MONSTER_RACE), 30 * SECOND, 10 * MINUTE);
-			s.scheduleAtFixedRate(new Announcement(SystemMessage.TICKETS_ARE_NOW_AVAILABLE_FOR_THE_S1TH_MONSTER_RACE), MINUTE, 10 * MINUTE);
-			s.scheduleAtFixedRate(new Announcement(SystemMessage.WE_ARE_NOW_SELLING_TICKETS_FOR_THE_S1TH_MONSTER_RACE), MINUTE + (30 * SECOND), 10 * MINUTE);
-			s.scheduleAtFixedRate(new Announcement(SystemMessage.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_CEASE_IN_S1_MINUTE_S), 2 * MINUTE, 10 * MINUTE);
-			s.scheduleAtFixedRate(new Announcement(SystemMessage.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_CEASE_IN_S1_MINUTE_S), 3 * MINUTE, 10 * MINUTE);
-			s.scheduleAtFixedRate(new Announcement(SystemMessage.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_CEASE_IN_S1_MINUTE_S), 4 * MINUTE, 10 * MINUTE);
-			s.scheduleAtFixedRate(new Announcement(SystemMessage.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_CEASE_IN_S1_MINUTE_S), 5 * MINUTE, 10 * MINUTE);
-			s.scheduleAtFixedRate(new Announcement(SystemMessage.TICKETS_SALES_ARE_CLOSED_FOR_THE_S1TH_MONSTER_RACE_ODDS_ARE_POSTED), 6 * MINUTE, 10 * MINUTE);
-			s.scheduleAtFixedRate(new Announcement(SystemMessage.TICKETS_SALES_ARE_CLOSED_FOR_THE_S1TH_MONSTER_RACE_ODDS_ARE_POSTED), 7 * MINUTE, 10 * MINUTE);
-			s.scheduleAtFixedRate(new Announcement(SystemMessage.THE_S2TH_MONSTER_RACE_WILL_BEGIN_IN_S1_MINUTES), 7 * MINUTE, 10 * MINUTE);
-			s.scheduleAtFixedRate(new Announcement(SystemMessage.THE_S2TH_MONSTER_RACE_WILL_BEGIN_IN_S1_MINUTES), 8 * MINUTE, 10 * MINUTE);
-			s.scheduleAtFixedRate(new Announcement(SystemMessage.THE_S1TH_MONSTER_RACE_WILL_BEGIN_IN_30_SECONDS), (8 * MINUTE) + (30 * SECOND), 10 * MINUTE);
-			s.scheduleAtFixedRate(new Announcement(SystemMessage.THE_S1TH_MONSTER_RACE_IS_ABOUT_TO_BEGIN_COUNTDOWN_IN_FIVE_SECONDS), (8 * MINUTE) + (50 * SECOND), 10 * MINUTE);
-			s.scheduleAtFixedRate(new Announcement(SystemMessage.THE_RACE_WILL_BEGIN_IN_S1_SECONDS), (8 * MINUTE) + (55 * SECOND), 10 * MINUTE);
-			s.scheduleAtFixedRate(new Announcement(SystemMessage.THE_RACE_WILL_BEGIN_IN_S1_SECONDS), (8 * MINUTE) + (56 * SECOND), 10 * MINUTE);
-			s.scheduleAtFixedRate(new Announcement(SystemMessage.THE_RACE_WILL_BEGIN_IN_S1_SECONDS), (8 * MINUTE) + (57 * SECOND), 10 * MINUTE);
-			s.scheduleAtFixedRate(new Announcement(SystemMessage.THE_RACE_WILL_BEGIN_IN_S1_SECONDS), (8 * MINUTE) + (58 * SECOND), 10 * MINUTE);
-			s.scheduleAtFixedRate(new Announcement(SystemMessage.THE_RACE_WILL_BEGIN_IN_S1_SECONDS), (8 * MINUTE) + (59 * SECOND), 10 * MINUTE);
-			s.scheduleAtFixedRate(new Announcement(SystemMessage.THEYRE_OFF), 9 * MINUTE, 10 * MINUTE);
+			s.scheduleAtFixedRate(new Announcement(SystemMessageId.TICKETS_ARE_NOW_AVAILABLE_FOR_MONSTER_RACE_S1), 0, 10 * MINUTE);
+			s.scheduleAtFixedRate(new Announcement(SystemMessageId.NOW_SELLING_TICKETS_FOR_MONSTER_RACE_S1), 30 * SECOND, 10 * MINUTE);
+			s.scheduleAtFixedRate(new Announcement(SystemMessageId.TICKETS_ARE_NOW_AVAILABLE_FOR_MONSTER_RACE_S1), MINUTE, 10 * MINUTE);
+			s.scheduleAtFixedRate(new Announcement(SystemMessageId.NOW_SELLING_TICKETS_FOR_MONSTER_RACE_S1), MINUTE + (30 * SECOND), 10 * MINUTE);
+			s.scheduleAtFixedRate(new Announcement(SystemMessageId.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_END_IN_S1_MINUTE_S), 2 * MINUTE, 10 * MINUTE);
+			s.scheduleAtFixedRate(new Announcement(SystemMessageId.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_END_IN_S1_MINUTE_S), 3 * MINUTE, 10 * MINUTE);
+			s.scheduleAtFixedRate(new Announcement(SystemMessageId.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_END_IN_S1_MINUTE_S), 4 * MINUTE, 10 * MINUTE);
+			s.scheduleAtFixedRate(new Announcement(SystemMessageId.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_END_IN_S1_MINUTE_S), 5 * MINUTE, 10 * MINUTE);
+			s.scheduleAtFixedRate(new Announcement(SystemMessageId.TICKETS_SALES_ARE_CLOSED_FOR_MONSTER_RACE_S1_ODDS_ARE_POSTED), 6 * MINUTE, 10 * MINUTE);
+			s.scheduleAtFixedRate(new Announcement(SystemMessageId.TICKETS_SALES_ARE_CLOSED_FOR_MONSTER_RACE_S1_ODDS_ARE_POSTED), 7 * MINUTE, 10 * MINUTE);
+			s.scheduleAtFixedRate(new Announcement(SystemMessageId.MONSTER_RACE_S2_WILL_BEGIN_IN_S1_MINUTE_S), 7 * MINUTE, 10 * MINUTE);
+			s.scheduleAtFixedRate(new Announcement(SystemMessageId.MONSTER_RACE_S2_WILL_BEGIN_IN_S1_MINUTE_S), 8 * MINUTE, 10 * MINUTE);
+			s.scheduleAtFixedRate(new Announcement(SystemMessageId.MONSTER_RACE_S1_WILL_BEGIN_IN_30_SECONDS), (8 * MINUTE) + (30 * SECOND), 10 * MINUTE);
+			s.scheduleAtFixedRate(new Announcement(SystemMessageId.MONSTER_RACE_S1_IS_ABOUT_TO_BEGIN_COUNTDOWN_IN_FIVE_SECONDS), (8 * MINUTE) + (50 * SECOND), 10 * MINUTE);
+			s.scheduleAtFixedRate(new Announcement(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S), (8 * MINUTE) + (55 * SECOND), 10 * MINUTE);
+			s.scheduleAtFixedRate(new Announcement(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S), (8 * MINUTE) + (56 * SECOND), 10 * MINUTE);
+			s.scheduleAtFixedRate(new Announcement(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S), (8 * MINUTE) + (57 * SECOND), 10 * MINUTE);
+			s.scheduleAtFixedRate(new Announcement(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S), (8 * MINUTE) + (58 * SECOND), 10 * MINUTE);
+			s.scheduleAtFixedRate(new Announcement(SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S), (8 * MINUTE) + (59 * SECOND), 10 * MINUTE);
+			s.scheduleAtFixedRate(new Announcement(SystemMessageId.THEY_RE_OFF), 9 * MINUTE, 10 * MINUTE);
 		}
 		
 		managers.add(this);
@@ -140,15 +141,15 @@ public class RaceManagerInstance extends NpcInstance
 	 */
 	class Announcement extends RunnableImpl
 	{
-		private final int type;
+		private final SystemMessageId _messageId;
 		
 		/**
 		 * Constructor for Announcement.
-		 * @param type int
+		 * @param id SystemMessageId
 		 */
-		public Announcement(int type)
+		public Announcement(SystemMessageId id)
 		{
-			this.type = type;
+			_messageId = id;
 		}
 		
 		/**
@@ -157,61 +158,60 @@ public class RaceManagerInstance extends NpcInstance
 		@Override
 		public void runImpl()
 		{
-			makeAnnouncement(type);
+			makeAnnouncement(_messageId);
 		}
 	}
 	
 	/**
 	 * Method makeAnnouncement.
-	 * @param type int
+	 * @param _messageId SystemMessageId
 	 */
-	public void makeAnnouncement(int type)
+	public void makeAnnouncement(SystemMessageId _messageId)
 	{
-		SystemMessage sm = new SystemMessage(type);
+		SystemMessage sm = SystemMessage.getSystemMessage(_messageId);
 		
-		switch (type)
+		if ((_messageId == SystemMessageId.TICKETS_ARE_NOW_AVAILABLE_FOR_MONSTER_RACE_S1) || (_messageId == SystemMessageId.NOW_SELLING_TICKETS_FOR_MONSTER_RACE_S1))
 		{
-			case SystemMessage.TICKETS_ARE_NOW_AVAILABLE_FOR_THE_S1TH_MONSTER_RACE:
-			case SystemMessage.WE_ARE_NOW_SELLING_TICKETS_FOR_THE_S1TH_MONSTER_RACE:
-				if (state != ACCEPTING_BETS)
-				{
-					state = ACCEPTING_BETS;
-					startRace();
-				}
-				
-				sm.addNumber(_raceNumber);
-				break;
+			if (state != ACCEPTING_BETS)
+			{
+				state = ACCEPTING_BETS;
+				startRace();
+			}
 			
-			case SystemMessage.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_CEASE_IN_S1_MINUTE_S:
-			case SystemMessage.THE_S2TH_MONSTER_RACE_WILL_BEGIN_IN_S1_MINUTES:
-			case SystemMessage.THE_RACE_WILL_BEGIN_IN_S1_SECONDS:
-				sm.addNumber(minutes);
-				sm.addNumber(_raceNumber);
-				minutes--;
-				break;
-			
-			case SystemMessage.TICKETS_SALES_ARE_CLOSED_FOR_THE_S1TH_MONSTER_RACE_ODDS_ARE_POSTED:
-				sm.addNumber(_raceNumber);
-				state = WAITING;
-				minutes = 2;
-				break;
-			
-			case SystemMessage.THE_S1TH_MONSTER_RACE_IS_ABOUT_TO_BEGIN_COUNTDOWN_IN_FIVE_SECONDS:
-			case SystemMessage.MONSTER_RACE_S1_IS_FINISHED:
-				sm.addNumber(_raceNumber);
-				minutes = 5;
-				break;
-			
-			case SystemMessage.FIRST_PRIZE_GOES_TO_THE_PLAYER_IN_LANE_S1_SECOND_PRIZE_GOES_TO_THE_PLAYER_IN_LANE_S2:
-				state = RACE_END;
-				sm.addNumber(MonsterRace.getInstance().getFirstPlace());
-				sm.addNumber(MonsterRace.getInstance().getSecondPlace());
-				break;
+			sm.addInt(_raceNumber);
+		}
+		else if ((_messageId == SystemMessageId.TICKET_SALES_FOR_THE_MONSTER_RACE_WILL_END_IN_S1_MINUTE_S) || (_messageId == SystemMessageId.THE_RACE_WILL_BEGIN_IN_S1_SECOND_S))
+		{
+			sm.addInt(minutes);
+			minutes--;
+		}
+		else if (_messageId == SystemMessageId.MONSTER_RACE_S2_WILL_BEGIN_IN_S1_MINUTE_S)
+		{
+			sm.addInt(minutes);
+			sm.addInt(_raceNumber);
+			minutes--;
+		}
+		else if (_messageId == SystemMessageId.TICKETS_SALES_ARE_CLOSED_FOR_MONSTER_RACE_S1_ODDS_ARE_POSTED)
+		{
+			sm.addInt(_raceNumber);
+			state = WAITING;
+			minutes = 2;
+		}
+		else if ((_messageId == SystemMessageId.MONSTER_RACE_S1_IS_ABOUT_TO_BEGIN_COUNTDOWN_IN_FIVE_SECONDS) || (_messageId == SystemMessageId.MONSTER_RACE_S1_IS_FINISHED))
+		{
+			sm.addInt(_raceNumber);
+			minutes = 5;
+		}
+		else if (_messageId == SystemMessageId.FIRST_PRIZE_GOES_TO_THE_PLAYER_IN_LANE_S1_SECOND_PRIZE_GOES_TO_THE_PLAYER_IN_LANE_S2)
+		{
+			state = RACE_END;
+			sm.addInt(MonsterRace.getInstance().getFirstPlace());
+			sm.addInt(MonsterRace.getInstance().getSecondPlace());
 		}
 		
 		broadcast(sm);
 		
-		if (type == SystemMessage.THEYRE_OFF)
+		if (_messageId == SystemMessageId.THEY_RE_OFF)
 		{
 			state = STARTING_RACE;
 			startRace();
@@ -283,13 +283,13 @@ public class RaceManagerInstance extends NpcInstance
 		
 		if (command.startsWith("BuyTicket") && (state != ACCEPTING_BETS))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.MONSTER_RACE_TICKETS_ARE_NO_LONGER_AVAILABLE));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MONSTER_RACE_TICKETS_ARE_NO_LONGER_AVAILABLE));
 			command = "Chat 0";
 		}
 		
 		if (command.startsWith("ShowOdds") && (state == ACCEPTING_BETS))
 		{
-			player.sendPacket(new SystemMessage(SystemMessage.MONSTER_RACE_PAYOUT_INFORMATION_IS_NOT_AVAILABLE_WHILE_TICKETS_ARE_BEING_SOLD));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.MONSTER_RACE_PAYOUT_INFORMATION_IS_NOT_AVAILABLE_WHILE_TICKETS_ARE_BEING_SOLD));
 			command = "Chat 0";
 		}
 		
@@ -479,7 +479,7 @@ public class RaceManagerInstance extends NpcInstance
 			
 			if (player.getAdena() < cost[player.getRace(1) - 1])
 			{
-				player.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 				return;
 			}
 			
@@ -488,8 +488,8 @@ public class RaceManagerInstance extends NpcInstance
 			player.setRace(0, 0);
 			player.setRace(1, 0);
 			player.reduceAdena(cost[priceId - 1], true);
-			SystemMessage sm = new SystemMessage(SystemMessage.ACQUIRED__S1_S2);
-			sm.addNumber(_raceNumber);
+			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.ACQUIRED_S1_S2);
+			sm.addInt(_raceNumber);
 			sm.addItemName(4443);
 			player.sendPacket(sm);
 			ItemInstance item = ItemFunctions.createItem(4443);
@@ -622,8 +622,8 @@ public class RaceManagerInstance extends NpcInstance
 		@Override
 		public void runImpl()
 		{
-			makeAnnouncement(SystemMessage.FIRST_PRIZE_GOES_TO_THE_PLAYER_IN_LANE_S1_SECOND_PRIZE_GOES_TO_THE_PLAYER_IN_LANE_S2);
-			makeAnnouncement(SystemMessage.MONSTER_RACE_S1_IS_FINISHED);
+			makeAnnouncement(SystemMessageId.FIRST_PRIZE_GOES_TO_THE_PLAYER_IN_LANE_S1_SECOND_PRIZE_GOES_TO_THE_PLAYER_IN_LANE_S2);
+			makeAnnouncement(SystemMessageId.MONSTER_RACE_S1_IS_FINISHED);
 			_raceNumber++;
 			ServerVariables.set("monster_race", _raceNumber);
 			

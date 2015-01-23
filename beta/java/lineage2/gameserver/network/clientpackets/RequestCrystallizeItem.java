@@ -19,6 +19,7 @@ import lineage2.gameserver.model.items.CrystallizationItem;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.etcitems.CrystallizationManager;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.item.ItemTemplate.Grade;
 import lineage2.gameserver.utils.ItemFunctions;
 import lineage2.gameserver.utils.Log;
@@ -64,7 +65,7 @@ public class RequestCrystallizeItem extends L2GameClientPacket
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
@@ -84,7 +85,7 @@ public class RequestCrystallizeItem extends L2GameClientPacket
 		
 		if (item.isHeroWeapon())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.HERO_WEAPONS_CANNOT_BE_DESTROYED));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.HERO_WEAPONS_CANNOT_BE_DESTROYED));
 			return;
 		}
 		
@@ -96,13 +97,13 @@ public class RequestCrystallizeItem extends L2GameClientPacket
 		
 		if (activeChar.isInStoreMode())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM));
 			return;
 		}
 		
 		if (activeChar.isFishing())
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_DO_THAT_WHILE_FISHING));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING));
 			return;
 		}
 		
@@ -216,7 +217,7 @@ public class RequestCrystallizeItem extends L2GameClientPacket
 		
 		if (!canCrystallize)
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.CANNOT_CRYSTALLIZE_CRYSTALLIZATION_SKILL_LEVEL_TOO_LOW));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_NOT_CRYSTALLIZE_THIS_ITEM_YOUR_CRYSTALLIZATION_SKILL_LEVEL_IS_TOO_LOW));
 			activeChar.sendActionFailed();
 			return;
 		}
@@ -240,7 +241,7 @@ public class RequestCrystallizeItem extends L2GameClientPacket
 			return;
 		}
 		
-		activeChar.sendPacket(new SystemMessage(SystemMessage.THE_ITEM_HAS_BEEN_SUCCESSFULLY_CRYSTALLIZED));
+		activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_ITEM_HAS_BEEN_SUCCESSFULLY_CRYSTALLIZED));
 		ItemFunctions.addItem(activeChar, crystalId, crystalAmount, true);
 		activeChar.sendChanges();
 	}

@@ -18,7 +18,8 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Skill;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.templates.StatsSet;
 
@@ -76,13 +77,13 @@ public class Continuous extends Skill
 					if (realTarget.isPlayer())
 					{
 						realTarget.reduceCurrentHp(realTarget.getCurrentCp(), 0, activeChar, this, true, true, false, true, false, false, true);
-						realTarget.sendPacket(SystemMsg.LETHAL_STRIKE);
-						activeChar.sendPacket(SystemMsg.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL);
+						realTarget.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.LETHAL_STRIKE));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.HIT_WITH_LETHAL_STRIKE));
 					}
 					else if (realTarget.isNpc() && !realTarget.isLethalImmune())
 					{
 						realTarget.reduceCurrentHp(realTarget.getCurrentHp() / 2, 0, activeChar, this, true, true, false, true, false, false, true);
-						activeChar.sendPacket(SystemMsg.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL);
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.HIT_WITH_LETHAL_STRIKE));
 					}
 				}
 				else if ((lethal2 > 0) && Rnd.chance(lethal2))
@@ -90,13 +91,13 @@ public class Continuous extends Skill
 					if (realTarget.isPlayer())
 					{
 						realTarget.reduceCurrentHp((realTarget.getCurrentHp() + realTarget.getCurrentCp()) - 1, 0, activeChar, this, true, true, false, true, false, false, true);
-						realTarget.sendPacket(SystemMsg.LETHAL_STRIKE);
-						activeChar.sendPacket(SystemMsg.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL);
+						realTarget.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.LETHAL_STRIKE));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.HIT_WITH_LETHAL_STRIKE));
 					}
 					else if (realTarget.isNpc() && !realTarget.isLethalImmune())
 					{
 						realTarget.reduceCurrentHp(realTarget.getCurrentHp() - 1, 0, activeChar, this, true, true, false, true, false, false, true);
-						activeChar.sendPacket(SystemMsg.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL);
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.HIT_WITH_LETHAL_STRIKE));
 					}
 				}
 				

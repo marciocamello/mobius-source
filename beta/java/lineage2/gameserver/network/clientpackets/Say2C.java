@@ -31,12 +31,12 @@ import lineage2.gameserver.network.serverpackets.ActionFail;
 import lineage2.gameserver.network.serverpackets.Say2;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.ChatType;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.FakePlayersTable;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.MapUtils;
 import lineage2.gameserver.utils.Util;
 
-import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -87,7 +87,7 @@ public class Say2C extends L2GameClientPacket
 		if (_text.contains("\n"))
 		{
 			String[] lines = _text.split("\n");
-			_text = StringUtils.EMPTY;
+			_text = "";
 			
 			for (int i = 0; i < lines.length; i++)
 			{
@@ -241,29 +241,29 @@ public class Say2C extends L2GameClientPacket
 					}
 					else
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.THE_PERSON_IS_IN_A_MESSAGE_REFUSAL_MODE));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PERSON_IS_IN_MESSAGE_REFUSAL_MODE));
 					}
 				}
 				else if (receiver == null)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.S1_IS_NOT_CURRENTLY_LOGGED_IN).addString(_target), ActionFail.STATIC);
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_IS_NOT_CURRENTLY_LOGGED_IN).addString(_target), ActionFail.STATIC);
 				}
 				else
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_BEEN_BLOCKED_FROM_THE_CONTACT_YOU_SELECTED), ActionFail.STATIC);
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_BEEN_BLOCKED_FROM_CHATTING_WITH_THAT_CONTACT), ActionFail.STATIC);
 				}
 				break;
 			
 			case SHOUT:
 				if (activeChar.isCursedWeaponEquipped())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.SHOUT_AND_TRADE_CHATING_CANNOT_BE_USED_SHILE_POSSESSING_A_CURSED_WEAPON));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SHOUT_AND_TRADE_CHATTING_CANNOT_BE_USED_WHILE_POSSESSING_A_CURSED_WEAPON));
 					return;
 				}
 				
 				if (activeChar.isInObserverMode())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_CHAT_LOCALLY_WHILE_OBSERVING));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CHAT_WHILE_IN_OBSERVATION_MODE));
 					return;
 				}
 				
@@ -288,13 +288,13 @@ public class Say2C extends L2GameClientPacket
 			case TRADE:
 				if (activeChar.isCursedWeaponEquipped())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.SHOUT_AND_TRADE_CHATING_CANNOT_BE_USED_SHILE_POSSESSING_A_CURSED_WEAPON));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SHOUT_AND_TRADE_CHATTING_CANNOT_BE_USED_WHILE_POSSESSING_A_CURSED_WEAPON));
 					return;
 				}
 				
 				if (activeChar.isInObserverMode())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_CHAT_LOCALLY_WHILE_OBSERVING));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CHAT_WHILE_IN_OBSERVATION_MODE));
 					return;
 				}
 				
@@ -396,7 +396,7 @@ public class Say2C extends L2GameClientPacket
 			case COMMANDCHANNEL_ALL:
 				if (!activeChar.isInParty() || !activeChar.getParty().isInCommandChannel())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_AUTHORITY_TO_USE_THE_COMMAND_CHANNEL));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.COMMAND_CHAT_CANNOT_BE_USED_BECAUSE_YOU_ARE_NOT_AN_ALLIANCE_LEADER_OR_PARTY_LEADER));
 					return;
 				}
 				
@@ -406,14 +406,14 @@ public class Say2C extends L2GameClientPacket
 				}
 				else
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.ONLY_CHANNEL_OPENER_CAN_GIVE_ALL_COMMAND));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_THE_COMMAND_CHANNEL_CREATOR_CAN_USE_THE_RAID_LEADER_TEXT));
 				}
 				break;
 			
 			case COMMANDCHANNEL_COMMANDER:
 				if (!activeChar.isInParty() || !activeChar.getParty().isInCommandChannel())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_DO_NOT_HAVE_AUTHORITY_TO_USE_THE_COMMAND_CHANNEL));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.COMMAND_CHAT_CANNOT_BE_USED_BECAUSE_YOU_ARE_NOT_AN_ALLIANCE_LEADER_OR_PARTY_LEADER));
 					return;
 				}
 				
@@ -423,7 +423,7 @@ public class Say2C extends L2GameClientPacket
 				}
 				else
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.ONLY_A_PARTY_LEADER_CAN_ACCESS_THE_COMMAND_CHANNEL));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ONLY_A_PARTY_LEADER_CAN_ACCESS_THE_COMMAND_CHANNEL));
 				}
 				break;
 			
@@ -465,7 +465,7 @@ public class Say2C extends L2GameClientPacket
 			case PETITION_GM:
 				if (!PetitionManager.getInstance().isPlayerInConsultation(activeChar))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_CURRENTLY_NOT_IN_A_PETITION_CHAT));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_CURRENTLY_NOT_IN_A_PETITION_CHAT));
 					return;
 				}
 				
@@ -500,13 +500,13 @@ public class Say2C extends L2GameClientPacket
 			{
 				if (activeChar.isCursedWeaponEquipped())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.SHOUT_AND_TRADE_CHATTING_CANNOT_BE_USED_WHILE_POSSESSING_A_CURSED_WEAPON));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SHOUT_AND_TRADE_CHATTING_CANNOT_BE_USED_WHILE_POSSESSING_A_CURSED_WEAPON));
 					return;
 				}
 				
 				if (activeChar.isInObserverMode())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CANNOT_CHAT_LOCALLY_WHILE_OBSERVING));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_CHAT_WHILE_IN_OBSERVATION_MODE));
 					return;
 				}
 				
@@ -517,7 +517,7 @@ public class Say2C extends L2GameClientPacket
 				
 				if (activeChar.getWorldChatPoints() <= 0)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.TODAY_YOU_REACHED_THE_LIMIT_OF_USE_OF_THE_WORLD_CHAT__RESET_OF_THE_WORLD_USE_CHAT_IS_DONE_DAILY_AT_6_30_AM));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_SPENT_YOUR_WORLD_CHAT_QUOTA_FOR_THE_DAY_A_NEW_DAY_STARTS_EVERY_DAY_AT_18_30));
 					return;
 				}
 				
@@ -525,13 +525,13 @@ public class Say2C extends L2GameClientPacket
 				{
 					if (activeChar.getLevel() < Config.WORLD_CHAT_USE_MIN_LEVEL_PREMIUM)
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CAN_USE_THE_WORLD_CHAT_WITH_S1_LEVEL).addNumber(Config.WORLD_CHAT_USE_MIN_LEVEL_PREMIUM));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CAN_USE_WORLD_CHAT_FROM_LV_S1).addInt(Config.WORLD_CHAT_USE_MIN_LEVEL_PREMIUM));
 						return;
 					}
 				}
 				else if (activeChar.getLevel() < Config.WORLD_CHAT_USE_MIN_LEVEL)
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_CAN_USE_THE_WORLD_CHAT_WITH_S1_LEVEL).addNumber(Config.WORLD_CHAT_USE_MIN_LEVEL));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_CAN_USE_WORLD_CHAT_FROM_LV_S1).addInt(Config.WORLD_CHAT_USE_MIN_LEVEL));
 					return;
 				}
 				

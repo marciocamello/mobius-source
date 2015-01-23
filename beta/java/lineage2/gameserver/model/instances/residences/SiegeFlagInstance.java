@@ -18,7 +18,8 @@ import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.entity.events.objects.SiegeClanObject;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.pledge.Clan;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 
 import org.apache.commons.lang3.StringUtils;
@@ -129,7 +130,7 @@ public class SiegeFlagInstance extends NpcInstance
 		if ((System.currentTimeMillis() - _lastAnnouncedAttackedTime) > 120000)
 		{
 			_lastAnnouncedAttackedTime = System.currentTimeMillis();
-			_owner.getClan().broadcastToOnlineMembers(SystemMsg.YOUR_BASE_IS_BEING_ATTACKED);
+			_owner.getClan().broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.YOUR_BASE_IS_BEING_ATTACKED));
 		}
 		
 		super.onReduceCurrentHp(damage, attacker, skill, awake, standUp, directHp);

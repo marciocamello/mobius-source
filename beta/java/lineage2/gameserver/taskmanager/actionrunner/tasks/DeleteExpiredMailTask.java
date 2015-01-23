@@ -21,6 +21,7 @@ import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.mail.Mail;
 import lineage2.gameserver.network.serverpackets.ExNoticePostArrived;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -60,7 +61,7 @@ public class DeleteExpiredMailTask extends AutomaticTask
 					if (player != null)
 					{
 						player.sendPacket(ExNoticePostArrived.STATIC_TRUE);
-						player.sendPacket(new SystemMessage(SystemMessage.THE_MAIL_HAS_ARRIVED));
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_MAIL_HAS_ARRIVED));
 					}
 				}
 				else

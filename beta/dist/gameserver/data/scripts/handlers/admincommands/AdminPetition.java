@@ -18,6 +18,7 @@ import lineage2.gameserver.instancemanager.PetitionManager;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
 
 /**
@@ -73,19 +74,19 @@ public class AdminPetition implements IAdminCommandHandler, ScriptFile
 				
 				if (PetitionManager.getInstance().isPlayerInConsultation(activeChar))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.ALREADY_APPLIED_FOR_PETITION));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_ONLY_SUBMIT_ONE_PETITION_ACTIVE_AT_A_TIME));
 					return true;
 				}
 				
 				if (PetitionManager.getInstance().isPetitionInProcess(petitionId))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.PETITION_UNDER_PROCESS));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PETITION_IS_BEING_PROCESSED));
 					return true;
 				}
 				
 				if (!PetitionManager.getInstance().acceptPetition(activeChar, petitionId))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.NOT_UNDER_PETITION_CONSULTATION));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NOT_UNDER_PETITION_CONSULTATION));
 				}
 				break;
 			
@@ -98,7 +99,7 @@ public class AdminPetition implements IAdminCommandHandler, ScriptFile
 				
 				if (!PetitionManager.getInstance().rejectPetition(activeChar, petitionId))
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.FAILED_TO_CANCEL_PETITION_PLEASE_TRY_AGAIN_LATER));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.FAILED_TO_CANCEL_PETITION_PLEASE_TRY_AGAIN_LATER));
 				}
 				
 				PetitionManager.getInstance().sendPendingPetitionList(activeChar);
@@ -107,7 +108,7 @@ public class AdminPetition implements IAdminCommandHandler, ScriptFile
 			case "admin_reset_petitions":
 				if (PetitionManager.getInstance().isPetitionInProcess())
 				{
-					activeChar.sendPacket(new SystemMessage(SystemMessage.PETITION_UNDER_PROCESS));
+					activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOUR_PETITION_IS_BEING_PROCESSED));
 					return false;
 				}
 				
@@ -128,7 +129,7 @@ public class AdminPetition implements IAdminCommandHandler, ScriptFile
 					
 					if ((targetChar == null) || !(targetChar instanceof Player))
 					{
-						activeChar.sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+						activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INVALID_TARGET));
 						return false;
 					}
 					

@@ -7,10 +7,10 @@
 		<parameter name="return_point" value="-149379 255246 -80"/>
 		<on_time>
 			<on time="0">
-				<npc_say npc="32609" chat="SHOUT" range="-1" text="AIRSHIP_IS_ARRIVED_IT_WILL_DEPART_TO_GRACIA_IN_1_MINUTE"/>
+				<npc_say npc="32609" chat="SHOUT" range="-1" text="THE_REGULARLY_SCHEDULED_AIRSHIP_HAS_ARRIVED_IT_WILL_DEPART_FOR_THE_GRACIA_CONTINENT_IN_1_MINUTE"/>
 			</on>
 			<on time="60">
-				<npc_say npc="32609" chat="SHOUT" range="-1" text="AIRSHIP_IS_DEPARTED_TO_GRACIA"/>
+				<npc_say npc="32609" chat="SHOUT" range="-1" text="THE_REGULARLY_SCHEDULED_AIRSHIP_THAT_FLIES_TO_THE_GRACIA_CONTINENT_HAS_DEPARTED"/>
 				<start name="event"/>
 			</on>
 		</on_time>
@@ -32,10 +32,10 @@
 		<parameter name="return_point" value="-186563 243590 2608"/>
 		<on_time>
 			<on time="0">
-				<npc_say npc="32607" chat="SHOUT" range="-1" text="AIRSHIP_IS_ARRIVED_IT_WILL_DEPART_TO_ADEN_IN_1_MINUTE"/>
+				<npc_say npc="32607" chat="SHOUT" range="-1" text="THE_REGULARLY_SCHEDULED_AIRSHIP_HAS_ARRIVED_IT_WILL_DEPART_FOR_THE_ADEN_CONTINENT_IN_1_MINUTE"/>
 			</on>
 			<on time="60">
-				<npc_say npc="32607" chat="SHOUT" range="-1" text="AIRSHIP_IS_DEPARTED_TO_ADEN"/>
+				<npc_say npc="32607" chat="SHOUT" range="-1" text="THE_REGULARLY_SCHEDULED_AIRSHIP_THAT_FLIES_TO_THE_ADEN_CONTINENT_HAS_DEPARTED"/>
 				<start name="event"/>
 			</on>
 		</on_time>

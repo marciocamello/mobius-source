@@ -16,7 +16,7 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.SocialAction;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.templates.npc.RandomActions;
 import lineage2.gameserver.templates.npc.WalkerRoute;
@@ -155,7 +155,7 @@ public class NpcAI extends CharacterAI
 				});
 			}
 			
-			NpcString phrase = route.getPhrase();
+			NpcStringId phrase = route.getPhrase();
 			
 			if (phrase != null)
 			{
@@ -316,7 +316,7 @@ public class NpcAI extends CharacterAI
 			});
 		}
 		
-		NpcString phrase = action.getPhrase();
+		NpcStringId phrase = action.getPhrase();
 		
 		if (phrase != null)
 		{

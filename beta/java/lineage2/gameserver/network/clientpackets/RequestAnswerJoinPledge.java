@@ -23,8 +23,8 @@ import lineage2.gameserver.network.serverpackets.JoinPledge;
 import lineage2.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import lineage2.gameserver.network.serverpackets.PledgeShowMemberListAdd;
 import lineage2.gameserver.network.serverpackets.PledgeSkillList;
-import lineage2.gameserver.network.serverpackets.SystemMessage2;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 
 /**
  * @author Mobius
@@ -82,7 +82,7 @@ public class RequestAnswerJoinPledge extends L2GameClientPacket
 		if (requestor == null)
 		{
 			request.cancel();
-			player.sendPacket(SystemMsg.THAT_PLAYER_IS_NOT_ONLINE);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE));
 			player.sendActionFailed();
 			return;
 		}
@@ -106,14 +106,14 @@ public class RequestAnswerJoinPledge extends L2GameClientPacket
 		if (_response == 0)
 		{
 			request.cancel();
-			requestor.sendPacket(new SystemMessage2(SystemMsg.S1_DECLINED_YOUR_CLAN_INVITATION).addName(player));
+			requestor.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_DECLINED_YOUR_CLAN_INVITATION).addPcName(player));
 			return;
 		}
 		
 		if (!player.canJoinClan())
 		{
 			request.cancel();
-			player.sendPacket(SystemMsg.AFTER_LEAVING_OR_HAVING_BEEN_DISMISSED_FROM_A_CLAN_YOU_MUST_WAIT_AT_LEAST_A_DAY_BEFORE_JOINING_ANOTHER_CLAN);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.AFTER_LEAVING_OR_HAVING_BEEN_DISMISSED_FROM_A_CLAN_YOU_MUST_WAIT_AT_LEAST_A_DAY_BEFORE_JOINING_ANOTHER_CLAN));
 			return;
 		}
 		
@@ -141,8 +141,8 @@ public class RequestAnswerJoinPledge extends L2GameClientPacket
 			
 			member.setPowerGrade(clan.getAffiliationRank(player.getPledgeType()));
 			clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListAdd(member), player);
-			clan.broadcastToOnlineMembers(new SystemMessage2(SystemMsg.S1_HAS_JOINED_THE_CLAN).addString(player.getName()), new PledgeShowInfoUpdate(clan));
-			player.sendPacket(SystemMsg.ENTERED_THE_CLAN);
+			clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_JOINED_THE_CLAN).addString(player.getName()), new PledgeShowInfoUpdate(clan));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.ENTERED_THE_CLAN));
 			player.sendPacket(player.getClan().listAll());
 			player.setLeaveClanTime(0);
 			player.updatePledgeClass();

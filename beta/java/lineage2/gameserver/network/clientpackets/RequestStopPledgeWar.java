@@ -17,7 +17,7 @@ import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.UnitMember;
 import lineage2.gameserver.network.serverpackets.ActionFail;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.tables.ClanTable;
 
 /**
@@ -59,7 +59,7 @@ public class RequestStopPledgeWar extends L2GameClientPacket
 		
 		if (!((activeChar.getClanPrivileges() & Clan.CP_CL_CLAN_WAR) == Clan.CP_CL_CLAN_WAR))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT), ActionFail.STATIC);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT), ActionFail.STATIC);
 			return;
 		}
 		
@@ -67,13 +67,13 @@ public class RequestStopPledgeWar extends L2GameClientPacket
 		
 		if (clan == null)
 		{
-			activeChar.sendPacket(SystemMsg.CLAN_NAME_IS_INVALID, ActionFail.STATIC);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.CLAN_NAME_IS_INVALID), ActionFail.STATIC);
 			return;
 		}
 		
 		if (!playerClan.isAtWarWith(clan.getClanId()))
 		{
-			activeChar.sendPacket(new SystemMessage(SystemMessage.YOU_HAVE_NOT_DECLARED_A_CLAN_WAR_TO_S1_CLAN), ActionFail.STATIC);
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_NOT_DECLARED_A_CLAN_WAR_AGAINST_THE_CLAN_S1), ActionFail.STATIC);
 			return;
 		}
 		
@@ -81,7 +81,7 @@ public class RequestStopPledgeWar extends L2GameClientPacket
 		{
 			if (mbr.isOnline() && mbr.getPlayer().isInCombat())
 			{
-				activeChar.sendPacket(new SystemMessage(SystemMessage.A_CEASE_FIRE_DURING_A_CLAN_WAR_CAN_NOT_BE_CALLED_WHILE_MEMBERS_OF_YOUR_CLAN_ARE_ENGAGED_IN_BATTLE), ActionFail.STATIC);
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.A_CEASE_FIRE_DURING_A_CLAN_WAR_CAN_NOT_BE_CALLED_WHILE_MEMBERS_OF_YOUR_CLAN_ARE_ENGAGED_IN_BATTLE), ActionFail.STATIC);
 				return;
 			}
 		}

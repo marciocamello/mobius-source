@@ -28,7 +28,7 @@ import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.quest.QuestState;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import lineage2.gameserver.templates.item.ItemTemplate;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.TimeUtils;
@@ -242,7 +242,7 @@ public final class BanditMessagerInstance extends NpcInstance
 				}
 				else
 				{
-					msg.replaceNpcString("%clan_" + i + "%", NpcString.__UNREGISTERED__);
+					msg.replaceNpcString("%clan_" + i + "%", NpcStringId.UNREGISTERED24);
 				}
 				
 				msg.replace("%clan_count_" + i + "%", siegeClan == null ? StringUtils.EMPTY : String.valueOf(siegeClan.getPlayers().size()));

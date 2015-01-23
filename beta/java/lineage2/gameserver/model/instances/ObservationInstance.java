@@ -20,7 +20,8 @@ import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.Zone;
-import lineage2.gameserver.network.serverpackets.components.SystemMsg;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.templates.npc.NpcTemplate;
 import lineage2.gameserver.utils.Location;
 
@@ -76,7 +77,7 @@ public final class ObservationInstance extends NpcInstance
 				}
 			}
 			
-			player.sendPacket(SystemMsg.OBSERVATION_IS_ONLY_POSSIBLE_DURING_A_SIEGE);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.OBSERVATION_IS_ONLY_POSSIBLE_DURING_A_SIEGE));
 		}
 		else if (command.startsWith("observe"))
 		{
@@ -127,7 +128,7 @@ public final class ObservationInstance extends NpcInstance
 		
 		if (!player.reduceAdena(cost, true))
 		{
-			player.sendPacket(SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA));
 			player.sendActionFailed();
 			return;
 		}

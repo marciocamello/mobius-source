@@ -1,7 +1,7 @@
 package lineage2.gameserver.templates.npc;
 
 import lineage2.commons.util.Rnd;
-import lineage2.gameserver.network.serverpackets.components.NpcString;
+import lineage2.gameserver.network.serverpackets.components.NpcStringId;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 public class RandomActions
@@ -39,11 +39,11 @@ public class RandomActions
 	public static class Action
 	{
 		private final int _id;
-		private final NpcString _phrase;
+		private final NpcStringId _phrase;
 		private final int _socialActionId;
 		private final int _delay;
 		
-		public Action(int id, NpcString phrase, int socialActionId, int delay)
+		public Action(int id, NpcStringId phrase, int socialActionId, int delay)
 		{
 			_id = id;
 			_phrase = phrase;
@@ -56,7 +56,7 @@ public class RandomActions
 			return _id;
 		}
 		
-		public NpcString getPhrase()
+		public NpcStringId getPhrase()
 		{
 			return _phrase;
 		}
