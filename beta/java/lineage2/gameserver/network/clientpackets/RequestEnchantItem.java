@@ -376,7 +376,6 @@ public class RequestEnchantItem extends AbstractEnchantPacket
 		finally
 		{
 			inventory.writeUnlock();
-			player.setEnchantScroll(null);
 			player.updateStats();
 		}
 	}
