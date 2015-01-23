@@ -31,7 +31,7 @@ public class Theodore extends DefaultAI
 	public Theodore(NpcInstance actor)
 	{
 		super(actor);
-		getActor().setRandomWalk(false);
+		actor.setRandomWalk(false);
 	}
 	
 	@Override
