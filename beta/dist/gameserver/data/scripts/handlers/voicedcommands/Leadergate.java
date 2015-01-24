@@ -12,9 +12,9 @@
  */
 package handlers.voicedcommands;
 
-import lineage2.gameserver.handlers.IVoicedCommandHandler;
 import lineage2.gameserver.handlers.VoicedCommandHandler;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.interfaces.IVoicedCommandHandler;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.skills.EffectType;
 

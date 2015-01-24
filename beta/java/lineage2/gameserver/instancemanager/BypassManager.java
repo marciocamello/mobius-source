@@ -16,8 +16,8 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import lineage2.gameserver.handlers.ICommunityBoardHandler;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.interfaces.ICommunityBoardHandler;
 import lineage2.gameserver.utils.Log;
 import lineage2.gameserver.utils.Strings;
 

@@ -13,12 +13,12 @@
 package handlers.admincommands;
 
 import lineage2.gameserver.handlers.AdminCommandHandler;
-import lineage2.gameserver.handlers.IAdminCommandHandler;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.Experience;
 import lineage2.gameserver.model.instances.PetInstance;
+import lineage2.gameserver.model.interfaces.IAdminCommandHandler;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;
@@ -79,7 +79,7 @@ public class AdminLevel implements IAdminCommandHandler, ScriptFile
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
+	 * @see lineage2.gameserver.model.interfaces.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
 	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
@@ -150,7 +150,7 @@ public class AdminLevel implements IAdminCommandHandler, ScriptFile
 	/**
 	 * Method getAdminCommandEnum.
 	 * @return String[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
+	 * @see lineage2.gameserver.model.interfaces.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
 	public String[] getAdminCommandList()

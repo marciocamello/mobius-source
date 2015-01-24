@@ -26,7 +26,6 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.ai.CtrlIntention;
 import lineage2.gameserver.database.DatabaseFactory;
-import lineage2.gameserver.handlers.IVoicedCommandHandler;
 import lineage2.gameserver.handlers.VoicedCommandHandler;
 import lineage2.gameserver.instancemanager.CoupleManager;
 import lineage2.gameserver.instancemanager.ReflectionManager;
@@ -36,6 +35,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.entity.Couple;
+import lineage2.gameserver.model.interfaces.IVoicedCommandHandler;
 import lineage2.gameserver.network.serverpackets.ConfirmDlg;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SetupGauge;
@@ -124,7 +124,7 @@ public class Wedding implements IVoicedCommandHandler, ScriptFile
 	 * @param activeChar Player
 	 * @param target String
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 * @see lineage2.gameserver.model.interfaces.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
 	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player activeChar, String target)
@@ -447,7 +447,7 @@ public class Wedding implements IVoicedCommandHandler, ScriptFile
 	/**
 	 * Method getVoicedCommandList.
 	 * @return String[]
-	 * @see lineage2.gameserver.handlers.IVoicedCommandHandler#getVoicedCommandList()
+	 * @see lineage2.gameserver.model.interfaces.IVoicedCommandHandler#getVoicedCommandList()
 	 */
 	@Override
 	public String[] getVoicedCommandList()

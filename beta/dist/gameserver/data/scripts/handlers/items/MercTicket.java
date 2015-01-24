@@ -47,7 +47,7 @@ public final class MercTicket extends ScriptItemHandler
 	 * @param item ItemInstance
 	 * @param ctrl boolean
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 * @see lineage2.gameserver.model.interfaces.IItemHandler#useItem(Playable, ItemInstance, boolean)
 	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
@@ -61,7 +61,7 @@ public final class MercTicket extends ScriptItemHandler
 	 * @param item ItemInstance
 	 * @param count long
 	 * @param loc Location
-	 * @see lineage2.gameserver.handlers.IItemHandler#dropItem(Player, ItemInstance, long, Location)
+	 * @see lineage2.gameserver.model.interfaces.IItemHandler#dropItem(Player, ItemInstance, long, Location)
 	 */
 	@Override
 	public void dropItem(Player player, ItemInstance item, long count, Location loc)
@@ -132,7 +132,7 @@ public final class MercTicket extends ScriptItemHandler
 	 * @param playable Playable
 	 * @param item ItemInstance
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IItemHandler#pickupItem(Playable, ItemInstance)
+	 * @see lineage2.gameserver.model.interfaces.IItemHandler#pickupItem(Playable, ItemInstance)
 	 */
 	@Override
 	public boolean pickupItem(Playable playable, ItemInstance item)
@@ -172,7 +172,7 @@ public final class MercTicket extends ScriptItemHandler
 	/**
 	 * Method getItemIds.
 	 * @return int[]
-	 * @see lineage2.gameserver.handlers.IItemHandler#getItemIds()
+	 * @see lineage2.gameserver.model.interfaces.IItemHandler#getItemIds()
 	 */
 	@Override
 	public final int[] getItemIds()

@@ -12,9 +12,9 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.handlers.IUserCommandHandler;
 import lineage2.gameserver.handlers.UserCommandHandler;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.interfaces.IUserCommandHandler;
 
 /**
  * @author Mobius

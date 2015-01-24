@@ -13,11 +13,11 @@
 package handlers.voicedcommands;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.handlers.IVoicedCommandHandler;
 import lineage2.gameserver.handlers.VoicedCommandHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
+import lineage2.gameserver.model.interfaces.IVoicedCommandHandler;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 
@@ -38,7 +38,7 @@ public class Offline extends Functions implements IVoicedCommandHandler, ScriptF
 	 * @param activeChar Player
 	 * @param args String
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 * @see lineage2.gameserver.model.interfaces.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
 	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player activeChar, String args)
@@ -102,7 +102,7 @@ public class Offline extends Functions implements IVoicedCommandHandler, ScriptF
 	/**
 	 * Method getVoicedCommandList.
 	 * @return String[]
-	 * @see lineage2.gameserver.handlers.IVoicedCommandHandler#getVoicedCommandList()
+	 * @see lineage2.gameserver.model.interfaces.IVoicedCommandHandler#getVoicedCommandList()
 	 */
 	@Override
 	public String[] getVoicedCommandList()

@@ -28,9 +28,9 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.database.mysql;
-import lineage2.gameserver.handlers.IVoicedCommandHandler;
 import lineage2.gameserver.handlers.VoicedCommandHandler;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.interfaces.IVoicedCommandHandler;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Util;
@@ -297,7 +297,7 @@ public final class VoteManager extends Functions implements IVoicedCommandHandle
 	 * @param activeChar Player
 	 * @param args String
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 * @see lineage2.gameserver.model.interfaces.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
 	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player activeChar, String args)

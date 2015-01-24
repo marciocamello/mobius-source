@@ -22,10 +22,10 @@ import lineage2.commons.dao.JdbcEntityState;
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.dao.ItemsDAO;
 import lineage2.gameserver.database.DatabaseFactory;
-import lineage2.gameserver.handlers.IVoicedCommandHandler;
 import lineage2.gameserver.handlers.VoicedCommandHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
+import lineage2.gameserver.model.interfaces.IVoicedCommandHandler;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.ItemInstance.ItemLocation;
 import lineage2.gameserver.scripts.Functions;
@@ -49,7 +49,7 @@ public class Repair extends Functions implements IVoicedCommandHandler, ScriptFi
 	/**
 	 * Method getVoicedCommandList.
 	 * @return String[]
-	 * @see lineage2.gameserver.handlers.IVoicedCommandHandler#getVoicedCommandList()
+	 * @see lineage2.gameserver.model.interfaces.IVoicedCommandHandler#getVoicedCommandList()
 	 */
 	@Override
 	public String[] getVoicedCommandList()
@@ -63,7 +63,7 @@ public class Repair extends Functions implements IVoicedCommandHandler, ScriptFi
 	 * @param activeChar Player
 	 * @param target String
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 * @see lineage2.gameserver.model.interfaces.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
 	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player activeChar, String target)

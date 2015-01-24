@@ -19,7 +19,6 @@ import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.enums.InvisibleType;
 import lineage2.gameserver.handlers.AdminCommandHandler;
-import lineage2.gameserver.handlers.IAdminCommandHandler;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.GameObject;
@@ -28,6 +27,7 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.World;
+import lineage2.gameserver.model.interfaces.IAdminCommandHandler;
 import lineage2.gameserver.network.serverpackets.Earthquake;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SkillCoolTime;
@@ -74,7 +74,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
+	 * @see lineage2.gameserver.model.interfaces.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
 	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
@@ -563,7 +563,7 @@ public class AdminEffects implements IAdminCommandHandler, ScriptFile
 	/**
 	 * Method getAdminCommandEnum.
 	 * @return String[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
+	 * @see lineage2.gameserver.model.interfaces.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
 	public String[] getAdminCommandList()

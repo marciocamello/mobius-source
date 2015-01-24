@@ -12,8 +12,8 @@
  */
 package handlers.petition;
 
-import lineage2.gameserver.handlers.IPetitionHandler;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.interfaces.IPetitionHandler;
 
 /**
  * @author Mobius
@@ -33,7 +33,7 @@ public final class SimplePetitionHandler implements IPetitionHandler
 	 * @param player Player
 	 * @param id int
 	 * @param txt String
-	 * @see lineage2.gameserver.handlers.IPetitionHandler#handle(Player, int, String)
+	 * @see lineage2.gameserver.model.interfaces.IPetitionHandler#handle(Player, int, String)
 	 */
 	@Override
 	public void handle(Player player, int id, String txt)

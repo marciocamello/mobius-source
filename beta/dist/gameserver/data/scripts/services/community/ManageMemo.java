@@ -24,8 +24,8 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.database.DatabaseFactory;
 import lineage2.gameserver.handlers.CommunityBoardManager;
-import lineage2.gameserver.handlers.ICommunityBoardHandler;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.interfaces.ICommunityBoardHandler;
 import lineage2.gameserver.network.serverpackets.ShowBoard;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
@@ -102,7 +102,7 @@ public final class ManageMemo implements ScriptFile, ICommunityBoardHandler
 	 * Method onBypassCommand.
 	 * @param player Player
 	 * @param bypass String
-	 * @see lineage2.gameserver.handlers.ICommunityBoardHandler#onBypassCommand(Player, String)
+	 * @see lineage2.gameserver.model.interfaces.ICommunityBoardHandler#onBypassCommand(Player, String)
 	 */
 	@Override
 	public void onBypassCommand(Player player, String bypass)

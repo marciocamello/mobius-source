@@ -13,11 +13,11 @@
 package handlers.voicedcommands;
 
 import lineage2.gameserver.data.htm.HtmCache;
-import lineage2.gameserver.handlers.IVoicedCommandHandler;
 import lineage2.gameserver.handlers.VoicedCommandHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.base.Experience;
+import lineage2.gameserver.model.interfaces.IVoicedCommandHandler;
 import lineage2.gameserver.network.serverpackets.RadarControl;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
@@ -41,7 +41,7 @@ public class Help extends Functions implements IVoicedCommandHandler, ScriptFile
 	 * @param activeChar Player
 	 * @param args String
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 * @see lineage2.gameserver.model.interfaces.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
 	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player activeChar, String args)
@@ -131,7 +131,7 @@ public class Help extends Functions implements IVoicedCommandHandler, ScriptFile
 	/**
 	 * Method getVoicedCommandList.
 	 * @return String[]
-	 * @see lineage2.gameserver.handlers.IVoicedCommandHandler#getVoicedCommandList()
+	 * @see lineage2.gameserver.model.interfaces.IVoicedCommandHandler#getVoicedCommandList()
 	 */
 	@Override
 	public String[] getVoicedCommandList()

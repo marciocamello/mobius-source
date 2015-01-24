@@ -16,6 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import lineage2.gameserver.Config;
+import lineage2.gameserver.model.interfaces.ICommunityBoardHandler;
 import lineage2.gameserver.templates.StatsSet;
 
 import org.slf4j.Logger;

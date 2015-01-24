@@ -10,7 +10,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package lineage2.gameserver.handlers;
+package lineage2.gameserver.model.interfaces;
 
 import lineage2.gameserver.model.Player;
 
@@ -18,19 +18,13 @@ import lineage2.gameserver.model.Player;
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public interface IUserCommandHandler
+public interface IPetitionHandler
 {
 	/**
-	 * Method useUserCommand.
+	 * Method handle.
+	 * @param player Player
 	 * @param id int
-	 * @param activeChar Player
-	 * @return boolean
+	 * @param txt String
 	 */
-	public boolean useUserCommand(int id, Player activeChar);
-	
-	/**
-	 * Method getUserCommandList.
-	 * @return int[]
-	 */
-	public int[] getUserCommandList();
+	void handle(Player player, int id, String txt);
 }

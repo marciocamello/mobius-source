@@ -13,9 +13,9 @@
 package handlers.bypass;
 
 import lineage2.gameserver.handlers.BypassHandler;
-import lineage2.gameserver.handlers.IBypassHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
+import lineage2.gameserver.model.interfaces.IBypassHandler;
 import lineage2.gameserver.network.serverpackets.ExShowUsmVideo;
 import lineage2.gameserver.scripts.ScriptFile;
 
@@ -27,7 +27,7 @@ public final class VideoCrystalCaverns implements IBypassHandler, ScriptFile
 	/**
 	 * Method getBypasses.
 	 * @return String[]
-	 * @see lineage2.gameserver.handlers.IBypassHandler#getBypasses()
+	 * @see lineage2.gameserver.model.interfaces.IBypassHandler#getBypasses()
 	 */
 	@Override
 	public String[] getBypasses()
@@ -43,7 +43,7 @@ public final class VideoCrystalCaverns implements IBypassHandler, ScriptFile
 	 * @param npc NpcInstance
 	 * @param player Player
 	 * @param command String
-	 * @see lineage2.gameserver.handlers.IBypassHandler#onBypassFeedback(NpcInstance, Player, String)
+	 * @see lineage2.gameserver.model.interfaces.IBypassHandler#onBypassFeedback(NpcInstance, Player, String)
 	 */
 	@Override
 	public void onBypassFeedback(NpcInstance npc, Player player, String command)

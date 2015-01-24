@@ -18,10 +18,10 @@ import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
 import lineage2.gameserver.enums.AcquireType;
 import lineage2.gameserver.handlers.BypassHandler;
-import lineage2.gameserver.handlers.IBypassHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SkillLearn;
 import lineage2.gameserver.model.instances.NpcInstance;
+import lineage2.gameserver.model.interfaces.IBypassHandler;
 import lineage2.gameserver.network.serverpackets.AcquireSkillDone;
 import lineage2.gameserver.network.serverpackets.AcquireSkillList;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
@@ -36,7 +36,7 @@ public final class TransformationSkillList implements IBypassHandler, ScriptFile
 	/**
 	 * Method getBypasses.
 	 * @return String[]
-	 * @see lineage2.gameserver.handlers.IBypassHandler#getBypasses()
+	 * @see lineage2.gameserver.model.interfaces.IBypassHandler#getBypasses()
 	 */
 	@Override
 	public String[] getBypasses()
@@ -52,7 +52,7 @@ public final class TransformationSkillList implements IBypassHandler, ScriptFile
 	 * @param npc NpcInstance
 	 * @param player Player
 	 * @param command String
-	 * @see lineage2.gameserver.handlers.IBypassHandler#onBypassFeedback(NpcInstance, Player, String)
+	 * @see lineage2.gameserver.model.interfaces.IBypassHandler#onBypassFeedback(NpcInstance, Player, String)
 	 */
 	@Override
 	public void onBypassFeedback(NpcInstance npc, Player player, String command)

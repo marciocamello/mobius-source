@@ -15,6 +15,7 @@ package lineage2.gameserver.handlers;
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
+import lineage2.gameserver.model.interfaces.IItemHandler;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
 /**

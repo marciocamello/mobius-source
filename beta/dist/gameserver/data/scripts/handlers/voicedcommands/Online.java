@@ -13,10 +13,10 @@
 package handlers.voicedcommands;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.handlers.IVoicedCommandHandler;
 import lineage2.gameserver.handlers.VoicedCommandHandler;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.interfaces.IVoicedCommandHandler;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.FakePlayersTable;
@@ -35,7 +35,7 @@ public class Online extends Functions implements IVoicedCommandHandler, ScriptFi
 	/**
 	 * Method getVoicedCommandList.
 	 * @return String[]
-	 * @see lineage2.gameserver.handlers.IVoicedCommandHandler#getVoicedCommandList()
+	 * @see lineage2.gameserver.model.interfaces.IVoicedCommandHandler#getVoicedCommandList()
 	 */
 	@Override
 	public String[] getVoicedCommandList()
@@ -49,7 +49,7 @@ public class Online extends Functions implements IVoicedCommandHandler, ScriptFi
 	 * @param activeChar Player
 	 * @param target String
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 * @see lineage2.gameserver.model.interfaces.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
 	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player activeChar, String target)

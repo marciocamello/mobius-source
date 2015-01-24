@@ -12,10 +12,10 @@
  */
 package handlers.items;
 
-import lineage2.gameserver.handlers.IItemHandler;
 import lineage2.gameserver.handlers.ItemHandler;
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.interfaces.IItemHandler;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.utils.Location;
@@ -33,7 +33,7 @@ public abstract class ScriptItemHandler implements ScriptFile, IItemHandler
 	 * @param item ItemInstance
 	 * @param count long
 	 * @param loc Location
-	 * @see lineage2.gameserver.handlers.IItemHandler#dropItem(Player, ItemInstance, long, Location)
+	 * @see lineage2.gameserver.model.interfaces.IItemHandler#dropItem(Player, ItemInstance, long, Location)
 	 */
 	@Override
 	public void dropItem(Player player, ItemInstance item, long count, Location loc)
@@ -63,7 +63,7 @@ public abstract class ScriptItemHandler implements ScriptFile, IItemHandler
 	 * @param playable Playable
 	 * @param item ItemInstance
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IItemHandler#pickupItem(Playable, ItemInstance)
+	 * @see lineage2.gameserver.model.interfaces.IItemHandler#pickupItem(Playable, ItemInstance)
 	 */
 	@Override
 	public boolean pickupItem(Playable playable, ItemInstance item)

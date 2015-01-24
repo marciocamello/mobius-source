@@ -16,6 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import lineage2.commons.data.xml.AbstractHolder;
+import lineage2.gameserver.model.interfaces.IVoicedCommandHandler;
 
 /**
  * @author Mobius

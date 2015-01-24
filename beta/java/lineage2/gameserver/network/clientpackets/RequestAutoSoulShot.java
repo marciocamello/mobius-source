@@ -12,8 +12,8 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
-import lineage2.gameserver.handlers.IItemHandler;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.interfaces.IItemHandler;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.ExAutoSoulShot;
 import lineage2.gameserver.network.serverpackets.SystemMessage;

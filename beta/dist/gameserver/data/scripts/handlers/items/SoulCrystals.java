@@ -58,7 +58,7 @@ public final class SoulCrystals extends ScriptItemHandler
 	 * @param item ItemInstance
 	 * @param ctrl boolean
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IItemHandler#useItem(Playable, ItemInstance, boolean)
+	 * @see lineage2.gameserver.model.interfaces.IItemHandler#useItem(Playable, ItemInstance, boolean)
 	 */
 	@Override
 	public boolean useItem(Playable playable, ItemInstance item, boolean ctrl)
@@ -134,7 +134,7 @@ public final class SoulCrystals extends ScriptItemHandler
 	/**
 	 * Method getItemIds.
 	 * @return int[]
-	 * @see lineage2.gameserver.handlers.IItemHandler#getItemIds()
+	 * @see lineage2.gameserver.model.interfaces.IItemHandler#getItemIds()
 	 */
 	@Override
 	public final int[] getItemIds()

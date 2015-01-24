@@ -13,9 +13,9 @@
 package handlers.voicedcommands;
 
 import lineage2.gameserver.data.htm.HtmCache;
-import lineage2.gameserver.handlers.IVoicedCommandHandler;
 import lineage2.gameserver.handlers.VoicedCommandHandler;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.interfaces.IVoicedCommandHandler;
 import lineage2.gameserver.network.loginservercon.LoginServerCommunication;
 import lineage2.gameserver.network.loginservercon.gspackets.ChangePassword;
 import lineage2.gameserver.scripts.Functions;
@@ -39,7 +39,7 @@ public class Password extends Functions implements IVoicedCommandHandler, Script
 	 * @param activeChar Player
 	 * @param args String
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 * @see lineage2.gameserver.model.interfaces.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
 	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player activeChar, String args)

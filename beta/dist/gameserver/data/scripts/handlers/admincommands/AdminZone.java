@@ -17,13 +17,13 @@ import java.util.List;
 
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
 import lineage2.gameserver.handlers.AdminCommandHandler;
-import lineage2.gameserver.handlers.IAdminCommandHandler;
 import lineage2.gameserver.instancemanager.MapRegionManager;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.Zone;
 import lineage2.gameserver.model.entity.residence.Castle;
+import lineage2.gameserver.model.interfaces.IAdminCommandHandler;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.mapregion.DomainArea;
 
@@ -49,7 +49,7 @@ public class AdminZone implements IAdminCommandHandler, ScriptFile
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
+	 * @see lineage2.gameserver.model.interfaces.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
 	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
@@ -126,7 +126,7 @@ public class AdminZone implements IAdminCommandHandler, ScriptFile
 	/**
 	 * Method getAdminCommandEnum.
 	 * @return String[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
+	 * @see lineage2.gameserver.model.interfaces.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
 	public String[] getAdminCommandList()

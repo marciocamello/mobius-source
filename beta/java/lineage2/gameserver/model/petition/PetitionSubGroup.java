@@ -12,7 +12,7 @@
  */
 package lineage2.gameserver.model.petition;
 
-import lineage2.gameserver.handlers.IPetitionHandler;
+import lineage2.gameserver.model.interfaces.IPetitionHandler;
 import lineage2.gameserver.scripts.Scripts;
 
 /**

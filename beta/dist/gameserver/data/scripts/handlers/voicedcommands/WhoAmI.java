@@ -17,10 +17,10 @@ import java.util.Locale;
 
 import lineage2.gameserver.data.htm.HtmCache;
 import lineage2.gameserver.enums.Element;
-import lineage2.gameserver.handlers.IVoicedCommandHandler;
 import lineage2.gameserver.handlers.VoicedCommandHandler;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.interfaces.IVoicedCommandHandler;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.scripts.ScriptFile;
@@ -46,7 +46,7 @@ public class WhoAmI implements IVoicedCommandHandler, ScriptFile
 	/**
 	 * Method getVoicedCommandList.
 	 * @return String[]
-	 * @see lineage2.gameserver.handlers.IVoicedCommandHandler#getVoicedCommandList()
+	 * @see lineage2.gameserver.model.interfaces.IVoicedCommandHandler#getVoicedCommandList()
 	 */
 	@Override
 	public String[] getVoicedCommandList()
@@ -60,7 +60,7 @@ public class WhoAmI implements IVoicedCommandHandler, ScriptFile
 	 * @param player Player
 	 * @param args String
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
+	 * @see lineage2.gameserver.model.interfaces.IVoicedCommandHandler#useVoicedCommand(String, Player, String)
 	 */
 	@Override
 	public boolean useVoicedCommand(String command, Player player, String args)

@@ -14,8 +14,8 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.Config;
 import lineage2.gameserver.handlers.CommunityBoardManager;
-import lineage2.gameserver.handlers.ICommunityBoardHandler;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.interfaces.ICommunityBoardHandler;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 

@@ -18,13 +18,13 @@ import java.util.regex.Pattern;
 
 import lineage2.gameserver.Config;
 import lineage2.gameserver.cache.ItemInfoCache;
-import lineage2.gameserver.handlers.IVoicedCommandHandler;
 import lineage2.gameserver.handlers.VoicedCommandHandler;
 import lineage2.gameserver.instancemanager.PetitionManager;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
 import lineage2.gameserver.model.entity.olympiad.OlympiadGame;
+import lineage2.gameserver.model.interfaces.IVoicedCommandHandler;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.matching.MatchingRoom;
 import lineage2.gameserver.network.serverpackets.ActionFail;

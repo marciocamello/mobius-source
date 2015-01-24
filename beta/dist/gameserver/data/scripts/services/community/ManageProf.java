@@ -19,10 +19,10 @@ import lineage2.gameserver.enums.ClassId;
 import lineage2.gameserver.enums.ClassLevel;
 import lineage2.gameserver.enums.SubClassType;
 import lineage2.gameserver.handlers.CommunityBoardManager;
-import lineage2.gameserver.handlers.ICommunityBoardHandler;
 import lineage2.gameserver.instancemanager.AwakingManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SubClass;
+import lineage2.gameserver.model.interfaces.ICommunityBoardHandler;
 import lineage2.gameserver.network.serverpackets.ExSubjobInfo;
 import lineage2.gameserver.network.serverpackets.ShowBoard;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
@@ -89,7 +89,7 @@ public final class ManageProf implements ScriptFile, ICommunityBoardHandler
 	/**
 	 * Method getBypassCommands.
 	 * @return String[]
-	 * @see lineage2.gameserver.handlers.ICommunityBoardHandler#getBypassCommands()
+	 * @see lineage2.gameserver.model.interfaces.ICommunityBoardHandler#getBypassCommands()
 	 */
 	@Override
 	public String[] getBypassCommands()
@@ -101,7 +101,7 @@ public final class ManageProf implements ScriptFile, ICommunityBoardHandler
 	 * Method onBypassCommand.
 	 * @param player Player
 	 * @param bypass String
-	 * @see lineage2.gameserver.handlers.ICommunityBoardHandler#onBypassCommand(Player, String)
+	 * @see lineage2.gameserver.model.interfaces.ICommunityBoardHandler#onBypassCommand(Player, String)
 	 */
 	@Override
 	public void onBypassCommand(Player player, String bypass)
@@ -176,7 +176,7 @@ public final class ManageProf implements ScriptFile, ICommunityBoardHandler
 	 * @param arg3 String
 	 * @param arg4 String
 	 * @param arg5 String
-	 * @see lineage2.gameserver.handlers.ICommunityBoardHandler#onWriteCommand(Player, String, String, String, String, String, String)
+	 * @see lineage2.gameserver.model.interfaces.ICommunityBoardHandler#onWriteCommand(Player, String, String, String, String, String, String)
 	 */
 	@Override
 	public void onWriteCommand(Player player, String bypass, String arg1, String arg2, String arg3, String arg4, String arg5)

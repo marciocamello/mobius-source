@@ -10,28 +10,29 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package lineage2.gameserver.handlers;
+package lineage2.gameserver.model.interfaces;
 
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.instances.NpcInstance;
 
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public interface IBypassHandler
+public interface IAdminCommandHandler
 {
 	/**
-	 * Method getBypasses.
-	 * @return String[]
+	 * Method useAdminCommand.
+	 * @param command String
+	 * @param wordList String[]
+	 * @param fullString String
+	 * @param activeChar Player
+	 * @return boolean
 	 */
-	public String[] getBypasses();
+	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar);
 	
 	/**
-	 * Method onBypassFeedback.
-	 * @param npc NpcInstance
-	 * @param player Player
-	 * @param command String
+	 * Method getAdminCommandList.
+	 * @return String
 	 */
-	void onBypassFeedback(NpcInstance npc, Player player, String command);
+	public String[] getAdminCommandList();
 }

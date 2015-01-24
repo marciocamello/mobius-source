@@ -16,10 +16,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lineage2.gameserver.handlers.AdminCommandHandler;
-import lineage2.gameserver.handlers.IAdminCommandHandler;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.instances.NpcInstance;
+import lineage2.gameserver.model.interfaces.IAdminCommandHandler;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.scripts.ScriptFile;
 
@@ -47,7 +47,7 @@ public class AdminMammon implements IAdminCommandHandler, ScriptFile
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
+	 * @see lineage2.gameserver.model.interfaces.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
 	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
@@ -164,7 +164,7 @@ public class AdminMammon implements IAdminCommandHandler, ScriptFile
 	/**
 	 * Method getAdminCommandEnum.
 	 * @return String[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
+	 * @see lineage2.gameserver.model.interfaces.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
 	public String[] getAdminCommandList()

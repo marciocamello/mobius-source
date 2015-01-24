@@ -18,6 +18,7 @@ import java.util.Set;
 
 import lineage2.commons.data.xml.AbstractHolder;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.interfaces.IAdminCommandHandler;
 import lineage2.gameserver.utils.Log;
 
 /**

@@ -15,9 +15,9 @@ package handlers.usercommands;
 import java.util.ArrayList;
 import java.util.List;
 
-import lineage2.gameserver.handlers.IUserCommandHandler;
 import lineage2.gameserver.handlers.UserCommandHandler;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.interfaces.IUserCommandHandler;
 import lineage2.gameserver.model.pledge.Alliance;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
@@ -42,7 +42,7 @@ public class ClanWarsList implements IUserCommandHandler, ScriptFile
 	 * @param id int
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IUserCommandHandler#useUserCommand(int, Player)
+	 * @see lineage2.gameserver.model.interfaces.IUserCommandHandler#useUserCommand(int, Player)
 	 */
 	@Override
 	public boolean useUserCommand(int id, Player activeChar)
@@ -110,7 +110,7 @@ public class ClanWarsList implements IUserCommandHandler, ScriptFile
 	/**
 	 * Method getUserCommandList.
 	 * @return int[]
-	 * @see lineage2.gameserver.handlers.IUserCommandHandler#getUserCommandList()
+	 * @see lineage2.gameserver.model.interfaces.IUserCommandHandler#getUserCommandList()
 	 */
 	@Override
 	public int[] getUserCommandList()

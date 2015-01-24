@@ -1046,7 +1046,7 @@ public final class PathfinderEquipment extends SimpleItemHandler
 	/**
 	 * Method getItemIds.
 	 * @return int[]
-	 * @see lineage2.gameserver.handlers.IItemHandler#getItemIds()
+	 * @see lineage2.gameserver.model.interfaces.IItemHandler#getItemIds()
 	 */
 	@Override
 	public int[] getItemIds()

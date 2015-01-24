@@ -20,7 +20,6 @@ import lineage2.gameserver.ai.CharacterAI;
 import lineage2.gameserver.ai.DefaultAI;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
 import lineage2.gameserver.handlers.AdminCommandHandler;
-import lineage2.gameserver.handlers.IAdminCommandHandler;
 import lineage2.gameserver.instancemanager.ServerVariables;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
@@ -30,6 +29,7 @@ import lineage2.gameserver.model.SimpleSpawner;
 import lineage2.gameserver.model.WorldRegion;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.instances.RaidBossInstance;
+import lineage2.gameserver.model.interfaces.IAdminCommandHandler;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.templates.npc.NpcTemplate;
@@ -56,7 +56,7 @@ public class AdminServer implements IAdminCommandHandler, ScriptFile
 	 * @param fullString String
 	 * @param activeChar Player
 	 * @return boolean
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
+	 * @see lineage2.gameserver.model.interfaces.IAdminCommandHandler#useAdminCommand(String, String[], String, Player)
 	 */
 	@Override
 	public boolean useAdminCommand(String command, String[] wordList, String fullString, Player activeChar)
@@ -284,7 +284,7 @@ public class AdminServer implements IAdminCommandHandler, ScriptFile
 	/**
 	 * Method getAdminCommandEnum.
 	 * @return String[]
-	 * @see lineage2.gameserver.handlers.IAdminCommandHandler#getAdminCommandList()
+	 * @see lineage2.gameserver.model.interfaces.IAdminCommandHandler#getAdminCommandList()
 	 */
 	@Override
 	public String[] getAdminCommandList()

@@ -14,9 +14,9 @@ package handlers.voicedcommands;
 
 import java.util.List;
 
-import lineage2.gameserver.handlers.IVoicedCommandHandler;
 import lineage2.gameserver.handlers.VoicedCommandHandler;
 import lineage2.gameserver.model.Player;
+import lineage2.gameserver.model.interfaces.IVoicedCommandHandler;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;

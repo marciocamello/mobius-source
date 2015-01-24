@@ -13,6 +13,7 @@
 package lineage2.gameserver.handlers;
 
 import lineage2.commons.data.xml.AbstractHolder;
+import lineage2.gameserver.model.interfaces.IUserCommandHandler;
 import gnu.trove.map.hash.TIntObjectHashMap;
 
 /**
