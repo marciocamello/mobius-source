@@ -14,10 +14,10 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.commons.lang.ArrayUtils;
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
+import lineage2.gameserver.enums.AcquireType;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SkillLearn;
-import lineage2.gameserver.model.base.AcquireType;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.AcquireSkillInfo;
 import lineage2.gameserver.network.serverpackets.ExAcquireSkillInfo;

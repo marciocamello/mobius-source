@@ -12,12 +12,12 @@
  */
 package handlers.admincommands;
 
+import lineage2.gameserver.enums.TeamType;
 import lineage2.gameserver.handlers.AdminCommandHandler;
 import lineage2.gameserver.handlers.IAdminCommandHandler;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
 import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.scripts.ScriptFile;

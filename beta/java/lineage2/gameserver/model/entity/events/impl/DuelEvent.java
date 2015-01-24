@@ -17,13 +17,13 @@ import java.util.List;
 
 import lineage2.commons.collections.JoinedIterator;
 import lineage2.commons.collections.MultiValueSet;
+import lineage2.gameserver.enums.TeamType;
 import lineage2.gameserver.listener.actor.player.OnPlayerExitListener;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Zone;
-import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.model.entity.events.objects.DuelSnapshotObject;
 import lineage2.gameserver.network.serverpackets.ExDuelStart;

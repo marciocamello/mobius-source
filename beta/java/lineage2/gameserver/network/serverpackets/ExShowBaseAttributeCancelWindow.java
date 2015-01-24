@@ -15,8 +15,8 @@ package lineage2.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import lineage2.gameserver.enums.Element;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.templates.item.ItemTemplate;
 

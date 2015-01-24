@@ -12,7 +12,7 @@
  */
 package quests;
 
-import lineage2.gameserver.model.base.Race;
+import lineage2.gameserver.enums.Race;
 import lineage2.gameserver.scripts.ScriptFile;
 
 public class Q10345_DayOfDestinyDwarfsFate extends SagasSuperclass implements ScriptFile

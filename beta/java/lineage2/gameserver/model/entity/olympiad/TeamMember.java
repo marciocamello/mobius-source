@@ -14,12 +14,12 @@ package lineage2.gameserver.model.entity.olympiad;
 
 import java.util.Set;
 
+import lineage2.gameserver.enums.TeamType;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Summon;
-import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.model.entity.Hero;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.entity.events.impl.DuelEvent;

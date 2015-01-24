@@ -21,10 +21,10 @@ import java.util.Map;
 
 import lineage2.commons.util.TroveUtils;
 import lineage2.gameserver.ai.CharacterAI;
+import lineage2.gameserver.enums.ClassId;
 import lineage2.gameserver.idfactory.IdFactory;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.TeleportLocation;
-import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.instances.RaidBossInstance;
 import lineage2.gameserver.model.instances.ReflectionBossInstance;

@@ -12,7 +12,7 @@
  */
 package lineage2.gameserver.model.items.etcitems;
 
-import lineage2.gameserver.model.base.Element;
+import lineage2.gameserver.enums.Element;
 
 /**
  * @author Mobius

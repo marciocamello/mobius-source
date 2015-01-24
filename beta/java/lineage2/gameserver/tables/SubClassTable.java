@@ -12,11 +12,11 @@
  */
 package lineage2.gameserver.tables;
 
+import lineage2.gameserver.enums.ClassId;
+import lineage2.gameserver.enums.ClassLevel;
+import lineage2.gameserver.enums.Race;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SubClass;
-import lineage2.gameserver.model.base.ClassId;
-import lineage2.gameserver.model.base.ClassLevel;
-import lineage2.gameserver.model.base.Race;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

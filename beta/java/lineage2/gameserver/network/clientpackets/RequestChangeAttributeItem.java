@@ -13,8 +13,8 @@
 package lineage2.gameserver.network.clientpackets;
 
 import lineage2.commons.dao.JdbcEntityState;
+import lineage2.gameserver.enums.Element;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.PcInventory;
 import lineage2.gameserver.network.serverpackets.ExChangeAttributeOk;

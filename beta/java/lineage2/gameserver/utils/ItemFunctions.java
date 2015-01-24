@@ -13,12 +13,12 @@
 package lineage2.gameserver.utils;
 
 import lineage2.gameserver.data.xml.holder.ItemHolder;
+import lineage2.gameserver.enums.Element;
+import lineage2.gameserver.enums.Race;
 import lineage2.gameserver.idfactory.IdFactory;
 import lineage2.gameserver.instancemanager.CursedWeaponsManager;
 import lineage2.gameserver.model.Playable;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.Element;
-import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;

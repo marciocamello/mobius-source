@@ -13,8 +13,8 @@
 package quests;
 
 import lineage2.commons.util.Rnd;
+import lineage2.gameserver.enums.Element;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.quest.Quest;

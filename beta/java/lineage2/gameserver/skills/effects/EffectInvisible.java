@@ -12,11 +12,11 @@
  */
 package lineage2.gameserver.skills.effects;
 
+import lineage2.gameserver.enums.InvisibleType;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.World;
-import lineage2.gameserver.model.base.InvisibleType;
 import lineage2.gameserver.stats.Env;
 
 /**

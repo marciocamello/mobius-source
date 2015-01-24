@@ -16,10 +16,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lineage2.commons.util.Rnd;
+import lineage2.gameserver.enums.ClassId;
+import lineage2.gameserver.enums.ClassLevel;
+import lineage2.gameserver.enums.SubClassType;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.ClassId;
-import lineage2.gameserver.model.base.ClassLevel;
-import lineage2.gameserver.model.base.SubClassType;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;

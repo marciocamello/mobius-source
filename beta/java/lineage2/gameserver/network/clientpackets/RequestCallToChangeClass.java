@@ -13,9 +13,9 @@
 package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.Config;
+import lineage2.gameserver.enums.ClassId;
 import lineage2.gameserver.instancemanager.AwakingManager;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.network.serverpackets.ExCallToChangeClass;
 import lineage2.gameserver.network.serverpackets.ExShowScreenMessage;
 import lineage2.gameserver.network.serverpackets.components.NpcStringId;

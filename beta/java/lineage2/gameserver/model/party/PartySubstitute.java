@@ -18,6 +18,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
 import lineage2.gameserver.ThreadPoolManager;
+import lineage2.gameserver.enums.ClassType2;
 import lineage2.gameserver.listener.actor.player.OnPlayerExitListener;
 import lineage2.gameserver.listener.actor.player.OnPlayerPartyInviteListener;
 import lineage2.gameserver.listener.actor.player.OnPlayerPartyLeaveListener;
@@ -26,7 +27,6 @@ import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.actor.listener.CharListenerList;
-import lineage2.gameserver.model.base.ClassType2;
 import lineage2.gameserver.network.serverpackets.ExWaitWaitingSubStituteInfo;
 import lineage2.gameserver.network.serverpackets.PartySmallWindowUpdate;
 import lineage2.gameserver.network.serverpackets.SystemMessage;

@@ -12,10 +12,10 @@
  */
 package handlers.admincommands;
 
+import lineage2.gameserver.enums.InvisibleType;
 import lineage2.gameserver.handlers.AdminCommandHandler;
 import lineage2.gameserver.handlers.IAdminCommandHandler;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.InvisibleType;
 import lineage2.gameserver.network.serverpackets.CameraMode;
 import lineage2.gameserver.network.serverpackets.SpecialCamera;
 import lineage2.gameserver.scripts.ScriptFile;

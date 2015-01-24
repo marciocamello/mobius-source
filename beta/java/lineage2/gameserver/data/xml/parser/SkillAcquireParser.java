@@ -21,8 +21,8 @@ import java.util.List;
 import lineage2.commons.data.xml.AbstractDirParser;
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
+import lineage2.gameserver.enums.Race;
 import lineage2.gameserver.model.SkillLearn;
-import lineage2.gameserver.model.base.Race;
 
 import org.dom4j.Element;
 

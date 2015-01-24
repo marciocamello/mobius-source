@@ -12,8 +12,8 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+import lineage2.gameserver.enums.Element;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.base.Experience;
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.pledge.Alliance;

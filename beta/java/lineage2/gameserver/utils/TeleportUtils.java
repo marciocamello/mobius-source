@@ -14,10 +14,10 @@ package lineage2.gameserver.utils;
 
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.data.xml.holder.ResidenceHolder;
+import lineage2.gameserver.enums.RestartType;
 import lineage2.gameserver.instancemanager.MapRegionManager;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.RestartType;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.templates.mapregion.RestartArea;

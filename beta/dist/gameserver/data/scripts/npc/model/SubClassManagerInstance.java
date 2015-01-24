@@ -24,14 +24,14 @@ import java.util.Set;
 import java.util.StringTokenizer;
 
 import lineage2.gameserver.Config;
+import lineage2.gameserver.enums.AcquireType;
+import lineage2.gameserver.enums.ClassId;
+import lineage2.gameserver.enums.ClassLevel;
 import lineage2.gameserver.instancemanager.AwakingManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SubClass;
 import lineage2.gameserver.model.actor.instances.player.SubClassInfo;
 import lineage2.gameserver.model.actor.instances.player.SubClassList;
-import lineage2.gameserver.model.base.AcquireType;
-import lineage2.gameserver.model.base.ClassId;
-import lineage2.gameserver.model.base.ClassLevel;
 import lineage2.gameserver.model.entity.olympiad.Olympiad;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;

@@ -15,9 +15,9 @@ package lineage2.gameserver.network.serverpackets;
 import java.util.HashMap;
 import java.util.Map;
 
+import lineage2.gameserver.enums.RestartType;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.RestartType;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.model.instances.MonsterInstance;
 import lineage2.gameserver.model.pledge.Clan;

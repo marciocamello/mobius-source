@@ -16,9 +16,9 @@ import java.io.UnsupportedEncodingException;
 
 import lineage2.commons.net.nio.impl.SendablePacket;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
+import lineage2.gameserver.enums.Element;
 import lineage2.gameserver.instancemanager.ServerPacketOpCodeManager;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.base.MultiSellIngredient;
 import lineage2.gameserver.model.interfaces.IUpdateTypeComponent;
 import lineage2.gameserver.network.GameClient;

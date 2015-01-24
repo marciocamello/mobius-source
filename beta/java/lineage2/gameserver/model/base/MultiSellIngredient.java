@@ -13,6 +13,7 @@
 package lineage2.gameserver.model.base;
 
 import lineage2.gameserver.data.xml.holder.ItemHolder;
+import lineage2.gameserver.enums.Element;
 import lineage2.gameserver.model.items.ItemAttributes;
 
 public class MultiSellIngredient implements Cloneable

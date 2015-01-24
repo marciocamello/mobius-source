@@ -12,7 +12,7 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import lineage2.gameserver.model.base.ClanEntryStatus;
+import lineage2.gameserver.enums.ClanEntryStatus;
 
 public class ExPledgeRecruitApplyInfo extends L2GameServerPacket
 {

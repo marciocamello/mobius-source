@@ -16,9 +16,9 @@ import java.util.StringTokenizer;
 
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.ItemHolder;
+import lineage2.gameserver.enums.ClassId;
+import lineage2.gameserver.enums.ClassLevel;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.ClassId;
-import lineage2.gameserver.model.base.ClassLevel;
 import lineage2.gameserver.model.instances.MerchantInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.network.serverpackets.SystemMessage;

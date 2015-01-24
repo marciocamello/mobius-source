@@ -18,6 +18,7 @@ import java.util.StringTokenizer;
 
 import lineage2.commons.data.xml.AbstractDirParser;
 import lineage2.commons.data.xml.AbstractHolder;
+import lineage2.gameserver.enums.TriggerType;
 import lineage2.gameserver.model.entity.residence.ResidenceType;
 import lineage2.gameserver.stats.StatTemplate;
 import lineage2.gameserver.stats.Stats;
@@ -42,7 +43,6 @@ import lineage2.gameserver.stats.conditions.ConditionUsingSkill;
 import lineage2.gameserver.stats.conditions.ConditionZoneType;
 import lineage2.gameserver.stats.funcs.FuncTemplate;
 import lineage2.gameserver.stats.triggers.TriggerInfo;
-import lineage2.gameserver.stats.triggers.TriggerType;
 import lineage2.gameserver.templates.item.ArmorTemplate;
 import lineage2.gameserver.templates.item.WeaponTemplate;
 

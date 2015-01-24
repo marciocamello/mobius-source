@@ -14,9 +14,9 @@ package lineage2.gameserver.model.actor.recorder;
 
 import lineage2.commons.collections.CollectionUtils;
 import lineage2.gameserver.Config;
+import lineage2.gameserver.enums.Element;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Summon;
-import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.matching.MatchingRoom;
 import lineage2.gameserver.network.serverpackets.ExStorageMaxCount;
 import lineage2.gameserver.network.serverpackets.ExUserInfoAbnormalVisualEffect;

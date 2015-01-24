@@ -15,8 +15,8 @@ package lineage2.gameserver.templates.player;
 import java.util.List;
 
 import lineage2.commons.util.Rnd;
-import lineage2.gameserver.model.base.Race;
-import lineage2.gameserver.model.base.Sex;
+import lineage2.gameserver.enums.Race;
+import lineage2.gameserver.enums.Sex;
 import lineage2.gameserver.templates.CharTemplate;
 import lineage2.gameserver.templates.StatsSet;
 import lineage2.gameserver.templates.item.StartItem;

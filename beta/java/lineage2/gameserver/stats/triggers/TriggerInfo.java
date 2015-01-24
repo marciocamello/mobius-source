@@ -13,6 +13,7 @@
 package lineage2.gameserver.stats.triggers;
 
 import lineage2.commons.lang.ArrayUtils;
+import lineage2.gameserver.enums.TriggerType;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.stats.Env;

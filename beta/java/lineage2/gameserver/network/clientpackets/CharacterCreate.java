@@ -14,11 +14,11 @@ package lineage2.gameserver.network.clientpackets;
 
 import lineage2.gameserver.Config;
 import lineage2.gameserver.dao.CharacterDAO;
+import lineage2.gameserver.enums.ClassId;
+import lineage2.gameserver.enums.ClassLevel;
 import lineage2.gameserver.instancemanager.QuestManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.actor.instances.player.ShortCut;
-import lineage2.gameserver.model.base.ClassId;
-import lineage2.gameserver.model.base.ClassLevel;
 import lineage2.gameserver.model.base.Experience;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.quest.Quest;

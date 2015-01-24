@@ -12,8 +12,8 @@
  */
 package quests;
 
+import lineage2.gameserver.enums.Race;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;

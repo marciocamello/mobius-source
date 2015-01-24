@@ -17,6 +17,7 @@ import java.util.Collection;
 import java.util.List;
 
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
+import lineage2.gameserver.enums.AcquireType;
 import lineage2.gameserver.handlers.AdminCommandHandler;
 import lineage2.gameserver.handlers.IAdminCommandHandler;
 import lineage2.gameserver.model.Creature;
@@ -25,7 +26,6 @@ import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.SkillLearn;
-import lineage2.gameserver.model.base.AcquireType;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.network.serverpackets.ExAcquirableSkillListByClass;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;

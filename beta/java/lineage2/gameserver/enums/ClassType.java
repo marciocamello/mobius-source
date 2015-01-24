@@ -10,19 +10,53 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package lineage2.gameserver.model.base;
+package lineage2.gameserver.enums;
 
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public enum ClassLevel
+public enum ClassType
 {
-	NONE,
-	Initial,
-	First,
-	Second,
-	Third,
-	Fourth;
-	public static final ClassLevel[] VALUES = values();
+	FIGHTER,
+	MYSTIC,
+	PRIEST;
+	public static final ClassType[] VALUES = values();
+	public static final ClassType[] MAIN_TYPES = getMainTypes();
+	
+	/**
+	 * Method getMainTypes.
+	 * @return ClassType[]
+	 */
+	public static ClassType[] getMainTypes()
+	{
+		return new ClassType[]
+		{
+			FIGHTER,
+			MYSTIC
+		};
+	}
+	
+	/**
+	 * Method getMainType.
+	 * @return ClassType
+	 */
+	public ClassType getMainType()
+	{
+		if (this == PRIEST)
+		{
+			return MYSTIC;
+		}
+		
+		return this;
+	}
+	
+	/**
+	 * Method isMagician.
+	 * @return boolean
+	 */
+	public boolean isMagician()
+	{
+		return this != FIGHTER;
+	}
 }

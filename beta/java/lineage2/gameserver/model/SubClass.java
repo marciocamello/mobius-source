@@ -13,10 +13,10 @@
 package lineage2.gameserver.model;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.model.base.ClassId;
-import lineage2.gameserver.model.base.ClassLevel;
+import lineage2.gameserver.enums.ClassId;
+import lineage2.gameserver.enums.ClassLevel;
+import lineage2.gameserver.enums.SubClassType;
 import lineage2.gameserver.model.base.Experience;
-import lineage2.gameserver.model.base.SubClassType;
 
 /**
  * @author Mobius

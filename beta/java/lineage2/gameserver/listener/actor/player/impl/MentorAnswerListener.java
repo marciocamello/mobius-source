@@ -13,10 +13,10 @@
 package lineage2.gameserver.listener.actor.player.impl;
 
 import lineage2.commons.lang.reference.HardReference;
+import lineage2.gameserver.enums.TeamType;
 import lineage2.gameserver.listener.actor.player.OnAnswerListener;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
-import lineage2.gameserver.model.base.TeamType;
 
 /**
  * @author Mobius

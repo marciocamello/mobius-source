@@ -15,6 +15,7 @@ package quests;
 import java.util.HashMap;
 import java.util.Map;
 
+import lineage2.gameserver.enums.Race;
 import lineage2.gameserver.instancemanager.QuestManager;
 import lineage2.gameserver.listener.actor.OnCurrentHpDamageListener;
 import lineage2.gameserver.listener.actor.player.OnPlayerEnterListener;
@@ -22,7 +23,6 @@ import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.actor.listener.CharListenerList;
-import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.model.quest.Quest;
 import lineage2.gameserver.model.quest.QuestState;

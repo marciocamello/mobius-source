@@ -12,10 +12,10 @@
  */
 package lineage2.gameserver.network.clientpackets;
 
+import lineage2.gameserver.enums.ClanEntryStatus;
 import lineage2.gameserver.instancemanager.ClanEntryManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.World;
-import lineage2.gameserver.model.base.ClanEntryStatus;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.entry.PledgeApplicantInfo;
 import lineage2.gameserver.network.serverpackets.ExPledgeRecruitApplyInfo;

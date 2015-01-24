@@ -15,12 +15,12 @@ package lineage2.gameserver.skills.skillclasses;
 import java.util.List;
 
 import lineage2.gameserver.data.xml.holder.NpcHolder;
+import lineage2.gameserver.enums.SummonType;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.World;
-import lineage2.gameserver.model.base.SummonType;
 import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;

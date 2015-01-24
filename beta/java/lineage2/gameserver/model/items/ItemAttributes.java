@@ -14,7 +14,7 @@ package lineage2.gameserver.model.items;
 
 import java.io.Serializable;
 
-import lineage2.gameserver.model.base.Element;
+import lineage2.gameserver.enums.Element;
 
 /**
  * @author Mobius

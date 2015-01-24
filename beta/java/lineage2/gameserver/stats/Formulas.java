@@ -14,13 +14,13 @@ package lineage2.gameserver.stats;
 
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
+import lineage2.gameserver.enums.BaseStats;
+import lineage2.gameserver.enums.Element;
+import lineage2.gameserver.enums.SkillTrait;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Skill.SkillType;
-import lineage2.gameserver.model.base.BaseStats;
-import lineage2.gameserver.model.base.Element;
-import lineage2.gameserver.model.base.SkillTrait;
 import lineage2.gameserver.model.instances.ReflectionBossInstance;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;

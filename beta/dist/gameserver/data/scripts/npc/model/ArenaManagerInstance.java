@@ -15,10 +15,10 @@ package npc.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import lineage2.gameserver.enums.Race;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Zone;
-import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.model.instances.WarehouseInstance;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SystemMessage;

@@ -23,13 +23,13 @@ import java.util.Set;
 
 import lineage2.commons.collections.GArray;
 import lineage2.commons.data.xml.AbstractHolder;
+import lineage2.gameserver.enums.AcquireType;
+import lineage2.gameserver.enums.ClassId;
+import lineage2.gameserver.enums.ClassLevel;
+import lineage2.gameserver.enums.Race;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.SkillLearn;
-import lineage2.gameserver.model.base.AcquireType;
-import lineage2.gameserver.model.base.ClassId;
-import lineage2.gameserver.model.base.ClassLevel;
-import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.model.pledge.Clan;
 import lineage2.gameserver.model.pledge.SubUnit;
 

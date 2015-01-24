@@ -10,23 +10,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package lineage2.gameserver.model.base;
+package lineage2.gameserver.enums;
 
 /**
  * @author Mobius
  * @version $Revision: 1.0 $
  */
-public enum SummonType
+public enum SubClassType
 {
-	PET,
-	SERVITOR,
-	MULTI_SERVITOR,
-	SIEGE_SUMMON,
-	AGATHION,
-	TRAP,
-	MERCHANT,
-	TREE,
-	SYMBOL,
-	CLONE,
-	NPC
+	BASE_CLASS,
+	DOUBLE_SUBCLASS,
+	SUBCLASS;
+	public static final SubClassType[] VALUES = values();
 }

@@ -13,11 +13,11 @@
 package lineage2.gameserver.data.xml.holder;
 
 import lineage2.commons.data.xml.AbstractHolder;
-import lineage2.gameserver.model.base.ClassId;
-import lineage2.gameserver.model.base.ClassLevel;
-import lineage2.gameserver.model.base.ClassType;
-import lineage2.gameserver.model.base.Race;
-import lineage2.gameserver.model.base.Sex;
+import lineage2.gameserver.enums.ClassId;
+import lineage2.gameserver.enums.ClassLevel;
+import lineage2.gameserver.enums.ClassType;
+import lineage2.gameserver.enums.Race;
+import lineage2.gameserver.enums.Sex;
 import lineage2.gameserver.templates.player.PlayerTemplate;
 import gnu.trove.map.hash.TIntObjectHashMap;
 

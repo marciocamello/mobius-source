@@ -10,7 +10,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package lineage2.gameserver.model.base;
+package lineage2.gameserver.enums;
 
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.stats.Stats;

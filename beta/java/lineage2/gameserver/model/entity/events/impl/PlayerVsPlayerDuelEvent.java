@@ -16,10 +16,10 @@ import java.util.List;
 
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.gameserver.ai.CtrlEvent;
+import lineage2.gameserver.enums.TeamType;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Request;
-import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.model.entity.events.objects.DuelSnapshotObject;
 import lineage2.gameserver.network.serverpackets.ExDuelAskStart;
 import lineage2.gameserver.network.serverpackets.ExDuelEnd;

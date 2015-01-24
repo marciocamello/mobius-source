@@ -14,11 +14,11 @@ package lineage2.gameserver.network.serverpackets;
 
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
+import lineage2.gameserver.enums.Element;
 import lineage2.gameserver.instancemanager.CursedWeaponsManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Zone.ZoneType;
-import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.base.Experience;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.model.items.Inventory;

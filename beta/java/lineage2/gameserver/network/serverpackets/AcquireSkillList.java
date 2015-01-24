@@ -15,7 +15,7 @@ package lineage2.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-import lineage2.gameserver.model.base.AcquireType;
+import lineage2.gameserver.enums.AcquireType;
 
 /**
  * Reworked: VISTALL

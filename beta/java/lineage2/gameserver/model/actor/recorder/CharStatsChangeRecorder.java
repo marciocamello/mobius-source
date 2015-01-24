@@ -13,8 +13,8 @@
 package lineage2.gameserver.model.actor.recorder;
 
 import javolution.util.FastList;
+import lineage2.gameserver.enums.TeamType;
 import lineage2.gameserver.model.Creature;
-import lineage2.gameserver.model.base.TeamType;
 import gnu.trove.list.array.TIntArrayList;
 
 /**

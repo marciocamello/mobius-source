@@ -26,9 +26,9 @@ import java.util.regex.PatternSyntaxException;
 
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
+import lineage2.gameserver.enums.ClassId;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Zone;
-import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.model.items.etcitems.AppearanceStone.ShapeTargetType;
 import lineage2.gameserver.model.reward.RewardList;
 import lineage2.gameserver.templates.item.ExItemType;

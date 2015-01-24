@@ -1,9 +1,9 @@
 package npc.model;
 
 import lineage2.gameserver.data.xml.holder.MultiSellHolder;
+import lineage2.gameserver.enums.ClassLevel;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.ClassLevel;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;

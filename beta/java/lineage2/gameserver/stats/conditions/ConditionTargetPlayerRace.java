@@ -12,9 +12,9 @@
  */
 package lineage2.gameserver.stats.conditions;
 
+import lineage2.gameserver.enums.Race;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.stats.Env;
 
 /**

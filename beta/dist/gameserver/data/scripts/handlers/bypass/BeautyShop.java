@@ -12,10 +12,10 @@
  */
 package handlers.bypass;
 
+import lineage2.gameserver.enums.InvisibleType;
 import lineage2.gameserver.handlers.BypassHandler;
 import lineage2.gameserver.handlers.IBypassHandler;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.InvisibleType;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.ExResponseBeautyListPacket;
 import lineage2.gameserver.network.serverpackets.ExResponseResetList;

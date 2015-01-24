@@ -16,9 +16,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import lineage2.gameserver.data.xml.holder.PlayerTemplateHolder;
-import lineage2.gameserver.model.base.ClassId;
-import lineage2.gameserver.model.base.ClassLevel;
-import lineage2.gameserver.model.base.Sex;
+import lineage2.gameserver.enums.ClassId;
+import lineage2.gameserver.enums.ClassLevel;
+import lineage2.gameserver.enums.Sex;
 import lineage2.gameserver.templates.player.PlayerTemplate;
 
 public class NewCharacterSuccess extends L2GameServerPacket

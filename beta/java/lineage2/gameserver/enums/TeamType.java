@@ -10,13 +10,23 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package lineage2.gameserver.model.base;
+package lineage2.gameserver.enums;
 
-public enum ClanEntryStatus
+/**
+ * @author Mobius
+ * @version $Revision: 1.0 $
+ */
+public enum TeamType
 {
-	DEFAULT,
-	ORDERED,
-	CLAN_REGISTRATION,
-	UNKNOWN,
-	WAITING
+	NONE,
+	BLUE,
+	RED;
+	/**
+	 * Method revert.
+	 * @return TeamType
+	 */
+	public TeamType revert()
+	{
+		return this == BLUE ? RED : this == RED ? BLUE : NONE;
+	}
 }

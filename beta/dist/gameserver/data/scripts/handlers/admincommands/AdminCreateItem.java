@@ -15,11 +15,11 @@ package handlers.admincommands;
 import java.util.StringTokenizer;
 
 import lineage2.commons.dao.JdbcEntityState;
+import lineage2.gameserver.enums.Element;
 import lineage2.gameserver.handlers.AdminCommandHandler;
 import lineage2.gameserver.handlers.IAdminCommandHandler;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;

@@ -17,6 +17,7 @@ import java.util.StringTokenizer;
 
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
+import lineage2.gameserver.enums.InvisibleType;
 import lineage2.gameserver.handlers.AdminCommandHandler;
 import lineage2.gameserver.handlers.IAdminCommandHandler;
 import lineage2.gameserver.model.Creature;
@@ -27,7 +28,6 @@ import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Summon;
 import lineage2.gameserver.model.World;
-import lineage2.gameserver.model.base.InvisibleType;
 import lineage2.gameserver.network.serverpackets.Earthquake;
 import lineage2.gameserver.network.serverpackets.MagicSkillUse;
 import lineage2.gameserver.network.serverpackets.SkillCoolTime;

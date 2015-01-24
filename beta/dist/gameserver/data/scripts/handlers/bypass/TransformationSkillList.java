@@ -16,11 +16,11 @@ import java.util.Collection;
 
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.xml.holder.SkillAcquireHolder;
+import lineage2.gameserver.enums.AcquireType;
 import lineage2.gameserver.handlers.BypassHandler;
 import lineage2.gameserver.handlers.IBypassHandler;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SkillLearn;
-import lineage2.gameserver.model.base.AcquireType;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.network.serverpackets.AcquireSkillDone;
 import lineage2.gameserver.network.serverpackets.AcquireSkillList;

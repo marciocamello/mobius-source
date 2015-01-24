@@ -17,7 +17,7 @@ import java.io.File;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import lineage2.gameserver.Config;
-import lineage2.gameserver.model.base.Element;
+import lineage2.gameserver.enums.Element;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

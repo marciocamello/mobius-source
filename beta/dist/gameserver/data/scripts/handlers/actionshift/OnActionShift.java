@@ -20,6 +20,7 @@ import java.util.TreeSet;
 
 import lineage2.gameserver.Config;
 import lineage2.gameserver.data.htm.HtmCache;
+import lineage2.gameserver.enums.Element;
 import lineage2.gameserver.model.AggroList.HateComparator;
 import lineage2.gameserver.model.AggroList.HateInfo;
 import lineage2.gameserver.model.Effect;
@@ -27,7 +28,6 @@ import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.GameObjectsStorage;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
-import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.model.instances.DoorInstance;
 import lineage2.gameserver.model.instances.NpcInstance;

@@ -13,13 +13,13 @@
 package lineage2.gameserver.stats;
 
 import lineage2.gameserver.Config;
+import lineage2.gameserver.enums.BaseStats;
+import lineage2.gameserver.enums.ClassType2;
+import lineage2.gameserver.enums.Element;
+import lineage2.gameserver.enums.Race;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Summon;
-import lineage2.gameserver.model.base.BaseStats;
-import lineage2.gameserver.model.base.ClassType2;
-import lineage2.gameserver.model.base.Element;
-import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.stats.conditions.ConditionPlayerState;

@@ -21,10 +21,10 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import lineage2.commons.util.Rnd;
 import lineage2.gameserver.Config;
+import lineage2.gameserver.enums.TriggerType;
 import lineage2.gameserver.model.items.etcitems.LifeStoneGrade;
 import lineage2.gameserver.stats.Stats;
 import lineage2.gameserver.stats.triggers.TriggerInfo;
-import lineage2.gameserver.stats.triggers.TriggerType;
 import lineage2.gameserver.templates.item.ItemTemplate;
 
 import org.slf4j.Logger;

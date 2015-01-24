@@ -13,8 +13,8 @@
 package services;
 
 import static lineage2.gameserver.model.entity.olympiad.Olympiad.OLYMPIAD_HTML_PATH;
+import lineage2.gameserver.enums.Race;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.model.instances.NpcInstance;
 import lineage2.gameserver.scripts.Functions;
 import lineage2.gameserver.utils.ItemFunctions;

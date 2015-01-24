@@ -17,7 +17,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
-import lineage2.gameserver.model.base.Race;
+import lineage2.gameserver.enums.Race;
 
 /**
  * @author Mobius

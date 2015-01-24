@@ -16,13 +16,13 @@ import java.util.List;
 
 import lineage2.gameserver.ThreadPoolManager;
 import lineage2.gameserver.data.xml.holder.NpcHolder;
+import lineage2.gameserver.enums.SummonType;
 import lineage2.gameserver.idfactory.IdFactory;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.GameObjectTasks;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.base.Experience;
-import lineage2.gameserver.model.base.SummonType;
 import lineage2.gameserver.model.entity.events.impl.SiegeEvent;
 import lineage2.gameserver.model.instances.AgathionInstance;
 import lineage2.gameserver.model.instances.CloneInstance;

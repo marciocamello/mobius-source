@@ -21,10 +21,10 @@ import java.util.List;
 
 import lineage2.commons.dbutils.DbUtils;
 import lineage2.gameserver.database.DatabaseFactory;
+import lineage2.gameserver.enums.SubClassType;
 import lineage2.gameserver.model.DeathPenalty;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.SubClass;
-import lineage2.gameserver.model.base.SubClassType;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

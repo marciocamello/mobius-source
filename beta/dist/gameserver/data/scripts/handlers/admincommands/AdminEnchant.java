@@ -13,11 +13,11 @@
 package handlers.admincommands;
 
 import lineage2.gameserver.data.htm.HtmCache;
+import lineage2.gameserver.enums.Element;
 import lineage2.gameserver.handlers.AdminCommandHandler;
 import lineage2.gameserver.handlers.IAdminCommandHandler;
 import lineage2.gameserver.model.GameObject;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;

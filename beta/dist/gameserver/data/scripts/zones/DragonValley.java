@@ -20,12 +20,12 @@ import java.util.concurrent.ScheduledFuture;
 
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
+import lineage2.gameserver.enums.ClassId;
 import lineage2.gameserver.listener.zone.OnZoneEnterLeaveListener;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Zone;
-import lineage2.gameserver.model.base.ClassId;
 import lineage2.gameserver.scripts.ScriptFile;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.ReflectionUtils;

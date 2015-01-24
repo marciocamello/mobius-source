@@ -18,10 +18,10 @@ import java.util.List;
 
 import lineage2.commons.threading.RunnableImpl;
 import lineage2.gameserver.ThreadPoolManager;
+import lineage2.gameserver.enums.TeamType;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.model.Effect;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.TeamType;
 import lineage2.gameserver.stats.Env;
 import lineage2.gameserver.utils.Location;
 

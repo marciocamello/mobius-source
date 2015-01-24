@@ -13,8 +13,7 @@
 package lineage2.gameserver.taskmanager;
 
 /**
- * @author Mobius
- * @version $Revision: 1.0 $
+ * @author Layane
  */
 public enum TaskTypes
 {

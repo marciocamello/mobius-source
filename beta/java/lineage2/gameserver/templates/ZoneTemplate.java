@@ -16,11 +16,11 @@ import java.util.List;
 
 import lineage2.commons.collections.MultiValueSet;
 import lineage2.commons.configuration.ExProperties;
+import lineage2.gameserver.enums.Race;
 import lineage2.gameserver.model.Skill;
 import lineage2.gameserver.model.Territory;
 import lineage2.gameserver.model.Zone.ZoneTarget;
 import lineage2.gameserver.model.Zone.ZoneType;
-import lineage2.gameserver.model.base.Race;
 import lineage2.gameserver.tables.SkillTable;
 import lineage2.gameserver.utils.Location;
 

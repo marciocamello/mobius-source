@@ -16,11 +16,11 @@ import java.text.NumberFormat;
 import java.util.Locale;
 
 import lineage2.gameserver.data.htm.HtmCache;
+import lineage2.gameserver.enums.Element;
 import lineage2.gameserver.handlers.IVoicedCommandHandler;
 import lineage2.gameserver.handlers.VoicedCommandHandler;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.network.serverpackets.NpcHtmlMessage;
 import lineage2.gameserver.scripts.ScriptFile;

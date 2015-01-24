@@ -13,11 +13,11 @@
 package lineage2.gameserver.network.clientpackets;
 
 import lineage2.commons.lang.ArrayUtils;
+import lineage2.gameserver.enums.RestartType;
 import lineage2.gameserver.instancemanager.ReflectionManager;
 import lineage2.gameserver.listener.actor.player.OnAnswerListener;
 import lineage2.gameserver.listener.actor.player.impl.ReviveAnswerListener;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.base.RestartType;
 import lineage2.gameserver.model.entity.Reflection;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.model.entity.residence.Castle;

@@ -14,12 +14,12 @@ package lineage2.gameserver.skills.skillclasses;
 
 import java.util.List;
 
+import lineage2.gameserver.enums.BaseStats;
 import lineage2.gameserver.listener.actor.player.OnAnswerListener;
 import lineage2.gameserver.listener.actor.player.impl.ReviveAnswerListener;
 import lineage2.gameserver.model.Creature;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Skill;
-import lineage2.gameserver.model.base.BaseStats;
 import lineage2.gameserver.model.entity.events.GlobalEvent;
 import lineage2.gameserver.model.instances.PetInstance;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
