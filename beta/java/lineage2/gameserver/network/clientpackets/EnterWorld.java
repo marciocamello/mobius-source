@@ -479,7 +479,7 @@ public class EnterWorld extends L2GameClientPacket
 			
 			if (activeChar.isInParty())
 			{
-				sendPacket(new PartySmallWindowAll(activeChar.getParty(), activeChar));
+				sendPacket(new PartySmallWindowAll(activeChar, activeChar.getParty()));
 				
 				for (Player member : activeChar.getParty().getPartyMembers())
 				{

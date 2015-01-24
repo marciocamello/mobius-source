@@ -44,7 +44,6 @@ import lineage2.gameserver.network.serverpackets.ExTacticalSign;
 import lineage2.gameserver.network.serverpackets.GetItem;
 import lineage2.gameserver.network.serverpackets.L2GameServerPacket;
 import lineage2.gameserver.network.serverpackets.PartyMemberPosition;
-import lineage2.gameserver.network.serverpackets.PartySmallWindowAdd;
 import lineage2.gameserver.network.serverpackets.PartySmallWindowAll;
 import lineage2.gameserver.network.serverpackets.PartySmallWindowDelete;
 import lineage2.gameserver.network.serverpackets.PartySmallWindowDeleteAll;
@@ -326,7 +325,7 @@ public class Party implements PlayerGroup
 		player.getListeners().onPartyInvite();
 		List<L2GameServerPacket> addInfo = new ArrayList<>(4 + (_members.size() * 4));
 		List<L2GameServerPacket> pplayer = new ArrayList<>(20);
-		pplayer.add(new PartySmallWindowAll(this, player));
+		pplayer.add(new PartySmallWindowAll(player, this));
 		pplayer.add(SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_JOINED_S1_S_PARTY).addPcName(leader));
 		addInfo.add(SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_JOINED_THE_PARTY).addPcName(player));
 		addInfo.add(new PartySpelled(player, true));
@@ -337,7 +336,7 @@ public class Party implements PlayerGroup
 			addInfo.add(new PartySpelled(summon, true));
 		}
 		
-		PartyMemberPosition pmp = new PartyMemberPosition();
+		PartyMemberPosition pmp = new PartyMemberPosition(this);
 		List<L2GameServerPacket> pmember;
 		
 		for (Player member : _members)
@@ -347,16 +346,9 @@ public class Party implements PlayerGroup
 				pmember = new ArrayList<>(addInfo.size() + 4);
 				pmember.addAll(addInfo);
 				
-				if (_members.size() == 2)
-				{
-					pmember.add(new PartySmallWindowAll(this, member));
-				}
-				else
-				{
-					pmember.add(new PartySmallWindowAdd(member, player, getLootDistribution()));
-				}
+				pmember.add(new PartySmallWindowAll(member, this));
 				
-				pmember.add(new PartyMemberPosition().add(player));
+				pmember.add(new PartyMemberPosition(this));
 				pmember.add(RelationChanged.update(member, player, member));
 				member.sendPacket(pmember);
 				pplayer.add(new PartySpelled(member, true));
@@ -367,7 +359,6 @@ public class Party implements PlayerGroup
 				}
 				
 				pplayer.add(RelationChanged.update(player, member, player));
-				pmp.add(member);
 			}
 		}
 		
@@ -592,7 +583,7 @@ public class Party implements PlayerGroup
 		
 		for (Player member : _members)
 		{
-			member.sendPacket(PartySmallWindowDeleteAll.STATIC, new PartySmallWindowAll(this, member), msg);
+			member.sendPacket(PartySmallWindowDeleteAll.STATIC, new PartySmallWindowAll(member, this), msg);
 		}
 		
 		for (Player member : _members)
@@ -1199,20 +1190,8 @@ public class Party implements PlayerGroup
 			{
 				for (Player member : _members)
 				{
-					PartyMemberPosition pmp = new PartyMemberPosition();
-					
-					for (Player m : update)
-					{
-						if (m != member)
-						{
-							pmp.add(m);
-						}
-					}
-					
-					if (pmp.size() > 0)
-					{
-						member.sendPacket(pmp);
-					}
+					PartyMemberPosition pmp = new PartyMemberPosition(member.getParty());
+					member.sendPacket(pmp);
 				}
 			}
 			

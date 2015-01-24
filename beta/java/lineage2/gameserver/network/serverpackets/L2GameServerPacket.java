@@ -20,6 +20,7 @@ import lineage2.gameserver.instancemanager.ServerPacketOpCodeManager;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.base.Element;
 import lineage2.gameserver.model.base.MultiSellIngredient;
+import lineage2.gameserver.model.interfaces.IUpdateTypeComponent;
 import lineage2.gameserver.network.GameClient;
 import lineage2.gameserver.network.serverpackets.components.IStaticPacket;
 import lineage2.gameserver.templates.item.ItemTemplate;
@@ -222,6 +223,16 @@ public abstract class L2GameServerPacket extends SendablePacket<GameClient> impl
 	public String getType()
 	{
 		return "[S] " + getClass().getSimpleName();
+	}
+	
+	/**
+	 * @param masks
+	 * @param type
+	 * @return {@code true} if the mask contains the current update component type
+	 */
+	protected static boolean containsMask(int masks, IUpdateTypeComponent type)
+	{
+		return (masks & type.getMask()) == type.getMask();
 	}
 	
 	@Override

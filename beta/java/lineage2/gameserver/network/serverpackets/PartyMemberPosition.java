@@ -15,36 +15,47 @@ package lineage2.gameserver.network.serverpackets;
 import java.util.HashMap;
 import java.util.Map;
 
+import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.utils.Location;
 
+/**
+ * @author zabbix
+ */
 public class PartyMemberPosition extends L2GameServerPacket
 {
-	private final Map<Integer, Location> positions = new HashMap<>();
+	private final Map<Integer, Location> locations = new HashMap<>();
 	
-	public PartyMemberPosition add(Player actor)
+	public PartyMemberPosition(Party party)
 	{
-		positions.put(actor.getObjectId(), actor.getLoc());
-		return this;
+		reuse(party);
 	}
 	
-	public int size()
+	public void reuse(Party party)
 	{
-		return positions.size();
+		locations.clear();
+		for (Player member : party.getPartyMembers())
+		{
+			if (member == null)
+			{
+				continue;
+			}
+			locations.put(member.getObjectId(), member.getLoc());
+		}
 	}
 	
 	@Override
-	protected final void writeImpl()
+	protected void writeImpl()
 	{
 		writeC(0xba);
-		writeD(positions.size());
-		
-		for (Map.Entry<Integer, Location> e : positions.entrySet())
+		writeD(locations.size());
+		for (Map.Entry<Integer, Location> entry : locations.entrySet())
 		{
-			writeD(e.getKey());
-			writeD(e.getValue().getX());
-			writeD(e.getValue().getY());
-			writeD(e.getValue().getZ());
+			Location loc = entry.getValue();
+			writeD(entry.getKey());
+			writeD(loc.getX());
+			writeD(loc.getY());
+			writeD(loc.getZ());
 		}
 	}
 }

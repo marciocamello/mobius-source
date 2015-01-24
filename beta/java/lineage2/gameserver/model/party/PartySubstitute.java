@@ -80,7 +80,7 @@ public class PartySubstitute
 	public void addPlayerToReplace(Player p)
 	{
 		_waitingPlayer.put(p, 0);
-		p.getParty().broadCast(new PartySmallWindowUpdate(p));
+		p.getParty().broadCast(new PartySmallWindowUpdate(p, true));
 	}
 	
 	void updatePlayerToReplace(Player p, int i)

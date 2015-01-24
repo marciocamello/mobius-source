@@ -12,45 +12,39 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.party.PartySubstitute;
 
-public class PartySmallWindowAdd extends L2GameServerPacket
+public final class PartySmallWindowAdd extends L2GameServerPacket
 {
-	private final int leaderId;
-	private final int distribution;
-	private final PartySmallWindowAll.PartySmallWindowMemberInfo member;
-	private final int replace;
+	private final Player _member;
+	private final Party _party;
 	
-	public PartySmallWindowAdd(Player player, Player member, int _distribution)
+	public PartySmallWindowAdd(Player member, Party party)
 	{
-		leaderId = player.getObjectId();
-		distribution = _distribution;
-		this.member = new PartySmallWindowAll.PartySmallWindowMemberInfo(member);
-		replace = PartySubstitute.getInstance().isPlayerToReplace(member) ? 1 : 0;
+		_member = member;
+		_party = party;
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
 		writeC(0x4F);
-		writeD(leaderId);
-		writeD(distribution);
-		writeD(member._id);
-		writeS(member._name);
-		writeD(member.curCp);
-		writeD(member.maxCp);
-		writeD(member.vitality);
-		writeD(member.curHp);
-		writeD(member.maxHp);
-		writeD(member.curMp);
-		writeD(member.maxMp);
-		writeD(member.level);
-		writeD(member.class_id);
-		writeD(0x00);// writeD(0x01); ??
-		writeD(member.race_id);
-		writeD(0x00);// Hide name
-		writeD(0x00);// unknown
-		writeD(replace);// Идет ли поиск замены игроку
+		writeD(_party.getPartyLeader().getObjectId()); // c3
+		writeD(_party.getLootDistribution());// writeD(0x04); ?? //c3
+		writeD(_member.getObjectId());
+		writeS(_member.getName());
+		
+		writeD((int) _member.getCurrentCp()); // c4
+		writeD(_member.getMaxCp()); // c4
+		writeD((int) _member.getCurrentHp());
+		writeD(_member.getMaxHp());
+		writeD((int) _member.getCurrentMp());
+		writeD(_member.getMaxMp());
+		writeD(_member.getVitality());
+		writeC(_member.getLevel());
+		writeH(_member.getClassId().getId());
+		writeC(0x00);
+		writeH(_member.getRace().ordinal());
 	}
 }

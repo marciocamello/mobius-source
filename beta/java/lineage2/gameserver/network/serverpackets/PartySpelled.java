@@ -55,11 +55,12 @@ public class PartySpelled extends L2GameServerPacket implements IconEffectPacket
 		writeD(_objId);
 		writeD(_effects.size());
 		
-		for (IconEffect temp : _effects)
+		for (IconEffect info : _effects)
 		{
-			writeD(temp.getSkillId());
-			writeH(temp.getLevel());
-			writeD(temp.getDuration());
+			writeD(info.getSkillId());
+			writeH(info.getLevel());
+			writeD(0x00);
+			writeH(info.getDuration());
 		}
 	}
 	

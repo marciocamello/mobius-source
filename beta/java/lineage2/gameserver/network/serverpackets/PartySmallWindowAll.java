@@ -12,116 +12,67 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
 import lineage2.gameserver.model.Party;
 import lineage2.gameserver.model.Player;
 import lineage2.gameserver.model.Summon;
-import lineage2.gameserver.model.party.PartySubstitute;
+import lineage2.gameserver.model.actor.instances.player.SummonList;
 
-/**
- * @author ALF
- * @data 09.02.2012
- */
-public class PartySmallWindowAll extends L2GameServerPacket
+public final class PartySmallWindowAll extends L2GameServerPacket
 {
-	private final int leaderId;
-	private final int loot;
-	private final List<PartySmallWindowMemberInfo> members = new ArrayList<>();
+	private final Party _party;
+	private final Player _exclude;
 	
-	public PartySmallWindowAll(Party party, Player exclude)
+	public PartySmallWindowAll(Player exclude, Party party)
 	{
-		leaderId = party.getPartyLeader().getObjectId();
-		loot = party.getLootDistribution();
-		
-		for (Player member : party.getPartyMembers())
-		{
-			if (member != exclude)
-			{
-				members.add(new PartySmallWindowMemberInfo(member));
-			}
-		}
+		_exclude = exclude;
+		_party = party;
 	}
 	
 	@Override
 	protected final void writeImpl()
 	{
 		writeC(0x4E);
-		writeD(leaderId); // c3 party leader id
-		writeD(loot); // c3 party loot type (0,1,2,....)
-		writeD(members.size());
+		writeD(_party.getPartyLeader().getObjectId());
+		writeC(_party.getLootDistribution());
+		writeC(_party.getMemberCount() - 1);
 		
-		for (PartySmallWindowMemberInfo member : members)
+		for (Player member : _party.getPartyMembers())
 		{
-			writeD(member._id);
-			writeS(member._name);
-			writeD(member.curCp);
-			writeD(member.maxCp);
-			writeD(member.curHp);
-			writeD(member.maxHp);
-			writeD(member.curMp);
-			writeD(member.maxMp);
-			writeD(member.vitality);
-			writeD(member.level);
-			writeD(member.class_id);
-			writeD(0x00);// writeD(0x01);
-			writeD(member.race_id);
-			writeD(0x00); // Hide Name
-			writeD(0x00);
-			writeD(member.replace);
-			writeD(member._pets.size());
-			
-			for (Summon pet : member._pets)
+			if ((member != null) && (member != _exclude))
 			{
-				writeD(pet.getObjectId());
-				writeD(pet.getId() + 1000000);
-				writeD(pet.getSummonType());
-				writeS(pet.getName());
-				writeD((int) pet.getCurrentHp());
-				writeD(pet.getMaxHp());
-				writeD((int) pet.getCurrentMp());
-				writeD(pet.getMaxMp());
-				writeD(pet.getLevel());
+				writeD(member.getObjectId());
+				writeS(member.getName());
+				
+				writeD((int) member.getCurrentCp()); // c4
+				writeD(member.getMaxCp()); // c4
+				
+				writeD((int) member.getCurrentHp());
+				writeD(member.getMaxHp());
+				writeD((int) member.getCurrentMp());
+				writeD(member.getMaxMp());
+				writeD(member.getVitality());
+				writeC(member.getLevel());
+				writeH(member.getClassId().getId());
+				writeC(0x01); // Unk
+				writeH(member.getRace().ordinal());
+				final SummonList pets = member.getSummonList();
+				writeD(member.getSummonList().size());
+				if (pets.size() > 0)
+				{
+					for (Summon pet : member.getSummonList())
+					{
+						writeD(pet.getObjectId());
+						writeD(pet.getId() + 1000000);
+						writeC(pet.getSummonType());
+						writeS(pet.getName());
+						writeD((int) pet.getCurrentHp());
+						writeD(pet.getMaxHp());
+						writeD((int) pet.getCurrentMp());
+						writeD(pet.getMaxMp());
+						writeC(pet.getLevel());
+					}
+				}
 			}
-		}
-	}
-	
-	static class PartySmallWindowMemberInfo
-	{
-		String _name;
-		String pet_Name;
-		int _id;
-		int curCp;
-		int maxCp;
-		int curHp;
-		int maxHp;
-		int curMp;
-		int maxMp;
-		int level;
-		int class_id;
-		int race_id;
-		int vitality;
-		Collection<Summon> _pets;
-		int replace;
-		
-		PartySmallWindowMemberInfo(Player member)
-		{
-			_name = member.getName();
-			_id = member.getObjectId();
-			curCp = (int) member.getCurrentCp();
-			maxCp = member.getMaxCp();
-			vitality = member.getVitality();
-			curHp = (int) member.getCurrentHp();
-			maxHp = member.getMaxHp();
-			curMp = (int) member.getCurrentMp();
-			maxMp = member.getMaxMp();
-			level = member.getLevel();
-			class_id = member.getClassId().getId();
-			race_id = member.getRace().ordinal();
-			_pets = member.getPets();
-			replace = PartySubstitute.getInstance().isPlayerToReplace(member) ? 1 : 0;
 		}
 	}
 }

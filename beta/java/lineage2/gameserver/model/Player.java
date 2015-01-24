@@ -2874,7 +2874,7 @@ public final class Player extends Playable implements PlayerGroup
 		
 		if (isInParty())
 		{
-			getParty().broadCast(new PartySmallWindowUpdate(this));
+			getParty().broadCast(new PartySmallWindowUpdate(this, true));
 		}
 		
 		if (getClan() != null)
@@ -3933,7 +3933,7 @@ public final class Player extends Playable implements PlayerGroup
 		if (isInParty())
 		// Send the Server->Client packet PartySmallWindowUpdate with current HP, MP and Level to all other L2Player of the Party
 		{
-			getParty().broadcastToPartyMembers(this, new PartySmallWindowUpdate(this));
+			getParty().broadcastToPartyMembers(this, new PartySmallWindowUpdate(this, false));
 		}
 		
 		if (isInOlympiadMode() && isOlympiadCompStart())
