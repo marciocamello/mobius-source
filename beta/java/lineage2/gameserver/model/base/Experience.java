@@ -23,6 +23,7 @@ public class Experience
 	public final static long LEVEL[] =
 	{
 		-1L,
+		0L,
 		68L,
 		363L,
 		1168L,
