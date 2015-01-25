@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="17701" levels="5" name="Topaz">
+		<table name="#atk"> 1062 3717 6903 10089 13275 </table>
+		<set name="icon" val="icon.etc_bm_jewel_diamond_i00"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="power" val="#atk"/>
+		<set name="skillType" val="PDAM"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<!-- TODO: Disrupts the target's skill casting. When used on a PC, disregards CP -->
+	</skill>
+	<skill id="17704" levels="5" name="Obsidian">
+		<table name="#physResist"> 1.01 1.03 1.07 1.11 1.15 </table>
+		<set name="icon" val="icon.etc_bm_jewel_diamond_i00"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<mul order="0x30" stat="physResist" val="#physResist" />
+		</for>
+	</skill>
+	<skill id="17705" levels="5" name="Opal">
+		<table name="#atkAttribute"> 10 20 40 70 120 </table>
+		<set name="icon" val="icon.etc_bm_jewel_diamond_i00"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="attackFire" val="#atkAttribute" />
+			<add order="0x40" stat="attackWater" val="#atkAttribute" />
+			<add order="0x40" stat="attackWind" val="#atkAttribute" />
+			<add order="0x40" stat="attackEarth" val="#atkAttribute" />
+			<add order="0x40" stat="attackHoly" val="#atkAttribute" />
+			<add order="0x40" stat="attackUnholy" val="#atkAttribute" />
+		</for>
+	</skill>
+	<skill id="17708" levels="5" name="Diamond">
+		<table name="#pDef"> 283 567 945 1418 1986 </table>
+		<table name="#critDamRcpt"> 1.01 1.02 1.03 1.04 1.05 </table>
+		<set name="icon" val="icon.etc_bm_jewel_diamond_i00"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="pDef" val="#pDef" />
+			<mul order="0x30" stat="critDamRcpt" val="#critDamRcpt" />
+		</for>
+	</skill>
+	<skill id="17709" levels="5" name="Pearl">
+		<table name="#pDef"> 163 328 548 821 1150 </table>
+		<table name="#critDamRcpt"> 1.01 1.02 1.03 1.04 1.05 </table>
+		<set name="icon" val="icon.etc_bm_jewel_diamond_i00"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="pDef" val="#pDef" />
+			<mul order="0x30" stat="critDamRcpt" val="#critDamRcpt" />
+		</for>
+	</skill>
+</list>

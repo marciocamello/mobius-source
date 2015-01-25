@@ -40,7 +40,7 @@ public class SubClass
 	private DeathPenalty _dp;
 	private int _level = 1;
 	private long _exp = 0;
-	private int _sp = 0;
+	private long _sp = 0;
 	private int _maxLvl = Experience.getMaxLevel();
 	private long _minExp = Experience.LEVEL[Config.STARTING_LEVEL];
 	private long _maxExp = Experience.LEVEL[_maxLvl + 1] - 1;
@@ -53,6 +53,7 @@ public class SubClass
 	private double _logOnMp = 1;
 	private double _logOnCp = 1;
 	private int awakingId;
+	private final long MAX_VALUE_SP = 5000000000L;
 	
 	/**
 	 * Constructor for SubClass.
@@ -109,9 +110,9 @@ public class SubClass
 	
 	/**
 	 * Method getSp.
-	 * @return int
+	 * @return long
 	 */
-	public int getSp()
+	public long getSp()
 	{
 		return _sp;
 	}
@@ -120,7 +121,7 @@ public class SubClass
 	 * Method addSp.
 	 * @param val long
 	 */
-	void addSp(long val)
+	public void addSp(long val)
 	{
 		setSp(_sp + val);
 	}
@@ -182,7 +183,7 @@ public class SubClass
 	 */
 	public void setSp(long spValue)
 	{
-		_sp = (int) Math.min(Math.max(0, spValue), Integer.MAX_VALUE);
+		_sp = Math.min(Math.max(0, spValue), MAX_VALUE_SP);
 	}
 	
 	/**

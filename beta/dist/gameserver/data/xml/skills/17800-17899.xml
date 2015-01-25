@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="17825" levels="5" name="Emerald">
+		<table name="#con"> 1 1 1 2 3 </table>
+		<table name="#men"> 1 1 1 2 3 </table>
+		<table name="#str"> 0 1 1 2 3 </table>
+		<table name="#dex"> 0 0 1 2 3 </table>
+		<table name="#wit"> 0 0 1 2 3 </table>
+		<table name="#int"> 0 1 1 2 3 </table>
+		<set name="icon" val="icon.etc_bm_jewel_diamond_i00"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="STR" val="#str" />
+			<add order="0x40" stat="CON" val="#con" />
+			<add order="0x40" stat="DEX" val="#dex" />
+			<add order="0x40" stat="WIT" val="#wit" />
+			<add order="0x40" stat="INT" val="#int" />
+			<add order="0x40" stat="MEN" val="#men" />
+		</for>
+	</skill>
+</list>

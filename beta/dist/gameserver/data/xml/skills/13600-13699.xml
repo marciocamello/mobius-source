@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<list>
+	<skill id="13655" levels="1" name="Basic Brooch">
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i00"/>
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="jewels_limit" val="1"/>
+		</for>
+	</skill>
+	<skill id="13656" levels="1" name="La Vie En Rose's Brooch">
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i00"/>
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="jewels_limit" val="2"/>
+		</for>
+	</skill>
+	<skill id="13657" levels="1" name="La Vie En Rose's Noble Brooch">
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i01"/>
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="jewels_limit" val="3"/>
+		</for>
+	</skill>
+	<skill id="13658" levels="1" name="La Vie En Rose's Brilliant Brooch">
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i02"/>
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="jewels_limit" val="4"/>
+		</for>
+	</skill>
+	<skill id="13659" levels="1" name="Top-grade Brooch">
+		<set name="icon" val="icon.etc_rbracelet_s_i03"/>
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="jewels_limit" val="5"/>
+		</for>
+	</skill>
+	<skill id="13660" levels="1" name="Noble Top-grade Brooch">
+		<set name="icon" val="icon.etc_rbracelet_s_i03"/>
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="jewels_limit" val="6"/>
+		</for>
+	</skill>
+	<skill id="13661" levels="1" name="La Vie En Rose's Brilliant Brooch">
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i02"/>
+		<set name="magicLevel" val="85"/>
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_PASSIVE"/>
+		<for>
+			<add order="0x40" stat="inventoryLimit" val="12"/>
+		</for>
+	</skill>
+</list>

@@ -29,6 +29,7 @@ import lineage2.gameserver.model.items.listeners.ItemEnchantOptionsListener;
 import lineage2.gameserver.model.items.listeners.ItemSkillsListener;
 import lineage2.gameserver.network.serverpackets.ExAdenaInvenCount;
 import lineage2.gameserver.network.serverpackets.ExBR_AgathionEnergyInfo;
+import lineage2.gameserver.network.serverpackets.ExUserInfoEquipSlot;
 import lineage2.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
 import lineage2.gameserver.network.serverpackets.SystemMessage;
@@ -43,7 +44,6 @@ import org.apache.commons.lang3.ArrayUtils;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public class PcInventory extends Inventory
 {
@@ -640,6 +640,10 @@ public class PcInventory extends Inventory
 		{
 			item.startTimer(new ShadowLifeTimeTask(item));
 		}
+		if (getActor().isPlayer())
+		{
+			getActor().sendPacket(new ExUserInfoEquipSlot(getActor(), true));
+		}
 	}
 	
 	/**
@@ -655,6 +659,10 @@ public class PcInventory extends Inventory
 		if (item.isShadowItem())
 		{
 			item.stopTimer();
+		}
+		if (getActor().isPlayer())
+		{
+			getActor().sendPacket(new ExUserInfoEquipSlot(getActor(), true));
 		}
 	}
 	

@@ -17,7 +17,6 @@ import java.util.List;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public enum ExItemType
 {
@@ -81,6 +80,7 @@ public enum ExItemType
 	MAGIC_ORNAMENT(5),
 	DYES(5),
 	OTHER_ITEMS(5);
+	
 	public static final int WEAPON_MASK = 0;
 	public static final int ARMOR_MASK = 1;
 	public static final int ACCESSORIES_MASK = 2;

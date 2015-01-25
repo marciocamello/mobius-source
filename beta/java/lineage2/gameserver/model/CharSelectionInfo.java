@@ -23,7 +23,6 @@ import lineage2.gameserver.model.items.ItemInstance;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectInfoPackage>
 {
@@ -97,7 +96,7 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 		private int _objectId = 0;
 		private int _charId = 0x00030b7a;
 		private long _exp = 0;
-		private int _sp = 0;
+		private long _sp = 0;
 		private int _clanId = 0;
 		private int _race = 0;
 		private int _classId = 0;
@@ -649,16 +648,16 @@ public class CharSelectionInfo implements Iterable<CharSelectionInfo.CharSelectI
 		 * Method getSp.
 		 * @return int
 		 */
-		public int getSp()
+		public long getSp()
 		{
 			return _sp;
 		}
 		
 		/**
 		 * Method setSp.
-		 * @param sp int
+		 * @param sp long
 		 */
-		public void setSp(int sp)
+		public void setSp(long sp)
 		{
 			_sp = sp;
 		}

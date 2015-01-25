@@ -48,7 +48,9 @@ public class ExAbnormalStatusUpdateFromTarget extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeEx(0xE6);
+		writeC(0xFE);
+		writeH(0xE6);
+		
 		writeD(_objId);
 		writeH(_effectArray.length);
 		
@@ -57,8 +59,8 @@ public class ExAbnormalStatusUpdateFromTarget extends L2GameServerPacket
 			final Skill sk = temp.getSkill();
 			writeD(sk.getDisplayId());
 			writeH(sk.getDisplayLevel());
-			writeD(getDisplayTypeOfEffect(sk));
-			writeD(temp.getTimeLeft()); // writeD(sk.isToggle() || sk.isStance() || temp.getTemplate().doNotShowTime() ? -1 : temp.getTimeLeft());
+			writeH(getDisplayTypeOfEffect(sk));
+			writeH(temp.getTimeLeft()); // writeD(sk.isToggle() || sk.isStance() || temp.getTemplate().doNotShowTime() ? -1 : temp.getTimeLeft());
 			writeD((temp.getEffector() != null) ? temp.getEffector().getObjectId() : 0);
 		}
 	}

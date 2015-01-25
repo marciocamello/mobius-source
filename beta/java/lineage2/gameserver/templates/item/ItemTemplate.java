@@ -36,7 +36,6 @@ import org.napile.primitive.maps.impl.HashIntObjectMap;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public abstract class ItemTemplate extends StatTemplate
 {
@@ -174,8 +173,8 @@ public abstract class ItemTemplate extends StatTemplate
 	public static final int SLOT_DECO = 0x400000;
 	public static final int SLOT_BELT = 0x10000000;
 	
-	public static final long SLOT_BROACH = 0x20000000;
-	public static final long SLOT_STONE = 0x40000000;
+	public static final int SLOT_BROOCH = 0x20000000;
+	public static final int SLOT_BROOCH_JEWEL = 0x40000000;
 	
 	public static final int SLOT_WOLF = -100;
 	public static final int SLOT_HATCHLING = -101;
@@ -818,6 +817,24 @@ public abstract class ItemTemplate extends StatTemplate
 	public boolean isTalisman()
 	{
 		return _bodyPart == SLOT_DECO;
+	}
+	
+	/**
+	 * Method isBrooch.
+	 * @return boolean
+	 */
+	public final boolean isBrooch()
+	{
+		return _bodyPart == SLOT_BROOCH;
+	}
+	
+	/**
+	 * Method isJewel.
+	 * @return boolean
+	 */
+	public final boolean isJewel()
+	{
+		return _bodyPart == SLOT_BROOCH_JEWEL;
 	}
 	
 	/**

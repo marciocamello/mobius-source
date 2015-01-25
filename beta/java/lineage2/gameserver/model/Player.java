@@ -320,7 +320,6 @@ import org.slf4j.LoggerFactory;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public final class Player extends Playable implements PlayerGroup
 {
@@ -13598,6 +13597,11 @@ public final class Player extends Playable implements PlayerGroup
 	public int getTalismanCount()
 	{
 		return (int) calcStat(Stats.TALISMANS_LIMIT, 0, null, null);
+	}
+	
+	public int getJewelsLimit()
+	{
+		return (int) calcStat(Stats.JEWELS_LIMIT, 0.0D, null, null);
 	}
 	
 	/**

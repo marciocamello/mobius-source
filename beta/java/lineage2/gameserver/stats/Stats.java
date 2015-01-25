@@ -190,6 +190,7 @@ public enum Stats
 	SOULS_LIMIT("soulsLimit"),
 	SOULS_CONSUME_EXP("soulsExp"),
 	TALISMANS_LIMIT("talismansLimit", 0., 6.),
+	JEWELS_LIMIT("jewels_limit", 0., 6.),
 	CUBICS_LIMIT("cubicsLimit", 0., 3., 1.),
 	CLOAK_SLOT("openCloakSlot", 0., 1.),
 	SUMMON_POINT("summonPointCount", 0, 9),

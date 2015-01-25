@@ -31,7 +31,6 @@ import org.slf4j.LoggerFactory;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public class CharacterSubclassDAO
 {
@@ -55,7 +54,7 @@ public class CharacterSubclassDAO
 	 * @param classId int
 	 * @param dafaultClassId int
 	 * @param exp long
-	 * @param sp int
+	 * @param sp long
 	 * @param curHp double
 	 * @param curMp double
 	 * @param curCp double
@@ -70,7 +69,7 @@ public class CharacterSubclassDAO
 	 * @param dual_certification
 	 * @return boolean
 	 */
-	public boolean insert(int objId, int classId, int dafaultClassId, long exp, int sp, double curHp, double curMp, double curCp, double maxHp, double maxMp, double maxCp, int level, boolean active, SubClassType type, DeathPenalty deathPenalty, int certification, int dual_certification)
+	public boolean insert(int objId, int classId, int dafaultClassId, long exp, long sp, double curHp, double curMp, double curCp, double maxHp, double maxMp, double maxCp, int level, boolean active, SubClassType type, DeathPenalty deathPenalty, int certification, int dual_certification)
 	{
 		Connection con = null;
 		PreparedStatement statement = null;
@@ -83,7 +82,7 @@ public class CharacterSubclassDAO
 			statement.setInt(2, classId);
 			statement.setInt(3, dafaultClassId);
 			statement.setLong(4, exp);
-			statement.setInt(5, sp);
+			statement.setLong(5, sp);
 			statement.setDouble(6, curHp);
 			statement.setDouble(7, curMp);
 			statement.setDouble(8, curCp);
@@ -135,7 +134,7 @@ public class CharacterSubclassDAO
 				subClass.setClassId(rset.getInt("class_id"));
 				subClass.setDefaultClassId(rset.getInt("default_class_id"));
 				subClass.setExp(rset.getLong("exp"), false);
-				subClass.setSp(rset.getInt("sp"));
+				subClass.setSp(rset.getLong("sp"));
 				subClass.setHp(rset.getDouble("curHp"));
 				subClass.setMp(rset.getDouble("curMp"));
 				subClass.setCp(rset.getDouble("curCp"));

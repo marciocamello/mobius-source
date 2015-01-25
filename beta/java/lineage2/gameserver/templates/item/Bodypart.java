@@ -14,7 +14,6 @@ package lineage2.gameserver.templates.item;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public enum Bodypart
 {
@@ -43,12 +42,16 @@ public enum Bodypart
 	FORMAL_WEAR(ItemTemplate.SLOT_FORMAL_WEAR),
 	TALISMAN(ItemTemplate.SLOT_DECO),
 	LEFT_FINGER(ItemTemplate.SLOT_L_FINGER),
+	BROOCH(ItemTemplate.SLOT_BROOCH),
+	JEWEL(ItemTemplate.SLOT_BROOCH_JEWEL),
+	
 	WOLF(ItemTemplate.SLOT_WOLF, CHEST),
 	GREAT_WOLF(ItemTemplate.SLOT_GWOLF, CHEST),
 	HATCHLING(ItemTemplate.SLOT_HATCHLING, CHEST),
 	STRIDER(ItemTemplate.SLOT_STRIDER, CHEST),
 	BABY_PET(ItemTemplate.SLOT_BABYPET, CHEST),
 	PENDANT(ItemTemplate.SLOT_PENDANT, NECKLACE);
+	
 	private int _mask;
 	private Bodypart _real;
 	

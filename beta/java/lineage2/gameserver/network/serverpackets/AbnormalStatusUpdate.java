@@ -18,13 +18,7 @@ import java.util.List;
 import lineage2.gameserver.model.IconEffect;
 
 /**
- * sample
- * <p/>
- * 0000: 85 02 00 10 04 00 00 01 00 4b 02 00 00 2c 04 00 .........K...,.. 0010: 00 01 00 58 02 00 00 ...X...
- * <p/>
- * <p/>
- * format h (dhd)
- * @version $Revision: 1.3.2.1.2.6 $ $Date: 2005/04/05 19:41:08 $
+ * Update to Ertheia
  */
 public class AbnormalStatusUpdate extends L2GameServerPacket implements IconEffectPacket
 {
@@ -46,7 +40,7 @@ public class AbnormalStatusUpdate extends L2GameServerPacket implements IconEffe
 		{
 			writeD(temp.getSkillId());
 			writeH(temp.getLevel());
-			writeD(0);
+			writeD(0x00);
 			writeH(temp.getDuration());
 		}
 	}

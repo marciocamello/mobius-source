@@ -22,7 +22,6 @@ import lineage2.gameserver.templates.item.ItemTemplate;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public final class AccessoryListener implements OnEquipListener
 {
@@ -73,7 +72,7 @@ public final class AccessoryListener implements OnEquipListener
 			}
 		}
 		
-		if (item.isAccessory() || item.getTemplate().isTalisman() || item.getTemplate().isBracelet())
+		if ((item.isAccessory() || item.getTemplate().isTalisman() || item.getTemplate().isBracelet()) || (item.getTemplate().isBrooch()) || (item.getTemplate().isJewel()))
 		{
 			player.sendUserInfo();
 		}
@@ -100,7 +99,7 @@ public final class AccessoryListener implements OnEquipListener
 		
 		Player player = (Player) actor;
 		
-		if (item.isAccessory() || item.getTemplate().isTalisman() || item.getTemplate().isBracelet())
+		if ((item.isAccessory() || item.getTemplate().isTalisman() || item.getTemplate().isBracelet()) || (item.getTemplate().isBrooch()) || (item.getTemplate().isJewel()))
 		{
 			player.sendUserInfo();
 		}

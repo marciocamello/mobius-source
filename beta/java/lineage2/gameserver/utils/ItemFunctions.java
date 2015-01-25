@@ -35,7 +35,6 @@ import lineage2.gameserver.templates.item.WeaponTemplate.WeaponType;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public final class ItemFunctions
 {
@@ -337,6 +336,31 @@ public final class ItemFunctions
 					}
 					
 					if ((--count <= 0) || (deco.getId() == itemId))
+					{
+						return SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_EQUIP_S1_BECAUSE_YOU_DO_NOT_HAVE_ANY_AVAILABLE_SLOTS).addItemName(itemId);
+					}
+				}
+			}
+		}
+		
+		if (targetSlot == ItemTemplate.SLOT_BROOCH_JEWEL)
+		{
+			int count = player.getJewelsLimit();
+			if (count <= 0)
+			{
+				return SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_EQUIP_S1_BECAUSE_YOU_DO_NOT_HAVE_ANY_AVAILABLE_SLOTS).addItemName(itemId);
+			}
+			for (int slot = Inventory.PAPERDOLL_JEWEL1; slot <= Inventory.PAPERDOLL_JEWEL6; slot++)
+			{
+				ItemInstance jewel = player.getInventory().getPaperdollItem(slot);
+				if (jewel != null)
+				{
+					if (jewel == item)
+					{
+						return null;
+					}
+					
+					if ((--count <= 0) || (jewel.getId() == itemId))
 					{
 						return SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_EQUIP_S1_BECAUSE_YOU_DO_NOT_HAVE_ANY_AVAILABLE_SLOTS).addItemName(itemId);
 					}

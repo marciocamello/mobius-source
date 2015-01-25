@@ -12,62 +12,74 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+import lineage2.gameserver.enums.InventorySlot;
 import lineage2.gameserver.model.Player;
-import lineage2.gameserver.model.items.Inventory;
 import lineage2.gameserver.model.items.ItemInstance;
-import lineage2.gameserver.templates.item.ItemTemplate;
+import lineage2.gameserver.model.items.PcInventory;
 
 /**
- * @author blacksmoke
+ * @author sdw
  */
-public class ExUserInfoEquipSlot extends L2GameServerPacket
+public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot>
 {
 	private final Player _activeChar;
 	
-	public ExUserInfoEquipSlot(Player player)
+	private final byte[] _masks = new byte[]
+	{
+		(byte) 0x00,
+		(byte) 0x00,
+		(byte) 0x00,
+		(byte) 0x00,
+		(byte) 0x00
+	};
+	
+	public ExUserInfoEquipSlot(Player player, ItemInstance item)
+	{
+		this(player, true);
+	}
+	
+	public ExUserInfoEquipSlot(Player player, boolean addAll)
 	{
 		_activeChar = player;
+		
+		if (addAll)
+		{
+			addComponentType(InventorySlot.values());
+		}
+	}
+	
+	@Override
+	protected byte[] getMasks()
+	{
+		return _masks;
+	}
+	
+	@Override
+	protected void onNewMaskAdded(InventorySlot component)
+	{
 	}
 	
 	@Override
 	protected void writeImpl()
 	{
-		writeEx(0x156);
+		writeC(0xFE);
+		writeH(0x156);
+		
 		writeD(_activeChar.getObjectId());
-		writeH(Inventory.PAPERDOLL_MAX);
+		writeH(InventorySlot.values().length);
+		writeB(_masks);
 		
-		// TODO: BitMask
-		writeC(0xFF);
-		writeC(0xFF);
-		writeC(0xFF);
-		writeC(0xFF);
-		writeC(0xFF);
-		
-		for (int order : Inventory.PAPERDOLL_ORDER)
+		final PcInventory inventory = _activeChar.getInventory();
+		for (InventorySlot slot : InventorySlot.values())
 		{
-			writeH(0x12); // 16 + 2
-			writeD(_activeChar.getInventory().getPaperdollObjectId(order));
-			
-			if (order == Inventory.PAPERDOLL_HAIR)
+			if (containsMask(slot))
 			{
-				final ItemInstance dhairItem = _activeChar.getInventory().getPaperdollItem(Inventory.PAPERDOLL_DHAIR);
-				if ((dhairItem != null) && (dhairItem.getVisualId() > 0) && (dhairItem.getBodyPart() == ItemTemplate.SLOT_HAIRALL))
-				{
-					writeD(0x00);
-				}
-				else
-				{
-					writeD(_activeChar.getInventory().getPaperdollItemId(order));
-				}
+				writeH(18); // 2 + 4 * 4
+				writeD(inventory.getPaperdollObjectId(slot.getSlot()));
+				writeD(inventory.getPaperdollItemId(slot.getSlot()));
+				writeD(inventory.getPaperdollAugmentationId(slot.getSlot()));
+				writeD(inventory.getVisualItemId(slot.getSlot()));
 			}
-			else
-			{
-				writeD(_activeChar.getInventory().getPaperdollItemId(order));
-			}
-			
-			writeH(_activeChar.getInventory().getPaperdollAugmentationId(order));
-			writeH(_activeChar.getInventory().getPaperdollAugmentationId(order));
-			writeD(_activeChar.getInventory().getVisualItemId(order));
 		}
 	}
 }

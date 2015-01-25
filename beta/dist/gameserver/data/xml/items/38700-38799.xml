@@ -9,4 +9,69 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="0"/>
 	</etcitem>
+	<armor id="38766" name="La Vie En Rose\'s Brooch">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_brooch_lavianrose_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="BROOCH"/>
+		</equip>
+		<skills>
+			<skill id="13656" level="1"/>
+			<!--La Vie En Rose's Brooch-->
+		</skills>
+		<for>
+			<add stat="mDef" order="0x10" value="17"/>
+		</for>
+	</armor>
+	<armor id="38767" name="La Vie En Rose\'s Noble Brooch">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_brooch_lavianrose_i01"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="BROOCH"/>
+		</equip>
+		<skills>
+			<skill id="13657" level="1"/>
+			<!--La Vie En Rose's Noble Brooch-->
+		</skills>
+		<for>
+			<add stat="mDef" order="0x10" value="43"/>
+		</for>
+	</armor>
+	<armor id="38768" name="La Vie En Rose\'s Brilliant Brooch">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_brooch_lavianrose_i02"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="BROOCH"/>
+		</equip>
+		<skills>
+			<skill id="13658" level="1"/>
+			<!--La Vie En Rose's Brilliant Brooch-->
+			<skill id="13661" level="1"/>
+			<!--La Vie En Rose's Brilliant Brooch-->
+		</skills>
+		<for>
+			<add stat="mDef" order="0x10" value="87"/>
+		</for>
+	</armor>
 </list>

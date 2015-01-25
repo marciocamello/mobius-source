@@ -18,11 +18,11 @@ public class EtcStatusUpdate extends L2GameServerPacket
 {
 	private final int IncreasedForce;
 	private final int WeightPenalty;
-	private final int DangerArea;
 	private final int armorExpertisePenalty;
 	private final int weaponExpertisePenalty;
 	private final int DeathPenaltyLevel;
 	private final int ConsumedSouls;
+	private int _mask;
 	
 	public EtcStatusUpdate(Player player)
 	{
@@ -33,10 +33,9 @@ public class EtcStatusUpdate extends L2GameServerPacket
 		DeathPenaltyLevel = player.getDeathPenalty() == null ? 0 : player.getDeathPenalty().getLevel(player);
 		ConsumedSouls = player.getConsumedSouls();
 		
-		int messageRefusal = player.getMessageRefusal() || (player.getNoChannel() != 0) || player.isBlockAll() ? 1 : 0;
-		int charmOfCourage = player.isCharmOfCourage() ? 2 : 0;
-		int dangerZone = player.isInDangerArea() ? 4 : 0;
-		DangerArea = messageRefusal + charmOfCourage + dangerZone;
+		_mask = player.getMessageRefusal() || (player.getNoChannel() != 0) || player.isBlockAll() ? 1 : 0;
+		_mask |= player.isCharmOfCourage() ? 2 : 0;
+		_mask |= player.isInDangerArea() ? 4 : 0;
 	}
 	
 	@Override
@@ -53,6 +52,6 @@ public class EtcStatusUpdate extends L2GameServerPacket
 		writeC(DeathPenaltyLevel); // Death Penalty max lvl 15,// 1-15 death penalty, lvl (combat ability decreased due to death)
 		// "Combat ability is decreased due to death."
 		writeC(ConsumedSouls);
-		writeC(DangerArea); // 603 4, 0
+		writeC(_mask); // 603 4, 0
 	}
 }

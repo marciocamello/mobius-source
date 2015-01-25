@@ -9,4 +9,809 @@
 		<set name="type" value="OTHER"/>
 		<set name="weight" value="0"/>
 	</etcitem>
+	<armor id="38849" name="La Vie En Rose\'s Brooch">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.r2_bracelet_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="10"/>
+		<equip>
+			<slot id="BROOCH"/>
+		</equip>
+		<skills>
+			<skill id="13656" level="1"/>
+			<!--La Vie En Rose's Brooch-->
+		</skills>
+	</armor>
+	<armor id="38850" name="Topaz" add_name="Lv1">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_topaz_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17701" level="1"/>
+		</skills>
+	</armor>
+	<armor id="38851" name="Topaz" add_name="Lv2">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_topaz_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17701" level="2"/>
+		</skills>
+	</armor>
+	<armor id="38852" name="Topaz" add_name="Lv3">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_topaz_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17701" level="3"/>
+		</skills>
+	</armor>
+	<armor id="38853" name="Topaz" add_name="Lv4">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_topaz_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17701" level="4"/>
+		</skills>
+	</armor>
+	<armor id="38854" name="Topaz" add_name="Lv5">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_topaz_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17701" level="5"/>
+		</skills>
+	</armor>
+	<armor id="38855" name="Ruby" add_name="Lv1">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_ruby_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38856" name="Ruby" add_name="Lv2">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_ruby_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38857" name="Ruby" add_name="Lv3">
+		<set name="commissionable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_bm_jewel_ruby_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38858" name="Ruby" add_name="Lv4">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_ruby_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38859" name="Ruby" add_name="Lv5">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_ruby_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38860" name="Emergency Recovery Jewel Lv. 1">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_ruby_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38861" name="Emergency Recovery Jewel Lv. 2">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_ruby_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38862" name="Emergency Recovery Jewel Lv. 3">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_ruby_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38863" name="Emergency Recovery Jewel Lv. 4">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_ruby_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38864" name="Emergency Recovery Jewel Lv. 5">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_ruby_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38865" name="Heal Boost Jewel Lv. 1">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_sapphire_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38866" name="Heal Boost Jewel Lv. 2">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_sapphire_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38867" name="Heal Boost Jewel Lv. 3">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_sapphire_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38868" name="Heal Boost Jewel Lv. 4">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_sapphire_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38869" name="Heal Boost Jewel Lv. 5">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_sapphire_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38870" name="Obsidian" add_name="Lv1">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_obsidian_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17704" level="1"/>
+		</skills>
+	</armor>
+	<armor id="38871" name="Obsidian" add_name="Lv2">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_obsidian_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17704" level="2"/>
+		</skills>
+	</armor>
+	<armor id="38872" name="Obsidian" add_name="Lv3">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_obsidian_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17704" level="3"/>
+		</skills>
+	</armor>
+	<armor id="38873" name="Obsidian" add_name="Lv4">
+		<set name="commissionable" value="false"/>
+		<set name="sellable" value="false"/>
+		<set name="privatestoreable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.etc_bm_jewel_obsidian_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17704" level="4"/>
+		</skills>
+	</armor>
+	<armor id="38874" name="Obsidian" add_name="Lv5">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_obsidian_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17704" level="5"/>
+		</skills>
+	</armor>
+	<armor id="38875" name="Opal" add_name="Lv1">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_opal_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17705" level="1"/>
+		</skills>
+	</armor>
+	<armor id="38876" name="Opal" add_name="Lv2">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_opal_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17705" level="2"/>
+		</skills>
+	</armor>
+	<armor id="38877" name="Opal" add_name="Lv3">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_opal_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17705" level="3"/>
+		</skills>
+	</armor>
+	<armor id="38878" name="Opal" add_name="Lv4">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_opal_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17705" level="4"/>
+		</skills>
+	</armor>
+	<armor id="38879" name="Opal" add_name="Lv5">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_opal_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17705" level="5"/>
+		</skills>
+	</armor>
+	<armor id="38880" name="Emerald" add_name="Lv1">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_emerald_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17825" level="1"/>
+		</skills>
+	</armor>
+	<armor id="38881" name="Emerald" add_name="Lv2">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_emerald_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17825" level="2"/>
+		</skills>
+	</armor>
+	<armor id="38882" name="Emerald" add_name="Lv3">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_emerald_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17825" level="3"/>
+		</skills>
+	</armor>
+	<armor id="38883" name="Emerald" add_name="Lv4">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_emerald_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17825" level="4"/>
+		</skills>
+	</armor>
+	<armor id="38884" name="Emerald" add_name="Lv5">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_emerald_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17825" level="5"/>
+		</skills>
+	</armor>
+	<armor id="38885" name="Aquamarine" add_name="Lv1">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_aquamarine_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38886" name="Aquamarine" add_name="Lv2">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_aquamarine_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38887" name="Aquamarine" add_name="Lv3">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_aquamarine_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38888" name="Aquamarine" add_name="Lv4">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_aquamarine_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38889" name="Aquamarine" add_name="Lv5">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_aquamarine_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38890" name="Diamond" add_name="Lv1">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_diamond_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17708" level="1"/>
+		</skills>
+	</armor>
+	<armor id="38891" name="Diamond" add_name="Lv2">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_diamond_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17708" level="2"/>
+		</skills>
+	</armor>
+	<armor id="38892" name="Diamond" add_name="Lv3">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_diamond_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17708" level="3"/>
+		</skills>
+	</armor>
+	<armor id="38893" name="Diamond" add_name="Lv4">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_diamond_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17708" level="4"/>
+		</skills>
+	</armor>
+	<armor id="38894" name="Diamond" add_name="Lv5">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_diamond_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17708" level="5"/>
+		</skills>
+	</armor>
+	<armor id="38895" name="Pearl" add_name="Lv1">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_pearl_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17709" level="1"/>
+		</skills>
+	</armor>
+	<armor id="38896" name="Pearl" add_name="Lv2">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_pearl_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17709" level="2"/>
+		</skills>
+	</armor>
+	<armor id="38897" name="Pearl" add_name="Lv3">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_pearl_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17709" level="3"/>
+		</skills>
+	</armor>
+	<armor id="38898" name="Pearl" add_name="Lv4">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_pearl_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17709" level="4"/>
+		</skills>
+	</armor>
+	<armor id="38899" name="Pearl" add_name="Lv5">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_pearl_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+		<skills>
+			<skill id="17709" level="5"/>
+		</skills>
+	</armor>
 </list>

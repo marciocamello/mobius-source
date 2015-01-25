@@ -1,12 +1,164 @@
 <?xml version="1.0"?>
 <!DOCTYPE list SYSTEM "item.dtd">
 <list>
-	<etcitem id="38901" name="Brooch (2-slot)">
+	<armor id="38900" name="Brooch (1-slot)">
 		<set name="class" value="OTHER"/>
 		<set name="crystal_type" value="NONE"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
-		<set name="stackable" value="false"/>
-		<set name="type" value="OTHER"/>
-		<set name="weight" value="0"/>
-	</etcitem>
+		<set name="icon" value="icon.etc_bm_jewelbox_main_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="BROOCH"/>
+		</equip>
+		<skills>
+			<skill id="13655" level="1"/>
+			<!--Basic Brooch-->
+		</skills>
+	</armor>
+	<armor id="38901" name="Brooch (2-slot)">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewelbox_onyx_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="BROOCH"/>
+		</equip>
+		<skills>
+			<skill id="13656" level="1"/>
+			<!--La Vie En Rose's Brooch-->
+		</skills>
+	</armor>
+	<armor id="38902" name="Brooch (3-slot)">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.r2_bracelet_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="BROOCH"/>
+		</equip>
+		<skills>
+			<skill id="13657" level="1"/>
+			<!--La Vie En Rose's Noble Brooch-->
+		</skills>
+	</armor>
+	<armor id="38903" name="Brooch (4-slot)">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.r2_bracelet_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="BROOCH"/>
+		</equip>
+		<skills>
+			<skill id="13658" level="1"/>
+			<!--La Vie En Rose's Brilliant Brooch-->
+		</skills>
+	</armor>
+	<armor id="38904" name="Brooch (5-slot)">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.r2_bracelet_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="BROOCH"/>
+		</equip>
+		<skills>
+			<skill id="13659" level="1"/>
+			<!--Top-grade Brooch-->
+		</skills>
+	</armor>
+	<armor id="38905" name="Brooch (6-slot)">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.r2_bracelet_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="BROOCH"/>
+		</equip>
+		<skills>
+			<skill id="13660" level="1"/>
+			<!--Noble Top-grade Brooch-->
+		</skills>
+	</armor>
+	<armor id="38927" name="Sapphire" add_name="Lv1">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_sapphire_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38928" name="Sapphire" add_name="Lv2">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_sapphire_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38929" name="Sapphire" add_name="Lv3">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_sapphire_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38930" name="Sapphire" add_name="Lv4">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_sapphire_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
+	<armor id="38931" name="Sapphire" add_name="Lv5">
+		<set name="class" value="OTHER"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="ex_type" value="OTHER_ITEMS"/>
+		<set name="icon" value="icon.etc_bm_jewel_sapphire_i00"/>
+		<set name="type" value="NONE"/>
+		<set name="sellable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="tradeable" value="false"/>
+		<set name="weight" value="5"/>
+		<equip>
+			<slot id="JEWEL"/>
+		</equip>
+	</armor>
 </list>

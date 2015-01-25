@@ -32,11 +32,11 @@ import org.slf4j.LoggerFactory;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public abstract class Inventory extends ItemContainer
 {
 	private static final Logger _log = LoggerFactory.getLogger(Inventory.class);
+	
 	public static final int PAPERDOLL_UNDER = 0;
 	public static final int PAPERDOLL_REAR = 1;
 	public static final int PAPERDOLL_LEAR = 2;
@@ -64,12 +64,12 @@ public abstract class Inventory extends ItemContainer
 	public static final int PAPERDOLL_DECO6 = 24;
 	public static final int PAPERDOLL_BELT = 25;
 	public static final int PAPERDOLL_BROOCH = 26;
-	public static final int PAPERDOLL_STONE1 = 27;
-	public static final int PAPERDOLL_STONE2 = 28;
-	public static final int PAPERDOLL_STONE3 = 29;
-	public static final int PAPERDOLL_STONE4 = 30;
-	public static final int PAPERDOLL_STONE5 = 31;
-	public static final int PAPERDOLL_STONE6 = 32;
+	public static final int PAPERDOLL_JEWEL1 = 27;
+	public static final int PAPERDOLL_JEWEL2 = 28;
+	public static final int PAPERDOLL_JEWEL3 = 29;
+	public static final int PAPERDOLL_JEWEL4 = 30;
+	public static final int PAPERDOLL_JEWEL5 = 31;
+	public static final int PAPERDOLL_JEWEL6 = 32;
 	public static final int PAPERDOLL_MAX = 33;
 	
 	public static final int[] PAPERDOLL_ORDER =
@@ -101,12 +101,12 @@ public abstract class Inventory extends ItemContainer
 		Inventory.PAPERDOLL_DECO6,
 		Inventory.PAPERDOLL_BELT,
 		Inventory.PAPERDOLL_BROOCH,
-		Inventory.PAPERDOLL_STONE1,
-		Inventory.PAPERDOLL_STONE2,
-		Inventory.PAPERDOLL_STONE3,
-		Inventory.PAPERDOLL_STONE4,
-		Inventory.PAPERDOLL_STONE5,
-		Inventory.PAPERDOLL_STONE6
+		Inventory.PAPERDOLL_JEWEL1,
+		Inventory.PAPERDOLL_JEWEL2,
+		Inventory.PAPERDOLL_JEWEL3,
+		Inventory.PAPERDOLL_JEWEL4,
+		Inventory.PAPERDOLL_JEWEL5,
+		Inventory.PAPERDOLL_JEWEL6
 	};
 	
 	public static final int ADENA_ID = 57;
@@ -673,12 +673,12 @@ public abstract class Inventory extends ItemContainer
 			
 			case ItemTemplate.SLOT_R_BRACELET:
 				pdollSlot = PAPERDOLL_RBRACELET;
-				setPaperdollItem(Inventory.PAPERDOLL_DECO1, null);
-				setPaperdollItem(Inventory.PAPERDOLL_DECO2, null);
-				setPaperdollItem(Inventory.PAPERDOLL_DECO3, null);
-				setPaperdollItem(Inventory.PAPERDOLL_DECO4, null);
-				setPaperdollItem(Inventory.PAPERDOLL_DECO5, null);
-				setPaperdollItem(Inventory.PAPERDOLL_DECO6, null);
+				setPaperdollItem(PAPERDOLL_DECO1, null);
+				setPaperdollItem(PAPERDOLL_DECO2, null);
+				setPaperdollItem(PAPERDOLL_DECO3, null);
+				setPaperdollItem(PAPERDOLL_DECO4, null);
+				setPaperdollItem(PAPERDOLL_DECO5, null);
+				setPaperdollItem(PAPERDOLL_DECO6, null);
 				break;
 			
 			case ItemTemplate.SLOT_DECO:
@@ -709,6 +709,45 @@ public abstract class Inventory extends ItemContainer
 				else if (getPaperdollItem(PAPERDOLL_DECO6) == item)
 				{
 					pdollSlot = PAPERDOLL_DECO6;
+				}
+				break;
+			case ItemTemplate.SLOT_BROOCH:
+				pdollSlot = PAPERDOLL_BROOCH;
+				setPaperdollItem(PAPERDOLL_JEWEL1, null);
+				setPaperdollItem(PAPERDOLL_JEWEL2, null);
+				setPaperdollItem(PAPERDOLL_JEWEL3, null);
+				setPaperdollItem(PAPERDOLL_JEWEL4, null);
+				setPaperdollItem(PAPERDOLL_JEWEL5, null);
+				setPaperdollItem(PAPERDOLL_JEWEL6, null);
+				break;
+			case ItemTemplate.SLOT_BROOCH_JEWEL:
+				if (item == null)
+				{
+					return;
+				}
+				else if (getPaperdollItem(PAPERDOLL_JEWEL1) == item)
+				{
+					pdollSlot = PAPERDOLL_JEWEL1;
+				}
+				else if (getPaperdollItem(PAPERDOLL_JEWEL2) == item)
+				{
+					pdollSlot = PAPERDOLL_JEWEL2;
+				}
+				else if (getPaperdollItem(PAPERDOLL_JEWEL3) == item)
+				{
+					pdollSlot = PAPERDOLL_JEWEL3;
+				}
+				else if (getPaperdollItem(PAPERDOLL_JEWEL4) == item)
+				{
+					pdollSlot = PAPERDOLL_JEWEL4;
+				}
+				else if (getPaperdollItem(PAPERDOLL_JEWEL5) == item)
+				{
+					pdollSlot = PAPERDOLL_JEWEL5;
+				}
+				else if (getPaperdollItem(PAPERDOLL_JEWEL6) == item)
+				{
+					pdollSlot = PAPERDOLL_JEWEL6;
 				}
 				break;
 			
@@ -1000,6 +1039,14 @@ public abstract class Inventory extends ItemContainer
 				setPaperdollItem(PAPERDOLL_FEET, null);
 				setPaperdollItem(PAPERDOLL_GLOVES, null);
 				setPaperdollItem(PAPERDOLL_CHEST, item);
+				break;
+			
+			case ItemTemplate.SLOT_BROOCH:
+				setPaperdollItem(PAPERDOLL_BROOCH, item);
+				break;
+			
+			case ItemTemplate.SLOT_BROOCH_JEWEL:
+				equipBroochJewel(item);
 				break;
 			
 			default:
@@ -1297,9 +1344,51 @@ public abstract class Inventory extends ItemContainer
 				
 			case ItemTemplate.SLOT_BELT:
 				return PAPERDOLL_BELT;
+				
+			case ItemTemplate.SLOT_BROOCH:
+				return PAPERDOLL_BROOCH;
+				
+			case ItemTemplate.SLOT_BROOCH_JEWEL:
+				return PAPERDOLL_JEWEL1;
 		}
 		
 		return -1;
+	}
+	
+	public int getBroochJewelSlots()
+	{
+		return getActor().getPlayer().getJewelsLimit();
+	}
+	
+	private void equipBroochJewel(ItemInstance item)
+	{
+		
+		// find same (or incompatible) brooch jewel type
+		for (int i = PAPERDOLL_JEWEL1; i < (PAPERDOLL_JEWEL1 + getBroochJewelSlots()); i++)
+		{
+			if (_paperdoll[i] != null)
+			{
+				if (getPaperdollItemId(i) == item.getId())
+				{
+					// overwtite
+					setPaperdollItem(i, item);
+					return;
+				}
+			}
+		}
+		
+		// no free slot found - put on first free
+		for (int i = PAPERDOLL_JEWEL1; i < (PAPERDOLL_JEWEL1 + getBroochJewelSlots()); i++)
+		{
+			if (_paperdoll[i] == null)
+			{
+				setPaperdollItem(i, item);
+				return;
+			}
+		}
+		
+		// no free slots - put on first
+		setPaperdollItem(PAPERDOLL_JEWEL1, item);
 	}
 	
 	/**

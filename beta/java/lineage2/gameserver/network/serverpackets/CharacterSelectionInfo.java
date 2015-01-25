@@ -335,7 +335,7 @@ public class CharacterSelectionInfo extends L2GameServerPacket
 			charInfopackage.setNewHairColor(chardata.getInt("haircolorB"));
 			charInfopackage.setSex(chardata.getInt("sex"));
 			charInfopackage.setExp(chardata.getLong("exp"));
-			charInfopackage.setSp(chardata.getInt("sp"));
+			charInfopackage.setSp(chardata.getLong("sp"));
 			charInfopackage.setClanId(chardata.getInt("clanid"));
 			charInfopackage.setKarma(chardata.getInt("karma"));
 			charInfopackage.setRace(race.ordinal());

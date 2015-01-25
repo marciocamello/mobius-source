@@ -406,7 +406,7 @@ public class UserInfo extends L2GameServerPacket
 			_mountType = 0;
 		}
 		
-		player.sendPacket(new ExUserInfoEquipSlot(player));
+		player.sendPacket(new ExUserInfoEquipSlot(player, true));
 		player.sendPacket(new ExUserInfoCubic(player));
 		player.sendPacket(new ExUserInfoAbnormalVisualEffect(player));
 	}
