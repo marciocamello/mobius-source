@@ -45,8 +45,8 @@ public class Q10366_RuinsStatusUpdate extends Quest implements ScriptFile
 		switch (event)
 		{
 			case "qet_rev":
-				qs.getPlayer().addExpAndSp(150000, 3000);
-				qs.giveItems(57, 749);
+				qs.getPlayer().addExpAndSp(150000, 36);
+				qs.giveItems(57, 750);
 				qs.exitCurrentQuest(false);
 				qs.playSound(SOUND_FINISH);
 				{

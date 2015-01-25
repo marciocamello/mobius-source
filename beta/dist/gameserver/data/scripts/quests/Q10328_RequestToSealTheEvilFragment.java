@@ -55,8 +55,8 @@ public class Q10328_RequestToSealTheEvilFragment extends Quest implements Script
 			
 			case "qet_rev":
 				htmltext = "1-3.htm";
-				qs.getPlayer().addExpAndSp(13000, 400);
-				qs.giveItems(57, 199);
+				qs.getPlayer().addExpAndSp(13000, 5);
+				qs.giveItems(57, 20000);
 				qs.exitCurrentQuest(false);
 				qs.playSound(SOUND_FINISH);
 				break;

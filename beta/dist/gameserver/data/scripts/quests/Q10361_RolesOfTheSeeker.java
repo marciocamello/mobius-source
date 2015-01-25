@@ -47,8 +47,8 @@ public class Q10361_RolesOfTheSeeker extends Quest implements ScriptFile
 			
 			case "qet_rev":
 				htmltext = "1-3.htm";
-				qs.getPlayer().addExpAndSp(35000, 650);
-				qs.giveItems(57, 339);
+				qs.getPlayer().addExpAndSp(35000, 5);
+				qs.giveItems(57, 340);
 				qs.exitCurrentQuest(false);
 				qs.playSound(SOUND_FINISH);
 				break;

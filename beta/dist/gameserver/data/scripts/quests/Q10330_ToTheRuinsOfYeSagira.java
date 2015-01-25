@@ -50,10 +50,10 @@ public class Q10330_ToTheRuinsOfYeSagira extends Quest implements ScriptFile
 			
 			case "6.htm":
 				qs.getPlayer().sendPacket(new ExShowScreenMessage(NpcStringId.ARMOR_HAS_BEEN_ADDED_TO_YOUR_INVENTORY, 4500, ScreenMessageAlign.TOP_CENTER));
-				qs.giveItems(57, 619);
+				qs.giveItems(57, 620);
 				qs.giveItems(29, 1);
 				qs.giveItems(22, 1);
-				qs.addExpAndSp(23000, 2500);
+				qs.addExpAndSp(23000, 5);
 				qs.playSound(SOUND_FINISH);
 				qs.exitCurrentQuest(false);
 				break;

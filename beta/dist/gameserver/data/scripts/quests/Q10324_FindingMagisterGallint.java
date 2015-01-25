@@ -51,8 +51,8 @@ public class Q10324_FindingMagisterGallint extends Quest implements ScriptFile
 			case "qet_rev":
 				htmltext = "1-2.htm";
 				qs.showTutorialHTML(TutorialShowHtml.QT_004, TutorialShowHtml.TYPE_WINDOW);
-				qs.getPlayer().addExpAndSp(1700, 200);
-				qs.giveItems(57, 109);
+				qs.getPlayer().addExpAndSp(3100, 5);
+				qs.giveItems(57, 110);
 				qs.exitCurrentQuest(false);
 				qs.playSound(SOUND_FINISH);
 				break;

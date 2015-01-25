@@ -56,8 +56,8 @@ public class Q10362_CertificationOfTheSeeker extends Quest implements ScriptFile
 			
 			case "qet_rev":
 				htmltext = "1-3.htm";
-				qs.getPlayer().addExpAndSp(50000, 700);
-				qs.giveItems(57, 429);
+				qs.getPlayer().addExpAndSp(50000, 12);
+				qs.giveItems(57, 430);
 				qs.giveItems(1060, 50);
 				qs.giveItems(49, 1);
 				qs.exitCurrentQuest(false);
