@@ -23,6 +23,7 @@ public class ExChangeAttributeOk extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeEx(0x115);
+		writeC(0xFE);
+		writeH(0x115);
 	}
 }

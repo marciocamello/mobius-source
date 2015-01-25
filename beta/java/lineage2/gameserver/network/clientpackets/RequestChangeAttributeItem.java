@@ -19,11 +19,12 @@ import lineage2.gameserver.model.items.ItemInstance;
 import lineage2.gameserver.model.items.PcInventory;
 import lineage2.gameserver.network.serverpackets.ExChangeAttributeOk;
 import lineage2.gameserver.network.serverpackets.InventoryUpdate;
+import lineage2.gameserver.network.serverpackets.SystemMessage;
+import lineage2.gameserver.network.serverpackets.components.SystemMessageId;
 import lineage2.gameserver.utils.ItemFunctions;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public class RequestChangeAttributeItem extends L2GameClientPacket
 {
@@ -81,6 +82,11 @@ public class RequestChangeAttributeItem extends L2GameClientPacket
 		}
 		
 		// send packets
+		SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_S_S2_ATTRIBUTE_HAS_SUCCESSFULLY_CHANGED_TO_S3_ATTRIBUTE);
+		msg.addItemName(_item);
+		msg.addElemental(oldElement.getId());
+		msg.addElemental(newElement.getId());
+		activeChar.sendPacket(msg);
 		InventoryUpdate iu = new InventoryUpdate();
 		iu.addModifiedItem(_item);
 		activeChar.sendPacket(iu);

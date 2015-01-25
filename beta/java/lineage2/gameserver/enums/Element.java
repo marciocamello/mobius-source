@@ -22,29 +22,33 @@ import lineage2.gameserver.stats.Stats;
  */
 public enum Element
 {
-	FIRE(0, Stats.ATTACK_FIRE, Stats.DEFENCE_FIRE),
-	WATER(1, Stats.ATTACK_WATER, Stats.DEFENCE_WATER),
-	WIND(2, Stats.ATTACK_WIND, Stats.DEFENCE_WIND),
-	EARTH(3, Stats.ATTACK_EARTH, Stats.DEFENCE_EARTH),
-	HOLY(4, Stats.ATTACK_HOLY, Stats.DEFENCE_HOLY),
-	UNHOLY(5, Stats.ATTACK_UNHOLY, Stats.DEFENCE_UNHOLY),
-	NONE(-2, null, null);
+	FIRE(0, Stats.ATTACK_FIRE, Stats.DEFENCE_FIRE, 1),
+	WATER(1, Stats.ATTACK_WATER, Stats.DEFENCE_WATER, 2),
+	WIND(2, Stats.ATTACK_WIND, Stats.DEFENCE_WIND, 4),
+	EARTH(3, Stats.ATTACK_EARTH, Stats.DEFENCE_EARTH, 8),
+	HOLY(4, Stats.ATTACK_HOLY, Stats.DEFENCE_HOLY, 16),
+	UNHOLY(5, Stats.ATTACK_UNHOLY, Stats.DEFENCE_UNHOLY, 32),
+	NONE(-2, null, null, 0);
+	
 	public final static Element[] VALUES = Arrays.copyOf(values(), 6);
 	private final int id;
 	private final Stats attack;
 	private final Stats defence;
+	private final int mask;
 	
 	/**
 	 * Constructor for Element.
 	 * @param id int
 	 * @param attack Stats
 	 * @param defence Stats
+	 * @param mask int
 	 */
-	private Element(int id, Stats attack, Stats defence)
+	private Element(int id, Stats attack, Stats defence, int mask)
 	{
 		this.id = id;
 		this.attack = attack;
 		this.defence = defence;
+		this.mask = mask;
 	}
 	
 	/**
@@ -72,6 +76,15 @@ public enum Element
 	public Stats getDefence()
 	{
 		return defence;
+	}
+	
+	/**
+	 * Method getMask.
+	 * @return int
+	 */
+	public int getMask()
+	{
+		return mask;
 	}
 	
 	/**

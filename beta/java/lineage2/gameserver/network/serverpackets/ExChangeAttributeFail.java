@@ -23,6 +23,7 @@ public class ExChangeAttributeFail extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeEx(0x116);
+		writeC(0xFE);
+		writeH(0x116);
 	}
 }

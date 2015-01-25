@@ -295,42 +295,57 @@
 	<etcitem id="33833" name="Attribute Change Crystal (S-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
-		<set name="crystal_type" value="NONE"/>
-		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.change_elemental_crystal"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
 	</etcitem>
 	<etcitem id="33834" name="Attribute Change Crystal (S80-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
-		<set name="crystal_type" value="NONE"/>
-		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.change_elemental_crystal"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
 	</etcitem>
 	<etcitem id="33835" name="Attribute Change Crystal (R-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
-		<set name="crystal_type" value="NONE"/>
-		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.change_elemental_crystal"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
 	</etcitem>
 	<etcitem id="33836" name="Attribute Change Crystal (R95-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
-		<set name="crystal_type" value="NONE"/>
-		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.change_elemental_crystal"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
 	</etcitem>
 	<etcitem id="33837" name="Attribute Change Crystal (R99-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>
 		<set name="ex_type" value="OTHER_ITEMS"/>
-		<set name="crystal_type" value="NONE"/>
-		<set name="stackable" value="true"/>
 		<set name="type" value="OTHER"/>
 		<set name="icon" value="icon.change_elemental_crystal"/>
+		<set name="stackable" value="true"/>
+		<set name="crystal_type" value="NONE"/>
+		<set name="tradeable" value="false"/>
+		<set name="dropable" value="false"/>
+		<set name="sellable" value="false"/>
 	</etcitem>
 	<etcitem id="33838" name="Destruction Scroll: Enchant Weapon (D-grade)" add_name="Event">
 		<set name="class" value="OTHER"/>

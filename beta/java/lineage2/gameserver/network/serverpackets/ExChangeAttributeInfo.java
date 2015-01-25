@@ -12,49 +12,35 @@
  */
 package lineage2.gameserver.network.serverpackets;
 
+import lineage2.gameserver.enums.Element;
+import lineage2.gameserver.model.items.ItemInstance;
+
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public class ExChangeAttributeInfo extends L2GameServerPacket
 {
-	private int _attribute = -1;
-	private final int _ObjectIdStone;
+	private final int _crystalItemId;
+	private int _attributes;
+	private int _itemObjId;
 	
 	/**
 	 * Constructor for ExChangeAttributeInfo.
-	 * @param att int
-	 * @param ObjectIdStone int
+	 * @param crystalItemId
+	 * @param item
 	 */
-	public ExChangeAttributeInfo(int att, int ObjectIdStone)
+	public ExChangeAttributeInfo(int crystalItemId, ItemInstance item)
 	{
-		switch (att)
-		{
-			case 0:
-				_attribute = -2;
-				break;
-			
-			case 1:
-				_attribute = -3;
-				break;
-			
-			case 2:
-				_attribute = -5;
-				break;
-			
-			case 3:
-				_attribute = -9;
-				break;
-			
-			case 4:
-				_attribute = -17;
-				break;
-			
-			case 5:
-				_attribute = -33;
-		}
+		_crystalItemId = crystalItemId;
+		_attributes = 0;
 		
-		_ObjectIdStone = ObjectIdStone;
+		for (Element e : Element.VALUES)
+		{
+			if (e != item.getAttackElement())
+			{
+				_attributes |= e.getMask();
+			}
+		}
 	}
 	
 	/**
@@ -63,8 +49,10 @@ public class ExChangeAttributeInfo extends L2GameServerPacket
 	@Override
 	protected void writeImpl()
 	{
-		writeEx(0x114);
-		writeD(_ObjectIdStone);
-		writeD(_attribute);
+		writeC(0xFE);
+		writeH(0x114);
+		writeD(_crystalItemId);
+		writeD(_attributes);
+		writeD(_itemObjId);
 	}
 }

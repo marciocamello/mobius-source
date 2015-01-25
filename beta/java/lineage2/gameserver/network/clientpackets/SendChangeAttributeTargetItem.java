@@ -18,7 +18,6 @@ import lineage2.gameserver.network.serverpackets.ExChangeAttributeInfo;
 
 /**
  * @author Mobius
- * @version $Revision: 1.0 $
  */
 public class SendChangeAttributeTargetItem extends L2GameClientPacket
 {
@@ -56,6 +55,6 @@ public class SendChangeAttributeTargetItem extends L2GameClientPacket
 			return;
 		}
 		
-		activeChar.sendPacket(new ExChangeAttributeInfo(_crystalItemId, item.getId()));
+		activeChar.sendPacket(new ExChangeAttributeInfo(_crystalItemId, item));
 	}
 }
