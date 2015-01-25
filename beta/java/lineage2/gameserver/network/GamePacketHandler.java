@@ -1926,13 +1926,13 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
 								// msg = new RequestCardReward();
 								break;
 							case 0xE6:
-								// msg = new RequestDivideAdenaStart();
+								msg = new RequestDivideAdenaStart();
 								break;
 							case 0xE7:
-								// msg = new RequestDivideAdenaCancel();
+								msg = new RequestDivideAdenaCancel();
 								break;
 							case 0xE8:
-								// msg = new RequestDivideAdena();
+								msg = new RequestDivideAdena();
 								break;
 							case 0xE9:
 								// msg = new RequestAcquireAbilityList();
