@@ -73,7 +73,6 @@ import lineage2.gameserver.network.serverpackets.ExStorageMaxCount;
 import lineage2.gameserver.network.serverpackets.ExSubjobInfo;
 import lineage2.gameserver.network.serverpackets.ExTutorialList;
 import lineage2.gameserver.network.serverpackets.ExUnReadMailCount;
-import lineage2.gameserver.network.serverpackets.ExUserInfoEquipSlot;
 import lineage2.gameserver.network.serverpackets.ExUserInfoInvenWeight;
 import lineage2.gameserver.network.serverpackets.ExVitalityEffectInfo;
 import lineage2.gameserver.network.serverpackets.ExWorldChatCnt;
@@ -523,7 +522,6 @@ public class EnterWorld extends L2GameClientPacket
 			activeChar.sendUserInfo();
 		}
 		
-		activeChar.sendPacket(new ExUserInfoEquipSlot(activeChar, true));
 		activeChar.updateEffectIcons();
 		activeChar.setCurrentHpMp(activeChar.getActiveSubClass().getlogOnHp(), activeChar.getActiveSubClass().getlogOnMp());
 		activeChar.setCurrentCp(activeChar.getActiveSubClass().getlogOnCp());
